@@ -26,5 +26,12 @@
 @import "partials/header";
 @import "partials/footer";
 
+//BUTTONS
+@import "partials/buttons/buttons--global";
+
 //HERO
 @import "partials/heroes/hero--global";
+
+//FORMS
+@import "partials/forms/form";
+@import "partials/forms/form--module";

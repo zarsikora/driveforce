@@ -1,6 +1,6 @@
 <?php 
 // LOAD IN HOMEMADE FUNCTIONS
-//include('includes/button.php');
+include('includes/button.php');
 include('includes/image-tag.php');
 
 // SET UP BASIC NAV MENUS IN BACK END

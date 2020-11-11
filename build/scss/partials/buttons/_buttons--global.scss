@@ -1,0 +1,41 @@
+.btn {
+    border: none;
+    outline: none;
+    color: #fff;
+
+    // span {
+    //     font-family: 'Work Sans Bold';
+    // }
+
+    &:disabled,
+    &[disabled] {
+        opacity: .5;
+    }
+
+    &.solid-btn {
+        font-size: 1.6rem;
+        border-radius: .4rem;
+        padding: 1rem 1.5rem;
+        width: 15rem;
+        text-align: center;
+
+        .arrow {
+            width: 5rem;
+            height: 5rem;
+            fill: #fff;
+            display: none;
+            transition: width ease 300ms;
+        }
+
+        &:hover {
+            .arrow {
+                display: inline-block;
+            }
+        }
+    }
+}
+
+//this specificity is necessary to override another style
+a.btn:hover {
+    color: #fff;
+}

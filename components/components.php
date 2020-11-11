@@ -14,6 +14,11 @@ if(have_rows('components')) :
             case 'grid' :
                 include('grids/grid.php');
             break;
+
+            // FORM MODULE
+            case 'contact_form_module' :
+                include('forms/form--module.php');
+            break;
         }
     endwhile;
 endif;
