@@ -1,0 +1,401 @@
+#header {
+    width: 100%;
+    margin: 0 auto;
+    padding: 3.6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: transparent;
+    z-index: 22;  
+    @include media-breakpoint-up(lg) {
+        //padding: 5vw;
+    }
+    @include media-breakpoint-up(xl) {
+        top: 0;
+        left: 5%;
+        padding: 5.5vh;
+        max-width: 90%;
+    }
+    @media (min-width: 1440px) {
+        left: 10%;
+        max-width: 80%;
+    }
+
+    // White background for active scroll state.
+    &:before {
+        content: "";
+        background: #fff;
+        width: 100%;
+        left: 0;
+        top: 0;
+        height: 100%;
+        opacity: 0;
+        position: absolute;
+        transition: all 300ms ease;
+        @include media-breakpoint-up(xl) {
+            width: 120%;
+            left: -10%;
+        }
+        @media (min-width: 1440px){
+            width: 140%;
+            left: -20%;
+        }
+    }
+
+    &.scrollVisible {
+        position: fixed;
+        z-index: 18;
+        padding: 3rem 3.6rem;
+        transform: translateY(0);
+        transition: transform 300ms ease;
+        @include media-breakpoint-up(lg) {
+            padding: 3.6rem;
+        }
+        @media(min-width: 1440px){
+            padding: 0;
+            height: 11rem;
+            box-sizing: content-box;
+        }
+
+        &:before {
+            content: '';
+            opacity: 1;
+        }
+    }
+
+    .header-logo {
+        position: relative;
+        z-index: 12;
+
+        svg,
+        img  {
+            width: 5rem;
+            @media(min-width: 1440px) {
+                //width: 12.5vw;
+            }
+            @media(min-width: 1920px) {
+                //width: 24rem;
+            }
+        }
+    }
+
+    .mobile-controls {
+        width: 4rem;
+        height: 4rem;
+        position: relative;
+        z-index: 11;
+        @include media-breakpoint-up(xl){
+            margin-top: -.7rem;
+        }
+        &:after {
+            content: "";
+            width: 60px;
+            height: 60px;
+            display: none;
+            border-radius: 60pc;
+            border: 2px solid #C48B5C;
+            position: absolute;
+            top: -15px;
+            left: -10px;
+            transition: all ease 300ms;
+            pointer-events: none;
+        }
+
+        button {
+            outline: none;
+            border: none;
+            background: transparent;
+            font-size: 0;
+
+            svg {
+                display: none;
+                position: absolute;
+                top: 0;
+                left: 50%;
+                width: 100%;
+                transform: translateX(-50%);
+                transition: all ease 300ms;
+
+                &.active {
+                    display: block;
+                }
+
+                &.open {
+                    #animate-line {
+                        transition: all ease 300ms;
+                    }
+
+                    &:hover {
+                        #animate-line {
+                            transform: translate(10px, 22px);
+                        }
+                    }
+                }
+
+                &.close {
+                    width: 2.7rem;
+                    height: 2.7rem;
+                    @include media-breakpoint-up(lg){
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+//NAV PANE STYLING
+#nav-pane {
+    width: 100vw;
+    height: 100vh;
+    background: lavender;
+    opacity: 1;
+    position: absolute;
+    justify-content: flex-start;
+    align-items: center;
+    z-index: 10;
+    display: flex;
+
+    &[data-animate="clip-path"] {
+        transition: all ease 500ms;
+        clip-path: circle(.1px at calc(90% - 30px) calc(5.5vh + 20px));
+        @include media-breakpoint-up(lg){
+            clip-path: circle(0.1px at calc(100% - 5.5vw) calc(5.5vh + 40px));
+        }
+        @include media-breakpoint-up(xl){
+            clip-path: circle(.1px at calc(90% - 20px) calc(5.5vh + 20px));
+        }
+    
+        //do not use clip path on ie 11
+        @media all and (-ms-high-contrast:none)
+        {
+            clip-path: none;
+            transform: translateX(100%);
+        }
+    }
+
+    &[data-animate="slide-in"] {
+        transition: all ease 300ms;
+        transform: translateX(100%);
+    }
+
+
+
+    .inner {
+        margin-left: 10%;
+        @include media-breakpoint-up(lg){
+            margin-left: 23.333vw;
+            width: 50%;
+        }
+        .menu {
+            list-style: none;
+            padding-left: 0;
+
+            &#nav-pane-mobile-menu {
+                display: block;
+                @include media-breakpoint-up(lg){
+                    display: none;
+                }
+                li {
+                    margin-bottom: 2.6rem;
+
+                    a {
+                        //font-family: "Double Medium";
+                        text-decoration: underline;
+                        font-size: 2.4rem;
+                        //color: $bgForest;
+                    }
+
+                    &:last-child {
+                        a {
+                            //color: $tan;
+                        }
+                    }
+                }
+
+                @include media-breakpoint-up(xl){
+                    display: none;
+                }
+            }
+
+            &#nav-pane-menu {
+                margin-top: 7rem;
+                position: relative;
+                z-index: 3;
+                @include media-breakpoint-up(lg){
+                    margin-top: 4rem;
+                }
+                @include media-breakpoint-up(xl){
+                    margin-top: 0;
+                }
+
+                li {
+                    margin-bottom: 2.6rem;
+
+                    a {
+                        //font-family: "Work Sans Bold";
+                        //color: $bgForest;
+                        font-size: 1.6rem;
+                        text-transform: uppercase;
+                        transition: all ease 300ms;
+                        letter-spacing: .1rem;
+                        @include media-breakpoint-up(lg){
+                            font-size: 4rem;
+                            font-family: "Double Medium";
+                            text-transform: none;
+                            letter-spacing: 0;
+
+                            &:hover {
+                                //color: $tan;
+                            }
+                        }
+                        @include media-breakpoint-up(xl){
+                            font-size: 4.167vw;
+                        }
+                        @media(min-width: 1900px){
+                            font-size: 7.6rem;
+                        }
+
+                        .integer {
+                            font-size: 2.4rem;
+                            display: none;
+                            @include media-breakpoint-up(lg){
+                                display: inline-block;
+                                margin-right: 2rem;
+                                //color: $bgForest;
+                            }
+                            @include media-breakpoint-up(xl){
+                                font-size: 1.736vw;
+                            }
+                            @media(min-width: 1900px){
+                                font-size: 3.29rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &.active {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        opacity: 1;
+
+        &[data-animate="clip-path"] {
+            clip-path: circle(120vh at calc(90% - 20px) calc(5.5vh + 20px));
+            @include media-breakpoint-up(md){
+                clip-path: circle(130vh at calc(90% - 20px) calc(5.5vh + 20px));
+            }
+            @include media-breakpoint-up(lg){
+                clip-path: circle(120vw at calc(90% - 20px) calc(5.5vh + 20px));
+            }
+    
+            //do not use clip path on ie 11
+            @media all and (-ms-high-contrast:none)
+            {
+                transform: translateX(0);
+            }
+        }
+
+        &[data-animate="slide-in"] {
+            transform: translateX(0);
+        }
+    }
+
+    .nav-drawer-asset {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        transition: all ease-out 500ms;
+
+        &#nav-asset-1 {
+            width: 75.467vw;
+            top: 39.342vh;
+            left: 58.667vw;
+            transform: translateY(20px);
+            @include media-breakpoint-up(md){
+                top: 29.342vh;
+                width: 34.306vw;
+            }
+            @include media-breakpoint-up(lg){
+                top: 25.644vh;
+                left: 76.667vw;
+                transform: translateY(50px);
+            }
+            @media(min-width: 1900px){
+                width: 64.6rem;
+                transform: translateY(100px);
+            }
+            &.active {
+                transform: translateY(0);
+            }
+        }
+
+        &#nav-asset-2 {
+            right: 30rem;
+            bottom: 30rem;
+            display: none;
+            @include media-breakpoint-up(lg){
+                display: block;
+                width: 9.236vw;
+                left: 58.681vw;
+                top: 50.556vh;
+                transform: translateY(-50px);
+            }
+            @media(min-width: 1900px){
+                width: 17.1rem;
+                transform: translateY(-100px);
+            }
+            &.active {
+                transform: translateY(0);
+            }
+        }
+
+        &#nav-asset-3 {
+            width: 100%;
+            transform: translateX(-20px);
+            @include media-breakpoint-up(md){
+                width: 49.931vw;
+            }
+            @include media-breakpoint-up(lg){
+                transform: translateX(-50px);
+            }
+            @media(min-width: 1900px){
+                width: 93.1rem;
+                transform: translateX(-100px);
+            }
+            &.active {
+                transform: translateX(0);
+            }
+        }
+    }
+}
+
+//BARBA ANIMATION PANES
+.animation-pane {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    left: 0;
+    z-index: 999;
+
+    svg,
+    img  {
+        width: 10rem;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 1;
+        transition: all ease 300ms;
+    }
+
+    &#animation-pane-vertical {
+        background-color: #f73655;
+        transform: scaleY(1);
+    }
+}
