@@ -28343,6 +28343,49 @@ verticalTransition = (data, dir) => {
     }
 }
 
+//FORM SUCCESS TRANSITION ANIMATION
+function formSuccessTransition(){
+    var tl = gsap.timeline();
+
+    //slide pane up
+    tl.to('#form-success-pane', {duration: .7, scaleY: 1, transformOrigin: 'bottom', ease: Power2.easeIn});
+    //scroll up!
+    $("html, body").animate({ scrollTop: 0 }, "slow");
+    //fade in inner matter
+    tl.to('#form-success-pane .inner h1', {duration: .5, opacity: 1, delay: .3, ease: Power2.easeIn});
+    tl.to('#form-success-pane .inner .btn', {duration: .5, opacity: 1, ease: Power2.easeIn});
+    tl.to('#form-success-pane .inner .logo', {duration: .5, opacity: 1, ease: Power2.easeIn});
+    // parallax in elements
+    // tl.to('#form-success-svg-1', {duration: 1, translateY: 0, opacity: 1, delay: .1, ease: Power2.easeIn}, "-=1");
+    // tl.to('#form-success-svg-2', {duration: 1, translateY: 0, opacity: 1, ease: Power2.easeIn}, "-=1");
+
+}
+
+//
+//
+// FUNCTIONS THAT REQUIRE RE-INIT WITH BARBA
+//
+//
+
+// FORM - CHANGE BODY TO SUCCESS MESSAGE ON SUCCESSFUL SUBMIT
+class formSubmit {
+    constructor() {
+        if(document.formSubmitCallback){
+            document.removeEventListener('wpcf7mailsent', document.formSubmitCallback);
+        }
+
+        if($(document.body).hasClass('page-id-44')){
+            document.formSubmitCallback = this.formSubmit.bind(this);
+            document.addEventListener('wpcf7mailsent', document.formSubmitCallback);
+        }
+    }
+
+    formSubmit(){
+        formSuccessTransition();
+    }
+}
+new formSubmit;
+
 
 //
 //
@@ -28427,7 +28470,7 @@ barbaTransitions = () => {
                 let blazy = new Blazy();
                 // let scroll = new scrollTrackerBar;
                 // let dots = new rulesScrollDots;
-                // let form = new formSubmit;
+                let form = new formSubmit;
                 // let navColor = new scrollColorChange;
                 // let legalPage = new legalPageAnimation;
 
