@@ -9645,7 +9645,7 @@ h3 {
   }
 }
 
-p.copy, .hero .inner .text-container p, .module-wrapper.form-module .copy h3,
+p.copy, .hero .inner .text-container p, .card p.card-text, .module-wrapper.form-module .copy h3,
 .copy p,
 li.copy {
   font-size: 1.8rem;
@@ -9654,7 +9654,7 @@ li.copy {
 }
 
 @media (min-width: 1440px) {
-  p.copy, .hero .inner .text-container p, .module-wrapper.form-module .copy h3,
+  p.copy, .hero .inner .text-container p, .card p.card-text, .module-wrapper.form-module .copy h3,
   .copy p,
   li.copy {
     font-size: 1.25vw;
@@ -9662,7 +9662,7 @@ li.copy {
 }
 
 @media (min-width: 1920px) {
-  p.copy, .hero .inner .text-container p, .module-wrapper.form-module .copy h3,
+  p.copy, .hero .inner .text-container p, .card p.card-text, .module-wrapper.form-module .copy h3,
   .copy p,
   li.copy {
     font-size: 2.4rem;
@@ -10495,6 +10495,211 @@ a.btn:hover {
   opacity: 1;
 }
 
+.card {
+  border-radius: .4rem;
+  border: none;
+  margin: 20px 0;
+  box-shadow: 0px 20px 40px #00000066;
+  position: relative;
+}
+
+.card .card-link {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 8;
+}
+
+.card .card-header {
+  font-size: 2rem;
+  background: none;
+  border: none;
+}
+
+@media (min-width: 1440px) {
+  .card .card-header {
+    font-size: 1.38vw;
+  }
+}
+
+@media (min-width: 1920px) {
+  .card .card-header {
+    font-size: 2.6rem;
+  }
+}
+
+.card .title {
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  font-family: "Lato-Black";
+  letter-spacing: .3rem;
+}
+
+@media (min-width: 1440px) {
+  .card .title {
+    font-size: .97vw;
+  }
+}
+
+@media (min-width: 1920px) {
+  .card .title {
+    font-size: 1.8rem;
+  }
+}
+
+.card p.date {
+  font-family: "Lato-Regular";
+  font-size: 1.4rem;
+}
+
+.card .social-sharing {
+  display: flex;
+  align-items: flex-end;
+  list-style: none;
+  margin: 0;
+  padding: 2rem;
+}
+
+.card .social-sharing li {
+  font-size: 1.4rem;
+  margin: 0 1.5rem 0 0;
+  line-height: 1;
+}
+
+.card .social-sharing li a svg {
+  background: none;
+  width: 1.6rem;
+  height: 1.6rem;
+}
+
+.card .btn.expand {
+  color: #fff;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: auto;
+  height: auto;
+  border-radius: 0px 0px 4px 0px;
+}
+
+.card .btn.full {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  transition: all ease 300ms;
+  border-radius: 0 0 .4rem 0;
+}
+
+.card .btn.full span {
+  margin: 0 1.5rem;
+  margin: 0 1.5rem;
+}
+
+.card .btn.full svg.arrow {
+  fill: #fff;
+}
+
+.card.product {
+  overflow: hidden;
+  background-color: transparent;
+  box-shadow: none;
+  padding: 2rem 0;
+}
+
+@media (min-width: 992px) {
+  .card.product {
+    padding: 2rem;
+  }
+  .card.product:nth-child(odd) {
+    padding-left: 0;
+  }
+  .card.product:nth-child(even) {
+    padding-right: 0;
+  }
+}
+
+.card.product .card-body {
+  padding: 0;
+  height: 30rem;
+}
+
+@media (min-width: 992px) {
+  .card.product .card-body {
+    height: 31.9vw;
+  }
+}
+
+@media (min-width: 1920px) {
+  .card.product .card-body {
+    height: auto;
+  }
+}
+
+.card.product .card-body .img-wrapper {
+  height: 60%;
+  position: relative;
+  margin-bottom: 2rem;
+  overflow: hidden;
+}
+
+@media (min-width: 576px) {
+  .card.product .card-body .img-wrapper {
+    height: 70%;
+  }
+}
+
+@media (min-width: 768px) {
+  .card.product .card-body .img-wrapper {
+    height: 55%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .card.product .card-body .img-wrapper {
+    height: calc(31.9vw * 0.65);
+  }
+}
+
+.card.product .card-body .img-wrapper img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: .4rem .4rem 0 0;
+  transition: all ease-out 500ms;
+}
+
+.card.product .card-body .text-wrapper {
+  color: #000;
+  transition: all ease 300ms;
+}
+
+.card.product .card-body .text-wrapper .header {
+  padding: 0 0 1rem 0;
+  margin-bottom: 0;
+  transition: all ease 300ms;
+}
+
+.card.product .card-body .text-wrapper .meta-info {
+  display: flex;
+}
+
+.card.product .card-body .text-wrapper .meta-info p {
+  margin: 0 .5rem;
+}
+
+.card.product .card-body .text-wrapper .meta-info p:first-child {
+  margin-left: 0;
+}
+
+@media (min-width: 992px) {
+  .card.product:hover .img-wrapper img {
+    transform: scale(1.1);
+  }
+}
+
 form {
   padding: 3rem 4rem;
   border-radius: .4rem;
@@ -10948,12 +11153,12 @@ form .btn-wrapper .btn {
   letter-spacing: .16rem;
 }
 
-.module-wrapper.form-module .copy p.copy, .module-wrapper.form-module .copy .hero .inner .text-container p, .hero .inner .text-container .module-wrapper.form-module .copy p, .module-wrapper.form-module .copy h3 {
+.module-wrapper.form-module .copy p.copy, .module-wrapper.form-module .copy .hero .inner .text-container p, .hero .inner .text-container .module-wrapper.form-module .copy p, .module-wrapper.form-module .copy .card p.card-text, .card .module-wrapper.form-module .copy p.card-text, .module-wrapper.form-module .copy h3 {
   margin-top: 0;
 }
 
 @media (min-width: 768px) {
-  .module-wrapper.form-module .copy p.copy, .module-wrapper.form-module .copy .hero .inner .text-container p, .hero .inner .text-container .module-wrapper.form-module .copy p, .module-wrapper.form-module .copy h3 {
+  .module-wrapper.form-module .copy p.copy, .module-wrapper.form-module .copy .hero .inner .text-container p, .hero .inner .text-container .module-wrapper.form-module .copy p, .module-wrapper.form-module .copy .card p.card-text, .card .module-wrapper.form-module .copy p.card-text, .module-wrapper.form-module .copy h3 {
     margin: 0;
   }
 }

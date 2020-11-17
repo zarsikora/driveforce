@@ -1,0 +1,94 @@
+.card.product {
+    overflow: hidden;
+    background-color: transparent;
+    box-shadow: none;
+    padding: 2rem 0;
+    @include media-breakpoint-up(lg){
+        padding: 2rem;
+
+        &:nth-child(odd){
+            padding-left: 0;
+        }
+
+        &:nth-child(even){
+            padding-right: 0;
+        }
+    }
+
+    .card-body {
+        padding: 0;
+        height: 30rem;
+        @media(min-width: 992px) {
+            height: 31.9vw;
+        }
+        @media(min-width: 1920px) {
+            height: auto;
+        }
+
+        .img-wrapper {
+            height: 60%;
+            position: relative;
+            margin-bottom: 2rem;
+            overflow: hidden;
+            @include media-breakpoint-up(sm) {
+                height: 70%;
+            }
+            @include media-breakpoint-up(md) {
+                height: 55%;
+            }
+            @include media-breakpoint-up(xl) {
+                height: calc(31.9vw * 0.65);
+            }
+
+            img {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: .4rem .4rem 0 0;
+                transition: all ease-out 500ms;
+            }
+        }
+
+        .text-wrapper {
+            color: #000;
+            transition: all ease 300ms;
+
+            .header {
+                padding: 0 0 1rem 0;
+                // font-family: "Double Medium";
+                margin-bottom: 0;
+                transition: all ease 300ms;
+            }
+
+            .meta-info {
+                    display: flex;
+
+                p {
+                    //font-family: "Work Sans Light";
+                    margin: 0 .5rem;
+
+                    &:first-child {
+                        margin-left: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    @include media-breakpoint-up(lg) {
+        &:hover {
+            // .text-wrapper {
+            //     color: $tan;
+
+            //     .header {
+            //         color: $tan;
+            //     }
+            // }
+
+            .img-wrapper img {
+                transform: scale(1.1);
+            }
+        }
+    }
+}

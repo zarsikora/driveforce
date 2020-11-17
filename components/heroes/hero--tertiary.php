@@ -2,7 +2,7 @@
     $header = get_sub_field('header');
 ?>
 
-<div class="jumbotron hero tertiary module-flush <?php echo $bgColor ?>" data-color="<?php echo $bgColor ?>">
+<div class="jumbotron hero tertiary module-flush">
 
     <div class="inner">
         <div class="text-container">
