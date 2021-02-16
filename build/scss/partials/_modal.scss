@@ -1,0 +1,53 @@
+#waitlistModal {
+    .modal-dialog {
+        max-width: calc(100% - 30px);
+        margin: 4rem auto;
+        overflow: hidden;
+        @include media-breakpoint-up(lg){
+            max-width: 80%;
+            height: auto;
+            margin: 3vh auto;
+        }
+
+        .modal-content {
+            background-color: $lightBg;
+            border: none;
+            padding: 3rem;
+
+            .modal-body {
+                padding: 0;
+
+                button {
+                    border: none;
+                    font-size: 4rem;
+                    z-index: 3;
+                }
+
+                .form-module {
+                    .module-padded {
+                        padding: 0;
+
+                        .img {
+                            display: none;
+                            @include media-breakpoint-up(md){
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+
+                                img {
+                                    position: absolute;
+                                    width: 100%;
+                                    height: auto;
+                                }
+                            }
+                        }
+        
+                        .tag {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -11,7 +11,6 @@
 
                 echo '<li id="menu-item=' . $v['ID'] . '" class="' . $classes . '">';
                 echo '<a href="' . $v['url'] . '">';
-                echo '<span class="integer">0' . $menuCounter . '/</span>';
                 echo $v['title'];
                 echo '</a>';
                 echo '</li>';
@@ -21,5 +20,8 @@
             echo '</ul>';
         }
         ?>
+
+        <?php echo button('#', 'Join the Waitlist', 'pane-waitlist-btn', '#waitList'); ?>
     </div>
+    <p class="copyright">&copy; DriveForce  <?php echo date('Y'); ?></p>
 </div>

@@ -2,7 +2,8 @@
 
 $type = get_sub_field('type');
 
-if($type == 'blog-post') include 'grid--feature.php';
+if($type == 'icon') include 'grid--icon.php';
+if($type == 'article') include 'grid--article.php';
 
 
 ?>

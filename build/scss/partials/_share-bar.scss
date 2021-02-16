@@ -1,0 +1,29 @@
+.share-bar.sm-share {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    @include media-breakpoint-up(md){
+        justify-content: flex-start;
+    }
+    
+    li {
+        font-size: 1.6rem;
+        margin-right: 2rem;
+        line-height: 4rem;
+        font-family: $displayType;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        svg {
+            width: 4rem;
+            height: 4rem;
+            @include media-breakpoint-up(lg){
+                width: 2.778vw;
+                height: 2.778vw;
+            }
+        }
+    }
+}

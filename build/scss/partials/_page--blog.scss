@@ -1,0 +1,42 @@
+.blog-hero {
+    text-align: center;
+    margin-bottom: 0;
+
+    h1 {
+        margin-bottom: 4rem;
+    }
+
+    p {
+        max-width: 57rem;
+        margin: 0 auto;
+    }
+}
+
+#more_posts {
+    flex: 0 0 100%;
+    display: block;
+    text-align: center;
+    color: $sage;
+    font-family: $boldType;
+    text-decoration: underline;
+    font-size: 20px;
+    margin-bottom: 7rem;
+    position: relative;
+    margin-top: -7rem;
+    
+
+    .loading-gif {
+        width: 4rem;
+        display: none;
+        position: absolute;
+        top: -1rem;
+        right: calc(50% - 160px);
+        transform: translateX(-50%);
+    }
+
+    &.active {
+        .loading-gif {
+            display: inline-block;
+        }
+    }
+}

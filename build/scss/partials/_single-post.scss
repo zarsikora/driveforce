@@ -1,0 +1,203 @@
+.article-single {
+    background: $lightBg;
+
+    & > .module-wrapper:first-child,
+    & > .module-wrapper:nth-child(2) {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    ul.social-sharing {
+        display: flex;
+        list-style: none;
+        align-items: center;
+        padding: 0;
+
+        li {
+            margin: 0 1rem;
+            font-size: 1.6rem;
+            color: $highlight;
+            font-family: $displayType;
+            position: relative;
+
+            &:first-child {
+                margin-left: 0;
+            }
+
+
+            svg {
+                fill: $highlight;
+                width: 2.4rem;
+            }
+        }
+    }
+
+    .hero {
+        color: $darkText;
+        overflow-y: visible;
+        height: auto;
+        text-align: center;
+        @include media-breakpoint-up(lg){
+            margin: 10rem 0 6rem;
+        }
+
+        .inner {
+            display: flex;
+            justify-content: center;
+
+            h1 {
+                margin-bottom: 5rem;
+            }
+
+            .share-bar-wrapper {
+                opacity: 0;
+                transform: translateY(10%);
+            }
+        }
+    }
+
+    .post-content {
+        color: $darkText;
+
+        .inner {
+            width: 100%;
+            max-width: 67.8rem;
+            margin: 0 auto;
+
+            .featured-img {
+                position: relative;
+                height: 30rem;
+                margin-bottom: 5rem;
+                width: 124%;
+                left: -12%;
+                opacity: 0;
+                transform: translateY(10%);
+                @include media-breakpoint-up(md){
+                    height: 44rem;
+                    width: 100%;
+                    left: auto;
+                }
+
+                img {
+                    position: absolute;
+                    width: 100%;
+                    object-fit: cover;
+                    height: 100%;
+                }
+            }
+
+            .copy {
+                margin-bottom: 9rem;
+                opacity: 0;
+                transform: translateY(10%);
+    
+                h2 {
+                    margin-bottom: 3.5rem;
+                    font-size: 3rem;
+                }
+    
+                h3 {
+                    margin: .7em 0;
+                }
+    
+                p {
+                    margin-top: 0;
+                    line-height: 1.8em;
+                    @extend p.copy;
+                }
+    
+                a {
+                    color: $darkText;
+                    text-decoration: underline;
+    
+                    &:hover {
+                        color: $highlight;
+                    }
+                }
+
+                ul, ol {
+                    padding-left: 0;
+                    margin: 4rem 2rem;
+
+                    li {
+                        @extend .copy;
+                        margin: 2rem 0;
+                    }
+                }
+    
+                figcaption {
+                    font-size: 1.4rem;
+                    margin: 1rem 0 0 0;
+                }
+
+                blockquote.wp-block-quote {
+                    @extend p.copy;
+                    background: #fff;
+                    padding: 6rem;
+                    border-left: 1.5rem solid $sage;
+                    color: $darkText;
+                    font-family: $boldType;
+                    margin: 4rem 0;
+                    @include media-breakpoint-up(md){
+                        font-size: 3.2rem;
+                    }
+
+                    p {
+                        margin-bottom: 0;
+                        font-family: $boldType;
+                    }
+
+                    cite {
+                        color: $darkText;
+                        font-size: 1.6rem;
+                        font-family: $mediumType;
+                        padding-left: 3rem;
+                        position: relative;
+
+                        &:before {
+                            content: "";
+                            display: block;
+                            position: absolute;
+                            left: 0;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            width: 1.5rem;
+                            height: .1rem;
+                            background-color: $darkText;
+                        }
+                    }
+                }
+    
+                .wp-block-image {
+                    margin: 4rem 0;
+                    width: 100%;
+                    height: 30rem;
+                    position: relative; 
+
+                    @include media-breakpoint-up(md){
+                        height: 44rem;
+                    }
+
+                    img {
+                        position: absolute;
+                        object-fit: cover;
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+
+                .share-bar.sm-share {
+                    justify-content: center; 
+                    margin-top: 9rem;
+
+                    li {
+                        line-height: 4rem;
+                        margin: 0;
+                        margin-right: 2rem;
+                        font-family: $boldType;
+                    }
+                }
+            }
+        }
+    }
+}

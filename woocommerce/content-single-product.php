@@ -1,10 +1,10 @@
 <?php
 
-// defined( 'ABSPATH' ) || exit;
+defined( 'ABSPATH' ) || exit;
 
 global $product;
 
-print_r($product);
+// print_r($product);
 
 ?>
 
@@ -51,3 +51,4 @@ print_r($product);
 </div>
 
 <?php do_action( 'woocommerce_after_single_product' ); ?>
+<!-- AFTER SINGLE PRODUCT -->

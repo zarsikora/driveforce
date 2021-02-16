@@ -16,15 +16,33 @@
 @import "../node_modules/bootstrap/scss/type";
 @import "../node_modules/bootstrap/scss/images";
 @import "../node_modules/bootstrap/scss/code";
+@import "../node_modules/bootstrap/scss/alert";
+@import "../node_modules/bootstrap/scss/modal";
 @import "../node_modules/bootstrap/scss/transitions";
 @import "../node_modules/bootstrap/scss/grid";
+
+//SPLITTING CSS
+@import "../node_modules/splitting/dist/splitting";
+@import "../node_modules/splitting/dist/splitting-cells";
+
+//FONTS 
+@import "partials/fonts";
+
+//VARIABLES 
+@import "partials/variables";
 
 //NOW FOR OUR HOMEGROWN STYLESHEETS
 @import "partials/global";
 
+//PROMO BANNER
+@import "partials/banner";
+
 //HEADER AND FOOTER
 @import "partials/header";
 @import "partials/footer";
+
+//NAV 
+@import "partials/nav";
 
 //BUTTONS
 @import "partials/buttons/buttons--global";
@@ -32,16 +50,57 @@
 //HERO
 @import "partials/heroes/hero--global";
 
+//PRODUCT INTRO MODULE
+@import "partials/product-intro-module";
+
+// CERTIFICATIONS
+@import "partials/certifications";
+
 //GRIDS
-//@import "partials/grids/grid--global";
+@import "partials/grids/grid--global";
+@import "partials/grids/grid--article";
+
+//RTES
+@import "partials/rtes/rte";
+
+//FULL WIDTH IMAGE
+@import "partials/full-width-image";
+
+//FAQ MODULE
+@import "partials/faqs";
+
+//CAROUSEL
+@import "partials/carousel";
+
+//LIST 
+@import "partials/link-list";
+
+//MODAL 
+@import "partials/modal";
 
 //CARDS
 @import "partials/cards/card--global";
 @import "partials/cards/card--product";
+@import "partials/cards/card--icon";
+@import "partials/cards/card--article";
+@import "partials/cards/card--icon-text";
 
 //FORMS
 @import "partials/forms/form";
 @import "partials/forms/form--module";
 
+//SHARE MODULE 
+@import "partials/share-module";
+
+//SM SHARE BAR
+@import "partials/share-bar";
+
+//BLOG 
+@import "partials/single-post";
+
 //CUSTOM POST TYPE TEMPLATE STYLES
 @import "partials/404";
+
+//PAGES
+@import "partials/page--blog";
+@import "partials/page--challenge";

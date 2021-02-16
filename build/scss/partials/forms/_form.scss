@@ -1,13 +1,15 @@
 form {
-    padding: 3rem 4rem;
+    padding: 3rem 0 0;
     border-radius: .4rem;
     border: none;
     position: relative;
+    @include media-breakpoint-up(md){
+        padding: 3rem 0;
+    }
 
     label {
-        //color: $bone;
+        color: $darkText;
         font-size: 1.6rem;
-        text-transform: uppercase;
         letter-spacing: .16rem;
     }
 
@@ -24,16 +26,13 @@ form {
 
         .form-control {
             height: 6rem;
-            //background: $bone;
             line-height: 6rem;
             font-size: 1.8rem;
             border-radius: .4rem;
             transition: all ease 300ms;
-            //color: $bgForest;
 
             &:active,
             &:focus {
-                //border: 2px solid $tan;
                 outline: none;
                 box-shadow: none;
             }
@@ -55,49 +54,80 @@ form {
 //CONTACT FORM 7 STYLES
 .wpcf7-form {
     z-index: 8;
-    @include media-breakpoint-down(sm) {
-        width: 100vw;
-        margin-left: -3.6rem;
-    }
+    padding: 0;
+    font-family: $mediumType;
 
     p {
-        margin: 2.5rem 0;
+        background: #fff;
+        position: relative;
+        margin: 0;
 
         &:first-of-type {
-            margin-top: 0;
+            border-radius: 1.4rem 1.4rem 0 0;
+        }
+
+        &:nth-last-of-type(2) {
+            border-radius: 0 0 1.4rem 1.4rem;
         }
 
         &:last-of-type {
-            margin-bottom: 0;
+            margin-top: 4rem;
+            background: none;
         }
 
         label {
             width: 100%;
             margin-bottom: 0;
+            &:after {
+                content: '';
+                position: absolute;
+                width: 90%;
+                height: .1rem;
+                left: 5%;
+                bottom: 0;
+                background: #F6F6F6;
+                transition: all ease 300ms;
+            }
 
             input,
             textarea,
             select {
                 height: 6rem;
                 padding: 0 2rem;
+                position: relative;
                 width: 100%;
-                //background: $bone;
                 line-height: 6rem;
                 font-size: 1.4rem;
                 border-radius: .4rem;
                 transition: all ease 300ms;
-                border: 1px solid #ced4da;
+                border: none;
                 margin-top: 1rem;
-                //color: $bgForest;
+                font-size: 1.8rem;
                 @include media-breakpoint-up(md){
                     font-size: 1.6rem;
                 }
 
+                &::placeholder {
+                    color: #B5B5B5;
+                }
+
                 &:active,
                 &:focus {
-                    //border: 2px solid $tan;
                     outline: none;
                     box-shadow: none;
+                    &::placeholder {
+                        color: #d4d4d4;
+                    }
+                }
+            }
+
+            select {
+                color: #B5B5B5;
+                transition: all ease 300ms;
+
+                &:active, 
+                &:focus {
+                    color: $darkText;
                 }
             }
 
@@ -115,7 +145,6 @@ form {
                     position: absolute;
                     top: 0;
                     right: 2rem;
-                    //color: $tan;
                     @include media-breakpoint-up(lg){
                         right: 4rem;
                     }
@@ -150,7 +179,6 @@ form {
                     width: 30px;
                     top: 0px;
                     left: 0px;
-                    //border: 2px solid $tan;
                 }
 
                 input[type=checkbox] + span:after {
@@ -165,7 +193,6 @@ form {
                     font-size: 18px;
                     text-align: center;
                     line-height: 30px;
-                    //color: $bone;
                 }
 
                 input[type=checkbox]:checked + span:before {
@@ -196,7 +223,6 @@ form {
 
                 .wpcf7-list-item-label {
                     font-size: 1.6rem;
-                    text-transform: uppercase;
                     letter-spacing: .16rem;
                 }
 
@@ -230,7 +256,6 @@ form {
                     font-size: 18px;
                     text-align: center;
                     line-height: 30px;
-                    //color: $tan;
                 }
 
                 input[type=radio]:checked + span:before {
@@ -249,23 +274,26 @@ form {
     }
 
     .wpcf7-not-valid-tip {
-        //color: $bone;
+        color: $darkText;
         margin: 1rem 2rem;
         margin-bottom: 0;
     }
 
     .wpcf7-submit {
-        padding: 1.5rem 0;
+        padding: 2.7rem 3.3rem;
         border: none;
-        background: #fff;
-        width: auto;
+        background: $highlight;
+        font-family: $mediumType;
+        box-shadow: 0px 10px 24px #00000029;
+        border-radius: 4rem;
+        color: #fff;
+        width: 100%;
         display: inline-flex;
         align-items: center;
         justify-content: center;
         transition: all ease 300ms;
         white-space: nowrap;
         position: relative;
-        text-transform: uppercase;
         text-decoration: none !important;
         font-size: 1.6rem;
         vertical-align: middle;
@@ -278,37 +306,80 @@ form {
         }
 
         &:hover {
-            //color: $tan;
-
-            .submit-line {
-                left: 9rem;
+            @include media-breakpoint-up(lg){
+                background: $hoverTint;
             }
         }
     }
 
-    .submit-line {
-        display: block;
-        width: 4rem;
-        height: .4rem;
-        //background: $tan;
-        transition: all ease 300ms;
-        position: absolute;
-        bottom: 4rem;
-        left: 4rem;
-    }
-
     .wpcf7-response-output {
         border: none !important;
-        //color: $bone;
         padding: 0 !important;
         margin: 2rem 0 !important;
-        font-family: "Work Sans Light";
+        font-family: $mediumType;
         font-size: 1.4rem;
     }
 }
 
 //MC FORM STYLES
-#form-success-wrapper {
-  display: none;
-  padding: 5rem 0;
+#mc-embedded-subscribe-form {
+    font-family: $mediumType;
+
+    .form-group {
+        margin: 0;
+        position: relative;
+        &:after {
+            content: '';
+            position: absolute;
+            width: 90%;
+            height: .1rem;
+            left: 5%;
+            bottom: 0;
+            background: #F6F6F6;
+            transition: all ease 300ms;
+        }
+
+        p {
+            display: none;
+        }
+
+        input {
+            height: 7rem;
+            padding: 0 2rem;
+            width: 100%;
+            line-height: 7rem;
+            font-size: 1.8rem;
+            border: none;
+            color: $darkText;
+            transition: all ease 300ms;
+
+            &::placeholder {
+                color: #B5B5B5;
+            }
+
+            &:active,
+            &:focus {
+                &::placeholder {
+                    color: #d4d4d4;;
+                }
+            }
+        }
+
+        #mce-FNAME {
+            border-radius: 1.4rem 1.4rem 0 0;
+        }
+
+        #mce-EMAIL {
+            border-radius: 0 0 1.4rem 1.4rem;
+        }
+
+        .mce_inline_error {
+            margin: 0;
+        }
+    }
+
+    #mc-embedded-subscribe {
+        margin: 3rem 0;
+        width: 100%;
+    }
 }

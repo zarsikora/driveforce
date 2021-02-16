@@ -1,0 +1,97 @@
+#content.challenges-page {
+    .hero {
+        height: auto;
+
+        .main-info {
+            height: 35rem;
+
+            .inner {
+                justify-content: center;
+                padding: 8rem 3rem;
+
+                h1 {
+                    flex: 0 0 100%;
+                    text-align: center;
+                }
+
+                .share-bar-wrapper {
+                    opacity: 0;
+                    transform: translateY(10%);
+                }
+            }
+        }
+
+        .featured-img {
+            width: 100%;
+            position: relative;
+            height: 500px;
+
+            img {
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+
+    .problem {
+        .text-inner {
+            background: #fff;
+            padding: 3rem;
+            margin: calc(-9vw - 10rem) auto 0;
+            position: relative;
+            @include media-breakpoint-up(lg){
+                padding: 8.889vw 8.333vw;
+                width: 91.6rem;
+            }
+
+            h2 {
+                font-size: 3rem;
+                @include media-breakpoint-up(lg){
+                    font-size: 5rem;
+                }
+            }
+
+            ul {
+                padding-left: 1.5rem;
+
+                li {
+                    @extend li.copy;
+                }
+            }
+        }
+    }
+
+    .solution {
+        .text-inner {
+            padding: 3rem 0;
+            margin: 0 auto;
+            @include media-breakpoint-up(lg){
+                width: 91.6rem;
+                padding: 8rem 10rem;
+            }
+
+            h3 {
+                font-size: 2.4rem;
+                color: $darkText;
+                @include media-breakpoint-up(lg){
+                    font-size: 3rem;
+                }
+            }
+
+            p {
+                @extend p.copy;
+                color: $darkText;
+            }
+
+            ul {
+                padding-left: 1.5rem;
+
+                li {
+                    @extend li.copy;
+                }
+            }
+        }
+    }
+}

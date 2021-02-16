@@ -1,0 +1,24 @@
+#promo-banner {
+    background-color: $darkBg;
+    margin-bottom: 0;
+    border: none;
+    border-radius: 0;
+    padding: 1.1rem 1.25rem;
+    z-index: 10;
+
+    p {
+        margin: 0;
+        text-align: center;
+        color: $lightText;
+        font-size: 1.4rem;
+
+        @media (min-width: 1920px){
+            font-size: 1.6rem;
+        }
+    }
+
+    a {
+        text-decoration: underline;
+        color: $lightText;
+    }
+}

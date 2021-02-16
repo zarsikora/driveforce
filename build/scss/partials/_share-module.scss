@@ -1,0 +1,124 @@
+.share-module {
+    background: #fff; 
+
+    .image-wrapper {
+        display: none;
+        @include media-breakpoint-up(lg){
+            display: block;
+        }
+
+        img {
+            width: 100%;
+            object-fit: cover;
+            height: 100%;
+        }
+    }
+
+    .text-wrapper {
+        padding: 10rem 5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        h2 {
+            text-align: center;
+            margin-bottom: 5rem;
+        }
+
+        .social-sharing {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+
+            li {
+                margin-bottom: 2.5rem;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+
+                .btn {
+                    width: 36rem;
+                    justify-content: flex-start;
+                    position: relative;
+                    transition: all ease 300ms;
+                    @media (min-width: 1440px){
+                        width: 25.694vw;
+                    }
+
+                    &:after {
+                        content: "";
+                        width: .1rem;
+                        height: 60%;
+                        display: block;
+                        position: absolute;
+                        background-color: #000;
+                        left: 8rem;
+                        transition: all ease 300ms;
+                    }
+
+                    &.facebook {
+                        background: #507BCA;
+
+                        &:after {
+                            background-color: #2F559D;
+                        }
+
+                        &:hover {
+                            background-color: #2F559D;
+                        }
+                    }
+
+                    &.twitter {
+                        background: #5BC1F1;
+
+                        &:after {
+                            background-color: #14A0E1;
+                        }
+
+                        &:hover {
+                            background-color: #14A0E1;
+                        }
+                    }
+
+                    &.email {
+                        &:after {
+                            background-color: $hoverTint;
+                        }
+                    }
+
+                    svg {
+                        height: 2.5rem;
+                        width: auto;
+                        margin-right: 5rem;
+                        fill: #fff;
+                        transition: all ease 300ms;
+
+                        &.email {
+                            width: 2.5rem;
+                            height: auto;
+                        }
+                    }
+
+                    &:hover {
+                        @include media-breakpoint-up(lg){
+                            &:after {
+                                display: none;
+                            }
+
+                            svg {
+                                margin-right: 3.5rem;
+
+                                &.twitter,
+                                &.email {
+                                    margin-right: 2.5rem;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

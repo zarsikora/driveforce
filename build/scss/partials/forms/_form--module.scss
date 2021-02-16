@@ -1,114 +1,22 @@
-.module-wrapper.form-module {
-    color: #fff;
-    background: #000;
+.form-module {
+    color: $darkText;
     padding-top: 0;
-    @include media-breakpoint-up(lg) {
-        padding: 5.5vw 0;
-        margin: 0 auto;
-    }
     @media(min-width: 1920px) {
-        padding: 10.6rem 0;
         min-height: calc(100vh - 80rem);
     }
 
-    form {
-        @include media-breakpoint-up(lg) {
-            margin-top: calc(-5rem + -20vw); 
-        }
-    }
-
     .copy {
-        &.col-lg-5 {
-            margin-top: -3.6rem;
-            @include media-breakpoint-up(lg){
-                margin-top: -10vw;
-            }
-            @media(min-width: 1920px) {
-                margin-top: -18rem;
-            }
+        h3 {
+            color: $darkText;
+        }
+        
+        &.col-lg-6 {
+            padding: 7rem;
+            display: flex;
+            justify-content: center;
 
-            .copy {
-                position: relative;
-                @include media-breakpoint-up(lg){
-                    padding-left: 3rem;
-                }
-
-                &:before {
-                    content: "";
-                    position: absolute;
-                    display: block;
-                    width: .2rem;
-                    height: 100%;
-                    left: 0;
-                    top: 0;
-                    //background-color: $tan;
-                }
-
-                &.mobile {
-                    @include media-breakpoint-up(md){
-                        margin-left: 6vw;
-                    }
-                    @include media-breakpoint-up(lg){
-                        display: none;
-                    }
-
-                    .card {
-                        background: none;
-                        box-shadow: none;
-
-                        .card-header {
-                            padding: 0 1.25rem;
-
-                            h3 {
-                                margin-bottom: 0;
-
-                                button {
-                                    background: none;
-                                    border: none;
-                                    //color: $bone;
-                                    text-align: left;
-                                    text-transform: uppercase;
-                                    letter-spacing: .16rem;
-                                    position: relative;
-
-                                    &:focus {
-                                        outline: none;
-                                    }
-
-                                    .plus {
-                                        width: 2rem;
-                                        position: absolute;
-                                        right: 0;
-                                        top: 50%;
-                                        transform: translateY(-50%);
-                                        @include media-breakpoint-up(md){
-                                            right: -2rem;
-                                        }
-                                    }
-                                }
-                            }
-                        }
-
-                        .card-body {
-                            p {
-                                &:first-child {
-                                    margin-top: 0;
-                                }
-
-                                &:last-child {
-                                    margin-bottom: 0;
-                                }
-                            }
-                        }
-                    }
-                }
-
-                &.desktop {
-                    display: none;
-                    @include media-breakpoint-up(lg){
-                        display: block;
-                    }
-                }
+            .inner {
+                width: 43.7rem;
             }
         }
 
@@ -131,6 +39,116 @@
     }
 }
 
+//CONTACT MODULE 
+#contact {
+    margin-top: 7rem;
+    @include media-breakpoint-up(lg) {
+        margin: 7rem auto;
+    }
+
+    .image {
+        display: none;
+        position: relative;
+        overflow: hidden;
+
+        @include media-breakpoint-up(lg){
+            display: block;
+            margin-top: -9.4rem;
+        }
+
+        img {
+            object-fit: cover;
+            position: fixed;
+            height: 100%;
+            top: 0;
+        }
+    }
+}
+
+//WAITLIST MODULE
+#waitList {
+    position: relative;
+    overflow-y: hidden;
+    padding: 10rem 0;
+    margin: 0 auto;
+    @include media-breakpoint-up(lg) {
+        padding: 13rem 0;
+    }
+    @media(min-width: 1440px) {
+        padding: 9vw 0;
+    }
+    @media(min-width: 1920px) {
+        padding: 17.3rem 0;
+    }
+
+    &.has-overflow {
+        overflow-y: visible;
+    }
+
+    .module-padded {
+        position: relative;
+        z-index: 3;
+
+        .row {
+            h2 {
+                margin-bottom: 2rem; 
+            }
+            
+            .img {
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+
+            .form {
+                .copy {
+                    text-align: center;
+                    margin: 2rem 0;
+
+                    @include media-breakpoint-up(md){
+                        text-align: left;
+                        margin: 0;
+                    }
+                }
+
+                #form-wrapper {
+                    @include media-breakpoint-up(lg){
+                        width: 80%;
+                    }
+                }
+            }
+        }
+
+        .tag {
+            display: none;
+            text-align: right;
+            left: 0;
+            bottom: 0;
+            margin-left: -20%;
+            @include media-breakpoint-up(lg){
+                display: block;
+            }
+            @media (min-width: 1440px){
+                margin-left: -30%;
+                bottom: -5rem;
+            }
+        }
+    }
+
+    .waitlist-curve {
+        position: absolute;
+        left: 0;
+        bottom: -30rem;
+        z-index: 2;
+        width: 50%;
+        display: none;
+        @include media-breakpoint-up(lg){
+            display: block;
+        }
+    }
+}
+
 //FORM SUCCESS PANE
 #form-success-pane {
     position: fixed;
@@ -141,15 +159,15 @@
     justify-content: center;
     align-items: center;
     left: 0;
-    z-index: 8;
-    background-color: #000;
+    z-index: 30;
+    background-color: $darkBg;
     transform: scaleY(0);
 
     .inner {
-        color: #fff;
+        color: $lightText;
         text-align: center;
         max-width: 80.417vw;
-        z-index: 2;
+        z-index: 2; 
         margin-top: 16.667vw;
 
         h1 {
@@ -169,37 +187,8 @@
         .logo {
             width: 10rem;
             display: block;
-            margin: 4rem auto;
+            margin: 8rem auto;
             opacity: 0;
-        }
-    }
-
-    .form-success-svg {
-        position: absolute;
-        opacity: 0;
-
-        &#form-success-svg-1 {
-            width: 72.083vw;
-            left: 0;
-            top: 81vh;
-            transform: translateY(40%);
-
-            @include media-breakpoint-up(lg){
-                width: 52.083vw;
-                top: 59.333vh;
-            }
-        }
-
-        &#form-success-svg-2 {
-            width: 50vw;
-            top: 61.889vh;
-            left: 63.819vw;
-            transform: translateY(-20%);
-
-            @include media-breakpoint-up(lg){
-                width: 31.250vw;
-                top: 58.889vh;
-            }
         }
     }
 }

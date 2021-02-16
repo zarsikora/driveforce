@@ -2,7 +2,7 @@
 
 // Load plugins
 const autoprefixer = require("autoprefixer");
-const browsersync = require("browser-sync").create();
+//const browsersync = require("browser-sync").create();
 const cp = require("child_process");
 const cssnano = require("cssnano");
 const del = require("del");
@@ -16,24 +16,24 @@ const sass = require("gulp-sass");
 const concat = require("gulp-concat");
 
 // BrowserSync
-function browserSync(done) {
-    browsersync.init({
-        proxy: 'localhost/driveforce',
-        open: false,
-        notify: false,
-        ghostMode: false,
-        ui: {
-            port: 8001
-        }
-    });
-    done();
-}
+// function browserSync(done) {
+//     browsersync.init({
+//         proxy: 'localhost/driveforce',
+//         open: false,
+//         notify: false,
+//         ghostMode: false,
+//         ui: {
+//             port: 8001
+//         }
+//     });
+//     done();
+// }
 
 // BrowserSync Reload
-function browserSyncReload(done) {
-    browsersync.reload();
-    done();
-}
+// function browserSyncReload(done) {
+//     browsersync.reload();
+//     done();
+// }
 
 // Clean assets
 function clean() {
@@ -48,7 +48,7 @@ function css() {
         .pipe(sass({ outputStyle: "expanded" }))
         .pipe(postcss([autoprefixer()/*, cssnano()*/]))
         .pipe(gulp.dest("./wp-content/themes/bones")) //root theme directory
-        .pipe(browsersync.stream());
+        //.pipe(browsersync.stream());
 }
 
 // Transpile, concatenate and minify scripts
@@ -61,27 +61,29 @@ function scripts() {
             "./wp-content/themes/bones/build/node_modules/paper/dist/paper-core.js",
             "./wp-content/themes/bones/build/node_modules/@barba/core/dist/barba.umd.js",
             "./wp-content/themes/bones/build/node_modules/gsap/dist/gsap.js",
-            "./wp-content/themes/bones/build/node_modules/svgxuse/svgxuse.js",
+            "./wp-content/themes/bones/build/node_modules/splitting/dist/splitting.js",
+            "./wp-content/themes/bones/build/js/gsap-member/minified/CustomEase.min.js",
+            //"./wp-content/themes/bones/build/node_modules/svgxuse/svgxuse.js",
             "./wp-content/themes/bones/build/js/main.js"
             ])
             .pipe(concat('bundle.js'))
             .pipe(plumber())
             .pipe(gulp.dest("./wp-content/themes/bones"))
-            .pipe(browsersync.stream())
+            //.pipe(browsersync.stream())
     );
 }
 
 
 // Watch files
 function watchFiles() {
-    gulp.watch("./wp-content/themes/bones/build/scss/**/*", gulp.series(css, browserSyncReload));
-    gulp.watch("./wp-content/themes/bones/build/js/**/*", gulp.series(/*scriptsLint,*/ scripts, browserSyncReload));
+    gulp.watch("./wp-content/themes/bones/build/scss/**/*", gulp.series(css/*, browserSyncReload*/));
+    gulp.watch("./wp-content/themes/bones/build/js/**/*", gulp.series(/*scriptsLint,*/ scripts/*, browserSyncReload*/));
 }
 
 // define complex tasks
 const js = gulp.series(/*scriptsLint,*/ scripts);
 const build = gulp.series(clean, gulp.parallel(css, js));
-const watch = gulp.parallel(css, scripts, watchFiles, browserSync);
+const watch = gulp.parallel(css, scripts, watchFiles, /*browserSync*/); 
 
 // export tasks
 exports.css = css;

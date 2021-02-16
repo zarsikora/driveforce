@@ -6,6 +6,9 @@ window.$ = window.jQuery = jQuery;
 //Ok, now let's get it.
 console.log('YEEHAW! Welcome to bones.js');
 
+//Init splitting js
+let splitting = new Splitting(); 
+
 //Run mobile check and if on mobile, add mobile class to HTML tag.
 let mounted = false;
 mobilecheck = () => {
@@ -57,11 +60,385 @@ let scroll = window.requestAnimationFrame ||
     // IE Fallback, you can even fallback to onscroll
     function(callback){ window.setTimeout(callback, 1000/60) };
 
-//
-//
-// FUNCTIONS IN THE HEADER AND FOOTER THAT DON'T REQUIRE RE-INIT WITH BARBA
-//
-//
+
+// ANIMATION SCROLL HANDLER - request animation frame
+let windowHeight = $(window).height();
+let lastPosition = -1; // storing last scroll position which updates on throttled scroll listener - nothing takes place before it is changed
+// let slideUps; I dont think we need this
+let scrollArray = [];
+
+function getScrollModules()
+{
+    scrollArray = []; // reset array
+    scrollElems = $('[data-animation-effect]'); // find new modules
+
+    // Setup array of elements and starting Y positions
+    scrollElems.each(function(i)
+    {
+        let ele = $(scrollElems)[i];
+        let height = $(ele).height();
+
+        scrollArray.push({ // no longer looking for value every time on scroll
+            ele: ele,
+            startY: $(ele).offset().top,
+            height: height,
+            type: $(ele).attr('data-animation-effect'),
+            trigger : $(ele).attr('data-animation-trigger'),
+            breakpointHit : false
+        });
+    });
+}
+
+function animationWizard(timestamp)
+{
+    getScrollModules();
+
+    /*
+     * Easing Functions - inspired from http://gizma.com/easing/
+     * only considering the t value for the range [0, 1] => [0, 1]
+     */
+    EasingFunctions = {
+        // no easing, no acceleration
+        linear: t => t,
+        // accelerating from zero velocity
+        easeInQuad: t => t*t,
+        // decelerating to zero velocity
+        easeOutQuad: t => t*(2-t),
+        // acceleration until halfway, then deceleration
+        easeInOutQuad: t => t<.5 ? 2*t*t : -1+(4-2*t)*t,
+        // accelerating from zero velocity
+        easeInCubic: t => t*t*t,
+        // decelerating to zero velocity
+        easeOutCubic: t => (--t)*t*t+1,
+        // acceleration until halfway, then deceleration
+        easeInOutCubic: t => t<.5 ? 4*t*t*t : (t-1)*(2*t-2)*(2*t-2)+1,
+        // accelerating from zero velocity
+        easeInQuart: t => t*t*t*t,
+        // decelerating to zero velocity
+        easeOutQuart: t => 1-(--t)*t*t*t,
+        // acceleration until halfway, then deceleration
+        easeInOutQuart: t => t<.5 ? 8*t*t*t*t : 1-8*(--t)*t*t*t,
+        // accelerating from zero velocity
+        easeInQuint: t => t*t*t*t*t,
+        // decelerating to zero velocity
+        easeOutQuint: t => 1+(--t)*t*t*t*t,
+        // acceleration until halfway, then deceleration
+        easeInOutQuint: t => t<.5 ? 16*t*t*t*t*t : 1+16*(--t)*t*t*t*t
+    }
+
+    function isElementInViewport(ele)
+    {
+        let offset = mobileDetected ? .35 : .35;
+        let topViewport = window.pageYOffset;
+        let bottomViewport = topViewport + windowHeight;
+        let positionData = {inViewport: false, vertPosPercent: 0};
+        let vertPosPercent = (bottomViewport - ele.startY) / (windowHeight * offset);
+        let vertParallaxPercent = ((bottomViewport - ele.startY) / (windowHeight + ele.height));
+
+        if(vertPosPercent < 0) vertPosPercent = 0;
+        if(vertPosPercent > 1) vertPosPercent = 1;
+
+        if(vertParallaxPercent < 0) vertParallaxPercent = 0;
+        if(vertParallaxPercent > 1) vertParallaxPercent = 1;
+
+        positionData.vertPosPercent = vertPosPercent;
+        positionData.vertParallaxPercent = vertParallaxPercent;
+
+        if(vertPosPercent >= 0 || vertPosPercent <= 1) positionData.inViewport = true;
+
+        return positionData;
+    }
+
+    function elementHitBreakpoint(ele)
+    {
+        let topViewport = window.pageYOffset;
+        let bottomViewport = topViewport + windowHeight;
+
+        if($('body').hasClass('home')){
+            return ((ele.startY - bottomViewport) < 0);
+        } else {
+            return ((ele.startY - (bottomViewport - (windowHeight * 0.1))) < 0);
+        }
+    }
+
+    function loop()
+    {
+        // Avoid calculations if not needed
+        if (lastPosition == window.pageYOffset && !$('body').hasClass('home')) // check position
+        {
+            //console.log('stop loop');
+            scroll(loop);
+            return false; // stops loop after firing once
+        }
+
+        lastPosition = window.pageYOffset; //update position
+
+        // Loop through the elements so we can choose to animate or not
+        for(let i = 0; i < scrollArray.length; i++)
+        {
+            let ele = scrollArray[i];
+            let positionData = isElementInViewport(ele);
+            let vertPosPercent = positionData.vertPosPercent;
+            let vertParallaxPercent = positionData.vertParallaxPercent;
+            let animationType = ele.trigger;
+            let breakpointHit = ele.breakpointHit;
+
+            if (animationType === 'breakpoint' && !breakpointHit) {
+                let breakpoint = elementHitBreakpoint(ele);
+
+                if (breakpoint) {
+                    // Set breakpoint flag so we know this has animated already
+                    ele.breakpointHit = true;
+                    $(ele.ele).addClass('active');
+                }
+            } else if (animationType === 'scroll') {
+                if(positionData.inViewport)
+                {
+                    let easedPercent = EasingFunctions.easeInOutQuad(vertPosPercent);
+                    let easedParallaxPercent = EasingFunctions.easeOutQuad(vertParallaxPercent);
+
+                    // All modules only fade in on mobile
+                    if(mobileDetected)
+                    {
+                        $(ele.ele).css({
+                            opacity: vertPosPercent
+                        });
+
+                        continue;
+                    }
+
+                    if(ele.type == 'parallax')
+                    {
+                        $(ele.ele).css({
+                            transform: 'translateY(' + (50 - (50 * easedParallaxPercent)) + '%)'
+                        });
+                    }
+
+                    if(ele.type == 'lateralParallax')
+                    {
+                        $(ele.ele).css({
+                            transform: 'translateX(' + (100 - (100 * easedParallaxPercent)) + '%)'
+                        });
+                    }
+
+                    if(ele.type == 'slideLeft')
+                    {
+                        $(ele.ele).css({
+                            transform: 'translateX(-' + (0 + (25 * vertPosPercent)) + '%)'
+                        });
+                    }
+
+                    if(ele.type == 'slideRight')
+                    {
+                        $(ele.ele).css({
+                            transform: 'translateX(' + (150 + (25 * vertPosPercent)) + '%)'
+                        });
+                    }
+
+                    if(ele.type == 'moduleSlideUp')
+                    {
+                        $(ele.ele).css({
+                            transform: 'scale('+ (.85 + (0.15 * vertPosPercent)) +')',
+                            opacity: vertPosPercent
+                        });
+                    }
+
+                    if(ele.type == 'splitSlideUp'){
+                        let chars = $(ele.ele).find('.char');
+
+                        for(let i = 0; i <= chars.length; i++){
+                            setTimeout(function(){
+                                $(chars[i]).css({
+                                    transform: 'translate3d(0,' + (100 - (easedPercent * 100)) + '%, 0)'
+                                });
+                            }, 20 * i);
+                        }
+                    }
+
+                    if(ele.type == 'moduleFadeIn')
+                    {
+                        $(ele.ele).css({
+                            opacity: vertPosPercent
+                        });
+                    }
+
+                    if(ele.type == 'moduleSlideFromLeft')
+                    {
+                        let easedPercent = EasingFunctions.easeInQuad(vertPosPercent);
+                        $(ele.ele).css({
+                            opacity: vertPosPercent,
+                            transform: 'translate3d('+ (-100 + (easedPercent * 100)) +'%,0,0)'
+                        })
+                    }
+
+                    if(ele.type == 'moduleSlideFromRight')
+                    {
+                        let easedPercent = EasingFunctions.easeInQuad(vertPosPercent);
+                        $(ele.ele).css({
+                            opacity: vertPosPercent,
+                            transform: 'translate3d('+ (100 - (easedPercent * 100)) +'%,0,0)'
+                        })
+                    }
+
+                    if(ele.type == 'moduleSlideFromTop')
+                    {
+                        $(ele.ele).css({
+                            opacity: vertPosPercent,
+                            transform: 'translate3d(0,'+ (-100 + (easedPercent * 100)) +'%, 0)'
+                        })
+                    }
+
+                    if(ele.type == 'moduleSlideFromBottom')
+                    {
+                        $(ele.ele).css({
+                            opacity: vertPosPercent,
+                            transform: 'translate3d(0,' + (100 - (easedPercent * 100)) + '%, 0)'
+                        })
+                    }
+
+                    if(ele.type == 'moduleDriftUp')
+                    {
+                        $(ele.ele).css({
+                            opacity: vertPosPercent,
+                            transform: 'translate3d(0,' + (50 - (easedPercent * 50)) + '%, 0)'
+                        })
+                    }
+                }
+            }
+        }
+
+        scroll( loop );
+    }
+
+    // Call the loop for the first time
+    loop();
+};
+let myHandler = scroll(animationWizard);
+
+//HERO H1 ANIMATION CALL 
+function animateHomeHeroHeader(){
+    let heroHeader = $('.hero h1.title');
+    heroHeader.css({'opacity' : '1'});
+
+    if($(heroHeader).hasClass('breakpoint-animate')){
+        let words = $(heroHeader).find('.word');
+
+        // desktop
+        if(window.innerWidth >= '768'){
+            gsap.to('.primary-hero-curve', {duration: .8, opacity: 1, delay: 0, ease: "power4.inOut"}); 
+            gsap.to('.home-hero .image-container', {duration: 1.5, opacity: 1, delay: .5, translateY: 0, ease: "expo.out"}); 
+
+            setTimeout(function(){
+                for(let i = 0; i <= words.length; i++){
+                    setTimeout(function(){
+                        let word = words[i];
+                        $(word).addClass('active');
+                    }, 80 * i); 
+                }
+
+                gsap.to('.home-hero .copy', {duration: 1.2, opacity: 1, delay: .7, ease: "power4.inOut"});
+                gsap.to('.home-hero .btns-wrapper', {duration: 1.2, opacity: 1, delay: .7, ease: "power4.inOut"});
+                gsap.to('.home-hero .logos.desktop', {duration: 1.2, opacity: 1, delay: .7, ease: "power4.inOut"});
+                gsap.to('.home-hero .tag', {duration: .7, translateX: 0, delay: .7, ease: "power2.inOut"});
+            }, 700);
+        } else {
+            gsap.to('.primary-hero-curve', {duration: .5, opacity: 1, delay: 0, ease: "expo.out"}); 
+            gsap.to('.home-hero .image-container', {duration: .8, opacity: 1, delay: .2, translateY: 0, ease: "expo.out", onComplete: function(){
+                for(let i = 0; i <= words.length; i++){
+                    setTimeout(function(){
+                        let word = words[i];
+                        $(word).addClass('active');
+                    }, 75 * i);
+                }
+    
+                gsap.to('.home-hero .btn.mobile-waitlist', {duration: 1.2, opacity: 1, delay: .8, translateY: 0, ease: "expo.out"});
+                gsap.to('.home-hero .logos.mobile', {duration: 1.2, opacity: 1, delay: .8, translateY: 0, ease: "expo.out"});
+                gsap.to('.home-hero .copy', {duration: 1.2, opacity: 1, delay: .8, translateY: 0, ease: "expo.out"});
+                gsap.to('.home-hero .tag', {duration: .7, translateX: 0, delay: .4, ease: "none"});
+            }});
+        }
+    }
+}
+
+if($('.home-hero')){
+    setTimeout(function(){
+        animateHomeHeroHeader();
+    }, 0);
+}
+
+//SECONDARY HERO ANIMATION CALLS
+function animateSecondaryHero(){
+    let heroHeader = $('.hero h1.secondary-title');
+    heroHeader.css({'opacity' : '1'});
+    
+    if($(heroHeader).hasClass('breakpoint-animate')){
+        let words = $(heroHeader).find('.word');
+
+        for(let i = 0; i <= words.length; i++){
+            setTimeout(function(){
+                let word = words[i];
+                $(word).addClass('active');
+            }, 75 * i);
+        }
+
+        gsap.to('.secondary.hero p.subtitle', {duration: 1.2, opacity: 1, delay: .6, translateY: 0, ease: "expo.out"});
+        gsap.to('.secondary.hero .share-bar-wrapper', {duration: 1.2, opacity: 1, delay: .6, translateY: 0, ease: "expo.out"});
+    }
+}
+
+if($('.hero.secondary')){
+    animateSecondaryHero();
+}
+
+//BLOG POST HERO ANIMATION CALL
+function animateArticleHero(){
+    let heroHeader = $('.hero h1');
+
+    if($(heroHeader).hasClass('breakpoint-animate')){
+        let words = $(heroHeader).find('.word');
+
+        for(let i = 0; i <= words.length; i++){
+            setTimeout(function(){
+                let word = words[i];
+                $(word).addClass('active');
+            }, 75 * i);
+        }
+
+        gsap.to('.hero .share-bar-wrapper', {duration: 1.2, opacity: 1, delay: .6, translateY: 0, ease: "expo.out"});
+        
+        if($('.post-content .featured-img')){
+            gsap.to('.featured-img', {duration: 1.2, opacity: 1, delay: .8, translateY: 0, ease: "expo.out"});
+        }
+
+        gsap.to('.post-content .copy', {duration: 1.2, opacity: 1, delay: 1, translateY: 0, ease: "expo.out"});
+    }
+}
+
+if($('.hero.article').length){
+    animateArticleHero();
+}
+
+//CHALLENGES SINGLE HERO ANIMATION 
+function animateChallengesHero(){
+    let heroHeader = $('.hero h1');
+
+    if($(heroHeader).hasClass('breakpoint-animate')){
+        let words = $(heroHeader).find('.word');
+
+        for(let i = 0; i <= words.length; i++){
+            setTimeout(function(){
+                let word = words[i];
+                $(word).addClass('active');
+            }, 75 * i);
+        }
+
+        gsap.to('.hero .share-bar-wrapper', {duration: 1.2, opacity: 1, delay: .6, translateY: 0, ease: "expo.out"});
+    }    
+}
+
+if($('.challenges-page .hero').length){
+    animateChallengesHero();
+}
 
 //Navigational control.
 navToggle = () => {
@@ -127,10 +504,36 @@ requestTick = (scrollY) =>
 
 if(!ticking)
 {
-    scroll(function(){navAnimate(scrollY)});
+    scroll(function(){navAnimate(scrollY), stickyLogo(scrollY)});
 
     ticking = true;
 }
+}
+
+//STICKY LOGO ON SCROLL WITH BANNER
+
+stickyLogo = (scrollY) =>
+{
+    if(document.getElementById('promo-banner')){
+        let screenWidth = $(document).width();
+        let bannerHeight = $('#promo-banner').outerHeight();
+
+        if(screenWidth >= '992'){ 
+            if(scrollY >= bannerHeight){
+                    $('.sticky-logo').addClass('sticky');
+            } else {
+                $('.sticky-logo').removeClass('sticky');
+            }
+        }
+    }
+}
+
+if(document.getElementById('promo-banner')){
+    let screenWidth = $(document).width();
+
+    if(screenWidth >= '992'){ 
+        $('.sticky-logo').removeClass('sticky');
+    }
 }
 
 navAnimate = (scrollY) =>
@@ -178,9 +581,7 @@ if(!$(document.body).hasClass('mobile-nav-active'))
 }
 }
 
-//If you want to disable this on any page, you can do it here.
-let navScrollListener = !(window.location.pathname === '/');
-if(navScrollListener) window.addEventListener('scroll', navScroll, false);
+window.addEventListener('scroll', navScroll, false);
 
 
 
@@ -216,6 +617,52 @@ verticalTransition = (data, dir) => {
     }
 }
 
+//BLOG LOAD MORE
+function blogLoadMore() {
+    let pageCounter = 1;
+    let button = $('#more_posts'),
+        data = {
+            'action': 'get_blog_posts', //defined in functions file, don't need to include wp_ajax part
+            'pageCounter' : pageCounter
+        };
+
+    $.ajax({
+        url : loadmore_params.ajaxurl, // AJAX handler
+        data : data,
+        dataType: 'json',
+        type : 'POST',
+        beforeSend : function ( xhr ) {
+            $('#more_posts').addClass('active');
+        },
+        success : function( data ){
+            if( data ) {
+                let totalPosts = data.total;
+
+                $('.grid.article .row').append(data.html);
+                $('#more_posts').removeClass('active');
+
+                let postCount = $('.card.article').length;
+
+                if ( postCount == totalPosts ){
+                    button.remove(); // if out of posts, remove the button
+                }
+            } else {
+                button.remove();
+            }
+            pageCounter++;
+        }
+    });
+}
+
+//if we are on the blog grid page and button exists
+if(document.getElementById('more_posts')){
+    $('#more_posts').on('click', function(e){
+        e.preventDefault();
+        blogLoadMore();
+    });
+}
+
+
 //FORM SUCCESS TRANSITION ANIMATION
 function formSuccessTransition(){
     var tl = gsap.timeline();
@@ -228,11 +675,67 @@ function formSuccessTransition(){
     tl.to('#form-success-pane .inner h1', {duration: .5, opacity: 1, delay: .3, ease: Power2.easeIn});
     tl.to('#form-success-pane .inner .btn', {duration: .5, opacity: 1, ease: Power2.easeIn});
     tl.to('#form-success-pane .inner .logo', {duration: .5, opacity: 1, ease: Power2.easeIn});
-    // parallax in elements
-    // tl.to('#form-success-svg-1', {duration: 1, translateY: 0, opacity: 1, delay: .1, ease: Power2.easeIn}, "-=1");
-    // tl.to('#form-success-svg-2', {duration: 1, translateY: 0, opacity: 1, ease: Power2.easeIn}, "-=1");
-
 }
+
+// SCROLL TO ANCHOR FUNC
+function scrollToAnchor(e){
+    let scrollTo = $(e.target).attr('data-scrollTo');
+    if(scrollTo){
+        let scrollTarget = $(scrollTo);
+        console.log(scrollTarget);
+        let offsetTop = $(scrollTarget).offset().top;
+        let adjustedOffset = offsetTop - 50;
+
+        $("html, body").animate({ scrollTop: adjustedOffset }, 1000, 'linear');
+    }
+}
+
+
+// WAITLIST MODAL FUNCTION
+let headerBtn = $('#header .header-waitlist-btn');
+
+$(headerBtn).on('click', function(e){
+    e.preventDefault();
+    let waitlist = document.getElementById('waitList');
+
+    //if there is a form on this page scroll to it
+    if(waitlist){
+        scrollToAnchor(e);
+    } else {
+        $("#waitlistModal").modal();
+    }
+});
+
+//NAV PANE MODAL FUNCTION 
+let paneBtn = $('#nav-pane .pane-waitlist-btn')
+
+$(paneBtn).on('click', function(e){
+    let waitlist = document.getElementById('waitList');
+    e.preventDefault();
+    navClose();
+
+    //if there is a form on this page scroll to it
+    if(waitlist){
+        scrollToAnchor(e);
+    } else {
+        $("#waitlistModal").modal();
+    }
+});
+
+//HERO WAITLIST BTN FUNCTION
+let heroBtn = $('.desktop-waitlist.btn');
+
+$(heroBtn).on('click', function(e){
+    let waitlist = document.getElementById('waitList');
+    e.preventDefault();
+
+    if(waitlist){
+        scrollToAnchor(e);
+    } else {
+        $("#waitlistModal").modal();
+    }
+});
+
 
 //
 //
@@ -247,7 +750,7 @@ class formSubmit {
             document.removeEventListener('wpcf7mailsent', document.formSubmitCallback);
         }
 
-        if($(document.body).hasClass('page-id-44')){
+        if($(document.body).hasClass('page-id-224')){
             document.formSubmitCallback = this.formSubmit.bind(this);
             document.addEventListener('wpcf7mailsent', document.formSubmitCallback);
         }
@@ -258,128 +761,3 @@ class formSubmit {
     }
 }
 new formSubmit;
-
-
-//
-//
-// BARBA TRANSITIONS
-//
-//
-
-let initHeader = window.location.pathname !== '/';
-
-barbaTransitions = () => {
-    barba.init({
-        sync : true,
-        transitions: [{
-            name: 'default-transition',
-            async once(data){
-                setTimeout(function(){
-                    verticalTransition(data, 'down');
-                }, 500);
-            },
-            async beforeLeave(data){
-                const done = this.async();
-
-                // navClose();
-                verticalTransition(data, 'up');
-
-                setTimeout(function(){
-                    done();
-                }, 800);
-            },
-            async beforeEnter(data){
-                //update body classes
-                let nextHtml = data.next.html;
-                let response = nextHtml.replace(/(<\/?)body( .+?)?>/gi, '$1notbody$2>', nextHtml);
-                let bodyClasses = $(response).filter('notbody').attr('class');
-                $("body").attr("class", bodyClasses);
-
-                //update header classes
-                // let headerClasses = response.match(/<header id="header".*>/);
-                // let headerNewClasses = headerClasses[0].match(/class="([^"]*)"/);
-                // $("header").attr("class", headerNewClasses[1]);
-
-                //update live class of nav items
-                let menuItems = $('.menu-item');
-                let currentPath = window.location.href;
-
-                for(let i = 0; i < menuItems.length; i++){
-                    let menuItem = menuItems[i];
-                    let link = $(menuItem).find('.item-link');
-                    let path = $(link).attr('href');
-
-                    if($(menuItem).hasClass('current')){
-                        $(menuItem).removeClass('current');
-                    }
-
-                    if(path === currentPath){
-                        $(menuItem).addClass('current');
-                    }
-                }
-            },
-            async enter(data) {
-                //if we are on the blog grid page and button exists
-                // if(document.getElementById('more_posts')){
-                //     $('#more_posts').on('click', function(e){
-                //         e.preventDefault();
-                //         blogLoadMore();
-                //     });
-                // }
-
-                //check to see if this page should have nav scroll and do it if so
-                // let homepage = (window.location.pathname === '/' || window.location.pathname === '/alarad');
-                // if(!navScrollListener && !homepage){
-                //     window.addEventListener('scroll', navScroll, false);
-                //     navScrollListener = true;
-                // }
-
-                // if(navScrollListener && homepage){
-                //     window.removeEventListener('scroll', navScroll, false);
-                //     navScrollListener = false;
-                // }
-
-                //reinit classes
-                let blazy = new Blazy();
-                // let scroll = new scrollTrackerBar;
-                // let dots = new rulesScrollDots;
-                let form = new formSubmit;
-                // let navColor = new scrollColorChange;
-                // let legalPage = new legalPageAnimation;
-
-                // heroArrow();
-
-                window.scrollTo(0,0);
-
-                $(data.next.container).animate({
-                    opacity: 1
-                }, 'slow');
-            },
-            async afterEnter(data){
-                verticalTransition(data, 'down');
-
-                // myHandler = null;
-                // myHandler = scroll(letsTry);
-
-                //reinitialize scripts
-                // if($('.primary-hero-asset')){
-                //     setTimeout(function(){
-                //         animatePrimaryHeroGraphics();
-                //     }, 1800);
-                // }
-
-                // if($('.secondary-hero-asset')){
-                //     setTimeout(function(){
-                //         heroGraphicsFade();
-                //     }, 1500);
-                // }
-
-                if($('.wpcf7-form').length){
-                    wpcf7.initForm($('.wpcf7-form'));
-                }
-            }
-        }],
-    });
-}
-
-barbaTransitions();
