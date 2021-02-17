@@ -11,7 +11,7 @@
     <div class="hero module-flush">
         <div class="main-info">
             <div class="inner">
-                <h1 class="title breakpoint-animate" data-splitting="chars"><?php echo $title ?></h1>
+                <h1 class="title breakpoint-animate"><?php echo $title ?></h1>
 
                 <div class="share-bar-wrapper">
                     <?php include(realpath(dirname(__FILE__)."/components/share-bar.php")); ?>

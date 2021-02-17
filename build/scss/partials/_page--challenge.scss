@@ -12,6 +12,8 @@
                 h1 {
                     flex: 0 0 100%;
                     text-align: center;
+                    opacity: 0;
+                    transform: translateY(10%);
                 }
 
                 .share-bar-wrapper {

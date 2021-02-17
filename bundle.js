@@ -28823,16 +28823,9 @@ function animateChallengesHero(){
     let heroHeader = $('.hero h1');
 
     if($(heroHeader).hasClass('breakpoint-animate')){
-        let words = $(heroHeader).find('.word');
-
-        for(let i = 0; i <= words.length; i++){
-            setTimeout(function(){
-                let word = words[i];
-                $(word).addClass('active');
-            }, 75 * i);
-        }
-
-        gsap.to('.hero .share-bar-wrapper', {duration: 1.2, opacity: 1, delay: .6, translateY: 0, ease: "expo.out"});
+        gsap.to(heroHeader, {duration: 1.2, opacity: 1, delay: .4, translateY: 0, ease: "power4.inOut"});
+        
+        gsap.to('.hero .share-bar-wrapper', {duration: 1.2, opacity: 1, delay: .6, translateY: 0, ease: "power4.inOut"});
     }    
 }
 

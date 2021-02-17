@@ -14386,6 +14386,8 @@ form .btn-wrapper .btn {
 #content.challenges-page .hero .main-info .inner h1 {
   flex: 0 0 100%;
   text-align: center;
+  opacity: 0;
+  transform: translateY(10%);
 }
 
 #content.challenges-page .hero .main-info .inner .share-bar-wrapper {
