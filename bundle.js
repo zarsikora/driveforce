@@ -28785,11 +28785,11 @@ function animateSecondaryHero(){
             setTimeout(function(){
                 let word = words[i];
                 $(word).addClass('active');
-            }, 75 * i);
+            }, 80 * i);
         }
 
-        gsap.to('.secondary.hero p.subtitle', {duration: 1.2, opacity: 1, delay: .6, translateY: 0, ease: "expo.out"});
-        gsap.to('.secondary.hero .share-bar-wrapper', {duration: 1.2, opacity: 1, delay: .6, translateY: 0, ease: "expo.out"});
+        gsap.to('.secondary.hero p.subtitle', {duration: 1.2, opacity: 1, delay: .7, ease: "power4.inOut"});
+        gsap.to('.secondary.hero .share-bar-wrapper', {duration: 1.2, opacity: 1, delay: .7, ease: "power4.inOut"});
     }
 }
 
