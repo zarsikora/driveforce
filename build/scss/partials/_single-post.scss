@@ -47,6 +47,8 @@
 
             h1 {
                 margin-bottom: 5rem;
+                opacity: 0;
+                transform: translateY(10%);
             }
 
             .share-bar-wrapper {
@@ -71,7 +73,6 @@
                 width: 124%;
                 left: -12%;
                 opacity: 0;
-                transform: translateY(10%);
                 @include media-breakpoint-up(md){
                     height: 44rem;
                     width: 100%;

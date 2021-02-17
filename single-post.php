@@ -18,7 +18,7 @@ $content = get_post_field('post_content');
     <div class="module-wrapper">
         <div class="hero article module-padded">
             <div class="inner">
-                <h1 class="breakpoint-animate" data-splitting="chars"><?php echo $title ?></h1>
+                <h1 class="breakpoint-animate"><?php echo $title ?></h1>
 
                 <div class="share-bar-wrapper">
                     <?php include(realpath(dirname(__FILE__)."/components/share-bar.php")); ?>
