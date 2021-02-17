@@ -143,7 +143,6 @@
                 display: block;
                 margin: 4rem 0;
                 opacity: 0;
-                transform: translateY(10%);
 
                 @include media-breakpoint-up(md){
                     display: none;
@@ -154,7 +153,6 @@
                 display: block;
                 margin-bottom: 4rem;
                 opacity: 0;
-                transform: translateY(10%);
                 @include media-breakpoint-up(md){
                     display: none;
                 }

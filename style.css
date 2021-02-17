@@ -11616,7 +11616,6 @@ a.btn:hover {
   display: block;
   margin: 4rem 0;
   opacity: 0;
-  transform: translateY(10%);
 }
 
 @media (min-width: 768px) {
@@ -11629,7 +11628,6 @@ a.btn:hover {
   display: block;
   margin-bottom: 4rem;
   opacity: 0;
-  transform: translateY(10%);
 }
 
 @media (min-width: 768px) {

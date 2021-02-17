@@ -28758,9 +28758,9 @@ function animateHomeHeroHeader(){
                     }, 80 * i);
                 }
 
-                gsap.to('.home-hero .btn.mobile-waitlist', {duration: 1.2, opacity: 1, delay: .7, translateY: 0, ease: "power4.inOut"});
-                gsap.to('.home-hero .logos.mobile', {duration: 1.2, opacity: 1, delay: .7, translateY: 0, ease: "power4.inOut"});
-                gsap.to('.home-hero .copy', {duration: 1.2, opacity: 1, delay: .7, translateY: 0, ease: "power4.inOut"});
+                gsap.to('.home-hero .btn.mobile-waitlist', {duration: 1.2, opacity: 1, delay: .7, ease: "power4.inOut"});
+                gsap.to('.home-hero .logos.mobile', {duration: 1.2, opacity: 1, delay: .7, ease: "power4.inOut"});
+                gsap.to('.home-hero .copy', {duration: 1.2, opacity: 1, delay: .7, ease: "power4.inOut"});
                 gsap.to('.home-hero .tag', {duration: .7, translateX: 0, delay: .7, ease: "power2.inOut"});
             }, 700);
         }
