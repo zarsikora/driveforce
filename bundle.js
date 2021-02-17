@@ -28747,20 +28747,22 @@ function animateHomeHeroHeader(){
                 gsap.to('.home-hero .tag', {duration: .7, translateX: 0, delay: .7, ease: "power2.inOut"});
             }, 700);
         } else {
-            gsap.to('.primary-hero-curve', {duration: .5, opacity: 1, delay: 0, ease: "expo.out"}); 
-            gsap.to('.home-hero .image-container', {duration: .8, opacity: 1, delay: .2, translateY: 0, ease: "expo.out", onComplete: function(){
+            gsap.to('.primary-hero-curve', {duration: .8, opacity: 1, delay: 0, ease: "pwer4.inOut"}); 
+            gsap.to('.home-hero .image-container', {duration: 1.5, opacity: 1, delay: .5, translateY: 0, ease: "expo.out"});
+                
+            setTimeout(function(){
                 for(let i = 0; i <= words.length; i++){
                     setTimeout(function(){
                         let word = words[i];
                         $(word).addClass('active');
-                    }, 75 * i);
+                    }, 80 * i);
                 }
-    
-                gsap.to('.home-hero .btn.mobile-waitlist', {duration: 1.2, opacity: 1, delay: .8, translateY: 0, ease: "expo.out"});
-                gsap.to('.home-hero .logos.mobile', {duration: 1.2, opacity: 1, delay: .8, translateY: 0, ease: "expo.out"});
-                gsap.to('.home-hero .copy', {duration: 1.2, opacity: 1, delay: .8, translateY: 0, ease: "expo.out"});
-                gsap.to('.home-hero .tag', {duration: .7, translateX: 0, delay: .4, ease: "none"});
-            }});
+
+                gsap.to('.home-hero .btn.mobile-waitlist', {duration: 1.2, opacity: 1, delay: .7, translateY: 0, ease: "power4.inOut"});
+                gsap.to('.home-hero .logos.mobile', {duration: 1.2, opacity: 1, delay: .7, translateY: 0, ease: "power4.inOut"});
+                gsap.to('.home-hero .copy', {duration: 1.2, opacity: 1, delay: .7, translateY: 0, ease: "power4.inOut"});
+                gsap.to('.home-hero .tag', {duration: .7, translateX: 0, delay: .7, ease: "power2.inOut"});
+            }, 700);
         }
     }
 }
