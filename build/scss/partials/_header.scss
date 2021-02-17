@@ -38,6 +38,10 @@
             display: flex;
             width: auto;
         }
+
+        .btn-hover-mask {
+            border-radius: 0;
+        }
     }
 
     &.readyOut {
