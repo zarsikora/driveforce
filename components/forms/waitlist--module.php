@@ -14,7 +14,7 @@ $hasOverflow = get_sub_field('has_overflow');
 
             <div class="form col-md-6">
                 <div class="copy">
-                    <h2 data-animation-effect="moduleFadeIn" data-animation-trigger="scroll"><?php echo $introTitle ?></h2>
+                    <h2 data-animation-effect="splitSlideUpWord" data-animation-trigger="scroll" data-splitting="chars"><?php echo $introTitle ?></h2>
                     <p data-animation-effect="moduleFadeIn" data-animation-trigger="scroll"><?php echo $introCopy ?></p>
                 </div>
 

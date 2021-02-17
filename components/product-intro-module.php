@@ -9,7 +9,7 @@ $button = get_sub_field('button');
 <div class="module-wrapper color-bg product-intro-module">
     <div class="module-padded">
         <?php if($header): ?>
-            <h2 data-animation-effect="moduleFadeIn" data-animation-trigger="scroll"><?php echo $header ?></h2>
+            <h2 data-animation-effect="splitSlideUpWord" data-animation-trigger="scroll" data-splitting="chars"><?php echo $header ?></h2>
         <?php endif; ?>
 
         <?php if($mainImage): ?>

@@ -10518,6 +10518,10 @@ button:focus {
   transform: translateY(0);
 }
 
+[data-animation-effect="splitSlideUpWord"] .word {
+  overflow: hidden;
+}
+
 #promo-banner {
   background-color: #081D1A;
   margin-bottom: 0;
@@ -11480,7 +11484,7 @@ a.btn:hover {
 }
 
 .hero.home-hero .row .col-md-6 .image-container {
-  opacity: 0;
+  opacity: .0;
   transform: translateY(20%);
 }
 
@@ -11560,6 +11564,7 @@ a.btn:hover {
   font-family: "Sharp Sans Bold";
   font-size: 1.6rem;
   margin: 3rem auto;
+  transition: all ease 300ms;
 }
 
 @media (min-width: 768px) {
@@ -11588,6 +11593,10 @@ a.btn:hover {
   .hero .inner .link.mobile {
     display: none;
   }
+}
+
+.hero .inner .link:hover {
+  color: #081D1A;
 }
 
 .hero .inner .text-container {

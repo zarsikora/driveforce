@@ -325,3 +325,9 @@ button {
         }
     }
 }
+
+[data-animation-effect="splitSlideUpWord"] {
+    .word {
+        overflow: hidden;
+    }
+  }
