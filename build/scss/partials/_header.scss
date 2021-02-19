@@ -8,27 +8,6 @@
         height: 9.4rem;
     }
 
-    // White background
-    &:before {
-        content: "";
-        background: #fff;
-        width: 100%;
-        left: 0;
-        top: 0;
-        height: 100%;
-        opacity: 0;
-        position: absolute;
-        transition: all 300ms ease;
-        @include media-breakpoint-up(xl) {
-            width: 120%;
-            left: -10%;
-        }
-        @media (min-width: 1440px){
-            width: 140%;
-            left: -20%;
-        }
-    }
-
     .btn {
         display: none;
         height: 100%;
@@ -44,43 +23,12 @@
         }
     }
 
-    &.readyOut {
-        padding: 0;
-        transform: translateY(-100%)!important;
-    } 
-
-    &.scrollVisible {
-        position: fixed;
-        z-index: 18;
-        padding: 3rem 0;
-        transform: translateY(0);
-        transition: transform 300ms ease;
-        top: 0;
-        @include media-breakpoint-up(lg) {
-            padding: 0;
-        }
-        @media(min-width: 1440px){
-            height: 9.4rem;
-            box-sizing: content-box;
-        }
-
-        &:before {
-            content: '';
-            opacity: 1;
-        }
-    }
-
-    &.nav-active {
-        &:before {
-            background-color: $darkBg;
-        }
-    }
-
     .sticky-logo {
         width: 7.7rem;
         position: absolute;
         left: 0;
         top: 0;
+        z-index: 19;
         @include media-breakpoint-up(md){
             width: 9.4rem;
         }
@@ -121,6 +69,59 @@
         align-items: center;
         background: transparent;
         transition: all ease 300ms;
+
+        // White background
+        &:before {
+            content: "";
+            background: #fff;
+            width: 100%;
+            left: 0;
+            top: 0;
+            height: 100%;
+            opacity: 0;
+            position: absolute;
+            transition: all 300ms ease;
+            @include media-breakpoint-up(xl) {
+                width: 120%;
+                left: -10%;
+            }
+            @media (min-width: 1440px){
+                width: 140%;
+                left: -20%;
+            }
+        }
+
+        &.readyOut {
+            padding: 0;
+            transform: translateY(-100%)!important;
+        } 
+    
+        &.scrollVisible {
+            position: fixed;
+            z-index: 18;
+            padding: 3rem 0;
+            transform: translateY(0);
+            transition: transform 300ms ease;
+            top: 0;
+            @include media-breakpoint-up(lg) {
+                padding: 0;
+            }
+            @media(min-width: 1440px){
+                height: 9.4rem;
+                box-sizing: content-box;
+            }
+    
+            &:before {
+                content: '';
+                opacity: 1;
+            }
+        }
+    
+        &.nav-active {
+            &:before {
+                background-color: $darkBg;
+            }
+        }
     }
 
     .header-logo {

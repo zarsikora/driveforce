@@ -30,8 +30,11 @@
 
                     <div class="row align-items-center">
                         <div class="image-container col-md-4 col-lg-6">
-                            <div data-animation-effect="moduleFadeIn" data-animation-trigger="scroll" class="image-inner">
-                                <?php echo imageTag($image, '', '41.6%, (min-width: 992px) 33.3%'); ?>
+                            <div class="item" data-smooth-scroll>
+                                <div class="image-inner item__img-wrap">
+                                    <div class="image" style="background-image: url(<?php echo $image['url'] ?>);"></div>
+                                    <?php //echo imageTag($image, '', '41.6%, (min-width: 992px) 33.3%'); ?>
+                                </div>
                             </div>
                         </div>
 
@@ -52,7 +55,7 @@
         <?php else: ?>
             <div class="row align-items-center">
                 <div class="image-container col-md-4 col-lg-6">
-                    <div class="image-inner" data-animation-effect="moduleFadeIn" data-animation-trigger="scroll">
+                    <div class="image-inner" data-smooth-scroll>
                         <?php echo imageTag($image, '', '41.6%, (min-width: 992px) 33.3%'); ?>
                     </div>
                 </div>

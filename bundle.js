@@ -28801,7 +28801,7 @@ function animateSecondaryHero(){
             }, 80 * i);
         }
 
-        gsap.to('.secondary.hero p.subtitle', {duration: 1.2, opacity: 1, delay: .7, ease: "power4.inOut"});
+        gsap.to('.secondary.hero p.subtitle', {duration: .8, opacity: 1, delay: .7, ease: "power4.inOut"});
         gsap.to('.secondary.hero .share-bar-wrapper', {duration: 1.2, opacity: 1, delay: .7, ease: "power4.inOut"});
     }
 }
@@ -28948,35 +28948,35 @@ if(!$(document.body).hasClass('mobile-nav-active'))
 {
     if(scrollY === 0)
     {
-        if($('header').hasClass('scrollVisible'))
+        if($('#navscroll-container').hasClass('scrollVisible'))
         {
-            $('#header').removeClass('scrollVisible readyOut');
+            $('#navscroll-container').removeClass('scrollVisible readyOut');
         }
     }
     else
     {
         if(scrollDirection > 0)
         {
-            if(!$('#header').hasClass('scrollVisible'))
+            if(!$('#navscroll-container').hasClass('scrollVisible'))
             {
-                $('#header').removeClass('readyOut').addClass('readyIn');
+                $('#navscroll-container').removeClass('readyOut').addClass('readyIn');
 
                 setTimeout(function()
                 {
-                    $('#header').addClass('scrollVisible');
-                    $('#header').removeClass('readyIn');
+                    $('#navscroll-container').addClass('scrollVisible');
+                    $('#navscroll-container').removeClass('readyIn');
                 }, 0);
             }
         }
         else
         {
-            if($('#header').hasClass('scrollVisible'))
+            if($('#navscroll-container').hasClass('scrollVisible'))
             {
-                $('#header').addClass('readyOut');
+                $('#navscroll-container').addClass('readyOut');
 
                 setTimeout(function()
                 {
-                    $('#header').removeClass('scrollVisible'); 
+                    $('#navscroll-container').removeClass('scrollVisible'); 
                 }, 300);
             }
 
