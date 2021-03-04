@@ -30,7 +30,7 @@ $button = get_sub_field('button');
                         $copy = get_sub_field('copy');
                     ?>
 
-                    <div data-animation-effect="moduleFadeIn" data-animation-trigger="scroll" class="data-block col-md-4 mb-5 mb-lg-0">
+                    <div data-animation-effect="moduleFadeIn" data-animation-trigger="scroll" class="data-block col-md-4">
                         <?php if($icon): ?>
                             <?php echo imageTag($icon, '', '', '', false); ?>
                         <?php endif; ?>
