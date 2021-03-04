@@ -17,7 +17,7 @@
             <h2 data-animation-effect="splitSlideUpWord" data-animation-trigger="scroll" data-splitting="chars"><?php echo $title ?></h2>
 
                 <ul class="social-sharing">
-                    <li data-animation-effect="moduleFadeIn" data-animation-trigger="scroll">
+                    <li data-animation-effect="moduleFadeIn" data-animation-trigger="breakpoint">
                         <a class="btn share-btn facebook" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=<?php echo get_permalink(); ?>" aria-label="Share on Facebook">
                             <div class="btn-hover-mask"></div>
                             <svg aria-hidden="true" class="fb" viewbox="0 0 12 24">
@@ -27,7 +27,7 @@
                         </a>
                     </li>
 
-                    <li data-animation-effect="moduleFadeIn" data-animation-trigger="scroll">
+                    <li data-animation-effect="moduleFadeIn" data-animation-trigger="breakpoint">
                         <a class="btn share-btn twitter" target="_blank" href="https://twitter.com/intent/tweet?url=<?php echo get_permalink(); ?>&text=Check%20out%20Driveforce" aria-label="Share on Twitter">
                             <div class="btn-hover-mask"></div>
                             <svg aria-hidden="true" class="twitter" viewbox="0 0 16 16">
@@ -37,7 +37,7 @@
                         </a>
                     </li>
 
-                    <li data-animation-effect="moduleFadeIn" data-animation-trigger="scroll">
+                    <li data-animation-effect="moduleFadeIn" data-animation-trigger="breakpoint">
                         <a class="btn share-btn email" target="_blank" href="" aria-label="Share Via Email">
                             <div class="btn-hover-mask"></div>
                             <svg aria-hidden="true" class="email" viewbox="0 0 24 18">

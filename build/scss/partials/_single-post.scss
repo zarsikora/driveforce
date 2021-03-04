@@ -37,8 +37,11 @@
         overflow-y: visible;
         height: auto;
         text-align: center;
+        @include media-breakpoint-up(md){
+            margin-top: 15rem;
+        }
         @include media-breakpoint-up(lg){
-            margin: 10rem 0 6rem;
+            margin: 20rem 0 6rem;
         }
 
         .inner {
@@ -105,6 +108,9 @@
                     margin-top: 0;
                     line-height: 1.8em;
                     @extend p.copy;
+                    @media(min-width: 1440px){
+                        font-size: 1.8rem;
+                    }
                 }
     
                 a {
@@ -122,6 +128,7 @@
 
                     li {
                         @extend .copy;
+                        opacity: 1;
                         margin: 2rem 0;
                     }
                 }
@@ -134,7 +141,7 @@
                 blockquote.wp-block-quote {
                     @extend p.copy;
                     background: #fff;
-                    padding: 6rem;
+                    padding: 6rem 6rem 5rem 6rem;
                     border-left: 1.5rem solid $sage;
                     color: $darkText;
                     font-family: $boldType;

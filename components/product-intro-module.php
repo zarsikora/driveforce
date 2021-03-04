@@ -9,12 +9,12 @@ $button = get_sub_field('button');
 <div class="module-wrapper color-bg product-intro-module">
     <div class="module-padded">
         <?php if($header): ?>
-            <h2 data-animation-effect="splitSlideUpWord" data-animation-trigger="scroll" data-splitting="chars"><?php echo $header ?></h2>
+            <h2 data-animation-effect="splitSlideUpWord" data-animation-trigger="breakpoint" data-splitting="chars"><?php echo $header ?></h2>
         <?php endif; ?>
 
         <?php if($mainImage): ?>
-            <div data-animation-effect="moduleFadeIn" data-animation-trigger="scroll" class="image-wrapper row justify-content-center">
-                <div class="col-md-6">
+            <div class="image-wrapper row justify-content-center">
+                <div class="col-md-12" data-animation-effect="scrollUpBlur" data-animation-trigger="breakpoint">
                     <?php echo imageTag($mainImage, '', '', '', false); ?>
                 </div>
             </div>
@@ -30,7 +30,7 @@ $button = get_sub_field('button');
                         $copy = get_sub_field('copy');
                     ?>
 
-                    <div data-animation-effect="moduleFadeIn" data-animation-trigger="scroll" class="data-block col-md-4">
+                    <div data-animation-effect="moduleFadeIn" data-animation-trigger="scroll" class="data-block col-md-4 mb-5 mb-lg-0">
                         <?php if($icon): ?>
                             <?php echo imageTag($icon, '', '', '', false); ?>
                         <?php endif; ?>
@@ -56,6 +56,5 @@ $button = get_sub_field('button');
                 <?php echo button($url, $text); ?>
             </div>
         <?php endif; ?>
-        </div>
     </div>
 </div>

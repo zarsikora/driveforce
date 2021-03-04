@@ -8,7 +8,7 @@ $hasOverflow = get_sub_field('has_overflow');
 <div class="module-wrapper form-module <?php if($hasOverflow) echo ' has-overflow'?>" id="waitList">
     <div class="module-padded">
         <div class="row">
-            <div data-animation-effect="moduleFadeIn" data-animation-trigger="scroll" class="img col-md-6">
+            <div data-animation-effect="scrollUpBlur" data-animation-trigger="scroll" class="img col-md-6">
                 <?php echo imageTag($image); ?>
             </div>
 

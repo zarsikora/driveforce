@@ -68,6 +68,12 @@ form {
 
         &:nth-last-of-type(2) {
             border-radius: 0 0 1.4rem 1.4rem;
+
+            label {
+                &:after {
+                    display: none;
+                }
+            }
         }
 
         &:last-of-type {
@@ -85,7 +91,7 @@ form {
                 height: .1rem;
                 left: 5%;
                 bottom: 0;
-                background: #F6F6F6;
+                background: #B5B5B5;
                 transition: all ease 300ms;
             }
 
@@ -324,6 +330,7 @@ form {
 //MC FORM STYLES
 #mc-embedded-subscribe-form {
     font-family: $mediumType;
+    padding: 0;
 
     .form-group {
         margin: 0;
@@ -335,8 +342,14 @@ form {
             height: .1rem;
             left: 5%;
             bottom: 0;
-            background: #F6F6F6;
+            background: #B5B5B5;
             transition: all ease 300ms;
+        }
+
+        &:nth-child(3) {
+            &:after {
+                display: none;
+            }
         }
 
         p {
@@ -381,5 +394,12 @@ form {
     #mc-embedded-subscribe {
         margin: 3rem 0;
         width: 100%;
+        &:hover {
+            @include media-breakpoint-up(lg){
+                .btn-hover-mask {
+                    clip-path: circle(500px at 75% 50%);
+                }
+            }
+        }
     }
 }

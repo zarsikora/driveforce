@@ -26,7 +26,8 @@
                                 }
                             ?>
 
-                            <a data-animation-effect="moduleFadeIn" data-animation-trigger="scroll" class="btn" href="<?php echo($link) ?>">
+                            <a data-animation-effect="moduleFadeIn" data-animation-trigger="breakpoint" class="btn" href="<?php echo($link) ?>">
+                                <div class="btn-hover-mask"></div>
                                 <span>
                                     <?php echo($title);?>
                                 </span>

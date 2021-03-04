@@ -98,7 +98,6 @@
                     <div class="nav-right">
                         <?php include 'components/nav/flyout-menu.php'; ?>
 
-                        
                         <!-- V1 Waitlist Button -->
                         <?php echo button('#', 'Join the Waitlist', 'header-waitlist-btn', '#waitList'); ?>
                     </div>

@@ -61,11 +61,28 @@ let scroll = window.requestAnimationFrame ||
     function(callback){ window.setTimeout(callback, 1000/60) };
 
 
+// let winsize;
+// const calcWinsize = () => winsize = {width: window.innerWidth, height: window.innerHeight};
+// calcWinsize();
+// // and recalculate on resize
+// window.addEventListener('resize', calcWinsize);
+
+
+
 // ANIMATION SCROLL HANDLER - request animation frame
 let windowHeight = $(window).height();
 let lastPosition = -1; // storing last scroll position which updates on throttled scroll listener - nothing takes place before it is changed
 // let slideUps; I dont think we need this
 let scrollArray = [];
+let interval = 100;
+let start = Date.now()/1000;
+
+let posCheck = setInterval(() => {
+    if(((Date.now()/1000) - start) > 2) {
+        clearInterval(posCheck);
+    }
+    getScrollModules();
+}, interval);
 
 function getScrollModules()
 {
@@ -190,6 +207,13 @@ function animationWizard(timestamp)
                     // Set breakpoint flag so we know this has animated already
                     ele.breakpointHit = true;
                     $(ele.ele).addClass('active');
+
+                    //remove data attr once animation is complete
+                    setTimeout(function(){
+                        $( ele.ele ).removeAttr('data-animation-effect'); 
+                        $( ele.ele ).removeAttr('data-animation-trigger');
+                        console.log('done!');
+                    }, 500);
                 }
             } else if (animationType === 'scroll') {
                 if(positionData.inViewport)
@@ -309,6 +333,21 @@ function animationWizard(timestamp)
                         })
                     }
 
+                    if(ele.type == 'scrollUpBlur')
+                    {
+                        $(ele.ele).css({
+                            transform: 'translate3d(0,' + (10 - (easedPercent * 10)) + '%, 0)',
+                            filter: 'blur(' + (10 - (easedPercent * 10)) + 'px)'
+                        });
+                    }
+
+                    if(ele.type == 'blurIn')
+                    {
+                        $(ele.ele).css({
+                            filter: 'blur(' + (10 - (easedPercent * 10)) + 'px)'
+                        });
+                    }
+
                     if(ele.type == 'moduleDriftUp')
                     {
                         $(ele.ele).css({
@@ -336,10 +375,18 @@ function animateHomeHeroHeader(){
     if($(heroHeader).hasClass('breakpoint-animate')){
         let words = $(heroHeader).find('.word');
 
+
         // desktop
         if(window.innerWidth >= '768'){
+            console.log('animating desktop');
+
             gsap.to('.primary-hero-curve', {duration: .8, opacity: 1, delay: 0, ease: "power4.inOut"}); 
-            gsap.to('.home-hero .image-container', {duration: 1.5, opacity: 1, delay: .5, translateY: 0, ease: "expo.out"}); 
+
+            setTimeout(function(){
+                $('.home-hero .image-container').addClass('animate');
+            }, 500);
+
+            // gsap.to('.home-hero .image-container', {duration: .8, opacity: 1, delay: .5, translateY: 0, ease: "expo.out"}); 
 
             setTimeout(function(){
                 for(let i = 0; i <= words.length; i++){
@@ -369,6 +416,7 @@ function animateHomeHeroHeader(){
                 gsap.to('.home-hero .btn.mobile-waitlist', {duration: 1.2, opacity: 1, delay: .7, ease: "power4.inOut"});
                 gsap.to('.home-hero .logos.mobile', {duration: 1.2, opacity: 1, delay: .7, ease: "power4.inOut"});
                 gsap.to('.home-hero .copy', {duration: 1.2, opacity: 1, delay: .7, ease: "power4.inOut"});
+                gsap.to('.home-hero .link.mobile', {duration: 1.2, opacity: 1, delay: .7, ease: "power4.inOut"});
                 gsap.to('.home-hero .tag', {duration: .7, translateX: 0, delay: .7, ease: "power2.inOut"});
             }, 700);
         }
@@ -377,7 +425,7 @@ function animateHomeHeroHeader(){
 
 if($('.home-hero')){
     setTimeout(function(){
-        animateHomeHeroHeader();
+        animateHomeHeroHeader(); 
     }, 0);
 }
 
@@ -537,6 +585,8 @@ if(document.getElementById('promo-banner')){
     }
 }
 
+let navHasAnimated = false;
+
 navAnimate = (scrollY) =>
 {
 if(!$(document.body).hasClass('mobile-nav-active'))
@@ -565,6 +615,11 @@ if(!$(document.body).hasClass('mobile-nav-active'))
         }
         else
         {
+            if(scrollY > 142 && !navHasAnimated){
+                $('#navscroll-container').addClass('readyOut');
+                navHasAnimated = true;
+            }
+
             if($('#navscroll-container').hasClass('scrollVisible'))
             {
                 $('#navscroll-container').addClass('readyOut');
@@ -582,7 +637,11 @@ if(!$(document.body).hasClass('mobile-nav-active'))
 }
 }
 
-window.addEventListener('scroll', navScroll, false);
+let isContact = document.getElementById('contact');
+
+if(!isContact){
+    window.addEventListener('scroll', navScroll, false);
+}
 
 
 
@@ -683,7 +742,6 @@ function scrollToAnchor(e){
     let scrollTo = $(e.target).attr('data-scrollTo');
     if(scrollTo){
         let scrollTarget = $(scrollTo);
-        console.log(scrollTarget);
         let offsetTop = $(scrollTarget).offset().top;
         let adjustedOffset = offsetTop - 50;
 

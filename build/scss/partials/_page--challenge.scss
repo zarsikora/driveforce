@@ -1,4 +1,13 @@
 #content.challenges-page {
+    a {
+        color: $highlight;
+        transition: all ease 300ms;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
     .hero {
         height: auto;
 
@@ -27,6 +36,12 @@
             width: 100%;
             position: relative;
             height: 500px;
+            @media(min-width: 1440px){
+                height: 38.194vw;
+            }
+            @media(min-width: 1920px){
+                height: 73.3rem;
+            }
 
             img {
                 position: absolute;
@@ -41,17 +56,22 @@
         .text-inner {
             background: #fff;
             padding: 3rem;
-            margin: calc(-9vw - 10rem) auto 0;
+            margin: -150px auto 0;
             position: relative;
-            @include media-breakpoint-up(lg){
-                padding: 8.889vw 8.333vw;
+            @media(min-width: 1440px) {
+                padding: 5.556vw 8.264vw;
                 width: 91.6rem;
             }
+            @media(min-width: 1920px){
+                padding: 10.6rem 15.8rem;
+            }
+
 
             h2 {
                 font-size: 3rem;
                 @include media-breakpoint-up(lg){
                     font-size: 5rem;
+                    margin-bottom: 4rem;
                 }
             }
 
@@ -60,6 +80,15 @@
 
                 li {
                     @extend li.copy;
+                    @media(min-width: 1440px){
+                        font-size: 1.8rem;
+                    }
+                }
+            }
+
+            p {
+                @media(min-width: 1440px){
+                    font-size: 1.8rem;
                 }
             }
         }
@@ -77,14 +106,22 @@
             h3 {
                 font-size: 2.4rem;
                 color: $darkText;
+                margin-top: 5rem;
                 @include media-breakpoint-up(lg){
                     font-size: 3rem;
+                }
+
+                &:first-child {
+                    margin-top: 0;
                 }
             }
 
             p {
                 @extend p.copy;
                 color: $darkText;
+                @media(min-width: 1440px){
+                    font-size: 1.8rem;
+                }
             }
 
             ul {
@@ -92,6 +129,9 @@
 
                 li {
                     @extend li.copy;
+                    @media(min-width: 1440px){
+                        font-size: 1.8rem;
+                    }
                 }
             }
         }

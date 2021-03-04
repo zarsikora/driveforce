@@ -34,7 +34,7 @@
 ?>
 
     <?php if ($posts): ?>
-        <div data-animation-effect="moduleFadeIn" data-animation-trigger="scroll" class="module-wrapper moduleFadeIn">
+        <div class="module-wrapper moduleFadeIn grid-article">
             <div class="grid article module-padded">
                 <div class="row">
                     <?php foreach($posts as $post): ?>

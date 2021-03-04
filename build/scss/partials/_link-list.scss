@@ -44,8 +44,16 @@
                 .btn {
                     width: 37rem;
                     margin-bottom: 3rem;
+                    opacity: 0;
+                    transform: translateY(10px);
+                    transition: all ease 300ms;
                     @media(min-width: 1440px){
                         width: 25.694vw;
+                    }
+
+                    &.active {
+                        opacity: 1;
+                        transform: translateY(0);
                     }
         
                     &:last-child {

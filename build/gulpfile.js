@@ -62,7 +62,6 @@ function scripts() {
             "./wp-content/themes/bones/build/node_modules/@barba/core/dist/barba.umd.js",
             "./wp-content/themes/bones/build/node_modules/gsap/dist/gsap.js",
             "./wp-content/themes/bones/build/node_modules/splitting/dist/splitting.js",
-            "./wp-content/themes/bones/build/js/gsap-member/minified/CustomEase.min.js",
             //"./wp-content/themes/bones/build/node_modules/svgxuse/svgxuse.js",
             "./wp-content/themes/bones/build/js/main.js"
             ])

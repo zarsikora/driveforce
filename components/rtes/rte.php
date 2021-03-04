@@ -8,11 +8,11 @@
 ?>
 
 
-<div class="module-wrapper <?php echo ' ' . $bgColor . '-bg'?>">
+<div class="module-wrapper rte <?php echo ' ' . $bgColor . '-bg'?>">
     <div class="module-padded rte <?php echo $type; ?> <?php if($hasGraphic) echo ' has-graphic'; ?>">
         <div class="text-container <?php echo ' ' . $bgColor . '-bg'?>">
             <?php if($header): ?>
-                <h2 data-animation-effect="splitSlideUpWord" data-animation-trigger="scroll" data-splitting="chars"><?php echo $header; ?></h2>
+                <h2 data-animation-effect="splitSlideUpWord" data-animation-trigger="breakpoint" data-splitting="chars"><?php echo $header; ?></h2>
             <?php endif; ?>
 
             <?php if($copy): ?>
@@ -48,7 +48,7 @@
         <?php endif; ?>
 
         <?php if($arrow): ?>
-            <svg data-animation-effect="moduleFadeIn" data-animation-trigger="scroll" class="rte-arrow" viewBox="0 0 38.536 24.218">
+            <svg data-animation-effect="moduleFadeIn" data-animation-trigger="breakpoint" class="rte-arrow" viewBox="0 0 38.536 24.218">
                 <use href="#caret"></use>
             </svg>
         <?php endif; ?>

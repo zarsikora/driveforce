@@ -60,6 +60,29 @@ body {
     &.white-bg {
         background-color: #fff;
     }
+
+    &.rte {
+        @media(min-width: 1440px){
+            margin: 12.5vw auto 9.028vw;
+            padding: 0;
+        }
+        &.dark-bg,
+        &.white-bg  {
+            @media(min-width: 1440px){
+                margin: 0 auto;
+                padding: 12.5vw 0 9.028vw;
+            }
+        }
+    }
+
+    &.grid-article {
+        @media(min-width: 1440px){
+            margin: 6.042vw auto 7.778vw;
+        }
+        @media(min-width: 1920px){
+            margin: 12.3rem auto 14.933rem;
+        }
+    }
 }
 
 .module-flush {
@@ -94,7 +117,7 @@ h1.title {
     @include media-breakpoint-up(lg){
         font-size: 4.061vw;
     }
-    @media(min-width: 1920){
+    @media(min-width: 1920px){
         font-size: 9.3rem;
     }
 }
@@ -320,9 +343,36 @@ button {
     opacity: 0;
 }
 
+[data-animation-effect="moduleFadeIn"] {
+    &[data-animation-trigger="breakpoint"] {
+        transform: translateY(50px);
+        opacity: 0;
+        transition: all ease 300ms;
+
+        &.active {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+}
+
+[data-animation-effect="scrollUpBlur"] {
+    &[data-animation-trigger="breakpoint"] {
+        transform: translateY(50px);
+        filter: blur(10px);
+        transition: all ease 500ms;
+
+        &.active {
+            transform: translateY(0);
+            filter: blur(0);
+        }
+    }
+}
+
 //ANIMATION EFFECTS - SPLITTING
 .splitting.breakpoint-animate .word {
     overflow: hidden;
+    vertical-align: bottom;
 
     .char {
         transform: translateY(100%);
@@ -340,6 +390,21 @@ button {
 [data-animation-effect="splitSlideUpChar"] {
     .word {
         overflow: hidden;
+        vertical-align: bottom;
+    }
+
+    &[data-animation-trigger="breakpoint"]{
+        .word .char {
+            transform: translate3d(0, 100px, 0); 
+            transition: all ease 300ms;
+        }
+        &.active {
+            .word {
+                .char {
+                    transform: translate3d(0, 0, 0);
+                }
+            }
+        }
     }
 }
 
@@ -358,6 +423,7 @@ button {
     height: 100%;
     transition: all ease 500ms;
     border-radius: 4rem;
+    pointer-events: none;
 
     //do not use clip path on ie 11
     @media all and (-ms-high-contrast:none)

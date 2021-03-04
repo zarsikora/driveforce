@@ -8,17 +8,34 @@
         h2 {
             color: $darkText;
             text-align: center;
+            margin: 0 auto 5rem;
+            @media(min-width: 1440px){
+                width: 65.972vw;
+                margin: 0 auto 3.472vw;
+            }
+            @media(min-width: 1920px){
+                width: 126.6rem;
+                margin: 0 auto 6.6rem;
+            }
         }
 
         .image-wrapper {
+            text-align: center;
             img {
                 width: 100%;
                 height: auto;
+                @media(min-width: 1440px){
+                    max-width: 45.833vw;
+                }
+                @media(min-width: 1920px){
+                    max-width: 87.9rem;
+                }
+                
             }
         }
 
         .product-data {
-            margin: 5rem 0;
+            margin: 5rem 0 3.5rem;
 
             .data-block {
                 display: block;
@@ -29,6 +46,7 @@
                     width: 4rem;
                     height: 4rem;
                     height: auto;
+                    margin-bottom: 1rem;
                     @include media-breakpoint-up(lg){
                         width: 2.778vw;
                         height: 2.778vw;
@@ -37,10 +55,14 @@
 
                 h3 {
                     color: $darkText;
-                    margin: 1.5rem 0;
+                    margin: 0 0 1.5rem 0;
                     @include media-breakpoint-up(lg){
-                        margin: 1.667vw 0;
+                        margin: 0 0 1.667vw 0;
                     }
+                }
+
+                p {
+                    margin-bottom: 0;
                 }
             }
         }

@@ -28,6 +28,7 @@
                 </div>
                 <div class="clear">
                     <button type="submit" name="subscribe" id="mc-embedded-subscribe" class="button btn">
+                        <div class="btn-hover-mask"></div>
                         <span>Join the pre-order waitlist</span>
                     </button>
                 </div>

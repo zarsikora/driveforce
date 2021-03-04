@@ -13,13 +13,23 @@
     
 ?>
 
+<?php if($type === 'single'): ?>
+    <style>
+        .image-container .item {
+            --image: url(<?php echo($image['url']); ?>);
+        }
+    </style>  
+<?php endif; ?>
 
-    <div class="rte fiftyfifty module-flush <?php if($type === 'multi') echo 'type-multi'?> <?php if($type === 'multi') echo ($imageRight) ? 'first-img-right' : 'first-img-left'?> <?php if($type === 'single') echo ($imageRight) ? ' img-right ' : ' img-left'?>">
+
+    <div class="rte fiftyfifty module-flush <?php if($type === 'multi') echo 'type-multi '?> <?php if($type === 'multi') echo ($imageRight) ? 'first-img-right' : 'first-img-left'?> <?php if($type === 'single') echo ($imageRight) ? ' img-right ' : ' img-left'?>">
         <?php if($type === 'multi' && $mainHeader): ?>
             <h2 data-animation-effect="moduleFadeIn" data-animation-trigger="scroll" class="main-header"><?php echo $mainHeader; ?></h2>
         <?php endif; ?>
 
         <?php if($type === 'multi'): ?>
+            <div class="inner">
+            <?php $counter = 1;?>
             <?php if(have_rows('fiftyfifty_block')): ?>
                 <?php while(have_rows('fiftyfifty_block')): the_row(); ?>
                     <?php 
@@ -29,13 +39,8 @@
                     ?>
 
                     <div class="row align-items-center">
-                        <div class="image-container col-md-4 col-lg-6">
-                            <div class="item" data-smooth-scroll>
-                                <div class="image-inner item__img-wrap">
-                                    <div class="image" style="background-image: url(<?php echo $image['url'] ?>);"></div>
-                                    <?php //echo imageTag($image, '', '41.6%, (min-width: 992px) 33.3%'); ?>
-                                </div>
-                            </div>
+                        <div class="image-container col-md-4 col-lg-6" data-animation-effect="moduleFadeIn" data-animation-trigger="breakpoint">
+                            <?php echo imageTag($image, '', '41.6%, (min-width: 992px) 33.3%', '', false); ?>
                         </div>
 
                         <div class="text-container col-md-8 col-lg-6">
@@ -50,13 +55,15 @@
                             </div>
                         </div>
                     </div>
+                    <?php $counter++ ?>
                 <?php endwhile; ?>
+                </div>
             <?php endif; ?>
         <?php else: ?>
             <div class="row align-items-center">
                 <div class="image-container col-md-4 col-lg-6">
-                    <div class="image-inner" data-smooth-scroll>
-                        <?php echo imageTag($image, '', '41.6%, (min-width: 992px) 33.3%'); ?>
+                    <div class="image-inner">
+                        <?php echo imageTag($image, '', '41.6%, (min-width: 992px) 33.3%', '', false); ?>
                     </div>
                 </div>
 

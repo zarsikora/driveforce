@@ -53,6 +53,12 @@
                 text-align: left;
                 margin-top: 0;
             }
+            @media (min-width: 1920px){
+                left: 40rem;
+            }
+            @media (min-width: 2560px){
+                left: 50rem;
+            }
 
             li {
                 padding: 0;
@@ -77,6 +83,24 @@
                 a {
                     color: #fff;
                     text-decoration: none;
+                    position: relative;
+                    &:after {
+                        content: '';
+                        display: block;
+                        position: absolute;
+                        left: 0;
+                        bottom: -3px;
+                        width: 0;
+                        height: 2px;
+                        background: #fff;
+                        transition: all ease 300ms;
+                    }
+
+                    &:hover {
+                        &:after {
+                            width: 100%;
+                        }
+                    }
                 }
             }
         }
