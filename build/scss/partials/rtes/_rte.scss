@@ -73,9 +73,13 @@
     }
 
     svg.rte-arrow {
-        width: 3.35rem; 
+        width: 2.2rem; 
         display: block;
-        margin: 7rem auto 0; 
+        margin: 3rem auto 0; 
+        @include media-breakpoint-up(lg){
+            margin: 7rem auto 0; 
+            width: 3.35rem; 
+        }
         @media(min-width: 1440px){
             margin: 4.861vw auto 0;
         }

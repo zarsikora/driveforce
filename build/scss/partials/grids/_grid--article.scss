@@ -39,9 +39,9 @@
         }
 
         .card-container {
-            @include media-breakpoint-up(lg){
-                margin-bottom: 30px;
+            margin-bottom: 30px;
 
+            @include media-breakpoint-up(lg){
                 &:last-child, 
                 &:nth-last-child(2) {
                     margin-bottom: 0;
@@ -89,7 +89,6 @@ a.browse-all {
     font-size: 1.6rem;
     text-decoration: underline;
     font-family: $boldType;
-    margin-top: 6rem;
     transition: all ease 300ms;
     @include media-breakpoint-up(lg){
         font-size: 1.111vw;
