@@ -10125,6 +10125,12 @@ body.mobile-nav-active {
   background-color: #fff;
 }
 
+@media (max-width: 767.98px) {
+  .module-wrapper.rte {
+    margin: 5rem auto;
+  }
+}
+
 @media (min-width: 1440px) {
   .module-wrapper.rte {
     margin: 12.5vw auto 9.028vw;
@@ -10132,10 +10138,17 @@ body.mobile-nav-active {
   }
 }
 
+@media (max-width: 767.98px) {
+  .module-wrapper.rte.dark-bg, .module-wrapper.rte.white-bg {
+    padding: 5rem 0;
+    margin: 0 auto;
+  }
+}
+
 @media (min-width: 1440px) {
   .module-wrapper.rte.dark-bg, .module-wrapper.rte.white-bg {
-    margin: 0 auto;
     padding: 12.5vw 0 9.028vw;
+    margin: 0 auto;
   }
 }
 
@@ -10459,8 +10472,8 @@ span.sage {
 
 @media (min-width: 992px) {
   .btn:hover .btn-hover-mask {
-    -webkit-clip-path: circle(300px at 75% 50%);
-            clip-path: circle(300px at 75% 50%);
+    -webkit-clip-path: circle(300px at 50% 50%);
+            clip-path: circle(300px at 50% 50%);
   }
 }
 
@@ -10565,6 +10578,20 @@ button:focus {
 [data-animation-effect="moduleFadeIn"][data-animation-trigger="breakpoint"].active {
   transform: translateY(0);
   opacity: 1;
+}
+
+[data-animation-effect="splitSlideUpWord"][data-animation-trigger="breakpoint"] .word {
+  overflow: hidden;
+  vertical-align: bottom;
+}
+
+[data-animation-effect="splitSlideUpWord"][data-animation-trigger="breakpoint"] .word .char {
+  transform: translateY(100%);
+  transition: all ease 300ms;
+}
+
+[data-animation-effect="splitSlideUpWord"][data-animation-trigger="breakpoint"] .word .char.active {
+  transform: translateY(0);
 }
 
 [data-animation-effect="scrollUpBlur"][data-animation-trigger="breakpoint"] {
@@ -10818,7 +10845,13 @@ button:focus {
 #header .header-logo {
   position: relative;
   z-index: 12;
-  margin-left: 100px;
+  margin-left: 10rem;
+}
+
+@media (min-width: 768px) {
+  #header .header-logo {
+    margin-left: 11rem;
+  }
 }
 
 @media (min-width: 1440px) {
@@ -11996,7 +12029,7 @@ a.btn:hover {
 @media (min-width: 992px) {
   .hero.secondary .inner .row .text-container {
     padding: 6rem 1.5rem;
-    padding-left: 14rem;
+    padding-left: calc(10% + 15px);
   }
 }
 
@@ -12018,7 +12051,7 @@ a.btn:hover {
   margin-top: -7.7rem;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .hero.secondary .inner .row .img-container {
     margin-top: -9.4rem;
   }
@@ -12124,7 +12157,7 @@ a.btn:hover {
   height: auto;
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 768px) {
   .module-wrapper.product-intro-module .module-padded .image-wrapper img {
     max-width: 45.833vw;
   }
@@ -12494,7 +12527,7 @@ a.btn:hover {
   margin-bottom: 30px;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .grid.article .row .card-container:last-child, .grid.article .row .card-container:nth-last-child(2) {
     margin-bottom: 0;
   }
@@ -12815,6 +12848,14 @@ a.browse-all {
   .rte.fiftyfifty .text-container .text-inner {
     padding: 3.5rem 18.5rem;
   }
+}
+
+.rte.fiftyfifty .text-container .text-inner h3 {
+  margin-bottom: 2.5rem;
+}
+
+.rte.fiftyfifty .text-container .text-inner .copy, .rte.fiftyfifty .text-container .text-inner .article-single .post-content .inner .copy ul li, .article-single .post-content .inner .copy ul .rte.fiftyfifty .text-container .text-inner li, .rte.fiftyfifty .text-container .text-inner .article-single .post-content .inner .copy ol li, .article-single .post-content .inner .copy ol .rte.fiftyfifty .text-container .text-inner li {
+  margin-bottom: 0;
 }
 
 @media (min-width: 768px) {
@@ -13160,7 +13201,7 @@ a.browse-all {
   background: #fff;
 }
 
-.list-module p.header {
+.list-module h3 {
   font-size: 3rem;
   margin-bottom: 5rem;
 }
@@ -13260,6 +13301,7 @@ a.browse-all {
 
 #waitlistModal .modal-dialog .modal-content .modal-body button {
   border: none;
+  background: none;
   font-size: 4rem;
   z-index: 3;
 }
@@ -13539,7 +13581,7 @@ a.browse-all {
   overflow: hidden;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .card.article .card-body .img-wrapper {
     height: 30rem;
   }
@@ -13726,7 +13768,7 @@ form .btn-wrapper .btn {
 .wpcf7-form p label textarea,
 .wpcf7-form p label select {
   height: 6rem;
-  padding: 0 2rem;
+  padding: 0 3rem;
   position: relative;
   width: 100%;
   line-height: 6rem;
@@ -13788,6 +13830,7 @@ form .btn-wrapper .btn {
 .wpcf7-form p label select {
   color: #B5B5B5;
   transition: all ease 300ms;
+  background: none;
 }
 
 .wpcf7-form p label select:active, .wpcf7-form p label select:focus {
@@ -13795,7 +13838,7 @@ form .btn-wrapper .btn {
 }
 
 .wpcf7-form p label textarea {
-  padding: 2rem;
+  padding: 2rem 3rem;
   line-height: 2.5rem;
   height: 15rem;
 }
@@ -14022,7 +14065,7 @@ form .btn-wrapper .btn {
 
 #mc-embedded-subscribe-form .form-group input {
   height: 7rem;
-  padding: 0 2rem;
+  padding: 0 3rem;
   width: 100%;
   line-height: 7rem;
   font-size: 1.8rem;
@@ -14250,7 +14293,6 @@ form .btn-wrapper .btn {
 @media (min-width: 1440px) {
   #waitList .module-padded .tag {
     margin-left: -30%;
-    bottom: -5rem;
   }
 }
 
@@ -14756,18 +14798,36 @@ form .btn-wrapper .btn {
 
 #content.template-404 .hero.tertiary {
   position: relative;
-  height: calc(100vh - 20rem);
+}
+
+@media (min-width: 768px) {
+  #content.template-404 .hero.tertiary {
+    height: calc(100vh - 50rem);
+  }
+}
+
+@media (min-width: 992px) {
+  #content.template-404 .hero.tertiary {
+    height: calc(100vh - 20rem);
+  }
 }
 
 #content.template-404 .hero.tertiary .text-container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 2;
+  padding: 5rem 3.6rem;
+}
+
+@media (min-width: 992px) {
+  #content.template-404 .hero.tertiary .text-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0;
+  }
 }
 
 #content.template-404 .hero.tertiary .text-container .row {
@@ -14845,12 +14905,12 @@ form .btn-wrapper .btn {
   font-size: 20px;
   margin-bottom: 7rem;
   position: relative;
-  margin-top: -7rem;
 }
 
 @media (min-width: 992px) {
   #more_posts {
     font-size: 1.111vw;
+    margin-top: -7rem;
   }
 }
 

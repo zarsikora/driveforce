@@ -12,7 +12,7 @@
         <div class="text-wrapper col-lg-6">
             <div class="inner">
                 <?php if($header): ?>
-                    <h3 data-animation-effect="splitSlideUpWord" data-animation-trigger="scroll" data-splitting="chars"><?php echo $header ?></h3>
+                    <h3 data-animation-effect="splitSlideUpWord" data-animation-trigger="breakpoint" data-splitting="chars"><?php echo $header ?></h3>
                 <?php endif; ?>
 
                 <?php if(have_rows('list_items')): ?>

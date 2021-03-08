@@ -39,7 +39,7 @@
                 <div class="row">
                     <?php foreach($posts as $post): ?>
                         <?php setup_postdata($post); ?>
-                        <div class="card-container col-md-6">
+                        <div class="card-container col-md-6" data-animation-effect="moduleFadeIn" data-animation-trigger="breakpoint">
                             <?php include (realpath(dirname(__FILE__)."/../cards/card--article.php")); ?>
                         </div>
                     <?php endforeach; ?>

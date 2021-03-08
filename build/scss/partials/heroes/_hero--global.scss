@@ -313,7 +313,7 @@
                     }
                     @include media-breakpoint-up(lg){
                         padding: 6rem 1.5rem;
-                        padding-left: 14rem; //for now TODO: fix
+                        padding-left: calc(10% + 15px);
                     }
 
                     h1.secondary-title {
@@ -335,7 +335,7 @@
 
                 .img-container {
                     margin-top: -7.7rem;
-                    @include media-breakpoint-up(lg){
+                    @include media-breakpoint-up(md){
                         margin-top: -9.4rem;
                     }
                     

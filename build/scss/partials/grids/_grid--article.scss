@@ -41,7 +41,7 @@
         .card-container {
             margin-bottom: 30px;
 
-            @include media-breakpoint-up(lg){
+            @include media-breakpoint-up(md){
                 &:last-child, 
                 &:nth-last-child(2) {
                     margin-bottom: 0;

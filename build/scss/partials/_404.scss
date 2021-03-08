@@ -3,17 +3,27 @@
   
     .hero.tertiary {
       position: relative;
-      height: calc(100vh - 20rem);
+      @include media-breakpoint-up(md){
+        height: calc(100vh - 50rem);
+      }
+      @include media-breakpoint-up(lg){
+        height: calc(100vh - 20rem);
+      }
   
       .text-container {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
         display: flex;
         justify-content: center;
         align-items: center;
         z-index: 2;
+        padding: 5rem 3.6rem;
+
+        @include media-breakpoint-up(lg){
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          padding: 0;
+        }
 
         .row {
           max-width: 50rem;

@@ -14,7 +14,7 @@
         </div>
 
         <div class="text-wrapper col-lg-6">
-            <h2 data-animation-effect="splitSlideUpWord" data-animation-trigger="scroll" data-splitting="chars"><?php echo $title ?></h2>
+            <h2 data-animation-effect="splitSlideUpWord" data-animation-trigger="breakpoint" data-splitting="chars"><?php echo $title ?></h2>
 
                 <ul class="social-sharing">
                     <li data-animation-effect="moduleFadeIn" data-animation-trigger="breakpoint">

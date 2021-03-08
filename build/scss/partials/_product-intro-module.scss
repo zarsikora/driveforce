@@ -21,10 +21,11 @@
 
         .image-wrapper {
             text-align: center;
+
             img {
                 width: 100%;
                 height: auto;
-                @media(min-width: 1440px){
+                @include media-breakpoint-up(md){
                     max-width: 45.833vw;
                 }
                 @media(min-width: 1920px){

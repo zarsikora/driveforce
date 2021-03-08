@@ -28,9 +28,9 @@
     font-size: 20px;
     margin-bottom: 7rem;
     position: relative;
-    margin-top: -7rem;
     @include media-breakpoint-up(lg){
         font-size: 1.111vw;
+        margin-top: -7rem;
     }
     
 

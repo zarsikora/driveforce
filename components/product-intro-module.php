@@ -14,7 +14,7 @@ $button = get_sub_field('button');
 
         <?php if($mainImage): ?>
             <div class="image-wrapper row justify-content-center">
-                <div class="col-md-12" data-animation-effect="scrollUpBlur" data-animation-trigger="breakpoint">
+                <div class="col-md-12">
                     <?php echo imageTag($mainImage, '', '', '', false); ?>
                 </div>
             </div>

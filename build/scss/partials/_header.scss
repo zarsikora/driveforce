@@ -135,7 +135,10 @@
     .header-logo {
         position: relative;
         z-index: 12;
-        margin-left: 100px;
+        margin-left: 10rem;
+        @include media-breakpoint-up(md){
+            margin-left: 11rem;
+        }
         @media (min-width: 1440px){
             margin-left: 10%;
         }

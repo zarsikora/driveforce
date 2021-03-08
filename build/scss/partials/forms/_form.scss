@@ -99,7 +99,7 @@ form {
             textarea,
             select {
                 height: 6rem;
-                padding: 0 2rem;
+                padding: 0 3rem;
                 position: relative;
                 width: 100%;
                 line-height: 6rem;
@@ -130,6 +130,7 @@ form {
             select {
                 color: #B5B5B5;
                 transition: all ease 300ms;
+                background: none;
 
                 &:active, 
                 &:focus {
@@ -138,7 +139,7 @@ form {
             }
 
             textarea {
-                padding: 2rem;
+                padding: 2rem 3rem;
                 line-height: 2.5rem;
                 height: 15rem;
             }
@@ -358,7 +359,7 @@ form {
 
         input {
             height: 7rem;
-            padding: 0 2rem;
+            padding: 0 3rem;
             width: 100%;
             line-height: 7rem;
             font-size: 1.8rem;

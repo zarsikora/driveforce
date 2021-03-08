@@ -8,21 +8,21 @@ $hasOverflow = get_sub_field('has_overflow');
 <div class="module-wrapper form-module <?php if($hasOverflow) echo ' has-overflow'?>" id="waitList">
     <div class="module-padded">
         <div class="row">
-            <div data-animation-effect="scrollUpBlur" data-animation-trigger="scroll" class="img col-md-6">
+            <div class="img col-md-6">
                 <?php echo imageTag($image); ?>
+
+                <div class="tag">
+                    <span>Hitting the course <span class="sage">Spring 2021</span></span>
+                </div>
             </div>
 
             <div class="form col-md-6">
                 <div class="copy">
-                    <h2 data-animation-effect="splitSlideUpWord" data-animation-trigger="scroll" data-splitting="chars"><?php echo $introTitle ?></h2>
-                    <p data-animation-effect="moduleFadeIn" data-animation-trigger="scroll"><?php echo $introCopy ?></p>
+                    <h2 data-animation-effect="splitSlideUpWord" data-animation-trigger="breakpoint" data-splitting="chars"><?php echo $introTitle ?></h2>
+                    <p data-animation-effect="moduleFadeIn" data-animation-trigger="breakpoint"><?php echo $introCopy ?></p>
                 </div>
 
                 <?php include (realpath(dirname(__FILE__)."/form--waitlist.php")); ?>
-            </div>
-
-            <div class="tag">
-                <span>Hitting the course <span class="sage">Spring 2021</span></span>
             </div>
         </div>
     </div>

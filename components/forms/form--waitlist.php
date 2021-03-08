@@ -1,4 +1,4 @@
-<div data-animation-effect="moduleFadeIn" data-animation-trigger="scroll" id="form-wrapper">
+<div data-animation-effect="moduleFadeIn" data-animation-trigger="breakpoint" id="form-wrapper">
     <div id="mc_embed_signup">
         <div id="form-fields-wrapper">
             <!-- TODO: Make sure action is right!! --> 

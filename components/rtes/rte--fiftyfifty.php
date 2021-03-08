@@ -44,7 +44,7 @@
                         </div>
 
                         <div class="text-container col-md-8 col-lg-6">
-                            <div class="text-inner" data-animation-effect="moduleFadeIn" data-animation-trigger="scroll">
+                            <div class="text-inner" data-animation-effect="moduleFadeIn" data-animation-trigger="breakpoint">
                                 <?php if($header): ?>
                                     <h3><?php echo $header ?></h3>
                                 <?php endif; ?>
@@ -68,7 +68,7 @@
                 </div>
 
                 <div class="text-container col-md-8 col-lg-6">
-                    <div class="text-inner" data-animation-effect="moduleFadeIn" data-animation-trigger="scroll">
+                    <div class="text-inner" data-animation-effect="moduleFadeIn" data-animation-trigger="breakpoint">
                         <?php if($header): ?>
                             <h3><?php echo $header ?></h3>
                         <?php endif; ?>
