@@ -337,13 +337,19 @@ button {
 }
 
 //GDPR 
-#cookie_action_close_header {
-	background-color: #081D1A;
+.cli-bar-container.cli-style-v2 {
+    font-family: $mediumType;
+    .cli-bar-btn_container {
+        #cookie_action_close_header {
+            background-color: #081D1A !important;
+        }
+        
+        .cli_settings_button { 
+            color: #fff !important;
+        }
+    }
 }
 
-.cli_settings_button {
-	color: #fff;
-}
 
 
 //MODAL PANE 

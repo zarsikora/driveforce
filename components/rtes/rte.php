@@ -43,8 +43,7 @@
         <?php endif; ?>
 
         <?php if($type === 'grid' && $hasGraphic): ?>
-            <!-- TODO: Switch to img tag function -->
-            <img data-animation-effect="moduleFadeIn" data-animation-trigger="scroll" class="rte-graphic" src="http://staging.driveforce.golf/wp-content/uploads/2021/01/rte-graphic.png"/>
+            <img aria-hidden="true" alt="decorative curve" data-animation-effect="moduleFadeIn" data-animation-trigger="scroll" class="rte-graphic" src="http://staging.driveforce.golf/wp-content/uploads/2021/01/rte-graphic.png"/>
         <?php endif; ?>
 
         <?php if($arrow): ?>

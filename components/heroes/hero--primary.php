@@ -80,6 +80,6 @@ $url = $link['url'];
         </div>
     </div> 
     <?php if($hasGraphic): ?>
-        <img class="primary-hero-curve" src="http://staging.driveforce.golf/wp-content/uploads/2021/01/primary-hero-arc.svg" />
+        <img class="primary-hero-curve" aria-hidden="true" alt="decorative curve" src="http://staging.driveforce.golf/wp-content/uploads/2021/01/primary-hero-arc.svg" />
     <?php endif; ?>
 </div>

@@ -10548,12 +10548,16 @@ button:focus {
   }
 }
 
-#cookie_action_close_header {
-  background-color: #081D1A;
+.cli-bar-container.cli-style-v2 {
+  font-family: "Sharp Sans Medium";
 }
 
-.cli_settings_button {
-  color: #fff;
+.cli-bar-container.cli-style-v2 .cli-bar-btn_container #cookie_action_close_header {
+  background-color: #081D1A !important;
+}
+
+.cli-bar-container.cli-style-v2 .cli-bar-btn_container .cli_settings_button {
+  color: #fff !important;
 }
 
 #modal-pane {

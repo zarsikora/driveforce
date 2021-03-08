@@ -27,7 +27,7 @@ $hasOverflow = get_sub_field('has_overflow');
         </div>
     </div>
 
-    <img class="waitlist-curve" src="http://staging.driveforce.golf/wp-content/uploads/2021/01/waitlist-curve.svg" />
+    <img class="waitlist-curve" aria-hidden="true" alt="decorative curve" src="http://staging.driveforce.golf/wp-content/uploads/2021/01/waitlist-curve.svg" />
 </div>
 
 <!-- <div id="form-success-pane">
