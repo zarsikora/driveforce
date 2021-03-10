@@ -47,7 +47,7 @@
             @media(min-width: 1440px) {
                 margin: 4.5vw auto;
             }
-            @media(min-width: 1920px) {
+            @media(min-width: 1920px) { 
                 margin: 8.5rem auto;
             }
 
@@ -59,6 +59,10 @@
                 }
                 @include media-breakpoint-up(lg){
                     text-align: left;
+                }
+
+                .onsale {
+                    display: none;
                 }
 
                 h2 {
@@ -109,6 +113,19 @@
                     }
                     @media(min-width: 1920px){
                         width: 42.8rem;
+                    }
+                }
+
+                .added_to_cart.wc-forward {
+                    display: block;
+                    font-family: $displayType;
+                    color: $darkBg;
+                    font-size: 1.6rem;
+                    transition: all ease 300ms;
+                    text-decoration: underline;
+
+                    &:hover {
+                        color: $highlight;
                     }
                 }
 

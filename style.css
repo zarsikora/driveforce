@@ -10436,7 +10436,7 @@ span.sage {
   color: #919A6B;
 }
 
-.btn {
+.btn, body.woocommerce-account #content .woocommerce .woocommerce-form-login .woocommerce-button {
   background: #DB4343;
   box-shadow: 0px 10px 24px #00000029;
   color: #fff !important;
@@ -10453,31 +10453,31 @@ span.sage {
 }
 
 @media (min-width: 768px) {
-  .btn {
+  .btn, body.woocommerce-account #content .woocommerce .woocommerce-form-login .woocommerce-button {
     width: 32rem;
   }
 }
 
 @media (min-width: 992px) {
-  .btn {
+  .btn, body.woocommerce-account #content .woocommerce .woocommerce-form-login .woocommerce-button {
     width: 22.292vw;
   }
 }
 
 @media (min-width: 1920px) {
-  .btn {
+  .btn, body.woocommerce-account #content .woocommerce .woocommerce-form-login .woocommerce-button {
     width: 42.8rem;
   }
 }
 
 @media (min-width: 992px) {
-  .btn:hover .btn-hover-mask {
+  .btn:hover .btn-hover-mask, body.woocommerce-account #content .woocommerce .woocommerce-form-login .woocommerce-button:hover .btn-hover-mask {
     -webkit-clip-path: circle(300px at 50% 50%);
             clip-path: circle(300px at 50% 50%);
   }
 }
 
-.btn span {
+.btn span, body.woocommerce-account #content .woocommerce .woocommerce-form-login .woocommerce-button span {
   font-family: "Sharp Sans Medium";
   font-size: 1.6rem;
   display: inline-block;
@@ -10489,19 +10489,19 @@ span.sage {
 }
 
 @media (min-width: 768px) {
-  .btn span {
+  .btn span, body.woocommerce-account #content .woocommerce .woocommerce-form-login .woocommerce-button span {
     left: 0;
   }
 }
 
 @media (min-width: 1440px) {
-  .btn span {
+  .btn span, body.woocommerce-account #content .woocommerce .woocommerce-form-login .woocommerce-button span {
     font-size: 1.1vw;
   }
 }
 
 @media (min-width: 1920px) {
-  .btn span {
+  .btn span, body.woocommerce-account #content .woocommerce .woocommerce-form-login .woocommerce-button span {
     font-size: 2.1rem;
   }
 }
@@ -10720,7 +10720,7 @@ button:focus {
   }
 }
 
-#header .btn {
+#header .btn, #header body.woocommerce-account #content .woocommerce .woocommerce-form-login .woocommerce-button, body.woocommerce-account #content .woocommerce .woocommerce-form-login #header .woocommerce-button {
   display: none;
   height: 100%;
   border-radius: 0;
@@ -10728,13 +10728,13 @@ button:focus {
 }
 
 @media (min-width: 992px) {
-  #header .btn {
+  #header .btn, #header body.woocommerce-account #content .woocommerce .woocommerce-form-login .woocommerce-button, body.woocommerce-account #content .woocommerce .woocommerce-form-login #header .woocommerce-button {
     display: flex;
     width: auto;
   }
 }
 
-#header .btn .btn-hover-mask {
+#header .btn .btn-hover-mask, #header body.woocommerce-account #content .woocommerce .woocommerce-form-login .woocommerce-button .btn-hover-mask, body.woocommerce-account #content .woocommerce .woocommerce-form-login #header .woocommerce-button .btn-hover-mask {
   border-radius: 0;
 }
 
@@ -11101,7 +11101,7 @@ button:focus {
   }
 }
 
-#nav-pane .inner .btn {
+#nav-pane .inner .btn, #nav-pane .inner body.woocommerce-account #content .woocommerce .woocommerce-form-login .woocommerce-button, body.woocommerce-account #content .woocommerce .woocommerce-form-login #nav-pane .inner .woocommerce-button {
   width: 32rem;
   margin-top: 20rem;
 }
@@ -11617,17 +11617,17 @@ button:focus {
   }
 }
 
-.btn {
+.btn, body.woocommerce-account #content .woocommerce .woocommerce-form-login .woocommerce-button {
   border: none;
   outline: none;
   color: #fff;
 }
 
-.btn:disabled, .btn[disabled] {
+.btn:disabled, body.woocommerce-account #content .woocommerce .woocommerce-form-login .woocommerce-button:disabled, .btn[disabled], body.woocommerce-account #content .woocommerce .woocommerce-form-login .woocommerce-button[disabled] {
   opacity: .5;
 }
 
-.btn.solid-btn {
+.btn.solid-btn, body.woocommerce-account #content .woocommerce .woocommerce-form-login .solid-btn.woocommerce-button {
   font-size: 1.6rem;
   border-radius: .4rem;
   padding: 1rem 1.5rem;
@@ -11635,7 +11635,7 @@ button:focus {
   text-align: center;
 }
 
-.btn.solid-btn .arrow {
+.btn.solid-btn .arrow, body.woocommerce-account #content .woocommerce .woocommerce-form-login .solid-btn.woocommerce-button .arrow {
   width: 5rem;
   height: 5rem;
   fill: #fff;
@@ -11643,11 +11643,11 @@ button:focus {
   transition: width ease 300ms;
 }
 
-.btn.solid-btn:hover .arrow {
+.btn.solid-btn:hover .arrow, body.woocommerce-account #content .woocommerce .woocommerce-form-login .solid-btn.woocommerce-button:hover .arrow {
   display: inline-block;
 }
 
-a.btn:hover {
+a.btn:hover, body.woocommerce-account #content .woocommerce .woocommerce-form-login a.woocommerce-button:hover {
   color: #fff;
 }
 
@@ -11933,7 +11933,7 @@ a.btn:hover {
 }
 
 @media (min-width: 768px) {
-  .hero .inner .text-container .btns-wrapper .btn {
+  .hero .inner .text-container .btns-wrapper .btn, .hero .inner .text-container .btns-wrapper body.woocommerce-account #content .woocommerce .woocommerce-form-login .woocommerce-button, body.woocommerce-account #content .woocommerce .woocommerce-form-login .hero .inner .text-container .btns-wrapper .woocommerce-button {
     width: 32rem;
   }
 }
@@ -12292,12 +12292,12 @@ a.btn:hover {
   opacity: 1;
 }
 
-.grid.text .btn {
+.grid.text .btn, .grid.text body.woocommerce-account #content .woocommerce .woocommerce-form-login .woocommerce-button, body.woocommerce-account #content .woocommerce .woocommerce-form-login .grid.text .woocommerce-button {
   margin-top: 3rem;
 }
 
 @media (min-width: 768px) {
-  .grid.text .btn {
+  .grid.text .btn, .grid.text body.woocommerce-account #content .woocommerce .woocommerce-form-login .woocommerce-button, body.woocommerce-account #content .woocommerce .woocommerce-form-login .grid.text .woocommerce-button {
     margin-top: 5rem;
   }
 }
@@ -12635,7 +12635,7 @@ a.browse-all {
   }
 }
 
-.rte .text-container .btn {
+.rte .text-container .btn, .rte .text-container body.woocommerce-account #content .woocommerce .woocommerce-form-login .woocommerce-button, body.woocommerce-account #content .woocommerce .woocommerce-form-login .rte .text-container .woocommerce-button {
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
 }
@@ -12676,7 +12676,7 @@ a.browse-all {
   letter-spacing: 1.6px;
 }
 
-.rte .text-container .copy .btn:parent, .article-single .post-content .inner .copy ul .rte .text-container li .btn:parent, .article-single .post-content .inner .copy ol .rte .text-container li .btn:parent {
+.rte .text-container .copy .btn:parent, .article-single .post-content .inner .copy ul .rte .text-container li .btn:parent, .article-single .post-content .inner .copy ol .rte .text-container li .btn:parent, .rte .text-container .copy body.woocommerce-account #content .woocommerce .woocommerce-form-login .woocommerce-button:parent, body.woocommerce-account #content .woocommerce .woocommerce-form-login .rte .text-container .copy .woocommerce-button:parent, .article-single .post-content .inner .copy ul .rte .text-container li body.woocommerce-account #content .woocommerce .woocommerce-form-login .woocommerce-button:parent, body.woocommerce-account #content .woocommerce .woocommerce-form-login .article-single .post-content .inner .copy ul .rte .text-container li .woocommerce-button:parent, .article-single .post-content .inner .copy ol .rte .text-container li body.woocommerce-account #content .woocommerce .woocommerce-form-login .woocommerce-button:parent, body.woocommerce-account #content .woocommerce .woocommerce-form-login .article-single .post-content .inner .copy ol .rte .text-container li .woocommerce-button:parent {
   opacity: 1;
 }
 
@@ -13264,7 +13264,7 @@ a.browse-all {
   font-family: "Sharp Sans Bold";
 }
 
-.list-module .text-wrapper .inner .btn-wrapper .btn {
+.list-module .text-wrapper .inner .btn-wrapper .btn, .list-module .text-wrapper .inner .btn-wrapper body.woocommerce-account #content .woocommerce .woocommerce-form-login .woocommerce-button, body.woocommerce-account #content .woocommerce .woocommerce-form-login .list-module .text-wrapper .inner .btn-wrapper .woocommerce-button {
   width: 37rem;
   margin-bottom: 3rem;
   opacity: 0;
@@ -13273,17 +13273,17 @@ a.browse-all {
 }
 
 @media (min-width: 1440px) {
-  .list-module .text-wrapper .inner .btn-wrapper .btn {
+  .list-module .text-wrapper .inner .btn-wrapper .btn, .list-module .text-wrapper .inner .btn-wrapper body.woocommerce-account #content .woocommerce .woocommerce-form-login .woocommerce-button, body.woocommerce-account #content .woocommerce .woocommerce-form-login .list-module .text-wrapper .inner .btn-wrapper .woocommerce-button {
     width: 25.694vw;
   }
 }
 
-.list-module .text-wrapper .inner .btn-wrapper .btn.active {
+.list-module .text-wrapper .inner .btn-wrapper .btn.active, .list-module .text-wrapper .inner .btn-wrapper body.woocommerce-account #content .woocommerce .woocommerce-form-login .active.woocommerce-button, body.woocommerce-account #content .woocommerce .woocommerce-form-login .list-module .text-wrapper .inner .btn-wrapper .active.woocommerce-button {
   opacity: 1;
   transform: translateY(0);
 }
 
-.list-module .text-wrapper .inner .btn-wrapper .btn:last-child {
+.list-module .text-wrapper .inner .btn-wrapper .btn:last-child, .list-module .text-wrapper .inner .btn-wrapper body.woocommerce-account #content .woocommerce .woocommerce-form-login .woocommerce-button:last-child, body.woocommerce-account #content .woocommerce .woocommerce-form-login .list-module .text-wrapper .inner .btn-wrapper .woocommerce-button:last-child {
   margin-bottom: 0;
 }
 
@@ -13418,7 +13418,7 @@ a.browse-all {
   height: 1.6rem;
 }
 
-.card .btn.expand {
+.card .btn.expand, .card body.woocommerce-account #content .woocommerce .woocommerce-form-login .expand.woocommerce-button, body.woocommerce-account #content .woocommerce .woocommerce-form-login .card .expand.woocommerce-button {
   color: #fff;
   position: absolute;
   right: 0;
@@ -13428,7 +13428,7 @@ a.browse-all {
   border-radius: 0px 0px 4px 0px;
 }
 
-.card .btn.full {
+.card .btn.full, .card body.woocommerce-account #content .woocommerce .woocommerce-form-login .full.woocommerce-button, body.woocommerce-account #content .woocommerce .woocommerce-form-login .card .full.woocommerce-button {
   position: absolute;
   right: 0;
   bottom: 0;
@@ -13437,12 +13437,12 @@ a.browse-all {
   border-radius: 0 0 .4rem 0;
 }
 
-.card .btn.full span {
+.card .btn.full span, .card body.woocommerce-account #content .woocommerce .woocommerce-form-login .full.woocommerce-button span, body.woocommerce-account #content .woocommerce .woocommerce-form-login .card .full.woocommerce-button span {
   margin: 0 1.5rem;
   margin: 0 1.5rem;
 }
 
-.card .btn.full svg.arrow {
+.card .btn.full svg.arrow, .card body.woocommerce-account #content .woocommerce .woocommerce-form-login .full.woocommerce-button svg.arrow, body.woocommerce-account #content .woocommerce .woocommerce-form-login .card .full.woocommerce-button svg.arrow {
   fill: #fff;
 }
 
@@ -13727,7 +13727,7 @@ form .form-group .form-control.error {
   border: 2px solid #FF5D21;
 }
 
-form .btn-wrapper .btn {
+form .btn-wrapper .btn, form .btn-wrapper body.woocommerce-account #content .woocommerce .woocommerce-form-login .woocommerce-button, body.woocommerce-account #content .woocommerce .woocommerce-form-login form .btn-wrapper .woocommerce-button {
   margin: 0 auto;
 }
 
@@ -14359,7 +14359,7 @@ form .btn-wrapper .btn {
   }
 }
 
-#form-success-pane .inner .btn {
+#form-success-pane .inner .btn, #form-success-pane .inner body.woocommerce-account #content .woocommerce .woocommerce-form-login .woocommerce-button, body.woocommerce-account #content .woocommerce .woocommerce-form-login #form-success-pane .inner .woocommerce-button {
   opacity: 0;
 }
 
@@ -14430,7 +14430,7 @@ form .btn-wrapper .btn {
   margin-bottom: 0;
 }
 
-.share-module .text-wrapper .social-sharing li .btn {
+.share-module .text-wrapper .social-sharing li .btn, .share-module .text-wrapper .social-sharing li body.woocommerce-account #content .woocommerce .woocommerce-form-login .woocommerce-button, body.woocommerce-account #content .woocommerce .woocommerce-form-login .share-module .text-wrapper .social-sharing li .woocommerce-button {
   width: 36rem;
   justify-content: flex-start;
   position: relative;
@@ -14438,12 +14438,12 @@ form .btn-wrapper .btn {
 }
 
 @media (min-width: 1440px) {
-  .share-module .text-wrapper .social-sharing li .btn {
+  .share-module .text-wrapper .social-sharing li .btn, .share-module .text-wrapper .social-sharing li body.woocommerce-account #content .woocommerce .woocommerce-form-login .woocommerce-button, body.woocommerce-account #content .woocommerce .woocommerce-form-login .share-module .text-wrapper .social-sharing li .woocommerce-button {
     width: 25.694vw;
   }
 }
 
-.share-module .text-wrapper .social-sharing li .btn:after {
+.share-module .text-wrapper .social-sharing li .btn:after, .share-module .text-wrapper .social-sharing li body.woocommerce-account #content .woocommerce .woocommerce-form-login .woocommerce-button:after, body.woocommerce-account #content .woocommerce .woocommerce-form-login .share-module .text-wrapper .social-sharing li .woocommerce-button:after {
   content: "";
   width: .1rem;
   height: 60%;
@@ -14454,7 +14454,7 @@ form .btn-wrapper .btn {
   transition: all ease 300ms;
 }
 
-.share-module .text-wrapper .social-sharing li .btn .btn-hover-mask {
+.share-module .text-wrapper .social-sharing li .btn .btn-hover-mask, .share-module .text-wrapper .social-sharing li body.woocommerce-account #content .woocommerce .woocommerce-form-login .woocommerce-button .btn-hover-mask, body.woocommerce-account #content .woocommerce .woocommerce-form-login .share-module .text-wrapper .social-sharing li .woocommerce-button .btn-hover-mask {
   -webkit-clip-path: circle(0.1px at 50% 50%);
           clip-path: circle(0.1px at 50% 50%);
   background-color: #9A1D1D;
@@ -14468,50 +14468,50 @@ form .btn-wrapper .btn {
 }
 
 @media all and (-ms-high-contrast: none) {
-  .share-module .text-wrapper .social-sharing li .btn .btn-hover-mask {
+  .share-module .text-wrapper .social-sharing li .btn .btn-hover-mask, .share-module .text-wrapper .social-sharing li body.woocommerce-account #content .woocommerce .woocommerce-form-login .woocommerce-button .btn-hover-mask, body.woocommerce-account #content .woocommerce .woocommerce-form-login .share-module .text-wrapper .social-sharing li .woocommerce-button .btn-hover-mask {
     -webkit-clip-path: none;
             clip-path: none;
     display: none;
   }
 }
 
-.share-module .text-wrapper .social-sharing li .btn span {
+.share-module .text-wrapper .social-sharing li .btn span, .share-module .text-wrapper .social-sharing li body.woocommerce-account #content .woocommerce .woocommerce-form-login .woocommerce-button span, body.woocommerce-account #content .woocommerce .woocommerce-form-login .share-module .text-wrapper .social-sharing li .woocommerce-button span {
   left: 0;
 }
 
-.share-module .text-wrapper .social-sharing li .btn.facebook {
+.share-module .text-wrapper .social-sharing li .btn.facebook, .share-module .text-wrapper .social-sharing li body.woocommerce-account #content .woocommerce .woocommerce-form-login .facebook.woocommerce-button, body.woocommerce-account #content .woocommerce .woocommerce-form-login .share-module .text-wrapper .social-sharing li .facebook.woocommerce-button {
   background: #507BCA;
 }
 
-.share-module .text-wrapper .social-sharing li .btn.facebook span {
+.share-module .text-wrapper .social-sharing li .btn.facebook span, .share-module .text-wrapper .social-sharing li body.woocommerce-account #content .woocommerce .woocommerce-form-login .facebook.woocommerce-button span, body.woocommerce-account #content .woocommerce .woocommerce-form-login .share-module .text-wrapper .social-sharing li .facebook.woocommerce-button span {
   left: .5rem;
 }
 
-.share-module .text-wrapper .social-sharing li .btn.facebook:after {
+.share-module .text-wrapper .social-sharing li .btn.facebook:after, .share-module .text-wrapper .social-sharing li body.woocommerce-account #content .woocommerce .woocommerce-form-login .facebook.woocommerce-button:after, body.woocommerce-account #content .woocommerce .woocommerce-form-login .share-module .text-wrapper .social-sharing li .facebook.woocommerce-button:after {
   background-color: #2F559D;
 }
 
-.share-module .text-wrapper .social-sharing li .btn.facebook .btn-hover-mask {
+.share-module .text-wrapper .social-sharing li .btn.facebook .btn-hover-mask, .share-module .text-wrapper .social-sharing li body.woocommerce-account #content .woocommerce .woocommerce-form-login .facebook.woocommerce-button .btn-hover-mask, body.woocommerce-account #content .woocommerce .woocommerce-form-login .share-module .text-wrapper .social-sharing li .facebook.woocommerce-button .btn-hover-mask {
   background-color: #2F559D;
 }
 
-.share-module .text-wrapper .social-sharing li .btn.twitter {
+.share-module .text-wrapper .social-sharing li .btn.twitter, .share-module .text-wrapper .social-sharing li body.woocommerce-account #content .woocommerce .woocommerce-form-login .twitter.woocommerce-button, body.woocommerce-account #content .woocommerce .woocommerce-form-login .share-module .text-wrapper .social-sharing li .twitter.woocommerce-button {
   background: #5BC1F1;
 }
 
-.share-module .text-wrapper .social-sharing li .btn.twitter:after {
+.share-module .text-wrapper .social-sharing li .btn.twitter:after, .share-module .text-wrapper .social-sharing li body.woocommerce-account #content .woocommerce .woocommerce-form-login .twitter.woocommerce-button:after, body.woocommerce-account #content .woocommerce .woocommerce-form-login .share-module .text-wrapper .social-sharing li .twitter.woocommerce-button:after {
   background-color: #14A0E1;
 }
 
-.share-module .text-wrapper .social-sharing li .btn.twitter .btn-hover-mask {
+.share-module .text-wrapper .social-sharing li .btn.twitter .btn-hover-mask, .share-module .text-wrapper .social-sharing li body.woocommerce-account #content .woocommerce .woocommerce-form-login .twitter.woocommerce-button .btn-hover-mask, body.woocommerce-account #content .woocommerce .woocommerce-form-login .share-module .text-wrapper .social-sharing li .twitter.woocommerce-button .btn-hover-mask {
   background-color: #14A0E1;
 }
 
-.share-module .text-wrapper .social-sharing li .btn.email:after {
+.share-module .text-wrapper .social-sharing li .btn.email:after, .share-module .text-wrapper .social-sharing li body.woocommerce-account #content .woocommerce .woocommerce-form-login .email.woocommerce-button:after, body.woocommerce-account #content .woocommerce .woocommerce-form-login .share-module .text-wrapper .social-sharing li .email.woocommerce-button:after {
   background-color: #9A1D1D;
 }
 
-.share-module .text-wrapper .social-sharing li .btn svg {
+.share-module .text-wrapper .social-sharing li .btn svg, .share-module .text-wrapper .social-sharing li body.woocommerce-account #content .woocommerce .woocommerce-form-login .woocommerce-button svg, body.woocommerce-account #content .woocommerce .woocommerce-form-login .share-module .text-wrapper .social-sharing li .woocommerce-button svg {
   height: 2.5rem;
   width: auto;
   margin-right: 5rem;
@@ -14520,23 +14520,23 @@ form .btn-wrapper .btn {
   z-index: 2;
 }
 
-.share-module .text-wrapper .social-sharing li .btn svg.email {
+.share-module .text-wrapper .social-sharing li .btn svg.email, .share-module .text-wrapper .social-sharing li body.woocommerce-account #content .woocommerce .woocommerce-form-login .woocommerce-button svg.email, body.woocommerce-account #content .woocommerce .woocommerce-form-login .share-module .text-wrapper .social-sharing li .woocommerce-button svg.email {
   width: 2.5rem;
   height: auto;
 }
 
 @media (min-width: 992px) {
-  .share-module .text-wrapper .social-sharing li .btn:hover:after {
+  .share-module .text-wrapper .social-sharing li .btn:hover:after, .share-module .text-wrapper .social-sharing li body.woocommerce-account #content .woocommerce .woocommerce-form-login .woocommerce-button:hover:after, body.woocommerce-account #content .woocommerce .woocommerce-form-login .share-module .text-wrapper .social-sharing li .woocommerce-button:hover:after {
     display: none;
   }
-  .share-module .text-wrapper .social-sharing li .btn:hover .btn-hover-mask {
+  .share-module .text-wrapper .social-sharing li .btn:hover .btn-hover-mask, .share-module .text-wrapper .social-sharing li body.woocommerce-account #content .woocommerce .woocommerce-form-login .woocommerce-button:hover .btn-hover-mask, body.woocommerce-account #content .woocommerce .woocommerce-form-login .share-module .text-wrapper .social-sharing li .woocommerce-button:hover .btn-hover-mask {
     -webkit-clip-path: circle(500px at 75% 50%);
             clip-path: circle(500px at 75% 50%);
   }
-  .share-module .text-wrapper .social-sharing li .btn:hover svg {
+  .share-module .text-wrapper .social-sharing li .btn:hover svg, .share-module .text-wrapper .social-sharing li body.woocommerce-account #content .woocommerce .woocommerce-form-login .woocommerce-button:hover svg, body.woocommerce-account #content .woocommerce .woocommerce-form-login .share-module .text-wrapper .social-sharing li .woocommerce-button:hover svg {
     margin-right: 3.5rem;
   }
-  .share-module .text-wrapper .social-sharing li .btn:hover svg.twitter, .share-module .text-wrapper .social-sharing li .btn:hover svg.email {
+  .share-module .text-wrapper .social-sharing li .btn:hover svg.twitter, .share-module .text-wrapper .social-sharing li body.woocommerce-account #content .woocommerce .woocommerce-form-login .woocommerce-button:hover svg.twitter, body.woocommerce-account #content .woocommerce .woocommerce-form-login .share-module .text-wrapper .social-sharing li .woocommerce-button:hover svg.twitter, .share-module .text-wrapper .social-sharing li .btn:hover svg.email, .share-module .text-wrapper .social-sharing li body.woocommerce-account #content .woocommerce .woocommerce-form-login .woocommerce-button:hover svg.email, body.woocommerce-account #content .woocommerce .woocommerce-form-login .share-module .text-wrapper .social-sharing li .woocommerce-button:hover svg.email {
     margin-right: 2.5rem;
   }
 }
@@ -14876,7 +14876,7 @@ form .btn-wrapper .btn {
   }
 }
 
-#content.template-404 .rte .btn {
+#content.template-404 .rte .btn, body.woocommerce-account #content.template-404 .rte .woocommerce .woocommerce-form-login .woocommerce-button, body.woocommerce-account #content.template-404 .woocommerce .woocommerce-form-login .rte .woocommerce-button {
   margin: 0 auto;
   flex: 0 0 100%;
 }
@@ -15181,6 +15181,10 @@ form .btn-wrapper .btn {
   }
 }
 
+.post-type-archive-product.woocommerce-page #primary .products .product .onsale {
+  display: none;
+}
+
 .post-type-archive-product.woocommerce-page #primary .products .product h2 {
   font-family: "Sharp Sans Display Bold";
   color: #081D1A;
@@ -15253,6 +15257,19 @@ form .btn-wrapper .btn {
   }
 }
 
+.post-type-archive-product.woocommerce-page #primary .products .product .added_to_cart.wc-forward {
+  display: block;
+  font-family: "Sharp Sans Display Bold";
+  color: #081D1A;
+  font-size: 1.6rem;
+  transition: all ease 300ms;
+  text-decoration: underline;
+}
+
+.post-type-archive-product.woocommerce-page #primary .products .product .added_to_cart.wc-forward:hover {
+  color: #DB4343;
+}
+
 .post-type-archive-product.woocommerce-page #primary .products .product:hover h2 {
   color: #DB4343;
 }
@@ -15285,9 +15302,14 @@ form .btn-wrapper .btn {
 }
 
 .single-product #container #primary .product {
-  max-width: 80%;
-  margin: 5rem auto;
   padding: 0 3.6rem;
+  margin: 5rem auto;
+}
+
+@media (min-width: 768px) {
+  .single-product #container #primary .product {
+    max-width: 80%;
+  }
 }
 
 @media (min-width: 992px) {
@@ -15307,6 +15329,16 @@ form .btn-wrapper .btn {
   .single-product #container #primary .product {
     margin: 8.5rem auto;
   }
+}
+
+.single-product #container #primary .product .onsale {
+  display: none;
+}
+
+.single-product #container #primary .product .summary .price {
+  color: #081D1A;
+  font-family: "Sharp Sans Display Bold";
+  font-size: 2rem;
 }
 
 .single-product #container #primary .product .summary form.cart {
@@ -15409,6 +15441,10 @@ form .btn-wrapper .btn {
   font-family: "Sharp Sans Medium";
 }
 
+.woocommerce-cart #content .cart_totals {
+  padding: 0 3.6rem;
+}
+
 .woocommerce-cart #content .button {
   background-color: #DB4343;
   transition: all ease 300ms;
@@ -15431,7 +15467,7 @@ body.woocommerce-account #content {
 }
 
 body.woocommerce-account #content .woocommerce {
-  margin: 5rem auto;
+  margin: 10rem auto;
   padding: 0 3.6rem;
 }
 
@@ -15495,5 +15531,81 @@ body.woocommerce-account #content .woocommerce .woocommerce-MyAccount-content p 
 }
 
 body.woocommerce-account #content .woocommerce .woocommerce-MyAccount-content p a:hover {
+  color: #DB4343;
+}
+
+body.woocommerce-account #content .woocommerce .woocommerce-form-login input {
+  height: 6rem;
+  padding: 0 3rem;
+  position: relative;
+  width: 100%;
+  line-height: 6rem;
+  font-size: 1.4rem;
+  border-radius: .4rem;
+  transition: all ease 300ms;
+  border: none;
+  margin-top: 1rem;
+  font-size: 1.8rem;
+}
+
+@media (min-width: 768px) {
+  body.woocommerce-account #content .woocommerce .woocommerce-form-login input {
+    font-size: 1.6rem;
+  }
+}
+
+body.woocommerce-account #content .woocommerce .woocommerce-form-login input::-moz-placeholder {
+  color: #B5B5B5;
+}
+
+body.woocommerce-account #content .woocommerce .woocommerce-form-login input:-ms-input-placeholder {
+  color: #B5B5B5;
+}
+
+body.woocommerce-account #content .woocommerce .woocommerce-form-login input::placeholder {
+  color: #B5B5B5;
+}
+
+body.woocommerce-account #content .woocommerce .woocommerce-form-login input:active, body.woocommerce-account #content .woocommerce .woocommerce-form-login input:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+body.woocommerce-account #content .woocommerce .woocommerce-form-login input:active::-moz-placeholder, body.woocommerce-account #content .woocommerce .woocommerce-form-login input:focus::-moz-placeholder {
+  color: #d4d4d4;
+}
+
+body.woocommerce-account #content .woocommerce .woocommerce-form-login input:active:-ms-input-placeholder, body.woocommerce-account #content .woocommerce .woocommerce-form-login input:focus:-ms-input-placeholder {
+  color: #d4d4d4;
+}
+
+body.woocommerce-account #content .woocommerce .woocommerce-form-login input:active::placeholder, body.woocommerce-account #content .woocommerce .woocommerce-form-login input:focus::placeholder {
+  color: #d4d4d4;
+}
+
+body.woocommerce-account #content .woocommerce .woocommerce-form-login .woocommerce-form__label-for-checkbox {
+  display: flex;
+  align-items: center;
+  margin: 2rem 0;
+}
+
+body.woocommerce-account #content .woocommerce .woocommerce-form-login .woocommerce-form__label-for-checkbox .woocommerce-form__input-checkbox {
+  height: 3rem;
+  width: 3rem;
+  padding: 0;
+  margin-top: 0;
+}
+
+body.woocommerce-account #content .woocommerce .woocommerce-form-login .woocommerce-form__label-for-checkbox span {
+  margin-left: 2rem;
+}
+
+body.woocommerce-account #content .woocommerce .woocommerce-form-login .lost_password a {
+  color: #081D1A;
+  text-decoration: underline;
+  transition: all ease 300ms;
+}
+
+body.woocommerce-account #content .woocommerce .woocommerce-form-login .lost_password a:hover {
   color: #DB4343;
 }

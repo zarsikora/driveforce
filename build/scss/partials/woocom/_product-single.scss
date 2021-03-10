@@ -22,9 +22,11 @@
             }
 
             .product {
-                max-width: 80%;
-                margin: 5rem auto;
                 padding: 0 3.6rem;
+                margin: 5rem auto;
+                @include media-breakpoint-up(md){
+                    max-width: 80%;
+                }
                 @include media-breakpoint-up(lg) {
                     max-width: 80%;
                     margin: 6.5rem auto;
@@ -36,7 +38,17 @@
                     margin: 8.5rem auto;
                 }
 
+                .onsale {
+                    display: none;
+                }
+
                 .summary {
+                    .price {
+                        color: $darkBg;
+                        font-family: $displayType;
+                        font-size: 2rem;
+                    }
+
                     form.cart {
                         padding-top: 0;
 
