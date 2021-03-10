@@ -7,7 +7,7 @@
     <div class="inner">
         <div class="text-container">
             <div class="row">
-                <div class="col-md-5 offset-md-1">
+                <div class="col-md-6"> 
                     <h1><?php echo $header ?></h1>
                 </div>
             </div>

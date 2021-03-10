@@ -1,11 +1,11 @@
 <?php get_header(); ?>
 <main id="content">
     <?php 
-
         //WOOCOMMERCE TEMPLATES
         if(is_shop()) 
         {
-            include('woocommerce/archive-product.php');
+            include (realpath(dirname(__FILE__)."/../../plugins/woocommerce/templates/archive-product.php"));
+            //include('woocommerce/archive-product.php');
         } 
 
         elseif(is_product()) 

@@ -3,16 +3,18 @@
 include('includes/button.php');
 include('includes/image-tag.php');
 
-// SET UP BASIC NAV MENUS IN BACK END
-function bones_menu_setup() {
+// SET UP BASIC NAV MENUS IN BACK END AND ENABLE WOOCOM SUPPORT
+function bones_theme_setup() {
     register_nav_menus( array(
             'main-menu' => esc_html__( 'Main Menu' ),
             'nav-pane-menu' => esc_html__( 'Nav Pane Menu' ),
             'footer-menu' => esc_html__('Footer Menu')
         )
     );
+
+    add_theme_support( 'woocommerce' );
 }
-add_action( 'after_setup_theme', 'bones_menu_setup' );
+add_action( 'after_setup_theme', 'bones_theme_setup' );
 
 //PREVENT DUPLICATE JQUERY LOAD
 function remove_jquery_migrate($scripts)
