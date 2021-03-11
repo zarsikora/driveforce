@@ -105,14 +105,18 @@
                     white-space: nowrap;
                     position: relative;
                     text-decoration: none !important;
+                    font-family: $mediumType;
+                    font-size: 1.6rem;
                     @include media-breakpoint-up(md){
                         width: 32rem;
                     }
                     @include media-breakpoint-up(lg){
                         width: 22.292vw;
+                        font-size: 1.1vw;
                     }
                     @media(min-width: 1920px){
                         width: 42.8rem;
+                        font-size: 2.1rem;
                     }
                 }
 

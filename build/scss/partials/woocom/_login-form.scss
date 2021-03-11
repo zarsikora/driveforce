@@ -1,0 +1,56 @@
+// LOGIN
+
+.woocommerce-form-login {
+    .woocommerce-form__label,
+    label  {
+        width: 100%;
+        font-family: $displayType;
+        letter-spacing: 0;
+        font-size: 1.8rem;
+    }
+
+    input,
+    span.password-input {
+        width: 100%;
+        max-width: 50rem;
+    }
+}
+
+// RESET PW
+
+.woocommerce-ResetPassword {
+    label  {
+        width: 100%;
+        font-family: $displayType;
+        letter-spacing: 0;
+        font-size: 1.8rem;
+    }
+
+    input {
+        width: 100%;
+        max-width: 50rem;
+        height: 6rem;
+        padding: 0 3rem;
+        position: relative;
+        width: 100%;
+        line-height: 6rem;
+        font-size: 1.4rem;
+        border-radius: .4rem;
+        transition: all ease 300ms;
+        border: none;
+        margin-top: 1rem;
+        font-size: 1.8rem;
+        @include media-breakpoint-up(md){
+            font-size: 1.6rem;
+        }
+    }
+
+    .button {
+        @extend .btn;
+        background-color: $highlight !important;
+
+        &:hover {
+            background-color: $hoverTint !important;
+        }
+    }
+}

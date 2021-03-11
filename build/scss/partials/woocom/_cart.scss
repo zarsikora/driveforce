@@ -1,14 +1,61 @@
 .woocommerce-cart {
     #content {
         padding-top: 7.7rem;
+
         @include media-breakpoint-up(md){
             padding-top: 9.8rem; 
+            min-height: calc(100vh - 44.5rem);
+            // display: flex;
+            // align-items: center;
+            // justify-content: center;
+        }
+        @include media-breakpoint-up(lg){
+            min-height: calc(100vh - 24.5rem);
         }
 
         .woocommerce-notices-wrapper {
             .woocommerce-message {
                 border-top: 0;
                 display: none;
+            }
+        }
+
+        .cart-empty.woocommerce-info {
+            padding: 10rem 3.6rem 0;
+            border: none;
+            background: none;
+            font-family: $displayType;
+            text-align: center;
+            font-size: 3rem;
+            line-height: 1.4em;
+            margin-bottom: 1em;
+            @include media-breakpoint-up(md) {
+                font-size: 4rem;
+                max-width: 80%;
+                margin: 0 auto;
+                padding: 0;
+            }
+            @include media-breakpoint-up(lg){
+                font-size: 3.472vw;
+            }
+            @media(min-width: 1920px) {
+                font-size: 6.6rem;
+            }
+
+            &:before {
+                display: none;
+            }
+        }
+
+        .return-to-shop {
+            text-align: center;
+            padding: 0 3.6rem 10rem;
+            @include media-breakpoint-up(md){
+                padding: 0;
+            }
+
+            .button {
+                @extend .btn;
             }
         }
 
@@ -27,17 +74,63 @@
                 margin: 8.5rem auto;
             }
 
-            th {
-                font-family: $displayType;
-            }
+            .shop_table {
+                background-color: #fff;
 
-            td {
-                font-family: $mediumType;
+                th {
+                    font-family: $displayType;
+                    font-size: 1.6rem;
+                }
+    
+                td {
+                    font-family: $mediumType;
+                    font-size: 1.4rem;
+
+                    a {
+                        color: $darkBg;
+                        text-decoration: underline;
+                    }
+                }
+
+                .coupon {
+                    input#coupon_code {
+                        width: 100%;
+
+                        @include media-breakpoint-up(md){
+                            width: auto;
+                        }
+                    }
+
+                    .button {
+                        @include media-breakpoint-down(sm){
+                            width: 100% !important;
+                            float: none !important;
+                        }
+                    }
+                }
+
+                .button {
+                    height: 3.4rem;
+                }
             }
         }
 
         .cart_totals {
             padding: 0 3.6rem;
+
+            table {
+                background-color: #fff;
+
+                th {
+                    font-family: $displayType;
+                    font-size: 1.6rem;
+                }
+
+                td {
+                    font-family: $mediumType;
+                    font-size: 1.4rem;
+                }
+            }
         }
 
         .button {
