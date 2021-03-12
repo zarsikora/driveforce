@@ -1,0 +1,94 @@
+.woocommerce-checkout {
+    #container {
+        .woocommerce {
+            .woocommerce-form-coupon-toggle {
+                display: none;
+            }
+
+            form.checkout {
+                padding: 0 3.6rem;
+                margin: 10rem auto;
+                @include media-breakpoint-up(lg) {
+                    max-width: 80%;
+                    margin: 13rem auto;
+                    padding: 0;
+                }
+                @media(min-width: 1440px) {
+                    margin: 9vw auto;
+                }
+                @media(min-width: 1920px) {
+                    margin: 17rem auto;
+                }
+
+                #customer_details {
+                    display: flex;
+
+                    .col-1,
+                    .col-2 {
+                        width: 50%;
+                        max-width: 50%;
+                        flex: 0 0 50%;
+                    }
+
+                    .woocommerce-billing-fields {
+                        .form-row {
+                            width: 100%;
+
+                            label {
+                                width: 100%;
+                                font-family: $displayType;
+                                letter-spacing: 0;
+                                font-size: 1.8rem;
+                            }
+
+                            input {
+                                width: 100%;
+                                max-width: 50rem;
+                                height: 6rem;
+                                padding: 0 3rem;
+                                position: relative;
+                                width: 100%;
+                                line-height: 6rem;
+                                font-size: 1.4rem;
+                                border-radius: .4rem;
+                                transition: all ease 300ms;
+                                border: none;
+                                margin-top: 1rem;
+                                font-size: 1.8rem;
+                                @include media-breakpoint-up(md){
+                                    font-size: 1.6rem;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .form-row.notes {
+                    label {
+                        width: 100%;
+                    }
+
+                    .woocommerce-input-wrapper {
+                        width: 100%;
+                    }
+                }
+
+                #order_review_heading {
+                    margin-top: 5rem;
+                }
+
+                #order_review {
+                    th {
+                        font-family: $displayType;
+                        font-size: 1.6rem;
+                    }
+
+                    td {
+                        font-family: $mediumType;
+                        font-size: 1.4rem;
+                    }
+                }
+            }
+        }
+    }
+}
