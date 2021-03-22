@@ -13,13 +13,6 @@
             min-height: calc(100vh - 24.5rem);
         }
 
-        .woocommerce-notices-wrapper {
-            .woocommerce-message {
-                border-top: 0;
-                display: none;
-            }
-        }
-
         .cart-empty.woocommerce-info {
             padding: 10rem 3.6rem 0;
             border: none;
@@ -74,6 +67,14 @@
                 margin: 8.5rem auto;
             }
 
+            .wcsatt-options {
+                padding-left: 0;
+
+                label {
+                    letter-spacing: 0;
+                }
+            }
+
             .shop_table {
                 background-color: #fff;
 
@@ -95,9 +96,11 @@
                 .coupon {
                     input#coupon_code {
                         width: 100%;
+                        margin-bottom: 1rem;
 
                         @include media-breakpoint-up(md){
                             width: auto;
+                            margin-bottom: 0;
                         }
                     }
 
@@ -111,12 +114,16 @@
 
                 .button {
                     height: 3.4rem;
+                    padding: 0 3.3rem;
                 }
             }
         }
 
         .cart_totals {
             padding: 0 3.6rem;
+            @include media-breakpoint-up(lg){
+                margin-right: calc(10% - 3.6rem);
+            }
 
             table {
                 background-color: #fff;
@@ -133,11 +140,19 @@
             }
         }
 
+        a {
+            color: $highlight;
+            font-family: $displayType;
+            transition: all ease 300ms;
+        }
+
         .button {
             background-color: $highlight;
             transition: all ease 300ms;
             color: #fff;
             font-family: $mediumType;
+            padding: 2.7rem 3.3rem;
+            border-radius: 4rem;
     
             &:hover {
                 background-color: $hoverTint;

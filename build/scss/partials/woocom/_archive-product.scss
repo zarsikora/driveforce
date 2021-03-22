@@ -37,18 +37,20 @@
             display: none;
         }
 
+        // currently disabled because of product table plugin
         .products {
-            margin: 5rem auto;
-            padding: 0 3.6rem;
+            //margin: 5rem auto;
+            //padding: 0 3.6rem;
+            margin: 0;
             @include media-breakpoint-up(lg) {
-                max-width: 80%;
-                margin: 6.5rem auto;
+                //max-width: 80%;
+                //margin: 6.5rem auto;
             }
             @media(min-width: 1440px) {
-                margin: 4.5vw auto;
+                //margin: 4.5vw auto;
             }
             @media(min-width: 1920px) { 
-                margin: 8.5rem auto;
+                //margin: 8.5rem auto;
             }
 
             .product {
@@ -91,35 +93,6 @@
                     }
                 }
 
-                .button {
-                    background: $highlight;
-                    box-shadow: 0px 10px 24px #ffffff29;
-                    color: #fff !important;
-                    padding: 2.7rem 3.3rem;
-                    border-radius: 4rem;
-                    width: 100%;
-                    display: inline-flex;
-                    align-items: center;
-                    justify-content: center;
-                    transition: all ease 300ms;
-                    white-space: nowrap;
-                    position: relative;
-                    text-decoration: none !important;
-                    font-family: $mediumType;
-                    font-size: 1.6rem;
-                    @include media-breakpoint-up(md){
-                        width: 32rem;
-                    }
-                    @include media-breakpoint-up(lg){
-                        width: 22.292vw;
-                        font-size: 1.1vw;
-                    }
-                    @media(min-width: 1920px){
-                        width: 42.8rem;
-                        font-size: 2.1rem;
-                    }
-                }
-
                 .added_to_cart.wc-forward {
                     display: block;
                     font-family: $displayType;
@@ -143,6 +116,142 @@
                     }
                 }
             }
+        }
+
+        //product table plugin
+        .dataTables_wrapper {
+            margin: 0 auto 5rem auto;
+            padding: 0 3.6rem;
+            margin: 0;
+            @include media-breakpoint-up(lg) {
+                max-width: 80%;
+                padding: 0;
+                margin: 0 auto 6.5rem auto;
+            }
+            @media(min-width: 1440px) {
+                margin: 0 auto 4.5vw auto;
+            }
+            @media(min-width: 1920px) { 
+                margin: 0 auto 8.5rem auto;
+            }
+
+            .wc-product-table-controls {
+                .dataTables_filter {
+                    @include media-breakpoint-down(sm){
+                        text-align: left;
+                        width: 100%;
+                        font-size: 1.4rem;
+                    }
+
+                    label {
+                        font-family: $displayType;
+                        font-size: 1.4rem;
+                        color: $darkBg;
+                        @include media-breakpoint-up(md){
+                            font-size: 1.6rem;
+                        }
+    
+                        input {
+                            font-family: $mediumType;
+                            font-size: 1.4rem;
+                        }
+                    }
+    
+                    .wc-product-table-reset {
+                        @include media-breakpoint-down(sm){
+                            font-size: 1.4rem;
+                            margin-left: 1rem;
+                        }
+
+                        a {
+                            color: $highlight;
+                            transition: all ease 300ms;
+                            font-family: $displayType;
+                            font-size: 1.6rem;
+    
+                            &:hover {
+                                color: $hoverTint;
+                            }
+                        }
+                    }
+                }
+            }
+
+            table {
+                th {
+                    font-family: $displayType;
+                    font-size: 1.6rem;
+                }
+    
+                td {
+                    font-family: $mediumType;
+                    font-size: 1.4rem;
+
+                    .wcsatt-sub-options {
+                        font-size: 1.4rem;
+                    }
+
+                    &.col-name {
+                        a {
+                            font-size: 1.6rem;
+                        }
+                    }
+
+                    &.col-short-description {
+                        p {
+                            font-size: 1.4rem;
+                        }
+                    }
+
+                    a {
+                        color: $darkBg;
+                        text-decoration: underline;
+                    }
+
+                    .qty {
+                        display: none;
+                    }
+                }
+            }
+
+            .wcsatt-options-product-wrapper {
+                label {
+                    letter-spacing: 0;
+                }
+            }
+        }
+    }
+
+    .button {
+        background-color: $highlight !important;
+        box-shadow: 0px 10px 24px #ffffff29;
+        color: #fff !important;
+        border-radius: 4rem;
+        width: 100%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        transition: all ease 300ms;
+        white-space: nowrap;
+        position: relative;
+        text-decoration: none !important;
+        font-family: $mediumType;
+        font-size: 1.6rem;
+        height: 5.4rem !important;
+        @include media-breakpoint-up(md){
+            width: 32rem;
+        }
+        @include media-breakpoint-up(lg){
+            width: 22.292vw;
+            font-size: 1.1vw;
+        }
+        @media(min-width: 1920px){
+            width: 42.8rem;
+            font-size: 2.1rem;
+        }
+
+        &:hover {
+            background-color: $hoverTint !important;
         }
     }
 }

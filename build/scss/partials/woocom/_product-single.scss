@@ -14,13 +14,6 @@
                 display: none;
             }
 
-            .woocommerce-notices-wrapper {
-                .woocommerce-message {
-                    border-top: 0;
-                    display: none;
-                }
-            }
-
             .product {
                 padding: 0 3.6rem;
                 margin: 5rem auto;
@@ -49,23 +42,76 @@
                 .summary {
                     .price {
                         color: $darkBg;
-                        font-family: $displayType;
-                        font-size: 2rem;
+                        font-family: $mediumType;
+                        font-size: 1.6rem;
+
+                        .wcsatt-sub-options {
+                            font-size: 1.6rem;
+                        }
                     }
 
                     h2 {
-                        @extend p.copy;
+                        font-size: 2.4rem;
                         font-family: $displayType;
                         margin-bottom: 0;
+                        @include media-breakpoint-up(lg){
+                            font-size: 2.083vw;
+                        }
+                        @media(min-width: 1920px) {
+                            font-size: 3.9rem;
+                        }
+                    }
+
+                    .p1 {
+                        margin-top: .5rem;
                     }
 
                     form.cart {
                         padding-top: 0;
 
+                        .wcsatt-options-wrapper {
+                            .wcsatt-options-prompt-text {
+                                font-size: 2.4rem;
+                                font-family: $displayType;
+                                margin-bottom: 0;
+                                @include media-breakpoint-up(lg){
+                                    font-size: 2.083vw;
+                                }
+                                @media(min-width: 1920px) {
+                                    font-size: 3.9rem;
+                                }
+                            }
+
+                            .wcsatt-options-product {
+                                padding-left: 0; 
+
+                                .subscription-price.price {
+                                    letter-spacing: 0;
+                                    font-size: 1.4rem;
+                                    @include media-breakpoint-up(md){
+                                        font-size: 1.6rem;
+                                    }
+                                }
+
+                                .one-time-option-details {
+                                    font-family: $mediumType;
+                                    letter-spacing: 0;
+                                }
+                            }
+                        }
+
                         .quantity {
                             display: block;
                             float: none;
-                            margin-bottom: 3rem;
+                            margin: 1.5rem 0 3rem 0;
+                            height: 4rem;
+                            width: 4rem;
+                            
+                            input {
+                                border: none;    
+                                width: 100%;
+                                height: 100%;
+                            }
                         }
 
                         button {

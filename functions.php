@@ -63,6 +63,13 @@ function bones_load_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'bones_load_scripts' );
 
+// Add quantity label before woocom quantity field
+function wp_echo_qty_front_add_cart() {
+ echo '<h2 class="qty">Quantity </h2>'; 
+}
+
+add_action( 'woocommerce_before_add_to_cart_quantity', 'wp_echo_qty_front_add_cart' );
+
 
 //GET BLOG POSTS FOR AJAX
 function getBlogPosts(){

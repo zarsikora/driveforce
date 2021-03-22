@@ -10325,7 +10325,7 @@ p {
   }
 }
 
-p.copy, .hero .inner .text-container p, .rte .text-container .copy h3, .rte .text-container .article-single .post-content .inner .copy ul li h3, .article-single .post-content .inner .copy ul .rte .text-container li h3, .rte .text-container .article-single .post-content .inner .copy ol li h3, .article-single .post-content .inner .copy ol .rte .text-container li h3, .rte .text-container .copy p, .rte .text-container .copy li, .rte .text-container .article-single .post-content .inner .copy ul li li, .article-single .post-content .inner .copy ul .rte .text-container li li, .rte .text-container .article-single .post-content .inner .copy ol li li, .article-single .post-content .inner .copy ol .rte .text-container li li, .card p.card-text, .form-module .copy h3, .form-module .article-single .post-content .inner .copy ul li h3, .article-single .post-content .inner .copy ul .form-module li h3, .form-module .article-single .post-content .inner .copy ol li h3, .article-single .post-content .inner .copy ol .form-module li h3, .article-single .post-content .inner .copy p, .article-single .post-content .inner .copy ul li p, .article-single .post-content .inner .copy ol li p, .article-single .post-content .inner .copy blockquote.wp-block-quote, #content.challenges-page .solution .text-inner p, .single-product #container #primary .product .summary h2,
+p.copy, .hero .inner .text-container p, .rte .text-container .copy h3, .rte .text-container .article-single .post-content .inner .copy ul li h3, .article-single .post-content .inner .copy ul .rte .text-container li h3, .rte .text-container .article-single .post-content .inner .copy ol li h3, .article-single .post-content .inner .copy ol .rte .text-container li h3, .rte .text-container .copy p, .rte .text-container .copy li, .rte .text-container .article-single .post-content .inner .copy ul li li, .article-single .post-content .inner .copy ul .rte .text-container li li, .rte .text-container .article-single .post-content .inner .copy ol li li, .article-single .post-content .inner .copy ol .rte .text-container li li, .card p.card-text, .form-module .copy h3, .form-module .article-single .post-content .inner .copy ul li h3, .article-single .post-content .inner .copy ul .form-module li h3, .form-module .article-single .post-content .inner .copy ol li h3, .article-single .post-content .inner .copy ol .form-module li h3, .article-single .post-content .inner .copy p, .article-single .post-content .inner .copy ul li p, .article-single .post-content .inner .copy ol li p, .article-single .post-content .inner .copy blockquote.wp-block-quote, #content.challenges-page .solution .text-inner p,
 .copy p,
 .article-single .post-content .inner .copy ul li p,
 .article-single .post-content .inner .copy ol li p,
@@ -10342,7 +10342,7 @@ p {
 }
 
 @media (min-width: 992px) {
-  p.copy, .hero .inner .text-container p, .rte .text-container .copy h3, .rte .text-container .article-single .post-content .inner .copy ul li h3, .article-single .post-content .inner .copy ul .rte .text-container li h3, .rte .text-container .article-single .post-content .inner .copy ol li h3, .article-single .post-content .inner .copy ol .rte .text-container li h3, .rte .text-container .copy p, .rte .text-container .copy li, .rte .text-container .article-single .post-content .inner .copy ul li li, .article-single .post-content .inner .copy ul .rte .text-container li li, .rte .text-container .article-single .post-content .inner .copy ol li li, .article-single .post-content .inner .copy ol .rte .text-container li li, .card p.card-text, .form-module .copy h3, .form-module .article-single .post-content .inner .copy ul li h3, .article-single .post-content .inner .copy ul .form-module li h3, .form-module .article-single .post-content .inner .copy ol li h3, .article-single .post-content .inner .copy ol .form-module li h3, .article-single .post-content .inner .copy p, .article-single .post-content .inner .copy ul li p, .article-single .post-content .inner .copy ol li p, .article-single .post-content .inner .copy blockquote.wp-block-quote, #content.challenges-page .solution .text-inner p, .single-product #container #primary .product .summary h2,
+  p.copy, .hero .inner .text-container p, .rte .text-container .copy h3, .rte .text-container .article-single .post-content .inner .copy ul li h3, .article-single .post-content .inner .copy ul .rte .text-container li h3, .rte .text-container .article-single .post-content .inner .copy ol li h3, .article-single .post-content .inner .copy ol .rte .text-container li h3, .rte .text-container .copy p, .rte .text-container .copy li, .rte .text-container .article-single .post-content .inner .copy ul li li, .article-single .post-content .inner .copy ul .rte .text-container li li, .rte .text-container .article-single .post-content .inner .copy ol li li, .article-single .post-content .inner .copy ol .rte .text-container li li, .card p.card-text, .form-module .copy h3, .form-module .article-single .post-content .inner .copy ul li h3, .article-single .post-content .inner .copy ul .form-module li h3, .form-module .article-single .post-content .inner .copy ol li h3, .article-single .post-content .inner .copy ol .form-module li h3, .article-single .post-content .inner .copy p, .article-single .post-content .inner .copy ul li p, .article-single .post-content .inner .copy ol li p, .article-single .post-content .inner .copy blockquote.wp-block-quote, #content.challenges-page .solution .text-inner p,
   .copy p,
   .article-single .post-content .inner .copy ul li p,
   .article-single .post-content .inner .copy ol li p,
@@ -10357,7 +10357,7 @@ p {
 }
 
 @media (min-width: 1920px) {
-  p.copy, .hero .inner .text-container p, .rte .text-container .copy h3, .rte .text-container .article-single .post-content .inner .copy ul li h3, .article-single .post-content .inner .copy ul .rte .text-container li h3, .rte .text-container .article-single .post-content .inner .copy ol li h3, .article-single .post-content .inner .copy ol .rte .text-container li h3, .rte .text-container .copy p, .rte .text-container .copy li, .rte .text-container .article-single .post-content .inner .copy ul li li, .article-single .post-content .inner .copy ul .rte .text-container li li, .rte .text-container .article-single .post-content .inner .copy ol li li, .article-single .post-content .inner .copy ol .rte .text-container li li, .card p.card-text, .form-module .copy h3, .form-module .article-single .post-content .inner .copy ul li h3, .article-single .post-content .inner .copy ul .form-module li h3, .form-module .article-single .post-content .inner .copy ol li h3, .article-single .post-content .inner .copy ol .form-module li h3, .article-single .post-content .inner .copy p, .article-single .post-content .inner .copy ul li p, .article-single .post-content .inner .copy ol li p, .article-single .post-content .inner .copy blockquote.wp-block-quote, #content.challenges-page .solution .text-inner p, .single-product #container #primary .product .summary h2,
+  p.copy, .hero .inner .text-container p, .rte .text-container .copy h3, .rte .text-container .article-single .post-content .inner .copy ul li h3, .article-single .post-content .inner .copy ul .rte .text-container li h3, .rte .text-container .article-single .post-content .inner .copy ol li h3, .article-single .post-content .inner .copy ol .rte .text-container li h3, .rte .text-container .copy p, .rte .text-container .copy li, .rte .text-container .article-single .post-content .inner .copy ul li li, .article-single .post-content .inner .copy ul .rte .text-container li li, .rte .text-container .article-single .post-content .inner .copy ol li li, .article-single .post-content .inner .copy ol .rte .text-container li li, .card p.card-text, .form-module .copy h3, .form-module .article-single .post-content .inner .copy ul li h3, .article-single .post-content .inner .copy ul .form-module li h3, .form-module .article-single .post-content .inner .copy ol li h3, .article-single .post-content .inner .copy ol .form-module li h3, .article-single .post-content .inner .copy p, .article-single .post-content .inner .copy ul li p, .article-single .post-content .inner .copy ol li p, .article-single .post-content .inner .copy blockquote.wp-block-quote, #content.challenges-page .solution .text-inner p,
   .copy p,
   .article-single .post-content .inner .copy ul li p,
   .article-single .post-content .inner .copy ol li p,
@@ -10371,7 +10371,7 @@ p {
   }
 }
 
-p.copy strong, .hero .inner .text-container p strong, .rte .text-container .copy h3 strong, .rte .text-container .article-single .post-content .inner .copy ul li h3 strong, .article-single .post-content .inner .copy ul .rte .text-container li h3 strong, .rte .text-container .article-single .post-content .inner .copy ol li h3 strong, .article-single .post-content .inner .copy ol .rte .text-container li h3 strong, .rte .text-container .copy p strong, .rte .text-container .copy li strong, .rte .text-container .article-single .post-content .inner .copy ul li li strong, .article-single .post-content .inner .copy ul .rte .text-container li li strong, .rte .text-container .article-single .post-content .inner .copy ol li li strong, .article-single .post-content .inner .copy ol .rte .text-container li li strong, .card p.card-text strong, .form-module .copy h3 strong, .form-module .article-single .post-content .inner .copy ul li h3 strong, .article-single .post-content .inner .copy ul .form-module li h3 strong, .form-module .article-single .post-content .inner .copy ol li h3 strong, .article-single .post-content .inner .copy ol .form-module li h3 strong, .article-single .post-content .inner .copy p strong, .article-single .post-content .inner .copy blockquote.wp-block-quote strong, #content.challenges-page .solution .text-inner p strong, .single-product #container #primary .product .summary h2 strong,
+p.copy strong, .hero .inner .text-container p strong, .rte .text-container .copy h3 strong, .rte .text-container .article-single .post-content .inner .copy ul li h3 strong, .article-single .post-content .inner .copy ul .rte .text-container li h3 strong, .rte .text-container .article-single .post-content .inner .copy ol li h3 strong, .article-single .post-content .inner .copy ol .rte .text-container li h3 strong, .rte .text-container .copy p strong, .rte .text-container .copy li strong, .rte .text-container .article-single .post-content .inner .copy ul li li strong, .article-single .post-content .inner .copy ul .rte .text-container li li strong, .rte .text-container .article-single .post-content .inner .copy ol li li strong, .article-single .post-content .inner .copy ol .rte .text-container li li strong, .card p.card-text strong, .form-module .copy h3 strong, .form-module .article-single .post-content .inner .copy ul li h3 strong, .article-single .post-content .inner .copy ul .form-module li h3 strong, .form-module .article-single .post-content .inner .copy ol li h3 strong, .article-single .post-content .inner .copy ol .form-module li h3 strong, .article-single .post-content .inner .copy p strong, .article-single .post-content .inner .copy blockquote.wp-block-quote strong, #content.challenges-page .solution .text-inner p strong,
 .copy p strong,
 .article-single .post-content .inner .copy ul li p strong,
 .article-single .post-content .inner .copy ol li p strong,
@@ -10384,7 +10384,7 @@ p strong {
   font-family: "Sharp Sans Bold";
 }
 
-p.copy i, .hero .inner .text-container p i, .rte .text-container .copy h3 i, .rte .text-container .article-single .post-content .inner .copy ul li h3 i, .article-single .post-content .inner .copy ul .rte .text-container li h3 i, .rte .text-container .article-single .post-content .inner .copy ol li h3 i, .article-single .post-content .inner .copy ol .rte .text-container li h3 i, .rte .text-container .copy p i, .rte .text-container .copy li i, .rte .text-container .article-single .post-content .inner .copy ul li li i, .article-single .post-content .inner .copy ul .rte .text-container li li i, .rte .text-container .article-single .post-content .inner .copy ol li li i, .article-single .post-content .inner .copy ol .rte .text-container li li i, .card p.card-text i, .form-module .copy h3 i, .form-module .article-single .post-content .inner .copy ul li h3 i, .article-single .post-content .inner .copy ul .form-module li h3 i, .form-module .article-single .post-content .inner .copy ol li h3 i, .article-single .post-content .inner .copy ol .form-module li h3 i, .article-single .post-content .inner .copy p i, .article-single .post-content .inner .copy blockquote.wp-block-quote i, #content.challenges-page .solution .text-inner p i, .single-product #container #primary .product .summary h2 i,
+p.copy i, .hero .inner .text-container p i, .rte .text-container .copy h3 i, .rte .text-container .article-single .post-content .inner .copy ul li h3 i, .article-single .post-content .inner .copy ul .rte .text-container li h3 i, .rte .text-container .article-single .post-content .inner .copy ol li h3 i, .article-single .post-content .inner .copy ol .rte .text-container li h3 i, .rte .text-container .copy p i, .rte .text-container .copy li i, .rte .text-container .article-single .post-content .inner .copy ul li li i, .article-single .post-content .inner .copy ul .rte .text-container li li i, .rte .text-container .article-single .post-content .inner .copy ol li li i, .article-single .post-content .inner .copy ol .rte .text-container li li i, .card p.card-text i, .form-module .copy h3 i, .form-module .article-single .post-content .inner .copy ul li h3 i, .article-single .post-content .inner .copy ul .form-module li h3 i, .form-module .article-single .post-content .inner .copy ol li h3 i, .article-single .post-content .inner .copy ol .form-module li h3 i, .article-single .post-content .inner .copy p i, .article-single .post-content .inner .copy blockquote.wp-block-quote i, #content.challenges-page .solution .text-inner p i,
 p.copy em,
 .hero .inner .text-container p em,
 .rte .text-container .copy h3 em,
@@ -10407,7 +10407,6 @@ p.copy em,
 .article-single .post-content .inner .copy p em,
 .article-single .post-content .inner .copy blockquote.wp-block-quote em,
 #content.challenges-page .solution .text-inner p em,
-.single-product #container #primary .product .summary h2 em,
 .copy p i,
 .article-single .post-content .inner .copy ul li p i,
 .article-single .post-content .inner .copy ol li p i,
@@ -11918,7 +11917,7 @@ a.btn:hover, .woocommerce-cart #content .return-to-shop a.button:hover, body.woo
   margin: 2rem 0;
 }
 
-.hero .inner .text-container p.copy p, .hero .inner .text-container p p, .hero .inner .rte .text-container .copy h3 p, .rte .hero .inner .text-container .copy h3 p, .hero .article-single .post-content .inner .copy ul .rte .text-container li h3 p, .article-single .post-content .hero .inner .copy ul .rte .text-container li h3 p, .hero .article-single .post-content .inner .copy ol .rte .text-container li h3 p, .article-single .post-content .hero .inner .copy ol .rte .text-container li h3 p, .hero .inner .rte .text-container .copy p p, .rte .hero .inner .text-container .copy p p, .hero .inner .rte .text-container .copy li p, .rte .hero .inner .text-container .copy li p, .hero .article-single .post-content .inner .copy ul .rte .text-container li li p, .article-single .post-content .hero .inner .copy ul .rte .text-container li li p, .hero .article-single .post-content .inner .copy ol .rte .text-container li li p, .article-single .post-content .hero .inner .copy ol .rte .text-container li li p, .hero .inner .text-container .card p.card-text p, .card .hero .inner .text-container p.card-text p, .hero .inner .text-container .form-module .copy h3 p, .form-module .copy .hero .inner .text-container h3 p, .hero .form-module .article-single .post-content .inner .text-container .copy ul li h3 p, .form-module .article-single .post-content .hero .inner .text-container .copy ul li h3 p, .hero .form-module .article-single .post-content .inner .copy ul li .text-container h3 p, .form-module .article-single .post-content .hero .inner .copy ul li .text-container h3 p, .hero .article-single .post-content .inner .text-container .copy ul .form-module li h3 p, .article-single .post-content .hero .inner .text-container .copy ul .form-module li h3 p, .hero .article-single .post-content .inner .copy ul .form-module li .text-container h3 p, .article-single .post-content .hero .inner .copy ul .form-module li .text-container h3 p, .hero .form-module .article-single .post-content .inner .text-container .copy ol li h3 p, .form-module .article-single .post-content .hero .inner .text-container .copy ol li h3 p, .hero .form-module .article-single .post-content .inner .copy ol li .text-container h3 p, .form-module .article-single .post-content .hero .inner .copy ol li .text-container h3 p, .hero .article-single .post-content .inner .text-container .copy ol .form-module li h3 p, .article-single .post-content .hero .inner .text-container .copy ol .form-module li h3 p, .hero .article-single .post-content .inner .copy ol .form-module li .text-container h3 p, .article-single .post-content .hero .inner .copy ol .form-module li .text-container h3 p, .hero .article-single .post-content .inner .text-container .copy p p, .article-single .post-content .hero .inner .text-container .copy p p, .hero .article-single .post-content .inner .copy .text-container p p, .article-single .post-content .hero .inner .copy .text-container p p, .hero .article-single .post-content .inner .text-container .copy blockquote.wp-block-quote p, .article-single .post-content .hero .inner .text-container .copy blockquote.wp-block-quote p, .hero .article-single .post-content .inner .copy .text-container blockquote.wp-block-quote p, .article-single .post-content .hero .inner .copy .text-container blockquote.wp-block-quote p, .hero .inner .text-container #content.challenges-page .solution .text-inner p p, #content.challenges-page .solution .text-inner .hero .inner .text-container p p, .hero .inner .text-container .single-product #container #primary .product .summary h2 p, .single-product #container #primary .product .summary .hero .inner .text-container h2 p {
+.hero .inner .text-container p.copy p, .hero .inner .text-container p p, .hero .inner .rte .text-container .copy h3 p, .rte .hero .inner .text-container .copy h3 p, .hero .article-single .post-content .inner .copy ul .rte .text-container li h3 p, .article-single .post-content .hero .inner .copy ul .rte .text-container li h3 p, .hero .article-single .post-content .inner .copy ol .rte .text-container li h3 p, .article-single .post-content .hero .inner .copy ol .rte .text-container li h3 p, .hero .inner .rte .text-container .copy p p, .rte .hero .inner .text-container .copy p p, .hero .inner .rte .text-container .copy li p, .rte .hero .inner .text-container .copy li p, .hero .article-single .post-content .inner .copy ul .rte .text-container li li p, .article-single .post-content .hero .inner .copy ul .rte .text-container li li p, .hero .article-single .post-content .inner .copy ol .rte .text-container li li p, .article-single .post-content .hero .inner .copy ol .rte .text-container li li p, .hero .inner .text-container .card p.card-text p, .card .hero .inner .text-container p.card-text p, .hero .inner .text-container .form-module .copy h3 p, .form-module .copy .hero .inner .text-container h3 p, .hero .form-module .article-single .post-content .inner .text-container .copy ul li h3 p, .form-module .article-single .post-content .hero .inner .text-container .copy ul li h3 p, .hero .form-module .article-single .post-content .inner .copy ul li .text-container h3 p, .form-module .article-single .post-content .hero .inner .copy ul li .text-container h3 p, .hero .article-single .post-content .inner .text-container .copy ul .form-module li h3 p, .article-single .post-content .hero .inner .text-container .copy ul .form-module li h3 p, .hero .article-single .post-content .inner .copy ul .form-module li .text-container h3 p, .article-single .post-content .hero .inner .copy ul .form-module li .text-container h3 p, .hero .form-module .article-single .post-content .inner .text-container .copy ol li h3 p, .form-module .article-single .post-content .hero .inner .text-container .copy ol li h3 p, .hero .form-module .article-single .post-content .inner .copy ol li .text-container h3 p, .form-module .article-single .post-content .hero .inner .copy ol li .text-container h3 p, .hero .article-single .post-content .inner .text-container .copy ol .form-module li h3 p, .article-single .post-content .hero .inner .text-container .copy ol .form-module li h3 p, .hero .article-single .post-content .inner .copy ol .form-module li .text-container h3 p, .article-single .post-content .hero .inner .copy ol .form-module li .text-container h3 p, .hero .article-single .post-content .inner .text-container .copy p p, .article-single .post-content .hero .inner .text-container .copy p p, .hero .article-single .post-content .inner .copy .text-container p p, .article-single .post-content .hero .inner .copy .text-container p p, .hero .article-single .post-content .inner .text-container .copy blockquote.wp-block-quote p, .article-single .post-content .hero .inner .text-container .copy blockquote.wp-block-quote p, .hero .article-single .post-content .inner .copy .text-container blockquote.wp-block-quote p, .article-single .post-content .hero .inner .copy .text-container blockquote.wp-block-quote p, .hero .inner .text-container #content.challenges-page .solution .text-inner p p, #content.challenges-page .solution .text-inner .hero .inner .text-container p p {
   opacity: 1;
 }
 
@@ -14169,12 +14168,12 @@ form .btn-wrapper .btn, form .btn-wrapper .woocommerce-cart #content .return-to-
   letter-spacing: .16rem;
 }
 
-.form-module .copy p.copy, .form-module .copy .hero .inner .text-container p, .hero .inner .text-container .form-module .copy p, .form-module .rte .text-container .copy h3, .rte .text-container .form-module .copy h3, .rte .text-container .article-single .post-content .inner .form-module .copy ul li h3, .article-single .post-content .inner .form-module .copy ul .rte .text-container li h3, .rte .text-container .article-single .post-content .inner .form-module .copy ol li h3, .article-single .post-content .inner .form-module .copy ol .rte .text-container li h3, .form-module .rte .text-container .copy p, .rte .text-container .form-module .copy p, .form-module .rte .text-container .copy li, .rte .text-container .form-module .copy li, .form-module .article-single .post-content .inner .rte .text-container .copy ul li li, .article-single .post-content .inner .rte .text-container .copy ul .form-module li li, .form-module .article-single .post-content .inner .rte .text-container .copy ol li li, .article-single .post-content .inner .rte .text-container .copy ol .form-module li li, .rte .text-container .article-single .post-content .inner .form-module .copy ul li li, .form-module .rte .text-container .article-single .post-content .inner .copy ul li li, .rte .text-container .form-module .article-single .post-content .inner .copy ul li li, .rte .text-container .article-single .post-content .inner .copy ul .form-module li li, .article-single .post-content .inner .form-module .copy ul .rte .text-container li li, .form-module .article-single .post-content .inner .copy ul .rte .text-container li li, .article-single .post-content .inner .copy ul .form-module .rte .text-container li li, .article-single .post-content .inner .copy ul .rte .text-container .form-module li li, .rte .text-container .article-single .post-content .inner .form-module .copy ol li li, .form-module .rte .text-container .article-single .post-content .inner .copy ol li li, .rte .text-container .form-module .article-single .post-content .inner .copy ol li li, .rte .text-container .article-single .post-content .inner .copy ol .form-module li li, .article-single .post-content .inner .form-module .copy ol .rte .text-container li li, .form-module .article-single .post-content .inner .copy ol .rte .text-container li li, .article-single .post-content .inner .copy ol .form-module .rte .text-container li li, .article-single .post-content .inner .copy ol .rte .text-container .form-module li li, .form-module .copy .card p.card-text, .card .form-module .copy p.card-text, .form-module .copy h3, .form-module .article-single .post-content .inner .copy ul li h3, .article-single .post-content .inner .copy ul .form-module li h3, .form-module .article-single .post-content .inner .copy ol li h3, .article-single .post-content .inner .copy ol .form-module li h3, .form-module .article-single .post-content .inner .copy p, .article-single .post-content .inner .form-module .copy p, .article-single .post-content .inner .copy ul .form-module li p, .article-single .post-content .inner .copy ol .form-module li p, .form-module .article-single .post-content .inner .copy blockquote.wp-block-quote, .article-single .post-content .inner .form-module .copy blockquote.wp-block-quote, .article-single .post-content .inner .copy ul .form-module li blockquote.wp-block-quote, .article-single .post-content .inner .copy ol .form-module li blockquote.wp-block-quote, .form-module .copy #content.challenges-page .solution .text-inner p, #content.challenges-page .solution .text-inner .form-module .copy p, .article-single .post-content .inner .copy ul .form-module li #content.challenges-page .solution .text-inner p, #content.challenges-page .solution .text-inner .article-single .post-content .inner .copy ul .form-module li p, .article-single .post-content .inner .copy ol .form-module li #content.challenges-page .solution .text-inner p, #content.challenges-page .solution .text-inner .article-single .post-content .inner .copy ol .form-module li p, .form-module .copy .single-product #container #primary .product .summary h2, .single-product #container #primary .product .summary .form-module .copy h2, .article-single .post-content .inner .copy ul .form-module li .single-product #container #primary .product .summary h2, .single-product #container #primary .product .summary .article-single .post-content .inner .copy ul .form-module li h2, .article-single .post-content .inner .copy ol .form-module li .single-product #container #primary .product .summary h2, .single-product #container #primary .product .summary .article-single .post-content .inner .copy ol .form-module li h2 {
+.form-module .copy p.copy, .form-module .copy .hero .inner .text-container p, .hero .inner .text-container .form-module .copy p, .form-module .rte .text-container .copy h3, .rte .text-container .form-module .copy h3, .rte .text-container .article-single .post-content .inner .form-module .copy ul li h3, .article-single .post-content .inner .form-module .copy ul .rte .text-container li h3, .rte .text-container .article-single .post-content .inner .form-module .copy ol li h3, .article-single .post-content .inner .form-module .copy ol .rte .text-container li h3, .form-module .rte .text-container .copy p, .rte .text-container .form-module .copy p, .form-module .rte .text-container .copy li, .rte .text-container .form-module .copy li, .form-module .article-single .post-content .inner .rte .text-container .copy ul li li, .article-single .post-content .inner .rte .text-container .copy ul .form-module li li, .form-module .article-single .post-content .inner .rte .text-container .copy ol li li, .article-single .post-content .inner .rte .text-container .copy ol .form-module li li, .rte .text-container .article-single .post-content .inner .form-module .copy ul li li, .form-module .rte .text-container .article-single .post-content .inner .copy ul li li, .rte .text-container .form-module .article-single .post-content .inner .copy ul li li, .rte .text-container .article-single .post-content .inner .copy ul .form-module li li, .article-single .post-content .inner .form-module .copy ul .rte .text-container li li, .form-module .article-single .post-content .inner .copy ul .rte .text-container li li, .article-single .post-content .inner .copy ul .form-module .rte .text-container li li, .article-single .post-content .inner .copy ul .rte .text-container .form-module li li, .rte .text-container .article-single .post-content .inner .form-module .copy ol li li, .form-module .rte .text-container .article-single .post-content .inner .copy ol li li, .rte .text-container .form-module .article-single .post-content .inner .copy ol li li, .rte .text-container .article-single .post-content .inner .copy ol .form-module li li, .article-single .post-content .inner .form-module .copy ol .rte .text-container li li, .form-module .article-single .post-content .inner .copy ol .rte .text-container li li, .article-single .post-content .inner .copy ol .form-module .rte .text-container li li, .article-single .post-content .inner .copy ol .rte .text-container .form-module li li, .form-module .copy .card p.card-text, .card .form-module .copy p.card-text, .form-module .copy h3, .form-module .article-single .post-content .inner .copy ul li h3, .article-single .post-content .inner .copy ul .form-module li h3, .form-module .article-single .post-content .inner .copy ol li h3, .article-single .post-content .inner .copy ol .form-module li h3, .form-module .article-single .post-content .inner .copy p, .article-single .post-content .inner .form-module .copy p, .article-single .post-content .inner .copy ul .form-module li p, .article-single .post-content .inner .copy ol .form-module li p, .form-module .article-single .post-content .inner .copy blockquote.wp-block-quote, .article-single .post-content .inner .form-module .copy blockquote.wp-block-quote, .article-single .post-content .inner .copy ul .form-module li blockquote.wp-block-quote, .article-single .post-content .inner .copy ol .form-module li blockquote.wp-block-quote, .form-module .copy #content.challenges-page .solution .text-inner p, #content.challenges-page .solution .text-inner .form-module .copy p, .article-single .post-content .inner .copy ul .form-module li #content.challenges-page .solution .text-inner p, #content.challenges-page .solution .text-inner .article-single .post-content .inner .copy ul .form-module li p, .article-single .post-content .inner .copy ol .form-module li #content.challenges-page .solution .text-inner p, #content.challenges-page .solution .text-inner .article-single .post-content .inner .copy ol .form-module li p {
   margin-top: 0;
 }
 
 @media (min-width: 768px) {
-  .form-module .copy p.copy, .form-module .copy .hero .inner .text-container p, .hero .inner .text-container .form-module .copy p, .form-module .rte .text-container .copy h3, .rte .text-container .form-module .copy h3, .rte .text-container .article-single .post-content .inner .form-module .copy ul li h3, .article-single .post-content .inner .form-module .copy ul .rte .text-container li h3, .rte .text-container .article-single .post-content .inner .form-module .copy ol li h3, .article-single .post-content .inner .form-module .copy ol .rte .text-container li h3, .form-module .rte .text-container .copy p, .rte .text-container .form-module .copy p, .form-module .rte .text-container .copy li, .rte .text-container .form-module .copy li, .form-module .article-single .post-content .inner .rte .text-container .copy ul li li, .article-single .post-content .inner .rte .text-container .copy ul .form-module li li, .form-module .article-single .post-content .inner .rte .text-container .copy ol li li, .article-single .post-content .inner .rte .text-container .copy ol .form-module li li, .rte .text-container .article-single .post-content .inner .form-module .copy ul li li, .form-module .rte .text-container .article-single .post-content .inner .copy ul li li, .rte .text-container .form-module .article-single .post-content .inner .copy ul li li, .rte .text-container .article-single .post-content .inner .copy ul .form-module li li, .article-single .post-content .inner .form-module .copy ul .rte .text-container li li, .form-module .article-single .post-content .inner .copy ul .rte .text-container li li, .article-single .post-content .inner .copy ul .form-module .rte .text-container li li, .article-single .post-content .inner .copy ul .rte .text-container .form-module li li, .rte .text-container .article-single .post-content .inner .form-module .copy ol li li, .form-module .rte .text-container .article-single .post-content .inner .copy ol li li, .rte .text-container .form-module .article-single .post-content .inner .copy ol li li, .rte .text-container .article-single .post-content .inner .copy ol .form-module li li, .article-single .post-content .inner .form-module .copy ol .rte .text-container li li, .form-module .article-single .post-content .inner .copy ol .rte .text-container li li, .article-single .post-content .inner .copy ol .form-module .rte .text-container li li, .article-single .post-content .inner .copy ol .rte .text-container .form-module li li, .form-module .copy .card p.card-text, .card .form-module .copy p.card-text, .form-module .copy h3, .form-module .article-single .post-content .inner .copy ul li h3, .article-single .post-content .inner .copy ul .form-module li h3, .form-module .article-single .post-content .inner .copy ol li h3, .article-single .post-content .inner .copy ol .form-module li h3, .form-module .article-single .post-content .inner .copy p, .article-single .post-content .inner .form-module .copy p, .article-single .post-content .inner .copy ul .form-module li p, .article-single .post-content .inner .copy ol .form-module li p, .form-module .article-single .post-content .inner .copy blockquote.wp-block-quote, .article-single .post-content .inner .form-module .copy blockquote.wp-block-quote, .article-single .post-content .inner .copy ul .form-module li blockquote.wp-block-quote, .article-single .post-content .inner .copy ol .form-module li blockquote.wp-block-quote, .form-module .copy #content.challenges-page .solution .text-inner p, #content.challenges-page .solution .text-inner .form-module .copy p, .article-single .post-content .inner .copy ul .form-module li #content.challenges-page .solution .text-inner p, #content.challenges-page .solution .text-inner .article-single .post-content .inner .copy ul .form-module li p, .article-single .post-content .inner .copy ol .form-module li #content.challenges-page .solution .text-inner p, #content.challenges-page .solution .text-inner .article-single .post-content .inner .copy ol .form-module li p, .form-module .copy .single-product #container #primary .product .summary h2, .single-product #container #primary .product .summary .form-module .copy h2, .article-single .post-content .inner .copy ul .form-module li .single-product #container #primary .product .summary h2, .single-product #container #primary .product .summary .article-single .post-content .inner .copy ul .form-module li h2, .article-single .post-content .inner .copy ol .form-module li .single-product #container #primary .product .summary h2, .single-product #container #primary .product .summary .article-single .post-content .inner .copy ol .form-module li h2 {
+  .form-module .copy p.copy, .form-module .copy .hero .inner .text-container p, .hero .inner .text-container .form-module .copy p, .form-module .rte .text-container .copy h3, .rte .text-container .form-module .copy h3, .rte .text-container .article-single .post-content .inner .form-module .copy ul li h3, .article-single .post-content .inner .form-module .copy ul .rte .text-container li h3, .rte .text-container .article-single .post-content .inner .form-module .copy ol li h3, .article-single .post-content .inner .form-module .copy ol .rte .text-container li h3, .form-module .rte .text-container .copy p, .rte .text-container .form-module .copy p, .form-module .rte .text-container .copy li, .rte .text-container .form-module .copy li, .form-module .article-single .post-content .inner .rte .text-container .copy ul li li, .article-single .post-content .inner .rte .text-container .copy ul .form-module li li, .form-module .article-single .post-content .inner .rte .text-container .copy ol li li, .article-single .post-content .inner .rte .text-container .copy ol .form-module li li, .rte .text-container .article-single .post-content .inner .form-module .copy ul li li, .form-module .rte .text-container .article-single .post-content .inner .copy ul li li, .rte .text-container .form-module .article-single .post-content .inner .copy ul li li, .rte .text-container .article-single .post-content .inner .copy ul .form-module li li, .article-single .post-content .inner .form-module .copy ul .rte .text-container li li, .form-module .article-single .post-content .inner .copy ul .rte .text-container li li, .article-single .post-content .inner .copy ul .form-module .rte .text-container li li, .article-single .post-content .inner .copy ul .rte .text-container .form-module li li, .rte .text-container .article-single .post-content .inner .form-module .copy ol li li, .form-module .rte .text-container .article-single .post-content .inner .copy ol li li, .rte .text-container .form-module .article-single .post-content .inner .copy ol li li, .rte .text-container .article-single .post-content .inner .copy ol .form-module li li, .article-single .post-content .inner .form-module .copy ol .rte .text-container li li, .form-module .article-single .post-content .inner .copy ol .rte .text-container li li, .article-single .post-content .inner .copy ol .form-module .rte .text-container li li, .article-single .post-content .inner .copy ol .rte .text-container .form-module li li, .form-module .copy .card p.card-text, .card .form-module .copy p.card-text, .form-module .copy h3, .form-module .article-single .post-content .inner .copy ul li h3, .article-single .post-content .inner .copy ul .form-module li h3, .form-module .article-single .post-content .inner .copy ol li h3, .article-single .post-content .inner .copy ol .form-module li h3, .form-module .article-single .post-content .inner .copy p, .article-single .post-content .inner .form-module .copy p, .article-single .post-content .inner .copy ul .form-module li p, .article-single .post-content .inner .copy ol .form-module li p, .form-module .article-single .post-content .inner .copy blockquote.wp-block-quote, .article-single .post-content .inner .form-module .copy blockquote.wp-block-quote, .article-single .post-content .inner .copy ul .form-module li blockquote.wp-block-quote, .article-single .post-content .inner .copy ol .form-module li blockquote.wp-block-quote, .form-module .copy #content.challenges-page .solution .text-inner p, #content.challenges-page .solution .text-inner .form-module .copy p, .article-single .post-content .inner .copy ul .form-module li #content.challenges-page .solution .text-inner p, #content.challenges-page .solution .text-inner .article-single .post-content .inner .copy ul .form-module li p, .article-single .post-content .inner .copy ol .form-module li #content.challenges-page .solution .text-inner p, #content.challenges-page .solution .text-inner .article-single .post-content .inner .copy ol .form-module li p {
     margin: 0;
   }
 }
@@ -14854,7 +14853,7 @@ form .btn-wrapper .btn, form .btn-wrapper .woocommerce-cart #content .return-to-
   font-size: 5rem;
 }
 
-#content.template-404 .hero.tertiary .text-container .row p.copy, #content.template-404 .hero.tertiary .inner .text-container .row p, #content.template-404 .hero.tertiary .rte .text-container .row .copy h3, .rte #content.template-404 .hero.tertiary .text-container .row .copy h3, #content.template-404 .hero.tertiary .rte .text-container .copy .row h3, .rte #content.template-404 .hero.tertiary .text-container .copy .row h3, #content.template-404 .hero.tertiary .article-single .post-content .inner .copy ul .rte .text-container .row li h3, .article-single .post-content .inner .copy ul .rte #content.template-404 .hero.tertiary .text-container .row li h3, #content.template-404 .hero.tertiary .article-single .post-content .inner .copy ul .rte .text-container li .row h3, .article-single .post-content .inner .copy ul .rte #content.template-404 .hero.tertiary .text-container li .row h3, #content.template-404 .hero.tertiary .article-single .post-content .inner .copy ol .rte .text-container .row li h3, .article-single .post-content .inner .copy ol .rte #content.template-404 .hero.tertiary .text-container .row li h3, #content.template-404 .hero.tertiary .article-single .post-content .inner .copy ol .rte .text-container li .row h3, .article-single .post-content .inner .copy ol .rte #content.template-404 .hero.tertiary .text-container li .row h3, #content.template-404 .hero.tertiary .rte .text-container .row .copy p, .rte #content.template-404 .hero.tertiary .text-container .row .copy p, #content.template-404 .hero.tertiary .rte .text-container .copy .row p, .rte #content.template-404 .hero.tertiary .text-container .copy .row p, #content.template-404 .hero.tertiary .rte .text-container .row .copy li, .rte #content.template-404 .hero.tertiary .text-container .row .copy li, #content.template-404 .hero.tertiary .rte .text-container .copy .row li, .rte #content.template-404 .hero.tertiary .text-container .copy .row li, #content.template-404 .hero.tertiary .article-single .post-content .inner .copy ul .rte .text-container .row li li, .article-single .post-content .inner .copy ul .rte #content.template-404 .hero.tertiary .text-container .row li li, #content.template-404 .hero.tertiary .article-single .post-content .inner .copy ul .rte .text-container li .row li, .article-single .post-content .inner .copy ul .rte #content.template-404 .hero.tertiary .text-container li .row li, #content.template-404 .hero.tertiary .article-single .post-content .inner .copy ol .rte .text-container .row li li, .article-single .post-content .inner .copy ol .rte #content.template-404 .hero.tertiary .text-container .row li li, #content.template-404 .hero.tertiary .article-single .post-content .inner .copy ol .rte .text-container li .row li, .article-single .post-content .inner .copy ol .rte #content.template-404 .hero.tertiary .text-container li .row li, #content.template-404 .hero.tertiary .text-container .row .card p.card-text, .card #content.template-404 .hero.tertiary .text-container .row p.card-text, #content.template-404 .hero.tertiary .text-container .row .form-module .copy h3, .form-module .copy #content.template-404 .hero.tertiary .text-container .row h3, #content.template-404 .hero.tertiary .text-container .row .article-single .post-content .inner .copy ul .form-module li h3, .article-single .post-content .inner .copy ul .form-module li #content.template-404 .hero.tertiary .text-container .row h3, #content.template-404 .hero.tertiary .text-container .row .article-single .post-content .inner .copy ol .form-module li h3, .article-single .post-content .inner .copy ol .form-module li #content.template-404 .hero.tertiary .text-container .row h3, #content.template-404 .hero.tertiary .text-container .row .article-single .post-content .inner .copy p, .article-single .post-content .inner .copy #content.template-404 .hero.tertiary .text-container .row p, #content.template-404 .hero.tertiary .text-container .row .article-single .post-content .inner .copy blockquote.wp-block-quote, .article-single .post-content .inner .copy #content.template-404 .hero.tertiary .text-container .row blockquote.wp-block-quote, #content.template-404 .hero.tertiary .text-container .row #content.challenges-page .solution .text-inner p, #content.challenges-page .solution .text-inner #content.template-404 .hero.tertiary .text-container .row p, #content.template-404 .hero.tertiary .text-container .row .single-product #container #primary .product .summary h2, .single-product #container #primary .product .summary #content.template-404 .hero.tertiary .text-container .row h2 {
+#content.template-404 .hero.tertiary .text-container .row p.copy, #content.template-404 .hero.tertiary .inner .text-container .row p, #content.template-404 .hero.tertiary .rte .text-container .row .copy h3, .rte #content.template-404 .hero.tertiary .text-container .row .copy h3, #content.template-404 .hero.tertiary .rte .text-container .copy .row h3, .rte #content.template-404 .hero.tertiary .text-container .copy .row h3, #content.template-404 .hero.tertiary .article-single .post-content .inner .copy ul .rte .text-container .row li h3, .article-single .post-content .inner .copy ul .rte #content.template-404 .hero.tertiary .text-container .row li h3, #content.template-404 .hero.tertiary .article-single .post-content .inner .copy ul .rte .text-container li .row h3, .article-single .post-content .inner .copy ul .rte #content.template-404 .hero.tertiary .text-container li .row h3, #content.template-404 .hero.tertiary .article-single .post-content .inner .copy ol .rte .text-container .row li h3, .article-single .post-content .inner .copy ol .rte #content.template-404 .hero.tertiary .text-container .row li h3, #content.template-404 .hero.tertiary .article-single .post-content .inner .copy ol .rte .text-container li .row h3, .article-single .post-content .inner .copy ol .rte #content.template-404 .hero.tertiary .text-container li .row h3, #content.template-404 .hero.tertiary .rte .text-container .row .copy p, .rte #content.template-404 .hero.tertiary .text-container .row .copy p, #content.template-404 .hero.tertiary .rte .text-container .copy .row p, .rte #content.template-404 .hero.tertiary .text-container .copy .row p, #content.template-404 .hero.tertiary .rte .text-container .row .copy li, .rte #content.template-404 .hero.tertiary .text-container .row .copy li, #content.template-404 .hero.tertiary .rte .text-container .copy .row li, .rte #content.template-404 .hero.tertiary .text-container .copy .row li, #content.template-404 .hero.tertiary .article-single .post-content .inner .copy ul .rte .text-container .row li li, .article-single .post-content .inner .copy ul .rte #content.template-404 .hero.tertiary .text-container .row li li, #content.template-404 .hero.tertiary .article-single .post-content .inner .copy ul .rte .text-container li .row li, .article-single .post-content .inner .copy ul .rte #content.template-404 .hero.tertiary .text-container li .row li, #content.template-404 .hero.tertiary .article-single .post-content .inner .copy ol .rte .text-container .row li li, .article-single .post-content .inner .copy ol .rte #content.template-404 .hero.tertiary .text-container .row li li, #content.template-404 .hero.tertiary .article-single .post-content .inner .copy ol .rte .text-container li .row li, .article-single .post-content .inner .copy ol .rte #content.template-404 .hero.tertiary .text-container li .row li, #content.template-404 .hero.tertiary .text-container .row .card p.card-text, .card #content.template-404 .hero.tertiary .text-container .row p.card-text, #content.template-404 .hero.tertiary .text-container .row .form-module .copy h3, .form-module .copy #content.template-404 .hero.tertiary .text-container .row h3, #content.template-404 .hero.tertiary .text-container .row .article-single .post-content .inner .copy ul .form-module li h3, .article-single .post-content .inner .copy ul .form-module li #content.template-404 .hero.tertiary .text-container .row h3, #content.template-404 .hero.tertiary .text-container .row .article-single .post-content .inner .copy ol .form-module li h3, .article-single .post-content .inner .copy ol .form-module li #content.template-404 .hero.tertiary .text-container .row h3, #content.template-404 .hero.tertiary .text-container .row .article-single .post-content .inner .copy p, .article-single .post-content .inner .copy #content.template-404 .hero.tertiary .text-container .row p, #content.template-404 .hero.tertiary .text-container .row .article-single .post-content .inner .copy blockquote.wp-block-quote, .article-single .post-content .inner .copy #content.template-404 .hero.tertiary .text-container .row blockquote.wp-block-quote, #content.template-404 .hero.tertiary .text-container .row #content.challenges-page .solution .text-inner p, #content.challenges-page .solution .text-inner #content.template-404 .hero.tertiary .text-container .row p {
   text-align: center;
   max-width: auto;
 }
@@ -15095,6 +15094,66 @@ form .btn-wrapper .btn, form .btn-wrapper .woocommerce-cart #content .return-to-
   }
 }
 
+body.woocommerce-page .woocommerce-message,
+body.woocommerce-page .woocommerce-info {
+  max-width: 80%;
+  margin: 3rem auto;
+  padding: 2rem 3rem;
+  background-color: #fff;
+  border: 2px solid #DB4343;
+  color: #081D1A;
+  font-family: "Sharp Sans Medium";
+  text-align: center;
+  font-size: 1.4rem;
+  letter-spacing: .21rem;
+}
+
+body.woocommerce-page .woocommerce-message:before,
+body.woocommerce-page .woocommerce-info:before {
+  display: none;
+}
+
+body.woocommerce-page .woocommerce-message .button,
+body.woocommerce-page .woocommerce-info .button {
+  background: none;
+  color: #DB4343;
+  text-decoration: underline;
+  font-family: "Sharp Sans Display Bold";
+  padding: 0;
+  font-size: 1.6rem;
+  transition: all ease 300ms;
+}
+
+@media (max-width: 767.98px) {
+  body.woocommerce-page .woocommerce-message .button,
+  body.woocommerce-page .woocommerce-info .button {
+    display: block;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+}
+
+body.woocommerce-page .woocommerce-message .button:hover,
+body.woocommerce-page .woocommerce-info .button:hover {
+  color: #9A1D1D;
+}
+
+body.woocommerce-page .woocommerce-message .button:focus, body.woocommerce-page .woocommerce-message .button:active,
+body.woocommerce-page .woocommerce-info .button:focus,
+body.woocommerce-page .woocommerce-info .button:active {
+  outline: none;
+}
+
+body.woocommerce-page form label {
+  font-size: 1.4rem;
+}
+
+@media (min-width: 768px) {
+  body.woocommerce-page form label {
+    font-size: 1.6rem;
+  }
+}
+
 .post-type-archive-product.woocommerce-page #sidebar {
   display: none;
 }
@@ -15142,27 +15201,7 @@ form .btn-wrapper .btn, form .btn-wrapper .woocommerce-cart #content .return-to-
 }
 
 .post-type-archive-product.woocommerce-page #primary .products {
-  margin: 5rem auto;
-  padding: 0 3.6rem;
-}
-
-@media (min-width: 992px) {
-  .post-type-archive-product.woocommerce-page #primary .products {
-    max-width: 80%;
-    margin: 6.5rem auto;
-  }
-}
-
-@media (min-width: 1440px) {
-  .post-type-archive-product.woocommerce-page #primary .products {
-    margin: 4.5vw auto;
-  }
-}
-
-@media (min-width: 1920px) {
-  .post-type-archive-product.woocommerce-page #primary .products {
-    margin: 8.5rem auto;
-  }
+  margin: 0;
 }
 
 .post-type-archive-product.woocommerce-page #primary .products .product {
@@ -15224,44 +15263,6 @@ form .btn-wrapper .btn, form .btn-wrapper .woocommerce-cart #content .return-to-
   }
 }
 
-.post-type-archive-product.woocommerce-page #primary .products .product .button {
-  background: #DB4343;
-  box-shadow: 0px 10px 24px #ffffff29;
-  color: #fff !important;
-  padding: 2.7rem 3.3rem;
-  border-radius: 4rem;
-  width: 100%;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  transition: all ease 300ms;
-  white-space: nowrap;
-  position: relative;
-  text-decoration: none !important;
-  font-family: "Sharp Sans Medium";
-  font-size: 1.6rem;
-}
-
-@media (min-width: 768px) {
-  .post-type-archive-product.woocommerce-page #primary .products .product .button {
-    width: 32rem;
-  }
-}
-
-@media (min-width: 992px) {
-  .post-type-archive-product.woocommerce-page #primary .products .product .button {
-    width: 22.292vw;
-    font-size: 1.1vw;
-  }
-}
-
-@media (min-width: 1920px) {
-  .post-type-archive-product.woocommerce-page #primary .products .product .button {
-    width: 42.8rem;
-    font-size: 2.1rem;
-  }
-}
-
 .post-type-archive-product.woocommerce-page #primary .products .product .added_to_cart.wc-forward {
   display: block;
   font-family: "Sharp Sans Display Bold";
@@ -15283,6 +15284,152 @@ form .btn-wrapper .btn, form .btn-wrapper .woocommerce-cart #content .return-to-
   background: #9A1D1D;
 }
 
+.post-type-archive-product.woocommerce-page #primary .dataTables_wrapper {
+  margin: 0 auto 5rem auto;
+  padding: 0 3.6rem;
+  margin: 0;
+}
+
+@media (min-width: 992px) {
+  .post-type-archive-product.woocommerce-page #primary .dataTables_wrapper {
+    max-width: 80%;
+    padding: 0;
+    margin: 0 auto 6.5rem auto;
+  }
+}
+
+@media (min-width: 1440px) {
+  .post-type-archive-product.woocommerce-page #primary .dataTables_wrapper {
+    margin: 0 auto 4.5vw auto;
+  }
+}
+
+@media (min-width: 1920px) {
+  .post-type-archive-product.woocommerce-page #primary .dataTables_wrapper {
+    margin: 0 auto 8.5rem auto;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .post-type-archive-product.woocommerce-page #primary .dataTables_wrapper .wc-product-table-controls .dataTables_filter {
+    text-align: left;
+    width: 100%;
+    font-size: 1.4rem;
+  }
+}
+
+.post-type-archive-product.woocommerce-page #primary .dataTables_wrapper .wc-product-table-controls .dataTables_filter label {
+  font-family: "Sharp Sans Display Bold";
+  font-size: 1.4rem;
+  color: #081D1A;
+}
+
+@media (min-width: 768px) {
+  .post-type-archive-product.woocommerce-page #primary .dataTables_wrapper .wc-product-table-controls .dataTables_filter label {
+    font-size: 1.6rem;
+  }
+}
+
+.post-type-archive-product.woocommerce-page #primary .dataTables_wrapper .wc-product-table-controls .dataTables_filter label input {
+  font-family: "Sharp Sans Medium";
+  font-size: 1.4rem;
+}
+
+@media (max-width: 767.98px) {
+  .post-type-archive-product.woocommerce-page #primary .dataTables_wrapper .wc-product-table-controls .dataTables_filter .wc-product-table-reset {
+    font-size: 1.4rem;
+    margin-left: 1rem;
+  }
+}
+
+.post-type-archive-product.woocommerce-page #primary .dataTables_wrapper .wc-product-table-controls .dataTables_filter .wc-product-table-reset a {
+  color: #DB4343;
+  transition: all ease 300ms;
+  font-family: "Sharp Sans Display Bold";
+  font-size: 1.6rem;
+}
+
+.post-type-archive-product.woocommerce-page #primary .dataTables_wrapper .wc-product-table-controls .dataTables_filter .wc-product-table-reset a:hover {
+  color: #9A1D1D;
+}
+
+.post-type-archive-product.woocommerce-page #primary .dataTables_wrapper table th {
+  font-family: "Sharp Sans Display Bold";
+  font-size: 1.6rem;
+}
+
+.post-type-archive-product.woocommerce-page #primary .dataTables_wrapper table td {
+  font-family: "Sharp Sans Medium";
+  font-size: 1.4rem;
+}
+
+.post-type-archive-product.woocommerce-page #primary .dataTables_wrapper table td .wcsatt-sub-options {
+  font-size: 1.4rem;
+}
+
+.post-type-archive-product.woocommerce-page #primary .dataTables_wrapper table td.col-name a {
+  font-size: 1.6rem;
+}
+
+.post-type-archive-product.woocommerce-page #primary .dataTables_wrapper table td.col-short-description p {
+  font-size: 1.4rem;
+}
+
+.post-type-archive-product.woocommerce-page #primary .dataTables_wrapper table td a {
+  color: #081D1A;
+  text-decoration: underline;
+}
+
+.post-type-archive-product.woocommerce-page #primary .dataTables_wrapper table td .qty {
+  display: none;
+}
+
+.post-type-archive-product.woocommerce-page #primary .dataTables_wrapper .wcsatt-options-product-wrapper label {
+  letter-spacing: 0;
+}
+
+.post-type-archive-product.woocommerce-page .button {
+  background-color: #DB4343 !important;
+  box-shadow: 0px 10px 24px #ffffff29;
+  color: #fff !important;
+  border-radius: 4rem;
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all ease 300ms;
+  white-space: nowrap;
+  position: relative;
+  text-decoration: none !important;
+  font-family: "Sharp Sans Medium";
+  font-size: 1.6rem;
+  height: 5.4rem !important;
+}
+
+@media (min-width: 768px) {
+  .post-type-archive-product.woocommerce-page .button {
+    width: 32rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .post-type-archive-product.woocommerce-page .button {
+    width: 22.292vw;
+    font-size: 1.1vw;
+  }
+}
+
+@media (min-width: 1920px) {
+  .post-type-archive-product.woocommerce-page .button {
+    width: 42.8rem;
+    font-size: 2.1rem;
+  }
+}
+
+.post-type-archive-product.woocommerce-page .button:hover {
+  background-color: #9A1D1D !important;
+}
+
 .single-product #container #sidebar {
   display: none;
 }
@@ -15298,11 +15445,6 @@ form .btn-wrapper .btn, form .btn-wrapper .woocommerce-cart #content .return-to-
 }
 
 .single-product #container #primary .woocommerce-breadcrumb {
-  display: none;
-}
-
-.single-product #container #primary .woocommerce-notices-wrapper .woocommerce-message {
-  border-top: 0;
   display: none;
 }
 
@@ -15343,23 +15485,90 @@ form .btn-wrapper .btn, form .btn-wrapper .woocommerce-cart #content .return-to-
 
 .single-product #container #primary .product .summary .price {
   color: #081D1A;
-  font-family: "Sharp Sans Display Bold";
-  font-size: 2rem;
+  font-family: "Sharp Sans Medium";
+  font-size: 1.6rem;
+}
+
+.single-product #container #primary .product .summary .price .wcsatt-sub-options {
+  font-size: 1.6rem;
 }
 
 .single-product #container #primary .product .summary h2 {
+  font-size: 2.4rem;
   font-family: "Sharp Sans Display Bold";
   margin-bottom: 0;
+}
+
+@media (min-width: 992px) {
+  .single-product #container #primary .product .summary h2 {
+    font-size: 2.083vw;
+  }
+}
+
+@media (min-width: 1920px) {
+  .single-product #container #primary .product .summary h2 {
+    font-size: 3.9rem;
+  }
+}
+
+.single-product #container #primary .product .summary .p1 {
+  margin-top: .5rem;
 }
 
 .single-product #container #primary .product .summary form.cart {
   padding-top: 0;
 }
 
+.single-product #container #primary .product .summary form.cart .wcsatt-options-wrapper .wcsatt-options-prompt-text {
+  font-size: 2.4rem;
+  font-family: "Sharp Sans Display Bold";
+  margin-bottom: 0;
+}
+
+@media (min-width: 992px) {
+  .single-product #container #primary .product .summary form.cart .wcsatt-options-wrapper .wcsatt-options-prompt-text {
+    font-size: 2.083vw;
+  }
+}
+
+@media (min-width: 1920px) {
+  .single-product #container #primary .product .summary form.cart .wcsatt-options-wrapper .wcsatt-options-prompt-text {
+    font-size: 3.9rem;
+  }
+}
+
+.single-product #container #primary .product .summary form.cart .wcsatt-options-wrapper .wcsatt-options-product {
+  padding-left: 0;
+}
+
+.single-product #container #primary .product .summary form.cart .wcsatt-options-wrapper .wcsatt-options-product .subscription-price.price {
+  letter-spacing: 0;
+  font-size: 1.4rem;
+}
+
+@media (min-width: 768px) {
+  .single-product #container #primary .product .summary form.cart .wcsatt-options-wrapper .wcsatt-options-product .subscription-price.price {
+    font-size: 1.6rem;
+  }
+}
+
+.single-product #container #primary .product .summary form.cart .wcsatt-options-wrapper .wcsatt-options-product .one-time-option-details {
+  font-family: "Sharp Sans Medium";
+  letter-spacing: 0;
+}
+
 .single-product #container #primary .product .summary form.cart .quantity {
   display: block;
   float: none;
-  margin-bottom: 3rem;
+  margin: 1.5rem 0 3rem 0;
+  height: 4rem;
+  width: 4rem;
+}
+
+.single-product #container #primary .product .summary form.cart .quantity input {
+  border: none;
+  width: 100%;
+  height: 100%;
 }
 
 .single-product #container #primary .product .summary form.cart button {
@@ -15423,11 +15632,6 @@ form .btn-wrapper .btn, form .btn-wrapper .woocommerce-cart #content .return-to-
   .woocommerce-cart #content {
     min-height: calc(100vh - 24.5rem);
   }
-}
-
-.woocommerce-cart #content .woocommerce-notices-wrapper .woocommerce-message {
-  border-top: 0;
-  display: none;
 }
 
 .woocommerce-cart #content .cart-empty.woocommerce-info {
@@ -15502,6 +15706,14 @@ form .btn-wrapper .btn, form .btn-wrapper .woocommerce-cart #content .return-to-
   }
 }
 
+.woocommerce-cart #content .woocommerce-cart-form .wcsatt-options {
+  padding-left: 0;
+}
+
+.woocommerce-cart #content .woocommerce-cart-form .wcsatt-options label {
+  letter-spacing: 0;
+}
+
 .woocommerce-cart #content .woocommerce-cart-form .shop_table {
   background-color: #fff;
 }
@@ -15523,11 +15735,13 @@ form .btn-wrapper .btn, form .btn-wrapper .woocommerce-cart #content .return-to-
 
 .woocommerce-cart #content .woocommerce-cart-form .shop_table .coupon input#coupon_code {
   width: 100%;
+  margin-bottom: 1rem;
 }
 
 @media (min-width: 768px) {
   .woocommerce-cart #content .woocommerce-cart-form .shop_table .coupon input#coupon_code {
     width: auto;
+    margin-bottom: 0;
   }
 }
 
@@ -15540,10 +15754,17 @@ form .btn-wrapper .btn, form .btn-wrapper .woocommerce-cart #content .return-to-
 
 .woocommerce-cart #content .woocommerce-cart-form .shop_table .button {
   height: 3.4rem;
+  padding: 0 3.3rem;
 }
 
 .woocommerce-cart #content .cart_totals {
   padding: 0 3.6rem;
+}
+
+@media (min-width: 992px) {
+  .woocommerce-cart #content .cart_totals {
+    margin-right: calc(10% - 3.6rem);
+  }
 }
 
 .woocommerce-cart #content .cart_totals table {
@@ -15560,11 +15781,19 @@ form .btn-wrapper .btn, form .btn-wrapper .woocommerce-cart #content .return-to-
   font-size: 1.4rem;
 }
 
+.woocommerce-cart #content a {
+  color: #DB4343;
+  font-family: "Sharp Sans Display Bold";
+  transition: all ease 300ms;
+}
+
 .woocommerce-cart #content .button {
   background-color: #DB4343;
   transition: all ease 300ms;
   color: #fff;
   font-family: "Sharp Sans Medium";
+  padding: 2.7rem 3.3rem;
+  border-radius: 4rem;
 }
 
 .woocommerce-cart #content .button:hover {
@@ -15641,32 +15870,6 @@ body.woocommerce-account #content .woocommerce nav ul li a:hover {
   }
 }
 
-body.woocommerce-account #content .woocommerce .woocommerce-MyAccount-content .woocommerce-message,
-body.woocommerce-account #content .woocommerce .woocommerce-MyAccount-content .woocommerce-info {
-  border-top: none;
-  background-color: #081D1A;
-  color: #F9F1E7;
-  font-family: "Sharp Sans Medium";
-  text-align: center;
-  font-size: 1.4rem;
-  letter-spacing: .21rem;
-}
-
-body.woocommerce-account #content .woocommerce .woocommerce-MyAccount-content .woocommerce-message:before,
-body.woocommerce-account #content .woocommerce .woocommerce-MyAccount-content .woocommerce-info:before {
-  display: none;
-}
-
-body.woocommerce-account #content .woocommerce .woocommerce-MyAccount-content .woocommerce-message .button,
-body.woocommerce-account #content .woocommerce .woocommerce-MyAccount-content .woocommerce-info .button {
-  background: none;
-  color: #F9F1E7;
-  text-decoration: underline;
-  font-family: "Sharp Sans Display Bold";
-  padding: 0;
-  font-size: 1.6rem;
-}
-
 body.woocommerce-account #content .woocommerce .woocommerce-MyAccount-content p:first-of-type {
   margin-top: 0;
 }
@@ -15679,6 +15882,28 @@ body.woocommerce-account #content .woocommerce .woocommerce-MyAccount-content p 
 
 body.woocommerce-account #content .woocommerce .woocommerce-MyAccount-content p a:hover {
   color: #DB4343;
+}
+
+body.woocommerce-account #content .woocommerce .woocommerce-MyAccount-content p a.button {
+  color: #DB4343;
+  transition: all ease 300ms;
+}
+
+body.woocommerce-account #content .woocommerce .woocommerce-MyAccount-content p a.button:hover {
+  color: #9A1D1D;
+}
+
+body.woocommerce-account #content .woocommerce .woocommerce-MyAccount-content .woocommerce_account_subscriptions .no_subscriptions {
+  max-width: 100%;
+  width: 100%;
+}
+
+@media (min-width: 992px) {
+  body.woocommerce-account #content .woocommerce .woocommerce-MyAccount-content .woocommerce_account_subscriptions .no_subscriptions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
 body.woocommerce-account #content .woocommerce .woocommerce-MyAccount-content .woocommerce-Addresses .col-1,
@@ -16058,52 +16283,90 @@ body.woocommerce-edit-account .woocommerce-EditAccountForm .button:hover {
 
 .woocommerce-checkout #container .woocommerce form.checkout {
   padding: 0 3.6rem;
-  margin: 10rem auto;
+  margin: 12rem auto;
 }
 
 @media (min-width: 992px) {
   .woocommerce-checkout #container .woocommerce form.checkout {
     max-width: 80%;
-    margin: 13rem auto;
+    margin: 14.5rem auto;
     padding: 0;
   }
 }
 
 @media (min-width: 1440px) {
   .woocommerce-checkout #container .woocommerce form.checkout {
-    margin: 9vw auto;
+    margin: 11vw auto;
   }
 }
 
 @media (min-width: 1920px) {
   .woocommerce-checkout #container .woocommerce form.checkout {
-    margin: 17rem auto;
+    margin: 20rem auto;
   }
 }
 
-.woocommerce-checkout #container .woocommerce form.checkout #customer_details {
-  display: flex;
+@media (min-width: 768px) {
+  .woocommerce-checkout #container .woocommerce form.checkout #customer_details {
+    display: flex;
+  }
 }
 
 .woocommerce-checkout #container .woocommerce form.checkout #customer_details .col-1,
 .woocommerce-checkout #container .woocommerce form.checkout #customer_details .col-2 {
-  width: 50%;
-  max-width: 50%;
-  flex: 0 0 50%;
+  width: 100%;
+  max-width: 100%;
+  flex: 0 0 100%;
 }
 
-.woocommerce-checkout #container .woocommerce form.checkout #customer_details .woocommerce-billing-fields .form-row {
+@media (max-width: 767.98px) {
+  .woocommerce-checkout #container .woocommerce form.checkout #customer_details .col-1,
+  .woocommerce-checkout #container .woocommerce form.checkout #customer_details .col-2 {
+    padding: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .woocommerce-checkout #container .woocommerce form.checkout #customer_details .col-1,
+  .woocommerce-checkout #container .woocommerce form.checkout #customer_details .col-2 {
+    width: 50%;
+    max-width: 50%;
+    flex: 0 0 50%;
+  }
+}
+
+@media (min-width: 992px) {
+  .woocommerce-checkout #container .woocommerce form.checkout #customer_details .col-1 {
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .woocommerce-checkout #container .woocommerce form.checkout #customer_details .col-2 {
+    margin-top: 2rem;
+  }
+}
+
+.woocommerce-checkout #container .woocommerce form.checkout #customer_details .woocommerce-billing-fields #ship-to-different-address,
+.woocommerce-checkout #container .woocommerce form.checkout #customer_details .woocommerce-shipping-fields #ship-to-different-address {
+  margin-bottom: 2rem;
+}
+
+.woocommerce-checkout #container .woocommerce form.checkout #customer_details .woocommerce-billing-fields .form-row,
+.woocommerce-checkout #container .woocommerce form.checkout #customer_details .woocommerce-shipping-fields .form-row {
   width: 100%;
 }
 
-.woocommerce-checkout #container .woocommerce form.checkout #customer_details .woocommerce-billing-fields .form-row label {
+.woocommerce-checkout #container .woocommerce form.checkout #customer_details .woocommerce-billing-fields .form-row label,
+.woocommerce-checkout #container .woocommerce form.checkout #customer_details .woocommerce-shipping-fields .form-row label {
   width: 100%;
   font-family: "Sharp Sans Display Bold";
   letter-spacing: 0;
   font-size: 1.8rem;
 }
 
-.woocommerce-checkout #container .woocommerce form.checkout #customer_details .woocommerce-billing-fields .form-row input {
+.woocommerce-checkout #container .woocommerce form.checkout #customer_details .woocommerce-billing-fields .form-row input,
+.woocommerce-checkout #container .woocommerce form.checkout #customer_details .woocommerce-shipping-fields .form-row input {
   width: 100%;
   max-width: 50rem;
   height: 6rem;
@@ -16120,9 +16383,82 @@ body.woocommerce-edit-account .woocommerce-EditAccountForm .button:hover {
 }
 
 @media (min-width: 768px) {
-  .woocommerce-checkout #container .woocommerce form.checkout #customer_details .woocommerce-billing-fields .form-row input {
+  .woocommerce-checkout #container .woocommerce form.checkout #customer_details .woocommerce-billing-fields .form-row input,
+  .woocommerce-checkout #container .woocommerce form.checkout #customer_details .woocommerce-shipping-fields .form-row input {
     font-size: 1.6rem;
   }
+}
+
+.woocommerce-checkout #container .woocommerce form.checkout #customer_details .woocommerce-billing-fields .form-row span,
+.woocommerce-checkout #container .woocommerce form.checkout #customer_details .woocommerce-shipping-fields .form-row span {
+  width: 100%;
+}
+
+.woocommerce-checkout #container .woocommerce form.checkout #customer_details .woocommerce-billing-fields .form-row .select2-container,
+.woocommerce-checkout #container .woocommerce form.checkout #customer_details .woocommerce-shipping-fields .form-row .select2-container {
+  max-width: 50rem;
+  height: 6rem;
+  position: relative;
+  width: 100%;
+  line-height: 6rem;
+  font-size: 1.4rem;
+  border-radius: .4rem;
+  transition: all ease 300ms;
+  border: none;
+  margin-top: 1rem;
+  font-size: 1.8rem;
+}
+
+@media (min-width: 768px) {
+  .woocommerce-checkout #container .woocommerce form.checkout #customer_details .woocommerce-billing-fields .form-row .select2-container,
+  .woocommerce-checkout #container .woocommerce form.checkout #customer_details .woocommerce-shipping-fields .form-row .select2-container {
+    font-size: 1.6rem;
+  }
+}
+
+.woocommerce-checkout #container .woocommerce form.checkout #customer_details .woocommerce-billing-fields .form-row .select2-container .select2-selection,
+.woocommerce-checkout #container .woocommerce form.checkout #customer_details .woocommerce-shipping-fields .form-row .select2-container .select2-selection {
+  height: 100%;
+  border: none;
+}
+
+.woocommerce-checkout #container .woocommerce form.checkout #customer_details .woocommerce-billing-fields .form-row .select2-container .select2-selection .select2-selection__rendered,
+.woocommerce-checkout #container .woocommerce form.checkout #customer_details .woocommerce-shipping-fields .form-row .select2-container .select2-selection .select2-selection__rendered {
+  width: 100%;
+  height: 100%;
+  max-width: 50rem;
+  line-height: 6rem;
+  padding: 0 3rem;
+}
+
+.woocommerce-checkout #container .woocommerce form.checkout #customer_details .woocommerce-billing-fields .form-row .select2-container .select2-selection .select2-selection__rendered .selection,
+.woocommerce-checkout #container .woocommerce form.checkout #customer_details .woocommerce-shipping-fields .form-row .select2-container .select2-selection .select2-selection__rendered .selection {
+  height: 100%;
+}
+
+.woocommerce-checkout #container .woocommerce form.checkout #customer_details .woocommerce-billing-fields .form-row .select2-container .select2-selection .select2-selection__arrow,
+.woocommerce-checkout #container .woocommerce form.checkout #customer_details .woocommerce-shipping-fields .form-row .select2-container .select2-selection .select2-selection__arrow {
+  height: 100%;
+}
+
+.woocommerce-checkout #container .woocommerce form.checkout #customer_details .woocommerce-billing-fields .form-row .select2-container .select2-selection .select2-selection__arrow b,
+.woocommerce-checkout #container .woocommerce form.checkout #customer_details .woocommerce-shipping-fields .form-row .select2-container .select2-selection .select2-selection__arrow b {
+  left: unset;
+  right: 1rem;
+}
+
+.woocommerce-checkout #container .woocommerce form.checkout #customer_details .woocommerce-additional-fields label {
+  width: 100%;
+  font-family: "Sharp Sans Display Bold";
+  letter-spacing: 0;
+  font-size: 1.8rem;
+}
+
+.woocommerce-checkout #container .woocommerce form.checkout #customer_details .woocommerce-additional-fields textarea {
+  margin-top: 1rem;
+  border: none;
+  padding: 2rem 3rem;
+  min-height: 20rem;
 }
 
 .woocommerce-checkout #container .woocommerce form.checkout .form-row.notes label {
@@ -16137,12 +16473,89 @@ body.woocommerce-edit-account .woocommerce-EditAccountForm .button:hover {
   margin-top: 5rem;
 }
 
-.woocommerce-checkout #container .woocommerce form.checkout #order_review th {
+.woocommerce-checkout #container .woocommerce form.checkout #order_review table {
+  background-color: #fff;
+}
+
+.woocommerce-checkout #container .woocommerce form.checkout #order_review table th {
   font-family: "Sharp Sans Display Bold";
   font-size: 1.6rem;
 }
 
-.woocommerce-checkout #container .woocommerce form.checkout #order_review td {
+.woocommerce-checkout #container .woocommerce form.checkout #order_review table td {
   font-family: "Sharp Sans Medium";
   font-size: 1.4rem;
+}
+
+.woocommerce-checkout #container .woocommerce #payment {
+  background: none;
+}
+
+.woocommerce-checkout #container .woocommerce #payment .wc_payment_methods {
+  padding: 0;
+}
+
+.woocommerce-checkout #container .woocommerce #payment .wc_payment_methods li.woocommerce-info {
+  width: 100%;
+  max-width: 100%;
+  letter-spacing: 0;
+}
+
+.woocommerce-checkout #container .woocommerce #payment a {
+  color: #DB4343;
+  font-family: "Sharp Sans Display Bold";
+  transition: all ease 300ms;
+}
+
+.woocommerce-checkout #container .woocommerce #payment .button {
+  background-color: #DB4343;
+  transition: all ease 300ms;
+  color: #fff;
+  font-family: "Sharp Sans Medium";
+  padding: 2.7rem 3.3rem;
+  border-radius: 4rem;
+}
+
+.woocommerce-checkout #container .woocommerce #payment .button:hover {
+  background-color: #9A1D1D;
+}
+
+.woocommerce-checkout #container .woocommerce #payment .button {
+  background-color: #DB4343;
+  transition: all ease 300ms;
+  color: #fff;
+  font-family: "Sharp Sans Medium";
+  padding: 2.7rem 3.3rem;
+  border-radius: 4rem;
+  width: 100%;
+  font-size: 1.6rem;
+}
+
+@media (min-width: 768px) {
+  .woocommerce-checkout #container .woocommerce #payment .button {
+    width: 32rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .woocommerce-checkout #container .woocommerce #payment .button {
+    width: 22.292vw;
+  }
+}
+
+@media (min-width: 1440px) {
+  .woocommerce-checkout #container .woocommerce #payment .button {
+    font-size: 1.1vw;
+  }
+}
+
+@media (min-width: 1920px) {
+  .woocommerce-checkout #container .woocommerce #payment .button {
+    width: 42.8rem;
+    font-size: 2.1rem;
+  }
+}
+
+.woocommerce-checkout #container .woocommerce #payment .button:hover {
+  background-color: #9A1D1D;
 }

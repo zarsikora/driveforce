@@ -52,30 +52,6 @@ body.woocommerce-account {
                     margin: 5rem auto;
                 }
 
-                .woocommerce-message,
-                .woocommerce-info  {
-                    border-top: none;
-                    background-color: $darkBg;
-                    color: $lightBg;
-                    font-family: $mediumType;
-                    text-align: center;
-                    font-size: 1.4rem;
-                    letter-spacing: .21rem;
-
-                    &:before {
-                        display: none;
-                    }
-
-                    .button {
-                        background: none;
-                        color: $lightBg;
-                        text-decoration: underline;
-                        font-family: $displayType;
-                        padding: 0;
-                        font-size: 1.6rem;
-                    }
-                }
-
                 p {
                     &:first-of-type {
                         margin-top: 0;
@@ -88,6 +64,28 @@ body.woocommerce-account {
 
                         &:hover {
                             color: $highlight; 
+                        }
+
+                        &.button {
+                            color: $highlight;
+                            transition: all ease 300ms;
+
+                            &:hover {
+                                color: $hoverTint;
+                            }
+                        }
+                    }
+                }
+
+                .woocommerce_account_subscriptions {
+                    .no_subscriptions {
+                        max-width: 100%;
+                        width: 100%;
+
+                        @include media-breakpoint-up(lg){
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
                         }
                     }
                 }
