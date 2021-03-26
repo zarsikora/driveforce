@@ -1,4 +1,4 @@
-<?php if(!get_the_ID() == 24): ?>
+
     <footer id="footer">
         <div class="inner">
             <div class="logo">
@@ -29,4 +29,3 @@
             <p class="copyright">&copy; DriveForce  <?php echo date('Y'); ?></p>
         </div>
     </footer>
-<?php endif; ?>

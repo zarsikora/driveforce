@@ -7,7 +7,7 @@ $image = get_sub_field('image');
 
 <div class="module-flush form-module" id="contact">
     <div class="row">
-        <div class="copy col-lg-6">
+        <div class="copy col-lg-6" id="innerScroll">
             <?php if($introTitle && $introCopy): ?>
                 <div class="inner">
                     <div class="copy desktop">

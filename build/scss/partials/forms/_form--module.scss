@@ -42,9 +42,9 @@
 //CONTACT MODULE 
 #contact {
     margin-top: 7rem;
+    overflow-x: hidden;
     @include media-breakpoint-up(lg) {
         height: calc(100vh - 9.4rem - 4.8rem);
-        overflow-x: hidden;
     }
 
     .image {

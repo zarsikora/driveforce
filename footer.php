@@ -1,6 +1,7 @@
         </div> <!-- #container -->
-
-        <?php include('includes/footer.php'); ?>
+        <?php if(get_the_ID() !== 224): ?>
+            <?php include('includes/footer.php'); ?>
+        <?php endif; ?>
 
         </div>
 

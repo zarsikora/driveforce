@@ -14588,12 +14588,12 @@ form .btn-wrapper .btn, form .btn-wrapper #waitlistModal .modal-dialog .modal-co
 
 #contact {
   margin-top: 7rem;
+  overflow-x: hidden;
 }
 
 @media (min-width: 992px) {
   #contact {
     height: calc(100vh - 9.4rem - 4.8rem);
-    overflow-x: hidden;
   }
 }
 
