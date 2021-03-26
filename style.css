@@ -14751,7 +14751,6 @@ form .btn-wrapper .btn, form .btn-wrapper #waitlistModal .modal-dialog .modal-co
   text-align: center;
   max-width: 80.417vw;
   z-index: 2;
-  margin-top: 16.667vw;
 }
 
 #form-success-pane .inner h1 {
@@ -14774,7 +14773,7 @@ form .btn-wrapper .btn, form .btn-wrapper #waitlistModal .modal-dialog .modal-co
 #form-success-pane .inner .logo {
   width: 10rem;
   display: block;
-  margin: 8rem auto;
+  margin: 8rem auto 0;
   opacity: 0;
 }
 

@@ -182,7 +182,6 @@
         text-align: center;
         max-width: 80.417vw;
         z-index: 2; 
-        margin-top: 16.667vw;
 
         h1 {
             margin-bottom: 2rem;
@@ -201,7 +200,7 @@
         .logo {
             width: 10rem;
             display: block;
-            margin: 8rem auto;
+            margin: 8rem auto 0;
             opacity: 0;
         }
     }
