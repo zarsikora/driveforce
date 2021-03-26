@@ -111,15 +111,11 @@ body {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-    @include media-breakpoint-up(md) {
-        padding: 0;
-        max-width: 90%;
+    @media(min-width: 550px) and (max-width: 991px){
+        padding: 0 5rem;
     }
     @include media-breakpoint-up(lg){
         max-width: 80%;
-    }
-    @media(min-width: 1440px) {
-        //max-width: 80%;
     }
 }
 
@@ -221,7 +217,7 @@ p {
     font-family: $mediumType;
     margin: 2rem 0;
     line-height: 1.87em;
-    @include media-breakpoint-up(lg){
+    @include media-breakpoint-up(xl){
         font-size: 1.111vw;
     }
     @media(min-width: 1920px) {

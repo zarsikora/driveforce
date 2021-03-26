@@ -8,7 +8,7 @@ $hasOverflow = get_sub_field('has_overflow');
 <div class="module-wrapper form-module <?php if($hasOverflow) echo ' has-overflow'?>" id="waitList">
     <div class="module-padded">
         <div class="row">
-            <div class="img col-md-6">
+            <div class="img col-md-4 col-lg-6">
                 <?php echo imageTag($image); ?>
 
                 <div class="tag">
@@ -16,7 +16,7 @@ $hasOverflow = get_sub_field('has_overflow');
                 </div>
             </div>
 
-            <div class="form col-md-6">
+            <div class="form col-md-8 col-lg-6">
                 <div class="copy">
                     <h2 data-animation-effect="splitSlideUpWord" data-animation-trigger="breakpoint" data-splitting="chars"><?php echo $introTitle ?></h2>
                     <p data-animation-effect="moduleFadeIn" data-animation-trigger="breakpoint"><?php echo $introCopy ?></p>
@@ -26,8 +26,6 @@ $hasOverflow = get_sub_field('has_overflow');
             </div>
         </div>
     </div>
-
-    <img class="waitlist-curve" aria-hidden="true" alt="decorative curve" src="http://staging.driveforce.golf/wp-content/uploads/2021/01/waitlist-curve.svg" />
 </div>
 
 <!-- <div id="form-success-pane">

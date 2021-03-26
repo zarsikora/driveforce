@@ -137,7 +137,7 @@
         z-index: 12;
         margin-left: 10rem;
         @include media-breakpoint-up(md){
-            margin-left: 11rem;
+            margin-left: 15rem;
         }
         @media (min-width: 1440px){
             margin-left: 10%;
@@ -295,7 +295,7 @@
             }
 
             &#nav-pane-menu {
-                margin-top: 7rem;
+                margin-top: 15rem;
                 position: relative;
                 z-index: 3;
                 text-align: center;
@@ -312,11 +312,11 @@
                     a {
                         font-family: $displayType;
                         color: #fff;
-                        font-size: 1.8rem;
+                        font-size: 2.4rem;
                         transition: all ease 300ms;
                         letter-spacing: .1rem;
                         @include media-breakpoint-up(md){
-                            font-size: 2.4rem;
+                            font-size: 3rem;
                         }
                         @include media-breakpoint-up(lg){
                             font-size: 4rem;
@@ -370,7 +370,7 @@
         position: absolute;
         color: #fff;
         font-size: 1rem;
-        bottom: 4rem;
+        bottom: 0;
         left: 50%;
         transform: translateX(-50%);
     }

@@ -39,8 +39,11 @@
         }
 
         .card-container {
-            margin-bottom: 30px;
-
+            margin-bottom: 3rem;
+            @include media-breakpoint-down(sm){
+                max-width: 50rem;
+                margin: 0 auto 3rem;
+            }
             @include media-breakpoint-up(md){
                 &:last-child, 
                 &:nth-last-child(2) {

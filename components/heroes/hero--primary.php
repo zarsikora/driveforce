@@ -14,7 +14,7 @@ $url = $link['url'];
 <div class="jumbotron hero home-hero section module-flush">
     <div class="inner">
         <div class="row">
-            <div class="col-md-5">
+            <div class="col-md-6 col-lg-5">
                 <div class="text-container">
                     <h1 class="title breakpoint-animate" data-splitting="chars"><?php echo $header ?></h1>
 
@@ -51,7 +51,7 @@ $url = $link['url'];
             </div>
 
             <?php if($image): ?>
-                <div class="col-md-6 offset-md-1">
+                <div class="col-md-6 offset-lg-1">
                     <div class="image-container">
                         <?php echo imageTag($image, "", "", null, false); ?>
                     </div>

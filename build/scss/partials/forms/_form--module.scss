@@ -103,17 +103,28 @@
             .img {
                 @include media-breakpoint-down(sm){
                     padding: 0;
+                    max-width: 50rem;
+                    margin: 0 auto;
                 }
                 
                 img {
                     width: 100%;
                     height: auto;
+
+                    @media(min-width: 767px) and (max-width: 991px){
+                        height: 100vw;
+                        max-height: 90rem;
+                        width: auto;
+                        margin-left: -50vw;
+                    }
                 }
             }
 
             .form {
                 @include media-breakpoint-down(sm){
                     padding: 0;
+                    max-width: 50rem;
+                    margin: 0 auto;
                 }
 
                 .copy {
@@ -144,21 +155,8 @@
                 display: block;
             }
             @media (min-width: 1440px){
-                margin-left: -30%;
+                margin-left: -50%;
             }
-        }
-    }
-
-    .waitlist-curve {
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        transform: translate(-1px, 36.2%);
-        z-index: 2;
-        width: 50%;
-        display: none;
-        @include media-breakpoint-up(lg){
-            display: block;
         }
     }
 }

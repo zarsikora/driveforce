@@ -21,6 +21,10 @@
 
         .image-wrapper {
             text-align: center;
+            @include media-breakpoint-down(sm){
+                max-width: 50rem;
+                margin: 0 auto;
+            }
 
             img {
                 width: 100%;
@@ -52,6 +56,10 @@
                     &:last-child {
                         margin-bottom: 0;
                     }
+                }
+                @media(min-width: 550px) and (max-width: 991px){
+                    max-width: 75%;
+                    margin: 0 auto 3rem;
                 }
 
                 img {

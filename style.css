@@ -10186,10 +10186,9 @@ body.mobile-nav-active {
   margin-right: auto;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 550px) and (max-width: 991px) {
   .module-padded {
-    padding: 0;
-    max-width: 90%;
+    padding: 0 5rem;
   }
 }
 
@@ -10341,7 +10340,7 @@ p {
   line-height: 1.87em;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   p.copy, .hero .inner .text-container p, .rte .text-container .copy h3, .rte .text-container .article-single .post-content .inner .copy ul li h3, .article-single .post-content .inner .copy ul .rte .text-container li h3, .rte .text-container .article-single .post-content .inner .copy ol li h3, .article-single .post-content .inner .copy ol .rte .text-container li h3, .rte .text-container .copy p, .rte .text-container .copy li, .rte .text-container .article-single .post-content .inner .copy ul li li, .article-single .post-content .inner .copy ul .rte .text-container li li, .rte .text-container .article-single .post-content .inner .copy ol li li, .article-single .post-content .inner .copy ol .rte .text-container li li, .card p.card-text, .form-module .copy h3, .form-module .article-single .post-content .inner .copy ul li h3, .article-single .post-content .inner .copy ul .form-module li h3, .form-module .article-single .post-content .inner .copy ol li h3, .article-single .post-content .inner .copy ol .form-module li h3, .article-single .post-content .inner .copy p, .article-single .post-content .inner .copy ul li p, .article-single .post-content .inner .copy ol li p, .article-single .post-content .inner .copy blockquote.wp-block-quote, #content.challenges-page .solution .text-inner p,
   .copy p,
   .article-single .post-content .inner .copy ul li p,
@@ -10436,7 +10435,7 @@ span.sage {
   color: #919A6B;
 }
 
-.btn, .woocommerce-cart #content .return-to-shop .button, body.woocommerce-account #content .woocommerce .woocommerce-form-login .woocommerce-button, body.woocommerce-edit-address .woocommerce-address-fields .button, body.woocommerce-edit-account .woocommerce-EditAccountForm .button, .woocommerce-ResetPassword .button {
+.btn, #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form button, .woocommerce-cart #content .return-to-shop .button, body.woocommerce-account #content .woocommerce .woocommerce-form-login .woocommerce-button, body.woocommerce-edit-address .woocommerce-address-fields .button, body.woocommerce-edit-account .woocommerce-EditAccountForm .button, .woocommerce-ResetPassword .button {
   background: #DB4343;
   box-shadow: 0px 10px 24px #00000029;
   color: #fff !important;
@@ -10453,31 +10452,31 @@ span.sage {
 }
 
 @media (min-width: 768px) {
-  .btn, .woocommerce-cart #content .return-to-shop .button, body.woocommerce-account #content .woocommerce .woocommerce-form-login .woocommerce-button, body.woocommerce-edit-address .woocommerce-address-fields .button, body.woocommerce-edit-account .woocommerce-EditAccountForm .button, .woocommerce-ResetPassword .button {
+  .btn, #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form button, .woocommerce-cart #content .return-to-shop .button, body.woocommerce-account #content .woocommerce .woocommerce-form-login .woocommerce-button, body.woocommerce-edit-address .woocommerce-address-fields .button, body.woocommerce-edit-account .woocommerce-EditAccountForm .button, .woocommerce-ResetPassword .button {
     width: 32rem;
   }
 }
 
 @media (min-width: 992px) {
-  .btn, .woocommerce-cart #content .return-to-shop .button, body.woocommerce-account #content .woocommerce .woocommerce-form-login .woocommerce-button, body.woocommerce-edit-address .woocommerce-address-fields .button, body.woocommerce-edit-account .woocommerce-EditAccountForm .button, .woocommerce-ResetPassword .button {
+  .btn, #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form button, .woocommerce-cart #content .return-to-shop .button, body.woocommerce-account #content .woocommerce .woocommerce-form-login .woocommerce-button, body.woocommerce-edit-address .woocommerce-address-fields .button, body.woocommerce-edit-account .woocommerce-EditAccountForm .button, .woocommerce-ResetPassword .button {
     width: 22.292vw;
   }
 }
 
 @media (min-width: 1920px) {
-  .btn, .woocommerce-cart #content .return-to-shop .button, body.woocommerce-account #content .woocommerce .woocommerce-form-login .woocommerce-button, body.woocommerce-edit-address .woocommerce-address-fields .button, body.woocommerce-edit-account .woocommerce-EditAccountForm .button, .woocommerce-ResetPassword .button {
+  .btn, #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form button, .woocommerce-cart #content .return-to-shop .button, body.woocommerce-account #content .woocommerce .woocommerce-form-login .woocommerce-button, body.woocommerce-edit-address .woocommerce-address-fields .button, body.woocommerce-edit-account .woocommerce-EditAccountForm .button, .woocommerce-ResetPassword .button {
     width: 42.8rem;
   }
 }
 
 @media (min-width: 992px) {
-  .btn:hover .btn-hover-mask, .woocommerce-cart #content .return-to-shop .button:hover .btn-hover-mask, body.woocommerce-account #content .woocommerce .woocommerce-form-login .woocommerce-button:hover .btn-hover-mask, body.woocommerce-edit-address .woocommerce-address-fields .button:hover .btn-hover-mask, body.woocommerce-edit-account .woocommerce-EditAccountForm .button:hover .btn-hover-mask, .woocommerce-ResetPassword .button:hover .btn-hover-mask {
+  .btn:hover .btn-hover-mask, #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form button:hover .btn-hover-mask, .woocommerce-cart #content .return-to-shop .button:hover .btn-hover-mask, body.woocommerce-account #content .woocommerce .woocommerce-form-login .woocommerce-button:hover .btn-hover-mask, body.woocommerce-edit-address .woocommerce-address-fields .button:hover .btn-hover-mask, body.woocommerce-edit-account .woocommerce-EditAccountForm .button:hover .btn-hover-mask, .woocommerce-ResetPassword .button:hover .btn-hover-mask {
     -webkit-clip-path: circle(300px at 50% 50%);
             clip-path: circle(300px at 50% 50%);
   }
 }
 
-.btn span, .woocommerce-cart #content .return-to-shop .button span, body.woocommerce-account #content .woocommerce .woocommerce-form-login .woocommerce-button span, body.woocommerce-edit-address .woocommerce-address-fields .button span, body.woocommerce-edit-account .woocommerce-EditAccountForm .button span, .woocommerce-ResetPassword .button span {
+.btn span, #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form button span, .woocommerce-cart #content .return-to-shop .button span, body.woocommerce-account #content .woocommerce .woocommerce-form-login .woocommerce-button span, body.woocommerce-edit-address .woocommerce-address-fields .button span, body.woocommerce-edit-account .woocommerce-EditAccountForm .button span, .woocommerce-ResetPassword .button span {
   font-family: "Sharp Sans Medium";
   font-size: 1.6rem;
   display: inline-block;
@@ -10489,19 +10488,19 @@ span.sage {
 }
 
 @media (min-width: 768px) {
-  .btn span, .woocommerce-cart #content .return-to-shop .button span, body.woocommerce-account #content .woocommerce .woocommerce-form-login .woocommerce-button span, body.woocommerce-edit-address .woocommerce-address-fields .button span, body.woocommerce-edit-account .woocommerce-EditAccountForm .button span, .woocommerce-ResetPassword .button span {
+  .btn span, #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form button span, .woocommerce-cart #content .return-to-shop .button span, body.woocommerce-account #content .woocommerce .woocommerce-form-login .woocommerce-button span, body.woocommerce-edit-address .woocommerce-address-fields .button span, body.woocommerce-edit-account .woocommerce-EditAccountForm .button span, .woocommerce-ResetPassword .button span {
     left: 0;
   }
 }
 
 @media (min-width: 1440px) {
-  .btn span, .woocommerce-cart #content .return-to-shop .button span, body.woocommerce-account #content .woocommerce .woocommerce-form-login .woocommerce-button span, body.woocommerce-edit-address .woocommerce-address-fields .button span, body.woocommerce-edit-account .woocommerce-EditAccountForm .button span, .woocommerce-ResetPassword .button span {
+  .btn span, #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form button span, .woocommerce-cart #content .return-to-shop .button span, body.woocommerce-account #content .woocommerce .woocommerce-form-login .woocommerce-button span, body.woocommerce-edit-address .woocommerce-address-fields .button span, body.woocommerce-edit-account .woocommerce-EditAccountForm .button span, .woocommerce-ResetPassword .button span {
     font-size: 1.1vw;
   }
 }
 
 @media (min-width: 1920px) {
-  .btn span, .woocommerce-cart #content .return-to-shop .button span, body.woocommerce-account #content .woocommerce .woocommerce-form-login .woocommerce-button span, body.woocommerce-edit-address .woocommerce-address-fields .button span, body.woocommerce-edit-account .woocommerce-EditAccountForm .button span, .woocommerce-ResetPassword .button span {
+  .btn span, #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form button span, .woocommerce-cart #content .return-to-shop .button span, body.woocommerce-account #content .woocommerce .woocommerce-form-login .woocommerce-button span, body.woocommerce-edit-address .woocommerce-address-fields .button span, body.woocommerce-edit-account .woocommerce-EditAccountForm .button span, .woocommerce-ResetPassword .button span {
     font-size: 2.1rem;
   }
 }
@@ -10720,7 +10719,7 @@ button:focus {
   }
 }
 
-#header .btn, #header .woocommerce-cart #content .return-to-shop .button, .woocommerce-cart #content .return-to-shop #header .button, #header body.woocommerce-account #content .woocommerce .woocommerce-form-login .woocommerce-button, body.woocommerce-account #content .woocommerce .woocommerce-form-login #header .woocommerce-button, #header body.woocommerce-edit-address .woocommerce-address-fields .button, body.woocommerce-edit-address .woocommerce-address-fields #header .button, #header body.woocommerce-edit-account .woocommerce-EditAccountForm .button, body.woocommerce-edit-account .woocommerce-EditAccountForm #header .button, #header .woocommerce-ResetPassword .button, .woocommerce-ResetPassword #header .button {
+#header .btn, #header #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form button, #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form #header button, #header .woocommerce-cart #content .return-to-shop .button, .woocommerce-cart #content .return-to-shop #header .button, #header body.woocommerce-account #content .woocommerce .woocommerce-form-login .woocommerce-button, body.woocommerce-account #content .woocommerce .woocommerce-form-login #header .woocommerce-button, #header body.woocommerce-edit-address .woocommerce-address-fields .button, body.woocommerce-edit-address .woocommerce-address-fields #header .button, #header body.woocommerce-edit-account .woocommerce-EditAccountForm .button, body.woocommerce-edit-account .woocommerce-EditAccountForm #header .button, #header .woocommerce-ResetPassword .button, .woocommerce-ResetPassword #header .button {
   display: none;
   height: 100%;
   border-radius: 0;
@@ -10728,13 +10727,13 @@ button:focus {
 }
 
 @media (min-width: 992px) {
-  #header .btn, #header .woocommerce-cart #content .return-to-shop .button, .woocommerce-cart #content .return-to-shop #header .button, #header body.woocommerce-account #content .woocommerce .woocommerce-form-login .woocommerce-button, body.woocommerce-account #content .woocommerce .woocommerce-form-login #header .woocommerce-button, #header body.woocommerce-edit-address .woocommerce-address-fields .button, body.woocommerce-edit-address .woocommerce-address-fields #header .button, #header body.woocommerce-edit-account .woocommerce-EditAccountForm .button, body.woocommerce-edit-account .woocommerce-EditAccountForm #header .button, #header .woocommerce-ResetPassword .button, .woocommerce-ResetPassword #header .button {
+  #header .btn, #header #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form button, #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form #header button, #header .woocommerce-cart #content .return-to-shop .button, .woocommerce-cart #content .return-to-shop #header .button, #header body.woocommerce-account #content .woocommerce .woocommerce-form-login .woocommerce-button, body.woocommerce-account #content .woocommerce .woocommerce-form-login #header .woocommerce-button, #header body.woocommerce-edit-address .woocommerce-address-fields .button, body.woocommerce-edit-address .woocommerce-address-fields #header .button, #header body.woocommerce-edit-account .woocommerce-EditAccountForm .button, body.woocommerce-edit-account .woocommerce-EditAccountForm #header .button, #header .woocommerce-ResetPassword .button, .woocommerce-ResetPassword #header .button {
     display: flex;
     width: auto;
   }
 }
 
-#header .btn .btn-hover-mask, #header .woocommerce-cart #content .return-to-shop .button .btn-hover-mask, .woocommerce-cart #content .return-to-shop #header .button .btn-hover-mask, #header body.woocommerce-account #content .woocommerce .woocommerce-form-login .woocommerce-button .btn-hover-mask, body.woocommerce-account #content .woocommerce .woocommerce-form-login #header .woocommerce-button .btn-hover-mask, #header body.woocommerce-edit-address .woocommerce-address-fields .button .btn-hover-mask, body.woocommerce-edit-address .woocommerce-address-fields #header .button .btn-hover-mask, #header body.woocommerce-edit-account .woocommerce-EditAccountForm .button .btn-hover-mask, body.woocommerce-edit-account .woocommerce-EditAccountForm #header .button .btn-hover-mask, #header .woocommerce-ResetPassword .button .btn-hover-mask, .woocommerce-ResetPassword #header .button .btn-hover-mask {
+#header .btn .btn-hover-mask, #header #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form button .btn-hover-mask, #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form #header button .btn-hover-mask, #header .woocommerce-cart #content .return-to-shop .button .btn-hover-mask, .woocommerce-cart #content .return-to-shop #header .button .btn-hover-mask, #header body.woocommerce-account #content .woocommerce .woocommerce-form-login .woocommerce-button .btn-hover-mask, body.woocommerce-account #content .woocommerce .woocommerce-form-login #header .woocommerce-button .btn-hover-mask, #header body.woocommerce-edit-address .woocommerce-address-fields .button .btn-hover-mask, body.woocommerce-edit-address .woocommerce-address-fields #header .button .btn-hover-mask, #header body.woocommerce-edit-account .woocommerce-EditAccountForm .button .btn-hover-mask, body.woocommerce-edit-account .woocommerce-EditAccountForm #header .button .btn-hover-mask, #header .woocommerce-ResetPassword .button .btn-hover-mask, .woocommerce-ResetPassword #header .button .btn-hover-mask {
   border-radius: 0;
 }
 
@@ -10862,7 +10861,7 @@ button:focus {
 
 @media (min-width: 768px) {
   #header .header-logo {
-    margin-left: 11rem;
+    margin-left: 15rem;
   }
 }
 
@@ -11045,7 +11044,7 @@ button:focus {
 }
 
 #nav-pane .inner .menu#nav-pane-menu {
-  margin-top: 7rem;
+  margin-top: 15rem;
   position: relative;
   z-index: 3;
   text-align: center;
@@ -11070,14 +11069,14 @@ button:focus {
 #nav-pane .inner .menu#nav-pane-menu li a {
   font-family: "Sharp Sans Display Bold";
   color: #fff;
-  font-size: 1.8rem;
+  font-size: 2.4rem;
   transition: all ease 300ms;
   letter-spacing: .1rem;
 }
 
 @media (min-width: 768px) {
   #nav-pane .inner .menu#nav-pane-menu li a {
-    font-size: 2.4rem;
+    font-size: 3rem;
   }
 }
 
@@ -11101,7 +11100,7 @@ button:focus {
   }
 }
 
-#nav-pane .inner .btn, #nav-pane .inner .woocommerce-cart #content .return-to-shop .button, .woocommerce-cart #content .return-to-shop #nav-pane .inner .button, #nav-pane .inner body.woocommerce-account #content .woocommerce .woocommerce-form-login .woocommerce-button, body.woocommerce-account #content .woocommerce .woocommerce-form-login #nav-pane .inner .woocommerce-button, #nav-pane .inner body.woocommerce-edit-address .woocommerce-address-fields .button, body.woocommerce-edit-address .woocommerce-address-fields #nav-pane .inner .button, #nav-pane .inner body.woocommerce-edit-account .woocommerce-EditAccountForm .button, body.woocommerce-edit-account .woocommerce-EditAccountForm #nav-pane .inner .button, #nav-pane .inner .woocommerce-ResetPassword .button, .woocommerce-ResetPassword #nav-pane .inner .button {
+#nav-pane .inner .btn, #nav-pane .inner #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form button, #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form #nav-pane .inner button, #nav-pane .inner .woocommerce-cart #content .return-to-shop .button, .woocommerce-cart #content .return-to-shop #nav-pane .inner .button, #nav-pane .inner body.woocommerce-account #content .woocommerce .woocommerce-form-login .woocommerce-button, body.woocommerce-account #content .woocommerce .woocommerce-form-login #nav-pane .inner .woocommerce-button, #nav-pane .inner body.woocommerce-edit-address .woocommerce-address-fields .button, body.woocommerce-edit-address .woocommerce-address-fields #nav-pane .inner .button, #nav-pane .inner body.woocommerce-edit-account .woocommerce-EditAccountForm .button, body.woocommerce-edit-account .woocommerce-EditAccountForm #nav-pane .inner .button, #nav-pane .inner .woocommerce-ResetPassword .button, .woocommerce-ResetPassword #nav-pane .inner .button {
   width: 32rem;
   margin-top: 20rem;
 }
@@ -11145,7 +11144,7 @@ button:focus {
   position: absolute;
   color: #fff;
   font-size: 1rem;
-  bottom: 4rem;
+  bottom: 0;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -11184,7 +11183,7 @@ button:focus {
   padding: 6rem 6rem 10rem;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   #footer {
     padding: 7rem 0;
   }
@@ -11197,7 +11196,7 @@ button:focus {
   flex-wrap: wrap;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   #footer .inner {
     max-width: 90%;
     display: flex;
@@ -11218,7 +11217,7 @@ button:focus {
   margin: 0 auto;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   #footer .inner .logo {
     margin: 0;
     width: 2.778vw;
@@ -11239,7 +11238,7 @@ button:focus {
   margin-bottom: 0;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   #footer .inner #menu-footer-menu {
     display: flex;
     position: absolute;
@@ -11270,7 +11269,7 @@ button:focus {
   font-family: "Sharp Sans Medium";
 }
 
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   #footer .inner #menu-footer-menu li {
     padding: 0 2rem;
     margin-bottom: 0;
@@ -11318,7 +11317,7 @@ button:focus {
   transform: translateX(-50%);
 }
 
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   #footer .inner .copyright {
     position: relative;
     left: unset;
@@ -11617,17 +11616,17 @@ button:focus {
   }
 }
 
-.btn, .woocommerce-cart #content .return-to-shop .button, body.woocommerce-account #content .woocommerce .woocommerce-form-login .woocommerce-button, body.woocommerce-edit-address .woocommerce-address-fields .button, body.woocommerce-edit-account .woocommerce-EditAccountForm .button, .woocommerce-ResetPassword .button {
+.btn, #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form button, .woocommerce-cart #content .return-to-shop .button, body.woocommerce-account #content .woocommerce .woocommerce-form-login .woocommerce-button, body.woocommerce-edit-address .woocommerce-address-fields .button, body.woocommerce-edit-account .woocommerce-EditAccountForm .button, .woocommerce-ResetPassword .button {
   border: none;
   outline: none;
   color: #fff;
 }
 
-.btn:disabled, .woocommerce-cart #content .return-to-shop .button:disabled, body.woocommerce-account #content .woocommerce .woocommerce-form-login .woocommerce-button:disabled, body.woocommerce-edit-address .woocommerce-address-fields .button:disabled, body.woocommerce-edit-account .woocommerce-EditAccountForm .button:disabled, .woocommerce-ResetPassword .button:disabled, .btn[disabled], .woocommerce-cart #content .return-to-shop .button[disabled], body.woocommerce-account #content .woocommerce .woocommerce-form-login .woocommerce-button[disabled], body.woocommerce-edit-address .woocommerce-address-fields .button[disabled], body.woocommerce-edit-account .woocommerce-EditAccountForm .button[disabled], .woocommerce-ResetPassword .button[disabled] {
+.btn:disabled, #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form button:disabled, .woocommerce-cart #content .return-to-shop .button:disabled, body.woocommerce-account #content .woocommerce .woocommerce-form-login .woocommerce-button:disabled, body.woocommerce-edit-address .woocommerce-address-fields .button:disabled, body.woocommerce-edit-account .woocommerce-EditAccountForm .button:disabled, .woocommerce-ResetPassword .button:disabled, .btn[disabled], #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form button[disabled], .woocommerce-cart #content .return-to-shop .button[disabled], body.woocommerce-account #content .woocommerce .woocommerce-form-login .woocommerce-button[disabled], body.woocommerce-edit-address .woocommerce-address-fields .button[disabled], body.woocommerce-edit-account .woocommerce-EditAccountForm .button[disabled], .woocommerce-ResetPassword .button[disabled] {
   opacity: .5;
 }
 
-.btn.solid-btn, .woocommerce-cart #content .return-to-shop .solid-btn.button, body.woocommerce-account #content .woocommerce .woocommerce-form-login .solid-btn.woocommerce-button, body.woocommerce-edit-address .woocommerce-address-fields .solid-btn.button, body.woocommerce-edit-account .woocommerce-EditAccountForm .solid-btn.button, .woocommerce-ResetPassword .solid-btn.button {
+.btn.solid-btn, #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form button.solid-btn, .woocommerce-cart #content .return-to-shop .solid-btn.button, body.woocommerce-account #content .woocommerce .woocommerce-form-login .solid-btn.woocommerce-button, body.woocommerce-edit-address .woocommerce-address-fields .solid-btn.button, body.woocommerce-edit-account .woocommerce-EditAccountForm .solid-btn.button, .woocommerce-ResetPassword .solid-btn.button {
   font-size: 1.6rem;
   border-radius: .4rem;
   padding: 1rem 1.5rem;
@@ -11635,7 +11634,7 @@ button:focus {
   text-align: center;
 }
 
-.btn.solid-btn .arrow, .woocommerce-cart #content .return-to-shop .solid-btn.button .arrow, body.woocommerce-account #content .woocommerce .woocommerce-form-login .solid-btn.woocommerce-button .arrow, body.woocommerce-edit-address .woocommerce-address-fields .solid-btn.button .arrow, body.woocommerce-edit-account .woocommerce-EditAccountForm .solid-btn.button .arrow, .woocommerce-ResetPassword .solid-btn.button .arrow {
+.btn.solid-btn .arrow, #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form button.solid-btn .arrow, .woocommerce-cart #content .return-to-shop .solid-btn.button .arrow, body.woocommerce-account #content .woocommerce .woocommerce-form-login .solid-btn.woocommerce-button .arrow, body.woocommerce-edit-address .woocommerce-address-fields .solid-btn.button .arrow, body.woocommerce-edit-account .woocommerce-EditAccountForm .solid-btn.button .arrow, .woocommerce-ResetPassword .solid-btn.button .arrow {
   width: 5rem;
   height: 5rem;
   fill: #fff;
@@ -11643,7 +11642,7 @@ button:focus {
   transition: width ease 300ms;
 }
 
-.btn.solid-btn:hover .arrow, .woocommerce-cart #content .return-to-shop .solid-btn.button:hover .arrow, body.woocommerce-account #content .woocommerce .woocommerce-form-login .solid-btn.woocommerce-button:hover .arrow, body.woocommerce-edit-address .woocommerce-address-fields .solid-btn.button:hover .arrow, body.woocommerce-edit-account .woocommerce-EditAccountForm .solid-btn.button:hover .arrow, .woocommerce-ResetPassword .solid-btn.button:hover .arrow {
+.btn.solid-btn:hover .arrow, #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form button.solid-btn:hover .arrow, .woocommerce-cart #content .return-to-shop .solid-btn.button:hover .arrow, body.woocommerce-account #content .woocommerce .woocommerce-form-login .solid-btn.woocommerce-button:hover .arrow, body.woocommerce-edit-address .woocommerce-address-fields .solid-btn.button:hover .arrow, body.woocommerce-edit-account .woocommerce-EditAccountForm .solid-btn.button:hover .arrow, .woocommerce-ResetPassword .solid-btn.button:hover .arrow {
   display: inline-block;
 }
 
@@ -11665,52 +11664,72 @@ a.btn:hover, .woocommerce-cart #content .return-to-shop a.button:hover, body.woo
   }
 }
 
-.hero.home-hero .row {
+.hero.home-hero .inner .row {
   margin: 4rem 0 0;
 }
 
-.hero.home-hero .row .col-md-5 {
+.hero.home-hero .inner .row .col-lg-5 {
   order: 2;
 }
 
 @media (max-width: 767.98px) {
-  .hero.home-hero .row .col-md-5 {
+  .hero.home-hero .inner .row .col-lg-5 {
     padding: 0;
   }
 }
 
 @media (min-width: 768px) {
-  .hero.home-hero .row .col-md-5 {
+  .hero.home-hero .inner .row .col-lg-5 {
     order: 1;
   }
 }
 
+@media (max-width: 767.98px) {
+  .hero.home-hero .inner .row .col-lg-5 .text-container {
+    max-width: 50rem;
+    margin: 0 auto;
+  }
+}
+
 @media (min-width: 1440px) {
-  .hero.home-hero .row .col-md-5 .text-container {
+  .hero.home-hero .inner .row .col-lg-5 .text-container {
     margin-left: -1.5rem;
   }
 }
 
-.hero.home-hero .row .col-md-5 .text-container .copy, .hero.home-hero .row .col-md-5 .text-container .article-single .post-content .inner .copy ul li, .article-single .post-content .inner .copy ul .hero.home-hero .row .col-md-5 .text-container li, .hero.home-hero .row .col-md-5 .text-container .article-single .post-content .inner .copy ol li, .article-single .post-content .inner .copy ol .hero.home-hero .row .col-md-5 .text-container li {
+.hero.home-hero .inner .row .col-lg-5 .text-container .copy, .hero.home-hero .article-single .post-content .inner .row .col-lg-5 .text-container .copy ul li, .article-single .post-content .hero.home-hero .inner .row .col-lg-5 .text-container .copy ul li, .hero.home-hero .article-single .post-content .inner .copy ul .row .col-lg-5 .text-container li, .article-single .post-content .hero.home-hero .inner .copy ul .row .col-lg-5 .text-container li, .hero.home-hero .article-single .post-content .inner .row .col-lg-5 .text-container .copy ol li, .article-single .post-content .hero.home-hero .inner .row .col-lg-5 .text-container .copy ol li, .hero.home-hero .article-single .post-content .inner .copy ol .row .col-lg-5 .text-container li, .article-single .post-content .hero.home-hero .inner .copy ol .row .col-lg-5 .text-container li {
   opacity: 0;
 }
 
-.hero.home-hero .row .col-md-6 {
+@media (min-width: 550px) and (max-width: 767px) {
+  .hero.home-hero .inner .row .col-lg-5 .text-container .copy p, .hero.home-hero .article-single .post-content .inner .copy ul .row .col-lg-5 .text-container li p, .article-single .post-content .hero.home-hero .inner .copy ul .row .col-lg-5 .text-container li p, .hero.home-hero .article-single .post-content .inner .copy ol .row .col-lg-5 .text-container li p, .article-single .post-content .hero.home-hero .inner .copy ol .row .col-lg-5 .text-container li p {
+    margin: 2rem auto;
+  }
+}
+
+.hero.home-hero .inner .row .col-md-6 {
   order: 1;
 }
 
 @media (min-width: 768px) {
-  .hero.home-hero .row .col-md-6 {
+  .hero.home-hero .inner .row .col-md-6 {
     order: 2;
   }
 }
 
-.hero.home-hero .row .col-md-6 .image-container {
+.hero.home-hero .inner .row .col-md-6 .image-container {
   opacity: 0;
   transform: translateY(20%);
 }
 
-.hero.home-hero .row .col-md-6 .image-container.animate {
+@media (max-width: 767.98px) {
+  .hero.home-hero .inner .row .col-md-6 .image-container {
+    max-width: 50rem;
+    margin: 0 auto;
+  }
+}
+
+.hero.home-hero .inner .row .col-md-6 .image-container.animate {
   -webkit-animation-name: animateIn;
           animation-name: animateIn;
   -webkit-animation-duration: 800ms;
@@ -11738,6 +11757,18 @@ a.btn:hover, .woocommerce-cart #content .return-to-shop a.button:hover, body.woo
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@media (min-width: 768px) {
+  .hero.home-hero .inner .row .col-md-6 .image-container img {
+    width: 190%;
+  }
+}
+
+@media (min-width: 992px) {
+  .hero.home-hero .inner .row .col-md-6 .image-container img {
+    width: 100%;
   }
 }
 
@@ -11933,7 +11964,7 @@ a.btn:hover, .woocommerce-cart #content .return-to-shop a.button:hover, body.woo
 }
 
 @media (min-width: 768px) {
-  .hero .inner .text-container .btns-wrapper .btn, .hero .inner .text-container .btns-wrapper .woocommerce-cart #content .return-to-shop .button, .woocommerce-cart #content .return-to-shop .hero .inner .text-container .btns-wrapper .button, .hero .inner .text-container .btns-wrapper body.woocommerce-account #content .woocommerce .woocommerce-form-login .woocommerce-button, body.woocommerce-account #content .woocommerce .woocommerce-form-login .hero .inner .text-container .btns-wrapper .woocommerce-button, .hero .inner .text-container .btns-wrapper body.woocommerce-edit-address .woocommerce-address-fields .button, body.woocommerce-edit-address .woocommerce-address-fields .hero .inner .text-container .btns-wrapper .button, .hero .inner .text-container .btns-wrapper body.woocommerce-edit-account .woocommerce-EditAccountForm .button, body.woocommerce-edit-account .woocommerce-EditAccountForm .hero .inner .text-container .btns-wrapper .button, .hero .inner .text-container .btns-wrapper .woocommerce-ResetPassword .button, .woocommerce-ResetPassword .hero .inner .text-container .btns-wrapper .button {
+  .hero .inner .text-container .btns-wrapper .btn, .hero .inner .text-container .btns-wrapper #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form button, #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form .hero .inner .text-container .btns-wrapper button, .hero .inner .text-container .btns-wrapper .woocommerce-cart #content .return-to-shop .button, .woocommerce-cart #content .return-to-shop .hero .inner .text-container .btns-wrapper .button, .hero .inner .text-container .btns-wrapper body.woocommerce-account #content .woocommerce .woocommerce-form-login .woocommerce-button, body.woocommerce-account #content .woocommerce .woocommerce-form-login .hero .inner .text-container .btns-wrapper .woocommerce-button, .hero .inner .text-container .btns-wrapper body.woocommerce-edit-address .woocommerce-address-fields .button, body.woocommerce-edit-address .woocommerce-address-fields .hero .inner .text-container .btns-wrapper .button, .hero .inner .text-container .btns-wrapper body.woocommerce-edit-account .woocommerce-EditAccountForm .button, body.woocommerce-edit-account .woocommerce-EditAccountForm .hero .inner .text-container .btns-wrapper .button, .hero .inner .text-container .btns-wrapper .woocommerce-ResetPassword .button, .woocommerce-ResetPassword .hero .inner .text-container .btns-wrapper .button {
     width: 32rem;
   }
 }
@@ -12002,13 +12033,13 @@ a.btn:hover, .woocommerce-cart #content .return-to-shop a.button:hover, body.woo
 
 @media (min-width: 768px) {
   .hero.secondary {
-    height: 50vh;
+    height: 65vw;
   }
 }
 
 @media (min-width: 992px) {
   .hero.secondary {
-    height: 75vh;
+    height: 46.667vw;
   }
 }
 
@@ -12028,8 +12059,14 @@ a.btn:hover, .woocommerce-cart #content .return-to-shop a.button:hover, body.woo
   display: flex;
   align-items: center;
   margin-bottom: 0;
-  padding: 6rem 3rem;
+  padding: 6rem 3rem 3rem;
   text-align: left;
+}
+
+@media (min-width: 500px) {
+  .hero.secondary .inner .row .text-container {
+    padding: 10rem 3rem 5rem;
+  }
 }
 
 @media (min-width: 768px) {
@@ -12061,6 +12098,12 @@ a.btn:hover, .woocommerce-cart #content .return-to-shop a.button:hover, body.woo
 
 .hero.secondary .inner .row .img-container {
   margin-top: -7.7rem;
+}
+
+@media (max-width: 767.98px) {
+  .hero.secondary .inner .row .img-container {
+    height: 50rem;
+  }
 }
 
 @media (min-width: 768px) {
@@ -12164,6 +12207,13 @@ a.btn:hover, .woocommerce-cart #content .return-to-shop a.button:hover, body.woo
   text-align: center;
 }
 
+@media (max-width: 767.98px) {
+  .module-wrapper.product-intro-module .module-padded .image-wrapper {
+    max-width: 50rem;
+    margin: 0 auto;
+  }
+}
+
 .module-wrapper.product-intro-module .module-padded .image-wrapper img {
   width: 100%;
   height: auto;
@@ -12204,6 +12254,13 @@ a.btn:hover, .woocommerce-cart #content .return-to-shop a.button:hover, body.woo
   }
   .module-wrapper.product-intro-module .module-padded .product-data .data-block:last-child {
     margin-bottom: 0;
+  }
+}
+
+@media (min-width: 550px) and (max-width: 991px) {
+  .module-wrapper.product-intro-module .module-padded .product-data .data-block {
+    max-width: 75%;
+    margin: 0 auto 3rem;
   }
 }
 
@@ -12292,12 +12349,12 @@ a.btn:hover, .woocommerce-cart #content .return-to-shop a.button:hover, body.woo
   opacity: 1;
 }
 
-.grid.text .btn, .grid.text .woocommerce-cart #content .return-to-shop .button, .woocommerce-cart #content .return-to-shop .grid.text .button, .grid.text body.woocommerce-account #content .woocommerce .woocommerce-form-login .woocommerce-button, body.woocommerce-account #content .woocommerce .woocommerce-form-login .grid.text .woocommerce-button, .grid.text body.woocommerce-edit-address .woocommerce-address-fields .button, body.woocommerce-edit-address .woocommerce-address-fields .grid.text .button, .grid.text body.woocommerce-edit-account .woocommerce-EditAccountForm .button, body.woocommerce-edit-account .woocommerce-EditAccountForm .grid.text .button, .grid.text .woocommerce-ResetPassword .button, .woocommerce-ResetPassword .grid.text .button {
+.grid.text .btn, .grid.text #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form button, #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form .grid.text button, .grid.text .woocommerce-cart #content .return-to-shop .button, .woocommerce-cart #content .return-to-shop .grid.text .button, .grid.text body.woocommerce-account #content .woocommerce .woocommerce-form-login .woocommerce-button, body.woocommerce-account #content .woocommerce .woocommerce-form-login .grid.text .woocommerce-button, .grid.text body.woocommerce-edit-address .woocommerce-address-fields .button, body.woocommerce-edit-address .woocommerce-address-fields .grid.text .button, .grid.text body.woocommerce-edit-account .woocommerce-EditAccountForm .button, body.woocommerce-edit-account .woocommerce-EditAccountForm .grid.text .button, .grid.text .woocommerce-ResetPassword .button, .woocommerce-ResetPassword .grid.text .button {
   margin-top: 3rem;
 }
 
 @media (min-width: 768px) {
-  .grid.text .btn, .grid.text .woocommerce-cart #content .return-to-shop .button, .woocommerce-cart #content .return-to-shop .grid.text .button, .grid.text body.woocommerce-account #content .woocommerce .woocommerce-form-login .woocommerce-button, body.woocommerce-account #content .woocommerce .woocommerce-form-login .grid.text .woocommerce-button, .grid.text body.woocommerce-edit-address .woocommerce-address-fields .button, body.woocommerce-edit-address .woocommerce-address-fields .grid.text .button, .grid.text body.woocommerce-edit-account .woocommerce-EditAccountForm .button, body.woocommerce-edit-account .woocommerce-EditAccountForm .grid.text .button, .grid.text .woocommerce-ResetPassword .button, .woocommerce-ResetPassword .grid.text .button {
+  .grid.text .btn, .grid.text #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form button, #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form .grid.text button, .grid.text .woocommerce-cart #content .return-to-shop .button, .woocommerce-cart #content .return-to-shop .grid.text .button, .grid.text body.woocommerce-account #content .woocommerce .woocommerce-form-login .woocommerce-button, body.woocommerce-account #content .woocommerce .woocommerce-form-login .grid.text .woocommerce-button, .grid.text body.woocommerce-edit-address .woocommerce-address-fields .button, body.woocommerce-edit-address .woocommerce-address-fields .grid.text .button, .grid.text body.woocommerce-edit-account .woocommerce-EditAccountForm .button, body.woocommerce-edit-account .woocommerce-EditAccountForm .grid.text .button, .grid.text .woocommerce-ResetPassword .button, .woocommerce-ResetPassword .grid.text .button {
     margin-top: 5rem;
   }
 }
@@ -12536,7 +12593,14 @@ a.btn:hover, .woocommerce-cart #content .return-to-shop a.button:hover, body.woo
 }
 
 .grid.article .row .card-container {
-  margin-bottom: 30px;
+  margin-bottom: 3rem;
+}
+
+@media (max-width: 767.98px) {
+  .grid.article .row .card-container {
+    max-width: 50rem;
+    margin: 0 auto 3rem;
+  }
 }
 
 @media (min-width: 768px) {
@@ -12635,7 +12699,7 @@ a.browse-all {
   }
 }
 
-.rte .text-container .btn, .rte .text-container .woocommerce-cart #content .return-to-shop .button, .woocommerce-cart #content .return-to-shop .rte .text-container .button, .rte .text-container body.woocommerce-account #content .woocommerce .woocommerce-form-login .woocommerce-button, body.woocommerce-account #content .woocommerce .woocommerce-form-login .rte .text-container .woocommerce-button, .rte .text-container body.woocommerce-edit-address .woocommerce-address-fields .button, body.woocommerce-edit-address .woocommerce-address-fields .rte .text-container .button, .rte .text-container body.woocommerce-edit-account .woocommerce-EditAccountForm .button, body.woocommerce-edit-account .woocommerce-EditAccountForm .rte .text-container .button, .rte .text-container .woocommerce-ResetPassword .button, .woocommerce-ResetPassword .rte .text-container .button {
+.rte .text-container .btn, .rte .text-container #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form button, #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form .rte .text-container button, .rte .text-container .woocommerce-cart #content .return-to-shop .button, .woocommerce-cart #content .return-to-shop .rte .text-container .button, .rte .text-container body.woocommerce-account #content .woocommerce .woocommerce-form-login .woocommerce-button, body.woocommerce-account #content .woocommerce .woocommerce-form-login .rte .text-container .woocommerce-button, .rte .text-container body.woocommerce-edit-address .woocommerce-address-fields .button, body.woocommerce-edit-address .woocommerce-address-fields .rte .text-container .button, .rte .text-container body.woocommerce-edit-account .woocommerce-EditAccountForm .button, body.woocommerce-edit-account .woocommerce-EditAccountForm .rte .text-container .button, .rte .text-container .woocommerce-ResetPassword .button, .woocommerce-ResetPassword .rte .text-container .button {
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
 }
@@ -12676,7 +12740,7 @@ a.browse-all {
   letter-spacing: 1.6px;
 }
 
-.rte .text-container .copy .btn:parent, .article-single .post-content .inner .copy ul .rte .text-container li .btn:parent, .article-single .post-content .inner .copy ol .rte .text-container li .btn:parent, .rte .text-container .copy .woocommerce-cart #content .return-to-shop .button:parent, .woocommerce-cart #content .return-to-shop .rte .text-container .copy .button:parent, .article-single .post-content .inner .copy ul .rte .text-container li .woocommerce-cart #content .return-to-shop .button:parent, .woocommerce-cart #content .return-to-shop .article-single .post-content .inner .copy ul .rte .text-container li .button:parent, .article-single .post-content .inner .copy ol .rte .text-container li .woocommerce-cart #content .return-to-shop .button:parent, .woocommerce-cart #content .return-to-shop .article-single .post-content .inner .copy ol .rte .text-container li .button:parent, .rte .text-container .copy body.woocommerce-account #content .woocommerce .woocommerce-form-login .woocommerce-button:parent, body.woocommerce-account #content .woocommerce .woocommerce-form-login .rte .text-container .copy .woocommerce-button:parent, .article-single .post-content .inner .copy ul .rte .text-container li body.woocommerce-account #content .woocommerce .woocommerce-form-login .woocommerce-button:parent, body.woocommerce-account #content .woocommerce .woocommerce-form-login .article-single .post-content .inner .copy ul .rte .text-container li .woocommerce-button:parent, .article-single .post-content .inner .copy ol .rte .text-container li body.woocommerce-account #content .woocommerce .woocommerce-form-login .woocommerce-button:parent, body.woocommerce-account #content .woocommerce .woocommerce-form-login .article-single .post-content .inner .copy ol .rte .text-container li .woocommerce-button:parent, .rte .text-container .copy body.woocommerce-edit-address .woocommerce-address-fields .button:parent, body.woocommerce-edit-address .woocommerce-address-fields .rte .text-container .copy .button:parent, .article-single .post-content .inner .copy ul .rte .text-container li body.woocommerce-edit-address .woocommerce-address-fields .button:parent, body.woocommerce-edit-address .woocommerce-address-fields .article-single .post-content .inner .copy ul .rte .text-container li .button:parent, .article-single .post-content .inner .copy ol .rte .text-container li body.woocommerce-edit-address .woocommerce-address-fields .button:parent, body.woocommerce-edit-address .woocommerce-address-fields .article-single .post-content .inner .copy ol .rte .text-container li .button:parent, .rte .text-container .copy body.woocommerce-edit-account .woocommerce-EditAccountForm .button:parent, body.woocommerce-edit-account .woocommerce-EditAccountForm .rte .text-container .copy .button:parent, .article-single .post-content .inner .copy ul .rte .text-container li body.woocommerce-edit-account .woocommerce-EditAccountForm .button:parent, body.woocommerce-edit-account .woocommerce-EditAccountForm .article-single .post-content .inner .copy ul .rte .text-container li .button:parent, .article-single .post-content .inner .copy ol .rte .text-container li body.woocommerce-edit-account .woocommerce-EditAccountForm .button:parent, body.woocommerce-edit-account .woocommerce-EditAccountForm .article-single .post-content .inner .copy ol .rte .text-container li .button:parent, .rte .text-container .copy .woocommerce-ResetPassword .button:parent, .woocommerce-ResetPassword .rte .text-container .copy .button:parent, .article-single .post-content .inner .copy ul .rte .text-container li .woocommerce-ResetPassword .button:parent, .woocommerce-ResetPassword .article-single .post-content .inner .copy ul .rte .text-container li .button:parent, .article-single .post-content .inner .copy ol .rte .text-container li .woocommerce-ResetPassword .button:parent, .woocommerce-ResetPassword .article-single .post-content .inner .copy ol .rte .text-container li .button:parent {
+.rte .text-container .copy .btn:parent, .article-single .post-content .inner .copy ul .rte .text-container li .btn:parent, .article-single .post-content .inner .copy ol .rte .text-container li .btn:parent, .rte .text-container .copy #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form button:parent, #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form .rte .text-container .copy button:parent, .article-single .post-content .inner .copy ul .rte .text-container li #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form button:parent, #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form .article-single .post-content .inner .copy ul .rte .text-container li button:parent, .article-single .post-content .inner .copy ol .rte .text-container li #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form button:parent, #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form .article-single .post-content .inner .copy ol .rte .text-container li button:parent, .rte .text-container .copy .woocommerce-cart #content .return-to-shop .button:parent, .woocommerce-cart #content .return-to-shop .rte .text-container .copy .button:parent, .article-single .post-content .inner .copy ul .rte .text-container li .woocommerce-cart #content .return-to-shop .button:parent, .woocommerce-cart #content .return-to-shop .article-single .post-content .inner .copy ul .rte .text-container li .button:parent, .article-single .post-content .inner .copy ol .rte .text-container li .woocommerce-cart #content .return-to-shop .button:parent, .woocommerce-cart #content .return-to-shop .article-single .post-content .inner .copy ol .rte .text-container li .button:parent, .rte .text-container .copy body.woocommerce-account #content .woocommerce .woocommerce-form-login .woocommerce-button:parent, body.woocommerce-account #content .woocommerce .woocommerce-form-login .rte .text-container .copy .woocommerce-button:parent, .article-single .post-content .inner .copy ul .rte .text-container li body.woocommerce-account #content .woocommerce .woocommerce-form-login .woocommerce-button:parent, body.woocommerce-account #content .woocommerce .woocommerce-form-login .article-single .post-content .inner .copy ul .rte .text-container li .woocommerce-button:parent, .article-single .post-content .inner .copy ol .rte .text-container li body.woocommerce-account #content .woocommerce .woocommerce-form-login .woocommerce-button:parent, body.woocommerce-account #content .woocommerce .woocommerce-form-login .article-single .post-content .inner .copy ol .rte .text-container li .woocommerce-button:parent, .rte .text-container .copy body.woocommerce-edit-address .woocommerce-address-fields .button:parent, body.woocommerce-edit-address .woocommerce-address-fields .rte .text-container .copy .button:parent, .article-single .post-content .inner .copy ul .rte .text-container li body.woocommerce-edit-address .woocommerce-address-fields .button:parent, body.woocommerce-edit-address .woocommerce-address-fields .article-single .post-content .inner .copy ul .rte .text-container li .button:parent, .article-single .post-content .inner .copy ol .rte .text-container li body.woocommerce-edit-address .woocommerce-address-fields .button:parent, body.woocommerce-edit-address .woocommerce-address-fields .article-single .post-content .inner .copy ol .rte .text-container li .button:parent, .rte .text-container .copy body.woocommerce-edit-account .woocommerce-EditAccountForm .button:parent, body.woocommerce-edit-account .woocommerce-EditAccountForm .rte .text-container .copy .button:parent, .article-single .post-content .inner .copy ul .rte .text-container li body.woocommerce-edit-account .woocommerce-EditAccountForm .button:parent, body.woocommerce-edit-account .woocommerce-EditAccountForm .article-single .post-content .inner .copy ul .rte .text-container li .button:parent, .article-single .post-content .inner .copy ol .rte .text-container li body.woocommerce-edit-account .woocommerce-EditAccountForm .button:parent, body.woocommerce-edit-account .woocommerce-EditAccountForm .article-single .post-content .inner .copy ol .rte .text-container li .button:parent, .rte .text-container .copy .woocommerce-ResetPassword .button:parent, .woocommerce-ResetPassword .rte .text-container .copy .button:parent, .article-single .post-content .inner .copy ul .rte .text-container li .woocommerce-ResetPassword .button:parent, .woocommerce-ResetPassword .article-single .post-content .inner .copy ul .rte .text-container li .button:parent, .article-single .post-content .inner .copy ol .rte .text-container li .woocommerce-ResetPassword .button:parent, .woocommerce-ResetPassword .article-single .post-content .inner .copy ol .rte .text-container li .button:parent {
   opacity: 1;
 }
 
@@ -12816,17 +12880,51 @@ a.browse-all {
   }
 }
 
+@media (min-width: 768px) {
+  .rte.fiftyfifty .image-container {
+    height: 40rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .rte.fiftyfifty .image-container {
+    height: auto;
+  }
+}
+
+.rte.fiftyfifty .image-container .image-inner {
+  height: 100%;
+}
+
 .rte.fiftyfifty .image-container img {
   width: calc(100% + 3rem);
-  height: auto;
   position: relative;
+  height: 25rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media (min-width: 550px) and (max-width: 767px) {
+  .rte.fiftyfifty .image-container img {
+    height: 35rem;
+  }
 }
 
 @media (min-width: 768px) {
   .rte.fiftyfifty .image-container img {
     width: 100%;
+    height: 100%;
     position: static;
     left: -1.5rem;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
+
+@media (min-width: 992px) {
+  .rte.fiftyfifty .image-container img {
+    -o-object-fit: contain;
+       object-fit: contain;
   }
 }
 
@@ -12842,6 +12940,13 @@ a.browse-all {
 
 .rte.fiftyfifty .text-container .text-inner {
   padding: 7.5rem 3.5rem;
+}
+
+@media (max-width: 767.98px) {
+  .rte.fiftyfifty .text-container .text-inner {
+    max-width: 50rem;
+    margin: 0 auto;
+  }
 }
 
 @media (min-width: 768px) {
@@ -12863,11 +12968,17 @@ a.browse-all {
 }
 
 .rte.fiftyfifty .text-container .text-inner h3 {
-  margin-bottom: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 992px) {
+  .rte.fiftyfifty .text-container .text-inner h3 {
+    margin-bottom: 2.5rem;
+  }
 }
 
 .rte.fiftyfifty .text-container .text-inner .copy, .rte.fiftyfifty .text-container .text-inner .article-single .post-content .inner .copy ul li, .article-single .post-content .inner .copy ul .rte.fiftyfifty .text-container .text-inner li, .rte.fiftyfifty .text-container .text-inner .article-single .post-content .inner .copy ol li, .article-single .post-content .inner .copy ol .rte.fiftyfifty .text-container .text-inner li {
-  margin-bottom: 0;
+  margin: 0;
 }
 
 @media (min-width: 768px) {
@@ -12886,7 +12997,13 @@ a.browse-all {
 }
 
 .rte.fiftyfifty.type-multi .text-container {
-  padding: 3.6rem 5rem;
+  padding: 5rem;
+}
+
+@media (min-width: 768px) {
+  .rte.fiftyfifty.type-multi .text-container {
+    padding: 3.6rem 5rem;
+  }
 }
 
 @media (min-width: 992px) {
@@ -12902,6 +13019,13 @@ a.browse-all {
 @media (min-width: 768px) {
   .rte.fiftyfifty.type-multi .image-container {
     overflow-y: hidden;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .rte.fiftyfifty.type-multi .image-container {
+    height: auto;
+    align-self: stretch;
   }
 }
 
@@ -13264,26 +13388,27 @@ a.browse-all {
   font-family: "Sharp Sans Bold";
 }
 
-.list-module .text-wrapper .inner .btn-wrapper .btn, .list-module .text-wrapper .inner .btn-wrapper .woocommerce-cart #content .return-to-shop .button, .woocommerce-cart #content .return-to-shop .list-module .text-wrapper .inner .btn-wrapper .button, .list-module .text-wrapper .inner .btn-wrapper body.woocommerce-account #content .woocommerce .woocommerce-form-login .woocommerce-button, body.woocommerce-account #content .woocommerce .woocommerce-form-login .list-module .text-wrapper .inner .btn-wrapper .woocommerce-button, .list-module .text-wrapper .inner .btn-wrapper body.woocommerce-edit-address .woocommerce-address-fields .button, body.woocommerce-edit-address .woocommerce-address-fields .list-module .text-wrapper .inner .btn-wrapper .button, .list-module .text-wrapper .inner .btn-wrapper body.woocommerce-edit-account .woocommerce-EditAccountForm .button, body.woocommerce-edit-account .woocommerce-EditAccountForm .list-module .text-wrapper .inner .btn-wrapper .button, .list-module .text-wrapper .inner .btn-wrapper .woocommerce-ResetPassword .button, .woocommerce-ResetPassword .list-module .text-wrapper .inner .btn-wrapper .button {
+.list-module .text-wrapper .inner .btn-wrapper .btn, .list-module .text-wrapper .inner .btn-wrapper #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form button, #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form .list-module .text-wrapper .inner .btn-wrapper button, .list-module .text-wrapper .inner .btn-wrapper .woocommerce-cart #content .return-to-shop .button, .woocommerce-cart #content .return-to-shop .list-module .text-wrapper .inner .btn-wrapper .button, .list-module .text-wrapper .inner .btn-wrapper body.woocommerce-account #content .woocommerce .woocommerce-form-login .woocommerce-button, body.woocommerce-account #content .woocommerce .woocommerce-form-login .list-module .text-wrapper .inner .btn-wrapper .woocommerce-button, .list-module .text-wrapper .inner .btn-wrapper body.woocommerce-edit-address .woocommerce-address-fields .button, body.woocommerce-edit-address .woocommerce-address-fields .list-module .text-wrapper .inner .btn-wrapper .button, .list-module .text-wrapper .inner .btn-wrapper body.woocommerce-edit-account .woocommerce-EditAccountForm .button, body.woocommerce-edit-account .woocommerce-EditAccountForm .list-module .text-wrapper .inner .btn-wrapper .button, .list-module .text-wrapper .inner .btn-wrapper .woocommerce-ResetPassword .button, .woocommerce-ResetPassword .list-module .text-wrapper .inner .btn-wrapper .button {
   width: 37rem;
-  margin-bottom: 3rem;
+  margin: 0 auto 3rem;
+  display: block;
   opacity: 0;
   transform: translateY(10px);
   transition: all ease 300ms;
 }
 
 @media (min-width: 1440px) {
-  .list-module .text-wrapper .inner .btn-wrapper .btn, .list-module .text-wrapper .inner .btn-wrapper .woocommerce-cart #content .return-to-shop .button, .woocommerce-cart #content .return-to-shop .list-module .text-wrapper .inner .btn-wrapper .button, .list-module .text-wrapper .inner .btn-wrapper body.woocommerce-account #content .woocommerce .woocommerce-form-login .woocommerce-button, body.woocommerce-account #content .woocommerce .woocommerce-form-login .list-module .text-wrapper .inner .btn-wrapper .woocommerce-button, .list-module .text-wrapper .inner .btn-wrapper body.woocommerce-edit-address .woocommerce-address-fields .button, body.woocommerce-edit-address .woocommerce-address-fields .list-module .text-wrapper .inner .btn-wrapper .button, .list-module .text-wrapper .inner .btn-wrapper body.woocommerce-edit-account .woocommerce-EditAccountForm .button, body.woocommerce-edit-account .woocommerce-EditAccountForm .list-module .text-wrapper .inner .btn-wrapper .button, .list-module .text-wrapper .inner .btn-wrapper .woocommerce-ResetPassword .button, .woocommerce-ResetPassword .list-module .text-wrapper .inner .btn-wrapper .button {
+  .list-module .text-wrapper .inner .btn-wrapper .btn, .list-module .text-wrapper .inner .btn-wrapper #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form button, #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form .list-module .text-wrapper .inner .btn-wrapper button, .list-module .text-wrapper .inner .btn-wrapper .woocommerce-cart #content .return-to-shop .button, .woocommerce-cart #content .return-to-shop .list-module .text-wrapper .inner .btn-wrapper .button, .list-module .text-wrapper .inner .btn-wrapper body.woocommerce-account #content .woocommerce .woocommerce-form-login .woocommerce-button, body.woocommerce-account #content .woocommerce .woocommerce-form-login .list-module .text-wrapper .inner .btn-wrapper .woocommerce-button, .list-module .text-wrapper .inner .btn-wrapper body.woocommerce-edit-address .woocommerce-address-fields .button, body.woocommerce-edit-address .woocommerce-address-fields .list-module .text-wrapper .inner .btn-wrapper .button, .list-module .text-wrapper .inner .btn-wrapper body.woocommerce-edit-account .woocommerce-EditAccountForm .button, body.woocommerce-edit-account .woocommerce-EditAccountForm .list-module .text-wrapper .inner .btn-wrapper .button, .list-module .text-wrapper .inner .btn-wrapper .woocommerce-ResetPassword .button, .woocommerce-ResetPassword .list-module .text-wrapper .inner .btn-wrapper .button {
     width: 25.694vw;
   }
 }
 
-.list-module .text-wrapper .inner .btn-wrapper .btn.active, .list-module .text-wrapper .inner .btn-wrapper .woocommerce-cart #content .return-to-shop .active.button, .woocommerce-cart #content .return-to-shop .list-module .text-wrapper .inner .btn-wrapper .active.button, .list-module .text-wrapper .inner .btn-wrapper body.woocommerce-account #content .woocommerce .woocommerce-form-login .active.woocommerce-button, body.woocommerce-account #content .woocommerce .woocommerce-form-login .list-module .text-wrapper .inner .btn-wrapper .active.woocommerce-button, .list-module .text-wrapper .inner .btn-wrapper body.woocommerce-edit-address .woocommerce-address-fields .active.button, body.woocommerce-edit-address .woocommerce-address-fields .list-module .text-wrapper .inner .btn-wrapper .active.button, .list-module .text-wrapper .inner .btn-wrapper body.woocommerce-edit-account .woocommerce-EditAccountForm .active.button, body.woocommerce-edit-account .woocommerce-EditAccountForm .list-module .text-wrapper .inner .btn-wrapper .active.button, .list-module .text-wrapper .inner .btn-wrapper .woocommerce-ResetPassword .active.button, .woocommerce-ResetPassword .list-module .text-wrapper .inner .btn-wrapper .active.button {
+.list-module .text-wrapper .inner .btn-wrapper .btn.active, .list-module .text-wrapper .inner .btn-wrapper #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form button.active, #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form .list-module .text-wrapper .inner .btn-wrapper button.active, .list-module .text-wrapper .inner .btn-wrapper .woocommerce-cart #content .return-to-shop .active.button, .woocommerce-cart #content .return-to-shop .list-module .text-wrapper .inner .btn-wrapper .active.button, .list-module .text-wrapper .inner .btn-wrapper body.woocommerce-account #content .woocommerce .woocommerce-form-login .active.woocommerce-button, body.woocommerce-account #content .woocommerce .woocommerce-form-login .list-module .text-wrapper .inner .btn-wrapper .active.woocommerce-button, .list-module .text-wrapper .inner .btn-wrapper body.woocommerce-edit-address .woocommerce-address-fields .active.button, body.woocommerce-edit-address .woocommerce-address-fields .list-module .text-wrapper .inner .btn-wrapper .active.button, .list-module .text-wrapper .inner .btn-wrapper body.woocommerce-edit-account .woocommerce-EditAccountForm .active.button, body.woocommerce-edit-account .woocommerce-EditAccountForm .list-module .text-wrapper .inner .btn-wrapper .active.button, .list-module .text-wrapper .inner .btn-wrapper .woocommerce-ResetPassword .active.button, .woocommerce-ResetPassword .list-module .text-wrapper .inner .btn-wrapper .active.button {
   opacity: 1;
   transform: translateY(0);
 }
 
-.list-module .text-wrapper .inner .btn-wrapper .btn:last-child, .list-module .text-wrapper .inner .btn-wrapper .woocommerce-cart #content .return-to-shop .button:last-child, .woocommerce-cart #content .return-to-shop .list-module .text-wrapper .inner .btn-wrapper .button:last-child, .list-module .text-wrapper .inner .btn-wrapper body.woocommerce-account #content .woocommerce .woocommerce-form-login .woocommerce-button:last-child, body.woocommerce-account #content .woocommerce .woocommerce-form-login .list-module .text-wrapper .inner .btn-wrapper .woocommerce-button:last-child, .list-module .text-wrapper .inner .btn-wrapper body.woocommerce-edit-address .woocommerce-address-fields .button:last-child, body.woocommerce-edit-address .woocommerce-address-fields .list-module .text-wrapper .inner .btn-wrapper .button:last-child, .list-module .text-wrapper .inner .btn-wrapper body.woocommerce-edit-account .woocommerce-EditAccountForm .button:last-child, body.woocommerce-edit-account .woocommerce-EditAccountForm .list-module .text-wrapper .inner .btn-wrapper .button:last-child, .list-module .text-wrapper .inner .btn-wrapper .woocommerce-ResetPassword .button:last-child, .woocommerce-ResetPassword .list-module .text-wrapper .inner .btn-wrapper .button:last-child {
+.list-module .text-wrapper .inner .btn-wrapper .btn:last-child, .list-module .text-wrapper .inner .btn-wrapper #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form button:last-child, #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form .list-module .text-wrapper .inner .btn-wrapper button:last-child, .list-module .text-wrapper .inner .btn-wrapper .woocommerce-cart #content .return-to-shop .button:last-child, .woocommerce-cart #content .return-to-shop .list-module .text-wrapper .inner .btn-wrapper .button:last-child, .list-module .text-wrapper .inner .btn-wrapper body.woocommerce-account #content .woocommerce .woocommerce-form-login .woocommerce-button:last-child, body.woocommerce-account #content .woocommerce .woocommerce-form-login .list-module .text-wrapper .inner .btn-wrapper .woocommerce-button:last-child, .list-module .text-wrapper .inner .btn-wrapper body.woocommerce-edit-address .woocommerce-address-fields .button:last-child, body.woocommerce-edit-address .woocommerce-address-fields .list-module .text-wrapper .inner .btn-wrapper .button:last-child, .list-module .text-wrapper .inner .btn-wrapper body.woocommerce-edit-account .woocommerce-EditAccountForm .button:last-child, body.woocommerce-edit-account .woocommerce-EditAccountForm .list-module .text-wrapper .inner .btn-wrapper .button:last-child, .list-module .text-wrapper .inner .btn-wrapper .woocommerce-ResetPassword .button:last-child, .woocommerce-ResetPassword .list-module .text-wrapper .inner .btn-wrapper .button:last-child {
   margin-bottom: 0;
 }
 
@@ -13293,7 +13418,7 @@ a.browse-all {
   overflow: hidden;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 680px) {
   #waitlistModal .modal-dialog {
     max-width: 80%;
     height: auto;
@@ -13304,7 +13429,7 @@ a.browse-all {
 #waitlistModal .modal-dialog .modal-content {
   background-color: #F9F1E7;
   border: none;
-  padding: 3rem;
+  padding: 5rem 3rem;
 }
 
 #waitlistModal .modal-dialog .modal-content .modal-body {
@@ -13316,10 +13441,27 @@ a.browse-all {
   background: none;
   font-size: 4rem;
   z-index: 3;
+  position: absolute;
+  right: -1rem;
+  top: -5rem;
+}
+
+@media (min-width: 768px) {
+  #waitlistModal .modal-dialog .modal-content .modal-body button {
+    right: 0;
+  }
+}
+
+@media (min-width: 992px) {
+  #waitlistModal .modal-dialog .modal-content .modal-body button {
+    right: unset;
+    left: 0;
+  }
 }
 
 #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded {
   padding: 0;
+  max-width: 100%;
 }
 
 #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .img {
@@ -13327,6 +13469,12 @@ a.browse-all {
 }
 
 @media (min-width: 768px) {
+  #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .img {
+    display: block;
+  }
+}
+
+@media (min-width: 992px) {
   #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .img {
     display: flex;
     justify-content: center;
@@ -13337,6 +13485,45 @@ a.browse-all {
     width: 100%;
     height: auto;
   }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .img img {
+    position: absolute;
+    width: 200%;
+    height: auto;
+    left: -80%;
+  }
+}
+
+#waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form {
+  max-width: 50rem;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form {
+    flex: 0 0 55%;
+    max-width: 55%;
+    margin: 0 0 0 40%;
+  }
+}
+
+@media (min-width: 992px) {
+  #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form {
+    flex: 0 0 50%;
+    max-width: 50%;
+    margin: 0;
+  }
+}
+
+#waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form h2 {
+  margin-bottom: 0;
+}
+
+#waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form button {
+  margin-bottom: 0;
+  top: 0;
 }
 
 #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .tag {
@@ -13418,7 +13605,7 @@ a.browse-all {
   height: 1.6rem;
 }
 
-.card .btn.expand, .card .woocommerce-cart #content .return-to-shop .expand.button, .woocommerce-cart #content .return-to-shop .card .expand.button, .card body.woocommerce-account #content .woocommerce .woocommerce-form-login .expand.woocommerce-button, body.woocommerce-account #content .woocommerce .woocommerce-form-login .card .expand.woocommerce-button, .card body.woocommerce-edit-address .woocommerce-address-fields .expand.button, body.woocommerce-edit-address .woocommerce-address-fields .card .expand.button, .card body.woocommerce-edit-account .woocommerce-EditAccountForm .expand.button, body.woocommerce-edit-account .woocommerce-EditAccountForm .card .expand.button, .card .woocommerce-ResetPassword .expand.button, .woocommerce-ResetPassword .card .expand.button {
+.card .btn.expand, .card #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form button.expand, #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form .card button.expand, .card .woocommerce-cart #content .return-to-shop .expand.button, .woocommerce-cart #content .return-to-shop .card .expand.button, .card body.woocommerce-account #content .woocommerce .woocommerce-form-login .expand.woocommerce-button, body.woocommerce-account #content .woocommerce .woocommerce-form-login .card .expand.woocommerce-button, .card body.woocommerce-edit-address .woocommerce-address-fields .expand.button, body.woocommerce-edit-address .woocommerce-address-fields .card .expand.button, .card body.woocommerce-edit-account .woocommerce-EditAccountForm .expand.button, body.woocommerce-edit-account .woocommerce-EditAccountForm .card .expand.button, .card .woocommerce-ResetPassword .expand.button, .woocommerce-ResetPassword .card .expand.button {
   color: #fff;
   position: absolute;
   right: 0;
@@ -13428,7 +13615,7 @@ a.browse-all {
   border-radius: 0px 0px 4px 0px;
 }
 
-.card .btn.full, .card .woocommerce-cart #content .return-to-shop .full.button, .woocommerce-cart #content .return-to-shop .card .full.button, .card body.woocommerce-account #content .woocommerce .woocommerce-form-login .full.woocommerce-button, body.woocommerce-account #content .woocommerce .woocommerce-form-login .card .full.woocommerce-button, .card body.woocommerce-edit-address .woocommerce-address-fields .full.button, body.woocommerce-edit-address .woocommerce-address-fields .card .full.button, .card body.woocommerce-edit-account .woocommerce-EditAccountForm .full.button, body.woocommerce-edit-account .woocommerce-EditAccountForm .card .full.button, .card .woocommerce-ResetPassword .full.button, .woocommerce-ResetPassword .card .full.button {
+.card .btn.full, .card #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form button.full, #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form .card button.full, .card .woocommerce-cart #content .return-to-shop .full.button, .woocommerce-cart #content .return-to-shop .card .full.button, .card body.woocommerce-account #content .woocommerce .woocommerce-form-login .full.woocommerce-button, body.woocommerce-account #content .woocommerce .woocommerce-form-login .card .full.woocommerce-button, .card body.woocommerce-edit-address .woocommerce-address-fields .full.button, body.woocommerce-edit-address .woocommerce-address-fields .card .full.button, .card body.woocommerce-edit-account .woocommerce-EditAccountForm .full.button, body.woocommerce-edit-account .woocommerce-EditAccountForm .card .full.button, .card .woocommerce-ResetPassword .full.button, .woocommerce-ResetPassword .card .full.button {
   position: absolute;
   right: 0;
   bottom: 0;
@@ -13437,12 +13624,12 @@ a.browse-all {
   border-radius: 0 0 .4rem 0;
 }
 
-.card .btn.full span, .card .woocommerce-cart #content .return-to-shop .full.button span, .woocommerce-cart #content .return-to-shop .card .full.button span, .card body.woocommerce-account #content .woocommerce .woocommerce-form-login .full.woocommerce-button span, body.woocommerce-account #content .woocommerce .woocommerce-form-login .card .full.woocommerce-button span, .card body.woocommerce-edit-address .woocommerce-address-fields .full.button span, body.woocommerce-edit-address .woocommerce-address-fields .card .full.button span, .card body.woocommerce-edit-account .woocommerce-EditAccountForm .full.button span, body.woocommerce-edit-account .woocommerce-EditAccountForm .card .full.button span, .card .woocommerce-ResetPassword .full.button span, .woocommerce-ResetPassword .card .full.button span {
+.card .btn.full span, .card #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form button.full span, #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form .card button.full span, .card .woocommerce-cart #content .return-to-shop .full.button span, .woocommerce-cart #content .return-to-shop .card .full.button span, .card body.woocommerce-account #content .woocommerce .woocommerce-form-login .full.woocommerce-button span, body.woocommerce-account #content .woocommerce .woocommerce-form-login .card .full.woocommerce-button span, .card body.woocommerce-edit-address .woocommerce-address-fields .full.button span, body.woocommerce-edit-address .woocommerce-address-fields .card .full.button span, .card body.woocommerce-edit-account .woocommerce-EditAccountForm .full.button span, body.woocommerce-edit-account .woocommerce-EditAccountForm .card .full.button span, .card .woocommerce-ResetPassword .full.button span, .woocommerce-ResetPassword .card .full.button span {
   margin: 0 1.5rem;
   margin: 0 1.5rem;
 }
 
-.card .btn.full svg.arrow, .card .woocommerce-cart #content .return-to-shop .full.button svg.arrow, .woocommerce-cart #content .return-to-shop .card .full.button svg.arrow, .card body.woocommerce-account #content .woocommerce .woocommerce-form-login .full.woocommerce-button svg.arrow, body.woocommerce-account #content .woocommerce .woocommerce-form-login .card .full.woocommerce-button svg.arrow, .card body.woocommerce-edit-address .woocommerce-address-fields .full.button svg.arrow, body.woocommerce-edit-address .woocommerce-address-fields .card .full.button svg.arrow, .card body.woocommerce-edit-account .woocommerce-EditAccountForm .full.button svg.arrow, body.woocommerce-edit-account .woocommerce-EditAccountForm .card .full.button svg.arrow, .card .woocommerce-ResetPassword .full.button svg.arrow, .woocommerce-ResetPassword .card .full.button svg.arrow {
+.card .btn.full svg.arrow, .card #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form button.full svg.arrow, #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form .card button.full svg.arrow, .card .woocommerce-cart #content .return-to-shop .full.button svg.arrow, .woocommerce-cart #content .return-to-shop .card .full.button svg.arrow, .card body.woocommerce-account #content .woocommerce .woocommerce-form-login .full.woocommerce-button svg.arrow, body.woocommerce-account #content .woocommerce .woocommerce-form-login .card .full.woocommerce-button svg.arrow, .card body.woocommerce-edit-address .woocommerce-address-fields .full.button svg.arrow, body.woocommerce-edit-address .woocommerce-address-fields .card .full.button svg.arrow, .card body.woocommerce-edit-account .woocommerce-EditAccountForm .full.button svg.arrow, body.woocommerce-edit-account .woocommerce-EditAccountForm .card .full.button svg.arrow, .card .woocommerce-ResetPassword .full.button svg.arrow, .woocommerce-ResetPassword .card .full.button svg.arrow {
   fill: #fff;
 }
 
@@ -13727,7 +13914,7 @@ form .form-group .form-control.error {
   border: 2px solid #FF5D21;
 }
 
-form .btn-wrapper .btn, form .btn-wrapper .woocommerce-cart #content .return-to-shop .button, .woocommerce-cart #content .return-to-shop form .btn-wrapper .button, form .btn-wrapper body.woocommerce-account #content .woocommerce .woocommerce-form-login .woocommerce-button, body.woocommerce-account #content .woocommerce .woocommerce-form-login form .btn-wrapper .woocommerce-button, form .btn-wrapper body.woocommerce-edit-address .woocommerce-address-fields .button, body.woocommerce-edit-address .woocommerce-address-fields form .btn-wrapper .button, form .btn-wrapper body.woocommerce-edit-account .woocommerce-EditAccountForm .button, body.woocommerce-edit-account .woocommerce-EditAccountForm form .btn-wrapper .button, form .btn-wrapper .woocommerce-ResetPassword .button, .woocommerce-ResetPassword form .btn-wrapper .button {
+form .btn-wrapper .btn, form .btn-wrapper #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form button, #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form form .btn-wrapper button, form .btn-wrapper .woocommerce-cart #content .return-to-shop .button, .woocommerce-cart #content .return-to-shop form .btn-wrapper .button, form .btn-wrapper body.woocommerce-account #content .woocommerce .woocommerce-form-login .woocommerce-button, body.woocommerce-account #content .woocommerce .woocommerce-form-login form .btn-wrapper .woocommerce-button, form .btn-wrapper body.woocommerce-edit-address .woocommerce-address-fields .button, body.woocommerce-edit-address .woocommerce-address-fields form .btn-wrapper .button, form .btn-wrapper body.woocommerce-edit-account .woocommerce-EditAccountForm .button, body.woocommerce-edit-account .woocommerce-EditAccountForm form .btn-wrapper .button, form .btn-wrapper .woocommerce-ResetPassword .button, .woocommerce-ResetPassword form .btn-wrapper .button {
   margin: 0 auto;
 }
 
@@ -14256,6 +14443,8 @@ form .btn-wrapper .btn, form .btn-wrapper .woocommerce-cart #content .return-to-
 @media (max-width: 767.98px) {
   #waitList .module-padded .row .img {
     padding: 0;
+    max-width: 50rem;
+    margin: 0 auto;
   }
 }
 
@@ -14264,9 +14453,20 @@ form .btn-wrapper .btn, form .btn-wrapper .woocommerce-cart #content .return-to-
   height: auto;
 }
 
+@media (min-width: 767px) and (max-width: 991px) {
+  #waitList .module-padded .row .img img {
+    height: 100vw;
+    max-height: 90rem;
+    width: auto;
+    margin-left: -50vw;
+  }
+}
+
 @media (max-width: 767.98px) {
   #waitList .module-padded .row .form {
     padding: 0;
+    max-width: 50rem;
+    margin: 0 auto;
   }
 }
 
@@ -14304,23 +14504,7 @@ form .btn-wrapper .btn, form .btn-wrapper .woocommerce-cart #content .return-to-
 
 @media (min-width: 1440px) {
   #waitList .module-padded .tag {
-    margin-left: -30%;
-  }
-}
-
-#waitList .waitlist-curve {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  transform: translate(-1px, 36.2%);
-  z-index: 2;
-  width: 50%;
-  display: none;
-}
-
-@media (min-width: 992px) {
-  #waitList .waitlist-curve {
-    display: block;
+    margin-left: -50%;
   }
 }
 
@@ -14359,7 +14543,7 @@ form .btn-wrapper .btn, form .btn-wrapper .woocommerce-cart #content .return-to-
   }
 }
 
-#form-success-pane .inner .btn, #form-success-pane .inner .woocommerce-cart #content .return-to-shop .button, .woocommerce-cart #content .return-to-shop #form-success-pane .inner .button, #form-success-pane .inner body.woocommerce-account #content .woocommerce .woocommerce-form-login .woocommerce-button, body.woocommerce-account #content .woocommerce .woocommerce-form-login #form-success-pane .inner .woocommerce-button, #form-success-pane .inner body.woocommerce-edit-address .woocommerce-address-fields .button, body.woocommerce-edit-address .woocommerce-address-fields #form-success-pane .inner .button, #form-success-pane .inner body.woocommerce-edit-account .woocommerce-EditAccountForm .button, body.woocommerce-edit-account .woocommerce-EditAccountForm #form-success-pane .inner .button, #form-success-pane .inner .woocommerce-ResetPassword .button, .woocommerce-ResetPassword #form-success-pane .inner .button {
+#form-success-pane .inner .btn, #form-success-pane .inner #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form button, #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form #form-success-pane .inner button, #form-success-pane .inner .woocommerce-cart #content .return-to-shop .button, .woocommerce-cart #content .return-to-shop #form-success-pane .inner .button, #form-success-pane .inner body.woocommerce-account #content .woocommerce .woocommerce-form-login .woocommerce-button, body.woocommerce-account #content .woocommerce .woocommerce-form-login #form-success-pane .inner .woocommerce-button, #form-success-pane .inner body.woocommerce-edit-address .woocommerce-address-fields .button, body.woocommerce-edit-address .woocommerce-address-fields #form-success-pane .inner .button, #form-success-pane .inner body.woocommerce-edit-account .woocommerce-EditAccountForm .button, body.woocommerce-edit-account .woocommerce-EditAccountForm #form-success-pane .inner .button, #form-success-pane .inner .woocommerce-ResetPassword .button, .woocommerce-ResetPassword #form-success-pane .inner .button {
   opacity: 0;
 }
 
@@ -14430,7 +14614,7 @@ form .btn-wrapper .btn, form .btn-wrapper .woocommerce-cart #content .return-to-
   margin-bottom: 0;
 }
 
-.share-module .text-wrapper .social-sharing li .btn, .share-module .text-wrapper .social-sharing li .woocommerce-cart #content .return-to-shop .button, .woocommerce-cart #content .return-to-shop .share-module .text-wrapper .social-sharing li .button, .share-module .text-wrapper .social-sharing li body.woocommerce-account #content .woocommerce .woocommerce-form-login .woocommerce-button, body.woocommerce-account #content .woocommerce .woocommerce-form-login .share-module .text-wrapper .social-sharing li .woocommerce-button, .share-module .text-wrapper .social-sharing li body.woocommerce-edit-address .woocommerce-address-fields .button, body.woocommerce-edit-address .woocommerce-address-fields .share-module .text-wrapper .social-sharing li .button, .share-module .text-wrapper .social-sharing li body.woocommerce-edit-account .woocommerce-EditAccountForm .button, body.woocommerce-edit-account .woocommerce-EditAccountForm .share-module .text-wrapper .social-sharing li .button, .share-module .text-wrapper .social-sharing li .woocommerce-ResetPassword .button, .woocommerce-ResetPassword .share-module .text-wrapper .social-sharing li .button {
+.share-module .text-wrapper .social-sharing li .btn, .share-module .text-wrapper .social-sharing li #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form button, #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form .share-module .text-wrapper .social-sharing li button, .share-module .text-wrapper .social-sharing li .woocommerce-cart #content .return-to-shop .button, .woocommerce-cart #content .return-to-shop .share-module .text-wrapper .social-sharing li .button, .share-module .text-wrapper .social-sharing li body.woocommerce-account #content .woocommerce .woocommerce-form-login .woocommerce-button, body.woocommerce-account #content .woocommerce .woocommerce-form-login .share-module .text-wrapper .social-sharing li .woocommerce-button, .share-module .text-wrapper .social-sharing li body.woocommerce-edit-address .woocommerce-address-fields .button, body.woocommerce-edit-address .woocommerce-address-fields .share-module .text-wrapper .social-sharing li .button, .share-module .text-wrapper .social-sharing li body.woocommerce-edit-account .woocommerce-EditAccountForm .button, body.woocommerce-edit-account .woocommerce-EditAccountForm .share-module .text-wrapper .social-sharing li .button, .share-module .text-wrapper .social-sharing li .woocommerce-ResetPassword .button, .woocommerce-ResetPassword .share-module .text-wrapper .social-sharing li .button {
   width: 36rem;
   justify-content: flex-start;
   position: relative;
@@ -14438,12 +14622,12 @@ form .btn-wrapper .btn, form .btn-wrapper .woocommerce-cart #content .return-to-
 }
 
 @media (min-width: 1440px) {
-  .share-module .text-wrapper .social-sharing li .btn, .share-module .text-wrapper .social-sharing li .woocommerce-cart #content .return-to-shop .button, .woocommerce-cart #content .return-to-shop .share-module .text-wrapper .social-sharing li .button, .share-module .text-wrapper .social-sharing li body.woocommerce-account #content .woocommerce .woocommerce-form-login .woocommerce-button, body.woocommerce-account #content .woocommerce .woocommerce-form-login .share-module .text-wrapper .social-sharing li .woocommerce-button, .share-module .text-wrapper .social-sharing li body.woocommerce-edit-address .woocommerce-address-fields .button, body.woocommerce-edit-address .woocommerce-address-fields .share-module .text-wrapper .social-sharing li .button, .share-module .text-wrapper .social-sharing li body.woocommerce-edit-account .woocommerce-EditAccountForm .button, body.woocommerce-edit-account .woocommerce-EditAccountForm .share-module .text-wrapper .social-sharing li .button, .share-module .text-wrapper .social-sharing li .woocommerce-ResetPassword .button, .woocommerce-ResetPassword .share-module .text-wrapper .social-sharing li .button {
+  .share-module .text-wrapper .social-sharing li .btn, .share-module .text-wrapper .social-sharing li #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form button, #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form .share-module .text-wrapper .social-sharing li button, .share-module .text-wrapper .social-sharing li .woocommerce-cart #content .return-to-shop .button, .woocommerce-cart #content .return-to-shop .share-module .text-wrapper .social-sharing li .button, .share-module .text-wrapper .social-sharing li body.woocommerce-account #content .woocommerce .woocommerce-form-login .woocommerce-button, body.woocommerce-account #content .woocommerce .woocommerce-form-login .share-module .text-wrapper .social-sharing li .woocommerce-button, .share-module .text-wrapper .social-sharing li body.woocommerce-edit-address .woocommerce-address-fields .button, body.woocommerce-edit-address .woocommerce-address-fields .share-module .text-wrapper .social-sharing li .button, .share-module .text-wrapper .social-sharing li body.woocommerce-edit-account .woocommerce-EditAccountForm .button, body.woocommerce-edit-account .woocommerce-EditAccountForm .share-module .text-wrapper .social-sharing li .button, .share-module .text-wrapper .social-sharing li .woocommerce-ResetPassword .button, .woocommerce-ResetPassword .share-module .text-wrapper .social-sharing li .button {
     width: 25.694vw;
   }
 }
 
-.share-module .text-wrapper .social-sharing li .btn:after, .share-module .text-wrapper .social-sharing li .woocommerce-cart #content .return-to-shop .button:after, .woocommerce-cart #content .return-to-shop .share-module .text-wrapper .social-sharing li .button:after, .share-module .text-wrapper .social-sharing li body.woocommerce-account #content .woocommerce .woocommerce-form-login .woocommerce-button:after, body.woocommerce-account #content .woocommerce .woocommerce-form-login .share-module .text-wrapper .social-sharing li .woocommerce-button:after, .share-module .text-wrapper .social-sharing li body.woocommerce-edit-address .woocommerce-address-fields .button:after, body.woocommerce-edit-address .woocommerce-address-fields .share-module .text-wrapper .social-sharing li .button:after, .share-module .text-wrapper .social-sharing li body.woocommerce-edit-account .woocommerce-EditAccountForm .button:after, body.woocommerce-edit-account .woocommerce-EditAccountForm .share-module .text-wrapper .social-sharing li .button:after, .share-module .text-wrapper .social-sharing li .woocommerce-ResetPassword .button:after, .woocommerce-ResetPassword .share-module .text-wrapper .social-sharing li .button:after {
+.share-module .text-wrapper .social-sharing li .btn:after, .share-module .text-wrapper .social-sharing li #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form button:after, #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form .share-module .text-wrapper .social-sharing li button:after, .share-module .text-wrapper .social-sharing li .woocommerce-cart #content .return-to-shop .button:after, .woocommerce-cart #content .return-to-shop .share-module .text-wrapper .social-sharing li .button:after, .share-module .text-wrapper .social-sharing li body.woocommerce-account #content .woocommerce .woocommerce-form-login .woocommerce-button:after, body.woocommerce-account #content .woocommerce .woocommerce-form-login .share-module .text-wrapper .social-sharing li .woocommerce-button:after, .share-module .text-wrapper .social-sharing li body.woocommerce-edit-address .woocommerce-address-fields .button:after, body.woocommerce-edit-address .woocommerce-address-fields .share-module .text-wrapper .social-sharing li .button:after, .share-module .text-wrapper .social-sharing li body.woocommerce-edit-account .woocommerce-EditAccountForm .button:after, body.woocommerce-edit-account .woocommerce-EditAccountForm .share-module .text-wrapper .social-sharing li .button:after, .share-module .text-wrapper .social-sharing li .woocommerce-ResetPassword .button:after, .woocommerce-ResetPassword .share-module .text-wrapper .social-sharing li .button:after {
   content: "";
   width: .1rem;
   height: 60%;
@@ -14454,7 +14638,7 @@ form .btn-wrapper .btn, form .btn-wrapper .woocommerce-cart #content .return-to-
   transition: all ease 300ms;
 }
 
-.share-module .text-wrapper .social-sharing li .btn .btn-hover-mask, .share-module .text-wrapper .social-sharing li .woocommerce-cart #content .return-to-shop .button .btn-hover-mask, .woocommerce-cart #content .return-to-shop .share-module .text-wrapper .social-sharing li .button .btn-hover-mask, .share-module .text-wrapper .social-sharing li body.woocommerce-account #content .woocommerce .woocommerce-form-login .woocommerce-button .btn-hover-mask, body.woocommerce-account #content .woocommerce .woocommerce-form-login .share-module .text-wrapper .social-sharing li .woocommerce-button .btn-hover-mask, .share-module .text-wrapper .social-sharing li body.woocommerce-edit-address .woocommerce-address-fields .button .btn-hover-mask, body.woocommerce-edit-address .woocommerce-address-fields .share-module .text-wrapper .social-sharing li .button .btn-hover-mask, .share-module .text-wrapper .social-sharing li body.woocommerce-edit-account .woocommerce-EditAccountForm .button .btn-hover-mask, body.woocommerce-edit-account .woocommerce-EditAccountForm .share-module .text-wrapper .social-sharing li .button .btn-hover-mask, .share-module .text-wrapper .social-sharing li .woocommerce-ResetPassword .button .btn-hover-mask, .woocommerce-ResetPassword .share-module .text-wrapper .social-sharing li .button .btn-hover-mask {
+.share-module .text-wrapper .social-sharing li .btn .btn-hover-mask, .share-module .text-wrapper .social-sharing li #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form button .btn-hover-mask, #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form .share-module .text-wrapper .social-sharing li button .btn-hover-mask, .share-module .text-wrapper .social-sharing li .woocommerce-cart #content .return-to-shop .button .btn-hover-mask, .woocommerce-cart #content .return-to-shop .share-module .text-wrapper .social-sharing li .button .btn-hover-mask, .share-module .text-wrapper .social-sharing li body.woocommerce-account #content .woocommerce .woocommerce-form-login .woocommerce-button .btn-hover-mask, body.woocommerce-account #content .woocommerce .woocommerce-form-login .share-module .text-wrapper .social-sharing li .woocommerce-button .btn-hover-mask, .share-module .text-wrapper .social-sharing li body.woocommerce-edit-address .woocommerce-address-fields .button .btn-hover-mask, body.woocommerce-edit-address .woocommerce-address-fields .share-module .text-wrapper .social-sharing li .button .btn-hover-mask, .share-module .text-wrapper .social-sharing li body.woocommerce-edit-account .woocommerce-EditAccountForm .button .btn-hover-mask, body.woocommerce-edit-account .woocommerce-EditAccountForm .share-module .text-wrapper .social-sharing li .button .btn-hover-mask, .share-module .text-wrapper .social-sharing li .woocommerce-ResetPassword .button .btn-hover-mask, .woocommerce-ResetPassword .share-module .text-wrapper .social-sharing li .button .btn-hover-mask {
   -webkit-clip-path: circle(0.1px at 50% 50%);
           clip-path: circle(0.1px at 50% 50%);
   background-color: #9A1D1D;
@@ -14468,50 +14652,50 @@ form .btn-wrapper .btn, form .btn-wrapper .woocommerce-cart #content .return-to-
 }
 
 @media all and (-ms-high-contrast: none) {
-  .share-module .text-wrapper .social-sharing li .btn .btn-hover-mask, .share-module .text-wrapper .social-sharing li .woocommerce-cart #content .return-to-shop .button .btn-hover-mask, .woocommerce-cart #content .return-to-shop .share-module .text-wrapper .social-sharing li .button .btn-hover-mask, .share-module .text-wrapper .social-sharing li body.woocommerce-account #content .woocommerce .woocommerce-form-login .woocommerce-button .btn-hover-mask, body.woocommerce-account #content .woocommerce .woocommerce-form-login .share-module .text-wrapper .social-sharing li .woocommerce-button .btn-hover-mask, .share-module .text-wrapper .social-sharing li body.woocommerce-edit-address .woocommerce-address-fields .button .btn-hover-mask, body.woocommerce-edit-address .woocommerce-address-fields .share-module .text-wrapper .social-sharing li .button .btn-hover-mask, .share-module .text-wrapper .social-sharing li body.woocommerce-edit-account .woocommerce-EditAccountForm .button .btn-hover-mask, body.woocommerce-edit-account .woocommerce-EditAccountForm .share-module .text-wrapper .social-sharing li .button .btn-hover-mask, .share-module .text-wrapper .social-sharing li .woocommerce-ResetPassword .button .btn-hover-mask, .woocommerce-ResetPassword .share-module .text-wrapper .social-sharing li .button .btn-hover-mask {
+  .share-module .text-wrapper .social-sharing li .btn .btn-hover-mask, .share-module .text-wrapper .social-sharing li #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form button .btn-hover-mask, #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form .share-module .text-wrapper .social-sharing li button .btn-hover-mask, .share-module .text-wrapper .social-sharing li .woocommerce-cart #content .return-to-shop .button .btn-hover-mask, .woocommerce-cart #content .return-to-shop .share-module .text-wrapper .social-sharing li .button .btn-hover-mask, .share-module .text-wrapper .social-sharing li body.woocommerce-account #content .woocommerce .woocommerce-form-login .woocommerce-button .btn-hover-mask, body.woocommerce-account #content .woocommerce .woocommerce-form-login .share-module .text-wrapper .social-sharing li .woocommerce-button .btn-hover-mask, .share-module .text-wrapper .social-sharing li body.woocommerce-edit-address .woocommerce-address-fields .button .btn-hover-mask, body.woocommerce-edit-address .woocommerce-address-fields .share-module .text-wrapper .social-sharing li .button .btn-hover-mask, .share-module .text-wrapper .social-sharing li body.woocommerce-edit-account .woocommerce-EditAccountForm .button .btn-hover-mask, body.woocommerce-edit-account .woocommerce-EditAccountForm .share-module .text-wrapper .social-sharing li .button .btn-hover-mask, .share-module .text-wrapper .social-sharing li .woocommerce-ResetPassword .button .btn-hover-mask, .woocommerce-ResetPassword .share-module .text-wrapper .social-sharing li .button .btn-hover-mask {
     -webkit-clip-path: none;
             clip-path: none;
     display: none;
   }
 }
 
-.share-module .text-wrapper .social-sharing li .btn span, .share-module .text-wrapper .social-sharing li .woocommerce-cart #content .return-to-shop .button span, .woocommerce-cart #content .return-to-shop .share-module .text-wrapper .social-sharing li .button span, .share-module .text-wrapper .social-sharing li body.woocommerce-account #content .woocommerce .woocommerce-form-login .woocommerce-button span, body.woocommerce-account #content .woocommerce .woocommerce-form-login .share-module .text-wrapper .social-sharing li .woocommerce-button span, .share-module .text-wrapper .social-sharing li body.woocommerce-edit-address .woocommerce-address-fields .button span, body.woocommerce-edit-address .woocommerce-address-fields .share-module .text-wrapper .social-sharing li .button span, .share-module .text-wrapper .social-sharing li body.woocommerce-edit-account .woocommerce-EditAccountForm .button span, body.woocommerce-edit-account .woocommerce-EditAccountForm .share-module .text-wrapper .social-sharing li .button span, .share-module .text-wrapper .social-sharing li .woocommerce-ResetPassword .button span, .woocommerce-ResetPassword .share-module .text-wrapper .social-sharing li .button span {
+.share-module .text-wrapper .social-sharing li .btn span, .share-module .text-wrapper .social-sharing li #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form button span, #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form .share-module .text-wrapper .social-sharing li button span, .share-module .text-wrapper .social-sharing li .woocommerce-cart #content .return-to-shop .button span, .woocommerce-cart #content .return-to-shop .share-module .text-wrapper .social-sharing li .button span, .share-module .text-wrapper .social-sharing li body.woocommerce-account #content .woocommerce .woocommerce-form-login .woocommerce-button span, body.woocommerce-account #content .woocommerce .woocommerce-form-login .share-module .text-wrapper .social-sharing li .woocommerce-button span, .share-module .text-wrapper .social-sharing li body.woocommerce-edit-address .woocommerce-address-fields .button span, body.woocommerce-edit-address .woocommerce-address-fields .share-module .text-wrapper .social-sharing li .button span, .share-module .text-wrapper .social-sharing li body.woocommerce-edit-account .woocommerce-EditAccountForm .button span, body.woocommerce-edit-account .woocommerce-EditAccountForm .share-module .text-wrapper .social-sharing li .button span, .share-module .text-wrapper .social-sharing li .woocommerce-ResetPassword .button span, .woocommerce-ResetPassword .share-module .text-wrapper .social-sharing li .button span {
   left: 0;
 }
 
-.share-module .text-wrapper .social-sharing li .btn.facebook, .share-module .text-wrapper .social-sharing li .woocommerce-cart #content .return-to-shop .facebook.button, .woocommerce-cart #content .return-to-shop .share-module .text-wrapper .social-sharing li .facebook.button, .share-module .text-wrapper .social-sharing li body.woocommerce-account #content .woocommerce .woocommerce-form-login .facebook.woocommerce-button, body.woocommerce-account #content .woocommerce .woocommerce-form-login .share-module .text-wrapper .social-sharing li .facebook.woocommerce-button, .share-module .text-wrapper .social-sharing li body.woocommerce-edit-address .woocommerce-address-fields .facebook.button, body.woocommerce-edit-address .woocommerce-address-fields .share-module .text-wrapper .social-sharing li .facebook.button, .share-module .text-wrapper .social-sharing li body.woocommerce-edit-account .woocommerce-EditAccountForm .facebook.button, body.woocommerce-edit-account .woocommerce-EditAccountForm .share-module .text-wrapper .social-sharing li .facebook.button, .share-module .text-wrapper .social-sharing li .woocommerce-ResetPassword .facebook.button, .woocommerce-ResetPassword .share-module .text-wrapper .social-sharing li .facebook.button {
+.share-module .text-wrapper .social-sharing li .btn.facebook, .share-module .text-wrapper .social-sharing li #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form button.facebook, #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form .share-module .text-wrapper .social-sharing li button.facebook, .share-module .text-wrapper .social-sharing li .woocommerce-cart #content .return-to-shop .facebook.button, .woocommerce-cart #content .return-to-shop .share-module .text-wrapper .social-sharing li .facebook.button, .share-module .text-wrapper .social-sharing li body.woocommerce-account #content .woocommerce .woocommerce-form-login .facebook.woocommerce-button, body.woocommerce-account #content .woocommerce .woocommerce-form-login .share-module .text-wrapper .social-sharing li .facebook.woocommerce-button, .share-module .text-wrapper .social-sharing li body.woocommerce-edit-address .woocommerce-address-fields .facebook.button, body.woocommerce-edit-address .woocommerce-address-fields .share-module .text-wrapper .social-sharing li .facebook.button, .share-module .text-wrapper .social-sharing li body.woocommerce-edit-account .woocommerce-EditAccountForm .facebook.button, body.woocommerce-edit-account .woocommerce-EditAccountForm .share-module .text-wrapper .social-sharing li .facebook.button, .share-module .text-wrapper .social-sharing li .woocommerce-ResetPassword .facebook.button, .woocommerce-ResetPassword .share-module .text-wrapper .social-sharing li .facebook.button {
   background: #507BCA;
 }
 
-.share-module .text-wrapper .social-sharing li .btn.facebook span, .share-module .text-wrapper .social-sharing li .woocommerce-cart #content .return-to-shop .facebook.button span, .woocommerce-cart #content .return-to-shop .share-module .text-wrapper .social-sharing li .facebook.button span, .share-module .text-wrapper .social-sharing li body.woocommerce-account #content .woocommerce .woocommerce-form-login .facebook.woocommerce-button span, body.woocommerce-account #content .woocommerce .woocommerce-form-login .share-module .text-wrapper .social-sharing li .facebook.woocommerce-button span, .share-module .text-wrapper .social-sharing li body.woocommerce-edit-address .woocommerce-address-fields .facebook.button span, body.woocommerce-edit-address .woocommerce-address-fields .share-module .text-wrapper .social-sharing li .facebook.button span, .share-module .text-wrapper .social-sharing li body.woocommerce-edit-account .woocommerce-EditAccountForm .facebook.button span, body.woocommerce-edit-account .woocommerce-EditAccountForm .share-module .text-wrapper .social-sharing li .facebook.button span, .share-module .text-wrapper .social-sharing li .woocommerce-ResetPassword .facebook.button span, .woocommerce-ResetPassword .share-module .text-wrapper .social-sharing li .facebook.button span {
+.share-module .text-wrapper .social-sharing li .btn.facebook span, .share-module .text-wrapper .social-sharing li #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form button.facebook span, #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form .share-module .text-wrapper .social-sharing li button.facebook span, .share-module .text-wrapper .social-sharing li .woocommerce-cart #content .return-to-shop .facebook.button span, .woocommerce-cart #content .return-to-shop .share-module .text-wrapper .social-sharing li .facebook.button span, .share-module .text-wrapper .social-sharing li body.woocommerce-account #content .woocommerce .woocommerce-form-login .facebook.woocommerce-button span, body.woocommerce-account #content .woocommerce .woocommerce-form-login .share-module .text-wrapper .social-sharing li .facebook.woocommerce-button span, .share-module .text-wrapper .social-sharing li body.woocommerce-edit-address .woocommerce-address-fields .facebook.button span, body.woocommerce-edit-address .woocommerce-address-fields .share-module .text-wrapper .social-sharing li .facebook.button span, .share-module .text-wrapper .social-sharing li body.woocommerce-edit-account .woocommerce-EditAccountForm .facebook.button span, body.woocommerce-edit-account .woocommerce-EditAccountForm .share-module .text-wrapper .social-sharing li .facebook.button span, .share-module .text-wrapper .social-sharing li .woocommerce-ResetPassword .facebook.button span, .woocommerce-ResetPassword .share-module .text-wrapper .social-sharing li .facebook.button span {
   left: .5rem;
 }
 
-.share-module .text-wrapper .social-sharing li .btn.facebook:after, .share-module .text-wrapper .social-sharing li .woocommerce-cart #content .return-to-shop .facebook.button:after, .woocommerce-cart #content .return-to-shop .share-module .text-wrapper .social-sharing li .facebook.button:after, .share-module .text-wrapper .social-sharing li body.woocommerce-account #content .woocommerce .woocommerce-form-login .facebook.woocommerce-button:after, body.woocommerce-account #content .woocommerce .woocommerce-form-login .share-module .text-wrapper .social-sharing li .facebook.woocommerce-button:after, .share-module .text-wrapper .social-sharing li body.woocommerce-edit-address .woocommerce-address-fields .facebook.button:after, body.woocommerce-edit-address .woocommerce-address-fields .share-module .text-wrapper .social-sharing li .facebook.button:after, .share-module .text-wrapper .social-sharing li body.woocommerce-edit-account .woocommerce-EditAccountForm .facebook.button:after, body.woocommerce-edit-account .woocommerce-EditAccountForm .share-module .text-wrapper .social-sharing li .facebook.button:after, .share-module .text-wrapper .social-sharing li .woocommerce-ResetPassword .facebook.button:after, .woocommerce-ResetPassword .share-module .text-wrapper .social-sharing li .facebook.button:after {
+.share-module .text-wrapper .social-sharing li .btn.facebook:after, .share-module .text-wrapper .social-sharing li #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form button.facebook:after, #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form .share-module .text-wrapper .social-sharing li button.facebook:after, .share-module .text-wrapper .social-sharing li .woocommerce-cart #content .return-to-shop .facebook.button:after, .woocommerce-cart #content .return-to-shop .share-module .text-wrapper .social-sharing li .facebook.button:after, .share-module .text-wrapper .social-sharing li body.woocommerce-account #content .woocommerce .woocommerce-form-login .facebook.woocommerce-button:after, body.woocommerce-account #content .woocommerce .woocommerce-form-login .share-module .text-wrapper .social-sharing li .facebook.woocommerce-button:after, .share-module .text-wrapper .social-sharing li body.woocommerce-edit-address .woocommerce-address-fields .facebook.button:after, body.woocommerce-edit-address .woocommerce-address-fields .share-module .text-wrapper .social-sharing li .facebook.button:after, .share-module .text-wrapper .social-sharing li body.woocommerce-edit-account .woocommerce-EditAccountForm .facebook.button:after, body.woocommerce-edit-account .woocommerce-EditAccountForm .share-module .text-wrapper .social-sharing li .facebook.button:after, .share-module .text-wrapper .social-sharing li .woocommerce-ResetPassword .facebook.button:after, .woocommerce-ResetPassword .share-module .text-wrapper .social-sharing li .facebook.button:after {
   background-color: #2F559D;
 }
 
-.share-module .text-wrapper .social-sharing li .btn.facebook .btn-hover-mask, .share-module .text-wrapper .social-sharing li .woocommerce-cart #content .return-to-shop .facebook.button .btn-hover-mask, .woocommerce-cart #content .return-to-shop .share-module .text-wrapper .social-sharing li .facebook.button .btn-hover-mask, .share-module .text-wrapper .social-sharing li body.woocommerce-account #content .woocommerce .woocommerce-form-login .facebook.woocommerce-button .btn-hover-mask, body.woocommerce-account #content .woocommerce .woocommerce-form-login .share-module .text-wrapper .social-sharing li .facebook.woocommerce-button .btn-hover-mask, .share-module .text-wrapper .social-sharing li body.woocommerce-edit-address .woocommerce-address-fields .facebook.button .btn-hover-mask, body.woocommerce-edit-address .woocommerce-address-fields .share-module .text-wrapper .social-sharing li .facebook.button .btn-hover-mask, .share-module .text-wrapper .social-sharing li body.woocommerce-edit-account .woocommerce-EditAccountForm .facebook.button .btn-hover-mask, body.woocommerce-edit-account .woocommerce-EditAccountForm .share-module .text-wrapper .social-sharing li .facebook.button .btn-hover-mask, .share-module .text-wrapper .social-sharing li .woocommerce-ResetPassword .facebook.button .btn-hover-mask, .woocommerce-ResetPassword .share-module .text-wrapper .social-sharing li .facebook.button .btn-hover-mask {
+.share-module .text-wrapper .social-sharing li .btn.facebook .btn-hover-mask, .share-module .text-wrapper .social-sharing li #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form button.facebook .btn-hover-mask, #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form .share-module .text-wrapper .social-sharing li button.facebook .btn-hover-mask, .share-module .text-wrapper .social-sharing li .woocommerce-cart #content .return-to-shop .facebook.button .btn-hover-mask, .woocommerce-cart #content .return-to-shop .share-module .text-wrapper .social-sharing li .facebook.button .btn-hover-mask, .share-module .text-wrapper .social-sharing li body.woocommerce-account #content .woocommerce .woocommerce-form-login .facebook.woocommerce-button .btn-hover-mask, body.woocommerce-account #content .woocommerce .woocommerce-form-login .share-module .text-wrapper .social-sharing li .facebook.woocommerce-button .btn-hover-mask, .share-module .text-wrapper .social-sharing li body.woocommerce-edit-address .woocommerce-address-fields .facebook.button .btn-hover-mask, body.woocommerce-edit-address .woocommerce-address-fields .share-module .text-wrapper .social-sharing li .facebook.button .btn-hover-mask, .share-module .text-wrapper .social-sharing li body.woocommerce-edit-account .woocommerce-EditAccountForm .facebook.button .btn-hover-mask, body.woocommerce-edit-account .woocommerce-EditAccountForm .share-module .text-wrapper .social-sharing li .facebook.button .btn-hover-mask, .share-module .text-wrapper .social-sharing li .woocommerce-ResetPassword .facebook.button .btn-hover-mask, .woocommerce-ResetPassword .share-module .text-wrapper .social-sharing li .facebook.button .btn-hover-mask {
   background-color: #2F559D;
 }
 
-.share-module .text-wrapper .social-sharing li .btn.twitter, .share-module .text-wrapper .social-sharing li .woocommerce-cart #content .return-to-shop .twitter.button, .woocommerce-cart #content .return-to-shop .share-module .text-wrapper .social-sharing li .twitter.button, .share-module .text-wrapper .social-sharing li body.woocommerce-account #content .woocommerce .woocommerce-form-login .twitter.woocommerce-button, body.woocommerce-account #content .woocommerce .woocommerce-form-login .share-module .text-wrapper .social-sharing li .twitter.woocommerce-button, .share-module .text-wrapper .social-sharing li body.woocommerce-edit-address .woocommerce-address-fields .twitter.button, body.woocommerce-edit-address .woocommerce-address-fields .share-module .text-wrapper .social-sharing li .twitter.button, .share-module .text-wrapper .social-sharing li body.woocommerce-edit-account .woocommerce-EditAccountForm .twitter.button, body.woocommerce-edit-account .woocommerce-EditAccountForm .share-module .text-wrapper .social-sharing li .twitter.button, .share-module .text-wrapper .social-sharing li .woocommerce-ResetPassword .twitter.button, .woocommerce-ResetPassword .share-module .text-wrapper .social-sharing li .twitter.button {
+.share-module .text-wrapper .social-sharing li .btn.twitter, .share-module .text-wrapper .social-sharing li #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form button.twitter, #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form .share-module .text-wrapper .social-sharing li button.twitter, .share-module .text-wrapper .social-sharing li .woocommerce-cart #content .return-to-shop .twitter.button, .woocommerce-cart #content .return-to-shop .share-module .text-wrapper .social-sharing li .twitter.button, .share-module .text-wrapper .social-sharing li body.woocommerce-account #content .woocommerce .woocommerce-form-login .twitter.woocommerce-button, body.woocommerce-account #content .woocommerce .woocommerce-form-login .share-module .text-wrapper .social-sharing li .twitter.woocommerce-button, .share-module .text-wrapper .social-sharing li body.woocommerce-edit-address .woocommerce-address-fields .twitter.button, body.woocommerce-edit-address .woocommerce-address-fields .share-module .text-wrapper .social-sharing li .twitter.button, .share-module .text-wrapper .social-sharing li body.woocommerce-edit-account .woocommerce-EditAccountForm .twitter.button, body.woocommerce-edit-account .woocommerce-EditAccountForm .share-module .text-wrapper .social-sharing li .twitter.button, .share-module .text-wrapper .social-sharing li .woocommerce-ResetPassword .twitter.button, .woocommerce-ResetPassword .share-module .text-wrapper .social-sharing li .twitter.button {
   background: #5BC1F1;
 }
 
-.share-module .text-wrapper .social-sharing li .btn.twitter:after, .share-module .text-wrapper .social-sharing li .woocommerce-cart #content .return-to-shop .twitter.button:after, .woocommerce-cart #content .return-to-shop .share-module .text-wrapper .social-sharing li .twitter.button:after, .share-module .text-wrapper .social-sharing li body.woocommerce-account #content .woocommerce .woocommerce-form-login .twitter.woocommerce-button:after, body.woocommerce-account #content .woocommerce .woocommerce-form-login .share-module .text-wrapper .social-sharing li .twitter.woocommerce-button:after, .share-module .text-wrapper .social-sharing li body.woocommerce-edit-address .woocommerce-address-fields .twitter.button:after, body.woocommerce-edit-address .woocommerce-address-fields .share-module .text-wrapper .social-sharing li .twitter.button:after, .share-module .text-wrapper .social-sharing li body.woocommerce-edit-account .woocommerce-EditAccountForm .twitter.button:after, body.woocommerce-edit-account .woocommerce-EditAccountForm .share-module .text-wrapper .social-sharing li .twitter.button:after, .share-module .text-wrapper .social-sharing li .woocommerce-ResetPassword .twitter.button:after, .woocommerce-ResetPassword .share-module .text-wrapper .social-sharing li .twitter.button:after {
+.share-module .text-wrapper .social-sharing li .btn.twitter:after, .share-module .text-wrapper .social-sharing li #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form button.twitter:after, #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form .share-module .text-wrapper .social-sharing li button.twitter:after, .share-module .text-wrapper .social-sharing li .woocommerce-cart #content .return-to-shop .twitter.button:after, .woocommerce-cart #content .return-to-shop .share-module .text-wrapper .social-sharing li .twitter.button:after, .share-module .text-wrapper .social-sharing li body.woocommerce-account #content .woocommerce .woocommerce-form-login .twitter.woocommerce-button:after, body.woocommerce-account #content .woocommerce .woocommerce-form-login .share-module .text-wrapper .social-sharing li .twitter.woocommerce-button:after, .share-module .text-wrapper .social-sharing li body.woocommerce-edit-address .woocommerce-address-fields .twitter.button:after, body.woocommerce-edit-address .woocommerce-address-fields .share-module .text-wrapper .social-sharing li .twitter.button:after, .share-module .text-wrapper .social-sharing li body.woocommerce-edit-account .woocommerce-EditAccountForm .twitter.button:after, body.woocommerce-edit-account .woocommerce-EditAccountForm .share-module .text-wrapper .social-sharing li .twitter.button:after, .share-module .text-wrapper .social-sharing li .woocommerce-ResetPassword .twitter.button:after, .woocommerce-ResetPassword .share-module .text-wrapper .social-sharing li .twitter.button:after {
   background-color: #14A0E1;
 }
 
-.share-module .text-wrapper .social-sharing li .btn.twitter .btn-hover-mask, .share-module .text-wrapper .social-sharing li .woocommerce-cart #content .return-to-shop .twitter.button .btn-hover-mask, .woocommerce-cart #content .return-to-shop .share-module .text-wrapper .social-sharing li .twitter.button .btn-hover-mask, .share-module .text-wrapper .social-sharing li body.woocommerce-account #content .woocommerce .woocommerce-form-login .twitter.woocommerce-button .btn-hover-mask, body.woocommerce-account #content .woocommerce .woocommerce-form-login .share-module .text-wrapper .social-sharing li .twitter.woocommerce-button .btn-hover-mask, .share-module .text-wrapper .social-sharing li body.woocommerce-edit-address .woocommerce-address-fields .twitter.button .btn-hover-mask, body.woocommerce-edit-address .woocommerce-address-fields .share-module .text-wrapper .social-sharing li .twitter.button .btn-hover-mask, .share-module .text-wrapper .social-sharing li body.woocommerce-edit-account .woocommerce-EditAccountForm .twitter.button .btn-hover-mask, body.woocommerce-edit-account .woocommerce-EditAccountForm .share-module .text-wrapper .social-sharing li .twitter.button .btn-hover-mask, .share-module .text-wrapper .social-sharing li .woocommerce-ResetPassword .twitter.button .btn-hover-mask, .woocommerce-ResetPassword .share-module .text-wrapper .social-sharing li .twitter.button .btn-hover-mask {
+.share-module .text-wrapper .social-sharing li .btn.twitter .btn-hover-mask, .share-module .text-wrapper .social-sharing li #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form button.twitter .btn-hover-mask, #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form .share-module .text-wrapper .social-sharing li button.twitter .btn-hover-mask, .share-module .text-wrapper .social-sharing li .woocommerce-cart #content .return-to-shop .twitter.button .btn-hover-mask, .woocommerce-cart #content .return-to-shop .share-module .text-wrapper .social-sharing li .twitter.button .btn-hover-mask, .share-module .text-wrapper .social-sharing li body.woocommerce-account #content .woocommerce .woocommerce-form-login .twitter.woocommerce-button .btn-hover-mask, body.woocommerce-account #content .woocommerce .woocommerce-form-login .share-module .text-wrapper .social-sharing li .twitter.woocommerce-button .btn-hover-mask, .share-module .text-wrapper .social-sharing li body.woocommerce-edit-address .woocommerce-address-fields .twitter.button .btn-hover-mask, body.woocommerce-edit-address .woocommerce-address-fields .share-module .text-wrapper .social-sharing li .twitter.button .btn-hover-mask, .share-module .text-wrapper .social-sharing li body.woocommerce-edit-account .woocommerce-EditAccountForm .twitter.button .btn-hover-mask, body.woocommerce-edit-account .woocommerce-EditAccountForm .share-module .text-wrapper .social-sharing li .twitter.button .btn-hover-mask, .share-module .text-wrapper .social-sharing li .woocommerce-ResetPassword .twitter.button .btn-hover-mask, .woocommerce-ResetPassword .share-module .text-wrapper .social-sharing li .twitter.button .btn-hover-mask {
   background-color: #14A0E1;
 }
 
-.share-module .text-wrapper .social-sharing li .btn.email:after, .share-module .text-wrapper .social-sharing li .woocommerce-cart #content .return-to-shop .email.button:after, .woocommerce-cart #content .return-to-shop .share-module .text-wrapper .social-sharing li .email.button:after, .share-module .text-wrapper .social-sharing li body.woocommerce-account #content .woocommerce .woocommerce-form-login .email.woocommerce-button:after, body.woocommerce-account #content .woocommerce .woocommerce-form-login .share-module .text-wrapper .social-sharing li .email.woocommerce-button:after, .share-module .text-wrapper .social-sharing li body.woocommerce-edit-address .woocommerce-address-fields .email.button:after, body.woocommerce-edit-address .woocommerce-address-fields .share-module .text-wrapper .social-sharing li .email.button:after, .share-module .text-wrapper .social-sharing li body.woocommerce-edit-account .woocommerce-EditAccountForm .email.button:after, body.woocommerce-edit-account .woocommerce-EditAccountForm .share-module .text-wrapper .social-sharing li .email.button:after, .share-module .text-wrapper .social-sharing li .woocommerce-ResetPassword .email.button:after, .woocommerce-ResetPassword .share-module .text-wrapper .social-sharing li .email.button:after {
+.share-module .text-wrapper .social-sharing li .btn.email:after, .share-module .text-wrapper .social-sharing li #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form button.email:after, #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form .share-module .text-wrapper .social-sharing li button.email:after, .share-module .text-wrapper .social-sharing li .woocommerce-cart #content .return-to-shop .email.button:after, .woocommerce-cart #content .return-to-shop .share-module .text-wrapper .social-sharing li .email.button:after, .share-module .text-wrapper .social-sharing li body.woocommerce-account #content .woocommerce .woocommerce-form-login .email.woocommerce-button:after, body.woocommerce-account #content .woocommerce .woocommerce-form-login .share-module .text-wrapper .social-sharing li .email.woocommerce-button:after, .share-module .text-wrapper .social-sharing li body.woocommerce-edit-address .woocommerce-address-fields .email.button:after, body.woocommerce-edit-address .woocommerce-address-fields .share-module .text-wrapper .social-sharing li .email.button:after, .share-module .text-wrapper .social-sharing li body.woocommerce-edit-account .woocommerce-EditAccountForm .email.button:after, body.woocommerce-edit-account .woocommerce-EditAccountForm .share-module .text-wrapper .social-sharing li .email.button:after, .share-module .text-wrapper .social-sharing li .woocommerce-ResetPassword .email.button:after, .woocommerce-ResetPassword .share-module .text-wrapper .social-sharing li .email.button:after {
   background-color: #9A1D1D;
 }
 
-.share-module .text-wrapper .social-sharing li .btn svg, .share-module .text-wrapper .social-sharing li .woocommerce-cart #content .return-to-shop .button svg, .woocommerce-cart #content .return-to-shop .share-module .text-wrapper .social-sharing li .button svg, .share-module .text-wrapper .social-sharing li body.woocommerce-account #content .woocommerce .woocommerce-form-login .woocommerce-button svg, body.woocommerce-account #content .woocommerce .woocommerce-form-login .share-module .text-wrapper .social-sharing li .woocommerce-button svg, .share-module .text-wrapper .social-sharing li body.woocommerce-edit-address .woocommerce-address-fields .button svg, body.woocommerce-edit-address .woocommerce-address-fields .share-module .text-wrapper .social-sharing li .button svg, .share-module .text-wrapper .social-sharing li body.woocommerce-edit-account .woocommerce-EditAccountForm .button svg, body.woocommerce-edit-account .woocommerce-EditAccountForm .share-module .text-wrapper .social-sharing li .button svg, .share-module .text-wrapper .social-sharing li .woocommerce-ResetPassword .button svg, .woocommerce-ResetPassword .share-module .text-wrapper .social-sharing li .button svg {
+.share-module .text-wrapper .social-sharing li .btn svg, .share-module .text-wrapper .social-sharing li #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form button svg, #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form .share-module .text-wrapper .social-sharing li button svg, .share-module .text-wrapper .social-sharing li .woocommerce-cart #content .return-to-shop .button svg, .woocommerce-cart #content .return-to-shop .share-module .text-wrapper .social-sharing li .button svg, .share-module .text-wrapper .social-sharing li body.woocommerce-account #content .woocommerce .woocommerce-form-login .woocommerce-button svg, body.woocommerce-account #content .woocommerce .woocommerce-form-login .share-module .text-wrapper .social-sharing li .woocommerce-button svg, .share-module .text-wrapper .social-sharing li body.woocommerce-edit-address .woocommerce-address-fields .button svg, body.woocommerce-edit-address .woocommerce-address-fields .share-module .text-wrapper .social-sharing li .button svg, .share-module .text-wrapper .social-sharing li body.woocommerce-edit-account .woocommerce-EditAccountForm .button svg, body.woocommerce-edit-account .woocommerce-EditAccountForm .share-module .text-wrapper .social-sharing li .button svg, .share-module .text-wrapper .social-sharing li .woocommerce-ResetPassword .button svg, .woocommerce-ResetPassword .share-module .text-wrapper .social-sharing li .button svg {
   height: 2.5rem;
   width: auto;
   margin-right: 5rem;
@@ -14520,23 +14704,23 @@ form .btn-wrapper .btn, form .btn-wrapper .woocommerce-cart #content .return-to-
   z-index: 2;
 }
 
-.share-module .text-wrapper .social-sharing li .btn svg.email, .share-module .text-wrapper .social-sharing li .woocommerce-cart #content .return-to-shop .button svg.email, .woocommerce-cart #content .return-to-shop .share-module .text-wrapper .social-sharing li .button svg.email, .share-module .text-wrapper .social-sharing li body.woocommerce-account #content .woocommerce .woocommerce-form-login .woocommerce-button svg.email, body.woocommerce-account #content .woocommerce .woocommerce-form-login .share-module .text-wrapper .social-sharing li .woocommerce-button svg.email, .share-module .text-wrapper .social-sharing li body.woocommerce-edit-address .woocommerce-address-fields .button svg.email, body.woocommerce-edit-address .woocommerce-address-fields .share-module .text-wrapper .social-sharing li .button svg.email, .share-module .text-wrapper .social-sharing li body.woocommerce-edit-account .woocommerce-EditAccountForm .button svg.email, body.woocommerce-edit-account .woocommerce-EditAccountForm .share-module .text-wrapper .social-sharing li .button svg.email, .share-module .text-wrapper .social-sharing li .woocommerce-ResetPassword .button svg.email, .woocommerce-ResetPassword .share-module .text-wrapper .social-sharing li .button svg.email {
+.share-module .text-wrapper .social-sharing li .btn svg.email, .share-module .text-wrapper .social-sharing li #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form button svg.email, #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form .share-module .text-wrapper .social-sharing li button svg.email, .share-module .text-wrapper .social-sharing li .woocommerce-cart #content .return-to-shop .button svg.email, .woocommerce-cart #content .return-to-shop .share-module .text-wrapper .social-sharing li .button svg.email, .share-module .text-wrapper .social-sharing li body.woocommerce-account #content .woocommerce .woocommerce-form-login .woocommerce-button svg.email, body.woocommerce-account #content .woocommerce .woocommerce-form-login .share-module .text-wrapper .social-sharing li .woocommerce-button svg.email, .share-module .text-wrapper .social-sharing li body.woocommerce-edit-address .woocommerce-address-fields .button svg.email, body.woocommerce-edit-address .woocommerce-address-fields .share-module .text-wrapper .social-sharing li .button svg.email, .share-module .text-wrapper .social-sharing li body.woocommerce-edit-account .woocommerce-EditAccountForm .button svg.email, body.woocommerce-edit-account .woocommerce-EditAccountForm .share-module .text-wrapper .social-sharing li .button svg.email, .share-module .text-wrapper .social-sharing li .woocommerce-ResetPassword .button svg.email, .woocommerce-ResetPassword .share-module .text-wrapper .social-sharing li .button svg.email {
   width: 2.5rem;
   height: auto;
 }
 
 @media (min-width: 992px) {
-  .share-module .text-wrapper .social-sharing li .btn:hover:after, .share-module .text-wrapper .social-sharing li .woocommerce-cart #content .return-to-shop .button:hover:after, .woocommerce-cart #content .return-to-shop .share-module .text-wrapper .social-sharing li .button:hover:after, .share-module .text-wrapper .social-sharing li body.woocommerce-account #content .woocommerce .woocommerce-form-login .woocommerce-button:hover:after, body.woocommerce-account #content .woocommerce .woocommerce-form-login .share-module .text-wrapper .social-sharing li .woocommerce-button:hover:after, .share-module .text-wrapper .social-sharing li body.woocommerce-edit-address .woocommerce-address-fields .button:hover:after, body.woocommerce-edit-address .woocommerce-address-fields .share-module .text-wrapper .social-sharing li .button:hover:after, .share-module .text-wrapper .social-sharing li body.woocommerce-edit-account .woocommerce-EditAccountForm .button:hover:after, body.woocommerce-edit-account .woocommerce-EditAccountForm .share-module .text-wrapper .social-sharing li .button:hover:after, .share-module .text-wrapper .social-sharing li .woocommerce-ResetPassword .button:hover:after, .woocommerce-ResetPassword .share-module .text-wrapper .social-sharing li .button:hover:after {
+  .share-module .text-wrapper .social-sharing li .btn:hover:after, .share-module .text-wrapper .social-sharing li #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form button:hover:after, #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form .share-module .text-wrapper .social-sharing li button:hover:after, .share-module .text-wrapper .social-sharing li .woocommerce-cart #content .return-to-shop .button:hover:after, .woocommerce-cart #content .return-to-shop .share-module .text-wrapper .social-sharing li .button:hover:after, .share-module .text-wrapper .social-sharing li body.woocommerce-account #content .woocommerce .woocommerce-form-login .woocommerce-button:hover:after, body.woocommerce-account #content .woocommerce .woocommerce-form-login .share-module .text-wrapper .social-sharing li .woocommerce-button:hover:after, .share-module .text-wrapper .social-sharing li body.woocommerce-edit-address .woocommerce-address-fields .button:hover:after, body.woocommerce-edit-address .woocommerce-address-fields .share-module .text-wrapper .social-sharing li .button:hover:after, .share-module .text-wrapper .social-sharing li body.woocommerce-edit-account .woocommerce-EditAccountForm .button:hover:after, body.woocommerce-edit-account .woocommerce-EditAccountForm .share-module .text-wrapper .social-sharing li .button:hover:after, .share-module .text-wrapper .social-sharing li .woocommerce-ResetPassword .button:hover:after, .woocommerce-ResetPassword .share-module .text-wrapper .social-sharing li .button:hover:after {
     display: none;
   }
-  .share-module .text-wrapper .social-sharing li .btn:hover .btn-hover-mask, .share-module .text-wrapper .social-sharing li .woocommerce-cart #content .return-to-shop .button:hover .btn-hover-mask, .woocommerce-cart #content .return-to-shop .share-module .text-wrapper .social-sharing li .button:hover .btn-hover-mask, .share-module .text-wrapper .social-sharing li body.woocommerce-account #content .woocommerce .woocommerce-form-login .woocommerce-button:hover .btn-hover-mask, body.woocommerce-account #content .woocommerce .woocommerce-form-login .share-module .text-wrapper .social-sharing li .woocommerce-button:hover .btn-hover-mask, .share-module .text-wrapper .social-sharing li body.woocommerce-edit-address .woocommerce-address-fields .button:hover .btn-hover-mask, body.woocommerce-edit-address .woocommerce-address-fields .share-module .text-wrapper .social-sharing li .button:hover .btn-hover-mask, .share-module .text-wrapper .social-sharing li body.woocommerce-edit-account .woocommerce-EditAccountForm .button:hover .btn-hover-mask, body.woocommerce-edit-account .woocommerce-EditAccountForm .share-module .text-wrapper .social-sharing li .button:hover .btn-hover-mask, .share-module .text-wrapper .social-sharing li .woocommerce-ResetPassword .button:hover .btn-hover-mask, .woocommerce-ResetPassword .share-module .text-wrapper .social-sharing li .button:hover .btn-hover-mask {
+  .share-module .text-wrapper .social-sharing li .btn:hover .btn-hover-mask, .share-module .text-wrapper .social-sharing li #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form button:hover .btn-hover-mask, #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form .share-module .text-wrapper .social-sharing li button:hover .btn-hover-mask, .share-module .text-wrapper .social-sharing li .woocommerce-cart #content .return-to-shop .button:hover .btn-hover-mask, .woocommerce-cart #content .return-to-shop .share-module .text-wrapper .social-sharing li .button:hover .btn-hover-mask, .share-module .text-wrapper .social-sharing li body.woocommerce-account #content .woocommerce .woocommerce-form-login .woocommerce-button:hover .btn-hover-mask, body.woocommerce-account #content .woocommerce .woocommerce-form-login .share-module .text-wrapper .social-sharing li .woocommerce-button:hover .btn-hover-mask, .share-module .text-wrapper .social-sharing li body.woocommerce-edit-address .woocommerce-address-fields .button:hover .btn-hover-mask, body.woocommerce-edit-address .woocommerce-address-fields .share-module .text-wrapper .social-sharing li .button:hover .btn-hover-mask, .share-module .text-wrapper .social-sharing li body.woocommerce-edit-account .woocommerce-EditAccountForm .button:hover .btn-hover-mask, body.woocommerce-edit-account .woocommerce-EditAccountForm .share-module .text-wrapper .social-sharing li .button:hover .btn-hover-mask, .share-module .text-wrapper .social-sharing li .woocommerce-ResetPassword .button:hover .btn-hover-mask, .woocommerce-ResetPassword .share-module .text-wrapper .social-sharing li .button:hover .btn-hover-mask {
     -webkit-clip-path: circle(500px at 75% 50%);
             clip-path: circle(500px at 75% 50%);
   }
-  .share-module .text-wrapper .social-sharing li .btn:hover svg, .share-module .text-wrapper .social-sharing li .woocommerce-cart #content .return-to-shop .button:hover svg, .woocommerce-cart #content .return-to-shop .share-module .text-wrapper .social-sharing li .button:hover svg, .share-module .text-wrapper .social-sharing li body.woocommerce-account #content .woocommerce .woocommerce-form-login .woocommerce-button:hover svg, body.woocommerce-account #content .woocommerce .woocommerce-form-login .share-module .text-wrapper .social-sharing li .woocommerce-button:hover svg, .share-module .text-wrapper .social-sharing li body.woocommerce-edit-address .woocommerce-address-fields .button:hover svg, body.woocommerce-edit-address .woocommerce-address-fields .share-module .text-wrapper .social-sharing li .button:hover svg, .share-module .text-wrapper .social-sharing li body.woocommerce-edit-account .woocommerce-EditAccountForm .button:hover svg, body.woocommerce-edit-account .woocommerce-EditAccountForm .share-module .text-wrapper .social-sharing li .button:hover svg, .share-module .text-wrapper .social-sharing li .woocommerce-ResetPassword .button:hover svg, .woocommerce-ResetPassword .share-module .text-wrapper .social-sharing li .button:hover svg {
+  .share-module .text-wrapper .social-sharing li .btn:hover svg, .share-module .text-wrapper .social-sharing li #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form button:hover svg, #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form .share-module .text-wrapper .social-sharing li button:hover svg, .share-module .text-wrapper .social-sharing li .woocommerce-cart #content .return-to-shop .button:hover svg, .woocommerce-cart #content .return-to-shop .share-module .text-wrapper .social-sharing li .button:hover svg, .share-module .text-wrapper .social-sharing li body.woocommerce-account #content .woocommerce .woocommerce-form-login .woocommerce-button:hover svg, body.woocommerce-account #content .woocommerce .woocommerce-form-login .share-module .text-wrapper .social-sharing li .woocommerce-button:hover svg, .share-module .text-wrapper .social-sharing li body.woocommerce-edit-address .woocommerce-address-fields .button:hover svg, body.woocommerce-edit-address .woocommerce-address-fields .share-module .text-wrapper .social-sharing li .button:hover svg, .share-module .text-wrapper .social-sharing li body.woocommerce-edit-account .woocommerce-EditAccountForm .button:hover svg, body.woocommerce-edit-account .woocommerce-EditAccountForm .share-module .text-wrapper .social-sharing li .button:hover svg, .share-module .text-wrapper .social-sharing li .woocommerce-ResetPassword .button:hover svg, .woocommerce-ResetPassword .share-module .text-wrapper .social-sharing li .button:hover svg {
     margin-right: 3.5rem;
   }
-  .share-module .text-wrapper .social-sharing li .btn:hover svg.twitter, .share-module .text-wrapper .social-sharing li .woocommerce-cart #content .return-to-shop .button:hover svg.twitter, .woocommerce-cart #content .return-to-shop .share-module .text-wrapper .social-sharing li .button:hover svg.twitter, .share-module .text-wrapper .social-sharing li body.woocommerce-account #content .woocommerce .woocommerce-form-login .woocommerce-button:hover svg.twitter, body.woocommerce-account #content .woocommerce .woocommerce-form-login .share-module .text-wrapper .social-sharing li .woocommerce-button:hover svg.twitter, .share-module .text-wrapper .social-sharing li body.woocommerce-edit-address .woocommerce-address-fields .button:hover svg.twitter, body.woocommerce-edit-address .woocommerce-address-fields .share-module .text-wrapper .social-sharing li .button:hover svg.twitter, .share-module .text-wrapper .social-sharing li body.woocommerce-edit-account .woocommerce-EditAccountForm .button:hover svg.twitter, body.woocommerce-edit-account .woocommerce-EditAccountForm .share-module .text-wrapper .social-sharing li .button:hover svg.twitter, .share-module .text-wrapper .social-sharing li .woocommerce-ResetPassword .button:hover svg.twitter, .woocommerce-ResetPassword .share-module .text-wrapper .social-sharing li .button:hover svg.twitter, .share-module .text-wrapper .social-sharing li .btn:hover svg.email, .share-module .text-wrapper .social-sharing li .woocommerce-cart #content .return-to-shop .button:hover svg.email, .woocommerce-cart #content .return-to-shop .share-module .text-wrapper .social-sharing li .button:hover svg.email, .share-module .text-wrapper .social-sharing li body.woocommerce-account #content .woocommerce .woocommerce-form-login .woocommerce-button:hover svg.email, body.woocommerce-account #content .woocommerce .woocommerce-form-login .share-module .text-wrapper .social-sharing li .woocommerce-button:hover svg.email, .share-module .text-wrapper .social-sharing li body.woocommerce-edit-address .woocommerce-address-fields .button:hover svg.email, body.woocommerce-edit-address .woocommerce-address-fields .share-module .text-wrapper .social-sharing li .button:hover svg.email, .share-module .text-wrapper .social-sharing li body.woocommerce-edit-account .woocommerce-EditAccountForm .button:hover svg.email, body.woocommerce-edit-account .woocommerce-EditAccountForm .share-module .text-wrapper .social-sharing li .button:hover svg.email, .share-module .text-wrapper .social-sharing li .woocommerce-ResetPassword .button:hover svg.email, .woocommerce-ResetPassword .share-module .text-wrapper .social-sharing li .button:hover svg.email {
+  .share-module .text-wrapper .social-sharing li .btn:hover svg.twitter, .share-module .text-wrapper .social-sharing li #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form button:hover svg.twitter, #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form .share-module .text-wrapper .social-sharing li button:hover svg.twitter, .share-module .text-wrapper .social-sharing li .woocommerce-cart #content .return-to-shop .button:hover svg.twitter, .woocommerce-cart #content .return-to-shop .share-module .text-wrapper .social-sharing li .button:hover svg.twitter, .share-module .text-wrapper .social-sharing li body.woocommerce-account #content .woocommerce .woocommerce-form-login .woocommerce-button:hover svg.twitter, body.woocommerce-account #content .woocommerce .woocommerce-form-login .share-module .text-wrapper .social-sharing li .woocommerce-button:hover svg.twitter, .share-module .text-wrapper .social-sharing li body.woocommerce-edit-address .woocommerce-address-fields .button:hover svg.twitter, body.woocommerce-edit-address .woocommerce-address-fields .share-module .text-wrapper .social-sharing li .button:hover svg.twitter, .share-module .text-wrapper .social-sharing li body.woocommerce-edit-account .woocommerce-EditAccountForm .button:hover svg.twitter, body.woocommerce-edit-account .woocommerce-EditAccountForm .share-module .text-wrapper .social-sharing li .button:hover svg.twitter, .share-module .text-wrapper .social-sharing li .woocommerce-ResetPassword .button:hover svg.twitter, .woocommerce-ResetPassword .share-module .text-wrapper .social-sharing li .button:hover svg.twitter, .share-module .text-wrapper .social-sharing li .btn:hover svg.email, .share-module .text-wrapper .social-sharing li #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form button:hover svg.email, #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form .share-module .text-wrapper .social-sharing li button:hover svg.email, .share-module .text-wrapper .social-sharing li .woocommerce-cart #content .return-to-shop .button:hover svg.email, .woocommerce-cart #content .return-to-shop .share-module .text-wrapper .social-sharing li .button:hover svg.email, .share-module .text-wrapper .social-sharing li body.woocommerce-account #content .woocommerce .woocommerce-form-login .woocommerce-button:hover svg.email, body.woocommerce-account #content .woocommerce .woocommerce-form-login .share-module .text-wrapper .social-sharing li .woocommerce-button:hover svg.email, .share-module .text-wrapper .social-sharing li body.woocommerce-edit-address .woocommerce-address-fields .button:hover svg.email, body.woocommerce-edit-address .woocommerce-address-fields .share-module .text-wrapper .social-sharing li .button:hover svg.email, .share-module .text-wrapper .social-sharing li body.woocommerce-edit-account .woocommerce-EditAccountForm .button:hover svg.email, body.woocommerce-edit-account .woocommerce-EditAccountForm .share-module .text-wrapper .social-sharing li .button:hover svg.email, .share-module .text-wrapper .social-sharing li .woocommerce-ResetPassword .button:hover svg.email, .woocommerce-ResetPassword .share-module .text-wrapper .social-sharing li .button:hover svg.email {
     margin-right: 2.5rem;
   }
 }
@@ -14633,6 +14817,7 @@ form .btn-wrapper .btn, form .btn-wrapper .woocommerce-cart #content .return-to-
 .article-single .hero .inner {
   display: flex;
   justify-content: center;
+  padding-bottom: 3rem;
 }
 
 .article-single .hero .inner h1 {
@@ -14644,6 +14829,10 @@ form .btn-wrapper .btn, form .btn-wrapper .woocommerce-cart #content .return-to-
 .article-single .hero .inner .share-bar-wrapper {
   opacity: 0;
   transform: translateY(10%);
+}
+
+.article-single .hero .inner .share-bar-wrapper .share-bar.sm-share {
+  margin-bottom: 0;
 }
 
 .article-single .post-content {
@@ -14876,7 +15065,7 @@ form .btn-wrapper .btn, form .btn-wrapper .woocommerce-cart #content .return-to-
   }
 }
 
-#content.template-404 .rte .btn, .woocommerce-cart #content.template-404 .rte .return-to-shop .button, .woocommerce-cart #content.template-404 .return-to-shop .rte .button, body.woocommerce-account #content.template-404 .rte .woocommerce .woocommerce-form-login .woocommerce-button, body.woocommerce-account #content.template-404 .woocommerce .woocommerce-form-login .rte .woocommerce-button, #content.template-404 .rte body.woocommerce-edit-address .woocommerce-address-fields .button, body.woocommerce-edit-address .woocommerce-address-fields #content.template-404 .rte .button, #content.template-404 .rte body.woocommerce-edit-account .woocommerce-EditAccountForm .button, body.woocommerce-edit-account .woocommerce-EditAccountForm #content.template-404 .rte .button, #content.template-404 .rte .woocommerce-ResetPassword .button, .woocommerce-ResetPassword #content.template-404 .rte .button {
+#content.template-404 .rte .btn, #content.template-404 .rte #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form button, #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form #content.template-404 .rte button, .woocommerce-cart #content.template-404 .rte .return-to-shop .button, .woocommerce-cart #content.template-404 .return-to-shop .rte .button, body.woocommerce-account #content.template-404 .rte .woocommerce .woocommerce-form-login .woocommerce-button, body.woocommerce-account #content.template-404 .woocommerce .woocommerce-form-login .rte .woocommerce-button, #content.template-404 .rte body.woocommerce-edit-address .woocommerce-address-fields .button, body.woocommerce-edit-address .woocommerce-address-fields #content.template-404 .rte .button, #content.template-404 .rte body.woocommerce-edit-account .woocommerce-EditAccountForm .button, body.woocommerce-edit-account .woocommerce-EditAccountForm #content.template-404 .rte .button, #content.template-404 .rte .woocommerce-ResetPassword .button, .woocommerce-ResetPassword #content.template-404 .rte .button {
   margin: 0 auto;
   flex: 0 0 100%;
 }
@@ -16277,17 +16466,13 @@ body.woocommerce-edit-account .woocommerce-EditAccountForm .button:hover {
   background-color: #9A1D1D !important;
 }
 
-.woocommerce-checkout #container .woocommerce .woocommerce-form-coupon-toggle {
-  display: none;
-}
-
-.woocommerce-checkout #container .woocommerce form.checkout {
+.woocommerce-checkout #container {
   padding: 0 3.6rem;
   margin: 12rem auto;
 }
 
 @media (min-width: 992px) {
-  .woocommerce-checkout #container .woocommerce form.checkout {
+  .woocommerce-checkout #container {
     max-width: 80%;
     margin: 14.5rem auto;
     padding: 0;
@@ -16295,15 +16480,19 @@ body.woocommerce-edit-account .woocommerce-EditAccountForm .button:hover {
 }
 
 @media (min-width: 1440px) {
-  .woocommerce-checkout #container .woocommerce form.checkout {
+  .woocommerce-checkout #container {
     margin: 11vw auto;
   }
 }
 
 @media (min-width: 1920px) {
-  .woocommerce-checkout #container .woocommerce form.checkout {
+  .woocommerce-checkout #container {
     margin: 20rem auto;
   }
+}
+
+.woocommerce-checkout #container .woocommerce .woocommerce-form-coupon-toggle {
+  display: none;
 }
 
 @media (min-width: 768px) {

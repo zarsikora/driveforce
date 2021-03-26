@@ -43,7 +43,8 @@
             .btn-wrapper {
                 .btn {
                     width: 37rem;
-                    margin-bottom: 3rem;
+                    margin: 0 auto 3rem;
+                    display: block;
                     opacity: 0;
                     transform: translateY(10px);
                     transition: all ease 300ms;

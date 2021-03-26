@@ -3,7 +3,7 @@
         max-width: calc(100% - 30px);
         margin: 4rem auto;
         overflow: hidden;
-        @include media-breakpoint-up(lg){
+        @media (min-width: 680px) {
             max-width: 80%;
             height: auto;
             margin: 3vh auto;
@@ -12,7 +12,7 @@
         .modal-content {
             background-color: $lightBg;
             border: none;
-            padding: 3rem;
+            padding: 5rem 3rem;
 
             .modal-body {
                 padding: 0;
@@ -22,15 +22,29 @@
                     background: none;
                     font-size: 4rem;
                     z-index: 3;
+                    position: absolute;
+                    right: -1rem;
+                    top: -5rem;
+                    @include media-breakpoint-up(md){
+                        right: 0;
+                    }
+                    @include media-breakpoint-up(lg){
+                        right: unset;
+                        left: 0;
+                    }
                 }
 
                 .form-module {
                     .module-padded {
                         padding: 0;
+                        max-width: 100%;
 
                         .img {
                             display: none;
                             @include media-breakpoint-up(md){
+                                display: block;
+                            }
+                            @include media-breakpoint-up(lg){
                                 display: flex;
                                 justify-content: center;
                                 align-items: center;
@@ -40,6 +54,40 @@
                                     width: 100%;
                                     height: auto;
                                 }
+                            }
+
+                            img {
+                                @media(min-width: 768px) and (max-width: 991px){
+                                    position: absolute;
+                                    width: 200%;
+                                    height: auto;
+                                    left: -80%;
+                                }
+                            }
+                        }
+
+                        .form {
+                            max-width: 50rem;
+                            margin: 0 auto;
+                            @include media-breakpoint-up(md){
+                                flex: 0 0 55%;
+                                max-width: 55%;
+                                margin: 0 0 0 40%;
+                            }
+                            @include media-breakpoint-up(lg){
+                                flex: 0 0 50%;
+                                max-width: 50%;
+                                margin: 0;
+                            }
+
+                            h2 {
+                                margin-bottom: 0;
+                            }
+
+                            button {
+                                @extend .btn;
+                                margin-bottom: 0;
+                                top: 0;
                             }
                         }
         

@@ -47,6 +47,7 @@
         .inner {
             display: flex;
             justify-content: center;
+            padding-bottom: 3rem;
 
             h1 {
                 margin-bottom: 5rem;
@@ -57,6 +58,16 @@
             .share-bar-wrapper {
                 opacity: 0;
                 transform: translateY(10%);
+
+                .share-bar.sm-share {
+                    margin-bottom: 0;
+                    @include media-breakpoint-up(md){
+                        //margin-bottom: 3rem;
+                    }
+                    @include media-breakpoint-up(lg){
+                        //margin-bottom: 0;
+                    }
+                }
             }
         }
     }
