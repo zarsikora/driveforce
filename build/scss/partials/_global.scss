@@ -364,6 +364,11 @@ button {
     }
 }
 
+//CUSTOM SCROLLBAR
+.simplebar-scrollbar::before {
+    background-color: $highlight;
+}
+
 //ANIMATION EFFECTS - FADE UP FOR HERO 
 .fadeUp {
     overflow: hidden;

@@ -9,6 +9,9 @@ console.log('YEEHAW! Welcome to bones.js');
 //Init splitting js
 let splitting = new Splitting(); 
 
+//Init Simplebar
+new SimpleBar(document.getElementById('contact'), { autoHide: false }); 
+
 //Run mobile check and if on mobile, add mobile class to HTML tag.
 let mounted = false;
 mobilecheck = () => {

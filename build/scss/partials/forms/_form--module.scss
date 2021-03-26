@@ -43,7 +43,8 @@
 #contact {
     margin-top: 7rem;
     @include media-breakpoint-up(lg) {
-        margin: 7rem auto;
+        height: calc(100vh - 9.4rem - 4.8rem);
+        overflow-x: hidden;
     }
 
     .image {
@@ -58,6 +59,7 @@
 
         img {
             object-fit: cover;
+            object-position: top;
             position: fixed;
             height: 100%;
             top: 0;
