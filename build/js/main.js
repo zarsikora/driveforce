@@ -1,17 +1,14 @@
-//include '' from '';
-
 //LET ME USE THE $ FOR JQUERY
 window.$ = window.jQuery = jQuery;
-
-//Ok, now let's get it.
-console.log('YEEHAW! Welcome to bones.js');
 
 //Init splitting js
 let splitting = new Splitting(); 
 
 //Init Simplebar
-new SimpleBar(document.getElementById('contact'), { autoHide: false }); 
-
+if($('#contact.form-module').length)
+{
+    new SimpleBar(document.getElementById('contact'), { autoHide: false });
+}
 
 //Run mobile check and if on mobile, add mobile class to HTML tag.
 let mounted = false;
@@ -530,11 +527,6 @@ navToggle = () => {
         }, 450);
     }
 }
-
-$('.mobile-controls').on('click', function(){
-    navToggle();
-});
-
 navClose = () => {
     if($('#nav-pane').hasClass('active')){
         $('#header').removeClass('nav-active');
@@ -546,7 +538,9 @@ navClose = () => {
         $(".hamburger-control").attr("aria-expanded","false");
     }
 }
-
+$('.mobile-controls').on('click', function(){
+    navToggle();
+});
 
 //Nav appears on scroll up.
 let scrollThrottle = 250,
