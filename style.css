@@ -12016,6 +12016,7 @@ a.btn:hover, .woocommerce-cart #content .return-to-shop a.button:hover, body.woo
 
 .hero.home-hero .bottom .link.mobile {
   opacity: 0;
+  margin-top: 0;
 }
 
 .hero.home-hero .bottom .tag {
@@ -12208,6 +12209,18 @@ a.btn:hover, .woocommerce-cart #content .return-to-shop a.button:hover, body.woo
 .hero .inner .image-container img {
   width: 100%;
   height: auto;
+}
+
+@media (min-width: 576px) {
+  .hero .inner .image-container.mobile {
+    display: none;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .hero .inner .image-container.desktop {
+    display: none;
+  }
 }
 
 .hero .bottom {
