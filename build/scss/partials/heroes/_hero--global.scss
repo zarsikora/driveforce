@@ -95,6 +95,7 @@
 
             .link.mobile {
                 opacity: 0;
+                margin-top: 0;
             }
 
             .tag {
@@ -262,6 +263,18 @@
             img {
                 width: 100%;
                 height: auto;
+            }
+
+            &.mobile {
+                @include media-breakpoint-up(sm){
+                    display: none;
+                }
+            }
+
+            &.desktop {
+                @include media-breakpoint-down(sm) {
+                    display: none;
+                }
             }
         }
     }

@@ -16,14 +16,20 @@ $url = $link['url'];
         <div class="row">
             <div class="col-md-6 col-lg-5">
                 <div class="text-container">
-                    <h1 class="title breakpoint-animate" data-splitting="chars"><?php echo $header ?></h1>
-
-                    <!-- MOBILE WAITLIST BTN --> 
-                    <?php if($waitlistButton): ?>
-                        <?php echo(button('#', 'Join the Waitlist', 'mobile-waitlist', '#waitList')); ?>
+                    <?php if ($image) : ?>
+                        <div class="image-container mobile">
+                            <?php echo imageTag($image, "", "", null, false); ?>
+                        </div>
                     <?php endif; ?>
 
-                    <!-- MOBILE LOGOS --> 
+                    <h1 class="title breakpoint-animate" data-splitting="chars"><?php echo $header ?></h1>
+
+                    <!-- MOBILE WAITLIST BTN -->
+                    <?php if ($waitlistButton) : ?>
+                        <?php echo (button('#', 'Join the Waitlist', 'mobile-waitlist', '#waitList')); ?>
+                    <?php endif; ?>
+
+                    <!-- MOBILE LOGOS -->
                     <div class="logos mobile">
                         <svg class="is-logo" viewbox="0 0 61.122 61.122">
                             <use href="#is-logo"></use>
@@ -36,13 +42,13 @@ $url = $link['url'];
 
                     <div class="copy"><?php echo apply_filters('the_content', $copy) ?></div>
 
-                    <?php if($waitlistButton): ?>
+                    <?php if ($waitlistButton) : ?>
                         <div class="btns-wrapper">
-                            <?php if($waitlistButton): ?>
-                                <?php echo(button('#', 'Join the Waitlist', 'desktop-waitlist', '#waitList')); ?>
+                            <?php if ($waitlistButton) : ?>
+                                <?php echo (button('#', 'Join the Waitlist', 'desktop-waitlist', '#waitList')); ?>
                             <?php endif; ?>
 
-                            <?php if($hasLink): ?>
+                            <?php if ($hasLink) : ?>
                                 <a class="link desktop" href="<?php echo $url ?>"><?php echo $text ?></a>
                             <?php endif; ?>
                         </div>
@@ -50,9 +56,9 @@ $url = $link['url'];
                 </div>
             </div>
 
-            <?php if($image): ?>
+            <?php if ($image) : ?>
                 <div class="col-md-6 offset-lg-1">
-                    <div class="image-container">
+                    <div class="image-container desktop">
                         <?php echo imageTag($image, "", "", null, false); ?>
                     </div>
                 </div>
@@ -70,7 +76,7 @@ $url = $link['url'];
                 </svg>
             </div>
 
-            <?php if($hasLink): ?>
+            <?php if ($hasLink) : ?>
                 <a class="link mobile" href="<?php echo $url ?>"><?php echo $text ?></a>
             <?php endif; ?>
 
@@ -78,8 +84,8 @@ $url = $link['url'];
                 <span>Hitting the course <span class="sage">Spring 2021</span></span>
             </div>
         </div>
-    </div> 
-    <?php if($hasGraphic): ?>
+    </div>
+    <?php if ($hasGraphic) : ?>
         <img class="primary-hero-curve" aria-hidden="true" alt="decorative curve" src="http://staging.driveforce.golf/wp-content/uploads/2021/01/primary-hero-arc.svg" />
     <?php endif; ?>
 </div>
