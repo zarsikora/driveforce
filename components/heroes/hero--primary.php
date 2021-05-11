@@ -17,10 +17,8 @@ $url = $link['url'];
             <div class="col-md-6 col-lg-5">
                 <div class="text-container">
                     <?php if ($image) : ?>
-                        <div class="col-md-6 offset-lg-1">
-                            <div class="image-container mobile">
-                                <?php echo imageTag($image, "", "", null, false); ?>
-                            </div>
+                        <div class="image-container mobile">
+                            <?php echo imageTag($image, "", "", null, false); ?>
                         </div>
                     <?php endif; ?>
 
