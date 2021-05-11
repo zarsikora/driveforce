@@ -276,6 +276,11 @@ span {
                 clip-path: circle(300px at 50% 50%);
             }
         }
+        @media(min-width: 1920px){
+            .btn-hover-mask {
+                clip-path: circle(800px at 75% 50%);
+            }
+        }
     }
 
     span {
@@ -475,6 +480,8 @@ button {
     transition: all ease 500ms;
     border-radius: 4rem;
     pointer-events: none;
+    top: 0;
+    left: 0;
 
     //do not use clip path on ie 11
     @media all and (-ms-high-contrast:none)

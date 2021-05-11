@@ -401,6 +401,11 @@ form {
                     clip-path: circle(500px at 75% 50%);
                 }
             }
+            @media(min-width: 1920px){
+                .btn-hover-mask {
+                    clip-path: circle(800px at 75% 50%);
+                }
+            }
         }
     }
 }

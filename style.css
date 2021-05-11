@@ -10693,6 +10693,13 @@ span.sage {
   }
 }
 
+@media (min-width: 1920px) {
+  .btn:hover .btn-hover-mask, #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form button:hover .btn-hover-mask, .woocommerce-cart #content .return-to-shop .button:hover .btn-hover-mask, body.woocommerce-account #content .woocommerce .woocommerce-form-login .woocommerce-button:hover .btn-hover-mask, body.woocommerce-edit-address .woocommerce-address-fields .button:hover .btn-hover-mask, body.woocommerce-edit-account .woocommerce-EditAccountForm .button:hover .btn-hover-mask, .woocommerce-ResetPassword .button:hover .btn-hover-mask {
+    -webkit-clip-path: circle(800px at 75% 50%);
+            clip-path: circle(800px at 75% 50%);
+  }
+}
+
 .btn span, #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form button span, .woocommerce-cart #content .return-to-shop .button span, body.woocommerce-account #content .woocommerce .woocommerce-form-login .woocommerce-button span, body.woocommerce-edit-address .woocommerce-address-fields .button span, body.woocommerce-edit-account .woocommerce-EditAccountForm .button span, .woocommerce-ResetPassword .button span {
   font-family: "Sharp Sans Medium";
   font-size: 1.6rem;
@@ -10883,6 +10890,8 @@ button:focus {
   transition: all ease 500ms;
   border-radius: 4rem;
   pointer-events: none;
+  top: 0;
+  left: 0;
 }
 
 @media all and (-ms-high-contrast: none) {
@@ -11652,6 +11661,12 @@ button:focus {
   .menu-main-menu-container .menu .menu-item.menu-item {
     font-size: 1.1vw;
     padding: 0 3.1vw 0 0;
+  }
+}
+
+@media (min-width: 1920px) {
+  .menu-main-menu-container .menu .menu-item.menu-item {
+    font-size: 2.1rem;
   }
 }
 
@@ -13060,7 +13075,7 @@ a.browse-all {
   z-index: 2;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1225px) {
   .rte.grid.has-graphic .rte-graphic {
     bottom: -13rem;
     display: block;
@@ -14542,6 +14557,13 @@ form .btn-wrapper .btn, form .btn-wrapper #waitlistModal .modal-dialog .modal-co
   }
 }
 
+@media (min-width: 1920px) {
+  #mc-embedded-subscribe-form #mc-embedded-subscribe:hover .btn-hover-mask {
+    -webkit-clip-path: circle(800px at 75% 50%);
+            clip-path: circle(800px at 75% 50%);
+  }
+}
+
 .form-module {
   color: #081D1A;
   padding-top: 0;
@@ -14617,6 +14639,7 @@ form .btn-wrapper .btn, form .btn-wrapper #waitlistModal .modal-dialog .modal-co
      object-position: top;
   position: fixed;
   height: 100%;
+  width: 50%;
   top: 0;
 }
 
@@ -14869,6 +14892,7 @@ form .btn-wrapper .btn, form .btn-wrapper #waitlistModal .modal-dialog .modal-co
   display: block;
   width: 100%;
   height: 100%;
+  top: 0;
   left: 0;
   transition: all ease 500ms;
   border-radius: 4rem;
