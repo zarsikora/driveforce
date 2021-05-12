@@ -34039,6 +34039,201 @@ return Splitting;
 
 })));
 
+window.$ = window.jQuery = jQuery;
+
+var _ss = _ss || [];
+_ss.push(['_setDomain', 'https://koi-3QNE6LJPAE.marketingautomation.services/net']);
+_ss.push(['_setAccount', 'KOI-4DT9NRPKF6']);
+_ss.push(['_trackPageView']);
+window._pa = window._pa || {};
+(function() {
+    var ss = document.createElement('script');
+    ss.type = 'text/javascript'; ss.async = true;
+    ss.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'koi-3QNE6LJPAE.marketingautomation.services/client/ss.js?ver=2.4.0';
+    var scr = document.getElementsByTagName('script')[0];
+    scr.parentNode.insertBefore(ss, scr);
+})();
+
+// let fieldsArr = {
+//     'company': "heretic",
+//     'email': "dev@heretic.agency",
+//     'first-name': "devn",
+//     'funding': "Self-funded",
+//     'industry': "dev",
+//     'last-name': "riley",
+//     'launch': "Pre-launch",
+//     'location': "salem",
+//     'offering': "Product",
+//     'referral': "rick",
+//     'referred': "Yes",
+//     'scope': "tewt"
+// }
+
+// sharpspringAJAXRequest('createLeads', fieldsArr);
+
+function validateForm(fieldsArray)
+{
+    let errors = {};
+    const rules = {
+        required: ['first-name', 'last-name', 'email'],
+        email: /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
+    };
+
+    for(const property in fieldsArray)
+    {
+        // Required
+        if(rules.required.indexOf(property) > -1)
+        {
+            if(!fieldsArray[property].length) errors[property] = property.replace('-', ' ') + ' is a required field';
+        }
+
+        // Valid email
+        if(property === 'email')
+        {
+            if(!rules.email.test(fieldsArray[property])) errors[property] = 'invalid email address';
+        }
+    }
+
+    return errors;
+}
+
+function getFormFieldsArray(form = null, fields = null)
+{
+    if(!fields) { const fields = form.serializeArray(); }
+    let fieldsArr = {};
+
+    for(let i = 0; i < fields.length; i++)
+    {
+        fieldsArr[fields[i].name] = fields[i].value;
+    }
+
+    return fieldsArr;
+}
+
+$('form input').on('keyup', function(e)
+{
+    const form = $(this).parents('form');
+    const submit = $('button[type=submit]', form);
+    const fieldsArray = getFormFieldsArray(form);
+    const errors = validateForm(fieldsArray);
+
+    let disabled = Object.keys(errors).length === 0;
+
+    submit.prop('disabled', !disabled);
+});
+
+document.addEventListener( 'wpcf7submit', function(event)
+{
+    const inputs = event.detail.inputs;
+    let fieldsArr = getFormFieldsArray(null, inputs);
+        fieldsArr['signup-type'] = 'Contact Form';
+    const method = 'createLeads';
+    const errors = validateForm(fieldsArr);
+
+    if(Object.keys(errors).length)
+    {
+        console.log('there was an error');
+        return;
+    }
+
+    sharpspringAJAXRequest(method, fieldsArr, $(this));
+});
+
+$('form').on('submit', function(e)
+{
+    // Disable submit button so it can't be submitted again
+    $('button[type=submit]', $(this)).prop('disabled', true).hide();
+    $('.form-loading', $(this)).show();
+
+    if($(this).hasClass('sharpspring-waitlist'))
+    {
+        e.preventDefault();
+
+        let fieldsArr = getFormFieldsArray($(this));
+            fieldsArr['signup-type'] =  'Waitlist';
+        let method = 'createLeads';
+        let errors = validateForm(fieldsArr);
+
+        if(Object.keys(errors).length)
+        {
+            console.log('there was an error');
+            return;
+        }
+
+        sharpspringAJAXRequest(method, fieldsArr, $(this));
+    }
+});
+
+function sharpspringAJAXRequest(method, fields = null, form)
+{
+    const _form = form;
+
+    $.ajax({
+        type: 'POST',
+        url: localizedVars.ajaxurl,
+        dataType: 'json',
+        data: {
+            action: 'sharpspring_request',
+            method: method,
+            fields: fields
+        },
+        success: function(data)
+        {
+            let json = JSON.parse(data);
+
+            if(typeof _form == undefined) return;
+
+            let formMessage = $('.form-message', _form);
+
+            $('.form-loading', _form).hide();
+
+            if(json.error.length)
+            {
+                formMessage.html('<p>' + json.error[0].message + '</p>');
+                return;
+            }
+
+            formMessage.html('<p>You\'ve been added to the waitlist!</p>');
+        },
+        error: function(err)
+        {
+            console.log('error', err);
+        }
+    });
+}
+
+function sharpspringTransaction()
+{
+    // _ss.push(['_setTransaction', {
+    //     'transactionID': '<?php echo $order->get_order_number(); ?>',
+    //     'storeName': 'Store Name',
+    //     'total': '<?php echo $order->get_total(); ?>',
+    //     'tax': '<?php echo $order->get_total_tax(); ?>',
+    //     'shipping': '<?php echo $order->get_total_shipping(); ?>',
+    //     'city': '<?php echo $billing['city']; ?>',
+    //     'state': '<?php echo $billing['state']; ?>',
+    //     'zipcode': '<?php echo $billing['postcode']; ?>',
+    //     'country': '<?php echo $billing['country']; ?>',
+    //
+    //     'firstName': '<?php echo $billing['first_name']; ?>', // optional parameter
+    //     'lastName': '<?php echo $billing['last_name']; ?>', // optional parameter
+    //     'emailAddress': '<?php echo $billing['email']; ?>' // optional parameter
+    // }]);
+    //
+    // _ss.push(['_addTransactionItem', {
+    //     'transactionID': '<?php echo $order->get_order_number(); ?>',
+    //     'itemCode': '<?php echo $product_sku; ?>',
+    //     'productName': '<?php echo $product['name']; ?>',
+    //     'category': 'General',
+    //     'price': '<?php echo $product['line_total']; ?>',
+    //     'quantity': '<?php echo $product['qty']; ?>'
+    // }]);
+    //
+    // _ss.push(['_completeTransaction', {
+    //     'transactionID': '<?php echo $order->get_order_number(); ?>'
+    // }]);
+}
+//add_action( 'woocommerce_thankyou', 'sharpspringTransaction' );
 //LET ME USE THE $ FOR JQUERY
 window.$ = window.jQuery = jQuery;
 
@@ -34910,96 +35105,6 @@ jQuery.extend( jQuery.easing,
     },
     easeOutQuint: function (x, t, b, c, d) {
         return c*((t=t/d-1)*t*t*t*t + 1) + b;
-    },
-    easeInOutQuint: function (x, t, b, c, d) {
-        if ((t/=d/2) < 1) return c/2*t*t*t*t*t + b;
-        return c/2*((t-=2)*t*t*t*t + 2) + b;
-    },
-    easeInSine: function (x, t, b, c, d) {
-        return -c * Math.cos(t/d * (Math.PI/2)) + c + b;
-    },
-    easeOutSine: function (x, t, b, c, d) {
-        return c * Math.sin(t/d * (Math.PI/2)) + b;
-    },
-    easeInOutSine: function (x, t, b, c, d) {
-        return -c/2 * (Math.cos(Math.PI*t/d) - 1) + b;
-    },
-    easeInExpo: function (x, t, b, c, d) {
-        return (t==0) ? b : c * Math.pow(2, 10 * (t/d - 1)) + b;
-    },
-    easeOutExpo: function (x, t, b, c, d) {
-        return (t==d) ? b+c : c * (-Math.pow(2, -10 * t/d) + 1) + b;
-    },
-    easeInOutExpo: function (x, t, b, c, d) {
-        if (t==0) return b;
-        if (t==d) return b+c;
-        if ((t/=d/2) < 1) return c/2 * Math.pow(2, 10 * (t - 1)) + b;
-        return c/2 * (-Math.pow(2, -10 * --t) + 2) + b;
-    },
-    easeInCirc: function (x, t, b, c, d) {
-        return -c * (Math.sqrt(1 - (t/=d)*t) - 1) + b;
-    },
-    easeOutCirc: function (x, t, b, c, d) {
-        return c * Math.sqrt(1 - (t=t/d-1)*t) + b;
-    },
-    easeInOutCirc: function (x, t, b, c, d) {
-        if ((t/=d/2) < 1) return -c/2 * (Math.sqrt(1 - t*t) - 1) + b;
-        return c/2 * (Math.sqrt(1 - (t-=2)*t) + 1) + b;
-    },
-    easeInElastic: function (x, t, b, c, d) {
-        var s=1.70158;var p=0;var a=c;
-        if (t==0) return b;  if ((t/=d)==1) return b+c;  if (!p) p=d*.3;
-        if (a < Math.abs(c)) { a=c; var s=p/4; }
-        else var s = p/(2*Math.PI) * Math.asin (c/a);
-        return -(a*Math.pow(2,10*(t-=1)) * Math.sin( (t*d-s)*(2*Math.PI)/p )) + b;
-    },
-    easeOutElastic: function (x, t, b, c, d) {
-        var s=1.70158;var p=0;var a=c;
-        if (t==0) return b;  if ((t/=d)==1) return b+c;  if (!p) p=d*.3;
-        if (a < Math.abs(c)) { a=c; var s=p/4; }
-        else var s = p/(2*Math.PI) * Math.asin (c/a);
-        return a*Math.pow(2,-10*t) * Math.sin( (t*d-s)*(2*Math.PI)/p ) + c + b;
-    },
-    easeInOutElastic: function (x, t, b, c, d) {
-        var s=1.70158;var p=0;var a=c;
-        if (t==0) return b;  if ((t/=d/2)==2) return b+c;  if (!p) p=d*(.3*1.5);
-        if (a < Math.abs(c)) { a=c; var s=p/4; }
-        else var s = p/(2*Math.PI) * Math.asin (c/a);
-        if (t < 1) return -.5*(a*Math.pow(2,10*(t-=1)) * Math.sin( (t*d-s)*(2*Math.PI)/p )) + b;
-        return a*Math.pow(2,-10*(t-=1)) * Math.sin( (t*d-s)*(2*Math.PI)/p )*.5 + c + b;
-    },
-    easeInBack: function (x, t, b, c, d, s) {
-        if (s == undefined) s = 1.70158;
-        return c*(t/=d)*t*((s+1)*t - s) + b;
-    },
-    easeOutBack: function (x, t, b, c, d, s) {
-        if (s == undefined) s = 1.70158;
-        return c*((t=t/d-1)*t*((s+1)*t + s) + 1) + b;
-    },
-    easeInOutBack: function (x, t, b, c, d, s) {
-        if (s == undefined) s = 1.70158; 
-        if ((t/=d/2) < 1) return c/2*(t*t*(((s*=(1.525))+1)*t - s)) + b;
-        return c/2*((t-=2)*t*(((s*=(1.525))+1)*t + s) + 2) + b;
-    },
-    easeInBounce: function (x, t, b, c, d) {
-        return c - jQuery.easing.easeOutBounce (x, d-t, 0, c, d) + b;
-    },
-    easeOutBounce: function (x, t, b, c, d) {
-        if ((t/=d) < (1/2.75)) {
-            return c*(7.5625*t*t) + b;
-        } else if (t < (2/2.75)) {
-            return c*(7.5625*(t-=(1.5/2.75))*t + .75) + b;
-        } else if (t < (2.5/2.75)) {
-            return c*(7.5625*(t-=(2.25/2.75))*t + .9375) + b;
-        } else {
-            return c*(7.5625*(t-=(2.625/2.75))*t + .984375) + b;
-        }
-    },
-    easeInOutBounce: function (x, t, b, c, d) {
-        if (t < d/2) return jQuery.easing.easeInBounce (x, t*2, 0, c, d) * .5 + b;
-        return jQuery.easing.easeOutBounce (x, t*2-d, 0, c, d) * .5 + c*.5 + b;
-    }
-});return c*((t=t/d-1)*t*t*t*t + 1) + b;
     },
     easeInOutQuint: function (x, t, b, c, d) {
         if ((t/=d/2) < 1) return c/2*t*t*t*t*t + b;

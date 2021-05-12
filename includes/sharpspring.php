@@ -61,8 +61,8 @@ function sharpspring_request()
     $method = $_POST['method'];
     $params = getParams($method, $fields);
     $requestID = session_id();
-    $accountID = '82A047DEBD598AE3E6625AF265726FA8';
-    $secretKey = '3250375FDEBB15A7FD149F70E06C7C1B';
+    $accountID = getenv('SS_ACCOUNT_ID');
+    $secretKey = getenv('SS_SECRET_KEY');
     $data = array(
         'method' => $method,
         'params' => $params,

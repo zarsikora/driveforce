@@ -14122,16 +14122,10 @@ a.browse-all {
 }
 
 form {
-  padding: 3rem 0 0;
+  padding: 0;
   border-radius: .4rem;
   border: none;
   position: relative;
-}
-
-@media (min-width: 768px) {
-  form {
-    padding: 3rem 0;
-  }
 }
 
 form label {
@@ -14171,6 +14165,128 @@ form .form-group .form-control.error {
 
 form .btn-wrapper .btn, form .btn-wrapper #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form button, #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form form .btn-wrapper button, form .btn-wrapper .woocommerce-cart #content .return-to-shop .button, .woocommerce-cart #content .return-to-shop form .btn-wrapper .button, form .btn-wrapper body.woocommerce-account #content .woocommerce .woocommerce-form-login .woocommerce-button, body.woocommerce-account #content .woocommerce .woocommerce-form-login form .btn-wrapper .woocommerce-button, form .btn-wrapper body.woocommerce-edit-address .woocommerce-address-fields .button, body.woocommerce-edit-address .woocommerce-address-fields form .btn-wrapper .button, form .btn-wrapper body.woocommerce-edit-account .woocommerce-EditAccountForm .button, body.woocommerce-edit-account .woocommerce-EditAccountForm form .btn-wrapper .button, form .btn-wrapper .woocommerce-ResetPassword .button, .woocommerce-ResetPassword form .btn-wrapper .button {
   margin: 0 auto;
+}
+
+@media (min-width: 1200px) {
+  form.sharpspring-waitlist {
+    max-width: 44rem;
+  }
+}
+
+form.sharpspring-waitlist .field-group {
+  background: #fff;
+  position: relative;
+  padding: 0;
+}
+
+form.sharpspring-waitlist .field-group:after {
+  content: '';
+  position: absolute;
+  width: calc(100% - 4rem);
+  height: .1rem;
+  left: 2rem;
+  top: 0;
+  background: #ddd;
+  transition: all ease 300ms;
+}
+
+@media (min-width: 1200px) {
+  form.sharpspring-waitlist .field-group:after {
+    width: calc(100% - 6rem);
+    left: 3rem;
+  }
+}
+
+form.sharpspring-waitlist .field-group:first-child {
+  border-radius: 2rem 2rem 0 0;
+}
+
+form.sharpspring-waitlist .field-group:first-child:after {
+  display: none;
+}
+
+form.sharpspring-waitlist .field-group.last-field {
+  border-radius: 0 0 2rem 2rem;
+}
+
+form.sharpspring-waitlist .form-control {
+  background-color: transparent !important;
+  height: 7rem;
+  padding: 0 2rem;
+  width: 100%;
+  line-height: 7rem;
+  font-family: "Sharp Sans Medium";
+  font-size: 1.6rem;
+  border: none;
+  color: #081D1A;
+  transition: all ease 300ms;
+  outline: none;
+  box-shadow: none;
+}
+
+@media (min-width: 1200px) {
+  form.sharpspring-waitlist .form-control {
+    font-size: 1.111vw;
+    padding: 0 3rem;
+  }
+}
+
+@media (min-width: 1920px) {
+  form.sharpspring-waitlist .form-control {
+    font-size: 2.1rem;
+  }
+}
+
+form.sharpspring-waitlist .form-control::-moz-placeholder {
+  color: #B5B5B5;
+}
+
+form.sharpspring-waitlist .form-control:-ms-input-placeholder {
+  color: #B5B5B5;
+}
+
+form.sharpspring-waitlist .form-control::placeholder {
+  color: #B5B5B5;
+}
+
+form.sharpspring-waitlist .form-control:-webkit-autofill, form.sharpspring-waitlist .form-control:-webkit-autofill:hover, form.sharpspring-waitlist .form-control:-webkit-autofill:focus {
+  background-color: #fff !important;
+}
+
+form.sharpspring-waitlist .form-control:active, form.sharpspring-waitlist .form-control:focus {
+  outline: none;
+}
+
+form.sharpspring-waitlist .form-control:active::-moz-placeholder, form.sharpspring-waitlist .form-control:focus::-moz-placeholder {
+  color: #081D1A;
+}
+
+form.sharpspring-waitlist .form-control:active:-ms-input-placeholder, form.sharpspring-waitlist .form-control:focus:-ms-input-placeholder {
+  color: #081D1A;
+}
+
+form.sharpspring-waitlist .form-control:active::placeholder, form.sharpspring-waitlist .form-control:focus::placeholder {
+  color: #081D1A;
+}
+
+form.sharpspring-waitlist button {
+  margin-top: 2rem;
+}
+
+form.sharpspring-waitlist button[disabled] {
+  opacity: .5;
+}
+
+form.sharpspring-waitlist .form-loading {
+  display: none;
+}
+
+form.sharpspring-waitlist .form-message {
+  color: #dc3545;
+}
+
+form.sharpspring-waitlist .form-message p {
+  font-family: "Sharp Sans Bold";
 }
 
 .wpcf7-form {
@@ -14745,12 +14861,6 @@ form .btn-wrapper .btn, form .btn-wrapper #waitlistModal .modal-dialog .modal-co
   #waitList .module-padded .row .form .copy, #waitList .module-padded .row .form .article-single .post-content .inner .copy ul li, .article-single .post-content .inner .copy ul #waitList .module-padded .row .form li, #waitList .module-padded .row .form .article-single .post-content .inner .copy ol li, .article-single .post-content .inner .copy ol #waitList .module-padded .row .form li {
     text-align: left;
     margin: 0;
-  }
-}
-
-@media (min-width: 992px) {
-  #waitList .module-padded .row .form #form-wrapper {
-    width: 80%;
   }
 }
 

@@ -134,15 +134,9 @@
                     text-align: center;
                     margin: 2rem 0;
 
-                    @include media-breakpoint-up(md){
+                    @include media-breakpoint-up(md) {
                         text-align: left;
                         margin: 0;
-                    }
-                }
-
-                #form-wrapper {
-                    @include media-breakpoint-up(lg){
-                        width: 80%;
                     }
                 }
             }

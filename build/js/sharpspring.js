@@ -30,37 +30,103 @@ window._pa = window._pa || {};
 
 // sharpspringAJAXRequest('createLeads', fieldsArr);
 
-document.addEventListener('wpcf7mailsent', function(event)
+function validateForm(fieldsArray)
 {
-    let formID = event.detail.contactFormId;
-    let fields = event.detail.inputs;
+    let errors = {};
+    const rules = {
+        required: ['first-name', 'last-name', 'email'],
+        email: /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
+    };
+
+    for(const property in fieldsArray)
+    {
+        // Required
+        if(rules.required.indexOf(property) > -1)
+        {
+            if(!fieldsArray[property].length) errors[property] = property.replace('-', ' ') + ' is a required field';
+        }
+
+        // Valid email
+        if(property === 'email')
+        {
+            if(!rules.email.test(fieldsArray[property])) errors[property] = 'invalid email address';
+        }
+    }
+
+    return errors;
+}
+
+function getFormFieldsArray(form = null, fields = null)
+{
+    if(!fields) { const fields = form.serializeArray(); }
     let fieldsArr = {};
-    let method = '';
 
     for(let i = 0; i < fields.length; i++)
     {
         fieldsArr[fields[i].name] = fields[i].value;
     }
 
-    // Waitlist
-    if(formID == 5)
-    {
-        fieldsArr['signup-type'] =  'Waitlist';
-        method = 'createLeads';
-    }
+    return fieldsArr;
+}
 
-    // Contact Us
-    if(formID == 164)
-    {
-        fieldsArr['signup-type'] =  'Contact Form';
-        method = 'createLeads';
-    }
-
-    sharpspringAJAXRequest(method, fieldsArr);
-}, false);
-
-function sharpspringAJAXRequest(method, fields = null)
+$('form input').on('keyup', function(e)
 {
+    const form = $(this).parents('form');
+    const submit = $('button[type=submit]', form);
+    const fieldsArray = getFormFieldsArray(form);
+    const errors = validateForm(fieldsArray);
+
+    let disabled = Object.keys(errors).length === 0;
+
+    submit.prop('disabled', !disabled);
+});
+
+document.addEventListener( 'wpcf7submit', function(event)
+{
+    const inputs = event.detail.inputs;
+    let fieldsArr = getFormFieldsArray(null, inputs);
+        fieldsArr['signup-type'] = 'Contact Form';
+    const method = 'createLeads';
+    const errors = validateForm(fieldsArr);
+
+    if(Object.keys(errors).length)
+    {
+        console.log('there was an error');
+        return;
+    }
+
+    sharpspringAJAXRequest(method, fieldsArr, $(this));
+});
+
+$('form').on('submit', function(e)
+{
+    // Disable submit button so it can't be submitted again
+    $('button[type=submit]', $(this)).prop('disabled', true).hide();
+    $('.form-loading', $(this)).show();
+
+    if($(this).hasClass('sharpspring-waitlist'))
+    {
+        e.preventDefault();
+
+        let fieldsArr = getFormFieldsArray($(this));
+            fieldsArr['signup-type'] =  'Waitlist';
+        let method = 'createLeads';
+        let errors = validateForm(fieldsArr);
+
+        if(Object.keys(errors).length)
+        {
+            console.log('there was an error');
+            return;
+        }
+
+        sharpspringAJAXRequest(method, fieldsArr, $(this));
+    }
+});
+
+function sharpspringAJAXRequest(method, fields = null, form)
+{
+    const _form = form;
+
     $.ajax({
         type: 'POST',
         url: localizedVars.ajaxurl,
@@ -74,13 +140,19 @@ function sharpspringAJAXRequest(method, fields = null)
         {
             let json = JSON.parse(data);
 
+            if(typeof _form == undefined) return;
+
+            let formMessage = $('.form-message', _form);
+
+            $('.form-loading', _form).hide();
+
             if(json.error.length)
             {
-                console.log(json.error[0].message);
+                formMessage.html('<p>' + json.error[0].message + '</p>');
                 return;
             }
 
-            console.log('success', json);
+            formMessage.html('<p>You\'ve been added to the waitlist!</p>');
         },
         error: function(err)
         {

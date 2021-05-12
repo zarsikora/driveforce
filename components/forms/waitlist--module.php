@@ -27,13 +27,3 @@ $hasOverflow = get_sub_field('has_overflow');
         </div>
     </div>
 </div>
-
-<!-- <div id="form-success-pane">
-    <div class="inner">
-        <h1>Thanks for reaching out! We’ll get in touch soon.</h1>
-        <?php //echo button(get_home_url(), 'Return Home'); ?>
-        <svg class="logo" viewbox="0 0 95.803 101.04">
-            <use xlink:href="#footer-badge"></use>
-        </svg>
-    </div>
-</div> -->
