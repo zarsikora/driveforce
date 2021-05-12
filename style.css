@@ -14869,18 +14869,13 @@ form.sharpspring-waitlist .form-message p {
   text-align: right;
   left: 0;
   bottom: 0;
-  margin-left: -20%;
 }
 
 @media (min-width: 992px) {
   #waitList .module-padded .tag {
     display: block;
-  }
-}
-
-@media (min-width: 1440px) {
-  #waitList .module-padded .tag {
     margin-left: -50%;
+    width: 50vw;
   }
 }
 
