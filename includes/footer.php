@@ -1,3 +1,7 @@
+<?php
+    $posts = get_posts();
+?>
+
 
     <footer id="footer">
         <div class="inner">
@@ -17,10 +21,18 @@
 
                 foreach ($footerMenu as $k => $v) {
                     $current = ($v['title'] == get_the_title()) ? 'current' : '';
-                    
-                    echo '<li id="menu-item-' . $v['ID'] . '" class="menu-item menu-item-' . $v['ID'] . ' ' . $current .'">';
-                    echo '<a class="item-link" href="' . $v['url'] . '">' . $v['title'] . '</a>';
-                    echo '</li>';
+
+                    if($v['title'] === 'Articles') {
+                        if($posts) {
+                            echo '<li id="menu-item-' . $v['ID'] . '" class="menu-item menu-item-' . $v['ID'] . ' ' . $current .'">';
+                            echo '<a class="item-link" href="' . $v['url'] . '">' . $v['title'] . '</a>';
+                            echo '</li>';
+                        }
+                    } else {
+                        echo '<li id="menu-item-' . $v['ID'] . '" class="menu-item menu-item-' . $v['ID'] . ' ' . $current .'">';
+                        echo '<a class="item-link" href="' . $v['url'] . '">' . $v['title'] . '</a>';
+                        echo '</li>';
+                    }
                 }
 
                 echo '</ul>';
