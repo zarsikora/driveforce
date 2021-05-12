@@ -1,6 +1,6 @@
 /*!
-  * Bootstrap v4.6.0 (https://getbootstrap.com/)
-  * Copyright 2011-2021 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
+  * Bootstrap v4.5.3 (https://getbootstrap.com/)
+  * Copyright 2011-2020 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
   */
 (function (global, factory) {
@@ -55,7 +55,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v4.6.0): util.js
+   * Bootstrap (v4.5.3): util.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -234,7 +234,7 @@
    */
 
   var NAME = 'alert';
-  var VERSION = '4.6.0';
+  var VERSION = '4.5.3';
   var DATA_KEY = 'bs.alert';
   var EVENT_KEY = "." + DATA_KEY;
   var DATA_API_KEY = '.data-api';
@@ -390,7 +390,7 @@
    */
 
   var NAME$1 = 'button';
-  var VERSION$1 = '4.6.0';
+  var VERSION$1 = '4.5.3';
   var DATA_KEY$1 = 'bs.button';
   var EVENT_KEY$1 = "." + DATA_KEY$1;
   var DATA_API_KEY$1 = '.data-api';
@@ -589,7 +589,7 @@
    */
 
   var NAME$2 = 'carousel';
-  var VERSION$2 = '4.6.0';
+  var VERSION$2 = '4.5.3';
   var DATA_KEY$2 = 'bs.carousel';
   var EVENT_KEY$2 = "." + DATA_KEY$2;
   var DATA_API_KEY$2 = '.data-api';
@@ -729,8 +729,6 @@
       }
 
       if (this._config.interval && !this._isPaused) {
-        this._updateInterval();
-
         this._interval = setInterval((document.visibilityState ? this.nextWhenVisible : this.next).bind(this), this._config.interval);
       }
     };
@@ -972,23 +970,6 @@
       }
     };
 
-    _proto._updateInterval = function _updateInterval() {
-      var element = this._activeElement || this._element.querySelector(SELECTOR_ACTIVE_ITEM);
-
-      if (!element) {
-        return;
-      }
-
-      var elementInterval = parseInt(element.getAttribute('data-interval'), 10);
-
-      if (elementInterval) {
-        this._config.defaultInterval = this._config.defaultInterval || this._config.interval;
-        this._config.interval = elementInterval;
-      } else {
-        this._config.interval = this._config.defaultInterval || this._config.interval;
-      }
-    };
-
     _proto._slide = function _slide(direction, element) {
       var _this4 = this;
 
@@ -1039,7 +1020,6 @@
 
       this._setActiveIndicatorElement(nextElement);
 
-      this._activeElement = nextElement;
       var slidEvent = $__default['default'].Event(EVENT_SLID, {
         relatedTarget: nextElement,
         direction: eventDirectionName,
@@ -1052,6 +1032,15 @@
         Util.reflow(nextElement);
         $__default['default'](activeElement).addClass(directionalClassName);
         $__default['default'](nextElement).addClass(directionalClassName);
+        var nextElementInterval = parseInt(nextElement.getAttribute('data-interval'), 10);
+
+        if (nextElementInterval) {
+          this._config.defaultInterval = this._config.defaultInterval || this._config.interval;
+          this._config.interval = nextElementInterval;
+        } else {
+          this._config.interval = this._config.defaultInterval || this._config.interval;
+        }
+
         var transitionDuration = Util.getTransitionDurationFromElement(activeElement);
         $__default['default'](activeElement).one(Util.TRANSITION_END, function () {
           $__default['default'](nextElement).removeClass(directionalClassName + " " + orderClassName).addClass(CLASS_NAME_ACTIVE$1);
@@ -1188,7 +1177,7 @@
    */
 
   var NAME$3 = 'collapse';
-  var VERSION$3 = '4.6.0';
+  var VERSION$3 = '4.5.3';
   var DATA_KEY$3 = 'bs.collapse';
   var EVENT_KEY$3 = "." + DATA_KEY$3;
   var DATA_API_KEY$3 = '.data-api';
@@ -4151,7 +4140,7 @@
    */
 
   var NAME$4 = 'dropdown';
-  var VERSION$4 = '4.6.0';
+  var VERSION$4 = '4.5.3';
   var DATA_KEY$4 = 'bs.dropdown';
   var EVENT_KEY$4 = "." + DATA_KEY$4;
   var DATA_API_KEY$4 = '.data-api';
@@ -4268,7 +4257,7 @@
 
       if (showEvent.isDefaultPrevented()) {
         return;
-      } // Totally disable Popper for Dropdowns in Navbar
+      } // Disable totally Popper.js for Dropdown in Navbar
 
 
       if (!this._inNavbar && usePopper) {
@@ -4277,7 +4266,7 @@
          * Popper - https://popper.js.org
          */
         if (typeof Popper === 'undefined') {
-          throw new TypeError('Bootstrap\'s dropdowns require Popper (https://popper.js.org)');
+          throw new TypeError('Bootstrap\'s dropdowns require Popper.js (https://popper.js.org/)');
         }
 
         var referenceElement = this._element;
@@ -4445,7 +4434,7 @@
             boundariesElement: this._config.boundary
           }
         }
-      }; // Disable Popper if we have a static display
+      }; // Disable Popper.js if we have a static display
 
       if (this._config.display === 'static') {
         popperConfig.modifiers.applyStyle = {
@@ -4665,7 +4654,7 @@
    */
 
   var NAME$5 = 'modal';
-  var VERSION$5 = '4.6.0';
+  var VERSION$5 = '4.5.3';
   var DATA_KEY$5 = 'bs.modal';
   var EVENT_KEY$5 = "." + DATA_KEY$5;
   var DATA_API_KEY$5 = '.data-api';
@@ -4865,34 +4854,38 @@
     _proto._triggerBackdropTransition = function _triggerBackdropTransition() {
       var _this3 = this;
 
-      var hideEventPrevented = $__default['default'].Event(EVENT_HIDE_PREVENTED);
-      $__default['default'](this._element).trigger(hideEventPrevented);
+      if (this._config.backdrop === 'static') {
+        var hideEventPrevented = $__default['default'].Event(EVENT_HIDE_PREVENTED);
+        $__default['default'](this._element).trigger(hideEventPrevented);
 
-      if (hideEventPrevented.isDefaultPrevented()) {
-        return;
-      }
+        if (hideEventPrevented.isDefaultPrevented()) {
+          return;
+        }
 
-      var isModalOverflowing = this._element.scrollHeight > document.documentElement.clientHeight;
-
-      if (!isModalOverflowing) {
-        this._element.style.overflowY = 'hidden';
-      }
-
-      this._element.classList.add(CLASS_NAME_STATIC);
-
-      var modalTransitionDuration = Util.getTransitionDurationFromElement(this._dialog);
-      $__default['default'](this._element).off(Util.TRANSITION_END);
-      $__default['default'](this._element).one(Util.TRANSITION_END, function () {
-        _this3._element.classList.remove(CLASS_NAME_STATIC);
+        var isModalOverflowing = this._element.scrollHeight > document.documentElement.clientHeight;
 
         if (!isModalOverflowing) {
-          $__default['default'](_this3._element).one(Util.TRANSITION_END, function () {
-            _this3._element.style.overflowY = '';
-          }).emulateTransitionEnd(_this3._element, modalTransitionDuration);
+          this._element.style.overflowY = 'hidden';
         }
-      }).emulateTransitionEnd(modalTransitionDuration);
 
-      this._element.focus();
+        this._element.classList.add(CLASS_NAME_STATIC);
+
+        var modalTransitionDuration = Util.getTransitionDurationFromElement(this._dialog);
+        $__default['default'](this._element).off(Util.TRANSITION_END);
+        $__default['default'](this._element).one(Util.TRANSITION_END, function () {
+          _this3._element.classList.remove(CLASS_NAME_STATIC);
+
+          if (!isModalOverflowing) {
+            $__default['default'](_this3._element).one(Util.TRANSITION_END, function () {
+              _this3._element.style.overflowY = '';
+            }).emulateTransitionEnd(_this3._element, modalTransitionDuration);
+          }
+        }).emulateTransitionEnd(modalTransitionDuration);
+
+        this._element.focus();
+      } else {
+        this.hide();
+      }
     };
 
     _proto._showElement = function _showElement(relatedTarget) {
@@ -5047,11 +5040,7 @@
             return;
           }
 
-          if (_this9._config.backdrop === 'static') {
-            _this9._triggerBackdropTransition();
-          } else {
-            _this9.hide();
-          }
+          _this9._triggerBackdropTransition();
         });
 
         if (animate) {
@@ -5275,7 +5264,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v4.6.0): tools/sanitizer.js
+   * Bootstrap (v4.5.3): tools/sanitizer.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -5401,7 +5390,7 @@
    */
 
   var NAME$6 = 'tooltip';
-  var VERSION$6 = '4.6.0';
+  var VERSION$6 = '4.5.3';
   var DATA_KEY$6 = 'bs.tooltip';
   var EVENT_KEY$6 = "." + DATA_KEY$6;
   var JQUERY_NO_CONFLICT$6 = $__default['default'].fn[NAME$6];
@@ -5421,7 +5410,6 @@
     container: '(string|element|boolean)',
     fallbackPlacement: '(string|array)',
     boundary: '(string|element)',
-    customClass: '(string|function)',
     sanitize: 'boolean',
     sanitizeFn: '(null|function)',
     whiteList: 'object',
@@ -5447,7 +5435,6 @@
     container: false,
     fallbackPlacement: 'flip',
     boundary: 'scrollParent',
-    customClass: '',
     sanitize: true,
     sanitizeFn: null,
     whiteList: DefaultWhitelist,
@@ -5484,7 +5471,7 @@
   var Tooltip = /*#__PURE__*/function () {
     function Tooltip(element, config) {
       if (typeof Popper === 'undefined') {
-        throw new TypeError('Bootstrap\'s tooltips require Popper (https://popper.js.org)');
+        throw new TypeError('Bootstrap\'s tooltips require Popper.js (https://popper.js.org/)');
       } // private
 
 
@@ -5618,8 +5605,7 @@
 
         $__default['default'](this.element).trigger(this.constructor.Event.INSERTED);
         this._popper = new Popper(this.element, tip, this._getPopperConfig(attachment));
-        $__default['default'](tip).addClass(CLASS_NAME_SHOW$4);
-        $__default['default'](tip).addClass(this.config.customClass); // If this is a touch-enabled device we add extra
+        $__default['default'](tip).addClass(CLASS_NAME_SHOW$4); // If this is a touch-enabled device we add extra
         // empty mouseover listeners to the body's immediate children;
         // only needed because of broken event delegation on iOS
         // https://www.quirksmode.org/blog/archives/2014/02/mouse_event_bub.html
@@ -6117,7 +6103,7 @@
    */
 
   var NAME$7 = 'popover';
-  var VERSION$7 = '4.6.0';
+  var VERSION$7 = '4.5.3';
   var DATA_KEY$7 = 'bs.popover';
   var EVENT_KEY$7 = "." + DATA_KEY$7;
   var JQUERY_NO_CONFLICT$7 = $__default['default'].fn[NAME$7];
@@ -6297,7 +6283,7 @@
    */
 
   var NAME$8 = 'scrollspy';
-  var VERSION$8 = '4.6.0';
+  var VERSION$8 = '4.5.3';
   var DATA_KEY$8 = 'bs.scrollspy';
   var EVENT_KEY$8 = "." + DATA_KEY$8;
   var DATA_API_KEY$6 = '.data-api';
@@ -6589,7 +6575,7 @@
    */
 
   var NAME$9 = 'tab';
-  var VERSION$9 = '4.6.0';
+  var VERSION$9 = '4.5.3';
   var DATA_KEY$9 = 'bs.tab';
   var EVENT_KEY$9 = "." + DATA_KEY$9;
   var DATA_API_KEY$7 = '.data-api';
@@ -6815,7 +6801,7 @@
    */
 
   var NAME$a = 'toast';
-  var VERSION$a = '4.6.0';
+  var VERSION$a = '4.5.3';
   var DATA_KEY$a = 'bs.toast';
   var EVENT_KEY$a = "." + DATA_KEY$a;
   var JQUERY_NO_CONFLICT$a = $__default['default'].fn[NAME$a];
@@ -7416,7 +7402,7 @@
 });
 
 /*!
- * Paper.js v0.12.15 - The Swiss Army Knife of Vector Graphics Scripting.
+ * Paper.js v0.12.11 - The Swiss Army Knife of Vector Graphics Scripting.
  * http://paperjs.org/
  *
  * Copyright (c) 2011 - 2020, Jürg Lehni & Jonathan Puckey
@@ -7426,7 +7412,7 @@
  *
  * All rights reserved.
  *
- * Date: Wed Mar 17 10:49:48 2021 +0100
+ * Date: Fri Jun 19 19:14:33 2020 +0200
  *
  ***
  *
@@ -8238,7 +8224,7 @@ var PaperScope = Base.extend({
 		}
 	},
 
-	version: "0.12.15",
+	version: "0.12.11",
 
 	getView: function() {
 		var project = this.project;
@@ -11305,47 +11291,27 @@ new function() {
 			this.setName(name);
 	},
 
-	rasterize: function(arg0, arg1) {
-		var resolution,
-			insert,
-			raster;
-		if (Base.isPlainObject(arg0)) {
-			resolution = arg0.resolution;
-			insert = arg0.insert;
-			raster = arg0.raster;
-		} else {
-			resolution = arg0;
-			insert = arg1;
-		}
-		if (raster) {
-			raster.matrix.reset(true);
-		} else {
-			raster = new Raster(Item.NO_INSERT);
-		}
+	rasterize: function(resolution, insert) {
 		var bounds = this.getStrokeBounds(),
 			scale = (resolution || this.getView().getResolution()) / 72,
 			topLeft = bounds.getTopLeft().floor(),
 			bottomRight = bounds.getBottomRight().ceil(),
-			boundsSize = new Size(bottomRight.subtract(topLeft)),
-			rasterSize = boundsSize.multiply(scale);
-		raster.setSize(rasterSize, true);
-
-		if (!rasterSize.isZero()) {
-			var ctx = raster.getContext(true),
+			size = new Size(bottomRight.subtract(topLeft)),
+			raster = new Raster(Item.NO_INSERT);
+		if (!size.isZero()) {
+			var canvas = CanvasProvider.getCanvas(size.multiply(scale)),
+				ctx = canvas.getContext('2d'),
 				matrix = new Matrix().scale(scale).translate(topLeft.negate());
 			ctx.save();
 			matrix.applyToContext(ctx);
 			this.draw(ctx, new Base({ matrices: [matrix] }));
 			ctx.restore();
+			raster.setCanvas(canvas);
 		}
-		raster.transform(
-			new Matrix()
-				.translate(topLeft.add(boundsSize.divide(2)))
-				.scale(1 / scale)
-		);
-		if (insert === undefined || insert) {
+		raster.transform(new Matrix().translate(topLeft.add(size.divide(2)))
+				.scale(1 / scale));
+		if (insert === undefined || insert)
 			raster.insertAbove(this);
-		}
 		return raster;
 	},
 
@@ -12779,7 +12745,7 @@ var Raster = Item.extend({
 		source: null
 	},
 	_prioritize: ['crossOrigin'],
-	_smoothing: 'low',
+	_smoothing: true,
 	beans: true,
 
 	initialize: function Raster(source, position) {
@@ -12837,23 +12803,20 @@ var Raster = Item.extend({
 				this, 'setSize');
 	},
 
-	setSize: function(_size, _clear) {
+	setSize: function() {
 		var size = Size.read(arguments);
 		if (!size.equals(this._size)) {
 			if (size.width > 0 && size.height > 0) {
-				var element = !_clear && this.getElement();
+				var element = this.getElement();
 				this._setImage(CanvasProvider.getCanvas(size));
-				if (element) {
+				if (element)
 					this.getContext(true).drawImage(element, 0, 0,
 							size.width, size.height);
-				}
 			} else {
 				if (this._canvas)
 					CanvasProvider.release(this._canvas);
 				this._size = size.clone();
 			}
-		} else if (_clear) {
-			this.clear();
 		}
 	},
 
@@ -13006,9 +12969,7 @@ var Raster = Item.extend({
 	},
 
 	setSmoothing: function(smoothing) {
-		this._smoothing = typeof smoothing === 'string'
-			? smoothing
-			: smoothing ? 'low' : 'off';
+		this._smoothing = smoothing;
 		this._changed(257);
 	},
 
@@ -13178,12 +13139,8 @@ var Raster = Item.extend({
 
 			this._setStyles(ctx, param, viewMatrix);
 
-			var smoothing = this._smoothing,
-				disabled = smoothing === 'off';
 			DomElement.setPrefixed(
-				ctx,
-				disabled ? 'imageSmoothingEnabled' : 'imageSmoothingQuality',
-				disabled ? false : smoothing
+				ctx, 'imageSmoothingEnabled', this._smoothing
 			);
 
 			ctx.drawImage(element,
@@ -21473,7 +21430,7 @@ var Tween = Base.extend(Emitter, {
 	_class: 'Tween',
 
 	statics: {
-		easings: new Base({
+		easings: {
 			linear: function(t) {
 				return t;
 			},
@@ -21533,7 +21490,7 @@ var Tween = Base.extend(Emitter, {
 					? 16 * t * t * t * t * t
 					: 1 + 16 * (--t) * t * t * t * t;
 			}
-		})
+		}
 	},
 
 	initialize: function Tween(object, from, to, duration, easing, start) {
@@ -28676,10 +28633,10 @@ return paper;
   }
 
   /*!
-   * GSAP 3.6.1
+   * GSAP 3.5.1
    * https://greensock.com
    *
-   * @license Copyright 2008-2021, GreenSock. All rights reserved.
+   * @license Copyright 2008-2020, GreenSock. All rights reserved.
    * Subject to the terms at https://greensock.com/standard-license or for
    * Club GreenSock members, the agreement issued with that membership.
    * @author: Jack Doyle, jack@greensock.com
@@ -28697,7 +28654,6 @@ return paper;
     overwrite: false,
     delay: 0
   },
-      _suppressOverwrites,
       _bigNum = 1e8,
       _tinyNum = 1 / _bigNum,
       _2PI = Math.PI * 2,
@@ -28733,12 +28689,11 @@ return paper;
       _isTypedArray = typeof ArrayBuffer === "function" && ArrayBuffer.isView || function () {},
       _isArray = Array.isArray,
       _strictNumExp = /(?:-?\.?\d|\.)+/gi,
-      _numExp = /[-+=.]*\d+[.e\-+]*\d*[e\-+]*\d*/g,
+      _numExp = /[-+=.]*\d+[.e\-+]*\d*[e\-\+]*\d*/g,
       _numWithUnitExp = /[-+=.]*\d+[.e-]*\d*[a-z%]*/g,
-      _complexStringNumExp = /[-+=.]*\d+\.?\d*(?:e-|e\+)?\d*/gi,
-      _relExp = /[+-]=-?[.\d]+/,
+      _complexStringNumExp = /[-+=.]*\d+(?:\.|e-|e)*\d*/gi,
+      _relExp = /[+-]=-?[\.\d]+/,
       _delimitedValueExp = /[#\-+.]*\b[a-z\d-=+%.]+/gi,
-      _unitExp = /[\d.+\-=]+(?:e[-+]\d*)*/i,
       _globalTimeline,
       _win,
       _coreInitted,
@@ -28882,7 +28837,7 @@ return paper;
   },
       _mergeDeep = function _mergeDeep(base, toMerge) {
     for (var p in toMerge) {
-      p !== "__proto__" && p !== "constructor" && p !== "prototype" && (base[p] = _isObject(toMerge[p]) ? _mergeDeep(base[p] || (base[p] = {}), toMerge[p]) : toMerge[p]);
+      base[p] = _isObject(toMerge[p]) ? _mergeDeep(base[p] || (base[p] = {}), toMerge[p]) : toMerge[p];
     }
 
     return base;
@@ -29016,8 +28971,7 @@ return paper;
     return animation._repeat ? _animationCycle(animation._tTime, animation = animation.duration() + animation._rDelay) * animation : 0;
   },
       _animationCycle = function _animationCycle(tTime, cycleDuration) {
-    var whole = Math.floor(tTime /= cycleDuration);
-    return tTime && whole === tTime ? whole - 1 : whole;
+    return (tTime /= cycleDuration) && ~~tTime === tTime ? ~~tTime - 1 : ~~tTime;
   },
       _parentToChildTotalTime = function _parentToChildTotalTime(parentTime, child) {
     return (parentTime - child._start) * child._ts + (child._ts >= 0 ? 0 : child._dirty ? child.totalDuration() : child._tDur);
@@ -29029,7 +28983,7 @@ return paper;
     var parent = animation._dp;
 
     if (parent && parent.smoothChildTiming && animation._ts) {
-      animation._start = _round(parent._time - (animation._ts > 0 ? totalTime / animation._ts : ((animation._dirty ? animation.totalDuration() : animation._tDur) - totalTime) / -animation._ts));
+      animation._start = _round(animation._dp._time - (animation._ts > 0 ? totalTime / animation._ts : ((animation._dirty ? animation.totalDuration() : animation._tDur) - totalTime) / -animation._ts));
 
       _setEnd(animation);
 
@@ -29090,13 +29044,9 @@ return paper;
       return 1;
     }
   },
-      _parentPlayheadIsBeforeStart = function _parentPlayheadIsBeforeStart(_ref) {
-    var parent = _ref.parent;
-    return parent && parent._ts && parent._initted && !parent._lock && (parent.rawTime() < 0 || _parentPlayheadIsBeforeStart(parent));
-  },
       _renderZeroDurationTween = function _renderZeroDurationTween(tween, totalTime, suppressEvents, force) {
     var prevRatio = tween.ratio,
-        ratio = totalTime < 0 || !totalTime && (!tween._start && _parentPlayheadIsBeforeStart(tween) || (tween._ts < 0 || tween._dp._ts < 0) && tween.data !== "isFromStart" && tween.data !== "isStart") ? 0 : 1,
+        ratio = totalTime < 0 || !totalTime && prevRatio && !tween._start && tween._zTime > _tinyNum && !tween._dp._lock || (tween._ts < 0 || tween._dp._ts < 0) && tween.data !== "isFromStart" && tween.data !== "isStart" ? 0 : 1,
         repeatDelay = tween._rDelay,
         tTime = 0,
         pt,
@@ -29107,7 +29057,6 @@ return paper;
       tTime = _clamp(0, tween._tDur, totalTime);
       iteration = _animationCycle(tTime, repeatDelay);
       prevIteration = _animationCycle(tween._tTime, repeatDelay);
-      tween._yoyo && iteration & 1 && (ratio = 1 - ratio);
 
       if (iteration !== prevIteration) {
         prevRatio = 1 - ratio;
@@ -29127,6 +29076,7 @@ return paper;
       tween._from && (ratio = 1 - ratio);
       tween._time = 0;
       tween._tTime = tTime;
+      suppressEvents || _callback(tween, "onStart");
       pt = tween._pt;
 
       while (pt) {
@@ -29228,13 +29178,7 @@ return paper;
     return value < min ? min : value > max ? max : value;
   },
       getUnit = function getUnit(value) {
-    if (typeof value !== "string") {
-      return "";
-    }
-
-    var v = _unitExp.exec(value);
-
-    return v ? value.substr(v.index + v[0].length) : "";
+    return (value = (value + "").substr((parseFloat(value) + "").length)) && isNaN(value) ? value : "";
   },
       clamp = function clamp(min, max, value) {
     return _conditionalReturn(value, function (v) {
@@ -29347,8 +29291,7 @@ return paper;
       _roundModifier = function _roundModifier(v) {
     var p = v < 1 ? Math.pow(10, (v + "").length - 2) : 1;
     return function (raw) {
-      var n = Math.round(parseFloat(raw) / v) * v * p;
-      return (n - n % 1) / p + (_isNumber(raw) ? 0 : getUnit(raw));
+      return Math.floor(Math.round(parseFloat(raw) / v) * v * p) / p + (_isNumber(raw) ? 0 : getUnit(raw));
     };
   },
       snap = function snap(snapTo, value) {
@@ -29403,7 +29346,7 @@ return paper;
   },
       random = function random(min, max, roundingIncrement, returnFunction) {
     return _conditionalReturn(_isArray(min) ? !max : roundingIncrement === true ? !!(roundingIncrement = 0) : !returnFunction, function () {
-      return _isArray(min) ? min[~~(Math.random() * min.length)] : (roundingIncrement = roundingIncrement || 1e-5) && (returnFunction = roundingIncrement < 1 ? Math.pow(10, (roundingIncrement + "").length - 2) : 1) && Math.floor(Math.round((min - roundingIncrement / 2 + Math.random() * (max - min + roundingIncrement * .99)) / roundingIncrement) * roundingIncrement * returnFunction) / returnFunction;
+      return _isArray(min) ? min[~~(Math.random() * min.length)] : (roundingIncrement = roundingIncrement || 1e-5) && (returnFunction = roundingIncrement < 1 ? Math.pow(10, (roundingIncrement + "").length - 2) : 1) && Math.floor(Math.round((min + Math.random() * (max - min)) / roundingIncrement) * roundingIncrement * returnFunction) / returnFunction;
     });
   },
       pipe = function pipe() {
@@ -29563,7 +29506,6 @@ return paper;
       _interrupt = function _interrupt(animation) {
     _removeFromParent(animation);
 
-    animation.scrollTrigger && animation.scrollTrigger.kill(false);
     animation.progress() < 1 && _callback(animation, "onInterrupt");
     return animation;
   },
@@ -29665,16 +29607,11 @@ return paper;
       if (_colorLookup[v]) {
         a = _colorLookup[v];
       } else if (v.charAt(0) === "#") {
-        if (v.length < 6) {
+        if (v.length === 4) {
           r = v.charAt(1);
           g = v.charAt(2);
           b = v.charAt(3);
-          v = "#" + r + r + g + g + b + b + (v.length === 5 ? v.charAt(4) + v.charAt(4) : "");
-        }
-
-        if (v.length === 9) {
-          a = parseInt(v.substr(1, 6), 16);
-          return [a >> 16, a >> 8 & _255, a & _255, parseInt(v.substr(7), 16) / 255];
+          v = "#" + r + r + g + g + b + b;
         }
 
         v = parseInt(v.substr(1), 16);
@@ -29785,7 +29722,7 @@ return paper;
     return result + shell[l];
   },
       _colorExp = function () {
-    var s = "(?:\\b(?:(?:rgb|rgba|hsl|hsla)\\(.+?\\))|\\B#(?:[0-9a-f]{3,4}){1,2}\\b",
+    var s = "(?:\\b(?:(?:rgb|rgba|hsl|hsla)\\(.+?\\))|\\B#(?:[0-9a-f]{3}){1,2}\\b",
         p;
 
     for (p in _colorLookup) {
@@ -30132,7 +30069,7 @@ return paper;
       this.vars = vars;
       this._delay = +vars.delay || 0;
 
-      if (this._repeat = vars.repeat === Infinity ? -2 : vars.repeat || 0) {
+      if (this._repeat = vars.repeat || 0) {
         this._rDelay = vars.repeatDelay || 0;
         this._yoyo = !!vars.yoyo || !!vars.yoyoEase;
       }
@@ -30184,8 +30121,6 @@ return paper;
 
       if (parent && parent.smoothChildTiming && this._ts) {
         _alignPlayhead(this, _totalTime);
-
-        !parent._dp || parent.parent || _postAddChecks(parent, this);
 
         while (parent.parent) {
           if (parent.parent._time !== parent._start + (parent._ts >= 0 ? parent._tTime / parent._ts : (parent.totalDuration() - parent._tTime) / -parent._ts)) {
@@ -30298,11 +30233,11 @@ return paper;
 
     _proto.repeat = function repeat(value) {
       if (arguments.length) {
-        this._repeat = value === Infinity ? -2 : value;
+        this._repeat = value;
         return _onUpdateTotalDuration(this);
       }
 
-      return this._repeat === -2 ? Infinity : this._repeat;
+      return this._repeat;
     };
 
     _proto.repeatDelay = function repeatDelay(value) {
@@ -30360,7 +30295,7 @@ return paper;
     };
 
     _proto.invalidate = function invalidate() {
-      this._initted = this._act = 0;
+      this._initted = 0;
       this._zTime = -_tinyNum;
       return this;
     };
@@ -30548,11 +30483,6 @@ return paper;
         if (this._repeat) {
           yoyo = this._yoyo;
           cycleDuration = dur + this._rDelay;
-
-          if (this._repeat < -1 && totalTime < 0) {
-            return this.totalTime(cycleDuration * 100 + totalTime, suppressEvents, force);
-          }
-
           time = _round(tTime % cycleDuration);
 
           if (tTime === tDur) {
@@ -30587,7 +30517,7 @@ return paper;
             !suppressEvents && this.parent && _callback(this, "onRepeat");
             this.vars.repeatRefresh && !isYoyo && (this.invalidate()._lock = 1);
 
-            if (prevTime && prevTime !== this._time || prevPaused !== !this._ts || this.vars.onRepeat && !this.parent && !this._act) {
+            if (prevTime !== this._time || prevPaused !== !this._ts) {
               return this;
             }
 
@@ -30598,6 +30528,7 @@ return paper;
               this._lock = 2;
               prevTime = rewinding ? dur : -0.0001;
               this.render(prevTime, true);
+              this.vars.repeatRefresh && !isYoyo && this.invalidate();
             }
 
             this._lock = 0;
@@ -30626,7 +30557,6 @@ return paper;
           this._onUpdate = this.vars.onUpdate;
           this._initted = 1;
           this._zTime = totalTime;
-          prevTime = 0;
         }
 
         !prevTime && time && !suppressEvents && _callback(this, "onStart");
@@ -30709,7 +30639,9 @@ return paper;
     _proto2.add = function add(child, position) {
       var _this2 = this;
 
-      _isNumber(position) || (position = _parsePosition(this, position));
+      if (!_isNumber(position)) {
+        position = _parsePosition(this, position);
+      }
 
       if (!(child instanceof Animation)) {
         if (_isArray(child)) {
@@ -30887,11 +30819,9 @@ return paper;
           startAt = _vars.startAt,
           _onStart = _vars.onStart,
           onStartParams = _vars.onStartParams,
-          immediateRender = _vars.immediateRender,
-          tween = Tween.to(tl, _setDefaults({
-        ease: vars.ease || "none",
+          tween = Tween.to(tl, _setDefaults(vars, {
+        ease: "none",
         lazy: false,
-        immediateRender: false,
         time: endTime,
         overwrite: "auto",
         duration: vars.duration || Math.abs((endTime - (startAt && "time" in startAt ? startAt.time : tl._time)) / tl.timeScale()) || _tinyNum,
@@ -30901,9 +30831,9 @@ return paper;
           tween._dur !== duration && _setDuration(tween, duration, 0, 1).render(tween._time, true, true);
           _onStart && _onStart.apply(tween, onStartParams || []);
         }
-      }, vars));
+      }));
 
-      return immediateRender ? tween.render(0) : tween;
+      return tween;
     };
 
     _proto2.tweenFromTo = function tweenFromTo(fromPosition, toPosition, vars) {
@@ -30993,7 +30923,7 @@ return paper;
         child = next;
       }
 
-      this._dp && (this._time = this._tTime = this._pTime = 0);
+      this._time = this._tTime = this._pTime = 0;
       includeLabels && (this.labels = {});
       return _uncache(this);
     };
@@ -31225,7 +31155,7 @@ return paper;
         targets = tween._targets,
         parent = tween.parent,
         fullTargets = parent && parent.data === "nested" ? parent.parent._targets : targets,
-        autoOverwrite = tween._overwrite === "auto" && !_suppressOverwrites,
+        autoOverwrite = tween._overwrite === "auto",
         tl = tween.timeline,
         cleanVars,
         i,
@@ -31278,8 +31208,6 @@ return paper;
             time && (tween._zTime = time);
             return;
           }
-        } else if (autoRevert === false) {
-          tween._startAt = 0;
         }
       } else if (runBackwards && dur) {
         if (prevStartAt) {
@@ -31435,8 +31363,7 @@ return paper;
           defaults: defaults || {}
         });
         tl.kill();
-        tl.parent = tl._dp = _assertThisInitialized(_this3);
-        tl._start = 0;
+        tl.parent = _assertThisInitialized(_this3);
 
         if (keyframes) {
           _setDefaults(tl.vars.defaults, {
@@ -31492,7 +31419,7 @@ return paper;
         _this3.timeline = 0;
       }
 
-      if (overwrite === true && !_suppressOverwrites) {
+      if (overwrite === true) {
         _overwritingTween = _assertThisInitialized(_this3);
 
         _globalTimeline.killTweensOf(parsedTargets);
@@ -31531,17 +31458,12 @@ return paper;
 
       if (!dur) {
         _renderZeroDurationTween(this, totalTime, suppressEvents, force);
-      } else if (tTime !== this._tTime || !totalTime || force || !this._initted && this._tTime || this._startAt && this._zTime < 0 !== totalTime < 0) {
+      } else if (tTime !== this._tTime || !totalTime || force || this._startAt && this._zTime < 0 !== totalTime < 0) {
         time = tTime;
         timeline = this.timeline;
 
         if (this._repeat) {
           cycleDuration = dur + this._rDelay;
-
-          if (this._repeat < -1 && totalTime < 0) {
-            return this.totalTime(cycleDuration * 100 + totalTime, suppressEvents, force);
-          }
-
           time = _round(tTime % cycleDuration);
 
           if (tTime === tDur) {
@@ -31644,7 +31566,7 @@ return paper;
     };
 
     _proto3.invalidate = function invalidate() {
-      this._pt = this._op = this._startAt = this._onUpdate = this._lazy = this.ratio = 0;
+      this._pt = this._op = this._startAt = this._onUpdate = this._act = this._lazy = 0;
       this._ptLookup = [];
       this.timeline && this.timeline.invalidate();
       return _Animation2.prototype.invalidate.call(this);
@@ -31656,8 +31578,11 @@ return paper;
       }
 
       if (!targets && (!vars || vars === "all")) {
-        this._lazy = this._pt = 0;
-        return this.parent ? _interrupt(this) : this;
+        this._lazy = 0;
+
+        if (this.parent) {
+          return _interrupt(this);
+        }
       }
 
       if (this.timeline) {
@@ -32022,12 +31947,12 @@ return paper;
     config: function config(value) {
       return _mergeDeep(_config, value || {});
     },
-    registerEffect: function registerEffect(_ref2) {
-      var name = _ref2.name,
-          effect = _ref2.effect,
-          plugins = _ref2.plugins,
-          defaults = _ref2.defaults,
-          extendTimeline = _ref2.extendTimeline;
+    registerEffect: function registerEffect(_ref) {
+      var name = _ref.name,
+          effect = _ref.effect,
+          plugins = _ref.plugins,
+          defaults = _ref.defaults,
+          extendTimeline = _ref.extendTimeline;
       (plugins || "").split(",").forEach(function (pluginName) {
         return pluginName && !_plugins[pluginName] && !_globals[pluginName] && _warn(name + " effect requires " + pluginName + " plugin.");
       });
@@ -32111,10 +32036,7 @@ return paper;
       Timeline: Timeline,
       Animation: Animation,
       getCache: _getCache,
-      _removeLinkedListItem: _removeLinkedListItem,
-      suppressOverwrites: function suppressOverwrites(value) {
-        return _suppressOverwrites = value;
-      }
+      _removeLinkedListItem: _removeLinkedListItem
     }
   };
 
@@ -32215,7 +32137,7 @@ return paper;
       }
     }
   }, _buildModifierPlugin("roundProps", _roundModifier), _buildModifierPlugin("modifiers"), _buildModifierPlugin("snap", snap)) || _gsap;
-  Tween.version = Timeline.version = gsap.version = "3.6.1";
+  Tween.version = Timeline.version = gsap.version = "3.5.1";
   _coreReady = 1;
 
   if (_windowExists()) {
@@ -32468,9 +32390,8 @@ return paper;
     curUnit !== "px" && !toPixels && (curValue = _convertToUnit(target, property, value, "px"));
     isSVG = target.getCTM && _isSVG(target);
 
-    if ((toPercent || curUnit === "%") && (_transformProps[property] || ~property.indexOf("adius"))) {
-      px = isSVG ? target.getBBox()[horizontal ? "width" : "height"] : target[measureProperty];
-      return _round(toPercent ? curValue / px * amount : curValue / 100 * px);
+    if (toPercent && (_transformProps[property] || ~property.indexOf("adius"))) {
+      return _round(curValue / (isSVG ? target.getBBox()[horizontal ? "width" : "height"] : target[measureProperty]) * amount);
     }
 
     style[horizontal ? "width" : "height"] = amount + (toPixels ? curUnit : unit);
@@ -32528,7 +32449,7 @@ return paper;
       }
     }
 
-    return unit && !~(value + "").trim().indexOf(" ") ? _convertToUnit(target, property, value, unit) + unit : value;
+    return unit && !~(value + "").indexOf(" ") ? _convertToUnit(target, property, value, unit) + unit : value;
   },
       _tweenComplexCSSString = function _tweenComplexCSSString(target, prop, start, end) {
     if (!start || start === "none") {
@@ -32621,7 +32542,7 @@ return paper;
             p: chunk || matchIndex === 1 ? chunk : ",",
             s: startNum,
             c: relative ? relative * endNum : endNum - startNum,
-            m: color && color < 4 || prop === "zIndex" ? Math.round : 0
+            m: color && color < 4 ? Math.round : 0
           };
         }
       }
@@ -32631,7 +32552,10 @@ return paper;
       pt.r = prop === "display" && end === "none" ? _renderNonTweeningValueOnlyAtEnd : _renderNonTweeningValue;
     }
 
-    _relExp.test(end) && (pt.e = 0);
+    if (_relExp.test(end)) {
+      pt.e = 0;
+    }
+
     this._pt = pt;
     return pt;
   },
@@ -32868,7 +32792,7 @@ return paper;
     matrix = _getMatrix(target, cache.svg);
 
     if (cache.svg) {
-      t1 = !cache.uncache && !uncache && target.getAttribute("data-svg-origin");
+      t1 = !cache.uncache && target.getAttribute("data-svg-origin");
 
       _applySVGOrigin(target, t1 || origin, !!t1 || cache.originIsAbsolute, cache.smooth !== false, matrix);
     }
@@ -32889,7 +32813,7 @@ return paper;
         scaleY = Math.sqrt(d * d + c * c);
         rotation = a || b ? _atan2(b, a) * _RAD2DEG : 0;
         skewX = c || d ? _atan2(c, d) * _RAD2DEG + rotation : 0;
-        skewX && (scaleY *= Math.abs(Math.cos(skewX * _DEG2RAD)));
+        skewX && (scaleY *= Math.cos(skewX * _DEG2RAD));
 
         if (cache.svg) {
           x -= xOrigin - (xOrigin * a + yOrigin * c);
@@ -32982,8 +32906,8 @@ return paper;
       }
     }
 
-    cache.x = x - ((cache.xPercent = x && (cache.xPercent || (Math.round(target.offsetWidth / 2) === Math.round(-x) ? -50 : 0))) ? target.offsetWidth * cache.xPercent / 100 : 0) + px;
-    cache.y = y - ((cache.yPercent = y && (cache.yPercent || (Math.round(target.offsetHeight / 2) === Math.round(-y) ? -50 : 0))) ? target.offsetHeight * cache.yPercent / 100 : 0) + px;
+    cache.x = ((cache.xPercent = x && Math.round(target.offsetWidth / 2) === Math.round(-x) ? -50 : 0) ? 0 : x) + px;
+    cache.y = ((cache.yPercent = y && Math.round(target.offsetHeight / 2) === Math.round(-y) ? -50 : 0) ? 0 : y) + px;
     cache.z = z + px;
     cache.scaleX = _round(scaleX);
     cache.scaleY = _round(scaleY);
@@ -33175,7 +33099,10 @@ return paper;
 
     temp = "matrix(" + a11 + "," + a21 + "," + a12 + "," + a22 + "," + tx + "," + ty + ")";
     target.setAttribute("transform", temp);
-    forceCSS && (target.style[_transformProp] = temp);
+
+    if (forceCSS) {
+      target.style[_transformProp] = temp;
+    }
   },
       _addRotationalPropTween = function _addRotationalPropTween(plugin, target, property, startNum, endValue, relative) {
     var cap = 360,
@@ -33212,17 +33139,10 @@ return paper;
 
     return pt;
   },
-      _assign = function _assign(target, source) {
-    for (var p in source) {
-      target[p] = source[p];
-    }
-
-    return target;
-  },
       _addRawTransformPTs = function _addRawTransformPTs(plugin, transforms, target) {
-    var startCache = _assign({}, target._gsap),
+    var style = _tempDivStyler.style,
+        startCache = target._gsap,
         exclude = "perspective,force3D,transformOrigin,svgOrigin",
-        style = target.style,
         endCache,
         p,
         startValue,
@@ -33231,22 +33151,12 @@ return paper;
         endNum,
         startUnit,
         endUnit;
+    style.cssText = getComputedStyle(target).cssText + ";position:absolute;display:block;";
+    style[_transformProp] = transforms;
 
-    if (startCache.svg) {
-      startValue = target.getAttribute("transform");
-      target.setAttribute("transform", "");
-      style[_transformProp] = transforms;
-      endCache = _parseTransform(target, 1);
+    _doc$1.body.appendChild(_tempDivStyler);
 
-      _removeProperty(target, _transformProp);
-
-      target.setAttribute("transform", startValue);
-    } else {
-      startValue = getComputedStyle(target)[_transformProp];
-      style[_transformProp] = transforms;
-      endCache = _parseTransform(target, 1);
-      style[_transformProp] = startValue;
-    }
+    endCache = _parseTransform(_tempDivStyler, 1);
 
     for (p in _transformProps) {
       startValue = startCache[p];
@@ -33257,14 +33167,14 @@ return paper;
         endUnit = getUnit(endValue);
         startNum = startUnit !== endUnit ? _convertToUnit(target, p, startValue, endUnit) : parseFloat(startValue);
         endNum = parseFloat(endValue);
-        plugin._pt = new PropTween(plugin._pt, endCache, p, startNum, endNum - startNum, _renderCSSProp);
+        plugin._pt = new PropTween(plugin._pt, startCache, p, startNum, endNum - startNum, _renderCSSProp);
         plugin._pt.u = endUnit || 0;
 
         plugin._props.push(p);
       }
     }
 
-    _assign(endCache, startCache);
+    _doc$1.body.removeChild(_tempDivStyler);
   };
 
   _forEachName("padding,margin,Width,Radius", function (name, index) {
@@ -33305,7 +33215,6 @@ return paper;
     init: function init(target, vars, tween, index, targets) {
       var props = this._props,
           style = target.style,
-          startAt = tween.vars.startAt,
           startValue,
           endValue,
           endNum,
@@ -33347,31 +33256,20 @@ return paper;
         }
 
         if (specialProp) {
-          specialProp(this, target, p, endValue, tween) && (hasPriority = 1);
+          if (specialProp(this, target, p, endValue, tween)) {
+            hasPriority = 1;
+          }
         } else if (p.substr(0, 2) === "--") {
-          startValue = (getComputedStyle(target).getPropertyValue(p) + "").trim();
-          endValue += "";
-          _colorExp.lastIndex = 0;
-
-          if (!_colorExp.test(startValue)) {
-            startUnit = getUnit(startValue);
-            endUnit = getUnit(endValue);
-          }
-
-          endUnit ? startUnit !== endUnit && (startValue = _convertToUnit(target, p, startValue, endUnit) + endUnit) : startUnit && (endValue += startUnit);
-          this.add(style, "setProperty", startValue, endValue, index, targets, 0, 0, p);
+          this.add(style, "setProperty", getComputedStyle(target).getPropertyValue(p) + "", endValue + "", index, targets, 0, 0, p);
         } else if (type !== "undefined") {
-          if (startAt && p in startAt) {
-            startValue = typeof startAt[p] === "function" ? startAt[p].call(tween, index, target, targets) : startAt[p];
-            p in _config.units && !getUnit(startValue) && (startValue += _config.units[p]);
-            (startValue + "").charAt(1) === "=" && (startValue = _get(target, p));
-          } else {
-            startValue = _get(target, p);
-          }
-
+          startValue = _get(target, p);
           startNum = parseFloat(startValue);
           relative = type === "string" && endValue.charAt(1) === "=" ? +(endValue.charAt(0) + "1") : 0;
-          relative && (endValue = endValue.substr(2));
+
+          if (relative) {
+            endValue = endValue.substr(2);
+          }
+
           endNum = parseFloat(endValue);
 
           if (p in _propertyAliases) {
@@ -33394,7 +33292,7 @@ return paper;
           if (isTransformRelated) {
             if (!transformPropTween) {
               cache = target._gsap;
-              cache.renderTransform && !vars.parseTransform || _parseTransform(target, vars.parseTransform);
+              cache.renderTransform || _parseTransform(target);
               smooth = vars.smoothOrigin !== false && cache.smooth;
               transformPropTween = this._pt = new PropTween(this._pt, style, _transformProp, 0, 1, cache.renderTransform, cache, 0, -1);
               transformPropTween.dep = 1;
@@ -33446,7 +33344,7 @@ return paper;
             endNum || (endNum = 0);
             endUnit = getUnit(endValue) || (p in _config.units ? _config.units[p] : startUnit);
             startUnit !== endUnit && (startNum = _convertToUnit(target, p, startValue, endUnit));
-            this._pt = new PropTween(this._pt, isTransformRelated ? cache : style, p, startNum, relative ? relative * endNum : endNum - startNum, !isTransformRelated && (endUnit === "px" || p === "zIndex") && vars.autoRound !== false ? _renderRoundedCSSProp : _renderCSSProp);
+            this._pt = new PropTween(this._pt, isTransformRelated ? cache : style, p, startNum, relative ? relative * endNum : endNum - startNum, endUnit === "px" && vars.autoRound !== false && !isTransformRelated ? _renderRoundedCSSProp : _renderCSSProp);
             this._pt.u = endUnit || 0;
 
             if (startUnit !== endUnit) {
