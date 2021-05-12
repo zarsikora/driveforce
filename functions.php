@@ -1,5 +1,5 @@
-<?php 
-// LOAD IN HOMEMADE FUNCTIONS
+<?php
+include('includes/sharpspring.php');
 include('includes/button.php');
 include('includes/image-tag.php');
 
@@ -32,21 +32,22 @@ function remove_jquery_migrate($scripts)
 add_action( 'wp_default_scripts', 'remove_jquery_migrate' );
 
 //LOAD SCRIPTS 
-function bones_load_scripts() {
+function bones_load_scripts()
+{
+    global $wp_query;
+
     wp_enqueue_style( 'main-stylesheet', get_stylesheet_uri(), '', time() );
 
     wp_deregister_script( 'wp-embed' );
 
-    wp_enqueue_script( 'main-scripts', get_bloginfo('url') . '/wp-content/themes/bones/bundle.js', '', time(), false);
-
-    //AJAX PARAMS FOR LOADMORE
-    global $wp_query;
-    wp_localize_script( 'main-scripts', 'loadmore_params', array(
-        'ajaxurl' => admin_url('admin-ajax.php'), // WordPress AJAX
-        'posts' => $wp_query->query_vars, // everything about your loop is here
+    wp_register_script( 'main-scripts', get_bloginfo('template_directory') . '/bundle.js');
+    wp_localize_script( 'main-scripts', 'localizedVars', array(
+        'ajaxurl' => admin_url('admin-ajax.php'),
+        'posts' => $wp_query->query_vars,
         'current_page' => get_query_var( 'paged' ) ? get_query_var('paged') : 1,
         'max_page' => $wp_query->max_num_pages
-    ) );
+    ));
+    wp_enqueue_script( 'main-scripts', get_bloginfo('url') . '/wp-content/themes/bones/bundle.js', '', time(), false);
 
     $pageComponents = get_field('components');
 
