@@ -107,6 +107,11 @@ function getScrollModules()
     });
 }
 
+//Re-fetch Scroll Modules on every Resize
+window.addEventListener("resize", function(){
+    getScrollModules();
+});
+
 function animationWizard(timestamp)
 {
     getScrollModules();
