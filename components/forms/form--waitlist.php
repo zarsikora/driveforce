@@ -1,5 +1,22 @@
 <div data-animation-effect="moduleFadeIn" data-animation-trigger="breakpoint" id="form-wrapper">
-    <div id="cf7-wrapper">
-        <?php echo do_shortcode('[contact-form-7 id="5" title="Waitlist"]')?>
-    </div>
+    <form autocomplete="off" action="" method="post" id="sharpspring-waitlist" class="sharpspring-waitlist" novalidate>
+        <div class="field-group">
+            <label class="sr-only">First Name</label>
+            <input class="form-control" type="text" name="first-name" value="" placeholder="First Name" />
+        </div>
+        <div class="field-group">
+            <label class="sr-only">Last Name</label>
+            <input class="form-control" type="text" name="last-name" value="" placeholder="Last Name" />
+        </div>
+        <div class="field-group last-field">
+            <label class="sr-only">Email</label>
+            <input class="form-control" type="text" name="email" value="" placeholder="Email" />
+        </div>
+        <button disabled class="btn" type="submit">
+            <div class="btn-hover-maks"></div>
+            <span>Add Me to the Waitlist</span>
+        </button>
+        <img class="form-loading" src="" alt="loading" />
+        <div class="form-message"></div>
+    </form>
 </div>
