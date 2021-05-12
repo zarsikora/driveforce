@@ -16,7 +16,7 @@
             <div class="btn-hover-maks"></div>
             <span>Add Me to the Waitlist</span>
         </button>
-        <img class="form-loading" src="" alt="loading" />
+        <img class="form-loading" src="http://localhost/df/wp-content/uploads/2021/01/loading-gif.gif" alt="loading" />
         <div class="form-message"></div>
     </form>
 </div>
