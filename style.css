@@ -14753,18 +14753,13 @@ form .btn-wrapper .btn, form .btn-wrapper #waitlistModal .modal-dialog .modal-co
   text-align: right;
   left: 0;
   bottom: 0;
-  margin-left: -20%;
 }
 
 @media (min-width: 992px) {
   #waitList .module-padded .tag {
     display: block;
-  }
-}
-
-@media (min-width: 1440px) {
-  #waitList .module-padded .tag {
     margin-left: -50%;
+    width: 50vw;
   }
 }
 

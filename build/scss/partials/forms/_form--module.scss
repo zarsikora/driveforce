@@ -153,12 +153,10 @@
             text-align: right;
             left: 0;
             bottom: 0;
-            margin-left: -20%;
             @include media-breakpoint-up(lg){
                 display: block;
-            }
-            @media (min-width: 1440px){
                 margin-left: -50%;
+                width: 50vw;
             }
         }
     }
