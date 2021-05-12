@@ -172,6 +172,14 @@ if( function_exists('acf_add_options_page') ) {
 	
 }
 
+// DONT ALLOW DRAFT POSTS IN POST PICKER FIELD FOR ARTICLES GRID
+function relationship_options_filter($options, $field, $the_post) {
+$options['post_status'] = array('publish');
+return $options;
+}
+
+add_filter('acf/fields/post_object/query/name=blog_posts', 'relationship_options_filter', 10, 3);
+
 //Get menu function
 function wp_get_menu_array($current_menu) {
     $array_menu = wp_get_nav_menu_items($current_menu);

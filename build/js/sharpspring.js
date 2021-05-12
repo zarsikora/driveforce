@@ -58,13 +58,15 @@ function validateForm(fieldsArray)
 
 function getFormFieldsArray(form = null, fields = null)
 {
-    if(!fields) { const fields = form.serializeArray(); }
+    if(!fields) { fields = form.serializeArray(); }
     let fieldsArr = {};
 
     for(let i = 0; i < fields.length; i++)
     {
         fieldsArr[fields[i].name] = fields[i].value;
     }
+
+    console.log(fieldsArr);
 
     return fieldsArr;
 }
