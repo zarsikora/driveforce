@@ -13035,22 +13035,37 @@ a.browse-all {
   text-align: left;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 768px) {
+  .rte.grid .text-container {
+    width: 75%;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 1225px) {
   .rte.grid .text-container {
     width: 50%;
+    margin: 0;
   }
 }
 
 @media (min-width: 768px) {
   .rte.grid .grid {
-    margin-top: 4rem;
+    margin: 4rem auto 0;
+    width: 75%;
   }
 }
 
 @media (min-width: 992px) {
   .rte.grid .grid {
+    margin: 7.5rem auto 0;
+  }
+}
+
+@media (min-width: 1225px) {
+  .rte.grid .grid {
     width: 60%;
-    margin-top: 7.5rem;
+    margin: 7.5rem 0 0;
   }
 }
 

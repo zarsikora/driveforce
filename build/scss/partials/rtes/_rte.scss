@@ -100,18 +100,27 @@
     &.grid {
         .text-container {
             text-align: left;
-            @include media-breakpoint-up(lg){
+            @include media-breakpoint-up(md){
+                width: 75%;
+                margin: 0 auto;
+            }
+            @media(min-width: 1225px){
                 width: 50%;
+                margin: 0;
             }
         }
 
         .grid {
             @include media-breakpoint-up(md){
-                margin-top: 4rem;
+                margin: 4rem auto 0;
+                width: 75%;
             }
             @include media-breakpoint-up(lg){
+                margin: 7.5rem auto 0;
+            }
+            @media(min-width: 1225px){
                 width: 60%;
-                margin-top: 7.5rem;
+                margin: 7.5rem 0 0;
             }
 
             .row .card-container {
