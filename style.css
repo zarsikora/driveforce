@@ -14296,6 +14296,7 @@ form.sharpspring-waitlist .form-loading {
   display: none;
   width: 3rem;
   height: 3rem;
+  margin-top: 2rem;
 }
 
 form.sharpspring-waitlist .form-message {
