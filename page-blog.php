@@ -25,7 +25,7 @@ get_header();
     <?php if($published_posts > 6): ?>
         <a id="more_posts" href="#">
             Load More Articles
-            <img class="loading-gif" src="http://localhost/df/wp-content/uploads/2021/01/loading-gif.gif" />
+            <img class="loading-gif" src="http://staging.driveforce.golf/wp-content/uploads/2021/01/loading-gif.gif" />
         </a>
     <?php endif; ?>
 
