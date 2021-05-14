@@ -127,6 +127,10 @@
                         position: static;
                         transform: translateX(-25%);
                     }
+                    @include media-breakpoint-up(xl) {
+                        width: 100%;
+                        transform: none;
+                    }
                 }
             }
 

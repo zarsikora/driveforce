@@ -11907,7 +11907,7 @@ a.btn:hover, .woocommerce-cart #content .return-to-shop a.button:hover, body.woo
 }
 
 .hero.home-hero .inner .row {
-  margin: 4rem 0 0;
+  margin: 0;
 }
 
 .hero.home-hero .inner .row .col-lg-5 {
@@ -11923,6 +11923,12 @@ a.btn:hover, .woocommerce-cart #content .return-to-shop a.button:hover, body.woo
 @media (min-width: 768px) {
   .hero.home-hero .inner .row .col-lg-5 {
     order: 1;
+  }
+}
+
+@media (min-width: 992px) {
+  .hero.home-hero .inner .row .col-lg-5 {
+    margin-top: 4rem;
   }
 }
 
@@ -14870,6 +14876,13 @@ form.sharpspring-waitlist .form-message p {
     width: 156%;
     position: static;
     transform: translateX(-25%);
+  }
+}
+
+@media (min-width: 1200px) {
+  #waitList .module-padded .row .img img {
+    width: 100%;
+    transform: none;
   }
 }
 
