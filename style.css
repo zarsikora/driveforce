@@ -14853,12 +14853,23 @@ form.sharpspring-waitlist .form-message p {
   height: auto;
 }
 
-@media (min-width: 767px) and (max-width: 991px) {
+@media (min-width: 768px) {
   #waitList .module-padded .row .img img {
-    height: 100vw;
-    max-height: 90rem;
+    height: 100%;
     width: auto;
-    margin-left: -50vw;
+    position: absolute;
+    left: -5rem;
+    top: 0;
+    transform: translateX(-50%);
+  }
+}
+
+@media (min-width: 992px) {
+  #waitList .module-padded .row .img img {
+    height: auto;
+    width: 156%;
+    position: static;
+    transform: translateX(-25%);
   }
 }
 
@@ -14887,6 +14898,7 @@ form.sharpspring-waitlist .form-message p {
   text-align: right;
   left: 0;
   bottom: 0;
+  transform: translateY(100%);
 }
 
 @media (min-width: 992px) {

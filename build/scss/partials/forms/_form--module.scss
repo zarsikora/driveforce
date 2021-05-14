@@ -113,12 +113,19 @@
                 img {
                     width: 100%;
                     height: auto;
-
-                    @media(min-width: 767px) and (max-width: 991px){
-                        height: 100vw;
-                        max-height: 90rem;
+                    @media(min-width: 768px) {
+                        height: 100%;
                         width: auto;
-                        margin-left: -50vw;
+                        position: absolute;
+                        left: -5rem;
+                        top: 0;
+                        transform: translateX(-50%);
+                    }
+                    @media(min-width: 992px) {
+                        height: auto;
+                        width: 156%;
+                        position: static;
+                        transform: translateX(-25%);
                     }
                 }
             }
@@ -133,7 +140,6 @@
                 .copy {
                     text-align: center;
                     margin: 2rem 0;
-
                     @include media-breakpoint-up(md) {
                         text-align: left;
                         margin: 0;
@@ -147,6 +153,7 @@
             text-align: right;
             left: 0;
             bottom: 0;
+            transform: translateY(100%);
             @include media-breakpoint-up(lg){
                 display: block;
                 margin-left: -50%;
