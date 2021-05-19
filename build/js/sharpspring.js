@@ -13,23 +13,6 @@ window._pa = window._pa || {};
     scr.parentNode.insertBefore(ss, scr);
 })();
 
-// let fieldsArr = {
-//     'company': "heretic",
-//     'email': "dev@heretic.agency",
-//     'first-name': "devn",
-//     'funding': "Self-funded",
-//     'industry': "dev",
-//     'last-name': "riley",
-//     'launch': "Pre-launch",
-//     'location': "salem",
-//     'offering': "Product",
-//     'referral': "rick",
-//     'referred': "Yes",
-//     'scope': "tewt"
-// }
-
-// sharpspringAJAXRequest('createLeads', fieldsArr);
-
 function validateForm(fieldsArray)
 {
     let errors = {};
@@ -111,7 +94,7 @@ $('form').on('submit', function(e)
         e.preventDefault();
 
         let fieldsArr = getFormFieldsArray($(this));
-            fieldsArr['signup-type'] =  'Waitlist';
+            //fieldsArr['signup-type'] =  'Waitlist';
         let method = 'createLeads';
         let errors = validateForm(fieldsArr);
 
@@ -125,11 +108,11 @@ $('form').on('submit', function(e)
     }
 });
 
-function sharpspringAJAXRequest(method, fields = null, form)
+async function sharpspringAJAXRequest(method, fields = null, form)
 {
     const _form = form;
 
-    $.ajax({
+    const ajaxResults = await $.ajax({
         type: 'POST',
         url: localizedVars.ajaxurl,
         dataType: 'json',
@@ -156,11 +139,40 @@ function sharpspringAJAXRequest(method, fields = null, form)
 
             formMessage.html('<p>You\'ve been added to the waitlist!</p>');
         },
-        error: function(err)
+        error: function(error)
         {
-            console.log('error', err);
+            console.log(error);
         }
     });
+
+    const ajaxResultsJSON = JSON.parse(ajaxResults);
+
+    console.log(ajaxResultsJSON);
+
+    if(method == 'createLeads' && !ajaxResultsJSON.error.length)
+    {
+        $.ajax({
+            type: 'POST',
+            url: localizedVars.ajaxurl,
+            dataType: 'json',
+            data: {
+                action: 'sharpspring_request',
+                method: 'updateLeads',
+                fields: {
+                    'id': ajaxResultsJSON['result']['creates'][0]['id'],
+                    'signup_method': 'Waitlist'
+                }
+            },
+            success: function(data)
+            {
+                console.log(data);
+            },
+            error: function(error)
+            {
+                console.log(error);
+            }
+        });
+    }
 }
 
 function sharpspringTransaction()

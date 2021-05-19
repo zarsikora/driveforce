@@ -32,6 +32,18 @@ function getParams($method, $f)
         );
     }
 
+    if($method == 'updateLeads')
+    {
+        return array(
+            'objects' => array(
+                array(
+                    'id' => $f['id'],
+                    'signup_method_605f8759a02df' => $f['signup_method']
+                )
+            )
+        );
+    }
+
     if($method == 'deleteLeads')
     {
 
@@ -85,6 +97,7 @@ function sharpspring_request()
     ));
 
     $result = curl_exec($ch);
+
     curl_close($ch);
 
     echo json_encode($result);
