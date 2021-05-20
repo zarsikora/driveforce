@@ -64,6 +64,11 @@ if(have_rows('components')) :
             case 'contact_form' :
                 include('forms/form--module.php');
             break;
+
+            //ENDORSEMENT SLIDER
+            case 'endorsement_slider' :
+                include('endorsement-slider.php');
+            break;
         }
     endwhile;
 endif;

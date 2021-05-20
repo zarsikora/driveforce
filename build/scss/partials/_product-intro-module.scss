@@ -54,6 +54,27 @@
             }
         }
 
+        .product-certs {
+            .cert-block {
+                margin-bottom: 4rem;
+                text-align: right;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+
+                img {
+                    width: auto;
+                    height: 6.7rem;
+                    margin-bottom: 2rem;
+                }
+
+                h3 {
+                    margin-bottom: 2rem;
+                }
+            }
+        }
+
         .product-data {
             .data-block {
                 display: block;
@@ -94,7 +115,6 @@
 
                 p {
                     margin: 0;
-                    font-size: 1.6rem;
                 }
             }
         }

@@ -4,6 +4,7 @@ $header = get_sub_field('header');
 $intro = get_sub_field('intro_copy');
 $mainImage = get_sub_field('main_image');
 $button = get_sub_field('button');
+$bottomText = get_sub_field('bottom_text');
 
 ?>
 
@@ -15,7 +16,31 @@ $button = get_sub_field('button');
         <?php endif; ?>
 
         <div class="product-container row">
-            <!-- CERTIFICATIONS 3 -->
+            <?php if(have_rows('certifications')) : ?>
+                <div class="product-certs col-lg-4">
+                    <?php while(have_rows('certifications')): the_row(); ?>
+                        <?php
+                            $logo = get_sub_field('logo');
+                            $name = get_sub_field('name');
+                            $description = get_sub_field('description');
+                        ?>
+
+                    <div data-animation-effect="moduleFadeIn" data-animation-trigger="scroll" class="cert-block">
+                        <?php if($logo): ?>
+                            <?php echo imageTag($logo, '', '', '', false); ?>
+                        <?php endif; ?>
+
+                        <?php if($name): ?>
+                            <h3><?php echo $name ?></h3>
+                        <?php endif; ?>
+
+                        <?php if($description): ?>
+                            <p><?php echo $description ?></p>
+                        <?php endif; ?>
+                    </div>
+                    <?php endwhile; ?>
+                </div>
+            <?php endif; ?>
 
             <?php if($mainImage): ?>
                 <div class="image-wrapper col-lg-4">
@@ -50,8 +75,12 @@ $button = get_sub_field('button');
             <?php endif; ?>
         </div>
 
+        <?php if($bottomText): ?>
+            <h2 class="bottom-text" data-animation-effect="splitSlideUpWord" data-animation-trigger="breakpoint" data-splitting="chars"><?php echo $bottomText ?></h2>
+        <?php endif; ?>
+
         <?php if($button): ?>
-            <?php 
+            <?php
                 $text = $button['title'];
                 $url = $button['url'];
             ?>
