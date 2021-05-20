@@ -34816,30 +34816,6 @@ if(!ticking)
 
 //STICKY LOGO ON SCROLL WITH BANNER
 
-stickyLogo = (scrollY) =>
-{
-    if(document.getElementById('promo-banner')){
-        let screenWidth = $(document).width();
-        let bannerHeight = $('#promo-banner').outerHeight();
-
-        if(screenWidth >= '992'){ 
-            if(scrollY >= bannerHeight){
-                    $('.sticky-logo').addClass('sticky');
-            } else {
-                $('.sticky-logo').removeClass('sticky');
-            }
-        }
-    }
-}
-
-if(document.getElementById('promo-banner')){
-    let screenWidth = $(document).width();
-
-    if(screenWidth >= '992'){ 
-        $('.sticky-logo').removeClass('sticky');
-    }
-}
-
 let navHasAnimated = false;
 
 navAnimate = (scrollY) =>
