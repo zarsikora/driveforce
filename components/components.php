@@ -69,6 +69,11 @@ if(have_rows('components')) :
             case 'endorsement_slider' :
                 include('endorsement-slider.php');
             break;
+
+            //INGREDIENTS MODULE
+            case 'ingredients_module' :
+                include('ingredients-module.php');
+            break;
         }
     endwhile;
 endif;

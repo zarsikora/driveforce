@@ -10736,6 +10736,22 @@ span.sage {
   }
 }
 
+.btn.thin-btn, #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form button.thin-btn, .woocommerce-cart #content .return-to-shop .thin-btn.button, body.woocommerce-account #content .woocommerce .woocommerce-form-login .thin-btn.woocommerce-button, body.woocommerce-edit-address .woocommerce-address-fields .thin-btn.button, body.woocommerce-edit-account .woocommerce-EditAccountForm .thin-btn.button, .woocommerce-ResetPassword .thin-btn.button {
+  padding: 1.8rem;
+  border-radius: .4rem;
+  width: 100%;
+}
+
+.btn.thin-btn .btn-hover-mask, #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form button.thin-btn .btn-hover-mask, .woocommerce-cart #content .return-to-shop .thin-btn.button .btn-hover-mask, body.woocommerce-account #content .woocommerce .woocommerce-form-login .thin-btn.woocommerce-button .btn-hover-mask, body.woocommerce-edit-address .woocommerce-address-fields .thin-btn.button .btn-hover-mask, body.woocommerce-edit-account .woocommerce-EditAccountForm .thin-btn.button .btn-hover-mask, .woocommerce-ResetPassword .thin-btn.button .btn-hover-mask {
+  display: none;
+}
+
+@media (min-width: 992px) {
+  .btn.thin-btn:hover, #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form button.thin-btn:hover, .woocommerce-cart #content .return-to-shop .thin-btn.button:hover, body.woocommerce-account #content .woocommerce .woocommerce-form-login .thin-btn.woocommerce-button:hover, body.woocommerce-edit-address .woocommerce-address-fields .thin-btn.button:hover, body.woocommerce-edit-account .woocommerce-EditAccountForm .thin-btn.button:hover, .woocommerce-ResetPassword .thin-btn.button:hover {
+    background-color: #9A1D1D;
+  }
+}
+
 button:focus {
   border: none;
   outline: none;
@@ -13436,6 +13452,52 @@ a.browse-all {
   margin-bottom: 0;
 }
 
+.rte.fiftyfifty.type-inlaid {
+  background: #F9F1E7;
+  padding: 10rem 0;
+}
+
+@media (min-width: 992px) {
+  .rte.fiftyfifty.type-inlaid {
+    padding: 13rem 0;
+  }
+}
+
+@media (min-width: 1440px) {
+  .rte.fiftyfifty.type-inlaid {
+    padding: 9vw 0;
+  }
+}
+
+@media (min-width: 1920px) {
+  .rte.fiftyfifty.type-inlaid {
+    padding: 17.3rem 0;
+  }
+}
+
+@media (min-width: 992px) {
+  .rte.fiftyfifty.type-inlaid .inlaid-inner {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+}
+
+.rte.fiftyfifty.type-inlaid .inlaid-inner .image-inner {
+  padding: 10rem 14rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rte.fiftyfifty.type-inlaid .inlaid-inner .image-inner img {
+  max-width: 28rem;
+  height: auto;
+}
+
+.rte.fiftyfifty.type-inlaid .inlaid-inner .text-inner {
+  padding: 0;
+}
+
 @media (min-width: 768px) {
   .rte.fiftyfifty.img-left .row .image-container {
     order: 1;
@@ -15082,6 +15144,67 @@ form.sharpspring-waitlist .form-message p {
   height: auto;
   position: absolute;
   left: 0;
+}
+
+.ingredients-module .intro h2 {
+  margin-bottom: 2rem;
+}
+
+.ingredients-module .intro p {
+  margin-bottom: 2rem;
+  margin-top: 0;
+}
+
+.ingredients-module .intro img {
+  width: 9.7rem;
+  height: auto;
+}
+
+.ingredients-module .ingredients .block {
+  background-color: #88E2C1;
+  width: 85%;
+  padding: 6rem 4.5rem;
+  position: relative;
+}
+
+.ingredients-module .ingredients .block ul {
+  padding: 0;
+  list-style: none;
+  margin-bottom: 10rem;
+}
+
+.ingredients-module .ingredients .block ul li {
+  font-family: "Sharp Sans Bold";
+  font-size: 1.6rem;
+  margin-bottom: 4rem;
+}
+
+.ingredients-module .ingredients .block ul li:last-child {
+  margin-bottom: 0;
+}
+
+@media (min-width: 1440px) {
+  .ingredients-module .ingredients .block ul li {
+    font-size: 1.111vw;
+  }
+}
+
+@media (min-width: 1920px) {
+  .ingredients-module .ingredients .block ul li {
+    font-size: 2.1rem;
+  }
+}
+
+.ingredients-module .ingredients .block ul li .check {
+  margin-right: 1rem;
+}
+
+.ingredients-module .ingredients .block-image {
+  width: 22.7rem;
+  height: auto;
+  position: absolute;
+  right: -15rem;
+  top: 18rem;
 }
 
 .share-module {

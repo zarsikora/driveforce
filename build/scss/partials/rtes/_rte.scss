@@ -360,6 +360,43 @@
             }
         }
 
+        &.type-inlaid {
+            background: $lightText;
+            padding: 10rem 0;
+            @include media-breakpoint-up(lg) {
+                padding: 13rem 0;
+            }
+            @media(min-width: 1440px) {
+                padding: 9vw 0;
+            }
+            @media(min-width: 1920px) {
+                padding: 17.3rem 0;
+            }
+
+            .inlaid-inner {
+                @include media-breakpoint-up(lg){
+                    max-width: 80%;
+                    margin: 0 auto;
+                }
+
+                .image-inner {
+                    padding: 10rem 14rem;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    img {
+                        max-width: 28rem;
+                        height: auto;
+                    }
+                }
+
+                .text-inner {
+                    padding: 0;
+                }
+            }
+        }
+
 
         &.img-left {
             .row {
