@@ -2,24 +2,120 @@
     position: relative;
     z-index: 3;
     background-color: $darkBg;
-    padding: 6rem 6rem 10rem;
-    @include media-breakpoint-up(md){
-        padding: 7rem 0;
-    }
 
-    .inner {
-        margin: 0 auto;
-        display: block;
-        justify-content: center;
-        flex-wrap: wrap;
-        @include media-breakpoint-up(md) {
-            max-width: 90%;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+        .top {
+            background-color: #14302B;
+            color: $lightText;
+
+            ul.submenu {
+                list-style: none;
+
+                li {
+                    font-size: 1.4rem;
+                    font-family: $mediumType;
+                    @media(min-width: 1440px){
+                        font-size: 0.972vw;
+                    }
+                    @media(min-width: 1920px){
+                        font-size: 1.86rem;
+                    }
+
+                    &.title {
+                        font-family: $boldType;
+                        color: $sage;
+                        text-transform: uppercase;
+                        margin-bottom: 2rem;
+                        font-size: 1rem;
+                        letter-spacing: .15rem;
+                        @media(min-width: 1440px){
+                            font-size: 0.694vw;
+                        }
+                        @media(min-width: 1920px){
+                            font-size: 1.33rem;
+                        }
+                    }
+
+                    a {
+                        color: $lightText;
+                    }
+                }
+            }
+
+            .inner {
+                width: 80.556vw;
+                margin: 0 auto;
+                padding-top: 6rem;
+
+                .upper-nav {
+                    margin-bottom: 10rem;
+                }
+
+                .disclaimer {
+                    position: relative;
+                    font-family: $bookType;
+                    font-size: 1.4rem;
+                    padding: 4rem 0;
+                    @media(min-width: 1440px){
+                        font-size: 0.972vw;
+                    }
+                    @media(min-width: 1920px){
+                        font-size: 1.86rem;
+                    }
+
+                    &:before,
+                    &:after {
+                        content: "";
+                        position: absolute;
+                        width: 100vw;
+                        height: .1rem;
+                        background-color: $sage;
+                        left: -10vw;
+                    }
+
+                    &:before {
+                        top: 0;
+                    }
+
+                    &:after {
+                        bottom: 0;
+                    }
+                }
+
+                .lower-nav {
+                    align-items: center;
+                    justify-content: space-between;
+
+                    .submenu {
+                        padding: 0;
+                        margin: 0;
+                        display: flex;
+
+                        li {
+                            margin-right: 4rem;
+
+                            &:last-child {
+                                margin-right: 0;
+                            }
+                        }
+                    }
+
+                    .copyright {
+                        color: $lightText;
+                        font-size: 1rem;
+                        @media(min-width: 1440px){
+                            font-size: 0.694vw;
+                        }
+                        @media(min-width: 1920px){
+                            font-size: 1.33rem;
+                        }
+                    }
+                }
+            }
         }
-        @media(min-width: 1440px) {
-            max-width: 80%;
+
+        .bottom {
+            background-color: #081D1A;
+            height: 10rem;
         }
 
         .logo {
@@ -104,20 +200,4 @@
                 }
             }
         }
-
-        .copyright {
-            color: $lightText;
-            font-size: 1rem;
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            @include media-breakpoint-up(md){
-                position: relative;
-                left: unset;
-                transform: translateX(0);
-                font-size: 0.694vw;
-            }
-        }
-    }
 }

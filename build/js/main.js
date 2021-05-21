@@ -2,7 +2,14 @@
 window.$ = window.jQuery = jQuery;
 
 //Init splitting js
-let splitting = new Splitting(); 
+let splitting = new Splitting();
+
+//Init splide
+let slider = document.getElementById('splide');
+
+if(slider){
+    new Splide( '.splide' ).mount();
+}
 
 //Init Simplebar
 if($('#contact.form-module').length)
@@ -570,7 +577,7 @@ requestTick = (scrollY) =>
 
 if(!ticking)
 {
-    scroll(function(){navAnimate(scrollY), stickyLogo(scrollY)});
+    scroll(function(){navAnimate(scrollY)});
 
     ticking = true;
 }

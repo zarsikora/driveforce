@@ -1,43 +1,93 @@
 <?php
-    $posts = get_posts();
+    $disclaimer = get_field('disclaimer_text', 'options');
 ?>
 
 
     <footer id="footer">
-        <div class="inner">
-            <div class="logo">
-                <a class="logo-link" href="<?php echo home_url(); ?>" aria-label="Return to Home Page">
-                
-                <svg class="logo" viewBox="0 0 39.96 31.039">
-                    <use href="#footer-logo"></use>
-                </svg>
-                </a>
+            <div class="top">
+                <div class="inner">
+                    <div class="upper-nav row">
+                        <div class="logo col-lg-2">
+                            <a class="logo-link" href="<?php echo home_url(); ?>" aria-label="Return to Home Page">
+                                <svg class="logo" viewBox="0 0 39.96 31.039">
+                                    <use href="#footer-logo"></use>
+                                </svg>
+                            </a>
+                        </div>
+
+                        <ul class="submenu col-lg-2">
+                            <li class="title">Shop</li>
+                            <li>
+                                <a href="">DF-18</a>
+                            </li>
+                            <li>
+                                <a href="">My Account</a>
+                            </li>
+                        </ul>
+
+                        <ul class="submenu col-lg-2">
+                            <li class="title">Learn</li>
+                            <li>
+                                <a href="">Ingredients & Benefits</a>
+                            </li>
+                            <li>
+                                <a href="">Articles</a>
+                            </li>
+                            <li>
+                                <a href="">FAQs</a>
+                            </li>
+                        </ul>
+
+                        <ul class="submenu col-lg-2">
+                            <li class="title">About</li>
+                            <li>
+                                <a href="">Our Story</a>
+                            </li>
+                            <li>
+                                <a href="">Wholesale Inquiries</a>
+                            </li>
+                            <li>
+                                <a href="">Contact Us</a>
+                            </li>
+                            <li>
+                                <a href="">Press Inquiries</a>
+                            </li>
+                        </ul>
+
+                        <div class="newsletter col-lg-4">
+                            <h4>DriveForce Newsletter Signup</h4>
+                            <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
+                            <!-- form -->
+                        </div>
+                    </div>
+
+                    <?php if($disclaimer): ?>
+                        <div class="disclaimer">
+                            <p><?php echo $disclaimer ?></p>
+                        </div>
+                    <?php endif; ?>
+
+                    <div class="lower-nav row">
+                        <ul class="submenu">
+                            <li>
+                                <a href="">Privacy</a>
+                            </li>
+
+                            <li>
+                                <a href="">Terms & Conditions</a>
+                            </li>
+
+                            <li>
+                                <a href="">Legal Disclosure</a>
+                            </li>
+                        </ul>
+
+                        <p class="copyright">&copy; DriveForce  <?php echo date('Y'); ?></p>
+                    </div>
+                </div>
             </div>
-            <?php
-                $footerMenu = wp_get_menu_array('footer-menu'); 
 
-                echo '<div class="menu-footer-menu-container">';
-                echo '<ul id="menu-footer-menu" class="menu">';
+            <div class="bottom">
 
-                foreach ($footerMenu as $k => $v) {
-                    $current = ($v['title'] == get_the_title()) ? 'current' : '';
-
-                    if($v['title'] === 'Articles') {
-                        if($posts) {
-                            echo '<li id="menu-item-' . $v['ID'] . '" class="menu-item menu-item-' . $v['ID'] . ' ' . $current .'">';
-                            echo '<a class="item-link" href="' . $v['url'] . '">' . $v['title'] . '</a>';
-                            echo '</li>';
-                        }
-                    } else {
-                        echo '<li id="menu-item-' . $v['ID'] . '" class="menu-item menu-item-' . $v['ID'] . ' ' . $current .'">';
-                        echo '<a class="item-link" href="' . $v['url'] . '">' . $v['title'] . '</a>';
-                        echo '</li>';
-                    }
-                }
-
-                echo '</ul>';
-                echo '</div>';
-            ?>
-            <p class="copyright">&copy; DriveForce  <?php echo date('Y'); ?></p>
-        </div>
+            </div>
     </footer>

@@ -3,4 +3,43 @@
     color: $lightText;
     text-align: center;
   }
+
+  .splide__slide {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+
+    .details {
+      background: $lightText;
+      padding: 5rem;
+      width: 32.917vw;
+
+      h3 {
+        color: $sage;
+      }
+
+      .title {
+        @extend p.copy;
+      }
+
+      .product {
+        background: #fff;
+        display: inline-block;
+        margin: 0;
+        padding: 1rem 2rem;
+        border-radius: 2.3rem;
+      }
+
+      .quote {
+        font-size: 1.4rem; //TODO: make responsive
+      }
+    }
+
+    img {
+      width: 35.139vw;
+      height: auto;
+      position: absolute;
+      left: 0;
+    }
+  }
 }
