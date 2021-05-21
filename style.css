@@ -13037,6 +13037,38 @@ a.browse-all {
   }
 }
 
+.image-grid {
+  display: none;
+}
+
+@media (min-width: 992px) {
+  .image-grid {
+    display: block;
+  }
+}
+
+.image-grid .row {
+  height: 24.1rem;
+}
+
+@media (min-width: 1440px) {
+  .image-grid .row {
+    height: 16.736vw;
+  }
+}
+
+.image-grid .row .image {
+  position: relative;
+}
+
+.image-grid .row .image img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .rte {
   position: relative;
 }
