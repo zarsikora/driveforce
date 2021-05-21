@@ -1,8 +1,10 @@
 <?php
-
     $header = get_sub_field('header');
     $accentImage = get_sub_field('accent_image');
 
+    if(get_sub_field('slides')){
+        $slideCount = count( get_sub_field( 'slides' ) );
+    }
 ?>
 
 <!-- go over how this is supposed to move and why splide isnt working -->
@@ -14,18 +16,8 @@
         <?php endif; ?>
 
         <?php if(have_rows('slides')): ?>
-            <div class="splide" id="splide">
-                <div class="image-slider-nav">
-                    <a href="#" class="prev" data-hover>
-                        Prev
-                    </a>
-                    <a href="#" class="next" data-hover>
-                        Next
-                    </a>
-                </div>
-
-                <div class="splide__track">
-                    <ul class="splide__list primary">
+            <div id="slider">
+                    <ul class="slides">
                         <?php while(have_rows('slides')): the_row(); ?>
                             <?php
                             $image = get_sub_field('image');
@@ -35,7 +27,7 @@
                             $quote = get_sub_field('quote');
                             ?>
 
-                            <li class="splide__slide">
+                            <li class="slide">
                                 <div class="details">
                                     <?php if($name): ?>
                                         <h3><?php echo $name ?></h3>
@@ -58,7 +50,12 @@
                             </li>
                         <?php endwhile ?>
                     </ul>
-                </div>
+
+                    <div class="slider-nav">
+                        <?php for($i === 0; $i < $slideCount; $i++ ): ?>
+                            <button></button>
+                        <?php endfor; ?>
+                    </div>
             </div>
         <?php endif; ?>
     </div>
