@@ -15239,6 +15239,30 @@ form.sharpspring-waitlist .form-message p {
   top: 18rem;
 }
 
+.cta-module .module-padded {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.cta-module .module-padded svg.logo {
+  width: 8.2rem;
+  height: auto;
+}
+
+.cta-module .module-padded h2 {
+  color: #F9F1E7;
+  margin: 8.6rem 0 4rem;
+  text-align: center;
+  font-size: 6rem;
+}
+
+.cta-module .module-padded .btn, .cta-module #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form button, #waitlistModal .modal-dialog .modal-content .modal-body .form-module .cta-module .module-padded .form button, .cta-module .module-padded .woocommerce-cart #content .return-to-shop .button, .woocommerce-cart #content .return-to-shop .cta-module .module-padded .button, .cta-module .module-padded body.woocommerce-account #content .woocommerce .woocommerce-form-login .woocommerce-button, body.woocommerce-account #content .woocommerce .woocommerce-form-login .cta-module .module-padded .woocommerce-button, .cta-module .module-padded body.woocommerce-edit-address .woocommerce-address-fields .button, body.woocommerce-edit-address .woocommerce-address-fields .cta-module .module-padded .button, .cta-module .module-padded body.woocommerce-edit-account .woocommerce-EditAccountForm .button, body.woocommerce-edit-account .woocommerce-EditAccountForm .cta-module .module-padded .button, .cta-module .module-padded .woocommerce-ResetPassword .button, .woocommerce-ResetPassword .cta-module .module-padded .button {
+  margin-bottom: 11rem;
+}
+
 .share-module {
   background: #fff;
 }

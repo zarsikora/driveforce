@@ -27,7 +27,7 @@
                             $quote = get_sub_field('quote');
                             ?>
 
-                            <li class="slide">
+                            <li class="slide" data-slide="<?php get_row_index() ?>">
                                 <div class="details">
                                     <?php if($name): ?>
                                         <h3><?php echo $name ?></h3>
@@ -53,7 +53,7 @@
 
                     <div class="slider-nav">
                         <?php for($i === 0; $i < $slideCount; $i++ ): ?>
-                            <button></button>
+                            <button data-slide="<?php echo $i ?>"></button>
                         <?php endfor; ?>
                     </div>
             </div>

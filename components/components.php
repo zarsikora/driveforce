@@ -74,6 +74,11 @@ if(have_rows('components')) :
             case 'ingredients_module' :
                 include('ingredients-module.php');
             break;
+
+            //CTA MODULE
+            case 'cta_module' :
+                include('cta-module.php');
+            break;
         }
     endwhile;
 endif;

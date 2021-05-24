@@ -34,6 +34,23 @@
         </g>
     </symbol>
 
+    <!-- INLAID LOGO -->
+    <symbol id="inlaid-logo" viewBox="0 0 82 82">
+        <defs>
+            <style>.inlaid-a{fill:#dc4444;}.inlaid-b{fill:#fff;}</style>
+        </defs>
+        <g transform="translate(-679 -5568)">
+            <rect class="inlaid-a" width="82" height="82" transform="translate(679 5568)"/>
+            <g transform="translate(700.024 5593.298)">
+                <g transform="translate(0 0)">
+                <path class="inlaid-b" d="M3961.064,224.624a34.077,34.077,0,0,0-7.541-.43h-.849s-.018,3.864-.018,5.049h4.463c3.55,0,7.224,1.378,9.24,4.894a10.328,10.328,0,0,1-.484,11.656c-1.957,2.866-4.553,3.941-8,4.21l-.2.013V235.734h-4.958v19.147l5.381,0c.074,0,.146,0,.217-.005a15.292,15.292,0,0,0,14.313-12.647A15.464,15.464,0,0,0,3961.064,224.624Z" transform="translate(-3952.657 -224.181)"/>
+                    <path class="inlaid-b" d="M4179.03,224.208H4179a13.688,13.688,0,0,0-13.643,13.672h5.09A8.592,8.592,0,0,1,4179,229.3v0h3.376v-5.094Z" transform="translate(-4141.811 -224.205)"/>
+                    <path class="inlaid-b" d="M4165.936,349.187v2.368h5.09v-2.368a11.357,11.357,0,0,1,11.344-11.345h.573v-5.091h-.573A16.454,16.454,0,0,0,4165.936,349.187Z" transform="translate(-4142.326 -320.733)"/>
+                </g>
+            </g>
+        </g>
+    </symbol>
+
     <!-- FOOTER LOGO -->
     <symbol id="footer-logo" viewBox="0 0 39.96 31.039">
         <defs><style>.footer-a{fill:#f9f1e7;}</style></defs>

@@ -1,0 +1,26 @@
+//TODO: Responsive styling
+.cta-module {
+  .module-padded {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    svg.logo {
+      width: 8.2rem;
+      height: auto;
+    }
+
+    h2 {
+      color: $lightText;
+      margin: 8.6rem 0 4rem;
+      text-align: center;
+      font-size: 6rem;
+    }
+
+    .btn {
+      margin-bottom: 11rem;
+    }
+  }
+}
