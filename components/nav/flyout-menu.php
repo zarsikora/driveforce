@@ -20,6 +20,10 @@
 
         <a class="nav-link" href="#">Account</a>
 
-        <a class="nav-link" href="#">Cart</a>
+        <a class="nav-link" href="#">
+            <svg class="logo" viewBox="0 0 27.644 22.64">
+                <use xlink:href="#cart-dark"></use>
+            </svg>
+        </a>
     </div>
 </div>

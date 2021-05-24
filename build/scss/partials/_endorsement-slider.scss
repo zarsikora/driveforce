@@ -4,42 +4,77 @@
     text-align: center;
   }
 
-  .slide {
-    position: relative;
-    display: flex;
-    justify-content: flex-end;
-
-    .details {
-      background: $lightText;
-      padding: 5rem;
-      width: 32.917vw;
-
-      h3 {
-        color: $sage;
-      }
-
-      .title {
-        @extend p.copy;
-      }
-
-      .product {
-        background: #fff;
-        display: inline-block;
+  #slider {
+    .containers {
+      display: flex;
+      .img-container {
+        width: 35.139vw;
+        height: 56rem;
         margin: 0;
-        padding: 1rem 2rem;
-        border-radius: 2.3rem;
+        padding: 0;
+
+        img {
+          position: absolute;
+          width: 100%;
+          height: auto;
+          max-height: 56rem;
+          object-fit: cover;
+          display: none;
+          transform: translateX(-100px);
+          display: none;
+          opacity: 0;
+
+          &.active {
+            display: block;
+          }
+        }
       }
 
-      .quote {
-        font-size: 1.4rem; //TODO: make responsive
+      .details-container {
+        padding: 5rem;
+        width: 32.917vw;
+        height: 43.9rem;
+        background: #fff;
+        position: relative;
+
+        .details-block{
+          position: absolute;
+          width: 80%;
+          top: 5rem;
+          left: 5rem;
+          top: 50%;
+          transform: translateY(0);
+          display: none;
+          opacity: 0;
+
+          &.active {
+            display: block;
+          }
+        }
       }
     }
 
-    img {
-      width: 35.139vw;
-      height: auto;
-      position: absolute;
-      left: 0;
+    .slider-nav {
+      text-align: right;
+
+      button {
+        width: 10rem;
+        height: 1rem;
+        transition: all ease 300ms;
+        border: none;
+        outline: none;
+        background-color: $sage;
+        margin-right: 2rem;
+        border-radius: .5rem;
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        &.active {
+          background-color: $highlight;
+        }
+      }
     }
   }
 }

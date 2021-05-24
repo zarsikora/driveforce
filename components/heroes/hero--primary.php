@@ -18,13 +18,13 @@ if($link){
         <div class="row">
             <div class="col-md-6 col-lg-5">
                 <div class="text-container">
+                    <h1 class="title breakpoint-animate" data-splitting="chars"><?php echo $header ?></h1>
+
                     <?php if ($image) : ?>
                         <div class="image-container mobile">
                             <?php echo imageTag($image, "", "", null, false); ?>
                         </div>
                     <?php endif; ?>
-
-                    <h1 class="title breakpoint-animate" data-splitting="chars"><?php echo $header ?></h1>
 
                     <!-- MOBILE WAITLIST BTN -->
                     <?php if ($waitlistButton) : ?>
@@ -32,15 +32,15 @@ if($link){
                     <?php endif; ?>
 
                     <!-- MOBILE LOGOS -->
-                    <div class="logos mobile">
-                        <svg class="is-logo" viewbox="0 0 61.122 61.122">
-                            <use href="#is-logo"></use>
-                        </svg>
-
-                        <svg class="ngf-logo" viewbox="0 0 101.688 42.408">
-                            <use href="#ngf-logo"></use>
-                        </svg>
-                    </div>
+<!--                    <div class="logos mobile">-->
+<!--                        <svg class="is-logo" viewbox="0 0 61.122 61.122">-->
+<!--                            <use href="#is-logo"></use>-->
+<!--                        </svg>-->
+<!---->
+<!--                        <svg class="ngf-logo" viewbox="0 0 101.688 42.408">-->
+<!--                            <use href="#ngf-logo"></use>-->
+<!--                        </svg>-->
+<!--                    </div>-->
 
                     <div class="copy"><?php echo apply_filters('the_content', $copy) ?></div>
 
