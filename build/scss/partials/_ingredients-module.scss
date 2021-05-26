@@ -16,16 +16,28 @@
   }
 
   .ingredients {
+    @include media-breakpoint-down(sm){
+      padding: 0;
+    }
+
     .block {
       background-color: $mint;
-      width: 85%;
+      width: 100%;
       padding: 6rem 4.5rem;
       position: relative;
+      margin-top: 8rem;
+      @include media-breakpoint-up(md){
+        margin-top: 0;
+        width: 85%;
+      }
 
       ul {
         padding: 0;
         list-style: none;
-        margin-bottom: 10rem;
+        margin-bottom: 5rem;
+        @include media-breakpoint-up(md){
+          margin-bottom: 10rem;
+        }
 
         li {
           font-family: $boldType;
@@ -54,6 +66,10 @@
       position: absolute;
       right: -15rem;
       top: 18rem;
+      display: none;
+      @include media-breakpoint-up(md){
+        display: block;
+      }
     }
   }
 }
