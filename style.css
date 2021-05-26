@@ -11454,11 +11454,30 @@ button:focus {
 
 #footer .top ul.submenu {
   list-style: none;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+#footer .top ul.submenu:last-child {
+  margin-bottom: 0;
+}
+
+@media (min-width: 992px) {
+  #footer .top ul.submenu {
+    text-align: left;
+    margin-bottom: 0;
+  }
 }
 
 #footer .top ul.submenu li {
-  font-size: 1.4rem;
+  font-size: 1.8rem;
   font-family: "Sharp Sans Medium";
+}
+
+@media (min-width: 992px) {
+  #footer .top ul.submenu li {
+    font-size: 1.4rem;
+  }
 }
 
 @media (min-width: 1440px) {
@@ -11505,7 +11524,24 @@ button:focus {
 }
 
 #footer .top .inner .upper-nav {
-  margin-bottom: 10rem;
+  margin-bottom: 4rem;
+}
+
+@media (min-width: 992px) {
+  #footer .top .inner .upper-nav {
+    margin-bottom: 10rem;
+  }
+}
+
+#footer .top .inner .upper-nav .logo {
+  padding: 0;
+  margin-bottom: 5rem;
+}
+
+@media (min-width: 992px) {
+  #footer .top .inner .upper-nav .logo {
+    margin-bottom: 0;
+  }
 }
 
 #footer .top .inner .disclaimer {
@@ -11545,18 +11581,40 @@ button:focus {
 }
 
 #footer .top .inner .lower-nav {
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
+  margin: 0;
+}
+
+@media (min-width: 992px) {
+  #footer .top .inner .lower-nav {
+    align-items: center;
+  }
 }
 
 #footer .top .inner .lower-nav .submenu {
-  padding: 0;
+  padding: 4rem 0;
   margin: 0;
-  display: flex;
+  text-align: left;
+}
+
+@media (min-width: 992px) {
+  #footer .top .inner .lower-nav .submenu {
+    padding: 0;
+    margin: 0;
+    display: flex;
+  }
 }
 
 #footer .top .inner .lower-nav .submenu li {
-  margin-right: 4rem;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 992px) {
+  #footer .top .inner .lower-nav .submenu li {
+    margin-right: 4rem;
+    margin-bottom: 0;
+  }
 }
 
 #footer .top .inner .lower-nav .submenu li:last-child {
@@ -11566,6 +11624,12 @@ button:focus {
 #footer .top .inner .lower-nav .copyright {
   color: #F9F1E7;
   font-size: 1rem;
+}
+
+@media (max-width: 991.98px) {
+  #footer .top .inner .lower-nav .copyright {
+    margin-top: 4rem;
+  }
 }
 
 @media (min-width: 1440px) {
@@ -11591,7 +11655,7 @@ button:focus {
   margin: 0 auto;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   #footer .logo {
     margin: 0;
     width: 2.778vw;
@@ -15469,7 +15533,13 @@ form.sharpspring-waitlist .form-message p {
   color: #F9F1E7;
   margin: 8.6rem 0 4rem;
   text-align: center;
-  font-size: 6rem;
+  font-size: 4rem;
+}
+
+@media (min-width: 992px) {
+  .cta-module .module-padded h2 {
+    font-size: 6rem;
+  }
 }
 
 @media (min-width: 1440px) {

@@ -9,10 +9,23 @@
 
             ul.submenu {
                 list-style: none;
+                text-align: center;
+                margin-bottom: 4rem;
+                &:last-child{
+                    margin-bottom: 0;
+                }
+
+                @include media-breakpoint-up(lg){
+                    text-align: left;
+                    margin-bottom: 0;
+                }
 
                 li {
-                    font-size: 1.4rem;
+                    font-size: 1.8rem;
                     font-family: $mediumType;
+                    @include media-breakpoint-up(lg){
+                        font-size: 1.4rem;
+                    }
                     @media(min-width: 1440px){
                         font-size: 0.972vw;
                     }
@@ -47,7 +60,18 @@
                 padding-top: 6rem;
 
                 .upper-nav {
-                    margin-bottom: 10rem;
+                    margin-bottom: 4rem;
+                    @include media-breakpoint-up(lg){
+                        margin-bottom: 10rem;
+                    }
+
+                    .logo {
+                        padding: 0;
+                        margin-bottom: 5rem;
+                        @include media-breakpoint-up(lg){
+                            margin-bottom: 0;
+                        }
+                    }
                 }
 
                 .disclaimer {
@@ -82,16 +106,29 @@
                 }
 
                 .lower-nav {
-                    align-items: center;
+                    align-items: flex-start;
                     justify-content: space-between;
+                    margin: 0;
+                    @include media-breakpoint-up(lg){
+                        align-items: center;
+                    }
 
                     .submenu {
-                        padding: 0;
+                        padding: 4rem 0;
                         margin: 0;
-                        display: flex;
+                        text-align: left;
+                        @include media-breakpoint-up(lg){
+                            padding: 0;
+                            margin: 0;
+                            display: flex;
+                        }
 
                         li {
-                            margin-right: 4rem;
+                            margin-bottom: 1rem;
+                            @include media-breakpoint-up(lg){
+                                margin-right: 4rem;
+                                margin-bottom: 0;
+                            }
 
                             &:last-child {
                                 margin-right: 0;
@@ -102,6 +139,9 @@
                     .copyright {
                         color: $lightText;
                         font-size: 1rem;
+                        @include media-breakpoint-down(md){
+                            margin-top: 4rem;
+                        }
                         @media(min-width: 1440px){
                             font-size: 0.694vw;
                         }
@@ -122,7 +162,7 @@
             width: 4rem;
             height: 4rem;
             margin: 0 auto;
-            @include media-breakpoint-up(md){
+            @include media-breakpoint-up(lg){
                 margin: 0;
                 width: 2.778vw;
                 height: 2.778vw;

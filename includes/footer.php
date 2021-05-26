@@ -28,7 +28,7 @@
                         <ul class="submenu col-lg-2">
                             <li class="title">Learn</li>
                             <li>
-                                <a href="">Ingredients & Benefits</a>
+                                <a href="">Ingredients</a>
                             </li>
                             <li>
                                 <a href="">Articles</a>
