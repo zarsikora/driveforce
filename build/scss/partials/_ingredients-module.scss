@@ -1,4 +1,8 @@
 .ingredients-module {
+  @include media-breakpoint-down(sm){
+    margin-bottom: 0;
+  }
+
   .intro {
     h2 {
       margin-bottom: 2rem;

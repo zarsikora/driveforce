@@ -13592,6 +13592,12 @@ a.browse-all {
   }
 }
 
+@media (max-width: 991.98px) {
+  .rte.fiftyfifty.type-inlaid .inlaid-inner {
+    padding: 0 3rem;
+  }
+}
+
 @media (min-width: 992px) {
   .rte.fiftyfifty.type-inlaid .inlaid-inner {
     max-width: 80%;
@@ -13600,10 +13606,16 @@ a.browse-all {
 }
 
 .rte.fiftyfifty.type-inlaid .inlaid-inner .image-inner {
-  padding: 10rem 14rem;
+  padding: 6rem 8rem;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@media (min-width: 768px) {
+  .rte.fiftyfifty.type-inlaid .inlaid-inner .image-inner {
+    padding: 10rem 14rem;
+  }
 }
 
 .rte.fiftyfifty.type-inlaid .inlaid-inner .image-inner img {
@@ -15332,6 +15344,12 @@ form.sharpspring-waitlist .form-message p {
 
 .endorsement-slider #slider .slider-nav button.active {
   background-color: #DB4343;
+}
+
+@media (max-width: 767.98px) {
+  .ingredients-module {
+    margin-bottom: 0;
+  }
 }
 
 .ingredients-module .intro h2 {

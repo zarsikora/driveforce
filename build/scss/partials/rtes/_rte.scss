@@ -374,16 +374,22 @@
             }
 
             .inlaid-inner {
+                @include media-breakpoint-down(md){
+                    padding: 0 3rem;
+                }
                 @include media-breakpoint-up(lg){
                     max-width: 80%;
                     margin: 0 auto;
                 }
 
                 .image-inner {
-                    padding: 10rem 14rem;
+                    padding: 6rem 8rem;
                     display: flex;
                     justify-content: center;
                     align-items: center;
+                    @include media-breakpoint-up(md){
+                        padding: 10rem 14rem;
+                    }
 
                     img {
                         max-width: 28rem;
