@@ -57,7 +57,46 @@
                         <div class="newsletter col-lg-4">
                             <h4>DriveForce Newsletter Signup</h4>
                             <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
-                            <!-- form -->
+
+                            <div id="form-wrapper">
+                                <div id="mc_embed_signup">
+                                    <div id="form-fields-wrapper">
+                                        <form action="" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank" novalidate="novalidate">
+                                            <div class="mc-field-group form-group">
+                                                <p id="EMAIL-label" style="font-size: 0">Email Address:</p>
+                                                <input type="email" value="" name="EMAIL" class="required email form-control mce_inline_error" placeholder="Email Address" id="mce-EMAIL" aria-required="true" aria-invalid="true">
+                                            <div id="mce-responses" class="clear">
+                                                <div class="response" id="mce-error-response" style="display:none"></div>
+                                                <div class="response" id="mce-success-response" style="display:none"></div>
+                                            </div>
+
+                                            <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                                                <input type="text" name="b_4dadd4bf5d57121d0fa219ea9_c9a7c97a57" tabindex="-1" value="">
+                                            </div>
+                                            <div class="clear">
+                                                <button type="submit" name="subscribe" id="mc-embedded-subscribe" class="button btn thin-btn">
+                                                    <span>SEND</span>
+                                                </button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
+                                <script type="text/javascript">
+                                    (function($) {
+                                        window.fnames = new Array();
+                                        window.ftypes = new Array();
+                                        fnames[1]='FNAME';
+                                        ftypes[1]='text';
+                                        fnames[2]='LNAME';
+                                        ftypes[2]='text';
+                                        fnames[0]='EMAIL';
+                                        ftypes[0]='email';
+                                    }(jQuery));
+                                    var $mcj = jQuery.noConflict(true);
+                                </script>
+
+                            </div>
                         </div>
                     </div>
 

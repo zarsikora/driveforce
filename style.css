@@ -11544,6 +11544,28 @@ button:focus {
   }
 }
 
+#footer .top .inner .newsletter #form-wrapper input {
+  border-radius: .4rem;
+  background-color: transparent;
+  border: 1px solid #fff;
+  width: 66%;
+  display: inline-block;
+  font-size: 1.4rem;
+  height: 4rem;
+}
+
+#footer .top .inner .newsletter #form-wrapper button {
+  width: 33%;
+  display: inline-block;
+  height: 4rem;
+  padding: 0;
+  margin-top: 2rem;
+}
+
+#footer .top .inner .newsletter #form-wrapper button span {
+  font-size: 1rem;
+}
+
 #footer .top .inner .disclaimer {
   position: relative;
   font-family: "Sharp Sans Book";
@@ -11584,6 +11606,7 @@ button:focus {
   align-items: flex-start;
   justify-content: space-between;
   margin: 0;
+  width: 100%;
 }
 
 @media (min-width: 992px) {
