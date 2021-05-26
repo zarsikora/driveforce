@@ -123,6 +123,10 @@
                     @include media-breakpoint-up(lg){
                         margin-left: 4.167vw;
                     }
+
+                    svg.logo {
+                        width: 4rem;
+                    }
                 }
             }
 

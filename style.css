@@ -11112,6 +11112,10 @@ button:focus {
   }
 }
 
+#header #navscroll-container .nav .link-wrapper .nav-link svg.logo {
+  width: 4rem;
+}
+
 #header #navscroll-container .nav .header-logo {
   position: relative;
   z-index: 12;
