@@ -32,6 +32,10 @@
         align-items: center;
         background: transparent;
         transition: all ease 300ms;
+        padding: 2rem;
+        @include media-breakpoint-up(lg){
+            padding: 0;
+        }
 
         // White background
         &:before {
@@ -215,7 +219,20 @@
             }
         }
 
-        .logo {
+        .header-logo {
+            a {
+                display: block;
+
+                svg {
+                    width: 13rem;
+                    @include media-breakpoint-up(md){
+                        width: 15rem;
+                    }
+                }
+            }
+        }
+
+        svg.logo {
             width: 4rem;
         }
     }

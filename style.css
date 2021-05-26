@@ -10998,6 +10998,13 @@ button:focus {
   align-items: center;
   background: transparent;
   transition: all ease 300ms;
+  padding: 2rem;
+}
+
+@media (min-width: 992px) {
+  #header #navscroll-container {
+    padding: 0;
+  }
 }
 
 #header #navscroll-container:before {
@@ -11202,7 +11209,21 @@ button:focus {
   height: 2.7rem;
 }
 
-#header .mobile-nav .logo {
+#header .mobile-nav .header-logo a {
+  display: block;
+}
+
+#header .mobile-nav .header-logo a svg {
+  width: 13rem;
+}
+
+@media (min-width: 768px) {
+  #header .mobile-nav .header-logo a svg {
+    width: 15rem;
+  }
+}
+
+#header .mobile-nav svg.logo {
   width: 4rem;
 }
 
