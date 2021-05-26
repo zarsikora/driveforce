@@ -15362,6 +15362,13 @@ form.sharpspring-waitlist .form-message p {
   padding: 0;
 }
 
+@media (max-width: 767.98px) {
+  .endorsement-slider #slider .containers .img-container {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
 @media (min-width: 992px) {
   .endorsement-slider #slider .containers .img-container {
     width: 35.139vw;
@@ -15379,6 +15386,12 @@ form.sharpspring-waitlist .form-message p {
   display: none;
   opacity: 0;
   margin-bottom: 4.5rem;
+}
+
+@media (max-width: 767.98px) {
+  .endorsement-slider #slider .containers .img-container img {
+    width: 25rem;
+  }
 }
 
 @media (min-width: 992px) {
@@ -15432,7 +15445,8 @@ form.sharpspring-waitlist .form-message p {
 @media (max-width: 991.98px) {
   .endorsement-slider #slider .slider-nav {
     position: absolute;
-    top: 353px;
+    top: 30.3rem;
+    right: 0;
   }
 }
 
