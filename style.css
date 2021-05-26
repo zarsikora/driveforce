@@ -15205,28 +15205,44 @@ form.sharpspring-waitlist .form-message p {
   text-align: center;
 }
 
+.endorsement-slider #slider {
+  position: relative;
+}
+
 .endorsement-slider #slider .containers {
   display: flex;
 }
 
 .endorsement-slider #slider .containers .img-container {
-  width: 35.139vw;
-  height: 56rem;
   margin: 0;
   padding: 0;
 }
 
+@media (min-width: 992px) {
+  .endorsement-slider #slider .containers .img-container {
+    width: 35.139vw;
+    height: 56rem;
+  }
+}
+
 .endorsement-slider #slider .containers .img-container img {
-  position: absolute;
-  width: 100%;
-  height: auto;
-  max-height: 56rem;
+  width: auto;
+  height: 28.6rem;
   -o-object-fit: cover;
      object-fit: cover;
   display: none;
   transform: translateX(-100px);
   display: none;
   opacity: 0;
+  margin-bottom: 4.5rem;
+}
+
+@media (min-width: 992px) {
+  .endorsement-slider #slider .containers .img-container img {
+    height: 56rem;
+    position: absolute;
+    margin-bottom: 0;
+  }
 }
 
 .endorsement-slider #slider .containers .img-container img.active {
@@ -15234,11 +15250,20 @@ form.sharpspring-waitlist .form-message p {
 }
 
 .endorsement-slider #slider .containers .details-container {
-  padding: 5rem;
-  width: 32.917vw;
-  height: 43.9rem;
+  padding: 4rem;
+  width: 90%;
+  height: 45.4rem;
+  margin: 0 auto;
   background: #fff;
   position: relative;
+}
+
+@media (min-width: 992px) {
+  .endorsement-slider #slider .containers .details-container {
+    width: 32.917vw;
+    height: 43.9rem;
+    padding: 5rem;
+  }
 }
 
 .endorsement-slider #slider .containers .details-container .details-block {
@@ -15258,6 +15283,13 @@ form.sharpspring-waitlist .form-message p {
 
 .endorsement-slider #slider .slider-nav {
   text-align: right;
+}
+
+@media (max-width: 991.98px) {
+  .endorsement-slider #slider .slider-nav {
+    position: absolute;
+    top: 353px;
+  }
 }
 
 .endorsement-slider #slider .slider-nav button {

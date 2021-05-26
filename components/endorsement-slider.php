@@ -6,7 +6,7 @@
         $slideCount = count( get_sub_field( 'slides' ) );
     }
 ?>
-
+<!-- TODO: mobile and tablet styling - ask about whether all images will be same dims or no -->
 <div class="module-wrapper dark-bg endorsement-slider">
     <div class="module-padded">
         <?php if($header): ?>

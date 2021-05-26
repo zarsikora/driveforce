@@ -5,24 +5,32 @@
   }
 
   #slider {
+    position: relative;
     .containers {
       display: flex;
       .img-container {
-        width: 35.139vw;
-        height: 56rem;
         margin: 0;
         padding: 0;
+        @include media-breakpoint-up(lg){
+          width: 35.139vw;
+          height: 56rem;
+        }
 
         img {
-          position: absolute;
-          width: 100%;
-          height: auto;
-          max-height: 56rem;
+          width: auto;
+          height: 28.6rem;
           object-fit: cover;
           display: none;
           transform: translateX(-100px);
           display: none;
           opacity: 0;
+          margin-bottom: 4.5rem;
+          @include media-breakpoint-up(lg){
+            height: 56rem;
+            position: absolute;
+            margin-bottom: 0;
+
+          }
 
           &.active {
             display: block;
@@ -31,11 +39,17 @@
       }
 
       .details-container {
-        padding: 5rem;
-        width: 32.917vw;
-        height: 43.9rem;
+        padding: 4rem;
+        width: 90%;
+        height: 45.4rem;
+        margin: 0 auto;
         background: #fff;
         position: relative;
+        @include media-breakpoint-up(lg){
+          width: 32.917vw;
+          height: 43.9rem;
+          padding: 5rem;
+        }
 
         .details-block{
           position: absolute;
@@ -56,6 +70,10 @@
 
     .slider-nav {
       text-align: right;
+      @include media-breakpoint-down(md){
+        position: absolute;
+        top: 353px;
+      }
 
       button {
         width: 10rem;
