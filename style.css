@@ -12682,11 +12682,21 @@ a.btn:hover, .woocommerce-cart #content .return-to-shop a.button:hover, body.woo
   }
 }
 
+.module-wrapper.product-intro-module .module-padded .mobile-image {
+  margin: 18rem 0 4rem;
+}
+
+@media (min-width: 992px) {
+  .module-wrapper.product-intro-module .module-padded .mobile-image {
+    display: none;
+  }
+}
+
 .module-wrapper.product-intro-module .module-padded .image-wrapper {
   text-align: center;
 }
 
-@media (max-width: 767.98px) {
+@media (max-width: 991.98px) {
   .module-wrapper.product-intro-module .module-padded .image-wrapper {
     display: none;
   }
@@ -12737,18 +12747,26 @@ a.btn:hover, .woocommerce-cart #content .return-to-shop a.button:hover, body.woo
 }
 
 .module-wrapper.product-intro-module .module-padded .product-certs .cert-block img {
-  width: auto;
-  height: 6.7rem;
+  width: 8.2rem;
+  height: auto;
   margin-bottom: 2rem;
+}
+
+@media (min-width: 992px) {
+  .module-wrapper.product-intro-module .module-padded .product-certs .cert-block img {
+    width: auto;
+    height: 6.7rem;
+  }
 }
 
 .module-wrapper.product-intro-module .module-padded .product-certs .cert-block h3 {
   margin-bottom: 2rem;
 }
 
-@media (max-width: 767.98px) {
+@media (max-width: 991.98px) {
   .module-wrapper.product-intro-module .module-padded .product-data {
     order: 1;
+    margin-bottom: 25rem;
   }
 }
 
@@ -15410,7 +15428,7 @@ form.sharpspring-waitlist .form-message p {
   background-color: #DB4343;
 }
 
-@media (max-width: 767.98px) {
+@media (max-width: 991.98px) {
   .ingredients-module {
     margin-bottom: 0;
   }
@@ -15430,7 +15448,7 @@ form.sharpspring-waitlist .form-message p {
   height: auto;
 }
 
-@media (max-width: 767.98px) {
+@media (max-width: 991.98px) {
   .ingredients-module .ingredients {
     padding: 0;
   }
@@ -15444,7 +15462,7 @@ form.sharpspring-waitlist .form-message p {
   margin-top: 8rem;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .ingredients-module .ingredients .block {
     margin-top: 0;
     width: 85%;
@@ -15457,7 +15475,7 @@ form.sharpspring-waitlist .form-message p {
   margin-bottom: 5rem;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .ingredients-module .ingredients .block ul {
     margin-bottom: 10rem;
   }
@@ -15498,7 +15516,7 @@ form.sharpspring-waitlist .form-message p {
   display: none;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .ingredients-module .ingredients .block-image {
     display: block;
   }

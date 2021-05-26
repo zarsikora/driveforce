@@ -37,9 +37,16 @@
             }
         }
 
+        .mobile-image {
+            margin: 18rem 0 4rem;
+            @include media-breakpoint-up(lg){
+                display: none;
+            }
+        }
+
         .image-wrapper {
             text-align: center;
-            @include media-breakpoint-down(sm){
+            @include media-breakpoint-down(md){
                 display: none;
             }
 
@@ -78,9 +85,13 @@
                 }
 
                 img {
-                    width: auto;
-                    height: 6.7rem;
+                    width: 8.2rem;
+                    height: auto;
                     margin-bottom: 2rem;
+                    @include media-breakpoint-up(lg){
+                        width: auto;
+                        height: 6.7rem;
+                    }
                 }
 
                 h3 {
@@ -90,8 +101,9 @@
         }
 
         .product-data {
-            @include media-breakpoint-down(sm){
+            @include media-breakpoint-down(md){
                 order: 1;
+                margin-bottom: 25rem;
             }
             .data-block {
                 display: block;

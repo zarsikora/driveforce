@@ -1,5 +1,5 @@
 .ingredients-module {
-  @include media-breakpoint-down(sm){
+  @include media-breakpoint-down(md){
     margin-bottom: 0;
   }
 
@@ -20,7 +20,7 @@
   }
 
   .ingredients {
-    @include media-breakpoint-down(sm){
+    @include media-breakpoint-down(md){
       padding: 0;
     }
 
@@ -30,7 +30,7 @@
       padding: 6rem 4.5rem;
       position: relative;
       margin-top: 8rem;
-      @include media-breakpoint-up(md){
+      @include media-breakpoint-up(lg){
         margin-top: 0;
         width: 85%;
       }
@@ -39,7 +39,7 @@
         padding: 0;
         list-style: none;
         margin-bottom: 5rem;
-        @include media-breakpoint-up(md){
+        @include media-breakpoint-up(lg){
           margin-bottom: 10rem;
         }
 
@@ -71,7 +71,7 @@
       right: -15rem;
       top: 18rem;
       display: none;
-      @include media-breakpoint-up(md){
+      @include media-breakpoint-up(lg){
         display: block;
       }
     }

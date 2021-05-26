@@ -3,6 +3,7 @@
 $header = get_sub_field('header');
 $intro = get_sub_field('intro_copy');
 $mainImage = get_sub_field('main_image');
+$mobileImage = get_sub_field('main_image_mobile');
 $button = get_sub_field('button');
 $bottomText = get_sub_field('bottom_text');
 
@@ -13,6 +14,10 @@ $bottomText = get_sub_field('bottom_text');
         <?php if($header): ?>
             <h2 data-animation-effect="splitSlideUpWord" data-animation-trigger="breakpoint" data-splitting="chars"><?php echo $header ?></h2>
             <p class="intro-copy" data-animation-effect="splitSlideUpWord" data-animation-trigger="breakpoint" data-splitting="chars"><?php echo $intro ?></p>
+        <?php endif; ?>
+
+        <?php if($mobileImage): ?>
+            <?php echo imageTag($mobileImage, 'mobile-image', '', '', false); ?>
         <?php endif; ?>
 
         <div class="product-container row">
