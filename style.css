@@ -13763,6 +13763,8 @@ a.browse-all {
   max-width: 28rem;
   height: auto;
   max-height: 30rem;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 @media (min-width: 768px) {
