@@ -17164,3 +17164,475 @@ body.woocommerce-edit-account .woocommerce-EditAccountForm .button:hover {
 .woocommerce-checkout #container .woocommerce #payment .button:hover {
   background-color: #9A1D1D;
 }
+
+body.fast-checkout-active {
+  padding-bottom: 9.2rem;
+  overflow-y: hidden;
+}
+
+.fast-checkout {
+  position: fixed;
+  z-index: 100;
+  background: #2D4E45;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: #fff;
+  transform: translateY(100%);
+  transition: transform 300ms ease;
+}
+
+@media (min-width: 992px) {
+  .fast-checkout {
+    height: auto !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  .fast-checkout {
+    background-color: #071C19;
+  }
+}
+
+body.fast-checkout-active .fast-checkout {
+  transform: translateY(0);
+}
+
+body.fast-checkout-mobile-open .fast-checkout {
+  transform: translateY(0);
+  height: 100vh;
+}
+
+@media (min-width: 992px) {
+  body.fast-checkout-mobile-open .fast-checkout {
+    height: auto;
+  }
+}
+
+@media (min-width: 1200px) {
+  body.fast-checkout-mobile-open .fast-checkout {
+    height: auto;
+  }
+}
+
+.fast-checkout .fast-checkout-mobile-bar {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: flex-start;
+  position: fixed;
+  z-index: 101;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: #071C19;
+  transform: translateY(100%);
+}
+
+@media (min-width: 1200px) {
+  .fast-checkout .fast-checkout-mobile-bar {
+    display: none;
+  }
+}
+
+body.fast-checkout-active .fast-checkout .fast-checkout-mobile-bar {
+  transform: translateY(0);
+}
+
+.fast-checkout .fast-checkout-mobile-bar .arrow {
+  width: 20%;
+  align-self: stretch;
+  border-right: .1rem solid #447563;
+  position: relative;
+  cursor: pointer;
+}
+
+.fast-checkout .fast-checkout-mobile-bar .arrow svg.caret {
+  stroke: #88E2C1;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(180deg);
+}
+
+.fast-checkout .fast-checkout-mobile-bar .purchase {
+  flex: 1 0 auto;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+}
+
+.fast-checkout .fast-checkout-mobile-bar .purchase .product {
+  font-size: 1.4rem;
+  font-family: "Sharp Sans Bold";
+  color: #88E2C1;
+}
+
+.fast-checkout .fast-checkout-mobile-bar .purchase .btn, .fast-checkout .fast-checkout-mobile-bar .purchase #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form button, #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form .fast-checkout .fast-checkout-mobile-bar .purchase button, .fast-checkout .fast-checkout-mobile-bar .purchase .woocommerce-cart #content .return-to-shop .button, .woocommerce-cart #content .return-to-shop .fast-checkout .fast-checkout-mobile-bar .purchase .button, .fast-checkout .fast-checkout-mobile-bar .purchase body.woocommerce-account #content .woocommerce .woocommerce-form-login .woocommerce-button, body.woocommerce-account #content .woocommerce .woocommerce-form-login .fast-checkout .fast-checkout-mobile-bar .purchase .woocommerce-button, .fast-checkout .fast-checkout-mobile-bar .purchase body.woocommerce-edit-address .woocommerce-address-fields .button, body.woocommerce-edit-address .woocommerce-address-fields .fast-checkout .fast-checkout-mobile-bar .purchase .button, .fast-checkout .fast-checkout-mobile-bar .purchase body.woocommerce-edit-account .woocommerce-EditAccountForm .button, body.woocommerce-edit-account .woocommerce-EditAccountForm .fast-checkout .fast-checkout-mobile-bar .purchase .button, .fast-checkout .fast-checkout-mobile-bar .purchase .woocommerce-ResetPassword .button, .woocommerce-ResetPassword .fast-checkout .fast-checkout-mobile-bar .purchase .button {
+  flex: 1 1 auto;
+}
+
+.fast-checkout .fast-checkout-build-order {
+  display: none;
+  height: 100vh;
+}
+
+@media (min-width: 992px) {
+  .fast-checkout .fast-checkout-build-order {
+    height: auto;
+    margin-bottom: 7rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .fast-checkout .fast-checkout-build-order {
+    margin-bottom: 0;
+  }
+}
+
+body.fast-checkout-mobile-open .fast-checkout .fast-checkout-build-order {
+  display: block;
+}
+
+@media (min-width: 1200px) {
+  body.fast-checkout-active .fast-checkout .fast-checkout-build-order {
+    display: block;
+  }
+}
+
+.fast-checkout .fast-checkout-build-order .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #14302B;
+}
+
+@media (min-width: 1200px) {
+  .fast-checkout .fast-checkout-build-order .header {
+    display: none;
+  }
+}
+
+.fast-checkout .fast-checkout-build-order .logo {
+  fill: #fff;
+}
+
+.fast-checkout .fast-checkout-build-order .close {
+  font-family: "Sharp Sans Bold";
+  text-decoration: underline;
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.fast-checkout .fast-checkout-submit {
+  padding: 1rem 2rem;
+  font-size: 1.4rem;
+  width: auto;
+  border-radius: .5rem;
+}
+
+.fast-checkout .fast-checkout-submit span {
+  font-size: 1.4rem;
+}
+
+.fast-checkout .fast-checkout-submit .btn-hover-mask {
+  border-radius: .5rem;
+}
+
+.fast-checkout .row {
+  margin: 0;
+}
+
+.fast-checkout div[class*=col] {
+  padding: 2rem;
+  font-size: 1.4rem;
+}
+
+@media (min-width: 1200px) {
+  .fast-checkout div[class*=col] {
+    border-right: 1px solid #88E2C1;
+  }
+}
+
+.fast-checkout div[class*=col]:last-child {
+  border-right: 0;
+}
+
+.fast-checkout div.fast-checkout-variant-select {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  background-color: #14302B;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+@media (min-width: 1200px) {
+  .fast-checkout div.fast-checkout-variant-select {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    padding-top: 0;
+    padding-bottom: 0;
+    background-color: #071C19;
+  }
+}
+
+.fast-checkout div.fast-checkout-variant-select .build-order-header {
+  flex: 0 0 100%;
+  text-align: center;
+  font-family: "Sharp Sans Bold";
+  font-size: 2.4rem;
+  margin: 0 0 1.5em 0;
+}
+
+@media (min-width: 1200px) {
+  .fast-checkout div.fast-checkout-variant-select .build-order-header {
+    flex: 0 0 auto;
+    margin: 0 2rem 0 0;
+  }
+  .fast-checkout div.fast-checkout-variant-select .build-order-header:after {
+    content: ':';
+  }
+}
+
+@media (min-width: 1200px) {
+  .fast-checkout div.fast-checkout-variant-select .mobile {
+    display: none;
+  }
+}
+
+.fast-checkout div.fast-checkout-variant-select .mobile .btn, .fast-checkout div.fast-checkout-variant-select .mobile #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form button, #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form .fast-checkout div.fast-checkout-variant-select .mobile button, .fast-checkout div.fast-checkout-variant-select .mobile .woocommerce-cart #content .return-to-shop .button, .woocommerce-cart #content .return-to-shop .fast-checkout div.fast-checkout-variant-select .mobile .button, .fast-checkout div.fast-checkout-variant-select .mobile body.woocommerce-account #content .woocommerce .woocommerce-form-login .woocommerce-button, body.woocommerce-account #content .woocommerce .woocommerce-form-login .fast-checkout div.fast-checkout-variant-select .mobile .woocommerce-button, .fast-checkout div.fast-checkout-variant-select .mobile body.woocommerce-edit-address .woocommerce-address-fields .button, body.woocommerce-edit-address .woocommerce-address-fields .fast-checkout div.fast-checkout-variant-select .mobile .button, .fast-checkout div.fast-checkout-variant-select .mobile body.woocommerce-edit-account .woocommerce-EditAccountForm .button, body.woocommerce-edit-account .woocommerce-EditAccountForm .fast-checkout div.fast-checkout-variant-select .mobile .button, .fast-checkout div.fast-checkout-variant-select .mobile .woocommerce-ResetPassword .button, .woocommerce-ResetPassword .fast-checkout div.fast-checkout-variant-select .mobile .button {
+  background: #fff;
+  border-radius: .4rem;
+  margin: 0 auto 2rem auto;
+  width: auto;
+  display: block;
+  text-align: center;
+}
+
+.fast-checkout div.fast-checkout-variant-select .mobile .btn:last-child, .fast-checkout div.fast-checkout-variant-select .mobile #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form button:last-child, #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form .fast-checkout div.fast-checkout-variant-select .mobile button:last-child, .fast-checkout div.fast-checkout-variant-select .mobile .woocommerce-cart #content .return-to-shop .button:last-child, .woocommerce-cart #content .return-to-shop .fast-checkout div.fast-checkout-variant-select .mobile .button:last-child, .fast-checkout div.fast-checkout-variant-select .mobile body.woocommerce-account #content .woocommerce .woocommerce-form-login .woocommerce-button:last-child, body.woocommerce-account #content .woocommerce .woocommerce-form-login .fast-checkout div.fast-checkout-variant-select .mobile .woocommerce-button:last-child, .fast-checkout div.fast-checkout-variant-select .mobile body.woocommerce-edit-address .woocommerce-address-fields .button:last-child, body.woocommerce-edit-address .woocommerce-address-fields .fast-checkout div.fast-checkout-variant-select .mobile .button:last-child, .fast-checkout div.fast-checkout-variant-select .mobile body.woocommerce-edit-account .woocommerce-EditAccountForm .button:last-child, body.woocommerce-edit-account .woocommerce-EditAccountForm .fast-checkout div.fast-checkout-variant-select .mobile .button:last-child, .fast-checkout div.fast-checkout-variant-select .mobile .woocommerce-ResetPassword .button:last-child, .woocommerce-ResetPassword .fast-checkout div.fast-checkout-variant-select .mobile .button:last-child {
+  margin: 0;
+}
+
+.fast-checkout div.fast-checkout-variant-select .mobile .btn.selected, .fast-checkout div.fast-checkout-variant-select .mobile #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form button.selected, #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form .fast-checkout div.fast-checkout-variant-select .mobile button.selected, .fast-checkout div.fast-checkout-variant-select .mobile .woocommerce-cart #content .return-to-shop .selected.button, .woocommerce-cart #content .return-to-shop .fast-checkout div.fast-checkout-variant-select .mobile .selected.button, .fast-checkout div.fast-checkout-variant-select .mobile body.woocommerce-account #content .woocommerce .woocommerce-form-login .selected.woocommerce-button, body.woocommerce-account #content .woocommerce .woocommerce-form-login .fast-checkout div.fast-checkout-variant-select .mobile .selected.woocommerce-button, .fast-checkout div.fast-checkout-variant-select .mobile body.woocommerce-edit-address .woocommerce-address-fields .selected.button, body.woocommerce-edit-address .woocommerce-address-fields .fast-checkout div.fast-checkout-variant-select .mobile .selected.button, .fast-checkout div.fast-checkout-variant-select .mobile body.woocommerce-edit-account .woocommerce-EditAccountForm .selected.button, body.woocommerce-edit-account .woocommerce-EditAccountForm .fast-checkout div.fast-checkout-variant-select .mobile .selected.button, .fast-checkout div.fast-checkout-variant-select .mobile .woocommerce-ResetPassword .selected.button, .woocommerce-ResetPassword .fast-checkout div.fast-checkout-variant-select .mobile .selected.button {
+  background: #88E2C1;
+}
+
+.fast-checkout div.fast-checkout-variant-select .mobile .btn span, .fast-checkout div.fast-checkout-variant-select .mobile #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form button span, #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form .fast-checkout div.fast-checkout-variant-select .mobile button span, .fast-checkout div.fast-checkout-variant-select .mobile .woocommerce-cart #content .return-to-shop .button span, .woocommerce-cart #content .return-to-shop .fast-checkout div.fast-checkout-variant-select .mobile .button span, .fast-checkout div.fast-checkout-variant-select .mobile body.woocommerce-account #content .woocommerce .woocommerce-form-login .woocommerce-button span, body.woocommerce-account #content .woocommerce .woocommerce-form-login .fast-checkout div.fast-checkout-variant-select .mobile .woocommerce-button span, .fast-checkout div.fast-checkout-variant-select .mobile body.woocommerce-edit-address .woocommerce-address-fields .button span, body.woocommerce-edit-address .woocommerce-address-fields .fast-checkout div.fast-checkout-variant-select .mobile .button span, .fast-checkout div.fast-checkout-variant-select .mobile body.woocommerce-edit-account .woocommerce-EditAccountForm .button span, body.woocommerce-edit-account .woocommerce-EditAccountForm .fast-checkout div.fast-checkout-variant-select .mobile .button span, .fast-checkout div.fast-checkout-variant-select .mobile .woocommerce-ResetPassword .button span, .woocommerce-ResetPassword .fast-checkout div.fast-checkout-variant-select .mobile .button span {
+  color: #14302B;
+  font-size: 1.4rem;
+  font-family: "Sharp Sans Bold";
+  left: 0;
+}
+
+.fast-checkout div.fast-checkout-variant-select .mobile .btn .btn-hover-mask, .fast-checkout div.fast-checkout-variant-select .mobile #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form button .btn-hover-mask, #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form .fast-checkout div.fast-checkout-variant-select .mobile button .btn-hover-mask, .fast-checkout div.fast-checkout-variant-select .mobile .woocommerce-cart #content .return-to-shop .button .btn-hover-mask, .woocommerce-cart #content .return-to-shop .fast-checkout div.fast-checkout-variant-select .mobile .button .btn-hover-mask, .fast-checkout div.fast-checkout-variant-select .mobile body.woocommerce-account #content .woocommerce .woocommerce-form-login .woocommerce-button .btn-hover-mask, body.woocommerce-account #content .woocommerce .woocommerce-form-login .fast-checkout div.fast-checkout-variant-select .mobile .woocommerce-button .btn-hover-mask, .fast-checkout div.fast-checkout-variant-select .mobile body.woocommerce-edit-address .woocommerce-address-fields .button .btn-hover-mask, body.woocommerce-edit-address .woocommerce-address-fields .fast-checkout div.fast-checkout-variant-select .mobile .button .btn-hover-mask, .fast-checkout div.fast-checkout-variant-select .mobile body.woocommerce-edit-account .woocommerce-EditAccountForm .button .btn-hover-mask, body.woocommerce-edit-account .woocommerce-EditAccountForm .fast-checkout div.fast-checkout-variant-select .mobile .button .btn-hover-mask, .fast-checkout div.fast-checkout-variant-select .mobile .woocommerce-ResetPassword .button .btn-hover-mask, .woocommerce-ResetPassword .fast-checkout div.fast-checkout-variant-select .mobile .button .btn-hover-mask {
+  display: none;
+}
+
+.fast-checkout div.fast-checkout-variant-select .desktop {
+  display: none;
+}
+
+@media (min-width: 1200px) {
+  .fast-checkout div.fast-checkout-variant-select .desktop {
+    display: block;
+    height: 100%;
+  }
+}
+
+.fast-checkout div.fast-checkout-variant-select .desktop .select {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.fast-checkout div.fast-checkout-variant-select .desktop .select .selected-option {
+  cursor: pointer;
+}
+
+.fast-checkout div.fast-checkout-variant-select .desktop .select .selected-option span {
+  display: block;
+}
+
+.fast-checkout div.fast-checkout-variant-select .desktop .select .dropdown {
+  display: none;
+  position: absolute;
+  left: 0;
+  bottom: 100%;
+  width: 100%;
+  background: #071C19;
+}
+
+.fast-checkout div.fast-checkout-variant-select .desktop .select .dropdown.active {
+  display: block;
+}
+
+.fast-checkout div.fast-checkout-variant-select .desktop .select .dropdown a {
+  color: #fff;
+  cursor: pointer;
+  display: block;
+  padding: .5rem 1rem;
+}
+
+.fast-checkout div.fast-checkout-variant-select .desktop .select .dropdown a:hover {
+  background: #88E2C1;
+  text-decoration: none;
+  color: #071C19;
+}
+
+.fast-checkout div.fast-checkout-variant-select label {
+  color: green;
+  margin: 0 .5rem 0 0;
+}
+
+.fast-checkout div.fast-checkout-variant-select select {
+  background: transparent;
+  border: none;
+  color: #fff;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
+.fast-checkout div.fast-checkout-variant-select select:focus-visible {
+  outline: none;
+  border-bottom: .2rem solid #fff;
+}
+
+.fast-checkout .fast-checkout-purchase-option {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  border-bottom: .1rem solid #447563;
+}
+
+@media (min-width: 1200px) {
+  .fast-checkout .fast-checkout-purchase-option {
+    align-items: center;
+    justify-content: center;
+    border: none;
+  }
+}
+
+.fast-checkout .fast-checkout-purchase-option label {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 1.5rem;
+}
+
+.fast-checkout .fast-checkout-purchase-option input[type=radio] {
+  position: absolute;
+  left: -9999;
+  top: -9999;
+  opacity: 0;
+  z-index: -1;
+  cursor: none;
+}
+
+.fast-checkout .fast-checkout-purchase-option input[type=radio]:checked + .radio {
+  background: lightgreen;
+}
+
+.fast-checkout .fast-checkout-purchase-option .radio {
+  display: block;
+  width: 2.6rem;
+  height: 2.6rem;
+  border-radius: 2.6rem;
+  background: #fff;
+  cursor: pointer;
+  border: .3rem solid #fff;
+}
+
+.fast-checkout .fast-checkout-purchase-option p.price {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 1.5rem 0 0;
+  font-size: 1.4rem;
+  font-family: "Sharp Sans Bold";
+}
+
+.fast-checkout .fast-checkout-purchase-option p.price .subscribe-price {
+  margin-right: 1rem;
+  color: #fff;
+}
+
+@media (min-width: 1200px) {
+  .fast-checkout .fast-checkout-purchase-option p.price .subscribe-price {
+    margin-right: 0;
+  }
+}
+
+.fast-checkout .fast-checkout-purchase-option p.price span {
+  display: inline-block;
+}
+
+@media (min-width: 1200px) {
+  .fast-checkout .fast-checkout-purchase-option p.price span {
+    display: block;
+  }
+}
+
+.fast-checkout .fast-checkout-purchase-option.option1 {
+  border-top: .1rem solid #447563;
+}
+
+@media (min-width: 992px) {
+  .fast-checkout .fast-checkout-purchase-option.option1 {
+    border-top: none;
+  }
+}
+
+.fast-checkout .fast-checkout-purchase-option.option1 p.price {
+  color: green;
+}
+
+.fast-checkout .fast-checkout-purchase-option.option1 p.price .regular-price {
+  text-decoration: line-through;
+  color: #ddd;
+}
+
+.fast-checkout .fast-checkout-purchase-option .option-text {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 1.2rem;
+}
+
+.fast-checkout .fast-checkout-purchase-option .option-text p {
+  margin: 0 0 .3rem 0;
+  font-size: 1.8rem;
+  font-family: "Sharp Sans Bold";
+  line-height: 1.3em;
+}
+
+@media (min-width: 1200px) {
+  .fast-checkout .fast-checkout-purchase-option .option-text p {
+    font-size: 1.2rem;
+  }
+}
+
+.fast-checkout .fast-checkout-purchase-option .option-text p.sm {
+  font-size: 1.0rem;
+  font-weight: 400;
+  font-family: "Sharp Sans Book";
+  margin: 0;
+}
+
+.fast-checkout .fast-checkout-purchase-option .option-text strong {
+  font-weight: 900;
+}
+
+.fast-checkout .desktop-checkout {
+  display: none;
+}
+
+@media (min-width: 1200px) {
+  .fast-checkout .desktop-checkout {
+    display: block;
+  }
+}

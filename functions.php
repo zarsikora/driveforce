@@ -1,5 +1,6 @@
 <?php
 include('includes/sharpspring.php');
+include('includes/fast-checkout.php');
 include('includes/button.php');
 include('includes/image-tag.php');
 
