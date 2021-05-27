@@ -11080,6 +11080,7 @@ button:focus {
   justify-content: space-between;
   align-items: center;
   padding: 3.5rem 5rem;
+  z-index: 9;
 }
 
 @media (min-width: 992px) {
@@ -13734,6 +13735,34 @@ a.browse-all {
 
 .rte.fiftyfifty.type-inlaid .inlaid-inner .text-inner {
   padding: 0;
+}
+
+.rte.fiftyfifty.type-inlaid.type-multi {
+  background-color: #14302B;
+  color: #F9F1E7;
+}
+
+.rte.fiftyfifty.type-inlaid.type-multi .row {
+  background-color: #14302B;
+}
+
+.rte.fiftyfifty.type-inlaid.type-multi .row .image-container {
+  padding: 6rem 8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .rte.fiftyfifty.type-inlaid.type-multi .row .image-container {
+    padding: 10rem 14rem;
+  }
+}
+
+.rte.fiftyfifty.type-inlaid.type-multi .row .image-container img {
+  max-width: 28rem;
+  height: auto;
+  max-height: 30rem;
 }
 
 @media (min-width: 768px) {

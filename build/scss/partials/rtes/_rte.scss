@@ -401,6 +401,32 @@
                     padding: 0;
                 }
             }
+
+            //MULTI AND INLAID TYPE COMBO
+            &.type-multi {
+                background-color: #14302B;
+                color: $lightText;
+
+                .row {
+                    background-color: #14302B;
+
+                    .image-container {
+                            padding: 6rem 8rem;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            @include media-breakpoint-up(md){
+                                padding: 10rem 14rem;
+                            }
+
+                            img {
+                                max-width: 28rem;
+                                height: auto;
+                                max-height: 30rem;
+                            }
+                    }
+                }
+            }
         }
 
 
