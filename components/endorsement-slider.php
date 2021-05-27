@@ -32,6 +32,7 @@
                                 $name = get_sub_field('name');
                                 $title = get_sub_field('title');
                                 $product = get_sub_field('product');
+                                $productText = ($product === 'pro30') ? 'PRO30 PACK' : 'OTHER PRODUCT TYPE';
                                 $quote = get_sub_field('quote');
                                 $index = get_row_index();
                                 ?>
@@ -45,7 +46,7 @@
                                     <?php endif; ?>
 
                                     <?php if($product): ?>
-                                        <p class="product"><?php echo $product ?></p>
+                                        <p class="product"><span class="sage">DF-18:</span> <?php echo $productText ?></p>
                                     <?php endif; ?>
 
                                     <?php if($quote): ?>

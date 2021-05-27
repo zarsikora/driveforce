@@ -15438,6 +15438,26 @@ form.sharpspring-waitlist .form-message p {
   display: block;
 }
 
+.endorsement-slider #slider .containers .details-container .details-block h3 {
+  color: #447563;
+}
+
+.endorsement-slider #slider .containers .details-container .details-block .product {
+  background-color: #F9F1E7;
+  padding: 1.5rem;
+  border-radius: 2.3rem;
+  font-size: 1.4rem;
+  font-family: "Sharp Sans Bold";
+  letter-spacing: .21rem;
+  display: inline-block;
+  text-align: center;
+}
+
+.endorsement-slider #slider .containers .details-container .details-block .quote {
+  font-size: 1.4rem;
+  font-family: "Sharp Sans Bold";
+}
+
 .endorsement-slider #slider .slider-nav {
   text-align: right;
 }

@@ -71,6 +71,26 @@
           &.active {
             display: block;
           }
+
+          h3 {
+            color: $sage;
+          }
+
+          .product {
+            background-color: $lightText;
+            padding: 1.5rem;
+            border-radius: 2.3rem;
+            font-size: 1.4rem;
+            font-family: $boldType;
+            letter-spacing: .21rem;
+            display: inline-block;
+            text-align: center;
+          }
+
+          .quote {
+            font-size: 1.4rem;
+            font-family: $boldType;
+          }
         }
       }
     }
