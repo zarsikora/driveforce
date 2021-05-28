@@ -838,7 +838,6 @@ if(ingredientsDisplay){
             let descriptionData = $(ingredientDescriptions[i]).data('ingredient');
             if(descriptionData === data){
                 $(ingredientDescriptions[i]).addClass('active');
-                console.log(descriptionData, data)
             }
         }
     });

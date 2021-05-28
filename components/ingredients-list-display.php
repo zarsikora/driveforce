@@ -8,7 +8,7 @@
                         <?php while(have_rows('ingredients')): the_row(); ?>
                             <?php
                             $name = get_sub_field('name');
-                            $slug = urlencode ($name);
+                            $slug = preg_replace('#[ -]+#', '-', $name);
                             $description = get_sub_field('description');
                             ?>
                             <li data-ingredient="<?php echo $slug ?>" class="ingredient-list-item <?php if($counter === 0) echo 'active' ?>">
@@ -27,7 +27,7 @@
                         <?php while(have_rows('ingredients')): the_row(); ?>
                             <?php
                             $name = get_sub_field('name');
-                            $slug = urlencode ($name);
+                            $slug = preg_replace('#[ -]+#', '-', $name);
                             $description = get_sub_field('description');
                             ?>
                             <li data-ingredient="<?php echo $slug ?>" class="ingredient-description-item <?php if($counter === 0) echo 'active' ?>">
