@@ -1,0 +1,45 @@
+.module-wrapper.ingredients-list-display {
+  background: #14302B;
+  color: $lightText;
+
+  .module-padded {
+    .list-wrapper {
+      ul {
+        list-style: none;
+        font-family: $boldType;
+        color: #fff;
+
+        li {
+          cursor: pointer;
+          font-size: 1.5rem;
+          margin-bottom: 2rem;
+          &:last-child {
+            margin-bottom: 0;
+          }
+
+          &.active {
+            color: $sage;
+          }
+          @media(min-width: 1440px){
+            font-size: 1.042vw;
+          }
+          @media(min-width: 1920px){
+            font-size: 2.7rem;
+          }
+        }
+      }
+    }
+
+    .description-wrapper {
+      ul {
+        li {
+          display: none;
+
+          &.active {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}

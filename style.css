@@ -13775,6 +13775,7 @@ a.browse-all {
 @media (min-width: 992px) {
   .rte.fiftyfifty.type-inlaid.type-multi .main-header {
     width: 53.333vw;
+    margin: 0 auto;
   }
 }
 
@@ -15720,6 +15721,51 @@ form.sharpspring-waitlist .form-message p {
   .cta-module .module-padded .btn, .cta-module #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form button, #waitlistModal .modal-dialog .modal-content .modal-body .form-module .cta-module .module-padded .form button, .cta-module .module-padded .woocommerce-cart #content .return-to-shop .button, .woocommerce-cart #content .return-to-shop .cta-module .module-padded .button, .cta-module .module-padded body.woocommerce-account #content .woocommerce .woocommerce-form-login .woocommerce-button, body.woocommerce-account #content .woocommerce .woocommerce-form-login .cta-module .module-padded .woocommerce-button, .cta-module .module-padded body.woocommerce-edit-address .woocommerce-address-fields .button, body.woocommerce-edit-address .woocommerce-address-fields .cta-module .module-padded .button, .cta-module .module-padded body.woocommerce-edit-account .woocommerce-EditAccountForm .button, body.woocommerce-edit-account .woocommerce-EditAccountForm .cta-module .module-padded .button, .cta-module .module-padded .woocommerce-ResetPassword .button, .woocommerce-ResetPassword .cta-module .module-padded .button {
     margin-bottom: 14.6rem;
   }
+}
+
+.module-wrapper.ingredients-list-display {
+  background: #14302B;
+  color: #F9F1E7;
+}
+
+.module-wrapper.ingredients-list-display .module-padded .list-wrapper ul {
+  list-style: none;
+  font-family: "Sharp Sans Bold";
+  color: #fff;
+}
+
+.module-wrapper.ingredients-list-display .module-padded .list-wrapper ul li {
+  cursor: pointer;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.module-wrapper.ingredients-list-display .module-padded .list-wrapper ul li:last-child {
+  margin-bottom: 0;
+}
+
+.module-wrapper.ingredients-list-display .module-padded .list-wrapper ul li.active {
+  color: #447563;
+}
+
+@media (min-width: 1440px) {
+  .module-wrapper.ingredients-list-display .module-padded .list-wrapper ul li {
+    font-size: 1.042vw;
+  }
+}
+
+@media (min-width: 1920px) {
+  .module-wrapper.ingredients-list-display .module-padded .list-wrapper ul li {
+    font-size: 2.7rem;
+  }
+}
+
+.module-wrapper.ingredients-list-display .module-padded .description-wrapper ul li {
+  display: none;
+}
+
+.module-wrapper.ingredients-list-display .module-padded .description-wrapper ul li.active {
+  display: block;
 }
 
 .share-module {

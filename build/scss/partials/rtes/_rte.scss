@@ -410,6 +410,7 @@
                 .main-header {
                     @include media-breakpoint-up(lg){
                         width: 53.333vw;
+                        margin: 0 auto;
                     }
                     @media (min-width: 1920px){
                         width: 102rem;
