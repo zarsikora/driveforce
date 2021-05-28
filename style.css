@@ -13774,8 +13774,13 @@ a.browse-all {
 
 @media (min-width: 992px) {
   .rte.fiftyfifty.type-inlaid.type-multi .main-header {
-    width: 50%;
-    margin: 0 auto;
+    width: 53.333vw;
+  }
+}
+
+@media (min-width: 1920px) {
+  .rte.fiftyfifty.type-inlaid.type-multi .main-header {
+    width: 102rem;
   }
 }
 
