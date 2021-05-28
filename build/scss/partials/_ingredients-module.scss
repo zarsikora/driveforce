@@ -1,0 +1,79 @@
+.ingredients-module {
+  @include media-breakpoint-down(md){
+    margin-bottom: 0;
+  }
+
+  .intro {
+    h2 {
+      margin-bottom: 2rem;
+    }
+
+    p {
+      margin-bottom: 2rem;
+      margin-top: 0;
+    }
+
+    img {
+      width: 9.7rem;
+      height: auto;
+    }
+  }
+
+  .ingredients {
+    @include media-breakpoint-down(md){
+      padding: 0;
+    }
+
+    .block {
+      background-color: $mint;
+      width: 100%;
+      padding: 6rem 4.5rem;
+      position: relative;
+      margin-top: 8rem;
+      @include media-breakpoint-up(lg){
+        margin-top: 0;
+        width: 85%;
+      }
+
+      ul {
+        padding: 0;
+        list-style: none;
+        margin-bottom: 5rem;
+        @include media-breakpoint-up(lg){
+          margin-bottom: 10rem;
+        }
+
+        li {
+          font-family: $boldType;
+          font-size: 1.6rem;
+          margin-bottom: 4rem;
+          &:last-child {
+            margin-bottom: 0;
+          }
+          @media(min-width: 1440px){
+            font-size: 1.111vw;
+          }
+          @media(min-width: 1920px){
+            font-size: 2.1rem;
+          }
+
+          .check {
+            margin-right: 1rem;
+          }
+        }
+      }
+    }
+
+    .block-image {
+      width: 22.7rem;
+      height: auto;
+      position: absolute;
+      right: -15rem;
+      top: 18rem;
+      display: none;
+      @include media-breakpoint-up(lg){
+        display: block;
+      }
+    }
+  }
+}

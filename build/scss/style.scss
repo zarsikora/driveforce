@@ -62,6 +62,7 @@
 //GRIDS
 @import "partials/grids/grid--global";
 @import "partials/grids/grid--article";
+@import "partials/grids/grid--image";
 
 //RTES
 @import "partials/rtes/rte";
@@ -91,6 +92,15 @@
 //FORMS
 @import "partials/forms/form";
 @import "partials/forms/form--module";
+
+//ENDORSEMENT SLIDER
+@import "partials/endorsement-slider";
+
+//INGREDIENTS MODULE
+@import "partials/ingredients-module";
+
+//CTA MODULE
+@import "partials/cta-module";
 
 //SHARE MODULE 
 @import "partials/share-module";

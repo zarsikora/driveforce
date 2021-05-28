@@ -2,7 +2,7 @@
 window.$ = window.jQuery = jQuery;
 
 //Init splitting js
-let splitting = new Splitting(); 
+let splitting = new Splitting();
 
 //Init Simplebar
 if($('#contact.form-module').length)
@@ -570,37 +570,13 @@ requestTick = (scrollY) =>
 
 if(!ticking)
 {
-    scroll(function(){navAnimate(scrollY), stickyLogo(scrollY)});
+    scroll(function(){navAnimate(scrollY)});
 
     ticking = true;
 }
 }
 
 //STICKY LOGO ON SCROLL WITH BANNER
-
-stickyLogo = (scrollY) =>
-{
-    if(document.getElementById('promo-banner')){
-        let screenWidth = $(document).width();
-        let bannerHeight = $('#promo-banner').outerHeight();
-
-        if(screenWidth >= '992'){ 
-            if(scrollY >= bannerHeight){
-                    $('.sticky-logo').addClass('sticky');
-            } else {
-                $('.sticky-logo').removeClass('sticky');
-            }
-        }
-    }
-}
-
-if(document.getElementById('promo-banner')){
-    let screenWidth = $(document).width();
-
-    if(screenWidth >= '992'){ 
-        $('.sticky-logo').removeClass('sticky');
-    }
-}
 
 let navHasAnimated = false;
 
@@ -802,6 +778,47 @@ $(heroBtn).on('click', function(e){
         $("#waitlistModal").modal();
     }
 });
+
+// ENDORSEMENT SLIDER
+let sliderBtn = $('.slider-nav-btn');
+
+if(sliderBtn){
+    //animate in active slides on load
+    let images = $('.accent-image');
+    let details = $('.details-block');
+
+    gsap.to(images[0], {duration: .8, opacity: 1, translateX: 0, ease: "power4.inOut"});
+    gsap.to(details[0], {duration: .8, opacity: 1, translateY: -100, ease: "power4.inOut"});
+
+
+    $(sliderBtn).on('click', function(e){
+        let slideIndex = $(e.target).data('slide');
+
+        $(sliderBtn).removeClass('active');
+        $(images).removeClass('active');
+        gsap.to(images, {duration: .8, opacity: 0, translateX: -100, ease: "power4.inOut"});
+        $(details).removeClass('active')
+        gsap.to(details, {duration: .8, opacity: 0, translateY: 0, ease: "power4.inOut"});
+
+        $(e.target).addClass('active');
+
+        for(let i = 0; i < images.length; i++){
+            let imageData = $(images[i]).data('slide');
+            if(imageData === slideIndex){
+                $(images[i]).addClass('active');
+                gsap.to(images[i], {duration: .8, opacity: 1, translateX: 0, ease: "power4.inOut"});
+            }
+        }
+
+        for(let i = 0; i < details.length; i++){
+            let detailData = $(details[i]).data('slide');
+            if(detailData === slideIndex){
+                $(details[i]).addClass('active');
+                gsap.to(details[i], {duration: .8, opacity: 1, translateY: -100, ease: "power4.inOut"});
+            }
+        }
+    });
+}
 
 
 //

@@ -1,51 +1,29 @@
 <div class="nav" id="flyout-menu">
-    <?php
-    $mainMenu = wp_get_menu_array('main-menu');
+    <div class="link-wrapper">
+        <a class="nav-link" href="<?php echo get_site_url(); ?>/shop">Shop</a>
 
-    if ($mainMenu) {
-        $pageTitle = get_the_title();
+        <a class="nav-link" href="<?php echo get_site_url(); ?>/ingredients">Ingredients</a>
 
-        echo '<div class="menu-main-menu-container">';
-        echo '<ul id="menu-main-menu" class="menu">';
+        <a class="nav-link" href="<?php echo get_site_url(); ?>/our-story">Our Story</a>
+    </div>
 
-        foreach ($mainMenu as $k => $v) {
-            $current = ($v['title'] == get_the_title()) ? 'current' : '';
-            $childrenCount = count($v['children']);
-            if($childrenCount !== 0){
-                $childrenClass = 'has-children';
-            }
+    <div class="header-logo">
+        <a class="header-link" href="<?php echo home_url(); ?>" aria-label="Return to Home Page">
+            <svg class="logo" viewbox='0 0 201.662 35.534'>
+                <use href="#header-logo"></use>
+            </svg>
+        </a>
+    </div>
 
-            echo '<li id="menu-item-' . $v['ID'] . '" class="menu-item menu-item-' . $v['ID'] . ' ' . $current . $childrenClass .'">';
-            echo '<a class="item-link" href="' . $v['url'] . '">' . $v['title'] . '</a>'; 
-            //echo '<a class="item-link" href="#">' . $v['title'] . '</a>'; FOR WHEN PARENT ITEM SHOULDNT HAVE LINK 
+    <div class="link-wrapper">
+        <a class="nav-link" href="<?php echo get_site_url(); ?>/learn">Learn</a>
 
-            if($childrenCount) {
+        <a class="nav-link" href="<?php echo get_site_url(); ?>/my-account">Account</a>
 
-                echo '<ul class="sub-menu">';
-
-                foreach($v['children'] as $k2 => $v2)
-                {
-                    $icon = get_field('icon', $v2['ID']);
-                    $subtext = get_field('subtext', $v2['ID']);
-                    $class = ($icon && $subtext) ? 'has-subtext' : '';
-
-                    echo '<li class="menu-item '. $class .'">';
-                    echo '<a href="'. $v2['url'] .'">';
-                    if($icon) echo '<img src="'. $icon['url'] .'" class="menu-item-icon" alt="'. $icon['alt'] .'" />';
-                    echo $v2['title'] .'</a>';
-                    if($subtext) echo '<span class="subtext">'. $subtext .'</span>';
-                    echo '</li>';
-                }
-
-                echo '</ul>';
-            }
-
-            echo '</li>';
-        }
-
-        echo '</ul>';
-        echo '</div>';
-    }
-
-    ?>
+        <a class="nav-link" href="<?php echo get_site_url(); ?>/cart">
+            <svg class="logo" viewBox="0 0 27.644 22.64">
+                <use xlink:href="#cart-dark"></use>
+            </svg>
+        </a>
+    </div>
 </div>

@@ -1,0 +1,47 @@
+//TODO: mobile styling
+.cta-module {
+  .module-padded {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    svg.logo {
+      width: 8.2rem;
+      height: auto;
+      @media(min-width: 1440px){
+        width: 5.694vw;
+      }
+      @media(min-width: 1920px){
+        width: 10.9rem;
+      }
+    }
+
+    h2 {
+      color: $lightText;
+      margin: 8.6rem 0 4rem;
+      text-align: center;
+      font-size: 4rem;
+      @include media-breakpoint-up(lg){
+        font-size: 6rem;
+      }
+      @media(min-width: 1440px){
+        font-size: 4.167vw;
+      }
+      @media(min-width: 1920px){
+        font-size: 8rem;
+      }
+    }
+
+    .btn {
+      margin-bottom: 11rem;
+      @media(min-width: 1440px){
+        margin-bottom: 7.639vw;
+      }
+      @media(min-width: 1920px){
+        margin-bottom: 14.6rem;
+      }
+    }
+  }
+}

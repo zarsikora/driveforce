@@ -1,0 +1,23 @@
+.image-grid {
+  display: none;
+  @include media-breakpoint-up(lg){
+    display: block;
+  }
+  .row {
+    height: 24.1rem;
+    @media(min-width: 1440px){
+      height: 16.736vw;
+    }
+
+    .image {
+      position: relative;
+
+      img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}
