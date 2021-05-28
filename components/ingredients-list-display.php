@@ -11,7 +11,7 @@
                             $slug = urlencode ($name);
                             $description = get_sub_field('description');
                             ?>
-                            <li data-ingredient="<?php echo $slug ?>" <?php if($counter === 0) echo 'class= "active"' ?>>
+                            <li data-ingredient="<?php echo $slug ?>" class="ingredient-list-item <?php if($counter === 0) echo 'active' ?>">
                                 <?php echo $name ?>
                             </li>
                             <?php $counter++ ?>
@@ -30,7 +30,7 @@
                             $slug = urlencode ($name);
                             $description = get_sub_field('description');
                             ?>
-                            <li data-ingredient="<?php echo $slug ?>" <?php if($counter === 0) echo 'class= "active"' ?>>
+                            <li data-ingredient="<?php echo $slug ?>" class="ingredient-description-item <?php if($counter === 0) echo 'active' ?>">
                                 <h3><?php echo $name ; ?></h3>
                                 <p><?php echo $description ?></p>
                             </li>
