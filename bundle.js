@@ -40178,6 +40178,92 @@ let scroll = window.requestAnimationFrame ||
 // window.addEventListener('resize', calcWinsize);
 
 
+/**
+ * Read more reviews button scroll
+ */
+$('.read-reviews-link').on('click', (e) =>
+{
+    e.preventDefault();
+
+    let header = $('.main-header-wrapper');
+    let comments = $('#comments');
+
+    $("html, body").animate({scrollTop: (comments.offset().top - (header.outerHeight() + 30))}, 750);
+});
+
+
+/**
+ * Write a review button toggle
+ */
+
+let writeReviewBtn = $('.write-review-button');
+if(writeReviewBtn.length)
+{
+    let reviewForm = $('#review_form');
+    writeReviewBtn.on('click', (e) => {
+        e.preventDefault();
+
+        reviewForm.show();
+        writeReviewBtn.hide();
+    })
+}
+
+
+/**
+ * Load more reviews
+ */
+
+let loadMoreReviewBtn = $('.load-more-reviews');
+if(loadMoreReviewBtn.length)
+{
+    let loadingGif = $('.loading-gif');
+    let commentList = $('#comments .commentlist');
+    let totalReviews = commentList.attr('data-total');
+    let reviewsPerPage = commentList.attr('data-per-page');
+    let totalPages = Math.ceil(totalReviews / reviewsPerPage);
+    let currentPage = 1;
+    let offset;
+
+    loadMoreReviewBtn.on('click', (e) =>
+    {
+        e.preventDefault();
+
+        loadingGif.removeClass('d-none');
+
+        offset = parseInt(commentList.attr('data-current-page')) * reviewsPerPage;
+
+        $.ajax({
+            url: ajaxurl,
+            type: 'post',
+            data: {
+                action: 'load_more_comments',
+                offset: offset,
+                perPage: reviewsPerPage,
+                postID: postID
+            },
+            dataType: 'html',
+            success: (data) =>
+            {
+                loadingGif.addClass('d-none');
+
+                currentPage = parseInt(commentList.attr('data-current-page')) + 1;
+
+                commentList.attr('data-current-page', currentPage);
+                commentList.append(data);
+
+                if(currentPage == totalPages)
+                {
+                    loadMoreReviewBtn.hide();
+                }
+            },
+            error: (error) => {
+                console.log(error);
+            }
+        });
+    })
+}
+
+
 
 // ANIMATION SCROLL HANDLER - request animation frame
 let windowHeight = $(window).height();

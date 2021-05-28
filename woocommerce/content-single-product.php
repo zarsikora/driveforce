@@ -68,7 +68,7 @@ if ( post_password_required() ) {
 		do_action( 'woocommerce_single_product_summary' );
 		?>
 
-        <ul>
+        <ul class="product-checklist">
             <li>✓ No Sugar Added</li>
             <li>✓ No Caffeine</li>
             <li>✓ Informed Sport Certified</li>
@@ -89,15 +89,17 @@ if ( post_password_required() ) {
 	?>
 </div>
 
-<div class="benefits-module container">
+<div class="benefits-module">
     <div class="row">
-        <div class="col-lg-6">
-            <p>Play your back nine as strong as your front.</p>
-            <svg></svg>
+        <div class="col-lg-4">
+            <p class="header">Play your back nine as strong as your front.</p>
+            <svg width="125" viewBox="0 0 125.5 174.24">
+                <use href="#poles"></use>
+            </svg>
         </div>
-        <div class="col-lg-3">
-            <div>
-                <p>Benefits on the course:</p>
+        <div class="col-lg-3 offset-lg-2">
+            <div class="benefits-box green">
+                <p class="subheader">Benefits on the course:</p>
                 <ul>
                     <li>Enhances focus & concentration</li>
                     <li>Reduces fatigue & mental stress</li>
@@ -107,8 +109,8 @@ if ( post_password_required() ) {
             </div>
         </div>
         <div class="col-lg-3">
-            <div>
-                <p>Benefits off the course:</p>
+            <div class="benefits-box">
+                <p class="subheader">Benefits off the course:</p>
                 <ul>
                     <li>Supports cardiovascular system & heart health</li>
                     <li>Supports healthy immune system</li>
@@ -119,23 +121,36 @@ if ( post_password_required() ) {
     </div>
 </div>
 
-<div class="container">
+<svg class="dotted-line" viewBox="0 0 1166 20">
+    <use href="#dotted-line"></use>
+</svg>
+
+<div class="ingredients">
     <div class="row">
-        <div class="col-lg-4">
-            <p>What's in DF-18?</p>
+        <div class="col-lg-3">
+            <p class="header">What's in<br />DF-18?</p>
         </div>
-        <div class="col-lg-8">
+        <div class="col-lg-8 offset-lg-1">
             <div class="row">
-                <div class="col-lg-6">
-                    <p>Blood Flow Matrix</p>
+                <div class="col-lg-6 copy">
+                    <svg width="50" viewBox="0 0 48.522 38.906">
+                        <use href="#stamina-icon"></use>
+                    </svg>
+                    <p class="subheader">Blood Flow Matrix</p>
                     <p>A collection of nutrients and co-factors working synergistically to improve blood flow giving you mental clarity, focus, and stamina during the critical moments in your game.</p>
                 </div>
-                <div class="col-lg-6">
-                    <p>Fluid Balancers</p>
+                <div class="col-lg-6 copy">
+                    <svg width="50" viewBox="0 0 48.522 38.906">
+                        <use href="#stamina-icon"></use>
+                    </svg>
+                    <p class="subheader">Fluid Balancers</p>
                     <p>A highly effective combination that hyper hydrates you so that your body can better manage heat stress and the physical endurance necessary for a successful 4-6 hours in the sun.</p>
                 </div>
-                <div class="col-lg-6">
-                    <p>Mental Drivers</p>
+                <div class="col-lg-6 copy">
+                    <svg width="50" viewBox="0 0 48.522 38.906">
+                        <use href="#stamina-icon"></use>
+                    </svg>
+                    <p class="subheader">Mental Drivers</p>
                     <p>A small selection of high ROI nootropics [or micronutrients] [or nootropic compounds] which improve focus, motor function, to help your mind stay focused and the body cope under pressure in the moments that matter most on the course.</p>
                 </div>
             </div>
@@ -143,7 +158,7 @@ if ( post_password_required() ) {
     </div>
 </div>
 
-<div class="container">
+<div class="ingredients-list">
     <div class="accordion" id="accordionExample">
         <div class="accordion-item">
             <h2 class="accordion-header" id="headingOne">
@@ -153,7 +168,7 @@ if ( post_password_required() ) {
             </h2>
             <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
-                    Nitro Rocket® Arugula Extract, Natural Flavors, Calcium Beta-Hydroxybutyrate, Citric Acid, Pink Salt, MagnesiumGlycinate, Potassium Chloride, Agmatine Sulfate, Taurine, HydroMax® Glycerol Powder, N-Acetyl-Tyrosine, Ashwagandha, N-Actylcysteine, Malic Acid, Vegetable Juice (Color), L-Theanine, Theobromine, Vitamin C, Sucralose, Acesulfame Potassium, Zinc Citrate, Pantothenic acid (Calcium Pantothenate), Riboflavin, Choline Citrate, Thiamin HCL, Folic Acid, Methylcobalamin, Biotin
+                    <p>Nitro Rocket® Arugula Extract, Natural Flavors, Calcium Beta-Hydroxybutyrate, Citric Acid, Pink Salt, MagnesiumGlycinate, Potassium Chloride, Agmatine Sulfate, Taurine, HydroMax® Glycerol Powder, N-Acetyl-Tyrosine, Ashwagandha, N-Actylcysteine, Malic Acid, Vegetable Juice (Color), L-Theanine, Theobromine, Vitamin C, Sucralose, Acesulfame Potassium, Zinc Citrate, Pantothenic acid (Calcium Pantothenate), Riboflavin, Choline Citrate, Thiamin HCL, Folic Acid, Methylcobalamin, Biotin</p>
                 </div>
             </div>
         </div>
@@ -165,21 +180,21 @@ if ( post_password_required() ) {
             </h2>
             <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
-                    Pour, Shake, Perform Start your pre-round routine with a pack of DF-18. Tear open one stick and shake into at least 16oz of cold water or your favorite smoothie. For best performance results, drink daily or before any round you play.
+                    <p>Pour, Shake, Perform Start your pre-round routine with a pack of DF-18. Tear open one stick and shake into at least 16oz of cold water or your favorite smoothie. For best performance results, drink daily or before any round you play.</p>
                 </div>
             </div>
         </div>
     </div>
 </div>
 
-<div class="container">
-    <div class="row">
+<div class="quote-module">
+    <div class="row align-items-center">
         <div class="col-lg-6">
-            <p>Back nine blowups happen all the time, we’ve all been there. Our ‘faults’ add up but truth be told, it’s not always the players fault. I’ve been looking for years for something to solve for this. I’ve finally found it.”</p>
+            <p class="header">Back nine blowups happen all the time, we’ve all been there. Our ‘faults’ add up but truth be told, it’s not always the players fault. I’ve been looking for years for something to solve for this. I’ve finally found it.”</p>
             <p>— Adam Kolloff, New England PGA Teacher of the Year</p>
         </div>
-        <div class="col-lg-6">
-            <img src="" />
+        <div class="col-lg-5 offset-lg-1">
+            <?php echo imageTag('http://localhost:10008/wp-content/uploads/2021/05/Mask-Group-47@2x.png', '', '','', ''); ?>
         </div>
     </div>
 </div>
@@ -188,7 +203,7 @@ if ( post_password_required() ) {
     <div class="row">
         <div class="col-lg-4">
             <div>
-                <p>Make your water work harder for you.</p>
+                <p class="header">Make your water work harder for you.</p>
                 <p>Start with what makes sense: water. Then add a single serving of DF-18 to maximize your performance, health, and time on the course, every time.</p>
             </div>
         </div>
@@ -196,21 +211,27 @@ if ( post_password_required() ) {
     <img src="" />
 </div>
 
-<div class="container">
-    <div class="row">
+<div class="copy-image">
+    <div class="row align-items-center">
         <div class="col-lg-6">
-            <p>Maximize your investment on the course.</p>
+            <p class="header">Maximize your investment on the course.</p>
             <p>We invest countless hours training, working on our swing, honing our skills, and countless dollars on equipment each year to play our absolute best. These are all crucial, but it’s all for not if you’re not giving your body what it needs to stay focused, hydrated, and energized.</p>
         </div>
-        <div class="col-lg-6">
-            <svg></svg>
+        <div class="col-lg-3 offset-lg-2">
+            <svg viewBox="0 0 282.773 278.057">
+                <use href="#golf-bag-icon"></use>
+            </svg>
         </div>
     </div>
 </div>
 
-<div class="container">
+<svg class="dotted-line" viewBox="0 0 1166 20">
+    <use href="#dotted-line"></use>
+</svg>
+
+<div class="reviews-module">
     <div class="row">
-        <div class="col-lg-8 offset-lg-1">
+        <div class="col-lg-8 offset-lg-2">
             <div class="product-reviews-wrapper">
 
                 <?php
