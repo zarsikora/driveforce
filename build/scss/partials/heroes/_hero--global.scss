@@ -441,6 +441,32 @@
                     transform: translateY(0);
                     opacity: 1;
                  }
+
+                img {
+                    margin: 4rem auto 0;
+                    display: block;
+                    width: 100%;
+                    height: auto;
+                    margin-bottom: -30%;
+                    @include media-breakpoint-up(lg){
+                        width: 44.514vw;
+                        height: auto;
+                        margin-bottom: -15%; // TODO: make this exact
+                    }
+                    @media(min-width: 1920px){
+                        width: 85.4rem;
+                    }
+                }
+
+                &.align-center {
+                    .row {
+                        justify-content: center;
+
+                        h1 {
+                            text-align: center;
+                        }
+                    }
+                }
             }
         }
     } 
