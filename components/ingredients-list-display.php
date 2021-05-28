@@ -6,6 +6,8 @@
     $totalCounter = 0;
 ?>
 
+<!-- This probably wants an accordion on mobile ngl -->
+
 <div class="module-wrapper ingredients-list-display dark-bg">
     <div class="module-padded">
         <div class="row">
