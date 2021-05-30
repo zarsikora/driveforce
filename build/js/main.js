@@ -155,7 +155,6 @@ if(loadMoreReviewBtn.length)
 }
 
 
-
 // ANIMATION SCROLL HANDLER - request animation frame
 let windowHeight = $(window).height();
 let lastPosition = -1; // storing last scroll position which updates on throttled scroll listener - nothing takes place before it is changed

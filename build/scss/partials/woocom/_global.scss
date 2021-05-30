@@ -1,44 +1,58 @@
 body.woocommerce-page {
-    .woocommerce-message,
-    .woocommerce-info  {
-        max-width: 80%;
-        margin: 3rem auto;
-        padding: 2rem 3rem;
-        background-color: #fff;
-        border: 2px solid $highlight;
-        color: $darkBg;
-        font-family: $mediumType;
-        text-align: center;
-        font-size: 1.4rem;
-        letter-spacing: .21rem;
 
-        &:before {
-            display: none;
+    .woocommerce-notices-wrapper {
+
+        .woocommerce-message,
+        .woocommerce-info,
+        .woocommerce-error {
+            width: 100%;
+            margin: 3rem auto;
+            padding: 2rem 3rem;
+            background-color: #fff;
+            border: none;
+            color: $darkBg;
+            font-family: $mediumType;
+            text-align: center;
+            font-size: 1.4rem;
+
+            &:before {
+                display: none;
+            }
+
+            .button {
+                @include media-breakpoint-down(sm){
+                    display: block;
+                    width: 100%;
+                    margin-bottom: 1rem;
+                }
+
+                background: none;
+                color: $highlight;
+                text-decoration: underline;
+                font-family: $displayType;
+                padding: 0;
+                font-size: 1.6rem;
+                transition: all ease 300ms;
+
+                &:hover {
+                    color: $hoverTint;
+                }
+
+                &:focus,
+                &:active {
+                    outline: none;
+                }
+            }
         }
 
-        .button {
-            @include media-breakpoint-down(sm){
-                display: block;
-                width: 100%;
-                margin-bottom: 1rem;
-            }
+        .woocommerce-message {
+            background: $sage;
+            color: #fff;
+        }
 
-            background: none;
-            color: $highlight;
-            text-decoration: underline;
-            font-family: $displayType;
-            padding: 0;
-            font-size: 1.6rem;
-            transition: all ease 300ms;
-
-            &:hover {
-                color: $hoverTint;
-            }
-
-            &:focus, 
-            &:active {
-                outline: none;
-            }
+        .woocommerce-error {
+            background: $red;
+            color: #fff;
         }
     }
 

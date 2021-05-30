@@ -13,16 +13,27 @@
         @media(min-width: 1920px) {
             margin: 20rem auto;
         }
+
         .woocommerce {
+
             .woocommerce-form-coupon-toggle {
                 display: none;
             }
 
             form.checkout {
+                display: flex;
+                @include media-breakpoint-up(xl) {
+                    flex-wrap: wrap;
+                }
 
                 #customer_details {
                     @include media-breakpoint-up(md){
                         display: flex;
+                        flex: 0 0 50%;
+                        flex-wrap: wrap;
+                    }
+                    @include media-breakpoint-up(xl) {
+                        padding: 0 3rem;
                     }
 
                     .col-1,
@@ -30,27 +41,18 @@
                         width: 100%;
                         max-width: 100%;
                         flex: 0 0 100%;
-
                         @include media-breakpoint-down(sm){
                             padding: 0;
                         }
-
                         @include media-breakpoint-up(md){
                             width: 50%;
                             max-width: 50%;
                             flex: 0 0 50%;
                         }
-                    }
-
-                    .col-1 {
-                        @include media-breakpoint-up(lg){
-                             padding-left: 0;
-                        }
-                    }
-
-                    .col-2 {
-                        @include media-breakpoint-down(sm){
-                            margin-top: 2rem;
+                        @include media-breakpoint-up(xl) {
+                            flex: 0 0 100%;
+                            max-width: 100%;
+                            width: 100%;
                         }
                     }
 
@@ -72,18 +74,14 @@
 
                             input {
                                 width: 100%;
-                                max-width: 50rem;
                                 height: 6rem;
                                 padding: 0 3rem;
                                 position: relative;
-                                width: 100%;
                                 line-height: 6rem;
-                                font-size: 1.4rem;
                                 border-radius: .4rem;
                                 transition: all ease 300ms;
                                 border: none;
-                                margin-top: 1rem;
-                                font-size: 1.8rem;
+                                font-size: 1.4rem;
                                 @include media-breakpoint-up(md){
                                     font-size: 1.6rem;
                                 }
@@ -94,7 +92,6 @@
                             }
 
                             .select2-container {
-                                max-width: 50rem;
                                 height: 6rem;
                                 position: relative;
                                 width: 100%;
@@ -103,8 +100,6 @@
                                 border-radius: .4rem;
                                 transition: all ease 300ms;
                                 border: none;
-                                margin-top: 1rem;
-                                font-size: 1.8rem;
                                 @include media-breakpoint-up(md){
                                     font-size: 1.6rem;
                                 }
@@ -166,10 +161,15 @@
                 }
 
                 #order_review_heading {
+                    display: none;
                     margin-top: 5rem;
                 }
 
                 #order_review {
+                    @include media-breakpoint-up(xl) {
+                        flex: 0 0 50%;
+                        padding: 0 3rem;
+                    }
 
                     table {
                         background-color: #fff;

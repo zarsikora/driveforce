@@ -1,6 +1,6 @@
 <div class="nav" id="flyout-menu">
     <div class="link-wrapper">
-        <a class="nav-link" href="<?php echo get_site_url(); ?>/shop">Shop</a>
+        <a class="nav-link" href="<?php echo get_site_url(); ?>/product/df-18">Shop</a>
 
         <a class="nav-link" href="<?php echo get_site_url(); ?>/ingredients">Ingredients</a>
 

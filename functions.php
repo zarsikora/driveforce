@@ -47,7 +47,7 @@ function bones_load_scripts()
         'current_page' => get_query_var( 'paged' ) ? get_query_var('paged') : 1,
         'max_page' => $wp_query->max_num_pages
     ));
-    wp_enqueue_script( 'main-scripts', get_bloginfo('url') . '/wp-content/themes/bones/bundle.js', '', time(), false);
+    wp_enqueue_script( 'main-scripts', get_bloginfo('template_directory') . '/bundle.js', '', time(), false);
 
     $pageComponents = get_field('components');
 

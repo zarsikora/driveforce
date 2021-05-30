@@ -93,12 +93,12 @@ if ( post_password_required() ) {
     <div class="row">
         <div class="col-lg-4">
             <p class="header">Play your back nine as strong as your front.</p>
-            <svg width="125" viewBox="0 0 125.5 174.24">
+            <svg viewBox="0 0 125.5 174.24">
                 <use href="#poles"></use>
             </svg>
         </div>
-        <div class="col-lg-3 offset-lg-2">
-            <div class="benefits-box green">
+        <div class="col-lg-4 col-xl-3 offset-xl-2">
+            <div class="copy-box green">
                 <p class="subheader">Benefits on the course:</p>
                 <ul>
                     <li>Enhances focus & concentration</li>
@@ -108,8 +108,8 @@ if ( post_password_required() ) {
                 </ul>
             </div>
         </div>
-        <div class="col-lg-3">
-            <div class="benefits-box">
+        <div class="col-lg-4 col-xl-3">
+            <div class="copy-box">
                 <p class="subheader">Benefits off the course:</p>
                 <ul>
                     <li>Supports cardiovascular system & heart health</li>
@@ -125,10 +125,10 @@ if ( post_password_required() ) {
     <use href="#dotted-line"></use>
 </svg>
 
-<div class="ingredients">
+<div class="ingredients-module">
     <div class="row">
         <div class="col-lg-3">
-            <p class="header">What's in<br />DF-18?</p>
+            <p class="header">What's in<br /> DF-18?</p>
         </div>
         <div class="col-lg-8 offset-lg-1">
             <div class="row">
@@ -159,37 +159,60 @@ if ( post_password_required() ) {
 </div>
 
 <div class="ingredients-list">
-    <div class="accordion" id="accordionExample">
+    <div class="accordion" id="ingredientsAccordion">
+
         <div class="accordion-item">
-            <h2 class="accordion-header" id="headingOne">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            <h2 class="accordion-header" id="accordionHeadingOne">
+                <button
+                    class="accordion-button"
+                    type="button"
+                    data-toggle="collapse"
+                    data-target="#accordionCollapseOne"
+                    aria-expanded="true"
+                    aria-controls="accordionCollapseOne">
                     See Full Ingredients List:
                 </button>
             </h2>
-            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+            <div
+                id="accordionCollapseOne"
+                class="accordion-collapse collapse show"
+                aria-labelledby="accordionHeadingOne"
+                data-parent="#ingredientsAccordion">
                 <div class="accordion-body">
                     <p>Nitro Rocket® Arugula Extract, Natural Flavors, Calcium Beta-Hydroxybutyrate, Citric Acid, Pink Salt, MagnesiumGlycinate, Potassium Chloride, Agmatine Sulfate, Taurine, HydroMax® Glycerol Powder, N-Acetyl-Tyrosine, Ashwagandha, N-Actylcysteine, Malic Acid, Vegetable Juice (Color), L-Theanine, Theobromine, Vitamin C, Sucralose, Acesulfame Potassium, Zinc Citrate, Pantothenic acid (Calcium Pantothenate), Riboflavin, Choline Citrate, Thiamin HCL, Folic Acid, Methylcobalamin, Biotin</p>
                 </div>
             </div>
         </div>
+
         <div class="accordion-item">
-            <h2 class="accordion-header" id="headingTwo">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            <h2 class="accordion-header" id="accordionHeadingTwo">
+                <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-toggle="collapse"
+                    data-target="#accordionCollapseTwo"
+                    aria-expanded="false"
+                    aria-controls="accordionCollapseTwo">
                     How to use:
                 </button>
             </h2>
-            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+            <div
+                id="accordionCollapseTwo"
+                class="accordion-collapse collapse"
+                aria-labelledby="accordionHeadingTwo"
+                data-parent="#ingredientsAccordion">
                 <div class="accordion-body">
                     <p>Pour, Shake, Perform Start your pre-round routine with a pack of DF-18. Tear open one stick and shake into at least 16oz of cold water or your favorite smoothie. For best performance results, drink daily or before any round you play.</p>
                 </div>
             </div>
         </div>
+
     </div>
 </div>
 
 <div class="quote-module">
     <div class="row align-items-center">
-        <div class="col-lg-6">
+        <div class="col-lg-6 copy">
             <p class="header">Back nine blowups happen all the time, we’ve all been there. Our ‘faults’ add up but truth be told, it’s not always the players fault. I’ve been looking for years for something to solve for this. I’ve finally found it.”</p>
             <p>— Adam Kolloff, New England PGA Teacher of the Year</p>
         </div>
@@ -199,16 +222,18 @@ if ( post_password_required() ) {
     </div>
 </div>
 
-<div class="container">
+<div class="full-image-with-copy-box">
     <div class="row">
-        <div class="col-lg-4">
-            <div>
-                <p class="header">Make your water work harder for you.</p>
+        <div class="col-lg-12 image">
+            <?php echo imageTag('http://localhost:10008/wp-content/uploads/2021/05/72373c506c372e7cb87e1867354f6144@2x.png', '', '', '', ''); ?>
+        </div>
+        <div class="col-lg-4 copy">
+            <div class="copy-box green">
+                <p class="subheader">Make your water work harder for you.</p>
                 <p>Start with what makes sense: water. Then add a single serving of DF-18 to maximize your performance, health, and time on the course, every time.</p>
             </div>
         </div>
     </div>
-    <img src="" />
 </div>
 
 <div class="copy-image">

@@ -1,5 +1,25 @@
-.star-rating {
-    //color: $green;
+.woocommerce {
+    div.product {
+        .woocommerce-product-rating {
+            display: flex;
+            align-items: center;
+            margin-bottom: 3rem;
+
+            .star-rating {
+                color: $lightBg;
+                font-size: 2rem;
+                letter-spacing: .4rem;
+                width: 6em;
+                margin: 0 2rem 0 0;
+            }
+
+            .woocommerce-review-link {
+                font-size: 1.4rem;
+                color: #fff;
+                text-decoration: underline;
+            }
+        }
+    }
 }
 
 .product-reviews-wrapper {
@@ -24,13 +44,35 @@
 
     #reviews {
 
-        #comments ol.commentlist {
-            display: block;
-            margin: 0;
-            padding: 0;
+        #comments {
+            ol.commentlist {
+                display: block;
+                margin: 0;
+                padding: 0;
 
-            li .comment-text {
-                border-radius: 0;
+                li {
+                    .comment-text {
+                        border-radius: 0;
+                        padding: 2rem;
+
+                        p.meta {
+                            color: #fff;
+                            font-size: 1.2rem;
+                        }
+
+                        .star-rating {
+                            letter-spacing: .3rem;
+                            font-size: 1.6rem;
+                            width: 6em;
+                        }
+
+                        .description {
+                            p {
+                                margin-bottom: 0;
+                            }
+                        }
+                    }
+                }
             }
         }
     }
@@ -44,10 +86,23 @@
                 font-size: 14px;
             }
 
+            .comment-form-rating {
+                label {
+                    color: #fff;
+                    margin-bottom: 1em;
+                }
+            }
+
             p.stars {
                 a {
                     //color: $green;
                 }
+            }
+
+            textarea#comment {
+                padding: 3rem;
+                font-size: 1.6rem;
+                height: 20rem;
             }
 
             .comment-form-cookies-consent {

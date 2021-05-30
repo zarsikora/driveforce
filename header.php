@@ -78,11 +78,10 @@
                                 Toggle Mobile Nav Controls
 
                                 <svg aria-hidden="true" class="open active" viewBox="0 0 39 24">
-                                    <defs><style>.hamburger-a{fill:#081d1a;opacity:0.998;}</style></defs>
                                     <g transform="translate(-275 -71)">
-                                        <rect class="hamburger-a" width="4" height="17" rx="2" transform="translate(292 71) rotate(90)"/>
-                                        <rect class="hamburger-a" width="4" height="39" rx="2" transform="translate(314 81) rotate(90)"/>
-                                        <rect class="hamburger-a" width="4" height="19" rx="2" transform="translate(314 91) rotate(90)"/>
+                                        <rect width="4" height="17" rx="2" transform="translate(292 71) rotate(90)"/>
+                                        <rect width="4" height="39" rx="2" transform="translate(314 81) rotate(90)"/>
+                                        <rect width="4" height="19" rx="2" transform="translate(314 91) rotate(90)"/>
                                     </g>
                                 </svg>
 
