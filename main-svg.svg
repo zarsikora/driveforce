@@ -289,7 +289,7 @@
     <!-- CARET ARROW -->
     <symbol id="caret" viewBox="0 0 38.536 24.218">
         <defs>
-            <style>.caret-a{fill:none;stroke:#dc4444;stroke-width:7px;}</style>
+            <style>.caret-a{fill:none;stroke-width:7px;}</style>
         </defs>
         <path class="caret-a" d="M3798,6857.65l16.793,16.794,16.793-16.794" transform="translate(-3795.525 -6855.176)"/>
     </symbol>
