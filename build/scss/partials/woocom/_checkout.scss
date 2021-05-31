@@ -14,6 +14,13 @@
             margin: 20rem auto;
         }
 
+        .woocommerce-NoticeGroup-checkout {
+            flex: 0 0 100%;
+            @include media-breakpoint-up(lg) {
+                padding: 0 3rem;
+            }
+        }
+
         .woocommerce {
 
             .woocommerce-form-coupon-toggle {
@@ -22,15 +29,17 @@
 
             form.checkout {
                 display: flex;
-                @include media-breakpoint-up(xl) {
-                    flex-wrap: wrap;
-                }
+                flex-wrap: wrap;
 
                 #customer_details {
+                    margin-bottom: 5rem;
                     @include media-breakpoint-up(md){
                         display: flex;
                         flex: 0 0 50%;
                         flex-wrap: wrap;
+                    }
+                    @include media-breakpoint-up(lg) {
+                        margin-bottom: 0;
                     }
                     @include media-breakpoint-up(xl) {
                         padding: 0 3rem;
@@ -56,80 +65,95 @@
                         }
                     }
 
-                    .woocommerce-billing-fields,
-                    .woocommerce-shipping-fields {
-                        #ship-to-different-address {
-                            margin-bottom: 2rem;
+                    .form-row {
+                        width: 100%;
+                        margin: 0;
+                        padding: 0;
+
+                        label {
+                            width: 100%;
+                            font-family: $displayType;
+                            letter-spacing: 0;
+                            font-size: 1.8rem;
                         }
 
-                        .form-row {
+                        input {
                             width: 100%;
+                            height: 4rem;
+                            padding: 0 2rem;
+                            position: relative;
+                            line-height: 4rem;
+                            border-radius: 0;
+                            transition: all ease 300ms;
+                            border: none;
+                            font-size: 1.4rem;
+                            @include media-breakpoint-up(md){
+                                font-size: 1.6rem;
+                            }
+                        }
+
+                        span {
+                            width: 100%;
+                        }
+
+                        .select2-container {
+                            height: 4rem;
+                            position: relative;
+                            width: 100%;
+                            line-height: 4rem;
+                            font-size: 1.4rem;
+                            border-radius: 0;
+                            transition: all ease 300ms;
+                            border: none;
+                            @include media-breakpoint-up(md){
+                                font-size: 1.6rem;
+                            }
+
+                            .select2-selection {
+                                height: 100%;
+                                border: none;
+
+                                .select2-selection__rendered {
+                                    width: 100%;
+                                    height: 100%;
+                                    line-height: 4rem;
+                                    padding: 0 2rem;
+
+                                    .selection {
+                                        height: 100%;
+                                    }
+                                }
+
+                                .select2-selection__arrow {
+                                    height: 100%;
+
+                                    b {
+                                        left: unset;
+                                        right: 1rem;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .woocommerce-billing-fields,
+                    .woocommerce-shipping-fields {
+
+                        h3 {
+                            font-size: 2.4rem;
+                        }
+
+                        #ship-to-different-address {
+                            margin: 1em 0;
+                            float: none;
 
                             label {
-                                width: 100%;
-                                font-family: $displayType;
-                                letter-spacing: 0;
-                                font-size: 1.8rem;
+                                margin: 0;
                             }
+                        }
 
-                            input {
-                                width: 100%;
-                                height: 6rem;
-                                padding: 0 3rem;
-                                position: relative;
-                                line-height: 6rem;
-                                border-radius: .4rem;
-                                transition: all ease 300ms;
-                                border: none;
-                                font-size: 1.4rem;
-                                @include media-breakpoint-up(md){
-                                    font-size: 1.6rem;
-                                }
-                            }
-
-                            span {
-                                width: 100%;
-                            }
-
-                            .select2-container {
-                                height: 6rem;
-                                position: relative;
-                                width: 100%;
-                                line-height: 6rem;
-                                font-size: 1.4rem;
-                                border-radius: .4rem;
-                                transition: all ease 300ms;
-                                border: none;
-                                @include media-breakpoint-up(md){
-                                    font-size: 1.6rem;
-                                }
-        
-                                .select2-selection {
-                                    height: 100%;
-                                    border: none;
-        
-                                    .select2-selection__rendered {
-                                        width: 100%;
-                                        height: 100%;
-                                        max-width: 50rem;
-                                        line-height: 6rem;
-                                        padding: 0 3rem;
-            
-                                        .selection {
-                                            height: 100%;
-                                        }
-                                    }
-        
-                                    .select2-selection__arrow {
-                                        height: 100%;
-        
-                                        b {
-                                            left: unset;
-                                            right: 1rem;
-                                        }
-                                    } 
-                                }
-                            }
+                        .shipping_address {
+                            margin-bottom: 2rem;
                         }
                     }
 
@@ -142,10 +166,10 @@
                         }
 
                         textarea {
-                            margin-top: 1rem;
                             border: none;
-                            padding: 2rem 3rem;
+                            padding: 2rem;
                             min-height: 20rem;
+                            font-size: 1.6rem;
                         }
                     }
                 }
@@ -189,33 +213,11 @@
 
             #payment {
                 background: none;
-
-                .wc_payment_methods {
-                    padding: 0;
-                    li.woocommerce-info {
-                        width: 100%;
-                        max-width: 100%;
-                        letter-spacing: 0;
-                    }
-                }
                 
                 a {
                     color: $highlight;
                     font-family: $displayType;
                     transition: all ease 300ms;
-                }
-        
-                .button {
-                    background-color: $highlight;
-                    transition: all ease 300ms;
-                    color: #fff;
-                    font-family: $mediumType;
-                    padding: 2.7rem 3.3rem;
-                    border-radius: 4rem;
-            
-                    &:hover {
-                        background-color: $hoverTint;
-                    }
                 }
 
                 .button {
@@ -244,6 +246,19 @@
                     &:hover {
                         background-color: $hoverTint;
                     }
+                }
+
+                .wc_payment_methods {
+                    padding: 0;
+                    li.woocommerce-info {
+                        width: 100%;
+                        max-width: 100%;
+                        letter-spacing: 0;
+                    }
+                }
+
+                .place-order {
+                    padding: 0;
                 }
             }
         }

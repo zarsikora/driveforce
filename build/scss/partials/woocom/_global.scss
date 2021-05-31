@@ -1,6 +1,10 @@
 body.woocommerce-page {
 
     .woocommerce-notices-wrapper {
+        padding: 0 3.6rem;
+        @include media-breakpoint-up(xl) {
+            padding: 0 10vw;
+        }
 
         .woocommerce-message,
         .woocommerce-info,
@@ -20,12 +24,6 @@ body.woocommerce-page {
             }
 
             .button {
-                @include media-breakpoint-down(sm){
-                    display: block;
-                    width: 100%;
-                    margin-bottom: 1rem;
-                }
-
                 background: none;
                 color: $highlight;
                 text-decoration: underline;
@@ -33,6 +31,11 @@ body.woocommerce-page {
                 padding: 0;
                 font-size: 1.6rem;
                 transition: all ease 300ms;
+                @include media-breakpoint-down(sm){
+                    display: block;
+                    width: 100%;
+                    margin-bottom: 1rem;
+                }
 
                 &:hover {
                     color: $hoverTint;

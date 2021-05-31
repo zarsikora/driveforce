@@ -21,9 +21,10 @@ body.woocommerce-cart {
             }
 
             .woocommerce-notices-wrapper {
+                padding: 0;
+                margin: 0;
                 @include media-breakpoint-up(xl) {
                     flex: 0 0 60%;
-                    margin: 0;
                 }
 
                 .woocommerce-message {
@@ -42,6 +43,7 @@ body.woocommerce-cart {
             border: none;
             background: none;
             font-family: $displayType;
+            color: $darkBg;
             text-align: center;
             font-size: 3rem;
             line-height: 1.4em;
@@ -49,7 +51,7 @@ body.woocommerce-cart {
             @include media-breakpoint-up(md) {
                 font-size: 4rem;
                 max-width: 80%;
-                margin: 0 auto;
+                margin: 0 auto 3rem auto;
                 padding: 0;
             }
             @include media-breakpoint-up(lg){
@@ -69,6 +71,9 @@ body.woocommerce-cart {
             padding: 0 3.6rem 10rem;
             @include media-breakpoint-up(md){
                 padding: 0;
+            }
+            @include media-breakpoint-up(xl) {
+                flex: 0 0 60%;
             }
 
             .button {
