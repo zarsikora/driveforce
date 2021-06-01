@@ -15885,6 +15885,81 @@ form.sharpspring-waitlist .form-message p {
   display: block;
 }
 
+.ingredients-grid-module {
+  padding: 7rem 3.6rem;
+  background-color: #14302B;
+  color: #F9F1E7;
+}
+
+@media (min-width: 1200px) {
+  .ingredients-grid-module {
+    padding: 10vw 10vw;
+  }
+}
+
+.ingredients-grid-module p.header {
+  font-family: "Sharp Sans Bold";
+  line-height: 1.25em;
+  margin: 0 0 1em 0;
+  color: #fff;
+  font-size: 2.4rem;
+}
+
+@media (min-width: 1200px) {
+  .ingredients-grid-module p.header {
+    font-size: 2.083vw;
+  }
+}
+
+@media (min-width: 1920px) {
+  .ingredients-grid-module p.header {
+    font-size: 3.9rem;
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .ingredients-grid-module p.header br {
+    display: none;
+  }
+}
+
+.ingredients-grid-module .copy, .ingredients-grid-module .article-single .post-content .inner .copy ul li, .article-single .post-content .inner .copy ul .ingredients-grid-module li, .ingredients-grid-module .article-single .post-content .inner .copy ol li, .article-single .post-content .inner .copy ol .ingredients-grid-module li {
+  margin-bottom: 3rem;
+}
+
+@media (min-width: 1200px) {
+  .ingredients-grid-module .copy, .ingredients-grid-module .article-single .post-content .inner .copy ul li, .article-single .post-content .inner .copy ul .ingredients-grid-module li, .ingredients-grid-module .article-single .post-content .inner .copy ol li, .article-single .post-content .inner .copy ol .ingredients-grid-module li {
+    margin-bottom: 5rem;
+  }
+}
+
+.ingredients-grid-module .copy:last-child, .ingredients-grid-module .article-single .post-content .inner .copy ul li:last-child, .article-single .post-content .inner .copy ul .ingredients-grid-module li:last-child, .ingredients-grid-module .article-single .post-content .inner .copy ol li:last-child, .article-single .post-content .inner .copy ol .ingredients-grid-module li:last-child {
+  margin-bottom: 0;
+}
+
+.ingredients-grid-module .copy p:last-child, .ingredients-grid-module .article-single .post-content .inner .copy ul li p:last-child, .article-single .post-content .inner .copy ul .ingredients-grid-module li p:last-child, .ingredients-grid-module .article-single .post-content .inner .copy ol li p:last-child, .article-single .post-content .inner .copy ol .ingredients-grid-module li p:last-child {
+  margin-bottom: 0;
+}
+
+.ingredients-grid-module svg {
+  fill: #477563;
+  margin-bottom: 2rem;
+}
+
+.ingredients-grid-module p.subheader {
+  font-family: "Sharp Sans Bold";
+  font-size: 2rem;
+  line-height: 1.25em;
+  margin: 0 0 .7em 0;
+  position: relative;
+}
+
+@media (min-width: 1200px) {
+  .ingredients-grid-module p.subheader {
+    font-size: 3.2rem;
+  }
+}
+
 .module-wrapper.large-text-module {
   background-color: #14302B;
   color: #fff;
@@ -18967,19 +19042,17 @@ table.variations .reset_variations {
   margin-bottom: 4rem;
 }
 
-.ingredients-module {
-  padding: 0 3.6rem;
-  margin: 7rem 0;
+.ingredients-grid-module {
+  padding: 7rem 3.6rem;
 }
 
 @media (min-width: 1200px) {
-  .ingredients-module {
-    padding: 0 10vw;
-    margin: 10vw 0;
+  .ingredients-grid-module {
+    padding: 10vw 10vw;
   }
 }
 
-.ingredients-module p.header {
+.ingredients-grid-module p.header {
   font-family: "Sharp Sans Bold";
   line-height: 1.25em;
   margin: 0 0 1em 0;
@@ -18988,47 +19061,47 @@ table.variations .reset_variations {
 }
 
 @media (min-width: 1200px) {
-  .ingredients-module p.header {
+  .ingredients-grid-module p.header {
     font-size: 2.083vw;
   }
 }
 
 @media (min-width: 1920px) {
-  .ingredients-module p.header {
+  .ingredients-grid-module p.header {
     font-size: 3.9rem;
   }
 }
 
 @media (max-width: 1199.98px) {
-  .ingredients-module p.header br {
+  .ingredients-grid-module p.header br {
     display: none;
   }
 }
 
-.ingredients-module .copy, .ingredients-module .article-single .post-content .inner .copy ul li, .article-single .post-content .inner .copy ul .ingredients-module li, .ingredients-module .article-single .post-content .inner .copy ol li, .article-single .post-content .inner .copy ol .ingredients-module li {
+.ingredients-grid-module .copy, .ingredients-grid-module .article-single .post-content .inner .copy ul li, .article-single .post-content .inner .copy ul .ingredients-grid-module li, .ingredients-grid-module .article-single .post-content .inner .copy ol li, .article-single .post-content .inner .copy ol .ingredients-grid-module li {
   margin-bottom: 3rem;
 }
 
 @media (min-width: 1200px) {
-  .ingredients-module .copy, .ingredients-module .article-single .post-content .inner .copy ul li, .article-single .post-content .inner .copy ul .ingredients-module li, .ingredients-module .article-single .post-content .inner .copy ol li, .article-single .post-content .inner .copy ol .ingredients-module li {
+  .ingredients-grid-module .copy, .ingredients-grid-module .article-single .post-content .inner .copy ul li, .article-single .post-content .inner .copy ul .ingredients-grid-module li, .ingredients-grid-module .article-single .post-content .inner .copy ol li, .article-single .post-content .inner .copy ol .ingredients-grid-module li {
     margin-bottom: 5rem;
   }
 }
 
-.ingredients-module .copy:last-child, .ingredients-module .article-single .post-content .inner .copy ul li:last-child, .article-single .post-content .inner .copy ul .ingredients-module li:last-child, .ingredients-module .article-single .post-content .inner .copy ol li:last-child, .article-single .post-content .inner .copy ol .ingredients-module li:last-child {
+.ingredients-grid-module .copy:last-child, .ingredients-grid-module .article-single .post-content .inner .copy ul li:last-child, .article-single .post-content .inner .copy ul .ingredients-grid-module li:last-child, .ingredients-grid-module .article-single .post-content .inner .copy ol li:last-child, .article-single .post-content .inner .copy ol .ingredients-grid-module li:last-child {
   margin-bottom: 0;
 }
 
-.ingredients-module .copy p:last-child, .ingredients-module .article-single .post-content .inner .copy ul li p:last-child, .article-single .post-content .inner .copy ul .ingredients-module li p:last-child, .ingredients-module .article-single .post-content .inner .copy ol li p:last-child, .article-single .post-content .inner .copy ol .ingredients-module li p:last-child {
+.ingredients-grid-module .copy p:last-child, .ingredients-grid-module .article-single .post-content .inner .copy ul li p:last-child, .article-single .post-content .inner .copy ul .ingredients-grid-module li p:last-child, .ingredients-grid-module .article-single .post-content .inner .copy ol li p:last-child, .article-single .post-content .inner .copy ol .ingredients-grid-module li p:last-child {
   margin-bottom: 0;
 }
 
-.ingredients-module svg {
+.ingredients-grid-module svg {
   fill: #477563;
   margin-bottom: 2rem;
 }
 
-.ingredients-module p.subheader {
+.ingredients-grid-module p.subheader {
   font-family: "Sharp Sans Bold";
   font-size: 2rem;
   line-height: 1.25em;
@@ -19037,7 +19110,7 @@ table.variations .reset_variations {
 }
 
 @media (min-width: 1200px) {
-  .ingredients-module p.subheader {
+  .ingredients-grid-module p.subheader {
     font-size: 3.2rem;
   }
 }

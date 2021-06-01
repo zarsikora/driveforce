@@ -85,6 +85,11 @@ if(have_rows('components')) :
                 include('ingredients-list-display.php');
             break;
 
+            //INGREDIENTS GRID MODULE
+            case 'ingredients_grid_module' :
+                include('ingredients-grid-module.php');
+            break;
+
             //LARGE TEXT MODULE
             case 'large_text_module' :
                 include('large-text-module.php');
