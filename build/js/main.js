@@ -820,8 +820,26 @@ if(sliderBtn){
     });
 }
 
-// INGREDIENTS LIST DISPLAY CLICK HANDLER
 let ingredientsDisplay = $(".ingredients-list-display");
+// INGREDIENTS LIST DISPLAY CLICK HANDLER - MOBILE
+if(ingredientsDisplay){
+    let ingredientListSelect = $("#ingredients");
+    let ingredientDescriptions = $(".ingredient-description-item");
+
+    ingredientListSelect.on("change", function(e){
+        let value = $(e.target).val();
+
+        ingredientDescriptions.removeClass('active');
+        for(let i = 0; i < ingredientDescriptions.length; i++){
+            let descriptionData = $(ingredientDescriptions[i]).data('ingredient');
+            if(descriptionData === value){
+                $(ingredientDescriptions[i]).addClass('active');
+            }
+        }
+    });
+}
+
+// INGREDIENTS LIST DISPLAY CLICK HANDLER - DESKTOP
 
 if(ingredientsDisplay){
     let ingredientListItems = $(".ingredient-list-item");

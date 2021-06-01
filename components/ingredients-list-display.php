@@ -13,7 +13,7 @@
         <div class="row">
             <div class="list-wrapper col-lg-6">
                 <?php if(have_rows('ingredients')): ?>
-                    <ul class="row">
+                    <ul class="row ingredients-desktop">
                         <?php $firstItem = true; ?>
                         <?php while(have_rows('ingredients')): the_row(); ?>
                             <?php
@@ -37,6 +37,21 @@
                             <?php endif; ?>
                         <?php endwhile; ?>
                     </ul>
+                <?php endif; ?>
+
+                <?php if(have_rows('ingredients')): ?>
+                    <div class="ingredients-mobile">
+                        <label for="ingredients">Choose an ingredient:</label>
+                        <select name="ingredients" id="ingredients">
+                        <?php while(have_rows('ingredients')): the_row(); ?>
+                            <?php
+                                $name = get_sub_field('name');
+                                $slug = preg_replace('#[ -]+#', '-', $name);
+                            ?>
+                                <option value="<?php echo $slug ?>"><?php echo $name ?></option>
+                        <?php endwhile ?>
+                        </select>
+                    </div>
                 <?php endif; ?>
             </div>
 

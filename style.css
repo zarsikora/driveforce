@@ -15734,6 +15734,16 @@ form.sharpspring-waitlist .form-message p {
   color: #fff;
 }
 
+.module-wrapper.ingredients-list-display .module-padded .list-wrapper ul.ingredients-desktop {
+  display: none;
+}
+
+@media (min-width: 992px) {
+  .module-wrapper.ingredients-list-display .module-padded .list-wrapper ul.ingredients-desktop {
+    display: flex;
+  }
+}
+
 .module-wrapper.ingredients-list-display .module-padded .list-wrapper ul li {
   cursor: pointer;
   font-size: 1.5rem;
@@ -15745,7 +15755,7 @@ form.sharpspring-waitlist .form-message p {
 }
 
 .module-wrapper.ingredients-list-display .module-padded .list-wrapper ul li.active {
-  color: #447563;
+  color: #88E2C1;
 }
 
 @media (min-width: 1440px) {
@@ -15758,6 +15768,43 @@ form.sharpspring-waitlist .form-message p {
   .module-wrapper.ingredients-list-display .module-padded .list-wrapper ul li {
     font-size: 2.7rem;
   }
+}
+
+.module-wrapper.ingredients-list-display .module-padded .list-wrapper .ingredients-mobile {
+  display: block;
+}
+
+@media (min-width: 992px) {
+  .module-wrapper.ingredients-list-display .module-padded .list-wrapper .ingredients-mobile {
+    display: none;
+  }
+}
+
+.module-wrapper.ingredients-list-display .module-padded .list-wrapper .ingredients-mobile label {
+  display: none;
+}
+
+.module-wrapper.ingredients-list-display .module-padded .list-wrapper .ingredients-mobile select {
+  width: 100%;
+  margin-bottom: 2rem;
+  height: 6rem;
+  border-radius: .4rem;
+  font-size: 1.5rem;
+  font-family: "Sharp Sans Bold";
+  background: #88E2C1;
+  color: #081D1A;
+  border: none;
+  outline: none;
+  padding: 0 2rem;
+}
+
+.module-wrapper.ingredients-list-display .module-padded .list-wrapper .ingredients-mobile select:active, .module-wrapper.ingredients-list-display .module-padded .list-wrapper .ingredients-mobile select:focus {
+  border: none;
+  outline: none;
+}
+
+.module-wrapper.ingredients-list-display .module-padded .description-wrapper ul {
+  padding: 0;
 }
 
 .module-wrapper.ingredients-list-display .module-padded .description-wrapper ul li {
