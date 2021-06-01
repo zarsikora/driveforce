@@ -12650,6 +12650,15 @@ a.btn:hover, .woocommerce-cart #content .return-to-shop a.button:hover, body.woo
   opacity: 1;
 }
 
+.hero.tertiary .inner .text-container .copy, .hero.tertiary .article-single .post-content .inner .text-container .copy ul li, .article-single .post-content .hero.tertiary .inner .text-container .copy ul li, .hero.tertiary .article-single .post-content .inner .copy ul .text-container li, .article-single .post-content .hero.tertiary .inner .copy ul .text-container li, .hero.tertiary .article-single .post-content .inner .text-container .copy ol li, .article-single .post-content .hero.tertiary .inner .text-container .copy ol li, .hero.tertiary .article-single .post-content .inner .copy ol .text-container li, .article-single .post-content .hero.tertiary .inner .copy ol .text-container li {
+  margin: 2rem auto 0;
+  text-align: center;
+}
+
+.hero.tertiary .inner .text-container .copy p, .hero.tertiary .article-single .post-content .inner .copy ul .text-container li p, .article-single .post-content .hero.tertiary .inner .copy ul .text-container li p, .hero.tertiary .article-single .post-content .inner .copy ol .text-container li p, .article-single .post-content .hero.tertiary .inner .copy ol .text-container li p {
+  margin: 0 auto;
+}
+
 .hero.tertiary .inner .text-container img {
   margin: 4rem auto 0;
   display: block;
