@@ -1,46 +1,59 @@
 body.woocommerce-account {
+
     #content {
         min-height: calc(100vh - 7.7rem);
         @include media-breakpoint-up(md){
             min-height: calc(100vh - 9.4rem - 19.8rem);
         }
 
-        .woocommerce {
-            margin: 10rem auto;
+        & > .woocommerce {
+            margin: 7rem auto;
             padding: 0 3.6rem;
+            display: flex;
             @include media-breakpoint-up(lg) {
-                width: 80%;
-                margin: 13rem auto;
-                padding: 0;
+                flex-wrap: wrap;
             }
-            @media(min-width: 1440px) {
-                margin: 9vw auto;
-            }
-            @media(min-width: 1920px) {
-                margin: 17rem auto;
+            @include media-breakpoint-up(xl) {
+                padding: 0 10vw;
+                margin: 10vw auto;
             }
 
-            nav {
+            nav.woocommerce-MyAccount-navigation {
+                flex: 0 0 100%;
+                float: none;
+                width: 100%;
+                max-width: none;
+                text-align: center;
+                border-bottom: .1rem solid #ccc;
+                margin-bottom: 4rem;
+
                 ul {
                     list-style: none;
                     padding-left: 0;
 
                     li {
+                        display: inline-block;
+                        margin-right: 2rem;
+
+                        &:last-child {
+                            margin-bottom: 0;
+                        }
+
                         a {
                             color: $darkBg;
                             transition: all ease 300ms;
                             font-family: $displayType;
-                            font-size: 2rem;
-                            @include media-breakpoint-up(lg){
-                                font-size: 1.8vw;
-                            }
-                            @media(min-width: 1920px) {
-                                font-size: 3.4rem;
-                            }
+                            font-size: 1.8rem;
 
                             &:hover {
                                 color: $highlight;
                                 text-decoration: underline;
+                            }
+                        }
+
+                        &.is-active {
+                            a {
+                                color: $red;
                             }
                         }
                     }
@@ -48,8 +61,11 @@ body.woocommerce-account {
             }
 
             .woocommerce-MyAccount-content {
-                @include media-breakpoint-down(md){
-                    margin: 5rem auto;
+                float: none;
+                flex: 0 0 100%;
+                width: 100%;
+                @include media-breakpoint-up(xl) {
+                    padding: 0 10vw;
                 }
 
                 p {

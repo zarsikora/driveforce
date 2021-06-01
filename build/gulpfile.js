@@ -46,6 +46,7 @@ function scripts() {
             "./node_modules/@barba/core/dist/barba.umd.js",
             "./node_modules/gsap/dist/gsap.js",
             "./node_modules/splitting/dist/splitting.js",
+            "./js/fast-checkout.js",
             "./node_modules/@splidejs/splide/dist/js/splide.js",
             "./js/sharpspring.js",
             "./js/main.js"
@@ -62,7 +63,7 @@ function watchFiles() {
 }
 
 const build = gulp.parallel(styles, scripts);
-const watch = gulp.series(styles, scripts, watchFiles, browserSync);
+const watch = gulp.series(styles, scripts, browserSync, watchFiles);
 
 // export tasks
 exports.styles = styles;

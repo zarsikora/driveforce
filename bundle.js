@@ -34039,6 +34039,198 @@ return Splitting;
 
 })));
 
+window.$ = window.jQuery = jQuery;
+
+console.log(localizedVars);
+
+const fastCheckout = $('.fast-checkout');
+// const fastCheckoutSelect = $('select[name="fast-checkout-variant"]');
+const fastCheckoutSelect = $('.fast-checkout-variant-select .selected-option');
+const fastCheckoutSelectOptions = $('.fast-checkout-variant-select .dropdown a');
+const fastCheckoutSubmit = $('.fast-checkout-submit');
+const fastCheckoutPurchaseType = $('input[name="fast-checkout-purchase-type"]');
+const fastCheckoutMobileClose = $('.fast-checkout .header .close');
+const fastCheckoutMobileOpen = $('.fast-checkout-mobile-bar .arrow');
+const fastCheckoutMobileButtons = $('.fast-checkout-variant-select .mobile .btn');
+
+let selectDropdownOpen = false;
+
+if(fastCheckoutSelect)
+{
+    let option1 = $('.fast-checkout-purchase-option.option1');
+    let option2 = $('.fast-checkout-purchase-option.option2');
+
+    function updateSelectedOption(variantID)
+    {
+        const selectedType = $('input[name="fast-checkout-purchase-type"]:checked').val();
+        const type = (selectedType == '1_month') ? 'Monthly Subscription' : 'One Time Purchase';
+        const product = (variantID === 603) ? 'DF-18 Pro 30 Pack' : (variantID === 604) ? 'DF-18 Amateur 20 Pack' : 'DF-18 Weekend Warrior 10 Pack';
+
+        $('.fast-checkout-variant-select .selected-product').text(product);
+        $('.fast-checkout-variant-select .selected-type').text(type);
+    }
+
+    function updatePurchaseTypes(data)
+    {
+        const discount = data.scheme[0].subscription_discount;
+        const price = data.variation.display_price;
+        const subscriptionPrice = price - ((discount / 100) * price);
+
+        $('.subscribe-price', option1).text('$'+subscriptionPrice);
+        $('.regular-price', option1).text('$'+price);
+        $('.regular-price', option2).text('$'+price);
+    }
+
+    function getProductObject(variantID)
+    {
+        const prodID = 581; // Should this be hardcoded? For now with one product it should be fine
+
+        // Get product object
+        $.ajax({
+            url: localizedVars.ajaxurl,
+            method: 'post',
+            dataType: 'json',
+            data: {
+                action: 'df_get_product_object',
+                prodID: prodID,
+                variationID: variantID
+            },
+            success: function(data)
+            {
+                console.log(data);
+
+                updatePurchaseTypes(data);
+                updateSelectedOption(data.variation.variation_id);
+            },
+            error: function(error)
+            {
+                console.log(error);
+            }
+        });
+    }
+
+    $('body').on('mousemove', function(e)
+    {
+        if(!selectDropdownOpen) return;
+
+        if(!$(e.target).parents('.fast-checkout-variant-select .select').length && !$(e.target).hasClass('select'))
+        {
+            $('.fast-checkout-variant-select .dropdown').removeClass('active');
+            selectDropdownOpen = false;
+        }
+    });
+
+    fastCheckoutMobileClose.on('click', function(e)
+    {
+        e.preventDefault();
+
+        $('body').removeClass('fast-checkout-mobile-open');
+    });
+
+    fastCheckoutMobileOpen.on('click', function(e)
+    {
+        e.preventDefault();
+
+        $('body').addClass('fast-checkout-mobile-open');
+    });
+
+    fastCheckoutSelect.on('click', function(e)
+    {
+        e.preventDefault();
+
+        $(this).nextAll('.dropdown').addClass('active');
+        selectDropdownOpen = true;
+    });
+
+    fastCheckoutSelectOptions.on('click', function(e)
+    {
+        e.preventDefault();
+
+        // Close dropdown
+        $(this).parents('.dropdown').removeClass('active');
+        selectDropdownOpen = false;
+
+        // Update selected variant id
+        fastCheckoutSelect.attr('data-variant-id', $(this).attr('data-variant-id'));
+
+        // Get variant object
+        getProductObject($(this).attr('data-variant-id'));
+    });
+
+    // Product variant change handler
+    // fastCheckoutSelect.on('change', function(e)
+    // {
+    //     e.preventDefault();
+    //
+    //     getProductObject(fastCheckoutSelect.val());
+    // });
+
+    fastCheckoutMobileButtons.on('click', function(e)
+    {
+        e.preventDefault();
+
+        fastCheckoutMobileButtons.removeClass('selected');
+        $(this).addClass('selected');
+
+        // Update selected variant id
+        fastCheckoutSelect.attr('data-variant-id', $(this).attr('data-variant-id'));
+
+        getProductObject($(this).attr('data-variant-id'));
+    });
+
+    // Purchase type change handler
+    fastCheckoutPurchaseType.on('change', function()
+    {
+        const purchaseType = ($(this).val() === '1_month') ? 'Monthly Subscription' : 'One-time purchase';
+
+        $('.fast-checkout-mobile-bar .purchase .subscription').text(purchaseType);
+        $('.fast-checkout-variant-select .selected-type').text(purchaseType);
+    });
+
+    // Proceed to checkout
+    fastCheckoutSubmit.on('click', function(e)
+    {
+        e.preventDefault();
+
+        const variantID = fastCheckoutSelect.attr('data-variant-id');
+        const prodID = 581; // Should this be hardcoded? For now with one product it should be fine
+        const purchaseType = $('input[name="fast-checkout-purchase-type"]:checked').val();
+
+        console.log(variantID, purchaseType);
+
+        $.ajax({
+            url: localizedVars.ajaxurl,
+            method: 'post',
+            dataType: 'json',
+            data: {
+                action: 'fast_checkout',
+                prodID: prodID,
+                variantID: variantID,
+                purchaseType: purchaseType
+            },
+            success: function(data)
+            {
+                console.log(data);
+
+                window.location = '/cart';
+            },
+            error: function(error)
+            {
+                console.log(error);
+            }
+        });
+    });
+
+    $(window).on('scroll', function(e)
+    {
+        if(window.pageYOffset > 1000)
+        {
+            $('body').addClass('fast-checkout-active');
+            return;
+        }
+        $('body').removeClass('fast-checkout-active');
+    });
+}
 /*!
  * Splide.js
  * Version  : 2.4.20
@@ -39913,23 +40105,6 @@ window._pa = window._pa || {};
     scr.parentNode.insertBefore(ss, scr);
 })();
 
-// let fieldsArr = {
-//     'company': "heretic",
-//     'email': "dev@heretic.agency",
-//     'first-name': "devn",
-//     'funding': "Self-funded",
-//     'industry': "dev",
-//     'last-name': "riley",
-//     'launch': "Pre-launch",
-//     'location': "salem",
-//     'offering': "Product",
-//     'referral': "rick",
-//     'referred': "Yes",
-//     'scope': "tewt"
-// }
-
-// sharpspringAJAXRequest('createLeads', fieldsArr);
-
 function validateForm(fieldsArray)
 {
     let errors = {};
@@ -40011,7 +40186,7 @@ $('form').on('submit', function(e)
         e.preventDefault();
 
         let fieldsArr = getFormFieldsArray($(this));
-            fieldsArr['signup-type'] =  'Waitlist';
+            //fieldsArr['signup-type'] =  'Waitlist';
         let method = 'createLeads';
         let errors = validateForm(fieldsArr);
 
@@ -40025,11 +40200,11 @@ $('form').on('submit', function(e)
     }
 });
 
-function sharpspringAJAXRequest(method, fields = null, form)
+async function sharpspringAJAXRequest(method, fields = null, form)
 {
     const _form = form;
 
-    $.ajax({
+    const ajaxResults = await $.ajax({
         type: 'POST',
         url: localizedVars.ajaxurl,
         dataType: 'json',
@@ -40056,11 +40231,40 @@ function sharpspringAJAXRequest(method, fields = null, form)
 
             formMessage.html('<p>You\'ve been added to the waitlist!</p>');
         },
-        error: function(err)
+        error: function(error)
         {
-            console.log('error', err);
+            console.log(error);
         }
     });
+
+    const ajaxResultsJSON = JSON.parse(ajaxResults);
+
+    console.log(ajaxResultsJSON);
+
+    if(method == 'createLeads' && !ajaxResultsJSON.error.length)
+    {
+        $.ajax({
+            type: 'POST',
+            url: localizedVars.ajaxurl,
+            dataType: 'json',
+            data: {
+                action: 'sharpspring_request',
+                method: 'updateLeads',
+                fields: {
+                    'id': ajaxResultsJSON['result']['creates'][0]['id'],
+                    'signup_method': 'Waitlist'
+                }
+            },
+            success: function(data)
+            {
+                console.log(data);
+            },
+            error: function(error)
+            {
+                console.log(error);
+            }
+        });
+    }
 }
 
 function sharpspringTransaction()
@@ -40165,6 +40369,91 @@ let scroll = window.requestAnimationFrame ||
 // // and recalculate on resize
 // window.addEventListener('resize', calcWinsize);
 
+
+/**
+ * Read more reviews button scroll
+ */
+$('.read-reviews-link').on('click', (e) =>
+{
+    e.preventDefault();
+
+    let header = $('.main-header-wrapper');
+    let comments = $('#comments');
+
+    $("html, body").animate({scrollTop: (comments.offset().top - (header.outerHeight() + 30))}, 750);
+});
+
+
+/**
+ * Write a review button toggle
+ */
+
+let writeReviewBtn = $('.write-review-button');
+if(writeReviewBtn.length)
+{
+    let reviewForm = $('#review_form');
+    writeReviewBtn.on('click', (e) => {
+        e.preventDefault();
+
+        reviewForm.show();
+        writeReviewBtn.hide();
+    })
+}
+
+
+/**
+ * Load more reviews
+ */
+
+let loadMoreReviewBtn = $('.load-more-reviews');
+if(loadMoreReviewBtn.length)
+{
+    let loadingGif = $('.loading-gif');
+    let commentList = $('#comments .commentlist');
+    let totalReviews = commentList.attr('data-total');
+    let reviewsPerPage = commentList.attr('data-per-page');
+    let totalPages = Math.ceil(totalReviews / reviewsPerPage);
+    let currentPage = 1;
+    let offset;
+
+    loadMoreReviewBtn.on('click', (e) =>
+    {
+        e.preventDefault();
+
+        loadingGif.removeClass('d-none');
+
+        offset = parseInt(commentList.attr('data-current-page')) * reviewsPerPage;
+
+        $.ajax({
+            url: ajaxurl,
+            type: 'post',
+            data: {
+                action: 'load_more_comments',
+                offset: offset,
+                perPage: reviewsPerPage,
+                postID: postID
+            },
+            dataType: 'html',
+            success: (data) =>
+            {
+                loadingGif.addClass('d-none');
+
+                currentPage = parseInt(commentList.attr('data-current-page')) + 1;
+
+                commentList.attr('data-current-page', currentPage);
+                commentList.append(data);
+
+                if(currentPage == totalPages)
+                {
+                    loadMoreReviewBtn.hide();
+                }
+            },
+            error: (error) => {
+                console.log(error);
+            }
+        });
+    })
+}
 
 
 // ANIMATION SCROLL HANDLER - request animation frame
