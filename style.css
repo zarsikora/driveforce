@@ -17919,9 +17919,21 @@ body.woocommerce-edit-account .woocommerce-EditAccountForm .button:hover {
   right: 1rem;
 }
 
-.woocommerce-checkout #container .woocommerce form.checkout #customer_details .woocommerce-billing-fields h3,
-.woocommerce-checkout #container .woocommerce form.checkout #customer_details .woocommerce-shipping-fields h3 {
+.woocommerce-checkout #container .woocommerce form.checkout #customer_details .woocommerce-billing-fields h3, .woocommerce-checkout #container .woocommerce form.checkout #customer_details .woocommerce-billing-fields h3 label,
+.woocommerce-checkout #container .woocommerce form.checkout #customer_details .woocommerce-shipping-fields h3,
+.woocommerce-checkout #container .woocommerce form.checkout #customer_details .woocommerce-shipping-fields h3 label {
   font-size: 2.4rem;
+  letter-spacing: 0;
+}
+
+.woocommerce-checkout #container .woocommerce form.checkout #customer_details .woocommerce-billing-fields h3 input, .woocommerce-checkout #container .woocommerce form.checkout #customer_details .woocommerce-billing-fields h3 span, .woocommerce-checkout #container .woocommerce form.checkout #customer_details .woocommerce-billing-fields h3 label input, .woocommerce-checkout #container .woocommerce form.checkout #customer_details .woocommerce-billing-fields h3 label span,
+.woocommerce-checkout #container .woocommerce form.checkout #customer_details .woocommerce-shipping-fields h3 input,
+.woocommerce-checkout #container .woocommerce form.checkout #customer_details .woocommerce-shipping-fields h3 span,
+.woocommerce-checkout #container .woocommerce form.checkout #customer_details .woocommerce-shipping-fields h3 label input,
+.woocommerce-checkout #container .woocommerce form.checkout #customer_details .woocommerce-shipping-fields h3 label span {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: .5rem;
 }
 
 .woocommerce-checkout #container .woocommerce form.checkout #customer_details .woocommerce-billing-fields #ship-to-different-address,
