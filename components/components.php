@@ -84,6 +84,11 @@ if(have_rows('components')) :
             case 'ingredients_list_display' :
                 include('ingredients-list-display.php');
             break;
+
+            //LARGE TEXT MODULE
+            case 'large_text_module' :
+                include('large-text-module.php');
+            break;
         }
     endwhile;
 endif;

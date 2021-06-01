@@ -15824,6 +15824,43 @@ form.sharpspring-waitlist .form-message p {
   display: block;
 }
 
+.module-wrapper.large-text-module {
+  background-color: #14302B;
+  color: #fff;
+}
+
+.module-wrapper.large-text-module .copy, .module-wrapper.large-text-module .article-single .post-content .inner .copy ul li, .article-single .post-content .inner .copy ul .module-wrapper.large-text-module li, .module-wrapper.large-text-module .article-single .post-content .inner .copy ol li, .article-single .post-content .inner .copy ol .module-wrapper.large-text-module li,
+.module-wrapper.large-text-module .copy p,
+.module-wrapper.large-text-module .article-single .post-content .inner .copy ul li p,
+.article-single .post-content .inner .copy ul .module-wrapper.large-text-module li p,
+.module-wrapper.large-text-module .article-single .post-content .inner .copy ol li p,
+.article-single .post-content .inner .copy ol .module-wrapper.large-text-module li p {
+  font-size: 2.5rem;
+  font-family: "Sharp Sans Bold";
+}
+
+@media (min-width: 992px) {
+  .module-wrapper.large-text-module .copy, .module-wrapper.large-text-module .article-single .post-content .inner .copy ul li, .article-single .post-content .inner .copy ul .module-wrapper.large-text-module li, .module-wrapper.large-text-module .article-single .post-content .inner .copy ol li, .article-single .post-content .inner .copy ol .module-wrapper.large-text-module li,
+  .module-wrapper.large-text-module .copy p,
+  .module-wrapper.large-text-module .article-single .post-content .inner .copy ul li p,
+  .article-single .post-content .inner .copy ul .module-wrapper.large-text-module li p,
+  .module-wrapper.large-text-module .article-single .post-content .inner .copy ol li p,
+  .article-single .post-content .inner .copy ol .module-wrapper.large-text-module li p {
+    font-size: 2.778vw;
+  }
+}
+
+@media (min-width: 1920px) {
+  .module-wrapper.large-text-module .copy, .module-wrapper.large-text-module .article-single .post-content .inner .copy ul li, .article-single .post-content .inner .copy ul .module-wrapper.large-text-module li, .module-wrapper.large-text-module .article-single .post-content .inner .copy ol li, .article-single .post-content .inner .copy ol .module-wrapper.large-text-module li,
+  .module-wrapper.large-text-module .copy p,
+  .module-wrapper.large-text-module .article-single .post-content .inner .copy ul li p,
+  .article-single .post-content .inner .copy ul .module-wrapper.large-text-module li p,
+  .module-wrapper.large-text-module .article-single .post-content .inner .copy ol li p,
+  .article-single .post-content .inner .copy ol .module-wrapper.large-text-module li p {
+    font-size: 5.3rem;
+  }
+}
+
 .share-module {
   background: #fff;
 }
