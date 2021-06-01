@@ -252,9 +252,20 @@ body.fast-checkout-active {
 
                 .selected-option {
                     cursor: pointer;
+                    @include media-breakpoint-up(xl) {
+                        display: flex;
+                        flex-wrap: nowrap;
+                        align-items: center;
+                    }
 
                     span {
                         display: block;
+                    }
+
+                    svg {
+                        margin-left: 2rem;
+                        width: 1.6rem;
+                        fill: $mint;
                     }
                 }
 

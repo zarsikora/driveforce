@@ -45,8 +45,13 @@ $variantIDs = ($environment === 'local') ? array(731, 732, 733) : array(640, 641
 
                     <div class="select">
                         <div class="selected-option" data-variant-id="<?php echo $variantIDs[0] ?>">
-                            <span class="selected-product">DF-18 Pro 30 Pack</span>
-                            <span class="selected-type">Monthly subscription</span>
+                            <div>
+                                <span class="selected-product">DF-18 Pro 30 Pack</span>
+                                <span class="selected-type">Monthly subscription</span>
+                            </div>
+                            <svg viewBox="0 0 16.279 10.853">
+                                <use href="#thick-caret"></use>
+                            </svg>
                         </div>
                         <div class="dropdown">
                             <a href="#" data-variant-id="<?php echo $variantIDs[0] ?>">PRO30 PACK</a>

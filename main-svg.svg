@@ -294,6 +294,11 @@
         <path class="caret-a" d="M3798,6857.65l16.793,16.794,16.793-16.794" transform="translate(-3795.525 -6855.176)"/>
     </symbol>
 
+    <!-- THICK CARET ARROW -->
+    <symbol id="thick-caret" viewBox="0 0 16.279 10.853">
+        <path d="M16.279,9.483l-2.713,2.8L8.139,6.853,2.713,12.279,0,9.483,8.139,1.426Z" transform="translate(16.279 12.279) rotate(180)"/>
+    </symbol>
+
 </svg>
 
 <!-- <svg class="logo" viewbox="0 0 95.803 101.04">
