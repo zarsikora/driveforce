@@ -1,6 +1,8 @@
 window.$ = window.jQuery = jQuery;
 
-console.log(localizedVars);
+const environment = localizedVars['environment'];
+
+const variantIDs = (environment === 'local') ? [731, 732, 733] : [640, 641, 642];
 
 const fastCheckout = $('.fast-checkout');
 // const fastCheckoutSelect = $('select[name="fast-checkout-variant"]');
@@ -23,7 +25,7 @@ if(fastCheckoutSelect)
     {
         const selectedType = $('input[name="fast-checkout-purchase-type"]:checked').val();
         const type = (selectedType == '1_month') ? 'Monthly Subscription' : 'One Time Purchase';
-        const product = (variantID === 603) ? 'DF-18 Pro 30 Pack' : (variantID === 604) ? 'DF-18 Amateur 20 Pack' : 'DF-18 Weekend Warrior 10 Pack';
+        const product = (variantID === variantIDs[0]) ? 'DF-18 Pro 30 Pack' : (variantID === variantIDs[1]) ? 'DF-18 Amateur 20 Pack' : 'DF-18 Weekend Warrior 10 Pack';
 
         $('.fast-checkout-variant-select .selected-product').text(product);
         $('.fast-checkout-variant-select .selected-type').text(type);

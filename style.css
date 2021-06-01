@@ -18251,6 +18251,7 @@ body.fast-checkout-mobile-open .fast-checkout .fast-checkout-build-order {
 
 @media (min-width: 1200px) {
   .fast-checkout div[class*=col] {
+    padding: 3rem;
     border-right: 1px solid #88E2C1;
   }
 }
@@ -18414,7 +18415,6 @@ body.fast-checkout-mobile-open .fast-checkout .fast-checkout-build-order {
 @media (min-width: 1200px) {
   .fast-checkout .fast-checkout-purchase-option {
     align-items: center;
-    justify-content: center;
     border: none;
   }
 }
@@ -18422,7 +18422,6 @@ body.fast-checkout-mobile-open .fast-checkout .fast-checkout-build-order {
 .fast-checkout .fast-checkout-purchase-option label {
   display: inline-block;
   vertical-align: top;
-  margin-right: 1.5rem;
 }
 
 .fast-checkout .fast-checkout-purchase-option input[type=radio] {
