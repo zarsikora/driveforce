@@ -1,0 +1,17 @@
+.module-wrapper.large-text-module {
+  background-color: #14302B;
+  color: #fff;
+
+  .copy,
+  .copy p {
+    font-size: 2.5rem;
+    font-family: $boldType;
+    @include media-breakpoint-up(lg){
+      font-size: 2.778vw;
+    }
+    @media(min-width: 1920px){
+      font-size: 5.3rem;
+    }
+  }
+
+}

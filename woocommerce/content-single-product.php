@@ -125,7 +125,7 @@ if ( post_password_required() ) {
     <use href="#dotted-line"></use>
 </svg>
 
-<div class="ingredients-module">
+<div class="ingredients-grid-module">
     <div class="row">
         <div class="col-lg-3">
             <p class="header">What's in<br /> DF-18?</p>

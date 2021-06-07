@@ -23,7 +23,7 @@
 
 
     <div class="rte fiftyfifty module-flush <?php if($type === 'multi' || $type === 'multi-inlaid') echo 'type-multi '?> <?php if($type === 'inlaid' || $type === 'multi-inlaid') echo 'type-inlaid '?> <?php if($type === 'multi' || $type === 'multi-inlaid') echo ($imageRight) ? 'first-img-right' : 'first-img-left'?> <?php if($type === 'single' || $type === 'inlaid') echo ($imageRight) ? ' img-right ' : ' img-left'?>">
-        <?php if($type === 'multi' && $mainHeader): ?>
+        <?php if($type === 'multi' || $type === 'multi-inlaid' && $mainHeader): ?>
             <h2 data-animation-effect="moduleFadeIn" data-animation-trigger="scroll" class="main-header"><?php echo $mainHeader; ?></h2>
         <?php endif; ?>
 
