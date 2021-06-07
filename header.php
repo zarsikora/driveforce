@@ -53,6 +53,7 @@
         <?php endif; ?>
 
         <?php include('main-svg.svg'); ?>
+        <?php include('components/cart-drawer.php'); ?>
 
         <div id="wrapper">
             <!-- Starter pane for Barba transitions -->

@@ -49,6 +49,7 @@ function scripts() {
             "./js/fast-checkout.js",
             "./node_modules/@splidejs/splide/dist/js/splide.js",
             "./js/sharpspring.js",
+            "./js/cart-drawer.js",
             "./js/main.js"
             ])
             .pipe(concat('bundle.js'))

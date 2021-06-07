@@ -70,6 +70,27 @@ let scroll = window.requestAnimationFrame ||
 
 
 /**
+ * Cart Drawer
+ */
+
+const cartDrawerButton = $('.open-cart-drawer');
+cartDrawerButton.on('click', function(e)
+{
+    e.preventDefault();
+
+    $('body').addClass('cart-drawer-open');
+});
+
+const closeCartDrawer = $('.close-cart-drawer');
+closeCartDrawer.on('click', function(e)
+{
+    e.preventDefault();
+
+    $('body').removeClass('cart-drawer-open');
+});
+
+
+/**
  * Read more reviews button scroll
  */
 $('.read-reviews-link').on('click', (e) =>

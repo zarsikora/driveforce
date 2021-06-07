@@ -18,9 +18,9 @@
     <div class="link-wrapper">
         <a class="nav-link" href="<?php echo get_site_url(); ?>/learn">Learn</a>
 
-        <a class="nav-link" href="<?php echo get_site_url(); ?>/my-account">Account</a>
+        <a class="nav-link" href="<?php echo get_site_url(); ?>/my-account/orders">Account</a>
 
-        <a class="nav-link" href="<?php echo get_site_url(); ?>/cart">
+        <a class="open-cart-drawer nav-link" href="<?php echo get_site_url(); ?>/cart">
             <svg class="logo" viewBox="0 0 27.644 22.64">
                 <use xlink:href="#cart"></use>
             </svg>

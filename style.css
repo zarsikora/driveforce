@@ -16893,6 +16893,237 @@ body.woocommerce-page form label {
   }
 }
 
+body.cart-drawer-open {
+  overflow: hidden;
+  height: 100%;
+}
+
+.cart-drawer {
+  position: fixed;
+  transform: translateX(calc(100% + 76px));
+  transition: transform ease 300ms;
+  z-index: 999;
+  right: 0;
+  top: 0;
+  width: 40vw;
+  max-width: 47rem;
+  height: 100%;
+  background: #354c45;
+  box-shadow: 0px 0px 76px #00000033;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  color: #fff;
+}
+
+body.cart-drawer-open .cart-drawer {
+  transform: translateX(0);
+}
+
+.cart-drawer > div {
+  width: 100%;
+  flex: 0 0 100%;
+}
+
+.cart-drawer-header {
+  width: 100%;
+  height: 6rem;
+  padding: 0 2rem;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 0.1rem solid #447563;
+  position: relative;
+  background: #14302B;
+}
+
+.cart-drawer-header svg {
+  fill: #fff;
+}
+
+.cart-drawer-header p, .cart-drawer-header body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 address, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 .cart-drawer-header address,
+.cart-drawer-header body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 address, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 .cart-drawer-header address {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  font-family: "Sharp Sans Bold";
+  margin: 0;
+}
+
+.cart-drawer-header .close-cart-drawer {
+  color: #fff;
+}
+
+.cart-drawer-scroll {
+  width: 100%;
+  max-height: calc(100vh - 16rem);
+  overflow: scroll;
+}
+
+.cart-drawer-products {
+  padding: 0 2rem;
+  background: #14302B;
+}
+
+.cart-drawer-product {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 2rem 0;
+}
+
+.cart-drawer-product .product-info {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.cart-drawer-product .product-info .image {
+  margin-right: 1rem;
+  max-width: 10rem;
+}
+
+.cart-drawer-product .product-info .image img {
+  width: 100%;
+  height: auto;
+}
+
+.cart-drawer-product .product-info p.product-name, .cart-drawer-product .product-info body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 address.product-name, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 .cart-drawer-product .product-info address.product-name,
+.cart-drawer-product .product-info body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 address.product-name, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 .cart-drawer-product .product-info address.product-name {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.cart-drawer-product .product-info p.product-name strong, .cart-drawer-product .product-info body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 address.product-name strong, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 .cart-drawer-product .product-info address.product-name strong, .cart-drawer-product .product-info body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 address.product-name strong, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 .cart-drawer-product .product-info address.product-name strong {
+  font-family: "Sharp Sans Bold";
+  font-size: 1.8rem;
+}
+
+.cart-drawer-product .product-subscribe {
+  background: #447563;
+  padding: 1.5rem;
+  margin-top: 2rem;
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  border-radius: .4rem;
+}
+
+.cart-drawer-product .product-subscribe label {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.cart-drawer-product .product-subscribe label input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  position: absolute;
+  left: -9999px;
+}
+
+.cart-drawer-product .product-subscribe label .subscribe-toggle {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 20px;
+  background-color: #719083;
+  transition: .4s;
+}
+
+.cart-drawer-product .product-subscribe label .subscribe-toggle:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  border-radius: 26px;
+  background-color: white;
+  transition: .4s;
+}
+
+.cart-drawer-product .product-subscribe label input:checked + .subscribe-toggle {
+  background-color: #14302B;
+}
+
+.cart-drawer-product .product-subscribe label input:checked + .subscribe-toggle:before {
+  transform: translateX(26px);
+}
+
+.cart-drawer-product .product-subscribe p, .cart-drawer-product .product-subscribe body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 address, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 .cart-drawer-product .product-subscribe address,
+.cart-drawer-product .product-subscribe body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 address, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 .cart-drawer-product .product-subscribe address {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.cart-drawer-product .product-subscribe p strong, .cart-drawer-product .product-subscribe body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 address strong, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 .cart-drawer-product .product-subscribe address strong, .cart-drawer-product .product-subscribe body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 address strong, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 .cart-drawer-product .product-subscribe address strong {
+  font-size: 1.8rem;
+  font-family: "Sharp Sans Bold";
+}
+
+.cart-drawer-totals {
+  padding: 4rem 2rem;
+}
+
+.cart-drawer-totals dl {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  font-size: 1.6rem;
+}
+
+.cart-drawer-totals dl dt, .cart-drawer-totals dl dd {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
+.cart-drawer-totals dl dd {
+  text-align: right;
+}
+
+.cart-drawer-checkout {
+  height: 10rem;
+  flex: 0 0 100%;
+  padding: 0 2rem;
+  align-self: flex-end;
+  background: #14302B;
+  display: flex;
+  align-items: center;
+}
+
+.cart-drawer-checkout .btn, .cart-drawer-checkout #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form button, #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form .cart-drawer-checkout button, .cart-drawer-checkout body.woocommerce-cart #content .return-to-shop .button, body.woocommerce-cart #content .return-to-shop .cart-drawer-checkout .button, .cart-drawer-checkout body.woocommerce-account .woocommerce-form-login .woocommerce-button, body.woocommerce-account .woocommerce-form-login .cart-drawer-checkout .woocommerce-button, .cart-drawer-checkout body.woocommerce-edit-address .woocommerce-address-fields .button, body.woocommerce-edit-address .woocommerce-address-fields .cart-drawer-checkout .button, .cart-drawer-checkout body.woocommerce-edit-account .woocommerce-EditAccountForm .button, body.woocommerce-edit-account .woocommerce-EditAccountForm .cart-drawer-checkout .button, .cart-drawer-checkout .woocommerce-ResetPassword .button, .woocommerce-ResetPassword .cart-drawer-checkout .button {
+  display: block;
+  width: 100%;
+  max-width: none;
+  text-align: center;
+  padding: 2rem;
+}
+
+.cart-drawer-overlay {
+  display: none;
+  position: fixed;
+  z-index: 998;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+body.cart-drawer-open .cart-drawer-overlay {
+  display: block;
+}
+
 .post-type-archive-product.woocommerce-page #sidebar {
   display: none;
 }

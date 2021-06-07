@@ -1,6 +1,6 @@
 <?php
 
-function imageTag($imageObject, $classes = null, $sizes = null, $srcset = null, $lazyload = true)
+function imageTag($imageObject, $classes = null, $sizes = null, $srcset = null, $lazyload = true, $width = null, $height = null)
 {
     if(gettype($imageObject) == 'array')
     {
@@ -19,8 +19,6 @@ function imageTag($imageObject, $classes = null, $sizes = null, $srcset = null, 
 
     if(gettype($imageObject) == 'string')
     {
-        $width = '';
-        $height = '';
         $altText = '';
         $src = $imageObject;
 
