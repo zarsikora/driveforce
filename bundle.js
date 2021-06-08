@@ -41311,6 +41311,47 @@ if(sliderBtn){
     });
 }
 
+let ingredientsDisplay = $(".ingredients-list-display");
+// INGREDIENTS LIST DISPLAY CLICK HANDLER - MOBILE
+if(ingredientsDisplay){
+    let ingredientListSelect = $("#ingredients");
+    let ingredientDescriptions = $(".ingredient-description-item");
+
+    ingredientListSelect.on("change", function(e){
+        let value = $(e.target).val();
+
+        ingredientDescriptions.removeClass('active');
+        for(let i = 0; i < ingredientDescriptions.length; i++){
+            let descriptionData = $(ingredientDescriptions[i]).data('ingredient');
+            if(descriptionData === value){
+                $(ingredientDescriptions[i]).addClass('active');
+            }
+        }
+    });
+}
+
+// INGREDIENTS LIST DISPLAY CLICK HANDLER - DESKTOP
+
+if(ingredientsDisplay){
+    let ingredientListItems = $(".ingredient-list-item");
+    let ingredientDescriptions = $(".ingredient-description-item");
+
+    ingredientListItems.on("click", function(e){
+        let data = $(e.target).data('ingredient');
+
+        ingredientListItems.removeClass('active');
+        ingredientDescriptions.removeClass('active');
+        $(e.target).addClass('active');
+
+        for(let i = 0; i < ingredientDescriptions.length; i++){
+            let descriptionData = $(ingredientDescriptions[i]).data('ingredient');
+            if(descriptionData === data){
+                $(ingredientDescriptions[i]).addClass('active');
+            }
+        }
+    });
+}
+
 
 //
 //

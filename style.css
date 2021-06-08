@@ -12843,6 +12843,46 @@ body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .
   opacity: 1;
 }
 
+.hero.tertiary .inner .text-container .copy, .hero.tertiary .article-single .post-content .inner .text-container .copy ul li, .article-single .post-content .hero.tertiary .inner .text-container .copy ul li, .hero.tertiary .article-single .post-content .inner .copy ul .text-container li, .article-single .post-content .hero.tertiary .inner .copy ul .text-container li, .hero.tertiary .article-single .post-content .inner .text-container .copy ol li, .article-single .post-content .hero.tertiary .inner .text-container .copy ol li, .hero.tertiary .article-single .post-content .inner .copy ol .text-container li, .article-single .post-content .hero.tertiary .inner .copy ol .text-container li {
+  margin: 2rem auto 0;
+  text-align: center;
+}
+
+.hero.tertiary .inner .text-container .copy p, .hero.tertiary .article-single .post-content .inner .copy ul .text-container li p, .article-single .post-content .hero.tertiary .inner .copy ul .text-container li p, .hero.tertiary .article-single .post-content .inner .copy ol .text-container li p, .article-single .post-content .hero.tertiary .inner .copy ol .text-container li p, .hero.tertiary .inner .text-container .copy body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 address, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 .hero.tertiary .inner .text-container .copy address, .hero.tertiary .article-single .post-content .inner .copy ul .text-container li body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 address, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 .hero.tertiary .article-single .post-content .inner .copy ul .text-container li address, .article-single .post-content .hero.tertiary .inner .copy ul .text-container li body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 address, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 .article-single .post-content .hero.tertiary .inner .copy ul .text-container li address, .hero.tertiary .article-single .post-content .inner .copy ol .text-container li body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 address, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 .hero.tertiary .article-single .post-content .inner .copy ol .text-container li address, .article-single .post-content .hero.tertiary .inner .copy ol .text-container li body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 address, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 .article-single .post-content .hero.tertiary .inner .copy ol .text-container li address,
+.hero.tertiary .inner .text-container .copy body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 address, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 .hero.tertiary .inner .text-container .copy address, .hero.tertiary .article-single .post-content .inner .copy ul .text-container li body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 address, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 .hero.tertiary .article-single .post-content .inner .copy ul .text-container li address, .article-single .post-content .hero.tertiary .inner .copy ul .text-container li body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 address, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 .article-single .post-content .hero.tertiary .inner .copy ul .text-container li address, .hero.tertiary .article-single .post-content .inner .copy ol .text-container li body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 address, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 .hero.tertiary .article-single .post-content .inner .copy ol .text-container li address, .article-single .post-content .hero.tertiary .inner .copy ol .text-container li body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 address, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 .article-single .post-content .hero.tertiary .inner .copy ol .text-container li address {
+  margin: 0 auto;
+}
+
+.hero.tertiary .inner .text-container img {
+  margin: 4rem auto 0;
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-bottom: -30%;
+}
+
+@media (min-width: 992px) {
+  .hero.tertiary .inner .text-container img {
+    width: 44.514vw;
+    height: auto;
+    margin-bottom: -15%;
+  }
+}
+
+@media (min-width: 1920px) {
+  .hero.tertiary .inner .text-container img {
+    width: 85.4rem;
+  }
+}
+
+.hero.tertiary .inner .text-container.align-center .row {
+  justify-content: center;
+}
+
+.hero.tertiary .inner .text-container.align-center .row h1 {
+  text-align: center;
+}
+
 .module-wrapper.product-intro-module {
   background-color: #F9F1E7;
   color: #081D1A;
@@ -13952,6 +13992,19 @@ body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .
 .rte.fiftyfifty.type-inlaid.type-multi {
   background-color: #14302B;
   color: #F9F1E7;
+}
+
+@media (min-width: 992px) {
+  .rte.fiftyfifty.type-inlaid.type-multi .main-header {
+    width: 53.333vw;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 1920px) {
+  .rte.fiftyfifty.type-inlaid.type-multi .main-header {
+    width: 102rem;
+  }
 }
 
 .rte.fiftyfifty.type-inlaid.type-multi .row {
@@ -16041,6 +16094,252 @@ body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .
 @media (min-width: 1920px) {
   .cta-module .module-padded .btn, .cta-module #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form button, #waitlistModal .modal-dialog .modal-content .modal-body .form-module .cta-module .module-padded .form button, .cta-module .module-padded body.woocommerce-cart #content .return-to-shop .button, body.woocommerce-cart #content .return-to-shop .cta-module .module-padded .button, .cta-module .module-padded body.woocommerce-account .woocommerce-form-login .woocommerce-button, body.woocommerce-account .woocommerce-form-login .cta-module .module-padded .woocommerce-button, .cta-module .module-padded body.woocommerce-edit-address .woocommerce-address-fields .button, body.woocommerce-edit-address .woocommerce-address-fields .cta-module .module-padded .button, .cta-module .module-padded body.woocommerce-edit-account .woocommerce-EditAccountForm .button, body.woocommerce-edit-account .woocommerce-EditAccountForm .cta-module .module-padded .button, .cta-module .module-padded .woocommerce-ResetPassword .button, .woocommerce-ResetPassword .cta-module .module-padded .button {
     margin-bottom: 14.6rem;
+  }
+}
+
+.module-wrapper.ingredients-list-display {
+  background: #14302B;
+  color: #F9F1E7;
+}
+
+.module-wrapper.ingredients-list-display .module-padded .list-wrapper ul {
+  list-style: none;
+  font-family: "Sharp Sans Bold";
+  color: #fff;
+}
+
+.module-wrapper.ingredients-list-display .module-padded .list-wrapper ul.ingredients-desktop {
+  display: none;
+}
+
+@media (min-width: 992px) {
+  .module-wrapper.ingredients-list-display .module-padded .list-wrapper ul.ingredients-desktop {
+    display: flex;
+  }
+}
+
+.module-wrapper.ingredients-list-display .module-padded .list-wrapper ul li {
+  cursor: pointer;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.module-wrapper.ingredients-list-display .module-padded .list-wrapper ul li:last-child {
+  margin-bottom: 0;
+}
+
+.module-wrapper.ingredients-list-display .module-padded .list-wrapper ul li.active {
+  color: #88E2C1;
+}
+
+@media (min-width: 1440px) {
+  .module-wrapper.ingredients-list-display .module-padded .list-wrapper ul li {
+    font-size: 1.042vw;
+  }
+}
+
+@media (min-width: 1920px) {
+  .module-wrapper.ingredients-list-display .module-padded .list-wrapper ul li {
+    font-size: 2.7rem;
+  }
+}
+
+.module-wrapper.ingredients-list-display .module-padded .list-wrapper .ingredients-mobile {
+  display: block;
+}
+
+@media (min-width: 992px) {
+  .module-wrapper.ingredients-list-display .module-padded .list-wrapper .ingredients-mobile {
+    display: none;
+  }
+}
+
+.module-wrapper.ingredients-list-display .module-padded .list-wrapper .ingredients-mobile label {
+  display: none;
+}
+
+.module-wrapper.ingredients-list-display .module-padded .list-wrapper .ingredients-mobile select {
+  width: 100%;
+  margin-bottom: 2rem;
+  height: 6rem;
+  border-radius: .4rem;
+  font-size: 1.5rem;
+  font-family: "Sharp Sans Bold";
+  background: #88E2C1;
+  color: #081D1A;
+  border: none;
+  outline: none;
+  padding: 0 2rem;
+}
+
+.module-wrapper.ingredients-list-display .module-padded .list-wrapper .ingredients-mobile select:active, .module-wrapper.ingredients-list-display .module-padded .list-wrapper .ingredients-mobile select:focus {
+  border: none;
+  outline: none;
+}
+
+.module-wrapper.ingredients-list-display .module-padded .description-wrapper ul {
+  padding: 0;
+}
+
+.module-wrapper.ingredients-list-display .module-padded .description-wrapper ul li {
+  display: none;
+}
+
+.module-wrapper.ingredients-list-display .module-padded .description-wrapper ul li.active {
+  display: block;
+}
+
+.ingredients-grid-module {
+  padding: 7rem 3.6rem;
+  background-color: #14302B;
+  color: #F9F1E7;
+}
+
+@media (min-width: 1200px) {
+  .ingredients-grid-module {
+    padding: 10vw 10vw;
+  }
+}
+
+.ingredients-grid-module p.header, .ingredients-grid-module body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 address.header, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 .ingredients-grid-module address.header,
+.ingredients-grid-module body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 address.header, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 .ingredients-grid-module address.header {
+  font-family: "Sharp Sans Bold";
+  line-height: 1.25em;
+  margin: 0 0 1em 0;
+  color: #fff;
+  font-size: 2.4rem;
+}
+
+@media (min-width: 1200px) {
+  .ingredients-grid-module p.header, .ingredients-grid-module body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 address.header, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 .ingredients-grid-module address.header,
+  .ingredients-grid-module body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 address.header, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 .ingredients-grid-module address.header {
+    font-size: 2.083vw;
+  }
+}
+
+@media (min-width: 1920px) {
+  .ingredients-grid-module p.header, .ingredients-grid-module body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 address.header, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 .ingredients-grid-module address.header,
+  .ingredients-grid-module body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 address.header, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 .ingredients-grid-module address.header {
+    font-size: 3.9rem;
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .ingredients-grid-module p.header br, .ingredients-grid-module body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 address.header br, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 .ingredients-grid-module address.header br, .ingredients-grid-module body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 address.header br, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 .ingredients-grid-module address.header br {
+    display: none;
+  }
+}
+
+.ingredients-grid-module .copy, .ingredients-grid-module .article-single .post-content .inner .copy ul li, .article-single .post-content .inner .copy ul .ingredients-grid-module li, .ingredients-grid-module .article-single .post-content .inner .copy ol li, .article-single .post-content .inner .copy ol .ingredients-grid-module li {
+  margin-bottom: 3rem;
+}
+
+@media (min-width: 1200px) {
+  .ingredients-grid-module .copy, .ingredients-grid-module .article-single .post-content .inner .copy ul li, .article-single .post-content .inner .copy ul .ingredients-grid-module li, .ingredients-grid-module .article-single .post-content .inner .copy ol li, .article-single .post-content .inner .copy ol .ingredients-grid-module li {
+    margin-bottom: 5rem;
+  }
+}
+
+.ingredients-grid-module .copy:last-child, .ingredients-grid-module .article-single .post-content .inner .copy ul li:last-child, .article-single .post-content .inner .copy ul .ingredients-grid-module li:last-child, .ingredients-grid-module .article-single .post-content .inner .copy ol li:last-child, .article-single .post-content .inner .copy ol .ingredients-grid-module li:last-child {
+  margin-bottom: 0;
+}
+
+.ingredients-grid-module .copy p:last-child, .ingredients-grid-module .article-single .post-content .inner .copy ul li p:last-child, .article-single .post-content .inner .copy ul .ingredients-grid-module li p:last-child, .ingredients-grid-module .article-single .post-content .inner .copy ol li p:last-child, .article-single .post-content .inner .copy ol .ingredients-grid-module li p:last-child, .ingredients-grid-module .copy body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 address:last-child, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 .ingredients-grid-module .copy address:last-child, .article-single .post-content .inner .copy ul .ingredients-grid-module li body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 address:last-child, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 .article-single .post-content .inner .copy ul .ingredients-grid-module li address:last-child, .article-single .post-content .inner .copy ol .ingredients-grid-module li body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 address:last-child, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 .article-single .post-content .inner .copy ol .ingredients-grid-module li address:last-child,
+.ingredients-grid-module .copy body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 address:last-child, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 .ingredients-grid-module .copy address:last-child, .article-single .post-content .inner .copy ul .ingredients-grid-module li body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 address:last-child, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 .article-single .post-content .inner .copy ul .ingredients-grid-module li address:last-child, .article-single .post-content .inner .copy ol .ingredients-grid-module li body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 address:last-child, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 .article-single .post-content .inner .copy ol .ingredients-grid-module li address:last-child {
+  margin-bottom: 0;
+}
+
+.ingredients-grid-module svg {
+  fill: #477563;
+  margin-bottom: 2rem;
+}
+
+.ingredients-grid-module p.subheader, .ingredients-grid-module body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 address.subheader, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 .ingredients-grid-module address.subheader,
+.ingredients-grid-module body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 address.subheader, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 .ingredients-grid-module address.subheader {
+  font-family: "Sharp Sans Bold";
+  font-size: 2rem;
+  line-height: 1.25em;
+  margin: 0 0 .7em 0;
+  position: relative;
+}
+
+@media (min-width: 1200px) {
+  .ingredients-grid-module p.subheader, .ingredients-grid-module body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 address.subheader, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 .ingredients-grid-module address.subheader,
+  .ingredients-grid-module body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 address.subheader, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 .ingredients-grid-module address.subheader {
+    font-size: 3.2rem;
+  }
+}
+
+.module-wrapper.large-text-module {
+  background-color: #14302B;
+  color: #fff;
+}
+
+.module-wrapper.large-text-module .copy, .module-wrapper.large-text-module .article-single .post-content .inner .copy ul li, .article-single .post-content .inner .copy ul .module-wrapper.large-text-module li, .module-wrapper.large-text-module .article-single .post-content .inner .copy ol li, .article-single .post-content .inner .copy ol .module-wrapper.large-text-module li,
+.module-wrapper.large-text-module .copy p,
+.module-wrapper.large-text-module .article-single .post-content .inner .copy ul li p,
+.article-single .post-content .inner .copy ul .module-wrapper.large-text-module li p,
+.module-wrapper.large-text-module .article-single .post-content .inner .copy ol li p,
+.article-single .post-content .inner .copy ol .module-wrapper.large-text-module li p,
+.module-wrapper.large-text-module .copy body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 address,
+body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 .module-wrapper.large-text-module .copy address,
+.article-single .post-content .inner .copy ul .module-wrapper.large-text-module li body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 address,
+body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 .article-single .post-content .inner .copy ul .module-wrapper.large-text-module li address,
+.article-single .post-content .inner .copy ol .module-wrapper.large-text-module li body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 address,
+body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 .article-single .post-content .inner .copy ol .module-wrapper.large-text-module li address,
+.module-wrapper.large-text-module .copy body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 address,
+body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 .module-wrapper.large-text-module .copy address,
+.article-single .post-content .inner .copy ul .module-wrapper.large-text-module li body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 address,
+body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 .article-single .post-content .inner .copy ul .module-wrapper.large-text-module li address,
+.article-single .post-content .inner .copy ol .module-wrapper.large-text-module li body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 address,
+body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 .article-single .post-content .inner .copy ol .module-wrapper.large-text-module li address {
+  font-size: 2.5rem;
+  font-family: "Sharp Sans Bold";
+}
+
+@media (min-width: 992px) {
+  .module-wrapper.large-text-module .copy, .module-wrapper.large-text-module .article-single .post-content .inner .copy ul li, .article-single .post-content .inner .copy ul .module-wrapper.large-text-module li, .module-wrapper.large-text-module .article-single .post-content .inner .copy ol li, .article-single .post-content .inner .copy ol .module-wrapper.large-text-module li,
+  .module-wrapper.large-text-module .copy p,
+  .module-wrapper.large-text-module .article-single .post-content .inner .copy ul li p,
+  .article-single .post-content .inner .copy ul .module-wrapper.large-text-module li p,
+  .module-wrapper.large-text-module .article-single .post-content .inner .copy ol li p,
+  .article-single .post-content .inner .copy ol .module-wrapper.large-text-module li p,
+  .module-wrapper.large-text-module .copy body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 address,
+  body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 .module-wrapper.large-text-module .copy address,
+  .article-single .post-content .inner .copy ul .module-wrapper.large-text-module li body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 address,
+  body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 .article-single .post-content .inner .copy ul .module-wrapper.large-text-module li address,
+  .article-single .post-content .inner .copy ol .module-wrapper.large-text-module li body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 address,
+  body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 .article-single .post-content .inner .copy ol .module-wrapper.large-text-module li address,
+  .module-wrapper.large-text-module .copy body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 address,
+  body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 .module-wrapper.large-text-module .copy address,
+  .article-single .post-content .inner .copy ul .module-wrapper.large-text-module li body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 address,
+  body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 .article-single .post-content .inner .copy ul .module-wrapper.large-text-module li address,
+  .article-single .post-content .inner .copy ol .module-wrapper.large-text-module li body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 address,
+  body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 .article-single .post-content .inner .copy ol .module-wrapper.large-text-module li address {
+    font-size: 2.778vw;
+  }
+}
+
+@media (min-width: 1920px) {
+  .module-wrapper.large-text-module .copy, .module-wrapper.large-text-module .article-single .post-content .inner .copy ul li, .article-single .post-content .inner .copy ul .module-wrapper.large-text-module li, .module-wrapper.large-text-module .article-single .post-content .inner .copy ol li, .article-single .post-content .inner .copy ol .module-wrapper.large-text-module li,
+  .module-wrapper.large-text-module .copy p,
+  .module-wrapper.large-text-module .article-single .post-content .inner .copy ul li p,
+  .article-single .post-content .inner .copy ul .module-wrapper.large-text-module li p,
+  .module-wrapper.large-text-module .article-single .post-content .inner .copy ol li p,
+  .article-single .post-content .inner .copy ol .module-wrapper.large-text-module li p,
+  .module-wrapper.large-text-module .copy body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 address,
+  body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 .module-wrapper.large-text-module .copy address,
+  .article-single .post-content .inner .copy ul .module-wrapper.large-text-module li body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 address,
+  body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 .article-single .post-content .inner .copy ul .module-wrapper.large-text-module li address,
+  .article-single .post-content .inner .copy ol .module-wrapper.large-text-module li body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 address,
+  body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 .article-single .post-content .inner .copy ol .module-wrapper.large-text-module li address,
+  .module-wrapper.large-text-module .copy body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 address,
+  body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 .module-wrapper.large-text-module .copy address,
+  .article-single .post-content .inner .copy ul .module-wrapper.large-text-module li body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 address,
+  body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 .article-single .post-content .inner .copy ul .module-wrapper.large-text-module li address,
+  .article-single .post-content .inner .copy ol .module-wrapper.large-text-module li body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 address,
+  body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 .article-single .post-content .inner .copy ol .module-wrapper.large-text-module li address {
+    font-size: 5.3rem;
   }
 }
 
@@ -19360,20 +19659,18 @@ table.variations .reset_variations {
   margin-bottom: 4rem;
 }
 
-.ingredients-module {
-  padding: 0 3.6rem;
-  margin: 7rem 0;
+.ingredients-grid-module {
+  padding: 7rem 3.6rem;
 }
 
 @media (min-width: 1200px) {
-  .ingredients-module {
-    padding: 0 10vw;
-    margin: 10vw 0;
+  .ingredients-grid-module {
+    padding: 10vw 10vw;
   }
 }
 
-.ingredients-module p.header, .ingredients-module body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 address.header, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 .ingredients-module address.header,
-.ingredients-module body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 address.header, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 .ingredients-module address.header {
+.ingredients-grid-module p.header, .ingredients-grid-module body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 address.header, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 .ingredients-grid-module address.header,
+.ingredients-grid-module body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 address.header, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 .ingredients-grid-module address.header {
   font-family: "Sharp Sans Bold";
   line-height: 1.25em;
   margin: 0 0 1em 0;
@@ -19382,51 +19679,51 @@ table.variations .reset_variations {
 }
 
 @media (min-width: 1200px) {
-  .ingredients-module p.header, .ingredients-module body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 address.header, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 .ingredients-module address.header,
-  .ingredients-module body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 address.header, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 .ingredients-module address.header {
+  .ingredients-grid-module p.header, .ingredients-grid-module body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 address.header, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 .ingredients-grid-module address.header,
+  .ingredients-grid-module body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 address.header, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 .ingredients-grid-module address.header {
     font-size: 2.083vw;
   }
 }
 
 @media (min-width: 1920px) {
-  .ingredients-module p.header, .ingredients-module body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 address.header, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 .ingredients-module address.header,
-  .ingredients-module body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 address.header, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 .ingredients-module address.header {
+  .ingredients-grid-module p.header, .ingredients-grid-module body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 address.header, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 .ingredients-grid-module address.header,
+  .ingredients-grid-module body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 address.header, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 .ingredients-grid-module address.header {
     font-size: 3.9rem;
   }
 }
 
 @media (max-width: 1199.98px) {
-  .ingredients-module p.header br, .ingredients-module body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 address.header br, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 .ingredients-module address.header br, .ingredients-module body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 address.header br, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 .ingredients-module address.header br {
+  .ingredients-grid-module p.header br, .ingredients-grid-module body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 address.header br, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 .ingredients-grid-module address.header br, .ingredients-grid-module body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 address.header br, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 .ingredients-grid-module address.header br {
     display: none;
   }
 }
 
-.ingredients-module .copy, .ingredients-module .article-single .post-content .inner .copy ul li, .article-single .post-content .inner .copy ul .ingredients-module li, .ingredients-module .article-single .post-content .inner .copy ol li, .article-single .post-content .inner .copy ol .ingredients-module li {
+.ingredients-grid-module .copy, .ingredients-grid-module .article-single .post-content .inner .copy ul li, .article-single .post-content .inner .copy ul .ingredients-grid-module li, .ingredients-grid-module .article-single .post-content .inner .copy ol li, .article-single .post-content .inner .copy ol .ingredients-grid-module li {
   margin-bottom: 3rem;
 }
 
 @media (min-width: 1200px) {
-  .ingredients-module .copy, .ingredients-module .article-single .post-content .inner .copy ul li, .article-single .post-content .inner .copy ul .ingredients-module li, .ingredients-module .article-single .post-content .inner .copy ol li, .article-single .post-content .inner .copy ol .ingredients-module li {
+  .ingredients-grid-module .copy, .ingredients-grid-module .article-single .post-content .inner .copy ul li, .article-single .post-content .inner .copy ul .ingredients-grid-module li, .ingredients-grid-module .article-single .post-content .inner .copy ol li, .article-single .post-content .inner .copy ol .ingredients-grid-module li {
     margin-bottom: 5rem;
   }
 }
 
-.ingredients-module .copy:last-child, .ingredients-module .article-single .post-content .inner .copy ul li:last-child, .article-single .post-content .inner .copy ul .ingredients-module li:last-child, .ingredients-module .article-single .post-content .inner .copy ol li:last-child, .article-single .post-content .inner .copy ol .ingredients-module li:last-child {
+.ingredients-grid-module .copy:last-child, .ingredients-grid-module .article-single .post-content .inner .copy ul li:last-child, .article-single .post-content .inner .copy ul .ingredients-grid-module li:last-child, .ingredients-grid-module .article-single .post-content .inner .copy ol li:last-child, .article-single .post-content .inner .copy ol .ingredients-grid-module li:last-child {
   margin-bottom: 0;
 }
 
-.ingredients-module .copy p:last-child, .ingredients-module .article-single .post-content .inner .copy ul li p:last-child, .article-single .post-content .inner .copy ul .ingredients-module li p:last-child, .ingredients-module .article-single .post-content .inner .copy ol li p:last-child, .article-single .post-content .inner .copy ol .ingredients-module li p:last-child, .ingredients-module .copy body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 address:last-child, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 .ingredients-module .copy address:last-child, .article-single .post-content .inner .copy ul .ingredients-module li body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 address:last-child, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 .article-single .post-content .inner .copy ul .ingredients-module li address:last-child, .article-single .post-content .inner .copy ol .ingredients-module li body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 address:last-child, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 .article-single .post-content .inner .copy ol .ingredients-module li address:last-child,
-.ingredients-module .copy body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 address:last-child, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 .ingredients-module .copy address:last-child, .article-single .post-content .inner .copy ul .ingredients-module li body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 address:last-child, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 .article-single .post-content .inner .copy ul .ingredients-module li address:last-child, .article-single .post-content .inner .copy ol .ingredients-module li body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 address:last-child, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 .article-single .post-content .inner .copy ol .ingredients-module li address:last-child {
+.ingredients-grid-module .copy p:last-child, .ingredients-grid-module .article-single .post-content .inner .copy ul li p:last-child, .article-single .post-content .inner .copy ul .ingredients-grid-module li p:last-child, .ingredients-grid-module .article-single .post-content .inner .copy ol li p:last-child, .article-single .post-content .inner .copy ol .ingredients-grid-module li p:last-child, .ingredients-grid-module .copy body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 address:last-child, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 .ingredients-grid-module .copy address:last-child, .article-single .post-content .inner .copy ul .ingredients-grid-module li body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 address:last-child, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 .article-single .post-content .inner .copy ul .ingredients-grid-module li address:last-child, .article-single .post-content .inner .copy ol .ingredients-grid-module li body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 address:last-child, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 .article-single .post-content .inner .copy ol .ingredients-grid-module li address:last-child,
+.ingredients-grid-module .copy body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 address:last-child, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 .ingredients-grid-module .copy address:last-child, .article-single .post-content .inner .copy ul .ingredients-grid-module li body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 address:last-child, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 .article-single .post-content .inner .copy ul .ingredients-grid-module li address:last-child, .article-single .post-content .inner .copy ol .ingredients-grid-module li body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 address:last-child, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 .article-single .post-content .inner .copy ol .ingredients-grid-module li address:last-child {
   margin-bottom: 0;
 }
 
-.ingredients-module svg {
+.ingredients-grid-module svg {
   fill: #477563;
   margin-bottom: 2rem;
 }
 
-.ingredients-module p.subheader, .ingredients-module body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 address.subheader, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 .ingredients-module address.subheader,
-.ingredients-module body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 address.subheader, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 .ingredients-module address.subheader {
+.ingredients-grid-module p.subheader, .ingredients-grid-module body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 address.subheader, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 .ingredients-grid-module address.subheader,
+.ingredients-grid-module body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 address.subheader, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 .ingredients-grid-module address.subheader {
   font-family: "Sharp Sans Bold";
   font-size: 2rem;
   line-height: 1.25em;
@@ -19435,8 +19732,8 @@ table.variations .reset_variations {
 }
 
 @media (min-width: 1200px) {
-  .ingredients-module p.subheader, .ingredients-module body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 address.subheader, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 .ingredients-module address.subheader,
-  .ingredients-module body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 address.subheader, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 .ingredients-module address.subheader {
+  .ingredients-grid-module p.subheader, .ingredients-grid-module body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 address.subheader, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 .ingredients-grid-module address.subheader,
+  .ingredients-grid-module body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 address.subheader, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 .ingredients-grid-module address.subheader {
     font-size: 3.2rem;
   }
 }
