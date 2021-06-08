@@ -157,8 +157,6 @@ if(fastCheckoutSelect)
         const prodID = 581; // Should this be hardcoded? For now with one product it should be fine
         const purchaseType = $('input[name="fast-checkout-purchase-type"]:checked').val();
 
-        console.log(variantID, purchaseType);
-
         $.ajax({
             url: localizedVars.ajaxurl,
             method: 'post',
