@@ -161,6 +161,7 @@ body.fast-checkout-active {
         padding: 2rem;
         font-size: 1.4rem;
         @include media-breakpoint-up(xl) {
+            padding: 3rem;
             border-right: 1px solid #88E2C1;
         }
 
@@ -313,14 +314,12 @@ body.fast-checkout-active {
         border-bottom: .1rem solid #447563;
         @include media-breakpoint-up(xl) {
             align-items: center;
-            justify-content: center;
             border: none;
         }
 
         label {
             display: inline-block;
             vertical-align: top;
-            margin-right: 1.5rem;
         }
 
         input[type=radio] {

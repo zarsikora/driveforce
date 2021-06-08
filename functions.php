@@ -43,6 +43,7 @@ function bones_load_scripts()
 
     wp_register_script( 'main-scripts', get_bloginfo('template_directory') . '/bundle.js');
     wp_localize_script( 'main-scripts', 'localizedVars', array(
+        'environment' => wp_get_environment_type(),
         'ajaxurl' => admin_url('admin-ajax.php'),
         'posts' => $wp_query->query_vars,
         'current_page' => get_query_var( 'paged' ) ? get_query_var('paged') : 1,

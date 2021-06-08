@@ -1,3 +1,7 @@
+<?php
+$environment = wp_get_environment_type();
+$variantIDs = ($environment === 'local') ? array(731, 732, 733) : array(640, 641, 642) ?>
+
 <div class="fast-checkout">
 
     <div class="fast-checkout-mobile-bar">
@@ -32,35 +36,28 @@
                 <p class="build-order-header">Build Your Order</p>
 
                 <div class="mobile">
-                    <?php echo button('', 'DF-18: PRO 30 PACK', 'selected', null, 'data-variant-id="603"'); ?>
-                    <?php echo button('', 'DF-18: amateur 20 pack', '', null, 'data-variant-id="604"'); ?>
-                    <?php echo button('', 'DF-18: WEEKEND WARRIOR 10 PACK', '', null, 'data-variant-id="605"'); ?>
+                    <?php echo button('', 'DF-18: PRO 30 PACK', 'selected', null, 'data-variant-id="'. $variantIDs[0] .'"'); ?>
+                    <?php echo button('', 'DF-18: amateur 20 pack', '', null, 'data-variant-id="'. $variantIDs[1] .'"'); ?>
+                    <?php echo button('', 'DF-18: WEEKEND WARRIOR 10 PACK', '', null, 'data-variant-id="'. $variantIDs[2] .'"'); ?>
                 </div>
 
                 <div class="desktop">
 
                     <div class="select">
-                        <div class="selected-option" data-variant-id="603">
+                        <div class="selected-option" data-variant-id="<?php echo $variantIDs[0] ?>">
                             <span class="selected-product">DF-18 Pro 30 Pack</span>
                             <span class="selected-type">Monthly subscription</span>
                         </div>
                         <div class="dropdown">
-                            <a href="#" data-variant-id="603">PRO30 PACK</a>
-                            <a href="#" data-variant-id="604">AM20 PACK</a>
-                            <a href="#" data-variant-id="605">WW10 PACK</a>
+                            <a href="#" data-variant-id="<?php echo $variantIDs[0] ?>">PRO30 PACK</a>
+                            <a href="#" data-variant-id="<?php echo $variantIDs[1] ?>">AM20 PACK</a>
+                            <a href="#" data-variant-id="<?php echo $variantIDs[2] ?>">WW10 PACK</a>
                         </div>
                     </div>
-
-<!--                    <label>DF-18:</label>-->
-<!--                    <select name="fast-checkout-variant">-->
-<!--                        <option value="603">PRO30 PACK</option>-->
-<!--                        <option value="604">AM20 PACK</option>-->
-<!--                        <option value="605">WW10 PACK</option>-->
-<!--                    </select>-->
                 </div>
             </div>
 
-            <div class="col-lg-6 col-xl-6 py-xl-0">
+            <div class="col-lg-6 col-xl-6 p-0">
                 <div class="row">
                     <div class="col-lg-12 col-xl-6 fast-checkout-purchase-option option1">
                         <div class="option-text">
