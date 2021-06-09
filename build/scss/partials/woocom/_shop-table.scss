@@ -1,0 +1,49 @@
+.woocommerce .shop_table {
+    background-color: #fff;
+    margin: 0;
+    border-radius: .5rem .5rem 0 0;
+
+    th {
+        font-family: $displayType;
+        font-size: 1.6rem;
+    }
+
+    td {
+        font-family: $mediumType;
+        font-size: 1.4rem;
+
+        a {
+            color: $darkBg;
+            text-decoration: underline;
+        }
+    }
+
+    .coupon {
+        input#coupon_code {
+            width: 100%;
+            margin-bottom: 1rem;
+
+            @include media-breakpoint-up(md){
+                width: auto;
+                margin-bottom: 0;
+            }
+        }
+
+        .button {
+            @include media-breakpoint-down(sm){
+                width: 100% !important;
+                float: none !important;
+            }
+        }
+    }
+
+    .woocommerce-button,
+    .button {
+        height: auto;
+        width: auto;
+        padding: 1rem 2rem;
+        background: $red;
+        border-radius: 2rem;
+        color: #fff;
+    }
+}

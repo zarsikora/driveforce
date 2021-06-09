@@ -1,0 +1,20 @@
+.woocommerce {
+    .woocommerce-orders-table {
+
+        .woocommerce-orders-table__cell-order-number,
+        .woocommerce-orders-table__cell-order-actions {
+
+            a,
+            .button {
+                background: none;
+                color: $darkBg;
+                text-decoration: underline;
+                padding: 0;
+
+                &:hover {
+                    color: $red;
+                }
+            }
+        }
+    }
+}
