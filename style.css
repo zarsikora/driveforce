@@ -14338,6 +14338,7 @@ body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .
   justify-content: center;
   align-items: center;
   padding: 6rem 3.6rem;
+  box-sizing: border-box;
 }
 
 @media (min-width: 768px) {
