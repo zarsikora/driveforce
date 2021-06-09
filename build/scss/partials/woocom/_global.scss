@@ -136,6 +136,29 @@ body.woocommerce-page {
             padding: 0;
         }
     }
+
+    .woocommerce-order-details {
+        margin-bottom: 4rem;
+    }
+
+    .woocommerce-customer-details {
+        font-family: $bookType;
+
+        address {
+            background: #fff;
+            font-size: 1.4rem;
+            padding: 1.5rem 2rem;
+            box-shadow: none;
+            border-width: .1rem;
+
+            .woocommerce-customer-details--phone,
+            .woocommerce-customer-details--email {
+                margin: 0;
+                font-size: 1.4rem;
+                font-family: $bookType;
+            }
+        }
+    }
 }
 
 //.woocommerce #respond input#submit,

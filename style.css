@@ -17879,6 +17879,29 @@ body.woocommerce-page .woocommerce mark, body.woocommerce-page .woocommerce .mar
   padding: 0;
 }
 
+body.woocommerce-page .woocommerce-order-details {
+  margin-bottom: 4rem;
+}
+
+body.woocommerce-page .woocommerce-customer-details {
+  font-family: "Sharp Sans Book";
+}
+
+body.woocommerce-page .woocommerce-customer-details address {
+  background: #fff;
+  font-size: 1.4rem;
+  padding: 1.5rem 2rem;
+  box-shadow: none;
+  border-width: .1rem;
+}
+
+body.woocommerce-page .woocommerce-customer-details address .woocommerce-customer-details--phone,
+body.woocommerce-page .woocommerce-customer-details address .woocommerce-customer-details--email {
+  margin: 0;
+  font-size: 1.4rem;
+  font-family: "Sharp Sans Book";
+}
+
 body.cart-drawer-open {
   overflow: hidden;
   height: 100%;
@@ -18933,29 +18956,6 @@ body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 addres
 body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 address:first-of-type,
 body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 address:first-of-type {
   margin-top: 0;
-}
-
-body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-order-details {
-  margin-bottom: 4rem;
-}
-
-body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-customer-details {
-  font-family: "Sharp Sans Book";
-}
-
-body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-customer-details address {
-  background: #fff;
-  font-size: 1.4rem;
-  padding: 1.5rem 2rem;
-  box-shadow: none;
-  border-width: .1rem;
-}
-
-body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-customer-details address .woocommerce-customer-details--phone,
-body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-customer-details address .woocommerce-customer-details--email {
-  margin: 0;
-  font-size: 1.4rem;
-  font-family: "Sharp Sans Book";
 }
 
 body.woocommerce-account .woocommerce-MyAccount-content .subscription_details .button {
