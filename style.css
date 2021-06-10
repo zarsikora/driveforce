@@ -13264,7 +13264,8 @@ body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .
 .module-wrapper.product-intro-module .module-padded h2 {
   color: #081D1A;
   text-align: center;
-  margin: 0 auto 2rem;
+  margin: 0 auto 1em auto;
+  position: relative;
 }
 
 @media (max-width: 767px) {
@@ -13291,6 +13292,22 @@ body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .
     width: 126.6rem;
     margin: 0 auto 6.6rem;
   }
+}
+
+.module-wrapper.product-intro-module .module-padded h2:not(.bottom-text) {
+  margin: 0 auto 18rem auto;
+}
+
+.module-wrapper.product-intro-module .module-padded h2:not(.bottom-text):before {
+  content: '';
+  display: block;
+  width: 2px;
+  height: 10rem;
+  background: #447563;
+  position: absolute;
+  left: 50%;
+  bottom: -4rem;
+  transform: translate(0, 100%);
 }
 
 .module-wrapper.product-intro-module .module-padded p.intro-copy, .module-wrapper.product-intro-module .module-padded body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 address.intro-copy, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 .module-wrapper.product-intro-module .module-padded address.intro-copy,
@@ -13320,7 +13337,7 @@ body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .
 }
 
 .module-wrapper.product-intro-module .module-padded .mobile-image {
-  margin: 18rem 0 4rem;
+  margin: 0 0 4rem 0;
 }
 
 @media (min-width: 992px) {
@@ -13354,6 +13371,10 @@ body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .
   .module-wrapper.product-intro-module .module-padded .image-wrapper img {
     max-width: 27.1rem;
   }
+}
+
+.module-wrapper.product-intro-module .module-padded .product-container {
+  margin-bottom: 4rem;
 }
 
 @media (min-width: 992px) {

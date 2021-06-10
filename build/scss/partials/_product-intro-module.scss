@@ -6,10 +6,12 @@
     }
 
     .module-padded {
+
         h2 {
             color: $darkText;
             text-align: center;
-            margin: 0 auto 2rem;
+            margin: 0 auto 1em auto;
+            position: relative;
             @media(max-width: 767px){
                 font-size: 2.6rem;
             }
@@ -23,6 +25,23 @@
             @media(min-width: 1920px){
                 width: 126.6rem;
                 margin: 0 auto 6.6rem;
+            }
+
+            // Vertical green bar
+            &:not(.bottom-text) {
+                margin: 0 auto 18rem auto; // bottom margin accounts for vertical bar
+
+                &:before {
+                    content: '';
+                    display: block;
+                    width: 2px;
+                    height: 10rem;
+                    background: $sage;
+                    position: absolute;
+                    left: 50%;
+                    bottom: -4rem;
+                    transform: translate(0, 100%);
+                }
             }
         }
 
@@ -38,7 +57,7 @@
         }
 
         .mobile-image {
-            margin: 18rem 0 4rem;
+            margin: 0 0 4rem 0;
             @include media-breakpoint-up(lg){
                 display: none;
             }
@@ -64,6 +83,7 @@
         }
 
         .product-container {
+            margin-bottom: 4rem;
             @include media-breakpoint-up(lg){
                 padding: 27rem 0 9rem;
             }

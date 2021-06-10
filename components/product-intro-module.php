@@ -1,19 +1,18 @@
-<?php 
-
+<?php
 $header = get_sub_field('header');
 $intro = get_sub_field('intro_copy');
 $mainImage = get_sub_field('main_image');
 $mobileImage = get_sub_field('main_image_mobile');
 $button = get_sub_field('button');
 $bottomText = get_sub_field('bottom_text');
-
 ?>
 
 <div class="module-wrapper color-bg product-intro-module">
+
     <div class="module-padded">
         <?php if($header): ?>
             <h2 data-animation-effect="splitSlideUpWord" data-animation-trigger="breakpoint" data-splitting="chars"><?php echo $header ?></h2>
-            <p class="intro-copy" data-animation-effect="splitSlideUpWord" data-animation-trigger="breakpoint" data-splitting="chars"><?php echo $intro ?></p>
+            <?php if($intro) { ?><p class="intro-copy"><?php echo $intro ?></p><?php } ?>
         <?php endif; ?>
 
         <?php if($mobileImage): ?>
@@ -21,6 +20,7 @@ $bottomText = get_sub_field('bottom_text');
         <?php endif; ?>
 
         <div class="product-container row">
+
             <?php if(have_rows('certifications')) : ?>
                 <div class="product-certs col-lg-4">
                     <?php while(have_rows('certifications')): the_row(); ?>
@@ -49,7 +49,7 @@ $bottomText = get_sub_field('bottom_text');
 
             <?php if($mainImage): ?>
                 <div class="image-wrapper col-lg-4">
-                        <?php echo imageTag($mainImage, '', '', '', false); ?>
+                    <?php echo imageTag($mainImage, '', '', '', false); ?>
                 </div>
             <?php endif; ?>
 
