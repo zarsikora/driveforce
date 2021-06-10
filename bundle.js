@@ -34159,14 +34159,6 @@ if(fastCheckoutSelect)
         getProductObject($(this).attr('data-variant-id'));
     });
 
-    // Product variant change handler
-    // fastCheckoutSelect.on('change', function(e)
-    // {
-    //     e.preventDefault();
-    //
-    //     getProductObject(fastCheckoutSelect.val());
-    // });
-
     fastCheckoutMobileButtons.on('click', function(e)
     {
         e.preventDefault();
@@ -34221,15 +34213,21 @@ if(fastCheckoutSelect)
         });
     });
 
-    $(window).on('scroll', function(e)
+    if($('body').is('.home, .single-product'))
     {
-        if(window.pageYOffset > 1000)
+        const triggerElement = $('body').hasClass('home') ? $('.product-intro-module .btn') : $('.benefits-module');
+        const triggerPoint = triggerElement[0].offsetTop + triggerElement[0].offsetHeight - window.innerHeight;
+
+        $(window).on('scroll', function(e)
         {
-            $('body').addClass('fast-checkout-active');
-            return;
-        }
-        $('body').removeClass('fast-checkout-active');
-    });
+            if(window.pageYOffset > triggerPoint)
+            {
+                $('body').addClass('fast-checkout-active');
+                return;
+            }
+            $('body').removeClass('fast-checkout-active');
+        });
+    }
 }
 /*!
  * Splide.js
