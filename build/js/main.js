@@ -86,6 +86,7 @@ $('.product-info .quantity, .product .quantity').each(function ()
     btnUp.click(function ()
     {
         let oldValue = parseFloat(input.val());
+        const cartItemKey = spinner.parents('.cart-drawer-product').attr('data-cart-item-key');
 
         if (oldValue >= max) {
             var newVal = oldValue;
@@ -96,28 +97,64 @@ $('.product-info .quantity, .product .quantity').each(function ()
         spinner.find("input").val(newVal);
         spinner.find("input").trigger("change");
 
-        updateQuantity(spinner.parents('.cart-drawer-product').attr('data-cart-item-key'), newVal);
+        if(!newVal)
+        {
+            removeFromCart(cartItemKey);
+            return;
+        }
+
+        updateQuantity(cartItemKey, newVal);
     });
 
     btnDown.click(function ()
     {
         var oldValue = parseFloat(input.val());
+        const cartItemKey = spinner.parents('.cart-drawer-product').attr('data-cart-item-key');
+
         if (oldValue <= min) {
             var newVal = oldValue;
         } else {
             var newVal = oldValue - 1;
         }
+
         spinner.find("input").val(newVal);
         spinner.find("input").trigger("change");
 
-        updateQuantity(spinner.parents('.cart-drawer-product').attr('data-cart-item-key'), newVal);
+        if(!newVal)
+        {
+            removeFromCart(cartItemKey);
+            return;
+        }
+
+        updateQuantity(cartItemKey, newVal);
     });
 });
 
+function removeFromCart(cartItemKey)
+{
+    $.ajax({
+        url: localizedVars.ajaxurl,
+        method: 'post',
+        dataType: 'json',
+        data: {
+            action: 'df_remove_product_from_cart',
+            cartItemKey: cartItemKey
+        },
+        success: function(data)
+        {
+            console.log(data);
+
+            updateCartDrawerTotal(data.data.cartTotals);
+        },
+        error: function(error)
+        {
+            console.log(error);
+        }
+    })
+}
+
 function updateQuantity(cartItemKey, quantity)
 {
-    // Trigger ajax to update the cart item quantity
-    // Need the cart item key
     $.ajax({
         url: localizedVars.ajaxurl,
         method: 'post',
