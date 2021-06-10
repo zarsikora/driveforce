@@ -99,7 +99,7 @@ $('.product-info .quantity, .product .quantity').each(function ()
 
         if(!newVal)
         {
-            removeFromCart(cartItemKey);
+            removeFromCart(spinner.parents('.cart-drawer-product'), cartItemKey);
             return;
         }
 
@@ -122,7 +122,7 @@ $('.product-info .quantity, .product .quantity').each(function ()
 
         if(!newVal)
         {
-            removeFromCart(cartItemKey);
+            removeFromCart(spinner.parents('.cart-drawer-product'), cartItemKey);
             return;
         }
 
@@ -130,7 +130,7 @@ $('.product-info .quantity, .product .quantity').each(function ()
     });
 });
 
-function removeFromCart(cartItemKey)
+function removeFromCart(product, cartItemKey)
 {
     $.ajax({
         url: localizedVars.ajaxurl,
@@ -143,6 +143,8 @@ function removeFromCart(cartItemKey)
         success: function(data)
         {
             console.log(data);
+
+            product.remove();
 
             updateCartDrawerTotal(data.data.cartTotals);
         },
