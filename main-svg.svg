@@ -90,6 +90,25 @@
         </g>
     </symbol>
 
+    <!-- TRASH ICON -->
+    <symbol id="trash-icon" viewBox="0 0 16 16">
+        <defs>
+            <style>
+                .trash-a{stroke: none;}
+                .trash-a,.trash-b,.trash-c{fill:none;}
+                .trash-b,.trash-c{stroke-linecap:round;stroke-linejoin:bevel;stroke-width:1.5px;}
+                .trash-c{fill-rule:evenodd;}
+            </style>
+        </defs>
+        <rect class="trash-a" width="16" height="16"/>
+        <g transform="translate(2 1.207)">
+            <line class="trash-b" x1="4" y1="4" transform="translate(4 6.26)"/>
+            <line class="trash-b" x1="4" y2="4" transform="translate(4 6.26)"/>
+            <rect class="trash-b" width="12" height="2.667" rx="1"/>
+            <path class="trash-c" d="M14.333,5.81V15.4A1.333,1.333,0,0,1,13,16.73H6.333A1.333,1.333,0,0,1,5,15.4V5.81" transform="translate(-3.667 -3.143)"/>
+        </g>
+    </symbol>
+
     <!-- GOLF BAG -->
     <symbol id="golf-bag-icon" viewBox="0 0 282.773 278.057">
         <defs>

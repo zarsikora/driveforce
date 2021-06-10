@@ -54,7 +54,11 @@
                             </div>
                         </div>
                         <div class="product-total">
-                            <a class="cart-drawer-remove-product" href="#">Remove</a>
+                            <a class="cart-drawer-remove-product" href="#">
+                                <svg width="16" height="16" viewBox="0 0 16 16">
+                                    <use href="#trash-icon"></use>
+                                </svg>
+                            </a>
                             <p class="product-price"><?php echo $item['price']; ?></p>
                         </div>
                         <div class="product-subscribe">

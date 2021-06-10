@@ -17902,6 +17902,96 @@ body.woocommerce-page .woocommerce-customer-details address .woocommerce-custome
   font-family: "Sharp Sans Book";
 }
 
+.quantity {
+  position: relative;
+  display: inline-block;
+  /* Chrome, Safari, Edge, Opera */
+  /* Firefox */
+}
+
+.quantity input {
+  width: 45px;
+  height: 42px;
+  line-height: 1.65;
+  display: block;
+  padding: 0;
+  margin: 0;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08);
+  border-radius: 4px 0 0 4px;
+  text-align: center;
+  font-size: 1.4rem;
+  font-family: "Sharp Sans Medium";
+  border: 1px solid #447563;
+  background: transparent;
+  color: #fff;
+}
+
+.quantity input:focus {
+  outline: 0;
+}
+
+.quantity input::-webkit-outer-spin-button,
+.quantity input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.quantity input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.quantity-nav {
+  position: absolute;
+  height: 42px;
+  width: 2rem;
+  left: 100%;
+  top: 0;
+  transform: translateX(100%);
+}
+
+.quantity-button {
+  position: relative;
+  cursor: pointer;
+  border: 1px solid #447563;
+  border-left: none;
+  width: 2rem;
+  text-align: center;
+  color: #fff;
+  font-size: 1.3rem;
+  padding: 0;
+  background: transparent;
+  transform: translateX(-100%);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+.quantity-button:active {
+  background: #447563;
+}
+
+.quantity-button:focus {
+  background: transparent;
+}
+
+.quantity-button.quantity-up {
+  position: absolute;
+  height: 50%;
+  top: 0;
+  border-bottom: none;
+  border-radius: 0 4px 0 0;
+}
+
+.quantity-button.quantity-down {
+  content: '^';
+  position: absolute;
+  bottom: 0;
+  height: 50%;
+  border-radius: 0 0 4px 0;
+}
+
 body.cart-drawer-open {
   overflow: hidden;
   height: 100%;
@@ -18006,12 +18096,37 @@ body.cart-drawer-open .cart-drawer {
 .cart-drawer-product .product-info body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 address.product-name, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 .cart-drawer-product .product-info address.product-name,
 .cart-drawer-product .product-info body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 address.product-name, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 .cart-drawer-product .product-info address.product-name {
   margin: 0;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
+  font-family: "Sharp Sans Bold";
 }
 
 .cart-drawer-product .product-info p.product-name strong, .cart-drawer-product .product-info body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 address.product-name strong, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 .cart-drawer-product .product-info address.product-name strong, .cart-drawer-product .product-info body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 address.product-name strong, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 .cart-drawer-product .product-info address.product-name strong, .cart-drawer-product .product-info body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 address.product-name strong, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 .cart-drawer-product .product-info address.product-name strong, .cart-drawer-product .product-info body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 address.product-name strong, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 .cart-drawer-product .product-info address.product-name strong {
   font-family: "Sharp Sans Bold";
   font-size: 1.8rem;
+}
+
+.cart-drawer-product .product-info .quantity {
+  margin-top: 1rem;
+}
+
+.cart-drawer-product .product-total {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.cart-drawer-product .product-total .cart-drawer-remove-product svg {
+  stroke: #fff;
+  transition: stroke ease 200ms;
+}
+
+.cart-drawer-product .product-total .cart-drawer-remove-product svg:hover {
+  stroke: #dc3545;
+}
+
+.cart-drawer-product .product-total .product-price {
+  flex: 0 0 100%;
+  text-align: right;
 }
 
 .cart-drawer-product .product-subscribe {
@@ -20181,27 +20296,21 @@ table.variations .reset_variations {
 }
 
 .single_variation_wrap .quantity {
-  display: inline-block !important;
-  vertical-align: top !important;
-  height: auto !important;
-  width: 30% !important;
-  margin: 0 2rem 0 0 !important;
+  position: relative;
 }
 
-.single_variation_wrap .quantity input {
-  height: 6.5rem !important;
-  width: 100%;
-  font-size: 1.8rem;
-  padding: 0 1.5rem !important;
-  background: none;
-  border-radius: .5rem;
-  border: .1rem solid #fff !important;
-  color: #fff !important;
+.single_variation_wrap input[type=number]::-webkit-inner-spin-button,
+.single_variation_wrap input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
-.single_variation_wrap .quantity input:focus-visible {
-  outline: none !important;
-  background: rgba(255, 255, 255, 0.1) !important;
+.single_variation_wrap input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.single_variation_wrap .quantity {
+  margin-top: 2rem;
 }
 
 .single_variation_wrap .single_add_to_cart_button {

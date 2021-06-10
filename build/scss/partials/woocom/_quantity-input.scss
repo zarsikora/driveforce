@@ -1,0 +1,90 @@
+.quantity {
+    position: relative;
+    display: inline-block;
+
+    input {
+        width: 45px;
+        height: 42px;
+        line-height: 1.65;
+        display: block;
+        padding: 0;
+        margin: 0;
+        box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08);
+        border-radius: 4px 0 0 4px;
+        text-align: center;
+        font-size: 1.4rem;
+        font-family: $mediumType;
+        border: 1px solid $sage;
+        background: transparent;
+        color: #fff;
+
+        &:focus {
+            outline: 0;
+        }
+    }
+
+    /* Chrome, Safari, Edge, Opera */
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    /* Firefox */
+    input[type=number] {
+        -moz-appearance: textfield;
+    }
+}
+
+.quantity-nav {
+    position: absolute;
+    height: 42px;
+    width: 2rem;
+    left: 100%;
+    top: 0;
+    transform: translateX(100%);
+}
+
+.quantity-button {
+    position: relative;
+    cursor: pointer;
+    border: 1px solid $sage;
+    border-left: none;
+    width: 2rem;
+    text-align: center;
+    color: #fff;
+    font-size: 1.3rem;
+    padding: 0;
+    background: transparent;
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+.quantity-button:active {
+    background: $sage;
+}
+
+.quantity-button:focus {
+    background: transparent;
+}
+
+.quantity-button.quantity-up {
+    position: absolute;
+    height: 50%;
+    top: 0;
+    border-bottom: none;
+    border-radius: 0 4px 0 0;
+}
+
+.quantity-button.quantity-down {
+    content: '^';
+    position: absolute;
+    bottom: 0;
+    height: 50%;
+    border-radius: 0 0 4px 0;
+}
