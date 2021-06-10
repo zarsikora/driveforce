@@ -76,14 +76,8 @@
                     <div class="mobile-nav">
                         <div class="mobile-controls">
                             <button class="hamburger-control" name="menu-toggle" aria-haspopup="true" aria-expanded="false" aria-controls="flyout-menu">
-                                Toggle Mobile Nav Controls
-
                                 <svg aria-hidden="true" class="open active" viewBox="0 0 39 24">
-                                    <g transform="translate(-275 -71)">
-                                        <rect width="4" height="17" rx="2" transform="translate(292 71) rotate(90)"/>
-                                        <rect width="4" height="39" rx="2" transform="translate(314 81) rotate(90)"/>
-                                        <rect width="4" height="19" rx="2" transform="translate(314 91) rotate(90)"/>
-                                    </g>
+                                    <use href="#hamburger-icon"></use>
                                 </svg>
 
                                 <svg aria-hidden="true" class="close" viewbox="0 0 29.604 29.604" width="18" height="18">
