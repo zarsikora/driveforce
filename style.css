@@ -16348,11 +16348,7 @@ body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .
 
 .endorsement-slider #slider .containers {
   display: flex;
-}
-
-.endorsement-slider #slider .containers .img-container {
-  margin: 0;
-  padding: 0;
+  align-items: center;
 }
 
 @media (max-width: 767.98px) {
@@ -16369,66 +16365,65 @@ body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .
   }
 }
 
+.endorsement-slider #slider .containers .img-container .img-container-inner {
+  position: relative;
+  width: 100%;
+}
+
 .endorsement-slider #slider .containers .img-container img {
-  width: auto;
-  height: 28.6rem;
+  position: absolute;
+  left: -50%;
+  top: 0;
+  width: 100%;
+  height: auto;
   -o-object-fit: cover;
      object-fit: cover;
-  display: none;
-  transform: translateX(-100px);
-  display: none;
   opacity: 0;
-  margin-bottom: 4.5rem;
-}
-
-@media (max-width: 767.98px) {
-  .endorsement-slider #slider .containers .img-container img {
-    width: 25rem;
-  }
-}
-
-@media (min-width: 992px) {
-  .endorsement-slider #slider .containers .img-container img {
-    height: 56rem;
-    position: absolute;
-    margin-bottom: 0;
-  }
+  transition: all ease 500ms;
 }
 
 .endorsement-slider #slider .containers .img-container img.active {
-  display: block;
+  opacity: 1;
+  left: 0;
+  transition: all 300ms ease 600ms;
 }
 
 .endorsement-slider #slider .containers .details-container {
-  padding: 4rem;
-  width: 90%;
-  height: 45.4rem;
-  margin: 0 auto;
-  background: #fff;
   position: relative;
 }
 
 @media (min-width: 992px) {
   .endorsement-slider #slider .containers .details-container {
-    width: 32.917vw;
-    height: 43.9rem;
-    padding: 5rem;
+    height: 45rem;
   }
+}
+
+.endorsement-slider #slider .containers .details-container:before {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 120%;
+  height: 100%;
+  background: #fff;
 }
 
 .endorsement-slider #slider .containers .details-container .details-block {
   position: absolute;
-  width: 80%;
-  top: 5rem;
-  left: 5rem;
+  width: 100%;
   top: 50%;
-  transform: translateY(0);
-  display: none;
+  left: 50%;
+  transform: translate(-60%, 0);
   opacity: 0;
+  transition: all ease 500ms;
+  pointer-events: none;
 }
 
 .endorsement-slider #slider .containers .details-container .details-block.active {
-  display: block;
+  transition: all 500ms ease 600ms;
+  opacity: 1;
+  transform: translate(-60%, -50%);
+  pointer-events: auto;
 }
 
 .endorsement-slider #slider .containers .details-container .details-block h3 {
