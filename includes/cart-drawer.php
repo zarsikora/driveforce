@@ -1,32 +1,47 @@
 <?php
-function df_get_cart_price()
+function df_get_cart_totals()
 {
-    $total = WC()->cart->get_cart_contents_total();
-
-    wp_send_json_success($total);
+    $cartTotals = WC()->cart->get_totals();
+    wp_send_json_success(['cartTotals' => $cartTotals]);
     wp_die();
 }
 add_action('wp_ajax_df_get_cart_price', 'df_get_cart_price');
 add_action('wp_ajax_nopriv_df_get_cart_price', 'df_get_cart_price');
 
+function df_update_cart_item_quantity()
+{
+    $cartItemKey = $_POST['cartItemKey'];
+    $quantity = $_POST['quantity'];
+
+    $setQuantity = WC()->cart->set_quantity($cartItemKey, $quantity);
+    $cartTotals = WC()->cart->get_totals();
+
+    wp_send_json_success(['setQuantity' => $setQuantity, 'cartTotals' => $cartTotals]);
+    wp_die();
+}
+add_action('wp_ajax_df_update_cart_item_quantity', 'df_update_cart_item_quantity');
+add_action('wp_ajax_nopriv_df_update_cart_item_quantity', 'df_update_cart_item_quantity');
+
 function df_remove_product_from_cart()
 {
     $cartItemKey = $_POST['cartItemKey'];
-//        $cartId = WC()->cart->generate_cart_id( 'PRODUCT ID' );
-//        $cartItemKey = WC()->cart->find_product_in_cart( $cartId );
 
     if($cartItemKey)
     {
         $remove = WC()->cart->remove_cart_item($cartItemKey);
 
-//        WC()->cart->remove_cart_item( $cartItemKey );
-
-        echo json_encode($remove);
-        die();
+        wp_send_json_success([
+            'cartItemKey' => $cartItemKey,
+            'removed' => $remove,
+            'cartTotal' => WC()->cart->get_cart_contents_total(),
+            'cartSubtotal' => WC()->cart->get_cart_subtotal(),
+            'cartTotals' => WC()->cart->get_totals()
+        ]);
+        wp_die();
     }
 
-    echo json_encode('Invalid Cart Item Key');
-    die();
+    wp_send_json_error('Invalid Cart Item Key');
+    wp_die();
 }
 add_action('wp_ajax_df_remove_product_from_cart', 'df_remove_product_from_cart');
 add_action('wp_ajax_nopriv_df_remove_product_from_cart', 'df_remove_product_from_cart');
@@ -56,20 +71,8 @@ function df_update_cart_item()
         $price = '$'.number_format((float)$data->get_price(), 2, '.', '');
         $newTotal = '$'.number_format((float)WC()->cart->get_total(), 2, '.', '');
 
-        // Update purchase type meta data
-        // THIS WONT UPDATE TOTALS I DONT THINK
-//        $cartContents = WC()->cart->cart_contents;
-//
-//        foreach($cartContents as $cart_item_id => $item)
-//        {
-//            if($cart_item_id != $addItem) continue;
-//
-//            $item['wcsatt_data']['active_subscription_scheme'] = $purchaseType;
-//            WC()->cart->cart_contents[$cart_item_id] = $item;
-//        }
-
         wp_send_json_success([
-            'newTotal' => WC()->cart->get_totals(),
+            'cartTotals' => WC()->cart->get_totals(),
             'price' => $price,
             'newKey' => $addItem,
             'oldKey' => $cart_item_key

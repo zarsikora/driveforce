@@ -72,27 +72,35 @@ let scroll = window.requestAnimationFrame ||
 /**
  * Quantity integer input on PDP
  */
-$('<div class="quantity-nav"><button class="quantity-button quantity-up">+</button><button class="quantity-button quantity-down">-</button></div>').insertAfter('.product-info .quantity input');
-$('.product-info .quantity').each(function () {
-    var spinner = $(this),
+$('.product-info .quantity, .product .quantity').each(function ()
+{
+    $('<div class="quantity-nav"><button class="quantity-button quantity-up">+</button><button class="quantity-button quantity-down">-</button></div>').insertAfter($('input', $(this)));
+
+    let spinner = $(this),
         input = spinner.find('input[type="number"]'),
         btnUp = spinner.find('.quantity-up'),
         btnDown = spinner.find('.quantity-down'),
         min = input.attr('min'),
         max = input.attr('max');
 
-    btnUp.click(function () {
-        var oldValue = parseFloat(input.val());
+    btnUp.click(function ()
+    {
+        let oldValue = parseFloat(input.val());
+
         if (oldValue >= max) {
             var newVal = oldValue;
         } else {
             var newVal = oldValue + 1;
         }
+
         spinner.find("input").val(newVal);
         spinner.find("input").trigger("change");
+
+        updateQuantity(spinner.parents('.cart-drawer-product').attr('data-cart-item-key'), newVal);
     });
 
-    btnDown.click(function () {
+    btnDown.click(function ()
+    {
         var oldValue = parseFloat(input.val());
         if (oldValue <= min) {
             var newVal = oldValue;
@@ -101,9 +109,36 @@ $('.product-info .quantity').each(function () {
         }
         spinner.find("input").val(newVal);
         spinner.find("input").trigger("change");
-    });
 
+        updateQuantity(spinner.parents('.cart-drawer-product').attr('data-cart-item-key'), newVal);
+    });
 });
+
+function updateQuantity(cartItemKey, quantity)
+{
+    // Trigger ajax to update the cart item quantity
+    // Need the cart item key
+    $.ajax({
+        url: localizedVars.ajaxurl,
+        method: 'post',
+        dataType: 'json',
+        data: {
+            action: 'df_update_cart_item_quantity',
+            cartItemKey: cartItemKey,
+            quantity: quantity
+        },
+        success: function(data)
+        {
+            console.log(data);
+
+            updateCartDrawerTotal(data.data.cartTotals);
+        },
+        error: function(error)
+        {
+            console.log(error);
+        }
+    })
+}
 
 /**
  * Cart Drawer

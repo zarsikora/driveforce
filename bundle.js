@@ -34039,198 +34039,6 @@ return Splitting;
 
 })));
 
-window.$ = window.jQuery = jQuery;
-
-const environment = localizedVars['environment'];
-
-const variantIDs = (environment === 'local') ? [731, 732, 733] : [640, 641, 642];
-
-const fastCheckout = $('.fast-checkout');
-// const fastCheckoutSelect = $('select[name="fast-checkout-variant"]');
-const fastCheckoutSelect = $('.fast-checkout-variant-select .selected-option');
-const fastCheckoutSelectOptions = $('.fast-checkout-variant-select .dropdown a');
-const fastCheckoutSubmit = $('.fast-checkout-submit');
-const fastCheckoutPurchaseType = $('input[name="fast-checkout-purchase-type"]');
-const fastCheckoutMobileClose = $('.fast-checkout .header .close');
-const fastCheckoutMobileOpen = $('.fast-checkout-mobile-bar .arrow');
-const fastCheckoutMobileButtons = $('.fast-checkout-variant-select .mobile .btn');
-
-let selectDropdownOpen = false;
-
-if(fastCheckoutSelect)
-{
-    let option1 = $('.fast-checkout-purchase-option.option1');
-    let option2 = $('.fast-checkout-purchase-option.option2');
-
-    function updateSelectedOption(variantID)
-    {
-        const selectedType = $('input[name="fast-checkout-purchase-type"]:checked').val();
-        const type = (selectedType == '1_month') ? 'Monthly Subscription' : 'One Time Purchase';
-        const product = (variantID === variantIDs[0]) ? 'DF-18 Pro 30 Pack' : (variantID === variantIDs[1]) ? 'DF-18 Amateur 20 Pack' : 'DF-18 Weekend Warrior 10 Pack';
-
-        $('.fast-checkout-variant-select .selected-product').text(product);
-        $('.fast-checkout-variant-select .selected-type').text(type);
-    }
-
-    function updatePurchaseTypes(data)
-    {
-        const discount = data.scheme[0].subscription_discount;
-        const price = data.variation.display_price;
-        const subscriptionPrice = price - ((discount / 100) * price);
-
-        $('.subscribe-price', option1).text('$'+subscriptionPrice);
-        $('.regular-price', option1).text('$'+price);
-        $('.regular-price', option2).text('$'+price);
-    }
-
-    function getProductObject(variantID)
-    {
-        const prodID = 581; // Should this be hardcoded? For now with one product it should be fine
-
-        // Get product object
-        $.ajax({
-            url: localizedVars.ajaxurl,
-            method: 'post',
-            dataType: 'json',
-            data: {
-                action: 'df_get_product_object',
-                prodID: prodID,
-                variationID: variantID
-            },
-            success: function(data)
-            {
-                console.log(data);
-
-                updatePurchaseTypes(data);
-                updateSelectedOption(data.variation.variation_id);
-            },
-            error: function(error)
-            {
-                console.log(error);
-            }
-        });
-    }
-
-    $('body').on('mousemove', function(e)
-    {
-        if(!selectDropdownOpen) return;
-
-        if(!$(e.target).parents('.fast-checkout-variant-select .select').length && !$(e.target).hasClass('select'))
-        {
-            $('.fast-checkout-variant-select .dropdown').removeClass('active');
-            selectDropdownOpen = false;
-        }
-    });
-
-    fastCheckoutMobileClose.on('click', function(e)
-    {
-        e.preventDefault();
-
-        $('body').removeClass('fast-checkout-mobile-open');
-    });
-
-    fastCheckoutMobileOpen.on('click', function(e)
-    {
-        e.preventDefault();
-
-        $('body').addClass('fast-checkout-mobile-open');
-    });
-
-    fastCheckoutSelect.on('click', function(e)
-    {
-        e.preventDefault();
-
-        $(this).nextAll('.dropdown').addClass('active');
-        selectDropdownOpen = true;
-    });
-
-    fastCheckoutSelectOptions.on('click', function(e)
-    {
-        e.preventDefault();
-
-        // Close dropdown
-        $(this).parents('.dropdown').removeClass('active');
-        selectDropdownOpen = false;
-
-        // Update selected variant id
-        fastCheckoutSelect.attr('data-variant-id', $(this).attr('data-variant-id'));
-
-        // Get variant object
-        getProductObject($(this).attr('data-variant-id'));
-    });
-
-    // Product variant change handler
-    // fastCheckoutSelect.on('change', function(e)
-    // {
-    //     e.preventDefault();
-    //
-    //     getProductObject(fastCheckoutSelect.val());
-    // });
-
-    fastCheckoutMobileButtons.on('click', function(e)
-    {
-        e.preventDefault();
-
-        fastCheckoutMobileButtons.removeClass('selected');
-        $(this).addClass('selected');
-
-        // Update selected variant id
-        fastCheckoutSelect.attr('data-variant-id', $(this).attr('data-variant-id'));
-
-        getProductObject($(this).attr('data-variant-id'));
-    });
-
-    // Purchase type change handler
-    fastCheckoutPurchaseType.on('change', function()
-    {
-        const purchaseType = ($(this).val() === '1_month') ? 'Monthly Subscription' : 'One-time purchase';
-
-        $('.fast-checkout-mobile-bar .purchase .subscription').text(purchaseType);
-        $('.fast-checkout-variant-select .selected-type').text(purchaseType);
-    });
-
-    // Proceed to checkout
-    fastCheckoutSubmit.on('click', function(e)
-    {
-        e.preventDefault();
-
-        const variantID = fastCheckoutSelect.attr('data-variant-id');
-        const prodID = 581; // Should this be hardcoded? For now with one product it should be fine
-        const purchaseType = $('input[name="fast-checkout-purchase-type"]:checked').val();
-
-        $.ajax({
-            url: localizedVars.ajaxurl,
-            method: 'post',
-            dataType: 'json',
-            data: {
-                action: 'fast_checkout',
-                prodID: prodID,
-                variantID: variantID,
-                purchaseType: purchaseType
-            },
-            success: function(data)
-            {
-                console.log(data);
-
-                window.location = '/cart';
-            },
-            error: function(error)
-            {
-                console.log(error);
-            }
-        });
-    });
-
-    $(window).on('scroll', function(e)
-    {
-        if(window.pageYOffset > 1000)
-        {
-            $('body').addClass('fast-checkout-active');
-            return;
-        }
-        $('body').removeClass('fast-checkout-active');
-    });
-}
 /*!
  * Splide.js
  * Version  : 2.4.20
@@ -40092,6 +39900,198 @@ window.Splide = complete_Splide;
 ;
 window.$ = window.jQuery = jQuery;
 
+const environment = localizedVars['environment'];
+
+const variantIDs = (environment === 'local') ? [731, 732, 733] : [640, 641, 642];
+
+const fastCheckout = $('.fast-checkout');
+// const fastCheckoutSelect = $('select[name="fast-checkout-variant"]');
+const fastCheckoutSelect = $('.fast-checkout-variant-select .selected-option');
+const fastCheckoutSelectOptions = $('.fast-checkout-variant-select .dropdown a');
+const fastCheckoutSubmit = $('.fast-checkout-submit');
+const fastCheckoutPurchaseType = $('input[name="fast-checkout-purchase-type"]');
+const fastCheckoutMobileClose = $('.fast-checkout .header .close');
+const fastCheckoutMobileOpen = $('.fast-checkout-mobile-bar .arrow');
+const fastCheckoutMobileButtons = $('.fast-checkout-variant-select .mobile .btn');
+
+let selectDropdownOpen = false;
+
+if(fastCheckoutSelect)
+{
+    let option1 = $('.fast-checkout-purchase-option.option1');
+    let option2 = $('.fast-checkout-purchase-option.option2');
+
+    function updateSelectedOption(variantID)
+    {
+        const selectedType = $('input[name="fast-checkout-purchase-type"]:checked').val();
+        const type = (selectedType == '1_month') ? 'Monthly Subscription' : 'One Time Purchase';
+        const product = (variantID === variantIDs[0]) ? 'DF-18 Pro 30 Pack' : (variantID === variantIDs[1]) ? 'DF-18 Amateur 20 Pack' : 'DF-18 Weekend Warrior 10 Pack';
+
+        $('.fast-checkout-variant-select .selected-product').text(product);
+        $('.fast-checkout-variant-select .selected-type').text(type);
+    }
+
+    function updatePurchaseTypes(data)
+    {
+        const discount = data.scheme[0].subscription_discount;
+        const price = data.variation.display_price;
+        const subscriptionPrice = price - ((discount / 100) * price);
+
+        $('.subscribe-price', option1).text('$'+subscriptionPrice);
+        $('.regular-price', option1).text('$'+price);
+        $('.regular-price', option2).text('$'+price);
+    }
+
+    function getProductObject(variantID)
+    {
+        const prodID = 581; // Should this be hardcoded? For now with one product it should be fine
+
+        // Get product object
+        $.ajax({
+            url: localizedVars.ajaxurl,
+            method: 'post',
+            dataType: 'json',
+            data: {
+                action: 'df_get_product_object',
+                prodID: prodID,
+                variationID: variantID
+            },
+            success: function(data)
+            {
+                console.log(data);
+
+                updatePurchaseTypes(data);
+                updateSelectedOption(data.variation.variation_id);
+            },
+            error: function(error)
+            {
+                console.log(error);
+            }
+        });
+    }
+
+    $('body').on('mousemove', function(e)
+    {
+        if(!selectDropdownOpen) return;
+
+        if(!$(e.target).parents('.fast-checkout-variant-select .select').length && !$(e.target).hasClass('select'))
+        {
+            $('.fast-checkout-variant-select .dropdown').removeClass('active');
+            selectDropdownOpen = false;
+        }
+    });
+
+    fastCheckoutMobileClose.on('click', function(e)
+    {
+        e.preventDefault();
+
+        $('body').removeClass('fast-checkout-mobile-open');
+    });
+
+    fastCheckoutMobileOpen.on('click', function(e)
+    {
+        e.preventDefault();
+
+        $('body').addClass('fast-checkout-mobile-open');
+    });
+
+    fastCheckoutSelect.on('click', function(e)
+    {
+        e.preventDefault();
+
+        $(this).nextAll('.dropdown').addClass('active');
+        selectDropdownOpen = true;
+    });
+
+    fastCheckoutSelectOptions.on('click', function(e)
+    {
+        e.preventDefault();
+
+        // Close dropdown
+        $(this).parents('.dropdown').removeClass('active');
+        selectDropdownOpen = false;
+
+        // Update selected variant id
+        fastCheckoutSelect.attr('data-variant-id', $(this).attr('data-variant-id'));
+
+        // Get variant object
+        getProductObject($(this).attr('data-variant-id'));
+    });
+
+    // Product variant change handler
+    // fastCheckoutSelect.on('change', function(e)
+    // {
+    //     e.preventDefault();
+    //
+    //     getProductObject(fastCheckoutSelect.val());
+    // });
+
+    fastCheckoutMobileButtons.on('click', function(e)
+    {
+        e.preventDefault();
+
+        fastCheckoutMobileButtons.removeClass('selected');
+        $(this).addClass('selected');
+
+        // Update selected variant id
+        fastCheckoutSelect.attr('data-variant-id', $(this).attr('data-variant-id'));
+
+        getProductObject($(this).attr('data-variant-id'));
+    });
+
+    // Purchase type change handler
+    fastCheckoutPurchaseType.on('change', function()
+    {
+        const purchaseType = ($(this).val() === '1_month') ? 'Monthly Subscription' : 'One-time purchase';
+
+        $('.fast-checkout-mobile-bar .purchase .subscription').text(purchaseType);
+        $('.fast-checkout-variant-select .selected-type').text(purchaseType);
+    });
+
+    // Proceed to checkout
+    fastCheckoutSubmit.on('click', function(e)
+    {
+        e.preventDefault();
+
+        const variantID = fastCheckoutSelect.attr('data-variant-id');
+        const prodID = 581; // Should this be hardcoded? For now with one product it should be fine
+        const purchaseType = $('input[name="fast-checkout-purchase-type"]:checked').val();
+
+        $.ajax({
+            url: localizedVars.ajaxurl,
+            method: 'post',
+            dataType: 'json',
+            data: {
+                action: 'fast_checkout',
+                prodID: prodID,
+                variantID: variantID,
+                purchaseType: purchaseType
+            },
+            success: function(data)
+            {
+                console.log(data);
+
+                window.location = '/cart';
+            },
+            error: function(error)
+            {
+                console.log(error);
+            }
+        });
+    });
+
+    $(window).on('scroll', function(e)
+    {
+        if(window.pageYOffset > 1000)
+        {
+            $('body').addClass('fast-checkout-active');
+            return;
+        }
+        $('body').removeClass('fast-checkout-active');
+    });
+}
+window.$ = window.jQuery = jQuery;
+
 var _ss = _ss || [];
 _ss.push(['_setDomain', 'https://koi-3QNE6LJPAE.marketingautomation.services/net']);
 _ss.push(['_setAccount', 'KOI-4DT9NRPKF6']);
@@ -40320,12 +40320,12 @@ if(removeProductButtons.length)
             },
             success: function(data)
             {
-                console.log(data);
+                const cartTotals = data.data.cartTotals;
 
                 // Remove html
                 _this.parents('.cart-drawer-product').remove();
 
-                // Update totals
+                updateCartDrawerTotal(cartTotals);
 
                 // If no products, display empty cart message
             },
@@ -40361,27 +40361,30 @@ if(subscriptionToggles.length)
             },
             success: function(data)
             {
-                console.log('success');
                 console.log(data);
+                const cartTotals = data.data.cartTotals;
 
                 // Update cart item data key
                 product.attr('data-cart-item-key', data.data.newKey);
 
                 // Update item price
-                // console.log($('.product-price', product));
                 $('.product-price', product).text(data.data.price);
 
                 // Update totals
-                $('.cart-drawer-totals .cart-subtotal').text('$' + data.data.newTotal.subtotal);
-                $('.cart-drawer-totals .cart-total').text('$' + data.data.newTotal.total);
+                updateCartDrawerTotal(cartTotals);
             },
             error: function(error)
             {
-                console.log('error');
                 console.log(error);
             }
         });
     });
+}
+
+function updateCartDrawerTotal(totals = [])
+{
+    $('.cart-drawer-totals .cart-subtotal').text('$' + totals.subtotal);
+    $('.cart-drawer-totals .cart-total').text('$' + totals.total);
 }
 //LET ME USE THE $ FOR JQUERY
 window.$ = window.jQuery = jQuery;
@@ -40457,27 +40460,35 @@ let scroll = window.requestAnimationFrame ||
 /**
  * Quantity integer input on PDP
  */
-$('<div class="quantity-nav"><button class="quantity-button quantity-up">+</button><button class="quantity-button quantity-down">-</button></div>').insertAfter('.product-info .quantity input');
-$('.product-info .quantity').each(function () {
-    var spinner = $(this),
+$('.product-info .quantity, .product .quantity').each(function ()
+{
+    $('<div class="quantity-nav"><button class="quantity-button quantity-up">+</button><button class="quantity-button quantity-down">-</button></div>').insertAfter($('input', $(this)));
+
+    let spinner = $(this),
         input = spinner.find('input[type="number"]'),
         btnUp = spinner.find('.quantity-up'),
         btnDown = spinner.find('.quantity-down'),
         min = input.attr('min'),
         max = input.attr('max');
 
-    btnUp.click(function () {
-        var oldValue = parseFloat(input.val());
+    btnUp.click(function ()
+    {
+        let oldValue = parseFloat(input.val());
+
         if (oldValue >= max) {
             var newVal = oldValue;
         } else {
             var newVal = oldValue + 1;
         }
+
         spinner.find("input").val(newVal);
         spinner.find("input").trigger("change");
+
+        updateQuantity(spinner.parents('.cart-drawer-product').attr('data-cart-item-key'), newVal);
     });
 
-    btnDown.click(function () {
+    btnDown.click(function ()
+    {
         var oldValue = parseFloat(input.val());
         if (oldValue <= min) {
             var newVal = oldValue;
@@ -40486,9 +40497,36 @@ $('.product-info .quantity').each(function () {
         }
         spinner.find("input").val(newVal);
         spinner.find("input").trigger("change");
-    });
 
+        updateQuantity(spinner.parents('.cart-drawer-product').attr('data-cart-item-key'), newVal);
+    });
 });
+
+function updateQuantity(cartItemKey, quantity)
+{
+    // Trigger ajax to update the cart item quantity
+    // Need the cart item key
+    $.ajax({
+        url: localizedVars.ajaxurl,
+        method: 'post',
+        dataType: 'json',
+        data: {
+            action: 'df_update_cart_item_quantity',
+            cartItemKey: cartItemKey,
+            quantity: quantity
+        },
+        success: function(data)
+        {
+            console.log(data);
+
+            updateCartDrawerTotal(data.data.cartTotals);
+        },
+        error: function(error)
+        {
+            console.log(error);
+        }
+    })
+}
 
 /**
  * Cart Drawer

@@ -19,12 +19,12 @@ if(removeProductButtons.length)
             },
             success: function(data)
             {
-                console.log(data);
+                const cartTotals = data.data.cartTotals;
 
                 // Remove html
                 _this.parents('.cart-drawer-product').remove();
 
-                // Update totals
+                updateCartDrawerTotal(cartTotals);
 
                 // If no products, display empty cart message
             },
@@ -60,25 +60,28 @@ if(subscriptionToggles.length)
             },
             success: function(data)
             {
-                console.log('success');
                 console.log(data);
+                const cartTotals = data.data.cartTotals;
 
                 // Update cart item data key
                 product.attr('data-cart-item-key', data.data.newKey);
 
                 // Update item price
-                // console.log($('.product-price', product));
                 $('.product-price', product).text(data.data.price);
 
                 // Update totals
-                $('.cart-drawer-totals .cart-subtotal').text('$' + data.data.newTotal.subtotal);
-                $('.cart-drawer-totals .cart-total').text('$' + data.data.newTotal.total);
+                updateCartDrawerTotal(cartTotals);
             },
             error: function(error)
             {
-                console.log('error');
                 console.log(error);
             }
         });
     });
+}
+
+function updateCartDrawerTotal(totals = [])
+{
+    $('.cart-drawer-totals .cart-subtotal').text('$' + totals.subtotal);
+    $('.cart-drawer-totals .cart-total').text('$' + totals.total);
 }

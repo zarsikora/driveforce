@@ -46,8 +46,8 @@ function scripts() {
             "./node_modules/@barba/core/dist/barba.umd.js",
             "./node_modules/gsap/dist/gsap.js",
             "./node_modules/splitting/dist/splitting.js",
-            "./js/fast-checkout.js",
             "./node_modules/@splidejs/splide/dist/js/splide.js",
+            "./js/fast-checkout.js",
             "./js/sharpspring.js",
             "./js/cart-drawer.js",
             "./js/main.js"
