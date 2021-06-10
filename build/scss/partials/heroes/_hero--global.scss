@@ -26,6 +26,9 @@
                     }
     
                     .text-container {
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: center;
                         @include media-breakpoint-down(sm){
                             max-width: 50rem;
                             margin: 0 auto;
@@ -33,22 +36,38 @@
                         @media (min-width: 1440px){
                             margin-left: -1.5rem;
                         }
+
+                        h1 {
+                            flex: 0 0 100%;
+                            order: 1;
+                        }
+
+                        .image-container {
+                            flex: 0 0 100%;
+                            order: 2;
+                        }
     
                         .copy {
                             opacity: 0;
-                            margin-top: 3.5rem;
+                            flex: 0 0 100%;
+                            order: 3;
 
                             h4 {
                                 font-size: 2.4rem;
                                 font-family: $boldType;
-                                // TODO: add font fam and responsive sizing
                             }
     
                             p {
-                                @media(min-width: 550px) and (max-width: 767px){
-                                    margin: 2rem auto;
-                                }
+                                margin: 0;
                             }
+                        }
+
+                        .btn {
+                            order: 4;
+                        }
+
+                        .logos {
+                            order: 5;
                         }
                     }
                 }
@@ -151,7 +170,6 @@
         .logos {
             &.desktop {
                 opacity: 1;
-                margin-top: 7rem;
             }
 
             svg {
