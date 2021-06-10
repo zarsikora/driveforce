@@ -12451,6 +12451,7 @@ a.btn:hover, body.woocommerce-cart #content .return-to-shop a.button:hover, .woo
 
 .hero.home-hero .inner .row .col-lg-5 .text-container .btn, .hero.home-hero .inner .row .col-lg-5 .text-container #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form button, #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form .hero.home-hero .inner .row .col-lg-5 .text-container button, .hero.home-hero .inner .row .col-lg-5 .text-container body.woocommerce-cart #content .return-to-shop .button, body.woocommerce-cart #content .return-to-shop .hero.home-hero .inner .row .col-lg-5 .text-container .button, .hero.home-hero .inner .row .col-lg-5 .text-container .woocommerce-ResetPassword .button, .woocommerce-ResetPassword .hero.home-hero .inner .row .col-lg-5 .text-container .button {
   order: 4;
+  margin: 2rem auto;
 }
 
 .hero.home-hero .inner .row .col-lg-5 .text-container .logos {
