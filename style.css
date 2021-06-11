@@ -12383,6 +12383,7 @@ a.btn:hover, body.woocommerce-cart #content .return-to-shop a.button:hover, .woo
 @media (min-width: 768px) {
   .hero.home-hero .inner .row {
     margin: 4rem 0 0;
+    align-items: center;
   }
 }
 
@@ -12412,6 +12413,12 @@ a.btn:hover, body.woocommerce-cart #content .return-to-shop a.button:hover, .woo
   .hero.home-hero .inner .row .col-lg-5 .text-container {
     max-width: 50rem;
     margin: 0 auto;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero.home-hero .inner .row .col-lg-5 .text-container {
+    justify-content: flex-start;
   }
 }
 
@@ -12449,9 +12456,11 @@ a.btn:hover, body.woocommerce-cart #content .return-to-shop a.button:hover, .woo
   margin: 0;
 }
 
-.hero.home-hero .inner .row .col-lg-5 .text-container .btn, .hero.home-hero .inner .row .col-lg-5 .text-container #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form button, #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form .hero.home-hero .inner .row .col-lg-5 .text-container button, .hero.home-hero .inner .row .col-lg-5 .text-container body.woocommerce-cart #content .return-to-shop .button, body.woocommerce-cart #content .return-to-shop .hero.home-hero .inner .row .col-lg-5 .text-container .button, .hero.home-hero .inner .row .col-lg-5 .text-container .woocommerce-ResetPassword .button, .woocommerce-ResetPassword .hero.home-hero .inner .row .col-lg-5 .text-container .button {
+.hero.home-hero .inner .row .col-lg-5 .text-container .btn, .hero.home-hero .inner .row .col-lg-5 .text-container #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form button, #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form .hero.home-hero .inner .row .col-lg-5 .text-container button, .hero.home-hero .inner .row .col-lg-5 .text-container body.woocommerce-cart #content .return-to-shop .button, body.woocommerce-cart #content .return-to-shop .hero.home-hero .inner .row .col-lg-5 .text-container .button, .hero.home-hero .inner .row .col-lg-5 .text-container .woocommerce-ResetPassword .button, .woocommerce-ResetPassword .hero.home-hero .inner .row .col-lg-5 .text-container .button,
+.hero.home-hero .inner .row .col-lg-5 .text-container .btns-wrapper {
+  flex: 0 0 100%;
   order: 4;
-  margin: 2rem auto;
+  margin: 2rem 0;
 }
 
 .hero.home-hero .inner .row .col-lg-5 .text-container .logos {
