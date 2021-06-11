@@ -16,7 +16,7 @@
         <?php if(have_rows('slides')): ?>
             <div id="slider">
                 <div class="containers row">
-                    <div class="img-container col-md-6 offset-md-1">
+                    <div class="img-container col-md-7 col-lg-6 offset-lg-1">
                         <div class="img-container-inner">
                             <?php while(have_rows('slides')): the_row(); ?>
                                 <?php
