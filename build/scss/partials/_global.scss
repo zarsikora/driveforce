@@ -156,8 +156,8 @@ h2 {
     @include media-breakpoint-up(md) {
         font-size: 4rem;
     }
-    @include media-breakpoint-up(lg){
-        font-size: 3.472vw;
+    @media(min-width: 1440px) {
+        font-size: 2.777vw;
     }
     @media(min-width: 1920px) {
         font-size: 6.6rem;
