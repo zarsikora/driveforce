@@ -1,47 +1,62 @@
-//TODO: mobile styling
-.cta-module {
-  .module-padded {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-
-    svg.logo {
-      width: 8.2rem;
-      height: auto;
-      @media(min-width: 1440px){
-        width: 5.694vw;
-      }
-      @media(min-width: 1920px){
-        width: 10.9rem;
-      }
+.cta-module.module-wrapper {
+    position: relative;
+    padding-bottom: 16rem;
+    @include media-breakpoint-up(lg) {
+        padding-bottom: 29rem;
+    }
+    @media(min-width: 1440px) {
+        padding-bottom: calc(9vw + 16rem);
     }
 
-    h2 {
-      color: $lightText;
-      margin: 8.6rem 0 4rem;
-      text-align: center;
-      font-size: 4rem;
-      @include media-breakpoint-up(lg){
-        font-size: 6rem;
-      }
-      @media(min-width: 1440px){
-        font-size: 4.167vw;
-      }
-      @media(min-width: 1920px){
-        font-size: 8rem;
-      }
+    &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        width: .1rem;
+        height: 10rem;
+        background: $sage;
+        @include media-breakpoint-up(lg) {
+            height: 20rem;
+        }
     }
 
-    .btn {
-      margin-bottom: 11rem;
-      @media(min-width: 1440px){
-        margin-bottom: 7.639vw;
-      }
-      @media(min-width: 1920px){
-        margin-bottom: 14.6rem;
-      }
+    .module-padded {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        svg.logo {
+            width: 8.2rem;
+            height: auto;
+            @media(min-width: 1440px){
+                width: 5.694vw;
+            }
+            @media(min-width: 1920px){
+                width: 10.9rem;
+            }
+        }
+
+        h2 {
+            color: $lightText;
+            margin: 8.6rem 0 4rem;
+            text-align: center;
+            font-size: 4rem;
+            @include media-breakpoint-up(lg){
+                font-size: 6rem;
+            }
+            @media(min-width: 1440px){
+                font-size: 4.167vw;
+            }
+            @media(min-width: 1920px){
+                font-size: 8rem;
+            }
+        }
+
+        .btn {
+        }
     }
-  }
 }
