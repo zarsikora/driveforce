@@ -40460,17 +40460,21 @@ let scroll = window.requestAnimationFrame ||
  */
 $('.product-info .quantity, .product .quantity').each(function ()
 {
-    $('<div class="quantity-nav"><button class="quantity-button quantity-up">+</button><button class="quantity-button quantity-down">-</button></div>').insertAfter($('input', $(this)));
+    const updateOnClick = $(this).parents('.cart-drawer').length;
+
+    $('<div class="quantity-nav"><a href="#" class="quantity-button quantity-up">+</a><a href="#" class="quantity-button quantity-down">-</a></div>').insertAfter($('input', $(this)));
 
     let spinner = $(this),
         input = spinner.find('input[type="number"]'),
         btnUp = spinner.find('.quantity-up'),
         btnDown = spinner.find('.quantity-down'),
         min = input.attr('min'),
-        max = input.attr('max');
+        max = (input.attr('max')) ? input.attr('max') : 100;
 
-    btnUp.click(function ()
+    btnUp.click(function (e)
     {
+        e.preventDefault();
+
         let oldValue = parseFloat(input.val());
         const cartItemKey = spinner.parents('.cart-drawer-product').attr('data-cart-item-key');
 
@@ -40480,20 +40484,25 @@ $('.product-info .quantity, .product .quantity').each(function ()
             var newVal = oldValue + 1;
         }
 
-        spinner.find("input").val(newVal);
-        spinner.find("input").trigger("change");
+        input.val(newVal);
+        input.trigger("change");
 
-        if(!newVal)
+        if (updateOnClick)
         {
-            removeFromCart(spinner.parents('.cart-drawer-product'), cartItemKey);
-            return;
-        }
+            if(!newVal)
+            {
+                removeFromCart(spinner.parents('.cart-drawer-product'), cartItemKey);
+                return;
+            }
 
-        updateQuantity(cartItemKey, newVal);
+            updateQuantity(cartItemKey, newVal);
+        }
     });
 
-    btnDown.click(function ()
+    btnDown.click(function(e)
     {
+        e.preventDefault();
+
         var oldValue = parseFloat(input.val());
         const cartItemKey = spinner.parents('.cart-drawer-product').attr('data-cart-item-key');
 
@@ -40503,16 +40512,19 @@ $('.product-info .quantity, .product .quantity').each(function ()
             var newVal = oldValue - 1;
         }
 
-        spinner.find("input").val(newVal);
-        spinner.find("input").trigger("change");
+        input.val(newVal);
+        input.trigger("change");
 
-        if(!newVal)
+        if(updateOnClick)
         {
-            removeFromCart(spinner.parents('.cart-drawer-product'), cartItemKey);
-            return;
-        }
+            if(!newVal)
+            {
+                removeFromCart(spinner.parents('.cart-drawer-product'), cartItemKey);
+                return;
+            }
 
-        updateQuantity(cartItemKey, newVal);
+            updateQuantity(cartItemKey, newVal);
+        }
     });
 });
 

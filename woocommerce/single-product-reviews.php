@@ -67,11 +67,11 @@ if ( ! comments_open() ) {
             ?>
 
             <?php if(count($comments) > 5) { ?>
-            <div class="text-center position-relative">
-                <a href="#" class="btn-link load-more-reviews">See more reviews</a>
-                <img class="d-none loading-gif" width="30" src="<?php bloginfo('template_directory') ?>/images/loading.gif" />
-            </div>
-        <?php } ?>
+                <div class="text-center position-relative">
+                    <a href="#" class="btn-link load-more-reviews">See more reviews</a>
+                    <img class="d-none loading-gif" width="30" src="<?php bloginfo('template_directory') ?>/images/loading.gif" />
+                </div>
+            <?php } ?>
 
         <?php else : ?>
             <p class="woocommerce-noreviews"><?php esc_html_e( 'There are no reviews yet.', 'woocommerce' ); ?></p>

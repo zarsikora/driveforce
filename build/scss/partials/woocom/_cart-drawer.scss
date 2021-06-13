@@ -190,6 +190,7 @@ body.cart-drawer-open {
                 transform: translateX(26px);
             }
         }
+
         p {
             font-size: 1.2rem;
             margin: 0;
@@ -198,10 +199,6 @@ body.cart-drawer-open {
                 font-size: 1.8rem;
                 font-family: $boldType;
             }
-        }
-
-        .subscribe-toggle {
-
         }
     }
 }
