@@ -22,7 +22,7 @@
 
                 li {
                     font-size: 1.8rem;
-                    font-family: $mediumType;
+                    font-family: $bookType;
                     @include media-breakpoint-up(lg){
                         font-size: 1.4rem;
                     }
@@ -55,9 +55,8 @@
             }
 
             .inner {
-                width: 80.556vw;
                 margin: 0 auto;
-                padding-top: 6rem;
+                padding: 6rem 3.6rem 0 3.6rem;
 
                 .upper-nav {
                     margin-bottom: 4rem;
@@ -75,26 +74,61 @@
                 }
 
                 .newsletter {
+                    border-top: 1px solid $sage;
+                    border-bottom: 1px solid $sage;
+                    margin-left: -3.6rem;
+                    margin-right: -3.6rem;
+                    padding: 4rem 3.6rem;
+                    width: calc(100vw + 7.2rem);
+
+                    h4 {
+                        font-family: $boldType;
+                        font-size: 1.4rem;
+                    }
+
+                    p {
+                        font-size: 1.4rem;
+                    }
+
                     #form-wrapper {
+
+                        .field-group {
+                            background: none;
+
+                            &:after {
+                                display: none;
+                            }
+                        }
+
+                        .field-group:first-child input {
+                            border-radius: .4rem .4rem 0 0;
+                        }
+
+                        .field-group.last-field input {
+                            border-radius: 0 0 .4rem .4rem;
+                        }
+
                         input {
-                            border-radius: .4rem;
                             background-color: transparent;
-                            border: 1px solid #fff;
-                            width: 66%;
+                            border: 1px solid $sage;
+                            border-radius: 0;
+                            width: 100%;
                             display: inline-block;
                             font-size: 1.4rem;
                             height: 4rem;
+                            color: #fff;
+
+                            &:focus {
+                                border-color: #fff;
+                            }
+
+                            &::placeholder {
+                                color: #fff;
+                            }
                         }
 
                         button {
-                            width: 33%;
                             display: inline-block;
-                            height: 4rem;
-                            padding: 0;
-                            margin-top: 2rem;
-                            span {
-                                font-size: 1rem;
-                            }
                         }
                     }
                 }

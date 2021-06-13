@@ -11738,7 +11738,7 @@ body.single-product #header .mobile-nav .mobile-controls button svg {
 
 #footer .top ul.submenu li {
   font-size: 1.8rem;
-  font-family: "Sharp Sans Medium";
+  font-family: "Sharp Sans Book";
 }
 
 @media (min-width: 992px) {
@@ -11785,9 +11785,8 @@ body.single-product #header .mobile-nav .mobile-controls button svg {
 }
 
 #footer .top .inner {
-  width: 80.556vw;
   margin: 0 auto;
-  padding-top: 6rem;
+  padding: 6rem 3.6rem 0 3.6rem;
 }
 
 #footer .top .inner .upper-nav {
@@ -11811,26 +11810,72 @@ body.single-product #header .mobile-nav .mobile-controls button svg {
   }
 }
 
+#footer .top .inner .newsletter {
+  border-top: 1px solid #447563;
+  border-bottom: 1px solid #447563;
+  margin-left: -3.6rem;
+  margin-right: -3.6rem;
+  padding: 4rem 3.6rem;
+  width: calc(100vw + 7.2rem);
+}
+
+#footer .top .inner .newsletter h4 {
+  font-family: "Sharp Sans Bold";
+  font-size: 1.4rem;
+}
+
+#footer .top .inner .newsletter p, #footer .top .inner .newsletter body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 address, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 #footer .top .inner .newsletter address,
+#footer .top .inner .newsletter body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 address, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 #footer .top .inner .newsletter address,
+#footer .top .inner .newsletter body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 address, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 #footer .top .inner .newsletter address,
+#footer .top .inner .newsletter body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 address, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 #footer .top .inner .newsletter address {
+  font-size: 1.4rem;
+}
+
+#footer .top .inner .newsletter #form-wrapper .field-group {
+  background: none;
+}
+
+#footer .top .inner .newsletter #form-wrapper .field-group:after {
+  display: none;
+}
+
+#footer .top .inner .newsletter #form-wrapper .field-group:first-child input {
+  border-radius: .4rem .4rem 0 0;
+}
+
+#footer .top .inner .newsletter #form-wrapper .field-group.last-field input {
+  border-radius: 0 0 .4rem .4rem;
+}
+
 #footer .top .inner .newsletter #form-wrapper input {
-  border-radius: .4rem;
   background-color: transparent;
-  border: 1px solid #fff;
-  width: 66%;
+  border: 1px solid #447563;
+  border-radius: 0;
+  width: 100%;
   display: inline-block;
   font-size: 1.4rem;
   height: 4rem;
+  color: #fff;
+}
+
+#footer .top .inner .newsletter #form-wrapper input:focus {
+  border-color: #fff;
+}
+
+#footer .top .inner .newsletter #form-wrapper input::-moz-placeholder {
+  color: #fff;
+}
+
+#footer .top .inner .newsletter #form-wrapper input:-ms-input-placeholder {
+  color: #fff;
+}
+
+#footer .top .inner .newsletter #form-wrapper input::placeholder {
+  color: #fff;
 }
 
 #footer .top .inner .newsletter #form-wrapper button {
-  width: 33%;
   display: inline-block;
-  height: 4rem;
-  padding: 0;
-  margin-top: 2rem;
-}
-
-#footer .top .inner .newsletter #form-wrapper button span {
-  font-size: 1rem;
 }
 
 #footer .top .inner .disclaimer {
@@ -19871,8 +19916,14 @@ body.woocommerce-account .select2-results__option {
 }
 
 body.fast-checkout-active {
-  padding-bottom: 9.2rem;
+  padding-bottom: 7rem;
   overflow-y: hidden;
+}
+
+@media (min-width: 1200px) {
+  body.fast-checkout-active {
+    padding-bottom: 10rem;
+  }
 }
 
 .fast-checkout {
@@ -19930,6 +19981,7 @@ body.fast-checkout-mobile-open .fast-checkout {
   left: 0;
   bottom: 0;
   width: 100%;
+  height: 7rem;
   background: #071C19;
   transform: translateY(100%);
 }
@@ -19994,6 +20046,7 @@ body.fast-checkout-active .fast-checkout .fast-checkout-mobile-bar {
 @media (min-width: 1200px) {
   .fast-checkout .fast-checkout-build-order {
     margin-bottom: 0;
+    height: 9rem;
   }
 }
 
@@ -20004,6 +20057,13 @@ body.fast-checkout-mobile-open .fast-checkout .fast-checkout-build-order {
 @media (min-width: 1200px) {
   body.fast-checkout-active .fast-checkout .fast-checkout-build-order {
     display: block;
+  }
+}
+
+@media (min-width: 1200px) {
+  .fast-checkout .fast-checkout-build-order > .row {
+    height: 100%;
+    align-items: center;
   }
 }
 
@@ -20057,7 +20117,7 @@ body.fast-checkout-mobile-open .fast-checkout .fast-checkout-build-order {
 
 @media (min-width: 1200px) {
   .fast-checkout div[class*=col] {
-    padding: 3rem;
+    padding: 0 3rem;
     border-right: 1px solid #88E2C1;
   }
 }
