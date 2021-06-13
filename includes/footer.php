@@ -7,7 +7,8 @@
             <div class="top">
                 <div class="inner">
                     <div class="upper-nav row">
-                        <div class="logo col-lg-2">
+
+                        <div class="logo col-md-3 col-lg-2">
                             <a class="logo-link" href="<?php echo home_url(); ?>" aria-label="Return to Home Page">
                                 <svg class="logo" viewBox="0 0 104 104">
                                     <use href="#square-logo"></use>
@@ -15,7 +16,7 @@
                             </a>
                         </div>
 
-                        <ul class="submenu col-lg-2">
+                        <ul class="submenu col-md-3 col-lg-2">
                             <li class="title">Shop</li>
                             <li>
                                 <a href="">DF-18</a>
@@ -25,7 +26,7 @@
                             </li>
                         </ul>
 
-                        <ul class="submenu col-lg-2">
+                        <ul class="submenu col-md-3 col-lg-2">
                             <li class="title">Learn</li>
                             <li>
                                 <a href="">Ingredients</a>
@@ -38,7 +39,7 @@
                             </li>
                         </ul>
 
-                        <ul class="submenu col-lg-2">
+                        <ul class="submenu col-md-3 col-lg-2">
                             <li class="title">About</li>
                             <li>
                                 <a href="">Our Story</a>
@@ -88,9 +89,5 @@
                         <p class="copyright">&copy; DriveForce  <?php echo date('Y'); ?></p>
                     </div>
                 </div>
-            </div>
-
-            <div class="bottom">
-
             </div>
     </footer>
