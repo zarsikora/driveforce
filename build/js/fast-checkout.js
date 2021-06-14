@@ -1,8 +1,8 @@
 window.$ = window.jQuery = jQuery;
 
-const environment = localizedVars['environment'];
+const environment = localized_vars['environment'];
 
-const variantIDs = (environment === 'local') ? [731, 732, 733] : [640, 641, 642];
+const variantIDs = [640, 641, 642];
 
 const fastCheckout = $('.fast-checkout');
 // const fastCheckoutSelect = $('select[name="fast-checkout-variant"]');
@@ -50,7 +50,7 @@ if(fastCheckoutSelect)
 
         // Get product object
         $.ajax({
-            url: localizedVars.ajaxurl,
+            url: localized_vars.ajaxurl,
             method: 'post',
             dataType: 'json',
             data: {
@@ -152,7 +152,7 @@ if(fastCheckoutSelect)
         const purchaseType = $('input[name="fast-checkout-purchase-type"]:checked').val();
 
         $.ajax({
-            url: localizedVars.ajaxurl,
+            url: localized_vars.ajaxurl,
             method: 'post',
             dataType: 'json',
             data: {

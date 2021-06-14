@@ -50,14 +50,11 @@ function bones_load_scripts()
     wp_deregister_script( 'wp-embed' );
 
     wp_register_script( 'main-scripts', get_bloginfo('template_directory') . '/bundle.js');
-    wp_localize_script( 'main-scripts', 'localizedVars', array(
+    wp_localize_script( 'main-scripts', 'localized_vars', array(
         'environment' => wp_get_environment_type(),
-        'ajaxurl' => admin_url('admin-ajax.php'),
-        'posts' => $wp_query->query_vars,
-        'current_page' => get_query_var( 'paged' ) ? get_query_var('paged') : 1,
-        'max_page' => $wp_query->max_num_pages
+        'ajaxurl' => admin_url('admin-ajax.php')
     ));
-    wp_enqueue_script( 'main-scripts', get_bloginfo('template_directory') . '/bundle.js', '', time(), false);
+    wp_enqueue_script( 'main-scripts', get_bloginfo('template_directory') . '/bundle.js', array(), time(), false);
 
     $pageComponents = get_field('components');
 
@@ -76,14 +73,14 @@ add_action( 'wp_enqueue_scripts', 'bones_load_scripts' );
 
 // Add quantity label before woocom quantity field
 function wp_echo_qty_front_add_cart() {
- echo '<h2 class="qty">Quantity </h2>'; 
+    echo '<h2 class="qty">Quantity </h2>';
 }
 
 add_action( 'woocommerce_before_add_to_cart_quantity', 'wp_echo_qty_front_add_cart' );
 
 
 //GET BLOG POSTS FOR AJAX
-function getBlogPosts(){
+function getBlogPosts() {
     $counter = $_POST['pageCounter'];
     $postsPerPage = 6;
     $html = '';

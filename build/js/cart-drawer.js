@@ -10,7 +10,7 @@ if(removeProductButtons.length)
         const cartItemKey = _this.parents('.cart-drawer-product').attr('data-cart-item-key');
 
         $.ajax({
-            url: localizedVars.ajaxurl,
+            url: localized_vars.ajaxurl,
             method: 'post',
             dataType: 'json',
             data: {
@@ -50,7 +50,7 @@ if(subscriptionToggles.length)
         const purchaseType = !toggle.is(':checked') ? '1_month' : '';
 
         $.ajax({
-            url: localizedVars.ajaxurl,
+            url: localized_vars.ajaxurl,
             method: 'post',
             dataType: 'json',
             data: {

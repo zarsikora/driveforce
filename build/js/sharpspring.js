@@ -85,13 +85,13 @@ document.addEventListener( 'wpcf7submit', function(event)
 
 $('form').on('submit', function(e)
 {
-    // Disable submit button so it can't be submitted again
-    $('button[type=submit]', $(this)).prop('disabled', true).hide();
-    $('.form-loading', $(this)).show();
-
     if($(this).hasClass('sharpspring-waitlist'))
     {
         e.preventDefault();
+
+        // Disable submit button so it can't be submitted again
+        $('button[type=submit]', $(this)).prop('disabled', true).hide();
+        $('.form-loading', $(this)).show();
 
         let fieldsArr = getFormFieldsArray($(this));
             //fieldsArr['signup-type'] =  'Waitlist';
@@ -114,7 +114,7 @@ async function sharpspringAJAXRequest(method, fields = null, form)
 
     const ajaxResults = await $.ajax({
         type: 'POST',
-        url: localizedVars.ajaxurl,
+        url: localized_vars.ajaxurl,
         dataType: 'json',
         data: {
             action: 'sharpspring_request',
@@ -153,7 +153,7 @@ async function sharpspringAJAXRequest(method, fields = null, form)
     {
         $.ajax({
             type: 'POST',
-            url: localizedVars.ajaxurl,
+            url: localized_vars.ajaxurl,
             dataType: 'json',
             data: {
                 action: 'sharpspring_request',

@@ -39900,9 +39900,9 @@ window.Splide = complete_Splide;
 ;
 window.$ = window.jQuery = jQuery;
 
-const environment = localizedVars['environment'];
+const environment = localized_vars['environment'];
 
-const variantIDs = (environment === 'local') ? [731, 732, 733] : [640, 641, 642];
+const variantIDs = [640, 641, 642];
 
 const fastCheckout = $('.fast-checkout');
 // const fastCheckoutSelect = $('select[name="fast-checkout-variant"]');
@@ -39950,7 +39950,7 @@ if(fastCheckoutSelect)
 
         // Get product object
         $.ajax({
-            url: localizedVars.ajaxurl,
+            url: localized_vars.ajaxurl,
             method: 'post',
             dataType: 'json',
             data: {
@@ -40052,7 +40052,7 @@ if(fastCheckoutSelect)
         const purchaseType = $('input[name="fast-checkout-purchase-type"]:checked').val();
 
         $.ajax({
-            url: localizedVars.ajaxurl,
+            url: localized_vars.ajaxurl,
             method: 'post',
             dataType: 'json',
             data: {
@@ -40177,13 +40177,13 @@ document.addEventListener( 'wpcf7submit', function(event)
 
 $('form').on('submit', function(e)
 {
-    // Disable submit button so it can't be submitted again
-    $('button[type=submit]', $(this)).prop('disabled', true).hide();
-    $('.form-loading', $(this)).show();
-
     if($(this).hasClass('sharpspring-waitlist'))
     {
         e.preventDefault();
+
+        // Disable submit button so it can't be submitted again
+        $('button[type=submit]', $(this)).prop('disabled', true).hide();
+        $('.form-loading', $(this)).show();
 
         let fieldsArr = getFormFieldsArray($(this));
             //fieldsArr['signup-type'] =  'Waitlist';
@@ -40206,7 +40206,7 @@ async function sharpspringAJAXRequest(method, fields = null, form)
 
     const ajaxResults = await $.ajax({
         type: 'POST',
-        url: localizedVars.ajaxurl,
+        url: localized_vars.ajaxurl,
         dataType: 'json',
         data: {
             action: 'sharpspring_request',
@@ -40245,7 +40245,7 @@ async function sharpspringAJAXRequest(method, fields = null, form)
     {
         $.ajax({
             type: 'POST',
-            url: localizedVars.ajaxurl,
+            url: localized_vars.ajaxurl,
             dataType: 'json',
             data: {
                 action: 'sharpspring_request',
@@ -40311,7 +40311,7 @@ if(removeProductButtons.length)
         const cartItemKey = _this.parents('.cart-drawer-product').attr('data-cart-item-key');
 
         $.ajax({
-            url: localizedVars.ajaxurl,
+            url: localized_vars.ajaxurl,
             method: 'post',
             dataType: 'json',
             data: {
@@ -40351,7 +40351,7 @@ if(subscriptionToggles.length)
         const purchaseType = !toggle.is(':checked') ? '1_month' : '';
 
         $.ajax({
-            url: localizedVars.ajaxurl,
+            url: localized_vars.ajaxurl,
             method: 'post',
             dataType: 'json',
             data: {
@@ -40533,7 +40533,7 @@ $('.product-info .quantity, .product .quantity').each(function ()
 function removeFromCart(product, cartItemKey)
 {
     $.ajax({
-        url: localizedVars.ajaxurl,
+        url: localized_vars.ajaxurl,
         method: 'post',
         dataType: 'json',
         data: {
@@ -40558,7 +40558,7 @@ function removeFromCart(product, cartItemKey)
 function updateQuantity(cartItemKey, quantity)
 {
     $.ajax({
-        url: localizedVars.ajaxurl,
+        url: localized_vars.ajaxurl,
         method: 'post',
         dataType: 'json',
         data: {
@@ -41172,24 +41172,23 @@ ticking = false;
 
 navScroll = () =>
 {
-let scrollY = (window.scrollY < 0) ? 0 : window.scrollY;
-let diff = lastScrollY - scrollY;
+    let scrollY = (window.scrollY < 0) ? 0 : window.scrollY;
+    let diff = lastScrollY - scrollY;
 
-scrollDirection = diff / Math.abs(diff);
-lastScrollY = scrollY;
+    scrollDirection = diff / Math.abs(diff);
+    lastScrollY = scrollY;
 
-requestTick(scrollY);
+    requestTick(scrollY);
 }
 
 requestTick = (scrollY) =>
 {
+    if(!ticking)
+    {
+        scroll(function(){navAnimate(scrollY)});
 
-if(!ticking)
-{
-    scroll(function(){navAnimate(scrollY)});
-
-    ticking = true;
-}
+        ticking = true;
+    }
 }
 
 //STICKY LOGO ON SCROLL WITH BANNER
@@ -41322,21 +41321,6 @@ if(document.getElementById('more_posts')){
     });
 }
 
-
-//FORM SUCCESS TRANSITION ANIMATION
-function formSuccessTransition(){
-    var tl = gsap.timeline();
-
-    //slide pane up
-    tl.to('#form-success-pane', {duration: .7, scaleY: 1, transformOrigin: 'bottom', ease: Power2.easeIn});
-    //scroll up!
-    $("html, body").animate({ scrollTop: 0 }, "slow");
-    //fade in inner matter
-    tl.to('#form-success-pane .inner h1', {duration: .5, opacity: 1, delay: .3, ease: Power2.easeIn});
-    tl.to('#form-success-pane .inner .btn', {duration: .5, opacity: 1, ease: Power2.easeIn});
-    tl.to('#form-success-pane .inner .logo', {duration: .5, opacity: 1, ease: Power2.easeIn});
-}
-
 // SCROLL TO ANCHOR FUNC
 function scrollToAnchor(e){
     let scrollTo = $(e.target).attr('data-scrollTo');
@@ -41348,7 +41332,6 @@ function scrollToAnchor(e){
         $("html, body").animate({ scrollTop: adjustedOffset }, 700, 'easeOutCubic');
     }
 }
-
 
 // WAITLIST MODAL FUNCTION
 let headerBtn = $('#header .header-waitlist-btn');
@@ -41460,36 +41443,10 @@ if(ingredientsDisplay){
     });
 }
 
-
-//
-//
-// FUNCTIONS THAT REQUIRE RE-INIT WITH BARBA
-//
-//
-
-// FORM - CHANGE BODY TO SUCCESS MESSAGE ON SUCCESSFUL SUBMIT
-class formSubmit {
-    constructor() {
-        if(document.formSubmitCallback){
-            document.removeEventListener('wpcf7mailsent', document.formSubmitCallback);
-        }
-
-        if($(document.body).hasClass('page-id-224')){
-            document.formSubmitCallback = this.formSubmit.bind(this);
-            document.addEventListener('wpcf7mailsent', document.formSubmitCallback);
-        }
-    }
-
-    formSubmit(){
-        formSuccessTransition();
-    }
-}
-new formSubmit;
-
 //JQUERY EASING 
 jQuery.easing['jswing'] = jQuery.easing['swing'];
 
-jQuery.extend( jQuery.easing,
+jQuery.extend(jQuery.easing,
 {
     def: 'easeOutQuad',
     swing: function (x, t, b, c, d) {
