@@ -44,8 +44,14 @@
             .inner {
                 margin: 0 auto;
                 padding: 6rem 3.6rem 0 3.6rem;
+                @include media-breakpoint-up(xl) {
+                    padding: 6rem 10vw 0 10vw;
+                }
 
                 .upper-nav {
+                    @include media-breakpoint-up(lg) {
+                        margin-bottom: 4rem;
+                    }
 
                     .logo {
                         margin-bottom: 5rem;
@@ -124,7 +130,7 @@
                     padding: 4rem 0;
                     position: relative;
 
-                    &:before {
+                    &:before, &:after {
                         content: '';
                         position: absolute;
                         left: -3.6rem;
@@ -132,6 +138,19 @@
                         width: calc(100% + 7.2rem);
                         height: 1px;
                         background: $sage;
+                        @include media-breakpoint-up(xl) {
+                            width: 120vw;
+                            left: -10vw;
+                        }
+                    }
+
+                    &:after {
+                        display: none;
+                        bottom: auto;
+                        top: 0;
+                        @include media-breakpoint-up(lg) {
+                            display: block;
+                        }
                     }
 
                     p {

@@ -11764,6 +11764,18 @@ body.single-product #header .mobile-nav .mobile-controls button svg {
   padding: 6rem 3.6rem 0 3.6rem;
 }
 
+@media (min-width: 1200px) {
+  #footer .top .inner {
+    padding: 6rem 10vw 0 10vw;
+  }
+}
+
+@media (min-width: 992px) {
+  #footer .top .inner .upper-nav {
+    margin-bottom: 4rem;
+  }
+}
+
 #footer .top .inner .upper-nav .logo {
   margin-bottom: 5rem;
 }
@@ -11855,7 +11867,7 @@ body.single-product #header .mobile-nav .mobile-controls button svg {
   position: relative;
 }
 
-#footer .top .inner .disclaimer:before {
+#footer .top .inner .disclaimer:before, #footer .top .inner .disclaimer:after {
   content: '';
   position: absolute;
   left: -3.6rem;
@@ -11863,6 +11875,25 @@ body.single-product #header .mobile-nav .mobile-controls button svg {
   width: calc(100% + 7.2rem);
   height: 1px;
   background: #447563;
+}
+
+@media (min-width: 1200px) {
+  #footer .top .inner .disclaimer:before, #footer .top .inner .disclaimer:after {
+    width: 120vw;
+    left: -10vw;
+  }
+}
+
+#footer .top .inner .disclaimer:after {
+  display: none;
+  bottom: auto;
+  top: 0;
+}
+
+@media (min-width: 992px) {
+  #footer .top .inner .disclaimer:after {
+    display: block;
+  }
 }
 
 #footer .top .inner .disclaimer p, #footer .top .inner .disclaimer body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 address, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 #footer .top .inner .disclaimer address,
@@ -19678,7 +19709,7 @@ body.fast-checkout-active {
 
 @media (min-width: 1200px) {
   body.fast-checkout-active {
-    padding-bottom: 10rem;
+    padding-bottom: 9rem;
   }
 }
 
