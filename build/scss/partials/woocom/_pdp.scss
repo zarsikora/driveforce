@@ -102,6 +102,12 @@ body.single-product {
 
                     .single_variation_wrap {
 
+                        .woocommerce-variation {
+                            @include media-breakpoint-up(lg) {
+                                max-width: 45rem;
+                            }
+                        }
+
                         label {
                             letter-spacing: 0;
                             color: #fff;
@@ -122,6 +128,10 @@ body.single-product {
                                             font-size: 1.8rem;
                                             font-family: $boldType;
                                         }
+                                    }
+
+                                    label > span {
+                                        text-align: right;
                                     }
                                 }
                             }
@@ -206,6 +216,7 @@ body.single-product {
 
 table.variations {
     margin-bottom: 3rem !important;
+    max-width: 30rem;
 
     label {
         letter-spacing: 0;

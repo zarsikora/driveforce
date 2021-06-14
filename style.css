@@ -20349,6 +20349,12 @@ body.single-product #primary .product .summary form.cart .wcsatt-options-wrapper
   letter-spacing: 0;
 }
 
+@media (min-width: 992px) {
+  body.single-product #primary .product .summary form.cart .single_variation_wrap .woocommerce-variation {
+    max-width: 45rem;
+  }
+}
+
 body.single-product #primary .product .summary form.cart .single_variation_wrap label {
   letter-spacing: 0;
   color: #fff;
@@ -20369,6 +20375,10 @@ body.single-product #primary .product .summary form.cart .single_variation_wrap 
 body.single-product #primary .product .summary form.cart .single_variation_wrap .woocommerce-variation-price .wcsatt-options-product-wrapper li p .option-type, body.single-product #primary .product .summary form.cart .single_variation_wrap .woocommerce-variation-price .wcsatt-options-product-wrapper li body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 address .option-type, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 body.single-product #primary .product .summary form.cart .single_variation_wrap .woocommerce-variation-price .wcsatt-options-product-wrapper li address .option-type, body.single-product #primary .product .summary form.cart .single_variation_wrap .woocommerce-variation-price .wcsatt-options-product-wrapper li body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 address .option-type, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 body.single-product #primary .product .summary form.cart .single_variation_wrap .woocommerce-variation-price .wcsatt-options-product-wrapper li address .option-type, body.single-product #primary .product .summary form.cart .single_variation_wrap .woocommerce-variation-price .wcsatt-options-product-wrapper li body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 address .option-type, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 body.single-product #primary .product .summary form.cart .single_variation_wrap .woocommerce-variation-price .wcsatt-options-product-wrapper li address .option-type, body.single-product #primary .product .summary form.cart .single_variation_wrap .woocommerce-variation-price .wcsatt-options-product-wrapper li body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 address .option-type, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 body.single-product #primary .product .summary form.cart .single_variation_wrap .woocommerce-variation-price .wcsatt-options-product-wrapper li address .option-type {
   font-size: 1.8rem;
   font-family: "Sharp Sans Bold";
+}
+
+body.single-product #primary .product .summary form.cart .single_variation_wrap .woocommerce-variation-price .wcsatt-options-product-wrapper li label > span {
+  text-align: right;
 }
 
 body.single-product #primary .product .summary form.cart .single_variation_wrap h2.qty {
@@ -20446,6 +20456,7 @@ body.single-product .woocommerce-notices-wrapper .woocommerce-message {
 
 table.variations {
   margin-bottom: 3rem !important;
+  max-width: 30rem;
 }
 
 table.variations label {
