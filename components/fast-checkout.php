@@ -1,6 +1,6 @@
 <?php
 $environment = wp_get_environment_type();
-$variantIDs = ($environment === 'local') ? array(731, 732, 733) : array(640, 641, 642) ?>
+$variantIDs = array(640, 641, 642); ?>
 
 <div class="fast-checkout">
 

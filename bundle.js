@@ -39933,6 +39933,8 @@ if(fastCheckoutSelect)
 
     function updatePurchaseTypes(data)
     {
+        console.log(data);
+
         const discount = data.scheme[0].subscription_discount;
         const price = data.variation.display_price;
         const subscriptionPrice = price - ((discount / 100) * price);
@@ -40063,7 +40065,7 @@ if(fastCheckoutSelect)
             {
                 console.log(data);
 
-                window.location = '/cart';
+                window.location = '/checkout';
             },
             error: function(error)
             {
