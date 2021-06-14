@@ -1,19 +1,15 @@
 body.woocommerce-account {
 
     #content {
-        min-height: calc(100vh - 7.7rem);
-        @include media-breakpoint-up(md){
-            min-height: calc(100vh - 9.4rem - 19.8rem);
-        }
 
         & > .woocommerce {
-            margin: 7rem auto;
+            margin: 7rem auto 0 auto;
             padding: 0 3.6rem;
             display: flex;
             flex-wrap: wrap;
-            @include media-breakpoint-up(xl) {
+            @include media-breakpoint-up(lg) {
                 padding: 0 10vw;
-                margin: 10vw auto;
+                margin: 10rem auto 0 auto;
             }
         }
     }
