@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .align-baseline {
   vertical-align: baseline !important;
 }
@@ -20698,7 +20699,7 @@ table.variations .reset_variations {
 }
 
 .copy-box ul li:before {
-  content: 'J';
+  content: '✓';
   position: absolute;
   left: 0;
   top: 0;
