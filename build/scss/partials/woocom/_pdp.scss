@@ -92,11 +92,6 @@ body.single-product {
                                     font-size: 1.6rem;
                                 }
                             }
-
-                            .one-time-option-details {
-                                font-family: $mediumType;
-                                letter-spacing: 0;
-                            }
                         }
                     }
 
@@ -111,6 +106,7 @@ body.single-product {
                         label {
                             letter-spacing: 0;
                             color: #fff;
+                            cursor: pointer;
                         }
 
                         .woocommerce-variation-price {
@@ -119,7 +115,9 @@ body.single-product {
                             }
 
                             .wcsatt-options-product-wrapper {
+
                                 li {
+
                                     p {
                                         font-size: 1.2rem;
                                         margin-top: 0;
@@ -130,8 +128,10 @@ body.single-product {
                                         }
                                     }
 
+                                    // Price
                                     label > span {
                                         text-align: right;
+                                        font-family: $boldType;
                                     }
                                 }
                             }
@@ -178,6 +178,10 @@ body.single-product {
                             box-shadow: none;
                             background: $red;
                             font-size: 1.4rem;
+                            font-family: $bookType;
+                            @include media-breakpoint-up(xl) {
+                                font-size: 1.6rem;
+                            }
                         }
                     }
                 }
