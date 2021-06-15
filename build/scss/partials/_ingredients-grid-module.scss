@@ -1,60 +1,61 @@
 .ingredients-grid-module {
-  padding: 7rem 3.6rem;
-  background-color: #14302B;
-  color: $lightText;
-  @include media-breakpoint-up(xl) {
-    padding: 10vw 10vw;
-  }
-
-  p.header {
-    font-family: $boldType;
-    line-height: 1.25em;
-    margin: 0 0 1em 0;
-    color: #fff;
-    font-size: 2.4rem;
+    padding: 7rem 3.6rem;
+    background-color: #14302B;
+    color: $lightText;
     @include media-breakpoint-up(xl) {
-      //font-size: 4rem;
-      font-size: 2.083vw;
-    }
-    @media(min-width: 1920px) {
-      font-size: 3.9rem;
+        padding: 10vw 10vw;
     }
 
-    br {
-      @include media-breakpoint-down(lg) {
-        display: none;
-      }
-    }
-  }
+    p.header {
+        font-family: $boldType;
+        line-height: 1.25em;
+        margin: 0 0 1em 0;
+        color: #fff;
+        font-size: 2.4rem;
+        @include media-breakpoint-up(xl) {
+            //font-size: 4rem;
+            font-size: 2.083vw;
+        }
+        @media(min-width: 1920px) {
+            font-size: 3.9rem;
+        }
 
-  .copy {
-    margin-bottom: 3rem;
-    @include media-breakpoint-up(xl) {
-      margin-bottom: 5rem;
+        br {
+            @include media-breakpoint-down(lg) {
+                display: none;
+            }
+        }
     }
 
-    &:last-child {
-      margin-bottom: 0;
+    .copy {
+        margin-bottom: 3rem;
+        @include media-breakpoint-up(xl) {
+            margin-bottom: 5rem;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        p:last-child {
+            margin-bottom: 0;
+        }
     }
 
-    p:last-child {
-      margin-bottom: 0;
+    img,
+    svg {
+        fill: #477563;
+        margin-bottom: 2rem;
     }
-  }
 
-  svg {
-    fill: #477563;
-    margin-bottom: 2rem;
-  }
-
-  p.subheader {
-    font-family: $boldType;
-    font-size: 2rem;
-    line-height: 1.25em;
-    margin: 0 0 .7em 0;
-    position: relative;
-    @include media-breakpoint-up(xl) {
-      font-size: 3.2rem;
+    p.subheader {
+        font-family: $boldType;
+        font-size: 2rem;
+        line-height: 1.25em;
+        margin: 0 0 .7em 0;
+        position: relative;
+        @include media-breakpoint-up(xl) {
+            font-size: 3.2rem;
+        }
     }
-  }
 }

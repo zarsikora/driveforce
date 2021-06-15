@@ -16981,6 +16981,7 @@ body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .
   margin-bottom: 0;
 }
 
+.ingredients-grid-module img,
 .ingredients-grid-module svg {
   fill: #477563;
   margin-bottom: 2rem;

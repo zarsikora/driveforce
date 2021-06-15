@@ -177,16 +177,20 @@ if(fastCheckoutSelect)
     if($('body').is('.home, .single-product'))
     {
         const triggerElement = $('body').hasClass('home') ? $('.product-intro-module .btn') : $('.benefits-module');
-        const triggerPoint = triggerElement[0].offsetTop + triggerElement[0].offsetHeight - window.innerHeight;
 
-        $(window).on('scroll', function(e)
+        if(triggerElement.length)
         {
-            if(window.pageYOffset > triggerPoint)
+            const triggerPoint = triggerElement[0].offsetTop + triggerElement[0].offsetHeight - window.innerHeight;
+
+            $(window).on('scroll', function(e)
             {
-                $('body').addClass('fast-checkout-active');
-                return;
-            }
-            $('body').removeClass('fast-checkout-active');
-        });
+                if(window.pageYOffset > triggerPoint)
+                {
+                    $('body').addClass('fast-checkout-active');
+                    return;
+                }
+                $('body').removeClass('fast-checkout-active');
+            });
+        }
     }
 }
