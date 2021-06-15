@@ -31,16 +31,19 @@
             form.checkout {
                 display: flex;
                 flex-wrap: wrap;
+                @include media-breakpoint-up(lg) {
+                    flex-wrap: nowrap;
+                }
 
                 #customer_details {
                     margin-bottom: 5rem;
                     @include media-breakpoint-up(md){
                         display: flex;
-                        flex: 0 0 50%;
                         flex-wrap: wrap;
                     }
                     @include media-breakpoint-up(lg) {
                         margin-bottom: 0;
+                        flex: 0 0 50%;
                     }
                     @include media-breakpoint-up(xl) {
                         padding: 0 3rem;
@@ -59,7 +62,7 @@
                             max-width: 50%;
                             flex: 0 0 50%;
                         }
-                        @include media-breakpoint-up(xl) {
+                        @include media-breakpoint-up(lg) {
                             flex: 0 0 100%;
                             max-width: 100%;
                             width: 100%;
@@ -70,6 +73,21 @@
                         width: 100%;
                         margin: 0;
                         padding: 0;
+
+                        &#billing_country_field {
+                            background: #fff;
+                            font-size: 1.6rem;
+
+                            .woocommerce-input-wrapper {
+                                padding: 0 2rem;
+                                height: 4rem;
+                                line-height: 4rem;
+
+                                strong {
+                                    font-family: $mediumType;
+                                }
+                            }
+                        }
 
                         label {
                             width: 100%;
@@ -198,8 +216,11 @@
                 }
 
                 #order_review {
-                    @include media-breakpoint-up(xl) {
+                    flex: 0 0 100%;
+                    @include media-breakpoint-up(lg) {
                         flex: 0 0 50%;
+                    }
+                    @include media-breakpoint-up(xl) {
                         padding: 0 3rem;
                     }
 
@@ -221,7 +242,9 @@
 
             #payment {
                 background: none;
-                max-width: 60rem;
+                @include media-breakpoint-up(lg) {
+                    max-width: 60rem;
+                }
 
                 ul.payment_methods {
                     background: none;

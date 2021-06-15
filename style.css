@@ -19488,6 +19488,12 @@ body.woocommerce-account .select2-results__option {
   flex-wrap: wrap;
 }
 
+@media (min-width: 992px) {
+  .woocommerce-checkout #container .woocommerce form.checkout {
+    flex-wrap: nowrap;
+  }
+}
+
 .woocommerce-checkout #container .woocommerce form.checkout #customer_details {
   margin-bottom: 5rem;
 }
@@ -19495,7 +19501,6 @@ body.woocommerce-account .select2-results__option {
 @media (min-width: 768px) {
   .woocommerce-checkout #container .woocommerce form.checkout #customer_details {
     display: flex;
-    flex: 0 0 50%;
     flex-wrap: wrap;
   }
 }
@@ -19503,6 +19508,7 @@ body.woocommerce-account .select2-results__option {
 @media (min-width: 992px) {
   .woocommerce-checkout #container .woocommerce form.checkout #customer_details {
     margin-bottom: 0;
+    flex: 0 0 50%;
   }
 }
 
@@ -19535,7 +19541,7 @@ body.woocommerce-account .select2-results__option {
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 992px) {
   .woocommerce-checkout #container .woocommerce form.checkout #customer_details .col-1,
   .woocommerce-checkout #container .woocommerce form.checkout #customer_details .col-2 {
     flex: 0 0 100%;
@@ -19548,6 +19554,21 @@ body.woocommerce-account .select2-results__option {
   width: 100%;
   margin: 0;
   padding: 0;
+}
+
+.woocommerce-checkout #container .woocommerce form.checkout #customer_details .form-row#billing_country_field {
+  background: #fff;
+  font-size: 1.6rem;
+}
+
+.woocommerce-checkout #container .woocommerce form.checkout #customer_details .form-row#billing_country_field .woocommerce-input-wrapper {
+  padding: 0 2rem;
+  height: 4rem;
+  line-height: 4rem;
+}
+
+.woocommerce-checkout #container .woocommerce form.checkout #customer_details .form-row#billing_country_field .woocommerce-input-wrapper strong {
+  font-family: "Sharp Sans Medium";
 }
 
 .woocommerce-checkout #container .woocommerce form.checkout #customer_details .form-row label {
@@ -19681,9 +19702,18 @@ body.woocommerce-account .select2-results__option {
   margin-top: 5rem;
 }
 
-@media (min-width: 1200px) {
+.woocommerce-checkout #container .woocommerce form.checkout #order_review {
+  flex: 0 0 100%;
+}
+
+@media (min-width: 992px) {
   .woocommerce-checkout #container .woocommerce form.checkout #order_review {
     flex: 0 0 50%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .woocommerce-checkout #container .woocommerce form.checkout #order_review {
     padding: 0 3rem;
   }
 }
@@ -19704,7 +19734,12 @@ body.woocommerce-account .select2-results__option {
 
 .woocommerce-checkout #container .woocommerce #payment {
   background: none;
-  max-width: 60rem;
+}
+
+@media (min-width: 992px) {
+  .woocommerce-checkout #container .woocommerce #payment {
+    max-width: 60rem;
+  }
 }
 
 .woocommerce-checkout #container .woocommerce #payment ul.payment_methods {
