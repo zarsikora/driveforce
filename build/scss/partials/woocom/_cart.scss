@@ -1,4 +1,11 @@
 body.woocommerce-cart {
+
+    .woocommerce-notices-wrapper {
+        @include media-breakpoint-up(lg) {
+            flex: 0 0 60%;
+        }
+    }
+
     #content {
         padding-top: 7.7rem;
         @include media-breakpoint-up(md){
@@ -48,6 +55,7 @@ body.woocommerce-cart {
             font-size: 3rem;
             line-height: 1.4em;
             margin-bottom: 1em;
+            width: auto;
             @include media-breakpoint-up(md) {
                 font-size: 4rem;
                 max-width: 80%;
@@ -67,6 +75,7 @@ body.woocommerce-cart {
         }
 
         .return-to-shop {
+            flex: 0 0 100%;
             text-align: center;
             padding: 0 3.6rem 10rem;
             @include media-breakpoint-up(md){
@@ -139,11 +148,7 @@ body.woocommerce-cart {
             }
         }
 
-        a {
-            color: $highlight;
-            font-family: $displayType;
-            transition: all ease 300ms;
-        }
+
 
         .button {
             background-color: $highlight;
