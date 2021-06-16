@@ -52,7 +52,7 @@ body.cart-drawer-open {
         top: 50%;
         transform: translate(-50%,-50%);
         font-size: 2rem;
-        font-family: $boldType;
+        font-family: $sharpSansBold;
         margin: 0;
     }
 
@@ -95,10 +95,10 @@ body.cart-drawer-open {
         p.product-name {
             margin: 0;
             font-size: 1.4rem;
-            font-family: $boldType;
+            font-family: $sharpSansBold;
 
             strong {
-                font-family: $boldType;
+                font-family: $sharpSansBold;
                 font-size: 1.8rem;
             }
         }
@@ -197,7 +197,7 @@ body.cart-drawer-open {
 
             strong {
                 font-size: 1.8rem;
-                font-family: $boldType;
+                font-family: $sharpSansBold;
             }
         }
     }

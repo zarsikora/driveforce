@@ -89,7 +89,7 @@ body.fast-checkout-active {
 
             .product {
                 font-size: 1.4rem;
-                font-family: $boldType;
+                font-family: $sharpSansBold;
                 color: #88E2C1;
             }
 
@@ -143,7 +143,7 @@ body.fast-checkout-active {
         }
 
         .close {
-            font-family: $boldType;
+            font-family: $sharpSansBold;
             text-decoration: underline;
             font-size: 1.2rem;
             color: #fff;
@@ -201,7 +201,7 @@ body.fast-checkout-active {
         .build-order-header {
             flex: 0 0 100%;
             text-align: center;
-            font-family: $boldType;
+            font-family: $sharpSansBold;
             font-size: 2.4rem;
             margin: 0 0 1.5em 0;
             @include media-breakpoint-up(xl) {
@@ -245,7 +245,7 @@ body.fast-checkout-active {
                 span {
                     color: #14302B;
                     font-size: 1.4rem;
-                    font-family: $boldType;
+                    font-family: $sharpSansBold;
                     left: 0;
                 }
 
@@ -380,7 +380,7 @@ body.fast-checkout-active {
             vertical-align: top;
             margin: 0 1.5rem 0 0;
             font-size: 1.4rem;
-            font-family: $boldType;
+            font-family: $sharpSansBold;
 
             .subscribe-price {
                 display: inline-block;
@@ -417,7 +417,7 @@ body.fast-checkout-active {
             p {
                 margin: 0 0 .3rem 0;
                 font-size: 1.8rem;
-                font-family: $boldType;
+                font-family: $sharpSansBold;
                 line-height: 1.3em;
                 @include media-breakpoint-up(lg) {
                     font-size: 1.4rem;
@@ -426,7 +426,7 @@ body.fast-checkout-active {
                 &.sm {
                     font-size: 1.0rem;
                     font-weight: 400;
-                    font-family: $bookType;
+                    font-family: $sharpSansMedium;
                     margin: 0;
                     @include media-breakpoint-up(lg) {
                         font-size: 1.2rem;

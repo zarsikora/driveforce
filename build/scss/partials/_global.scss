@@ -123,7 +123,7 @@ body {
 
 // 70/80
 h1.title {
-    font-family: $displayType;
+    font-family: $sharpSansExtraBold;
     font-size: 4rem;
     line-height: 1.14em;
     @include media-breakpoint-up(lg){
@@ -136,7 +136,7 @@ h1.title {
 
 // 60/70
 h1 {
-    font-family: $displayType;
+    font-family: $sharpSansExtraBold;
     font-size: 3.5rem;
     line-height: 1.16em;
     @include media-breakpoint-up(lg) {
@@ -149,7 +149,7 @@ h1 {
 
 // 50/70
 h2 {
-    font-family: $displayType;
+    font-family: $sharpSansExtraBold;
     font-size: 3rem;
     line-height: 1.4em;
     margin-bottom: 1em;
@@ -166,7 +166,7 @@ h2 {
 
 // 30/40
 h3 {
-    font-family: $displayType;
+    font-family: $sharpSansExtraBold;
     font-size: 2.4rem;
     line-height: 1.35em;
     margin-bottom: 1em;
@@ -181,7 +181,7 @@ h3 {
 // 24/38
 p.subtitle {
     font-size: 2rem;
-    font-family: $mediumType;
+    font-family: $sharpSansMedium;
     line-height: 1.58em;
     @include media-breakpoint-up(lg){
         font-size: 1.667vw;
@@ -196,7 +196,7 @@ p.large-copy,
 .large-copy p,
 li.large-copy {
     font-size: 1.8rem;
-    font-family: $mediumType;
+    font-family: $sharpSansMedium;
     margin: 2rem 0;
     line-height: 1.77em;
     @include media-breakpoint-up(lg){
@@ -213,7 +213,7 @@ p.copy,
 li.copy,
 p {
     font-size: 1.6rem;
-    font-family: $mediumType;
+    font-family: $sharpSansMedium;
     margin: 2rem 0;
     line-height: 1.87em;
     @include media-breakpoint-up(xl){
@@ -224,12 +224,12 @@ p {
     }
 
     strong {
-        font-family: $boldType;
+        font-family: $sharpSansBold;
     }
 
     i, 
     em {
-        font-family: $mediumTypeItalic;
+        font-family: $sharpSansMediumItalic;
     }
 
 }
@@ -283,7 +283,7 @@ span {
     }
 
     span {
-        font-family: $mediumType;
+        font-family: $sharpSansMedium;
         font-size: 1.6rem;
         display: inline-block;
         vertical-align: middle;
@@ -333,7 +333,7 @@ button {
     background-color: #fff;
     padding: 20px 30px;
     border-radius: 37px; 
-    font-family: $displayType;
+    font-family: $sharpSansExtraBold;
     @include media-breakpoint-up(md){
         width: 43vw;
     }
@@ -354,7 +354,7 @@ button {
 
 //GDPR 
 .cli-bar-container.cli-style-v2 {
-    font-family: $mediumType;
+    font-family: $sharpSansMedium;
     .cli-bar-btn_container {
         #cookie_action_close_header {
             background-color: #081D1A !important;

@@ -10226,10 +10226,24 @@ pre code {
 }
 
 @font-face {
+  font-family: "Sharp Sans Extrabold";
+  src: url("fonts/SharpSans-Extrabold.eot") format("embedded-opentype");
+  src: url("fonts/SharpSans-Extrabold.woff") format("woff");
+  src: url("fonts/SharpSans-Extrabold.woff2") format("woff2");
+}
+
+@font-face {
   font-family: "Sharp Sans Bold";
   src: url("fonts/SharpSans-Bold.eot") format("embedded-opentype");
   src: url("fonts/SharpSans-Bold.woff") format("woff");
   src: url("fonts/SharpSans-Bold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Sharp Sans Semibold";
+  src: url("fonts/SharpSans-Semibold.eot") format("embedded-opentype");
+  src: url("fonts/SharpSans-Semibold.woff") format("woff");
+  src: url("fonts/SharpSans-Semibold.woff2") format("woff2");
 }
 
 @font-face {
@@ -10244,34 +10258,6 @@ pre code {
   src: url("fonts/SharpSans-MediumItalic.eot") format("embedded-opentype");
   src: url("fonts/SharpSans-MediumItalic.woff") format("woff");
   src: url("fonts/SharpSans-MediumItalic.woff2") format("woff2");
-}
-
-@font-face {
-  font-family: "Sharp Sans Display Bold";
-  src: url("fonts/SharpSansDispNo1-Bold.eot") format("embedded-opentype");
-  src: url("fonts/SharpSansDispNo1-Bold.woff") format("woff");
-  src: url("fonts/SharpSansDispNo1-Bold.woff2") format("woff2");
-}
-
-@font-face {
-  font-family: "Sharp Sans Display Italic";
-  src: url("fonts/SharpSansDispNo1-BoldIt.eot") format("embedded-opentype");
-  src: url("fonts/SharpSansDispNo1-BoldIt.woff") format("woff");
-  src: url("fonts/SharpSansDispNo1-BoldIt.woff2") format("woff2");
-}
-
-@font-face {
-  font-family: "Sharp Sans Book";
-  src: url("fonts/SharpSans-Book.eot") format("embedded-opentype");
-  src: url("fonts/SharpSans-Book.woff") format("woff");
-  src: url("fonts/SharpSans-Book.woff2") format("woff2");
-}
-
-@font-face {
-  font-family: "Sharp Sans Book Italic";
-  src: url("fonts/SharpSans-BookItalic.eot") format("embedded-opentype");
-  src: url("fonts/SharpSans-BookItalic.woff") format("woff");
-  src: url("fonts/SharpSans-BookItalic.woff2") format("woff2");
 }
 
 html {
@@ -10426,7 +10412,7 @@ body.mobile-nav-active {
 }
 
 h1.title {
-  font-family: "Sharp Sans Display Bold";
+  font-family: "Sharp Sans Extrabold";
   font-size: 4rem;
   line-height: 1.14em;
 }
@@ -10444,7 +10430,7 @@ h1.title {
 }
 
 h1 {
-  font-family: "Sharp Sans Display Bold";
+  font-family: "Sharp Sans Extrabold";
   font-size: 3.5rem;
   line-height: 1.16em;
 }
@@ -10462,7 +10448,7 @@ h1 {
 }
 
 h2 {
-  font-family: "Sharp Sans Display Bold";
+  font-family: "Sharp Sans Extrabold";
   font-size: 3rem;
   line-height: 1.4em;
   margin-bottom: 1em;
@@ -10487,7 +10473,7 @@ h2 {
 }
 
 h3 {
-  font-family: "Sharp Sans Display Bold";
+  font-family: "Sharp Sans Extrabold";
   font-size: 2.4rem;
   line-height: 1.35em;
   margin-bottom: 1em;
@@ -10978,7 +10964,7 @@ button:focus {
   background-color: #fff;
   padding: 20px 30px;
   border-radius: 37px;
-  font-family: "Sharp Sans Display Bold";
+  font-family: "Sharp Sans Extrabold";
 }
 
 @media (min-width: 768px) {
@@ -11565,7 +11551,7 @@ body.single-product #header .mobile-nav .mobile-controls button svg {
 }
 
 #nav-pane .inner .menu#nav-pane-mobile-menu li a {
-  font-family: "Sharp Sans Display Bold";
+  font-family: "Sharp Sans Extrabold";
   text-decoration: underline;
   font-size: 2.4rem;
 }
@@ -11600,7 +11586,7 @@ body.single-product #header .mobile-nav .mobile-controls button svg {
 }
 
 #nav-pane .inner .menu#nav-pane-menu li a {
-  font-family: "Sharp Sans Display Bold";
+  font-family: "Sharp Sans Extrabold";
   color: #fff;
   font-size: 2.4rem;
   transition: all ease 300ms;
@@ -11743,7 +11729,7 @@ body.single-product #header .mobile-nav .mobile-controls button svg {
 }
 
 #footer .top ul.submenu li {
-  font-family: "Sharp Sans Book";
+  font-family: "Sharp Sans Medium";
   font-size: 1.4rem;
 }
 
@@ -11901,7 +11887,7 @@ body.single-product #header .mobile-nav .mobile-controls button svg {
 #footer .top .inner .disclaimer body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 address, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 #footer .top .inner .disclaimer address,
 #footer .top .inner .disclaimer body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 address, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 #footer .top .inner .disclaimer address,
 #footer .top .inner .disclaimer body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 address, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 #footer .top .inner .disclaimer address {
-  font-family: "Sharp Sans Book";
+  font-family: "Sharp Sans Medium";
   font-size: 1.4rem;
   line-height: 1.43em;
   margin: 0;
@@ -11951,7 +11937,7 @@ body.single-product #header .mobile-nav .mobile-controls button svg {
 }
 
 #footer .top .inner .lower-nav .copyright {
-  font-family: "Sharp Sans Book";
+  font-family: "Sharp Sans Medium";
   color: #F9F1E7;
   font-size: 1rem;
   margin: 0;
@@ -15299,7 +15285,7 @@ body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .
 }
 
 .card.icon-text .card-body .card-header {
-  font-family: "Sharp Sans Display Bold";
+  font-family: "Sharp Sans Extrabold";
   font-size: 2.4rem;
   line-height: 1.33em;
 }
@@ -17301,7 +17287,7 @@ body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .
   font-size: 1.6rem;
   margin-right: 2rem;
   line-height: 4rem;
-  font-family: "Sharp Sans Display Bold";
+  font-family: "Sharp Sans Extrabold";
 }
 
 .share-bar.sm-share li:last-child {
@@ -17341,7 +17327,7 @@ body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .
   margin: 0 1rem;
   font-size: 1.6rem;
   color: #DB4343;
-  font-family: "Sharp Sans Display Bold";
+  font-family: "Sharp Sans Extrabold";
   position: relative;
 }
 
@@ -17943,7 +17929,7 @@ body.woocommerce-page .woocommerce-error .button {
   background: none;
   color: #fff;
   text-decoration: underline;
-  font-family: "Sharp Sans Display Bold";
+  font-family: "Sharp Sans Extrabold";
   padding: 0;
   margin-left: 3rem;
   font-size: 1.6rem;
@@ -17990,7 +17976,7 @@ body.woocommerce-page .woocommerce table.shop_table a.edit,
 body.woocommerce-page .woocommerce table.shop_table a.delete,
 body.woocommerce-page .woocommerce table.shop_table a.default,
 body.woocommerce-page .woocommerce table.shop_table a.view {
-  font-family: "Sharp Sans Book";
+  font-family: "Sharp Sans Medium";
   color: #081D1A;
   box-shadow: none;
   padding: 0;
@@ -18060,7 +18046,7 @@ body.woocommerce-page .woocommerce-order-details {
 }
 
 body.woocommerce-page .woocommerce-customer-details {
-  font-family: "Sharp Sans Book";
+  font-family: "Sharp Sans Medium";
 }
 
 body.woocommerce-page .woocommerce-customer-details address {
@@ -18075,7 +18061,7 @@ body.woocommerce-page .woocommerce-customer-details address .woocommerce-custome
 body.woocommerce-page .woocommerce-customer-details address .woocommerce-customer-details--email {
   margin: 0;
   font-size: 1.4rem;
-  font-family: "Sharp Sans Book";
+  font-family: "Sharp Sans Medium";
 }
 
 .quantity {
@@ -18502,7 +18488,7 @@ body.cart-drawer-open .cart-drawer-overlay {
 }
 
 .post-type-archive-product.woocommerce-page #primary .products .product h2 {
-  font-family: "Sharp Sans Display Bold";
+  font-family: "Sharp Sans Extrabold";
   color: #081D1A;
   font-size: 2.4rem;
   line-height: 1.35em;
@@ -18541,7 +18527,7 @@ body.cart-drawer-open .cart-drawer-overlay {
 
 .post-type-archive-product.woocommerce-page #primary .products .product .added_to_cart.wc-forward {
   display: block;
-  font-family: "Sharp Sans Display Bold";
+  font-family: "Sharp Sans Extrabold";
   color: #081D1A;
   font-size: 1.6rem;
   transition: all ease 300ms;
@@ -18595,7 +18581,7 @@ body.cart-drawer-open .cart-drawer-overlay {
 }
 
 .post-type-archive-product.woocommerce-page #primary .dataTables_wrapper .wc-product-table-controls .dataTables_filter label {
-  font-family: "Sharp Sans Display Bold";
+  font-family: "Sharp Sans Extrabold";
   font-size: 1.4rem;
   color: #081D1A;
 }
@@ -18621,7 +18607,7 @@ body.cart-drawer-open .cart-drawer-overlay {
 .post-type-archive-product.woocommerce-page #primary .dataTables_wrapper .wc-product-table-controls .dataTables_filter .wc-product-table-reset a {
   color: #DB4343;
   transition: all ease 300ms;
-  font-family: "Sharp Sans Display Bold";
+  font-family: "Sharp Sans Extrabold";
   font-size: 1.6rem;
 }
 
@@ -18630,7 +18616,7 @@ body.cart-drawer-open .cart-drawer-overlay {
 }
 
 .post-type-archive-product.woocommerce-page #primary .dataTables_wrapper table th {
-  font-family: "Sharp Sans Display Bold";
+  font-family: "Sharp Sans Extrabold";
   font-size: 1.6rem;
 }
 
@@ -18733,7 +18719,7 @@ body.cart-drawer-open .cart-drawer-overlay {
 }
 
 .woocommerce .shop_table th {
-  font-family: "Sharp Sans Display Bold";
+  font-family: "Sharp Sans Extrabold";
   font-size: 1.6rem;
 }
 
@@ -18838,7 +18824,7 @@ body.woocommerce-cart #content .cart-empty.woocommerce-info {
   padding: 10rem 3.6rem 0;
   border: none;
   background: none;
-  font-family: "Sharp Sans Display Bold";
+  font-family: "Sharp Sans Extrabold";
   color: #081D1A;
   text-align: center;
   font-size: 3rem;
@@ -18936,7 +18922,7 @@ body.woocommerce-cart #content .cart-collaterals .cart_totals table {
 }
 
 body.woocommerce-cart #content .cart-collaterals .cart_totals table th {
-  font-family: "Sharp Sans Display Bold";
+  font-family: "Sharp Sans Extrabold";
   font-size: 1.6rem;
 }
 
@@ -19016,7 +19002,7 @@ body.woocommerce-account nav.woocommerce-MyAccount-navigation ul li:last-child {
 body.woocommerce-account nav.woocommerce-MyAccount-navigation ul li a {
   color: #081D1A;
   transition: all ease 300ms;
-  font-family: "Sharp Sans Display Bold";
+  font-family: "Sharp Sans Extrabold";
   font-size: 1.8rem;
 }
 
@@ -19128,7 +19114,7 @@ body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 header
 body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 header a.edit,
 body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 header a.edit {
   color: #081D1A;
-  font-family: "Sharp Sans Display Bold";
+  font-family: "Sharp Sans Extrabold";
   font-size: 1.4rem;
   transition: all ease 300ms;
   float: none;
@@ -19255,7 +19241,7 @@ body.woocommerce-account .woocommerce-MyAccount-content form legend {
 
 body.woocommerce-account .woocommerce-MyAccount-content form .input-note {
   font-size: 1.2rem;
-  font-family: "Sharp Sans Book";
+  font-family: "Sharp Sans Medium";
   color: #081D1A;
 }
 
@@ -19570,7 +19556,7 @@ body.woocommerce-account .select2-results__option {
 
 .woocommerce-checkout #container .woocommerce form.checkout #customer_details .form-row label {
   width: 100%;
-  font-family: "Sharp Sans Display Bold";
+  font-family: "Sharp Sans Extrabold";
   letter-spacing: 0;
   font-size: 1.8rem;
 }
@@ -19674,7 +19660,7 @@ body.woocommerce-account .select2-results__option {
 
 .woocommerce-checkout #container .woocommerce form.checkout #customer_details .woocommerce-additional-fields label {
   width: 100%;
-  font-family: "Sharp Sans Display Bold";
+  font-family: "Sharp Sans Extrabold";
   letter-spacing: 0;
   font-size: 1.8rem;
 }
@@ -19720,7 +19706,7 @@ body.woocommerce-account .select2-results__option {
 }
 
 .woocommerce-checkout #container .woocommerce form.checkout #order_review table th {
-  font-family: "Sharp Sans Display Bold";
+  font-family: "Sharp Sans Extrabold";
   font-size: 1.6rem;
 }
 
@@ -19807,7 +19793,7 @@ body.woocommerce-account .select2-results__option {
 .woocommerce-checkout #container .woocommerce #payment ul.payment_methods .payment_box input {
   border: 1px solid rgba(0, 0, 0, 0.1);
   font-size: 1.6rem;
-  font-family: "Sharp Sans Book";
+  font-family: "Sharp Sans Medium";
 }
 
 body.fast-checkout-active {
@@ -20306,7 +20292,7 @@ body.fast-checkout-mobile-open .fast-checkout .fast-checkout-build-order {
 .fast-checkout .fast-checkout-purchase-option .option-text body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 address.sm, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 .fast-checkout .fast-checkout-purchase-option .option-text address.sm {
   font-size: 1.0rem;
   font-weight: 400;
-  font-family: "Sharp Sans Book";
+  font-family: "Sharp Sans Medium";
   margin: 0;
 }
 
@@ -20391,7 +20377,7 @@ body.single-product #primary .product .summary .price .wcsatt-sub-options {
 
 body.single-product #primary .product .summary h2 {
   font-size: 2.4rem;
-  font-family: "Sharp Sans Display Bold";
+  font-family: "Sharp Sans Extrabold";
   margin-bottom: 0;
 }
 
@@ -20417,7 +20403,7 @@ body.single-product #primary .product .summary form.cart {
 
 body.single-product #primary .product .summary form.cart .wcsatt-options-wrapper .wcsatt-options-prompt-text {
   font-size: 2.4rem;
-  font-family: "Sharp Sans Display Bold";
+  font-family: "Sharp Sans Extrabold";
   margin-bottom: 0;
 }
 
@@ -20525,7 +20511,7 @@ body.single-product #primary .product .summary form.cart .single_variation_wrap 
   box-shadow: none;
   background: #dc3545;
   font-size: 1.4rem;
-  font-family: "Sharp Sans Book";
+  font-family: "Sharp Sans Medium";
 }
 
 @media (min-width: 1200px) {

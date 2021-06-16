@@ -49,7 +49,7 @@ body.woocommerce-cart {
             padding: 10rem 3.6rem 0;
             border: none;
             background: none;
-            font-family: $displayType;
+            font-family: $sharpSansExtraBold;
             color: $darkBg;
             text-align: center;
             font-size: 3rem;
@@ -127,12 +127,12 @@ body.woocommerce-cart {
                     border-radius: 0 0 .5rem .5rem;
 
                     th {
-                        font-family: $displayType;
+                        font-family: $sharpSansExtraBold;
                         font-size: 1.6rem;
                     }
 
                     td {
-                        font-family: $mediumType;
+                        font-family: $sharpSansMedium;
                         font-size: 1.4rem;
 
                         p {
@@ -154,7 +154,7 @@ body.woocommerce-cart {
             background-color: $highlight;
             transition: all ease 300ms;
             color: #fff;
-            font-family: $mediumType;
+            font-family: $sharpSansMedium;
             padding: 2.7rem 3.3rem;
             border-radius: 4rem;
     

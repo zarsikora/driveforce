@@ -23,11 +23,11 @@
                 }
 
                 li {
-                    font-family: $bookType;
+                    font-family: $sharpSansMedium;
                     font-size: 1.4rem;
 
                     &.title {
-                        font-family: $boldType;
+                        font-family: $sharpSansBold;
                         color: $sage;
                         text-transform: uppercase;
                         margin-bottom: 2rem;
@@ -75,7 +75,7 @@
                     }
 
                     h4 {
-                        font-family: $boldType;
+                        font-family: $sharpSansBold;
                         font-size: 1.4rem;
                     }
 
@@ -154,7 +154,7 @@
                     }
 
                     p {
-                        font-family: $bookType;
+                        font-family: $sharpSansMedium;
                         font-size: 1.4rem;
                         line-height: 1.43em;
                         margin: 0;
@@ -195,7 +195,7 @@
                     }
 
                     .copyright {
-                        font-family: $bookType;
+                        font-family: $sharpSansMedium;
                         color: $lightText;
                         font-size: 1rem;
                         margin: 0;
@@ -248,7 +248,7 @@
                 padding: 0;
                 margin-bottom: 3rem;
                 font-size: 1.8rem;
-                font-family: $mediumType;
+                font-family: $sharpSansMedium;
                 @include media-breakpoint-up(md){
                     padding: 0 2rem;
                     margin-bottom: 0;

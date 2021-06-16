@@ -91,7 +91,7 @@ a.browse-all {
     color: $sage;
     font-size: 1.6rem;
     text-decoration: underline;
-    font-family: $boldType;
+    font-family: $sharpSansBold;
     transition: all ease 300ms;
     @include media-breakpoint-up(lg){
         font-size: 1.111vw;

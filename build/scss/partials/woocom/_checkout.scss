@@ -84,14 +84,14 @@
                                 line-height: 4rem;
 
                                 strong {
-                                    font-family: $mediumType;
+                                    font-family: $sharpSansMedium;
                                 }
                             }
                         }
 
                         label {
                             width: 100%;
-                            font-family: $displayType;
+                            font-family: $sharpSansExtraBold;
                             letter-spacing: 0;
                             font-size: 1.8rem;
                         }
@@ -186,7 +186,7 @@
                     .woocommerce-additional-fields {
                         label {
                             width: 100%;
-                            font-family: $displayType;
+                            font-family: $sharpSansExtraBold;
                             letter-spacing: 0;
                             font-size: 1.8rem;
                         }
@@ -228,12 +228,12 @@
                         background-color: #fff;
 
                         th {
-                            font-family: $displayType;
+                            font-family: $sharpSansExtraBold;
                             font-size: 1.6rem;
                         }
     
                         td {
-                            font-family: $mediumType;
+                            font-family: $sharpSansMedium;
                             font-size: 1.4rem;
                         }
                     }
@@ -258,7 +258,7 @@
                         background: #fff;
 
                         & > label {
-                            font-family: $boldType;
+                            font-family: $sharpSansBold;
                         }
                     }
 
@@ -280,7 +280,7 @@
                             display: block;
 
                             label {
-                                font-family: $boldType;
+                                font-family: $sharpSansBold;
                             }
                         }
 
@@ -309,7 +309,7 @@
                         input {
                             border: 1px solid rgba(0,0,0,0.1);
                             font-size: 1.6rem;
-                            font-family: $bookType;
+                            font-family: $sharpSansMedium;
                         }
                     }
                 }

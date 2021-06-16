@@ -1,4 +1,10 @@
-// Sharp Sans Bold
+@font-face {
+    font-family: "Sharp Sans Extrabold";
+    src: url('fonts/SharpSans-Extrabold.eot') format("embedded-opentype");
+    src: url('fonts/SharpSans-Extrabold.woff') format("woff");
+    src: url('fonts/SharpSans-Extrabold.woff2') format("woff2");
+}
+
 @font-face {
     font-family: "Sharp Sans Bold";
     src: url('fonts/SharpSans-Bold.eot') format("embedded-opentype");
@@ -6,7 +12,13 @@
     src: url('fonts/SharpSans-Bold.woff2') format("woff2");
 }
 
-// Sharp Sans Medium
+@font-face {
+    font-family: "Sharp Sans Semibold";
+    src: url('fonts/SharpSans-Semibold.eot') format("embedded-opentype");
+    src: url('fonts/SharpSans-Semibold.woff') format("woff");
+    src: url('fonts/SharpSans-Semibold.woff2') format("woff2");
+}
+
 @font-face {
     font-family: "Sharp Sans Medium";
     src: url('fonts/SharpSans-Medium.eot') format("embedded-opentype");
@@ -14,45 +26,9 @@
     src: url('fonts/SharpSans-Medium.woff2') format("woff2");
 }
 
-// Sharp Sans Medium Italic
 @font-face {
     font-family: "Sharp Sans Medium Italic";
     src: url('fonts/SharpSans-MediumItalic.eot') format("embedded-opentype");
     src: url('fonts/SharpSans-MediumItalic.woff') format("woff");
     src: url('fonts/SharpSans-MediumItalic.woff2') format("woff2");
-}
-
-
-//OLD FONTS!!!!!!!! NO LONGER USED
-
-// Sharp Sans Display 
-@font-face {
-    font-family: "Sharp Sans Display Bold";
-    src: url('fonts/SharpSansDispNo1-Bold.eot') format("embedded-opentype");
-    src: url('fonts/SharpSansDispNo1-Bold.woff') format("woff");
-    src: url('fonts/SharpSansDispNo1-Bold.woff2') format("woff2");
-}
-
-// Sharp Sans Display Italic
-@font-face {
-    font-family: "Sharp Sans Display Italic";
-    src: url('fonts/SharpSansDispNo1-BoldIt.eot') format("embedded-opentype");
-    src: url('fonts/SharpSansDispNo1-BoldIt.woff') format("woff");
-    src: url('fonts/SharpSansDispNo1-BoldIt.woff2') format("woff2");
-}
-
-// Sharp Sans Book
-@font-face {
-    font-family: "Sharp Sans Book";
-    src: url('fonts/SharpSans-Book.eot') format("embedded-opentype");
-    src: url('fonts/SharpSans-Book.woff') format("woff");
-    src: url('fonts/SharpSans-Book.woff2') format("woff2");
-}
-
-// Sharp Sans Book
-@font-face {
-    font-family: "Sharp Sans Book Italic";
-    src: url('fonts/SharpSans-BookItalic.eot') format("embedded-opentype");
-    src: url('fonts/SharpSans-BookItalic.woff') format("woff");
-    src: url('fonts/SharpSans-BookItalic.woff2') format("woff2");
 }

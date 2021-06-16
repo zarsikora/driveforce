@@ -34,7 +34,7 @@ body.single-product {
 
                 .price {
                     color: $darkBg;
-                    font-family: $mediumType;
+                    font-family: $sharpSansMedium;
                     font-size: 1.6rem;
 
                     .wcsatt-sub-options {
@@ -44,7 +44,7 @@ body.single-product {
 
                 h2 {
                     font-size: 2.4rem;
-                    font-family: $displayType;
+                    font-family: $sharpSansExtraBold;
                     margin-bottom: 0;
                     @include media-breakpoint-up(lg){
                         font-size: 2.083vw;
@@ -65,7 +65,7 @@ body.single-product {
 
                         .wcsatt-options-prompt-text {
                             font-size: 2.4rem;
-                            font-family: $displayType;
+                            font-family: $sharpSansExtraBold;
                             margin-bottom: 0;
                             @include media-breakpoint-up(lg){
                                 font-size: 2.083vw;
@@ -117,14 +117,14 @@ body.single-product {
 
                                         .option-type {
                                             font-size: 1.8rem;
-                                            font-family: $boldType;
+                                            font-family: $sharpSansBold;
                                         }
                                     }
 
                                     // Price
                                     label > span {
                                         text-align: right;
-                                        font-family: $boldType;
+                                        font-family: $sharpSansBold;
                                     }
                                 }
                             }
@@ -171,7 +171,7 @@ body.single-product {
                             box-shadow: none;
                             background: $red;
                             font-size: 1.4rem;
-                            font-family: $bookType;
+                            font-family: $sharpSansMedium;
                             @include media-breakpoint-up(xl) {
                                 font-size: 1.6rem;
                             }
@@ -261,7 +261,7 @@ table.variations {
     }
 
     p.subheader {
-        font-family: $boldType;
+        font-family: $sharpSansBold;
         font-size: 2rem;
         line-height: 1.25em;
         margin: 0 0 1em 0;
@@ -295,7 +295,7 @@ table.variations {
             margin-bottom: .7em;
             position: relative;
             padding-left: 2rem;
-            font-family: $mediumType;
+            font-family: $sharpSansMedium;
             font-size: 1.4rem;
             @include media-breakpoint-up(xl) {
                 font-size: 1.6rem;
@@ -329,7 +329,7 @@ table.variations {
     }
 
     p.header {
-        font-family: $boldType;
+        font-family: $sharpSansBold;
         line-height: 1.25em;
         margin: 0 0 1em 0;
         color: #fff;
@@ -363,7 +363,7 @@ table.variations {
     }
 
     p.header {
-        font-family: $boldType;
+        font-family: $sharpSansBold;
         line-height: 1.25em;
         margin: 0 0 1em 0;
         color: #fff;
@@ -404,7 +404,7 @@ table.variations {
     }
 
     p.subheader {
-        font-family: $boldType;
+        font-family: $sharpSansBold;
         font-size: 2rem;
         line-height: 1.25em;
         margin: 0 0 .7em 0;
@@ -482,7 +482,7 @@ table.variations {
     }
 
     p.header {
-        font-family: $boldType;
+        font-family: $sharpSansBold;
         font-size: 2rem;
         line-height: 1.5em;
         margin-bottom: 1em;
@@ -540,7 +540,7 @@ table.variations {
     }
 
     p.header {
-        font-family: $boldType;
+        font-family: $sharpSansBold;
         font-size: 2.4rem;
         line-height: 1.5em;
         margin-bottom: .5em;

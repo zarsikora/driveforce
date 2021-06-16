@@ -17,7 +17,7 @@
             margin: 0 1rem;
             font-size: 1.6rem;
             color: $highlight;
-            font-family: $displayType;
+            font-family: $sharpSansExtraBold;
             position: relative;
 
             &:first-child {
@@ -155,7 +155,7 @@
                     padding: 6rem 6rem 5rem 6rem;
                     border-left: 1.5rem solid $sage;
                     color: $darkText;
-                    font-family: $boldType;
+                    font-family: $sharpSansBold;
                     margin: 4rem 0;
                     @include media-breakpoint-up(md){
                         font-size: 3.2rem;
@@ -163,13 +163,13 @@
 
                     p {
                         margin-bottom: 0;
-                        font-family: $boldType;
+                        font-family: $sharpSansBold;
                     }
 
                     cite {
                         color: $darkText;
                         font-size: 1.6rem;
-                        font-family: $mediumType;
+                        font-family: $sharpSansMedium;
                         padding-left: 3rem;
                         position: relative;
 
@@ -213,7 +213,7 @@
                         line-height: 4rem;
                         margin: 0;
                         margin-right: 2rem;
-                        font-family: $boldType;
+                        font-family: $sharpSansBold;
                     }
                 }
             }

@@ -21,7 +21,7 @@ body.woocommerce-page {
         background-color: #fff;
         border: none;
         color: $darkBg;
-        font-family: $mediumType;
+        font-family: $sharpSansMedium;
         text-align: left;
         font-size: 1.4rem;
         display: flex;
@@ -45,7 +45,7 @@ body.woocommerce-page {
             background: none;
             color: #fff;
             text-decoration: underline;
-            font-family: $displayType;
+            font-family: $sharpSansExtraBold;
             padding: 0;
             margin-left: 3rem;
             font-size: 1.6rem;
@@ -88,7 +88,7 @@ body.woocommerce-page {
             a.delete,
             a.default,
             a.view {
-                font-family: $bookType;
+                font-family: $sharpSansMedium;
                 color: $darkBg;
                 box-shadow: none;
                 padding: 0;
@@ -145,7 +145,7 @@ body.woocommerce-page {
     }
 
     .woocommerce-customer-details {
-        font-family: $bookType;
+        font-family: $sharpSansMedium;
 
         address {
             background: #fff;
@@ -158,7 +158,7 @@ body.woocommerce-page {
             .woocommerce-customer-details--email {
                 margin: 0;
                 font-size: 1.4rem;
-                font-family: $bookType;
+                font-family: $sharpSansMedium;
             }
         }
     }

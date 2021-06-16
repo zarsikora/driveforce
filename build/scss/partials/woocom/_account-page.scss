@@ -40,7 +40,7 @@ body.woocommerce-account {
                 a {
                     color: $darkBg;
                     transition: all ease 300ms;
-                    font-family: $displayType;
+                    font-family: $sharpSansExtraBold;
                     font-size: 1.8rem;
 
                     &:hover {
@@ -104,7 +104,7 @@ body.woocommerce-account {
 
             .col-1,
             .col-2 {
-                font-family: $mediumType;
+                font-family: $sharpSansMedium;
                 font-size: 1.6rem;
                 color: $darkBg;
                 padding: 0;
@@ -128,7 +128,7 @@ body.woocommerce-account {
 
                     a.edit {
                         color: $darkBg;
-                        font-family: $displayType;
+                        font-family: $sharpSansExtraBold;
                         font-size: 1.4rem;
                         transition: all ease 300ms;
                         float: none;
@@ -203,12 +203,12 @@ body.woocommerce-account {
             }
 
             legend {
-                font-family: $mediumType;
+                font-family: $sharpSansMedium;
             }
 
             .input-note {
                 font-size: 1.2rem;
-                font-family: $bookType;
+                font-family: $sharpSansMedium;
                 color: $darkBg;
             }
 

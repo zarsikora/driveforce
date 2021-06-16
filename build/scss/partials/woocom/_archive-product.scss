@@ -68,7 +68,7 @@
                 }
 
                 h2 {
-                    font-family: $displayType;
+                    font-family: $sharpSansExtraBold;
                     color: $darkBg;
                     font-size: 2.4rem;
                     line-height: 1.35em;
@@ -82,7 +82,7 @@
                 }
 
                 .price {
-                    font-family: $mediumType;
+                    font-family: $sharpSansMedium;
                     color: $darkBg;
                     font-size: 1.4rem;
                     @include media-breakpoint-up(lg){
@@ -95,7 +95,7 @@
 
                 .added_to_cart.wc-forward {
                     display: block;
-                    font-family: $displayType;
+                    font-family: $sharpSansExtraBold;
                     color: $darkBg;
                     font-size: 1.6rem;
                     transition: all ease 300ms;
@@ -144,7 +144,7 @@
                     }
 
                     label {
-                        font-family: $displayType;
+                        font-family: $sharpSansExtraBold;
                         font-size: 1.4rem;
                         color: $darkBg;
                         @include media-breakpoint-up(md){
@@ -152,7 +152,7 @@
                         }
     
                         input {
-                            font-family: $mediumType;
+                            font-family: $sharpSansMedium;
                             font-size: 1.4rem;
                         }
                     }
@@ -166,7 +166,7 @@
                         a {
                             color: $highlight;
                             transition: all ease 300ms;
-                            font-family: $displayType;
+                            font-family: $sharpSansExtraBold;
                             font-size: 1.6rem;
     
                             &:hover {
@@ -179,12 +179,12 @@
 
             table {
                 th {
-                    font-family: $displayType;
+                    font-family: $sharpSansExtraBold;
                     font-size: 1.6rem;
                 }
     
                 td {
-                    font-family: $mediumType;
+                    font-family: $sharpSansMedium;
                     font-size: 1.4rem;
 
                     .wcsatt-sub-options {
@@ -235,7 +235,7 @@
         white-space: nowrap;
         position: relative;
         text-decoration: none !important;
-        font-family: $mediumType;
+        font-family: $sharpSansMedium;
         font-size: 1.6rem;
         height: 5.4rem !important;
         @include media-breakpoint-up(md){

@@ -145,7 +145,7 @@
                 .nav-link {
                     text-transform: uppercase;
                     color: $darkText;
-                    font-family: $boldType;
+                    font-family: $sharpSansBold;
                     font-size: 1.4rem;
                     margin-left: 3rem;
                     letter-spacing: .2rem;
@@ -350,7 +350,7 @@
                     margin-bottom: 2.6rem;
 
                     a {
-                        font-family: $displayType;
+                        font-family: $sharpSansExtraBold;
                         text-decoration: underline;
                         font-size: 2.4rem;
                     }
@@ -377,7 +377,7 @@
                     margin-bottom: 2.6rem;
 
                     a {
-                        font-family: $displayType;
+                        font-family: $sharpSansExtraBold;
                         color: #fff;
                         font-size: 2.4rem;
                         transition: all ease 300ms;
