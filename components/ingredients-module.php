@@ -7,7 +7,7 @@
 ?>
 
 <div class="module-wrapper ingredients-module">
-    <div class="module-padded row">
+    <div class="module-padded row align-items-center">
         <div class="intro col-lg-5">
             <?php if($introHeader): ?>
                 <h2><?php echo $introHeader ?></h2>
@@ -23,23 +23,28 @@
         </div>
 
         <div class="ingredients col-lg-6 offset-lg-1">
-            <div class="block">
-                <?php if($blockHeader): ?>
-                    <h3><?php echo $blockHeader ?></h3>
-                <?php endif; ?>
+            <div class="row">
+                <div class="col-xl-8">
+                    <div class="block">
+                        <?php if($blockHeader): ?>
+                            <h3><?php echo $blockHeader ?></h3>
+                        <?php endif; ?>
 
-                <ul>
-                    <li><span class="check">✓</span> Real Ingredients</li>
-                    <li><span class="check">✓</span> Real Results</li>
-                    <li><span class="check">✓</span> No Sugar Added</li>
-                    <li><span class="check">✓</span> No Caffeine</li>
-                </ul>
+                        <ul>
+                            <li><span class="check">✓</span> Real Ingredients</li>
+                            <li><span class="check">✓</span> Real Results</li>
+                            <li><span class="check">✓</span> No Sugar Added</li>
+                            <li><span class="check">✓</span> No Caffeine</li>
+                        </ul>
 
-                <?php echo button('#', 'Read All Ingredients', 'thin-btn') ?>
-
-                <?php if($blockImage): ?>
-                    <?php echo imageTag($blockImage, 'block-image'); ?>
-                <?php endif; ?>
+                        <?php echo button('#', 'Read All Ingredients', 'thin-btn') ?>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <?php if($blockImage): ?>
+                        <?php echo imageTag($blockImage, 'block-image'); ?>
+                    <?php endif; ?>
+                </div>
             </div>
         </div>
     </div>
