@@ -12476,11 +12476,11 @@ a.btn:hover, body.woocommerce-cart #content .return-to-shop a.button:hover {
   margin: 0;
 }
 
-.hero.home-hero .inner .row .col-lg-5 .text-container .btn, .hero.home-hero .inner .row .col-lg-5 .text-container #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form button, #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form .hero.home-hero .inner .row .col-lg-5 .text-container button, .hero.home-hero .inner .row .col-lg-5 .text-container body.woocommerce-cart #content .return-to-shop .button, body.woocommerce-cart #content .return-to-shop .hero.home-hero .inner .row .col-lg-5 .text-container .button,
 .hero.home-hero .inner .row .col-lg-5 .text-container .btns-wrapper {
   flex: 0 0 100%;
   order: 4;
   margin: 2rem 0;
+  display: block;
 }
 
 .hero.home-hero .inner .row .col-lg-5 .text-container .logos {
@@ -12544,11 +12544,6 @@ a.btn:hover, body.woocommerce-cart #content .return-to-shop a.button:hover {
   .hero.home-hero .bottom {
     padding-bottom: 6rem;
   }
-}
-
-.hero.home-hero .bottom .link.mobile {
-  opacity: 0;
-  margin-top: 0;
 }
 
 .hero.home-hero .bottom .tag {
@@ -20370,20 +20365,7 @@ body.single-product #primary .product {
 @media (min-width: 992px) {
   body.single-product #primary .product {
     max-width: 80%;
-    margin: 6.5rem auto;
     padding: 0;
-  }
-}
-
-@media (min-width: 1440px) {
-  body.single-product #primary .product {
-    margin: 4.5vw auto;
-  }
-}
-
-@media (min-width: 1920px) {
-  body.single-product #primary .product {
-    margin: 8.5rem auto;
   }
 }
 

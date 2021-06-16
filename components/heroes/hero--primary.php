@@ -4,11 +4,17 @@ $hasGraphic = get_sub_field('has_curve_graphic');
 $header = get_sub_field('header');
 $copy = get_sub_field('copy');
 $waitlistButton = get_sub_field('waitlist_button');
-$hasLink = get_sub_field('has_link');
-$link = get_sub_field('link');
-if($link){
-    $text = $link['title'];
-    $url = $link['url'];
+
+$button = get_sub_field('button');
+if($button) {
+    $buttonText = $button['title'];
+    $buttonURL = $button['url'];
+}
+
+$link = get_sub_field('text_link');
+if($link) {
+    $linkText = $link['title'];
+    $linkURL = $link['url'];
 }
 
 ?>
@@ -17,6 +23,7 @@ if($link){
     <div class="inner">
         <div class="row">
             <div class="col-md-6 col-lg-5">
+
                 <div class="text-container">
                     <h1 class="title breakpoint-animate" data-splitting="chars"><?php echo $header ?></h1>
 
@@ -26,27 +33,13 @@ if($link){
                         </div>
                     <?php endif; ?>
 
-                    <!-- MOBILE WAITLIST BTN -->
-                    <?php if ($waitlistButton) : ?>
-                        <?php echo (button('#', 'Join the Waitlist', 'mobile-waitlist', '#waitList')); ?>
-                    <?php endif; ?>
-
-                    <!-- MOBILE LOGOS -->
-<!--                    <div class="logos mobile">-->
-<!--                        <svg class="is-logo" viewbox="0 0 61.122 61.122">-->
-<!--                            <use href="#is-logo"></use>-->
-<!--                        </svg>-->
-<!---->
-<!--                        <svg class="ngf-logo" viewbox="0 0 101.688 42.408">-->
-<!--                            <use href="#ngf-logo"></use>-->
-<!--                        </svg>-->
-<!--                    </div>-->
-
                     <div class="copy"><?php echo apply_filters('the_content', $copy) ?></div>
 
+                    <?php if($button) { ?>
                     <div class="btns-wrapper">
-                        <?php echo (button('#', 'See Purchase Options')); ?>
+                        <?php echo button($buttonURL, $buttonText); ?>
                     </div>
+                    <?php } ?>
 
                     <div class="logos desktop">
                         <svg class="is-logo" viewbox="0 0 61.122 61.122">
@@ -70,9 +63,9 @@ if($link){
         </div>
 
         <div class="bottom">
-            <?php if ($hasLink) : ?>
-                <a class="link mobile" href="<?php echo $url ?>"><?php echo $text ?></a>
-            <?php endif; ?>
+            <?php if($link) { ?>
+                <a class="link" href="<?php echo $linkURL; ?>"><?php echo $linkText; ?></a>
+            <?php } ?>
         </div>
     </div>
     <?php if ($hasGraphic) : ?>

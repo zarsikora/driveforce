@@ -19,14 +19,7 @@ body.single-product {
             margin: 0 auto;
             @include media-breakpoint-up(lg) {
                 max-width: 80%;
-                margin: 6.5rem auto;
                 padding: 0;
-            }
-            @media(min-width: 1440px) {
-                margin: 4.5vw auto;
-            }
-            @media(min-width: 1920px) {
-                margin: 8.5rem auto;
             }
 
             &:after {
