@@ -125,12 +125,16 @@ body {
 h1.title {
     font-family: $sharpSansExtraBold;
     font-size: 4rem;
-    line-height: 1.14em;
+    line-height: 1.2em;
     @include media-breakpoint-up(lg){
         font-size: 4.061vw;
     }
-    @media(min-width: 1920px){
-        font-size: 9.3rem;
+    @media(min-width: 1440px) {
+        //font-size: 6rem;
+        font-size: 4.16vw; // 60/1440
+    }
+    @media(min-width: 1920px) {
+        font-size: 8rem; // .0416*1920
     }
 }
 

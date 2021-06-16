@@ -112,13 +112,14 @@
 
                     .product {
                         background-color: $lightText;
-                        padding: 1.5rem;
-                        border-radius: 2.3rem;
+                        padding: 1.5rem 2.8rem;
+                        border-radius: 5.6rem;
                         font-size: 1.4rem;
                         font-family: $sharpSansBold;
                         letter-spacing: .21rem;
                         display: block;
                         text-align: center;
+                        margin-top: 0;
                         @include media-breakpoint-up(md) {
                             display: inline-block;
                         }
@@ -128,6 +129,11 @@
                         font-size: 1.4rem;
                         font-family: $sharpSansBold;
                         margin: 0;
+                    }
+
+                    .btn {
+                        width: auto;
+                        margin-top: 2rem;
                     }
                 }
             }

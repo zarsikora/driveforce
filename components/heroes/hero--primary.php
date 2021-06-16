@@ -54,7 +54,7 @@ if($link) {
             </div>
 
             <?php if ($image) : ?>
-                <div class="col-md-6 offset-lg-1">
+                <div class="col-md-6 col-lg-7">
                     <div class="image-container desktop">
                         <?php echo imageTag($image, "", "", null, false); ?>
                     </div>

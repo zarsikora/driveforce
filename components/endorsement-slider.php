@@ -42,6 +42,11 @@
                             $productText = ($product === 'pro30') ? 'PRO30 PACK' : 'OTHER PRODUCT TYPE';
                             $quote = get_sub_field('quote');
                             $index = get_row_index();
+                            $button = get_sub_field('button');
+                            if($button) {
+                                $buttonURL = $button['url'];
+                                $buttonText = $button['title'];
+                            }
                             ?>
                             <div class="details-block <?php if($index === 1) echo ' active' ?>" data-slide="<?php echo $index ?>">
                                 <?php if($name): ?>
@@ -58,6 +63,10 @@
 
                                 <?php if($quote): ?>
                                     <p class="quote"><?php echo $quote ?></p>
+                                <?php endif; ?>
+
+                                <?php if($button): ?>
+                                    <?php echo button($buttonURL, $buttonText, 'thin-btn'); ?>
                                 <?php endif; ?>
                             </div>
                         <?php endwhile ?>

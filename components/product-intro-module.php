@@ -10,9 +10,14 @@ $bottomText = get_sub_field('bottom_text');
 <div class="module-wrapper color-bg product-intro-module">
 
     <div class="module-padded">
+
         <?php if($header): ?>
-            <h2 data-animation-effect="splitSlideUpWord" data-animation-trigger="breakpoint" data-splitting="chars"><?php echo $header ?></h2>
-            <?php if($intro) { ?><p class="intro-copy"><?php echo $intro ?></p><?php } ?>
+            <div class="header">
+                <h2 data-animation-effect="splitSlideUpWord" data-animation-trigger="breakpoint" data-splitting="chars"><?php echo $header ?></h2>
+                <?php if($intro) { ?>
+                    <p class="intro-copy"><?php echo $intro ?></p>
+                <?php } ?>
+            </div>
         <?php endif; ?>
 
         <?php if($mobileImage): ?>
