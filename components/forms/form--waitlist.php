@@ -12,7 +12,7 @@
             <label class="sr-only">Email</label>
             <input class="form-control" type="text" name="email" value="" placeholder="Email" />
         </div>
-        <button disabled class="btn" type="submit">
+        <button disabled class="btn thin-btn" type="submit">
             <div class="btn-hover-maks"></div>
             <span>Add Me to the Waitlist</span>
         </button>

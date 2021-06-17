@@ -25,10 +25,11 @@
                 li {
                     font-family: $sharpSansMedium;
                     font-size: 1.4rem;
+                    margin-bottom: .3em;
 
                     &.title {
                         font-family: $sharpSansBold;
-                        color: $sage;
+                        color: #fff;
                         text-transform: uppercase;
                         margin-bottom: 2rem;
                         font-size: 1rem;
@@ -55,8 +56,12 @@
 
                     .logo {
                         margin-bottom: 5rem;
+                        width: 4rem;
                         @include media-breakpoint-up(lg){
                             margin-bottom: 0;
+                        }
+                        @include media-breakpoint-up(xl) {
+                            width: 5.2rem;
                         }
                     }
                 }

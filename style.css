@@ -11738,11 +11738,12 @@ body.single-product #header .mobile-nav .mobile-controls button svg {
 #footer .top ul.submenu li {
   font-family: "Sharp Sans Medium";
   font-size: 1.4rem;
+  margin-bottom: .3em;
 }
 
 #footer .top ul.submenu li.title {
   font-family: "Sharp Sans Bold";
-  color: #447563;
+  color: #fff;
   text-transform: uppercase;
   margin-bottom: 2rem;
   font-size: 1rem;
@@ -11772,11 +11773,18 @@ body.single-product #header .mobile-nav .mobile-controls button svg {
 
 #footer .top .inner .upper-nav .logo {
   margin-bottom: 5rem;
+  width: 4rem;
 }
 
 @media (min-width: 992px) {
   #footer .top .inner .upper-nav .logo {
     margin-bottom: 0;
+  }
+}
+
+@media (min-width: 1200px) {
+  #footer .top .inner .upper-nav .logo {
+    width: 5.2rem;
   }
 }
 
