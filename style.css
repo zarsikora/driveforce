@@ -18311,6 +18311,7 @@ body.cart-drawer-open .cart-drawer {
 }
 
 .cart-drawer-product .product-subscribe {
+  display: none !important;
   background: #447563;
   padding: 1.5rem;
   margin-top: 2rem;

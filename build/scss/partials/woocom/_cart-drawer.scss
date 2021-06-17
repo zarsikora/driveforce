@@ -131,6 +131,7 @@ body.cart-drawer-open {
     }
 
     .product-subscribe {
+        display: none !important;
         background: $sage;
         padding: 1.5rem;
         margin-top: 2rem;

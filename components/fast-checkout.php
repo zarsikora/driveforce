@@ -14,7 +14,8 @@ $variantIDs = array(640, 641, 642); ?>
         <div class="purchase">
             <div>
                 <span class="product">DF-18 Pro 30 Pack</span><br />
-                <span class="subscription">Monthly Subscription</span>
+                <!--<span class="subscription">Monthly Subscription</span>-->
+
             </div>
             <div class="button">
                 <?php echo button('', 'Fast Checkout', 'fast-checkout-submit', null); ?>
@@ -32,7 +33,7 @@ $variantIDs = array(640, 641, 642); ?>
                 <a class="close" href="">Close</a>
             </div>
 
-            <div class="col-lg-6 col-xl-4 fast-checkout-variant-select">
+            <div class="col-lg-6 col-xl-5 fast-checkout-variant-select">
                 <p class="build-order-header">Build Your Order</p>
 
                 <div class="mobile">
@@ -47,7 +48,7 @@ $variantIDs = array(640, 641, 642); ?>
                         <div class="selected-option" data-variant-id="<?php echo $variantIDs[0] ?>">
                             <div>
                                 <span class="selected-product">DF-18 Pro 30 Pack</span>
-                                <span class="selected-type">Monthly subscription</span>
+                                <!-- <span class="selected-type">Monthly subscription</span>-->
                             </div>
                             <svg viewBox="0 0 16.279 10.853">
                                 <use href="#thick-caret"></use>
@@ -62,8 +63,9 @@ $variantIDs = array(640, 641, 642); ?>
                 </div>
             </div>
 
-            <div class="col-lg-6 col-xl-6 p-0">
+            <div class="col-lg-6 col-xl-5 p-0">
                 <div class="row">
+                    <!--
                     <div class="col-lg-12 col-xl-6 fast-checkout-purchase-option option1">
                         <div class="option-text">
                             <p>Subscribe + Save 20%</p>
@@ -97,6 +99,19 @@ $variantIDs = array(640, 641, 642); ?>
                                 <input type="radio" name="fast-checkout-purchase-type" value="0" />
                                 <span class="radio"></span>
                             </label>
+                        </div>
+                    </div>
+                    -->
+
+                    <div class="col-lg-12 col-xl-7 offset-xl-5 fast-checkout-purchase-option option2">
+                        <div class="option-text">
+                            <p>Subtotal</p>
+                            <p class="sm">Shipping calculated at checkout</p>
+                        </div>
+                        <div>
+                            <p class="price">
+                                <span class="regular-price">$120</span>
+                            </p>
                         </div>
                     </div>
                 </div>
