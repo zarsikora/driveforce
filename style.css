@@ -20383,6 +20383,7 @@ body.single-product #primary .product .onsale {
   body.single-product #primary .product .woocommerce-product-gallery .flex-control-thumbs {
     flex: 0 0 7rem;
     margin-right: 1rem;
+    align-self: flex-end;
   }
 }
 

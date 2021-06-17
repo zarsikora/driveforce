@@ -46,6 +46,7 @@ body.single-product {
                     @include media-breakpoint-up(lg) {
                         flex: 0 0 7rem;
                         margin-right: 1rem;
+                        align-self: flex-end;
                     }
 
                     li {
