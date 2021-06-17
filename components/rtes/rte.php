@@ -7,7 +7,6 @@
     $hasGraphic = get_sub_field('has_graphic');
 ?>
 
-
 <div class="module-wrapper rte <?php echo ' ' . $bgColor . '-bg'?>">
     <div class="module-padded rte <?php echo $type; ?> <?php if($hasGraphic) echo ' has-graphic'; ?>">
         <div class="text-container <?php echo ' ' . $bgColor . '-bg'?>">

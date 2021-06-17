@@ -14061,9 +14061,13 @@ body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .
   }
 }
 
+.rte.basic .text-container {
+  text-align: left;
+}
+
 @media (min-width: 992px) {
   .rte.basic .text-container {
-    width: 42.069vw;
+    max-width: 100rem;
     margin: 0 auto;
   }
 }

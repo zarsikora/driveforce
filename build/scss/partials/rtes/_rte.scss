@@ -90,8 +90,9 @@
 
     &.basic {
         .text-container {
+            text-align: left;
             @include media-breakpoint-up(lg){
-                width: 42.069vw;
+                max-width: 100rem;
                 margin: 0 auto;
             }
         }
