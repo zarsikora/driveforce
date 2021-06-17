@@ -30,6 +30,34 @@ body.single-product {
 
             .onsale { display: none; }
 
+            .woocommerce-product-gallery {
+                @include media-breakpoint-up(lg) {
+                    display: flex;
+                    flex-wrap: nowrap;
+                }
+
+                .flex-viewport {
+                    @include media-breakpoint-up(lg) {
+                        order: 2;
+                    }
+                }
+
+                .flex-control-thumbs {
+                    @include media-breakpoint-up(lg) {
+                        flex: 0 0 7rem;
+                        margin-right: 1rem;
+                    }
+
+                    li {
+                        @include media-breakpoint-up(lg) {
+                            float: none;
+                            width: 100%;
+                            margin-bottom: 1rem;
+                        }
+                    }
+                }
+            }
+
             .summary {
 
                 .price {

@@ -20366,6 +20366,34 @@ body.single-product #primary .product .onsale {
   display: none;
 }
 
+@media (min-width: 992px) {
+  body.single-product #primary .product .woocommerce-product-gallery {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+}
+
+@media (min-width: 992px) {
+  body.single-product #primary .product .woocommerce-product-gallery .flex-viewport {
+    order: 2;
+  }
+}
+
+@media (min-width: 992px) {
+  body.single-product #primary .product .woocommerce-product-gallery .flex-control-thumbs {
+    flex: 0 0 7rem;
+    margin-right: 1rem;
+  }
+}
+
+@media (min-width: 992px) {
+  body.single-product #primary .product .woocommerce-product-gallery .flex-control-thumbs li {
+    float: none;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+}
+
 body.single-product #primary .product .summary .price {
   color: #081D1A;
   font-family: "Sharp Sans Medium";
