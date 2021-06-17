@@ -29,7 +29,7 @@
         <link rel="apple-touch-icon" sizes="180x180" href="<?php echo $templateDir ?>/assets/favicon/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="<?php echo $templateDir ?>/assets/favicon/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="<?php echo $templateDir ?>/assets/favicon/favicon-16x16.png">
-        <link rel="mask-icon" href="<?php echo $templateDir ?>/assets/favicon/safari-pinned-tab.svg" color="#7a7a7a">
+        <link rel="mask-icon" href="<?php echo $templateDir ?>/assets/favicon/safari-pinned-tab.svg" color="#dc4443">
         <meta name="msapplication-TileColor" content="#dc4443">
         <meta name="theme-color" content="#ffffff">
 
