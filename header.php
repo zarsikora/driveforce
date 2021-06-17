@@ -4,7 +4,10 @@
         <meta charset="<?php bloginfo( 'charset' ); ?>" />
         <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1, user-scalable=no" />
         <title>DriveForce</title>
+
         <?php wp_head(); ?>
+
+        <?php $templateDir = get_bloginfo('template_directory'); ?>
 
         <!-- TODO: Add GTM ID to Options Page in Back End Sidebar -->
         <?php 
@@ -23,12 +26,11 @@
         <?php endif; ?>
 
         <!-- Favicons -->
-        <link rel="apple-touch-icon" sizes="180x180" href="<?php echo get_template_directory_uri()?>/assets/favicons/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="<?php echo get_template_directory_uri()?>/assets/favicons/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="<?php echo get_template_directory_uri()?>/assets/favicons/favicon-16x16.png">
-        <link rel="manifest" href="<?php echo get_template_directory_uri()?>/assets/favicons/site.webmanifest">
-        <link rel="mask-icon" href="<?php echo get_template_directory_uri()?>/assets/favicons/safari-pinned-tab.svg" color="#5bbad5">
-        <meta name="msapplication-TileColor" content="#b91d47">
+        <link rel="apple-touch-icon" sizes="180x180" href="<?php echo $templateDir ?>/assets/favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="<?php echo $templateDir ?>/assets/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="<?php echo $templateDir ?>/assets/favicon/favicon-16x16.png">
+        <link rel="mask-icon" href="<?php echo $templateDir ?>/assets/favicon/safari-pinned-tab.svg" color="#7a7a7a">
+        <meta name="msapplication-TileColor" content="#dc4443">
         <meta name="theme-color" content="#ffffff">
 
         <!-- TODO: Add Bugherd Script to Options Page in Back End Sidebar -->
