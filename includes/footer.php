@@ -2,7 +2,6 @@
     $disclaimer = get_field('disclaimer_text', 'options');
 ?>
 
-
     <footer id="footer">
             <div class="top">
                 <div class="inner">
@@ -16,44 +15,83 @@
                             </a>
                         </div>
 
-                        <ul class="submenu col-md-3 col-lg-2">
-                            <li class="title">Shop</li>
-                            <li>
-                                <a href="">DF-18</a>
-                            </li>
-                            <li>
-                                <a href="">My Account</a>
-                            </li>
-                        </ul>
+                        <?php
+                        $footerMenu1 = wp_get_menu_array('footer-menu-1');
+                        $footerMenu2 = wp_get_menu_array('footer-menu-2');
+                        $footerMenu3 = wp_get_menu_array('footer-menu-3');
+                        ?>
 
-                        <ul class="submenu col-md-3 col-lg-2">
-                            <li class="title">Learn</li>
-                            <li>
-                                <a href="">Ingredients</a>
-                            </li>
-                            <li>
-                                <a href="">Articles</a>
-                            </li>
-                            <li>
-                                <a href="">FAQs</a>
-                            </li>
-                        </ul>
+                        <?php
+                        if ($footerMenu1) {
+                            $term = get_term_by('slug', 'footer-menu-1', 'nav_menu');
+                            $menu_id = $term->term_id;
+                            $header1 = get_field('footer_menu_header', 'term_'.$menu_id);
+                            ?>
+                            <ul class="submenu col-md-3 col-lg-2">
+                                <li class="title"><?php echo $header1 ?></li>
+                                <?php
+                                $menuCounter = 1;
+                                foreach ($footerMenu1 as $k => $v) { ?>
 
-                        <ul class="submenu col-md-3 col-lg-2">
-                            <li class="title">About</li>
-                            <li>
-                                <a href="">Our Story</a>
-                            </li>
-                            <li>
-                                <a href="">Wholesale Inquiries</a>
-                            </li>
-                            <li>
-                                <a href="">Contact Us</a>
-                            </li>
-                            <li>
-                                <a href="">Press Inquiries</a>
-                            </li>
-                        </ul>
+                                    <li id="menu-item=<?php echo $v['ID'] ?>">
+                                        <a href="<?php echo $v['url'] ?>">
+                                            <?php echo $v['title']; ?>
+                                        </a>
+                                    </li>
+
+                                <?php
+                                    $menuCounter++;
+                                } ?>
+                            </ul>
+                        <?php } ?>
+
+                        <?php
+                        if ($footerMenu2) {
+                            $term = get_term_by('slug', 'footer-menu-2', 'nav_menu');
+                            $menu_id = $term->term_id;
+                            $header2 = get_field('footer_menu_header', 'term_'.$menu_id);
+                            ?>
+                            <ul class="submenu col-md-3 col-lg-2">
+                                <li class="title"><?php echo $header2 ?></li>
+                                <?php
+                                $menuCounter = 1;
+                                foreach ($footerMenu2 as $k => $v) { ?>
+
+                                    <li id="menu-item=<?php echo $v['ID'] ?>">
+                                        <a href="<?php echo $v['url'] ?>">
+                                            <?php echo $v['title']; ?>
+                                        </a>
+                                    </li>
+
+                                    <?php
+                                    $menuCounter++;
+                                } ?>
+                            </ul>
+                        <?php } ?>
+
+                        <?php
+                        if ($footerMenu3) {
+                            $term = get_term_by('slug', 'footer-menu-3', 'nav_menu');
+                            $menu_id = $term->term_id;
+                            $header3 = get_field('footer_menu_header', 'term_'.$menu_id);
+                            ?>
+                            <ul class="submenu col-md-3 col-lg-2">
+                                <li class="title"><?php echo $header3 ?></li>
+                                <?php
+                                $menuCounter = 1;
+                                foreach ($footerMenu3 as $k => $v) { ?>
+
+                                    <li id="menu-item=<?php echo $v['ID'] ?>">
+                                        <a href="<?php echo $v['url'] ?>">
+                                            <?php echo $v['title']; ?>
+                                        </a>
+                                    </li>
+
+                                    <?php
+                                    $menuCounter++;
+                                } ?>
+                            </ul>
+                        <?php } ?>
 
                         <div class="newsletter col-lg-4">
                             <h4>DriveForce Newsletter Signup</h4>
@@ -86,7 +124,11 @@
                             </li>
                         </ul>
 
-                        <p class="copyright">&copy; DriveForce  <?php echo date('Y'); ?></p>
+                        <p class="copyright">
+                            108 Union Wharf Boston MA 02109<br />
+                            <a href="mailto:info@driveforce.golf">info@driveforce.golf</a><br />
+                            <span class="sm">&copy; DriveForce  <?php echo date('Y'); ?></span>
+                        </p>
                     </div>
                 </div>
             </div>

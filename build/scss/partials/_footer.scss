@@ -202,8 +202,22 @@
                     .copyright {
                         font-family: $sharpSansMedium;
                         color: $lightText;
-                        font-size: 1rem;
+                        font-size: 1.2rem;
                         margin: 0;
+                        text-align: right;
+
+                        a {
+                            color: $lightText;
+                            text-decoration: underline;
+
+                            &:hover {
+                                color: $red;
+                            }
+                        }
+
+                        .sm {
+                            font-size: 1rem;
+                        }
                     }
                 }
             }

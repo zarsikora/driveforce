@@ -15,9 +15,10 @@ function alter_payment_button($html)
 // SET UP BASIC NAV MENUS IN BACK END AND ENABLE WOOCOM SUPPORT
 function bones_theme_setup() {
     register_nav_menus( array(
-            'main-menu' => esc_html__( 'Main Menu' ),
             'nav-pane-menu' => esc_html__( 'Nav Pane Menu' ),
-            'footer-menu' => esc_html__('Footer Menu')
+            'footer-menu-1' => esc_html__('Footer Menu 1'),
+            'footer-menu-2' => esc_html__('Footer Menu 2'),
+            'footer-menu-3' => esc_html__('Footer Menu 3')
         )
     );
 
@@ -191,9 +192,11 @@ return $options;
 add_filter('acf/fields/post_object/query/name=blog_posts', 'relationship_options_filter', 10, 3);
 
 //Get menu function
-function wp_get_menu_array($current_menu) {
+function wp_get_menu_array($current_menu)
+{
     $array_menu = wp_get_nav_menu_items($current_menu);
     $menu = array();
+
     foreach ($array_menu as $m) {
         if (empty($m->menu_item_parent)) {
             $menu[$m->ID] = array();
@@ -203,6 +206,7 @@ function wp_get_menu_array($current_menu) {
             $menu[$m->ID]['children'] = array();
         }
     }
+
     $submenu = array();
     foreach ($array_menu as $m) {
         if ($m->menu_item_parent) {
@@ -213,7 +217,7 @@ function wp_get_menu_array($current_menu) {
             $menu[$m->menu_item_parent]['children'][$m->ID] = $submenu[$m->ID];
         }
     }
-    return $menu;
-    }
 
+    return $menu;
+}
 ?>

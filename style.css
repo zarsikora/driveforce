@@ -11954,8 +11954,22 @@ body.single-product #header .mobile-nav .mobile-controls button svg {
 #footer .top .inner .lower-nav .copyright {
   font-family: "Sharp Sans Medium";
   color: #F9F1E7;
-  font-size: 1rem;
+  font-size: 1.2rem;
   margin: 0;
+  text-align: right;
+}
+
+#footer .top .inner .lower-nav .copyright a {
+  color: #F9F1E7;
+  text-decoration: underline;
+}
+
+#footer .top .inner .lower-nav .copyright a:hover {
+  color: #dc3545;
+}
+
+#footer .top .inner .lower-nav .copyright .sm {
+  font-size: 1rem;
 }
 
 #footer .logo .logo-link {
