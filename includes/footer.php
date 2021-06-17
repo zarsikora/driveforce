@@ -74,15 +74,15 @@
                     <div class="lower-nav row">
                         <ul class="submenu">
                             <li>
-                                <a href="">Privacy</a>
+                                <a href="<?php bloginfo('url') ?>/privacy-policy">Privacy Policy</a>
                             </li>
 
                             <li>
-                                <a href="">Terms & Conditions</a>
+                                <a href="<?php bloginfo('url') ?>/terms-of-service">Terms of Service</a>
                             </li>
 
                             <li>
-                                <a href="">Legal Disclosure</a>
+                                <a href="<?php bloginfo('url') ?>/shipping-and-returns">Shipping & Returns</a>
                             </li>
                         </ul>
 
