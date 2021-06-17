@@ -31,6 +31,9 @@ body.single-product {
             .onsale { display: none; }
 
             .woocommerce-product-gallery {
+                float: none;
+                width: 100%;
+                margin: 0;
                 @include media-breakpoint-up(lg) {
                     display: flex;
                     flex-wrap: nowrap;
@@ -48,18 +51,32 @@ body.single-product {
                         margin-right: 1rem;
                         align-self: flex-end;
                     }
+                    @include media-breakpoint-up(xl) {
+                        position: absolute;
+                        left: 0;
+                        bottom: 0;
+                        transform: translateX(-100%);
+                    }
 
                     li {
+                        width: 6rem;
+                        float: none;
                         @include media-breakpoint-up(lg) {
-                            float: none;
-                            width: 100%;
                             margin-bottom: 1rem;
+                        }
+
+                        &:last-child {
+                            @include media-breakpoint-up(lg) {
+                                margin: 0;
+                            }
                         }
                     }
                 }
             }
 
             .summary {
+                float: none;
+                width: 100%;
 
                 .price {
                     color: $darkBg;
