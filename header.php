@@ -96,7 +96,7 @@
                             </a>
                         </div>
 
-                        <svg class="logo" viewBox="0 0 27.644 22.64">
+                        <svg class="cart" viewBox="0 0 27.644 22.64">
                             <use xlink:href="#cart"></use>
                         </svg>
                     </div>

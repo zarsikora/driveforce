@@ -11347,10 +11347,6 @@ body.single-product #header #navscroll-container .nav .link-wrapper .nav-link sv
   }
 }
 
-#header #navscroll-container .nav .link-wrapper .nav-link svg.logo {
-  width: 2.8rem;
-}
-
 #header #navscroll-container .nav .header-logo {
   z-index: 12;
   position: absolute;
@@ -11377,6 +11373,10 @@ body.single-product #header #navscroll-container .nav .header-logo svg {
 
 #header #navscroll-container .nav .header-logo .header-link {
   display: block;
+}
+
+#header svg.cart {
+  width: 2.8rem;
 }
 
 #header .mobile-nav {

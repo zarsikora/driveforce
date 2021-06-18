@@ -156,10 +156,6 @@
                     @include media-breakpoint-up(lg){
                         margin-left: 4.167vw;
                     }
-
-                    svg.logo {
-                        width: 2.8rem;
-                    }
                 }
             }
 
@@ -187,6 +183,10 @@
                 }
             }
         }
+    }
+
+    svg.cart {
+        width: 2.8rem;
     }
 
     .mobile-nav {
