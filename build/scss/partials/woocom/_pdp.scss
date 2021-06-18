@@ -426,7 +426,7 @@ table.variations {
     }
 }
 
-.ingredients-list {
+.ingredients-list-accordion {
     color: #fff;
     padding: 0 3.6rem;
     margin: 7rem 0;
@@ -539,44 +539,6 @@ table.variations {
         @include media-breakpoint-up(xl) {
             left: -10vw;
         }
-    }
-}
-
-.copy-image {
-    padding: 0 3.6rem;
-    margin: 7rem 0;
-    @include media-breakpoint-up(xl) {
-        padding: 0 16.666vw;
-        margin: 10vw 0;
-    }
-
-    div[class*=col] {
-        margin-bottom: 4rem;
-
-        &:last-child {
-            margin-bottom: 4rem;
-        }
-    }
-
-    p.header {
-        font-family: $sharpSansBold;
-        font-size: 2.4rem;
-        line-height: 1.5em;
-        margin-bottom: .5em;
-        @include media-breakpoint-up(xl) {
-            font-size: 4rem;
-        }
-    }
-
-    p {
-        margin: 0;
-    }
-
-    svg {
-        display: block;
-        fill: #477563;
-        width: 100%;
-        margin: 0 auto;
     }
 }
 

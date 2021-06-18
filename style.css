@@ -20358,39 +20358,39 @@ table.variations .reset_variations {
   margin-bottom: 4rem;
 }
 
-.ingredients-list {
+.ingredients-list-accordion {
   color: #fff;
   padding: 0 3.6rem;
   margin: 7rem 0;
 }
 
 @media (min-width: 1200px) {
-  .ingredients-list {
+  .ingredients-list-accordion {
     padding: 0 16.666vw;
     margin: 10vw 0;
   }
 }
 
-.ingredients-list .accordion-item {
+.ingredients-list-accordion .accordion-item {
   border-bottom: .1rem solid #447563;
   padding: 3rem 0;
 }
 
 @media (min-width: 1200px) {
-  .ingredients-list .accordion-item {
+  .ingredients-list-accordion .accordion-item {
     padding: 4rem 0;
   }
 }
 
-.ingredients-list .accordion-item:first-child {
+.ingredients-list-accordion .accordion-item:first-child {
   border-top: .1rem solid #447563;
 }
 
-.ingredients-list h2.accordion-header {
+.ingredients-list-accordion h2.accordion-header {
   margin-bottom: 0;
 }
 
-.ingredients-list h2.accordion-header button {
+.ingredients-list-accordion h2.accordion-header button {
   background: none;
   border: none;
   color: #fff;
@@ -20399,31 +20399,31 @@ table.variations .reset_variations {
   transition: color ease 300ms;
 }
 
-.ingredients-list h2.accordion-header:hover button {
+.ingredients-list-accordion h2.accordion-header:hover button {
   color: #88E2C1;
 }
 
-.ingredients-list .accordion-body {
+.ingredients-list-accordion .accordion-body {
   padding-top: 3rem;
 }
 
 @media (min-width: 992px) {
-  .ingredients-list .accordion-body {
+  .ingredients-list-accordion .accordion-body {
     width: 75%;
   }
 }
 
-.ingredients-list .accordion-body p:first-child, .ingredients-list .accordion-body body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 address:first-child, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 .ingredients-list .accordion-body address:first-child,
-.ingredients-list .accordion-body body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 address:first-child, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 .ingredients-list .accordion-body address:first-child,
-.ingredients-list .accordion-body body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 address:first-child, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 .ingredients-list .accordion-body address:first-child,
-.ingredients-list .accordion-body body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 address:first-child, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 .ingredients-list .accordion-body address:first-child {
+.ingredients-list-accordion .accordion-body p:first-child, .ingredients-list-accordion .accordion-body body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 address:first-child, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 .ingredients-list-accordion .accordion-body address:first-child,
+.ingredients-list-accordion .accordion-body body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 address:first-child, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 .ingredients-list-accordion .accordion-body address:first-child,
+.ingredients-list-accordion .accordion-body body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 address:first-child, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 .ingredients-list-accordion .accordion-body address:first-child,
+.ingredients-list-accordion .accordion-body body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 address:first-child, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 .ingredients-list-accordion .accordion-body address:first-child {
   margin-top: 0;
 }
 
-.ingredients-list .accordion-body p:last-child, .ingredients-list .accordion-body body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 address:last-child, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 .ingredients-list .accordion-body address:last-child,
-.ingredients-list .accordion-body body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 address:last-child, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 .ingredients-list .accordion-body address:last-child,
-.ingredients-list .accordion-body body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 address:last-child, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 .ingredients-list .accordion-body address:last-child,
-.ingredients-list .accordion-body body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 address:last-child, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 .ingredients-list .accordion-body address:last-child {
+.ingredients-list-accordion .accordion-body p:last-child, .ingredients-list-accordion .accordion-body body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 address:last-child, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 .ingredients-list-accordion .accordion-body address:last-child,
+.ingredients-list-accordion .accordion-body body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 address:last-child, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 .ingredients-list-accordion .accordion-body address:last-child,
+.ingredients-list-accordion .accordion-body body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 address:last-child, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 .ingredients-list-accordion .accordion-body address:last-child,
+.ingredients-list-accordion .accordion-body body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 address:last-child, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 .ingredients-list-accordion .accordion-body address:last-child {
   margin-bottom: 0;
 }
 
@@ -20515,59 +20515,6 @@ table.variations .reset_variations {
   .full-image-with-copy-box img {
     left: -10vw;
   }
-}
-
-.copy-image {
-  padding: 0 3.6rem;
-  margin: 7rem 0;
-}
-
-@media (min-width: 1200px) {
-  .copy-image {
-    padding: 0 16.666vw;
-    margin: 10vw 0;
-  }
-}
-
-.copy-image div[class*=col] {
-  margin-bottom: 4rem;
-}
-
-.copy-image div[class*=col]:last-child {
-  margin-bottom: 4rem;
-}
-
-.copy-image p.header, .copy-image body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 address.header, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 .copy-image address.header,
-.copy-image body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 address.header, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 .copy-image address.header,
-.copy-image body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 address.header, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 .copy-image address.header,
-.copy-image body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 address.header, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 .copy-image address.header {
-  font-family: "Sharp Sans Bold";
-  font-size: 2.4rem;
-  line-height: 1.5em;
-  margin-bottom: .5em;
-}
-
-@media (min-width: 1200px) {
-  .copy-image p.header, .copy-image body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 address.header, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 .copy-image address.header,
-  .copy-image body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 address.header, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 .copy-image address.header,
-  .copy-image body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 address.header, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 .copy-image address.header,
-  .copy-image body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 address.header, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 .copy-image address.header {
-    font-size: 4rem;
-  }
-}
-
-.copy-image p, .copy-image body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 address, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 .copy-image address,
-.copy-image body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 address, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 .copy-image address,
-.copy-image body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 address, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 .copy-image address,
-.copy-image body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 address, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 .copy-image address {
-  margin: 0;
-}
-
-.copy-image svg {
-  display: block;
-  fill: #477563;
-  width: 100%;
-  margin: 0 auto;
 }
 
 .reviews-module {

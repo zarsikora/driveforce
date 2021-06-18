@@ -25,6 +25,11 @@ if(have_rows('components')) :
                 include('grids/grid.php');
             break;
 
+            // BENEFITS MODULE
+            case 'benefits_module' :
+                include('benefits-module.php');
+            break;
+
             //PRODUCT INTRO
             case 'product_intro_module' :
                 include('product-intro-module.php');
@@ -33,6 +38,11 @@ if(have_rows('components')) :
             //FULL WIDTH IMAGE
             case 'full_width_image' : 
                 include('full-width-image.php');
+            break;
+
+            // FULL WIDTH IMAGE WITH COPY
+            case 'full_width_image_with_copy' :
+                include('full-width-image-with-copy.php');
             break;
 
             //FIFTY FIFTY
@@ -73,6 +83,16 @@ if(have_rows('components')) :
             //ENDORSEMENT SLIDER
             case 'endorsement_slider' :
                 include('endorsement-slider.php');
+            break;
+
+            // QUOTE MODULEE
+            case 'quote_module' :
+                include('quote-module.php');
+            break;
+
+            // INGREDIENTS ACCORDION
+            case 'ingredients_accordion' :
+                include('ingredients-accordion.php');
             break;
 
             //INGREDIENTS MODULE
