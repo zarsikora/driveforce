@@ -4,6 +4,7 @@
     margin-bottom: 0;
     background-color: $lightBg;
     margin-top: 7.7rem;
+    padding: 0;
     @include media-breakpoint-up(md){
         margin-top: 9.4rem;
     }

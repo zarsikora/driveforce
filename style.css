@@ -10279,6 +10279,21 @@ body.mobile-nav-active {
   overflow-y: hidden;
 }
 
+body.background-cream {
+  background: #F9F1E7;
+  color: #081D1A;
+}
+
+body.background-green {
+  background: #14302B;
+  color: #fff;
+}
+
+body.background-white {
+  background: #fff;
+  color: #081D1A;
+}
+
 .module-wrapper {
   display: flex;
   flex-wrap: wrap;
@@ -10288,19 +10303,13 @@ body.mobile-nav-active {
 
 @media (min-width: 992px) {
   .module-wrapper {
-    margin: 13rem auto;
-  }
-}
-
-@media (min-width: 1440px) {
-  .module-wrapper {
-    margin: 9vw auto;
+    margin: 13.8vw auto;
   }
 }
 
 @media (min-width: 1920px) {
   .module-wrapper {
-    margin: 17.3rem auto;
+    margin: 26.6rem auto;
   }
 }
 
@@ -10339,19 +10348,6 @@ body.mobile-nav-active {
 }
 
 @media (max-width: 767.98px) {
-  .module-wrapper.rte {
-    margin: 5rem auto;
-  }
-}
-
-@media (min-width: 1440px) {
-  .module-wrapper.rte {
-    margin: 12.5vw auto 9.028vw;
-    padding: 0;
-  }
-}
-
-@media (max-width: 767.98px) {
   .module-wrapper.rte.dark-bg, .module-wrapper.rte.white-bg {
     padding: 5rem 0;
     margin: 0 auto;
@@ -10385,10 +10381,6 @@ body.mobile-nav-active {
   .module-wrapper.grid-article {
     margin: 12.3rem auto 14.933rem;
   }
-}
-
-.module-flush {
-  padding: 0;
 }
 
 .module-padded {
@@ -11188,6 +11180,96 @@ button:focus {
   }
 }
 
+#header.background-color-cream,
+#header.background-color-cream .navscroll-container {
+  background-color: #F9F1E7;
+}
+
+#header.background-color-cream .hamburger-control svg,
+#header.background-color-cream svg.logo,
+#header.background-color-cream svg.cart,
+#header.background-color-cream .navscroll-container .hamburger-control svg,
+#header.background-color-cream .navscroll-container svg.logo,
+#header.background-color-cream .navscroll-container svg.cart {
+  fill: #081D1A;
+}
+
+#header.background-color-cream .nav-link,
+#header.background-color-cream .navscroll-container .nav-link {
+  color: #081D1A;
+}
+
+#header.background-color-cream .nav-link svg.logo,
+#header.background-color-cream .navscroll-container .nav-link svg.logo {
+  fill: #081D1A;
+}
+
+#header.background-color-green {
+  background-color: #14302B;
+}
+
+#header.background-color-green .hamburger-control svg,
+#header.background-color-green svg.logo,
+#header.background-color-green svg.cart {
+  fill: #fff;
+}
+
+#header.background-color-green .nav .link-wrapper .nav-link {
+  color: #fff;
+}
+
+#header.background-color-green .nav .link-wrapper .nav-link svg.logo {
+  fill: #fff;
+}
+
+#header.background-color-white,
+#header.background-color-white .navscroll-container,
+#header.background-color-green .navscroll-container.scrollVisible,
+#header.background-color-white .navscroll-container.scrollVisible,
+#header.background-color-cream .navscroll-container.scrollVisible,
+#header.background-color-transparent .navscroll-container.scrollVisible {
+  background-color: #fff;
+}
+
+#header.background-color-white .hamburger-control svg,
+#header.background-color-white svg.logo,
+#header.background-color-white svg.cart,
+#header.background-color-white .navscroll-container .hamburger-control svg,
+#header.background-color-white .navscroll-container svg.logo,
+#header.background-color-white .navscroll-container svg.cart,
+#header.background-color-green .navscroll-container.scrollVisible .hamburger-control svg,
+#header.background-color-green .navscroll-container.scrollVisible svg.logo,
+#header.background-color-green .navscroll-container.scrollVisible svg.cart,
+#header.background-color-white .navscroll-container.scrollVisible .hamburger-control svg,
+#header.background-color-white .navscroll-container.scrollVisible svg.logo,
+#header.background-color-white .navscroll-container.scrollVisible svg.cart,
+#header.background-color-cream .navscroll-container.scrollVisible .hamburger-control svg,
+#header.background-color-cream .navscroll-container.scrollVisible svg.logo,
+#header.background-color-cream .navscroll-container.scrollVisible svg.cart,
+#header.background-color-transparent .navscroll-container.scrollVisible .hamburger-control svg,
+#header.background-color-transparent .navscroll-container.scrollVisible svg.logo,
+#header.background-color-transparent .navscroll-container.scrollVisible svg.cart {
+  fill: #081D1A;
+}
+
+#header.background-color-white .nav-link,
+#header.background-color-white .navscroll-container .nav-link,
+#header.background-color-green .navscroll-container.scrollVisible .nav-link,
+#header.background-color-white .navscroll-container.scrollVisible .nav-link,
+#header.background-color-cream .navscroll-container.scrollVisible .nav-link,
+#header.background-color-transparent .navscroll-container.scrollVisible .nav-link {
+  color: #081D1A;
+}
+
+#header.background-color-white .nav-link svg.logo,
+#header.background-color-white .navscroll-container .nav-link svg.logo,
+#header.background-color-green .navscroll-container.scrollVisible .nav-link svg.logo,
+#header.background-color-white .navscroll-container.scrollVisible .nav-link svg.logo,
+#header.background-color-cream .navscroll-container.scrollVisible .nav-link svg.logo,
+#header.background-color-transparent .navscroll-container.scrollVisible .nav-link svg.logo {
+  fill: #081D1A;
+}
+
 #header .btn, #header #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form button, #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form #header button, #header body.woocommerce-cart #content .return-to-shop .button, body.woocommerce-cart #content .return-to-shop #header .button {
   display: none;
   height: 100%;
@@ -11206,205 +11288,11 @@ button:focus {
   border-radius: 0;
 }
 
-#header #navscroll-container {
-  width: 100%;
-  height: 100%;
-  max-height: 9.4rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: transparent;
-  transition: all ease 300ms;
-  padding: 2rem;
-}
-
-@media (min-width: 992px) {
-  #header #navscroll-container {
-    padding: 0;
-  }
-  #header #navscroll-container.readyOut {
-    padding: 0;
-    transform: translateY(-100%) !important;
-  }
-  #header #navscroll-container.readyOut:before {
-    opacity: 1;
-  }
-  #header #navscroll-container.scrollVisible {
-    position: fixed;
-    z-index: 18;
-    padding: 3rem 0;
-    transform: translateY(0);
-    transition: transform 300ms ease;
-    top: 0;
-  }
-}
-
-@media (min-width: 992px) and (min-width: 992px) {
-  #header #navscroll-container.scrollVisible {
-    padding: 0;
-  }
-}
-
-@media (min-width: 992px) and (min-width: 1440px) {
-  #header #navscroll-container.scrollVisible {
-    height: 9.4rem;
-    box-sizing: content-box;
-  }
-}
-
-@media (min-width: 992px) {
-  #header #navscroll-container.scrollVisible:before {
-    content: '';
-    opacity: 1;
-  }
-  #header #navscroll-container.nav-active:before {
-    background-color: #081D1A;
-  }
-}
-
-#header #navscroll-container:before {
-  content: "";
-  background: #fff;
-  width: 100%;
-  left: 0;
-  top: 0;
-  height: 100%;
-  opacity: 0;
-  position: absolute;
-  transition: all 300ms ease;
-}
-
-@media (min-width: 1200px) {
-  #header #navscroll-container:before {
-    width: 120%;
-    left: -10%;
-  }
-}
-
-@media (min-width: 1440px) {
-  #header #navscroll-container:before {
-    width: 140%;
-    left: -20%;
-  }
-}
-
-body.single-product #header #navscroll-container.scrollVisible .nav svg.cart {
-  fill: #081D1A;
-}
-
-body.single-product #header #navscroll-container.scrollVisible .nav .link-wrapper .nav-link {
-  color: #081D1A;
-}
-
-body.single-product #header #navscroll-container.scrollVisible .nav .link-wrapper .nav-link svg.logo {
-  fill: #081D1A;
-}
-
-body.single-product #header #navscroll-container.scrollVisible .nav .header-logo svg {
-  fill: #081D1A;
-}
-
-#header #navscroll-container .nav {
-  width: 100%;
-  display: none;
-  justify-content: space-between;
-  align-items: center;
-  padding: 3.5rem 5rem;
-  z-index: 9;
-}
-
-@media (min-width: 992px) {
-  #header #navscroll-container .nav {
-    display: flex;
-  }
-}
-
-body.single-product #header #navscroll-container .nav .link-wrapper .nav-link {
-  color: #fff;
-}
-
-body.single-product #header #navscroll-container .nav .link-wrapper .nav-link svg.logo {
-  fill: #fff;
-}
-
-#header #navscroll-container .nav .link-wrapper {
-  display: flex;
-}
-
-#header #navscroll-container .nav .link-wrapper .nav-link {
-  text-transform: uppercase;
-  color: #081D1A;
-  font-family: "Sharp Sans Bold";
-  font-size: 1.4rem;
-  margin-left: 3rem;
-  letter-spacing: .2rem;
-  cursor: pointer;
-}
-
-#header #navscroll-container .nav .link-wrapper .nav-link:first-child {
-  margin-left: 0;
-}
-
-@media (min-width: 992px) {
-  #header #navscroll-container .nav .link-wrapper .nav-link {
-    margin-left: 4.167vw;
-  }
-}
-
-#header #navscroll-container .nav .header-logo {
-  z-index: 12;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-}
-
-#header #navscroll-container .nav .header-logo svg,
-#header #navscroll-container .nav .header-logo img {
-  width: 15rem;
-}
-
-@media (min-width: 768px) {
-  #header #navscroll-container .nav .header-logo svg,
-  #header #navscroll-container .nav .header-logo img {
-    width: 18rem;
-  }
-}
-
-body.single-product #header #navscroll-container .nav .header-logo svg {
-  fill: #fff;
-}
-
-#header #navscroll-container .nav .header-logo .header-link {
-  display: block;
-}
-
 #header svg.cart {
   width: 2.8rem;
 }
 
-body.single-product #header svg.cart {
-  fill: #fff;
-}
-
-#header .mobile-nav {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-@media (min-width: 992px) {
-  #header .mobile-nav {
-    display: none;
-  }
-}
-
-body.single-product #header .mobile-nav svg.logo {
-  fill: #fff;
-}
-
-#header .mobile-nav .mobile-controls {
+#header .mobile-controls {
   width: 3rem;
   height: 3rem;
   position: relative;
@@ -11413,12 +11301,12 @@ body.single-product #header .mobile-nav svg.logo {
 }
 
 @media (min-width: 1200px) {
-  #header .mobile-nav .mobile-controls {
+  #header .mobile-controls {
     margin-top: -.7rem;
   }
 }
 
-#header .mobile-nav .mobile-controls:after {
+#header .mobile-controls:after {
   content: "";
   width: 6rem;
   height: 6rem;
@@ -11432,14 +11320,14 @@ body.single-product #header .mobile-nav svg.logo {
   pointer-events: none;
 }
 
-#header .mobile-nav .mobile-controls button {
+#header .mobile-controls button {
   outline: none;
   border: none;
   background: transparent;
   font-size: 0;
 }
 
-#header .mobile-nav .mobile-controls button svg {
+#header .mobile-controls button svg {
   display: none;
   position: absolute;
   top: 50%;
@@ -11450,26 +11338,143 @@ body.single-product #header .mobile-nav svg.logo {
   width: 3rem;
 }
 
-body.single-product #header .mobile-nav .mobile-controls button svg {
-  fill: #fff;
-}
-
-#header .mobile-nav .mobile-controls button svg.active {
+#header .mobile-controls button svg.active {
   display: block;
 }
 
-#header .mobile-nav .mobile-controls button svg.open #animate-line {
+#header .mobile-controls button svg.open #animate-line {
   transition: all ease 300ms;
 }
 
-#header .mobile-nav .mobile-controls button svg.open:hover #animate-line {
+#header .mobile-controls button svg.open:hover #animate-line {
   transform: translate(10px, 22px);
 }
 
-#header .mobile-nav .mobile-controls button svg.close {
+#header .mobile-controls button svg.close {
   stroke: #081D1A;
   width: 2rem;
   height: 2rem;
+}
+
+#header .navscroll-container {
+  width: 100%;
+  height: 100%;
+  max-height: 9.4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all ease 300ms;
+  padding: 2rem;
+}
+
+@media (min-width: 992px) {
+  #header .navscroll-container {
+    padding: 0;
+  }
+  #header .navscroll-container.readyOut {
+    padding: 0;
+    transform: translateY(-100%) !important;
+  }
+  #header .navscroll-container.readyOut:before {
+    opacity: 1;
+  }
+  #header .navscroll-container.scrollVisible {
+    position: fixed;
+    z-index: 18;
+    padding: 3rem 0;
+    transform: translateY(0);
+    transition: transform 300ms ease;
+    top: 0;
+  }
+}
+
+@media (min-width: 992px) and (min-width: 992px) {
+  #header .navscroll-container.scrollVisible {
+    padding: 0;
+  }
+}
+
+@media (min-width: 992px) and (min-width: 1440px) {
+  #header .navscroll-container.scrollVisible {
+    height: 9.4rem;
+    box-sizing: content-box;
+  }
+}
+
+#header .navscroll-container .nav {
+  width: 100%;
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3.5rem 5rem;
+  z-index: 9;
+}
+
+@media (min-width: 992px) {
+  #header .navscroll-container .nav {
+    display: flex;
+  }
+}
+
+#header .navscroll-container .link-wrapper {
+  display: flex;
+}
+
+#header .navscroll-container .nav-link {
+  text-transform: uppercase;
+  color: #081D1A;
+  font-family: "Sharp Sans Bold";
+  font-size: 1.4rem;
+  margin-left: 3rem;
+  letter-spacing: .2rem;
+  cursor: pointer;
+}
+
+@media (min-width: 992px) {
+  #header .navscroll-container .nav-link {
+    margin-left: 4.167vw;
+  }
+}
+
+#header .navscroll-container .nav-link:first-child {
+  margin-left: 0;
+}
+
+#header .navscroll-container .header-logo {
+  z-index: 12;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#header .navscroll-container .header-logo svg,
+#header .navscroll-container .header-logo img {
+  width: 15rem;
+}
+
+@media (min-width: 768px) {
+  #header .navscroll-container .header-logo svg,
+  #header .navscroll-container .header-logo img {
+    width: 18rem;
+  }
+}
+
+#header .navscroll-container .header-logo .header-link {
+  display: block;
+}
+
+#header .mobile-nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (min-width: 992px) {
+  #header .mobile-nav {
+    display: none;
+  }
 }
 
 #header .mobile-nav .header-logo {
@@ -12118,6 +12123,7 @@ a.btn:hover, body.woocommerce-cart #content .return-to-shop a.button:hover {
   margin-bottom: 0;
   background-color: #F9F1E7;
   margin-top: 7.7rem;
+  padding: 0;
 }
 
 @media (min-width: 768px) {
@@ -13894,10 +13900,6 @@ body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .
   }
 }
 
-.rte.fiftyfifty {
-  background: #fff;
-}
-
 @media (min-width: 768px) {
   .rte.fiftyfifty {
     align-items: center;
@@ -13906,7 +13908,6 @@ body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .
 }
 
 .rte.fiftyfifty .image-container {
-  margin-top: -.1rem;
   position: relative;
 }
 
@@ -13974,35 +13975,6 @@ body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .
   }
 }
 
-.rte.fiftyfifty .text-container .text-inner {
-  padding: 7.5rem 3.5rem;
-}
-
-@media (max-width: 767.98px) {
-  .rte.fiftyfifty .text-container .text-inner {
-    max-width: 50rem;
-    margin: 0 auto;
-  }
-}
-
-@media (min-width: 768px) {
-  .rte.fiftyfifty .text-container .text-inner {
-    padding: 3.5rem;
-  }
-}
-
-@media (min-width: 1440px) {
-  .rte.fiftyfifty .text-container .text-inner {
-    padding: 3.5rem calc(10.417vw - 15px);
-  }
-}
-
-@media (min-width: 1920px) {
-  .rte.fiftyfifty .text-container .text-inner {
-    padding: 3.5rem 18.5rem;
-  }
-}
-
 .rte.fiftyfifty .text-container .text-inner h3 {
   margin-bottom: 1.5rem;
 }
@@ -14032,93 +14004,64 @@ body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .
   }
 }
 
-.rte.fiftyfifty.type-multi .text-container {
-  padding: 5rem;
-}
-
-@media (min-width: 768px) {
-  .rte.fiftyfifty.type-multi .text-container {
-    padding: 3.6rem 5rem;
-  }
+.rte.fiftyfifty.type-multi .inner > .row {
+  margin-top: 10rem;
+  margin-bottom: 10rem;
 }
 
 @media (min-width: 992px) {
-  .rte.fiftyfifty.type-multi .text-container {
-    padding: 8.333vw;
+  .rte.fiftyfifty.type-multi .inner > .row {
+    margin-top: 13.8vw;
+    margin-bottom: 13.8vw;
   }
 }
 
-.rte.fiftyfifty.type-multi .text-container .text-inner {
-  padding: 0;
+@media (min-width: 1920px) {
+  .rte.fiftyfifty.type-multi .inner > .row {
+    margin-top: 26.6rem;
+    margin-bottom: 26.6rem;
+  }
+}
+
+.rte.fiftyfifty.type-multi .inner > .row:first-child {
+  margin-top: 0 !important;
+}
+
+.rte.fiftyfifty.type-multi .text-container {
+  margin-bottom: 3rem;
 }
 
 @media (min-width: 768px) {
-  .rte.fiftyfifty.type-multi .image-container {
-    overflow-y: hidden;
+  .rte.fiftyfifty.type-multi .text-container {
+    margin-bottom: 0;
   }
 }
 
-@media (min-width: 768px) and (max-width: 991px) {
-  .rte.fiftyfifty.type-multi .image-container {
-    height: auto;
-    align-self: stretch;
-  }
+.rte.fiftyfifty.type-multi .image-container {
+  height: auto;
+}
+
+.rte.fiftyfifty.type-multi .image-container img {
+  display: block;
+  -o-object-fit: none;
+     object-fit: none;
+  width: auto;
+  height: auto;
+  margin: 0 auto;
 }
 
 @media (min-width: 768px) {
   .rte.fiftyfifty.type-multi.first-img-right .inner .row:nth-of-type(odd) .image-container {
     order: 2;
-    padding-left: 0;
   }
   .rte.fiftyfifty.type-multi.first-img-right .inner .row:nth-of-type(odd) .text-container {
     order: 1;
   }
   .rte.fiftyfifty.type-multi.first-img-right .inner .row:nth-of-type(even) .image-container {
     order: 1;
-    padding-right: 0;
   }
   .rte.fiftyfifty.type-multi.first-img-right .inner .row:nth-of-type(even) .text-container {
     order: 2;
-  }
-}
-
-@media (min-width: 768px) {
-  .rte.fiftyfifty.type-multi.first-img-left .inner .row:nth-of-type(odd) .image-container {
-    padding-right: 0;
-  }
-  .rte.fiftyfifty.type-multi.first-img-left .inner .row:nth-of-type(even) .image-container {
-    padding-left: 0;
-  }
-}
-
-.rte.fiftyfifty.type-multi .row {
-  background: #fff;
-}
-
-.rte.fiftyfifty.type-multi .row .image-container {
-  margin-bottom: 0;
-}
-
-.rte.fiftyfifty.type-inlaid {
-  background: #F9F1E7;
-  padding: 10rem 0;
-}
-
-@media (min-width: 992px) {
-  .rte.fiftyfifty.type-inlaid {
-    padding: 13rem 0;
-  }
-}
-
-@media (min-width: 1440px) {
-  .rte.fiftyfifty.type-inlaid {
-    padding: 9vw 0;
-  }
-}
-
-@media (min-width: 1920px) {
-  .rte.fiftyfifty.type-inlaid {
-    padding: 17.3rem 0;
   }
 }
 
@@ -14157,49 +14100,6 @@ body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .
   padding: 0;
 }
 
-.rte.fiftyfifty.type-inlaid.type-multi {
-  background-color: #14302B;
-  color: #F9F1E7;
-}
-
-@media (min-width: 992px) {
-  .rte.fiftyfifty.type-inlaid.type-multi .main-header {
-    width: 53.333vw;
-    margin: 0 auto;
-  }
-}
-
-@media (min-width: 1920px) {
-  .rte.fiftyfifty.type-inlaid.type-multi .main-header {
-    width: 102rem;
-  }
-}
-
-.rte.fiftyfifty.type-inlaid.type-multi .row {
-  background-color: #14302B;
-}
-
-.rte.fiftyfifty.type-inlaid.type-multi .row .image-container {
-  padding: 6rem 8rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-@media (min-width: 768px) {
-  .rte.fiftyfifty.type-inlaid.type-multi .row .image-container {
-    padding: 10rem 14rem;
-  }
-}
-
-.rte.fiftyfifty.type-inlaid.type-multi .row .image-container img {
-  max-width: 28rem;
-  height: auto;
-  max-height: 30rem;
-  -o-object-fit: contain;
-     object-fit: contain;
-}
-
 @media (min-width: 768px) {
   .rte.fiftyfifty.img-left .row .image-container {
     order: 1;
@@ -14216,10 +14116,6 @@ body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .
   .rte.fiftyfifty.img-right .row .text-container {
     order: 1;
   }
-}
-
-.product-intro-module + .module-wrapper.rte.white-bg {
-  padding-top: 0;
 }
 
 .full-width-image {
@@ -16533,15 +16429,9 @@ body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .
   }
 }
 
-.module-wrapper.ingredients-list-display {
-  background: #14302B;
-  color: #F9F1E7;
-}
-
 .module-wrapper.ingredients-list-display .module-padded .list-wrapper ul {
   list-style: none;
   font-family: "Sharp Sans Bold";
-  color: #fff;
 }
 
 .module-wrapper.ingredients-list-display .module-padded .list-wrapper ul.ingredients-desktop {
@@ -16623,22 +16513,6 @@ body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .
 
 .module-wrapper.ingredients-list-display .module-padded .description-wrapper ul li.active {
   display: block;
-}
-
-.ingredients-grid-module {
-  padding: 7rem 3.6rem;
-  background-color: #14302B;
-  color: #F9F1E7;
-}
-
-@media (min-width: 1200px) {
-  .ingredients-grid-module {
-    padding: 10vw 10vw;
-  }
-}
-
-.large-text-module + .ingredients-grid-module {
-  padding-top: 0;
 }
 
 .ingredients-grid-module p.header, .ingredients-grid-module body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 address.header, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 .ingredients-grid-module address.header,
@@ -16726,7 +16600,6 @@ body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .
 .module-wrapper.large-text-module {
   background-color: #14302B;
   color: #fff;
-  padding-bottom: 0;
 }
 
 .module-wrapper.large-text-module .copy p, .module-wrapper.large-text-module .article-single .post-content .inner .copy ul li p, .article-single .post-content .inner .copy ul .module-wrapper.large-text-module li p, .module-wrapper.large-text-module .article-single .post-content .inner .copy ol li p, .article-single .post-content .inner .copy ol .module-wrapper.large-text-module li p, .module-wrapper.large-text-module .copy body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 address, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 .module-wrapper.large-text-module .copy address, .article-single .post-content .inner .copy ul .module-wrapper.large-text-module li body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 address, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 .article-single .post-content .inner .copy ul .module-wrapper.large-text-module li address, .article-single .post-content .inner .copy ol .module-wrapper.large-text-module li body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 address, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 .article-single .post-content .inner .copy ol .module-wrapper.large-text-module li address,
@@ -16757,10 +16630,7 @@ body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .
   }
 }
 
-.module-wrapper.large-text-module .copy p:last-child, .module-wrapper.large-text-module .article-single .post-content .inner .copy ul li p:last-child, .article-single .post-content .inner .copy ul .module-wrapper.large-text-module li p:last-child, .module-wrapper.large-text-module .article-single .post-content .inner .copy ol li p:last-child, .article-single .post-content .inner .copy ol .module-wrapper.large-text-module li p:last-child, .module-wrapper.large-text-module .copy body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 address:last-child, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 .module-wrapper.large-text-module .copy address:last-child, .article-single .post-content .inner .copy ul .module-wrapper.large-text-module li body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 address:last-child, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 .article-single .post-content .inner .copy ul .module-wrapper.large-text-module li address:last-child, .article-single .post-content .inner .copy ol .module-wrapper.large-text-module li body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 address:last-child, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 .article-single .post-content .inner .copy ol .module-wrapper.large-text-module li address:last-child,
-.module-wrapper.large-text-module .copy body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 address:last-child, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 .module-wrapper.large-text-module .copy address:last-child, .article-single .post-content .inner .copy ul .module-wrapper.large-text-module li body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 address:last-child, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 .article-single .post-content .inner .copy ul .module-wrapper.large-text-module li address:last-child, .article-single .post-content .inner .copy ol .module-wrapper.large-text-module li body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 address:last-child, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 .article-single .post-content .inner .copy ol .module-wrapper.large-text-module li address:last-child,
-.module-wrapper.large-text-module .copy body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 address:last-child, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 .module-wrapper.large-text-module .copy address:last-child, .article-single .post-content .inner .copy ul .module-wrapper.large-text-module li body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 address:last-child, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 .article-single .post-content .inner .copy ul .module-wrapper.large-text-module li address:last-child, .article-single .post-content .inner .copy ol .module-wrapper.large-text-module li body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 address:last-child, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 .article-single .post-content .inner .copy ol .module-wrapper.large-text-module li address:last-child,
-.module-wrapper.large-text-module .copy body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 address:last-child, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 .module-wrapper.large-text-module .copy address:last-child, .article-single .post-content .inner .copy ul .module-wrapper.large-text-module li body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 address:last-child, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 .article-single .post-content .inner .copy ul .module-wrapper.large-text-module li address:last-child, .article-single .post-content .inner .copy ol .module-wrapper.large-text-module li body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 address:last-child, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 .article-single .post-content .inner .copy ol .module-wrapper.large-text-module li address:last-child {
+.module-wrapper.large-text-module .copy *:last-child, .module-wrapper.large-text-module .article-single .post-content .inner .copy ul li *:last-child, .article-single .post-content .inner .copy ul .module-wrapper.large-text-module li *:last-child, .module-wrapper.large-text-module .article-single .post-content .inner .copy ol li *:last-child, .article-single .post-content .inner .copy ol .module-wrapper.large-text-module li *:last-child {
   margin-bottom: 0;
 }
 
@@ -19998,11 +19868,6 @@ body.fast-checkout-mobile-open .fast-checkout .fast-checkout-build-order {
   }
 }
 
-body.single-product {
-  background: #14302B;
-  color: #fff;
-}
-
 body.single-product #sidebar {
   display: none;
 }
@@ -20340,6 +20205,7 @@ table.variations .reset_variations {
 }
 
 .product-checklist li {
+  font-family: "Sharp Sans Medium";
   font-size: 1.6rem;
   list-style: none;
   margin: 0 0 .5em 0;
@@ -20490,97 +20356,6 @@ table.variations .reset_variations {
 
 .benefits-module div[class*=col] {
   margin-bottom: 4rem;
-}
-
-.ingredients-grid-module {
-  padding: 7rem 3.6rem;
-}
-
-@media (min-width: 1200px) {
-  .ingredients-grid-module {
-    padding: 10vw 10vw;
-  }
-}
-
-.ingredients-grid-module p.header, .ingredients-grid-module body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 address.header, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 .ingredients-grid-module address.header,
-.ingredients-grid-module body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 address.header, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 .ingredients-grid-module address.header,
-.ingredients-grid-module body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 address.header, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 .ingredients-grid-module address.header,
-.ingredients-grid-module body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 address.header, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 .ingredients-grid-module address.header {
-  font-family: "Sharp Sans Bold";
-  line-height: 1.25em;
-  margin: 0 0 1em 0;
-  color: #fff;
-  font-size: 2.4rem;
-}
-
-@media (min-width: 1200px) {
-  .ingredients-grid-module p.header, .ingredients-grid-module body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 address.header, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 .ingredients-grid-module address.header,
-  .ingredients-grid-module body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 address.header, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 .ingredients-grid-module address.header,
-  .ingredients-grid-module body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 address.header, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 .ingredients-grid-module address.header,
-  .ingredients-grid-module body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 address.header, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 .ingredients-grid-module address.header {
-    font-size: 2.083vw;
-  }
-}
-
-@media (min-width: 1920px) {
-  .ingredients-grid-module p.header, .ingredients-grid-module body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 address.header, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 .ingredients-grid-module address.header,
-  .ingredients-grid-module body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 address.header, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 .ingredients-grid-module address.header,
-  .ingredients-grid-module body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 address.header, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 .ingredients-grid-module address.header,
-  .ingredients-grid-module body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 address.header, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 .ingredients-grid-module address.header {
-    font-size: 3.9rem;
-  }
-}
-
-@media (max-width: 1199.98px) {
-  .ingredients-grid-module p.header br, .ingredients-grid-module body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 address.header br, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 .ingredients-grid-module address.header br, .ingredients-grid-module body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 address.header br, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 .ingredients-grid-module address.header br, .ingredients-grid-module body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 address.header br, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 .ingredients-grid-module address.header br, .ingredients-grid-module body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 address.header br, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 .ingredients-grid-module address.header br {
-    display: none;
-  }
-}
-
-.ingredients-grid-module .copy, .ingredients-grid-module .article-single .post-content .inner .copy ul li, .article-single .post-content .inner .copy ul .ingredients-grid-module li, .ingredients-grid-module .article-single .post-content .inner .copy ol li, .article-single .post-content .inner .copy ol .ingredients-grid-module li {
-  margin-bottom: 3rem;
-}
-
-@media (min-width: 1200px) {
-  .ingredients-grid-module .copy, .ingredients-grid-module .article-single .post-content .inner .copy ul li, .article-single .post-content .inner .copy ul .ingredients-grid-module li, .ingredients-grid-module .article-single .post-content .inner .copy ol li, .article-single .post-content .inner .copy ol .ingredients-grid-module li {
-    margin-bottom: 5rem;
-  }
-}
-
-.ingredients-grid-module .copy:last-child, .ingredients-grid-module .article-single .post-content .inner .copy ul li:last-child, .article-single .post-content .inner .copy ul .ingredients-grid-module li:last-child, .ingredients-grid-module .article-single .post-content .inner .copy ol li:last-child, .article-single .post-content .inner .copy ol .ingredients-grid-module li:last-child {
-  margin-bottom: 0;
-}
-
-.ingredients-grid-module .copy p:last-child, .ingredients-grid-module .article-single .post-content .inner .copy ul li p:last-child, .article-single .post-content .inner .copy ul .ingredients-grid-module li p:last-child, .ingredients-grid-module .article-single .post-content .inner .copy ol li p:last-child, .article-single .post-content .inner .copy ol .ingredients-grid-module li p:last-child, .ingredients-grid-module .copy body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 address:last-child, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 .ingredients-grid-module .copy address:last-child, .article-single .post-content .inner .copy ul .ingredients-grid-module li body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 address:last-child, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 .article-single .post-content .inner .copy ul .ingredients-grid-module li address:last-child, .article-single .post-content .inner .copy ol .ingredients-grid-module li body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 address:last-child, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 .article-single .post-content .inner .copy ol .ingredients-grid-module li address:last-child,
-.ingredients-grid-module .copy body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 address:last-child, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 .ingredients-grid-module .copy address:last-child, .article-single .post-content .inner .copy ul .ingredients-grid-module li body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 address:last-child, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 .article-single .post-content .inner .copy ul .ingredients-grid-module li address:last-child, .article-single .post-content .inner .copy ol .ingredients-grid-module li body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 address:last-child, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 .article-single .post-content .inner .copy ol .ingredients-grid-module li address:last-child,
-.ingredients-grid-module .copy body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 address:last-child, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 .ingredients-grid-module .copy address:last-child, .article-single .post-content .inner .copy ul .ingredients-grid-module li body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 address:last-child, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 .article-single .post-content .inner .copy ul .ingredients-grid-module li address:last-child, .article-single .post-content .inner .copy ol .ingredients-grid-module li body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 address:last-child, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 .article-single .post-content .inner .copy ol .ingredients-grid-module li address:last-child,
-.ingredients-grid-module .copy body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 address:last-child, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 .ingredients-grid-module .copy address:last-child, .article-single .post-content .inner .copy ul .ingredients-grid-module li body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 address:last-child, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 .article-single .post-content .inner .copy ul .ingredients-grid-module li address:last-child, .article-single .post-content .inner .copy ol .ingredients-grid-module li body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 address:last-child, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 .article-single .post-content .inner .copy ol .ingredients-grid-module li address:last-child {
-  margin-bottom: 0;
-}
-
-.ingredients-grid-module svg {
-  fill: #477563;
-  margin-bottom: 2rem;
-}
-
-.ingredients-grid-module p.subheader, .ingredients-grid-module body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 address.subheader, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 .ingredients-grid-module address.subheader,
-.ingredients-grid-module body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 address.subheader, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 .ingredients-grid-module address.subheader,
-.ingredients-grid-module body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 address.subheader, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 .ingredients-grid-module address.subheader,
-.ingredients-grid-module body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 address.subheader, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 .ingredients-grid-module address.subheader {
-  font-family: "Sharp Sans Bold";
-  font-size: 2rem;
-  line-height: 1.25em;
-  margin: 0 0 .7em 0;
-  position: relative;
-}
-
-@media (min-width: 1200px) {
-  .ingredients-grid-module p.subheader, .ingredients-grid-module body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 address.subheader, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 .ingredients-grid-module address.subheader,
-  .ingredients-grid-module body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 address.subheader, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 .ingredients-grid-module address.subheader,
-  .ingredients-grid-module body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 address.subheader, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 .ingredients-grid-module address.subheader,
-  .ingredients-grid-module body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 address.subheader, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 .ingredients-grid-module address.subheader {
-    font-size: 3.2rem;
-  }
 }
 
 .ingredients-list {

@@ -8,7 +8,7 @@
 
 <!-- This probably wants an accordion on mobile ngl -->
 
-<div class="module-wrapper ingredients-list-display dark-bg">
+<div class="module-wrapper ingredients-list-display">
     <div class="module-padded">
         <div class="row">
             <div class="list-wrapper col-lg-6">

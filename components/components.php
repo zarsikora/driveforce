@@ -10,6 +10,11 @@ if(have_rows('components')) :
             include('heroes/hero.php');
             break;
 
+            // DOTTED DIVIDER
+            case 'dotted_divider' :
+                include('dotted-divider.php');
+            break;
+
             // CAROUSEL
             case 'carousel' : 
                 include('carousel.php');

@@ -45,7 +45,12 @@
 
     </head>
 
-    <body <?php body_class(); ?> data-barba="wrapper" data-loadhome="<?php echo is_front_page(); ?>">
+    <?php
+    $backgroundColor = get_field('page_background_color');
+    $headerColor = get_field('header_background_color');
+    ?>
+
+    <body <?php body_class(array('background-'.$backgroundColor)); ?> data-barba="wrapper" data-loadhome="<?php echo is_front_page(); ?>">
 
         <?php if($gtmId && $initGtm): ?>
             <!-- Google Tag Manager (noscript) -->
@@ -69,8 +74,8 @@
 
             <?php include('components/banner.php'); ?>
 
-            <header id="header" role="navigation">
-                <div id="navscroll-container">
+            <header id="header" class="background-color-<?php echo $headerColor ?>" role="navigation">
+                <div id="navscroll-container" class="navscroll-container">
 
                     <!-- Desktop -->
                     <div class="nav" id="flyout-menu">

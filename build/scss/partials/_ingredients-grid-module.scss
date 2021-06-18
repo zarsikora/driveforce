@@ -1,14 +1,4 @@
 .ingredients-grid-module {
-    padding: 7rem 3.6rem;
-    background-color: #14302B;
-    color: $lightText;
-    @include media-breakpoint-up(xl) {
-        padding: 10vw 10vw;
-    }
-
-    .large-text-module + & {
-        padding-top: 0;
-    }
 
     p.header {
         font-family: $sharpSansBold;

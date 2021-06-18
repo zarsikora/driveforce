@@ -1,6 +1,4 @@
 body.single-product {
-    background: #14302B;
-    color: #fff;
 
     #sidebar {
         display: none;
@@ -315,6 +313,7 @@ table.variations {
     margin: 4rem 0 0 0;
 
     li {
+        font-family: $sharpSansMedium;
         font-size: 1.6rem;
         list-style: none;
         margin: 0 0 .5em 0;
@@ -424,65 +423,6 @@ table.variations {
 
     div[class*=col] {
         margin-bottom: 4rem;
-    }
-}
-
-.ingredients-grid-module {
-    padding: 7rem 3.6rem;
-    @include media-breakpoint-up(xl) {
-        padding: 10vw 10vw;
-    }
-
-    p.header {
-        font-family: $sharpSansBold;
-        line-height: 1.25em;
-        margin: 0 0 1em 0;
-        color: #fff;
-        font-size: 2.4rem;
-        @include media-breakpoint-up(xl) {
-            //font-size: 4rem;
-            font-size: 2.083vw;
-        }
-        @media(min-width: 1920px) {
-            font-size: 3.9rem;
-        }
-
-        br {
-            @include media-breakpoint-down(lg) {
-                display: none;
-            }
-        }
-    }
-
-    .copy {
-        margin-bottom: 3rem;
-        @include media-breakpoint-up(xl) {
-            margin-bottom: 5rem;
-        }
-
-        &:last-child {
-            margin-bottom: 0;
-        }
-
-        p:last-child {
-            margin-bottom: 0;
-        }
-    }
-
-    svg {
-        fill: #477563;
-        margin-bottom: 2rem;
-    }
-
-    p.subheader {
-        font-family: $sharpSansBold;
-        font-size: 2rem;
-        line-height: 1.25em;
-        margin: 0 0 .7em 0;
-        position: relative;
-        @include media-breakpoint-up(xl) {
-            font-size: 3.2rem;
-        }
     }
 }
 

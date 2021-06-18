@@ -16,22 +16,33 @@ body {
         height: 100%;
         overflow-y: hidden;
     }
+
+    &.background-cream {
+        background: $lightBg;
+        color: $darkBg;
+    }
+
+    &.background-green {
+        background: $mediumGreen;
+        color: #fff;
+    }
+
+    &.background-white {
+        background: #fff;
+        color: $darkBg;
+    }
 }
 
-//GENERAL RULES FOR PADDING AND MARGINS
 .module-wrapper {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     margin: 10rem auto;
     @include media-breakpoint-up(lg) {
-        margin: 13rem auto;
-    }
-    @media(min-width: 1440px) {
-        margin: 9vw auto;
+        margin: 13.8vw auto;
     }
     @media(min-width: 1920px) {
-        margin: 17.3rem auto;
+        margin: 26.6rem auto;
     }
 
     &.dark-bg,
@@ -62,14 +73,6 @@ body {
     }
 
     &.rte {
-        @include media-breakpoint-down(sm){
-            margin: 5rem auto;
-        }
-
-        @media(min-width: 1440px){
-            margin: 12.5vw auto 9.028vw;
-            padding: 0;
-        }
 
         &.dark-bg,
         &.white-bg  {
@@ -99,10 +102,6 @@ body {
             margin: 12.3rem auto 14.933rem;
         }
     }
-}
-
-.module-flush {
-    padding: 0;
 }
 
 .module-padded {
