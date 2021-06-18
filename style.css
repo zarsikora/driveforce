@@ -13216,7 +13216,7 @@ body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .
 }
 
 .hero.tertiary .inner {
-  padding: 11rem 3.6rem 2rem 3.6rem;
+  padding: 4rem 3.6rem 2rem 3.6rem;
   height: auto;
 }
 
@@ -13230,14 +13230,14 @@ body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .
 
 @media (min-width: 992px) {
   .hero.tertiary .inner {
-    padding: calc(8vh + 11rem) 0 5.55vw 0;
+    padding: 5.55vw 0;
   }
 }
 
 @media (min-width: 1920px) {
   .hero.tertiary .inner {
-    padding-top: 26.3rem;
-    padding-bottom: 10.5rem;
+    padding-top: 10.6rem;
+    padding-bottom: 10.6rem;
   }
 }
 
