@@ -17071,6 +17071,8 @@ body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .
 body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 .article-single .post-content .inner .copy ol .module-wrapper.large-text-module li address {
   font-size: 2.5rem;
   font-family: "Sharp Sans Bold";
+  line-height: 1.5em;
+  margin: 0 0 1em 0;
 }
 
 @media (min-width: 992px) {
