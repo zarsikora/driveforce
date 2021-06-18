@@ -10,7 +10,6 @@
     } elseif($type === 'multi' || $type === 'multi-inlaid') {
         $imageRight = get_sub_field('first_image_right');
     }
-    
 ?>
 
 <?php if($type === 'single'): ?>
@@ -21,45 +20,51 @@
     </style>  
 <?php endif; ?>
 
-
     <div class="rte fiftyfifty module-flush <?php if($type === 'multi' || $type === 'multi-inlaid') echo 'type-multi '?> <?php if($type === 'inlaid' || $type === 'multi-inlaid') echo 'type-inlaid '?> <?php if($type === 'multi' || $type === 'multi-inlaid') echo ($imageRight) ? 'first-img-right' : 'first-img-left'?> <?php if($type === 'single' || $type === 'inlaid') echo ($imageRight) ? ' img-right ' : ' img-left'?>">
         <?php if($type === 'multi' || $type === 'multi-inlaid' && $mainHeader): ?>
             <h2 data-animation-effect="moduleFadeIn" data-animation-trigger="scroll" class="main-header"><?php echo $mainHeader; ?></h2>
         <?php endif; ?>
 
         <?php if($type === 'multi' || $type === 'multi-inlaid'): ?>
+
             <div class="inner">
-            <?php $counter = 1;?>
-            <?php if(have_rows('fiftyfifty_block')): ?>
-                <?php while(have_rows('fiftyfifty_block')): the_row(); ?>
-                    <?php 
-                        $image = get_sub_field('image');
-                        $header = get_sub_field('header');
-                        $copy = get_sub_field('copy');
-                    ?>
+                <?php $counter = 1;?>
 
-                    <div class="row align-items-center">
-                        <div class="image-container col-md-6 col-lg-6" data-animation-effect="moduleFadeIn" data-animation-trigger="breakpoint">
-                            <?php echo imageTag($image, '', '41.6%, (min-width: 992px) 33.3%', '', false); ?>
-                        </div>
+                <?php if(have_rows('fiftyfifty_block')): ?>
+                    <?php while(have_rows('fiftyfifty_block')): the_row(); ?>
+                        <?php
+                            $image = get_sub_field('image');
+                            $header = get_sub_field('header');
+                            $copy = get_sub_field('copy');
 
-                        <div class="text-container col-md-6 col-lg-6">
-                            <div class="text-inner" data-animation-effect="moduleFadeIn" data-animation-trigger="breakpoint">
-                                <?php if($header): ?>
-                                    <h3><?php echo $header ?></h3>
-                                <?php endif; ?>
+                            echo $counter % 2;
+                        ?>
 
-                                <?php if($copy): ?>
-                                    <p class="copy"><?php echo $copy ?></p>
-                                <?php endif; ?>
+                        <div class="row align-items-center">
+                            <div class="image-container col-md-6 col-lg-6" data-animation-effect="moduleFadeIn" data-animation-trigger="breakpoint">
+                                <?php echo imageTag($image, '', '41.6%, (min-width: 992px) 33.3%', '', false); ?>
+                            </div>
+
+                            <div class="text-container col-md-6 col-lg-6">
+                                <div class="text-inner" data-animation-effect="moduleFadeIn" data-animation-trigger="breakpoint">
+                                    <?php if($header): ?>
+                                        <h3><?php echo $header ?></h3>
+                                    <?php endif; ?>
+
+                                    <?php if($copy): ?>
+                                        <p class="copy"><?php echo $copy ?></p>
+                                    <?php endif; ?>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <?php $counter++ ?>
-                <?php endwhile; ?>
+                        <?php $counter++ ?>
+                    <?php endwhile; ?>
                 </div>
+
             <?php endif; ?>
+
         <?php elseif($type === 'single') : ?>
+
             <div class="row align-items-center">
                 <div class="image-container col-md-4 col-lg-6">
                     <div class="image-inner">
@@ -79,7 +84,9 @@
                     </div>
                 </div>
             </div>
+
         <?php elseif($type === 'inlaid'): ?>
+
             <div class="row inlaid-inner align-items-center">
                 <div class="image-container col-md-4 col-lg-6">
                     <div class="image-inner">
@@ -99,5 +106,6 @@
                     </div>
                 </div>
             </div>
+
         <?php endif; ?>
     </div>

@@ -100,12 +100,18 @@
 
         &.scrollVisible {
             .nav {
-                body.single-product & .link-wrapper {
-                    .nav-link {
-                        color: $darkBg;
+                body.single-product & {
+                    svg.cart {
+                        fill: $darkBg;
+                    }
 
-                        svg.logo {
-                            fill: $darkBg;
+                    .link-wrapper {
+                        .nav-link {
+                            color: $darkBg;
+
+                            svg.logo {
+                                fill: $darkBg;
+                            }
                         }
                     }
                 }
@@ -187,6 +193,12 @@
 
     svg.cart {
         width: 2.8rem;
+    }
+
+    body.single-product & {
+        svg.cart {
+            fill: #fff;
+        }
     }
 
     .mobile-nav {
@@ -443,33 +455,5 @@
         bottom: 0;
         left: 50%;
         transform: translateX(-50%);
-    }
-}
-
-//BARBA ANIMATION PANES
-.animation-pane {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    height: 100%;
-    display: block;
-    left: 0;
-    z-index: 999;
-    display: none;
-
-    svg,
-    img  {
-        width: 10rem;
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        opacity: 1;
-        transition: all ease 300ms;
-    }
-
-    &#animation-pane-vertical {
-        background-color: $darkBg;
-        transform: scaleY(1);
     }
 }

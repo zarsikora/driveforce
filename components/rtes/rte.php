@@ -4,7 +4,7 @@
     $arrow = get_sub_field('arrow_graphic');
     $header = get_sub_field('header');
     $copy = get_sub_field('copy');
-    $hasGraphic = get_sub_field('has_graphic');
+    $hasGraphic = get_sub_field('has_graphwic');
 ?>
 
 <div class="module-wrapper rte <?php echo ' ' . $bgColor . '-bg'?>">
