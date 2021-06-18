@@ -7,7 +7,7 @@
                 <div class="inner">
                     <div class="upper-nav row">
 
-                        <div class="logo col-md-3 col-lg-2">
+                        <div class="logo col col-md-3 col-lg-2">
                             <a class="logo-link" href="<?php echo home_url(); ?>" aria-label="Return to Home Page">
                                 <svg class="logo" viewBox="0 0 104 104">
                                     <use href="#square-logo"></use>
