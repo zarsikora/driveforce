@@ -6,6 +6,10 @@
         padding: 10vw 10vw;
     }
 
+    .large-text-module + & {
+        padding-top: 0;
+    }
+
     p.header {
         font-family: $sharpSansBold;
         line-height: 1.25em;

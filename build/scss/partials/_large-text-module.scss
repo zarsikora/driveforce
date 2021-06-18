@@ -1,8 +1,12 @@
 .module-wrapper.large-text-module {
      background-color: #14302B;
      color: #fff;
+    padding-bottom: 0;
 
-     .copy,
+     .copy {
+
+     }
+
      .copy p {
          font-size: 2.5rem;
          font-family: $sharpSansBold;
@@ -14,5 +18,17 @@
          @media(min-width: 1920px){
              font-size: 5.3rem;
          }
+
+         &:last-child {
+             margin-bottom: 0;
+         }
      }
+
+    .dotted-line {
+        width: 100%;
+        margin: 10rem 0;
+        @include media-breakpoint-up(lg) {
+            margin: 20rem 0;
+        }
+    }
  }
