@@ -70,6 +70,46 @@ let scroll = window.requestAnimationFrame ||
 
 
 /**
+ * Variant Name on PDP
+ */
+const variantSelect = $('#amount');
+if(variantSelect.length)
+{
+    variantSelect.on('change', function(e)
+    {
+        let variantName = '';
+        let variantPrice = '';
+
+        // TODO: Update this to dynamically pull name and price
+
+        switch($(e.target).val()) {
+            case 'PRO 30 Pack':
+                variantName = 'PRO 30 Pack';
+                variantPrice = '$109.99';
+                break;
+            case 'AM 20 Pack':
+                variantName = 'Amateur 20 Pack';
+                variantPrice = '$74.99';
+                break;
+            case 'WW 10 Pack':
+                variantName = 'Weekend Warrior 10 Pack';
+                variantPrice = '$39.99';
+                break;
+            default:
+                variantName = '';
+        }
+
+        if(variantName !== '') {
+            $('.product-variant-name').text(variantName)
+        }
+
+        if(variantPrice) {
+            $('.variant-price').text(variantPrice);
+        }
+    })
+}
+
+/**
  * Quantity integer input on PDP
  */
 $('.product-info .quantity, .product .quantity').each(function ()

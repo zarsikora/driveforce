@@ -6,7 +6,7 @@
             margin-bottom: 3rem;
 
             .star-rating {
-                color: $lightBg;
+                color: #FBA422;
                 font-size: 2rem;
                 letter-spacing: .4rem;
                 width: 6em;
@@ -44,6 +44,10 @@
 
     #reviews {
 
+        h2 {
+            text-align: center;
+        }
+
         #comments {
             ol.commentlist {
                 display: block;
@@ -64,6 +68,7 @@
                             letter-spacing: .3rem;
                             font-size: 1.6rem;
                             width: 6em;
+                            color: #FBA422;
                         }
 
                         .description {

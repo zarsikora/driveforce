@@ -11348,7 +11348,7 @@ body.single-product #header #navscroll-container .nav .link-wrapper .nav-link sv
 }
 
 #header #navscroll-container .nav .link-wrapper .nav-link svg.logo {
-  width: 4rem;
+  width: 2.8rem;
 }
 
 #header #navscroll-container .nav .header-logo {
@@ -11485,7 +11485,7 @@ body.single-product #header .mobile-nav .mobile-controls button svg {
   }
 }
 
-#header .mobile-nav svg.logo {
+#header .mobile-nav .open-cart-drawer svg.logo {
   width: 3rem;
 }
 
@@ -20443,6 +20443,18 @@ body.single-product #primary .product .summary {
   width: 100%;
 }
 
+body.single-product #primary .product .summary .product-variant-name {
+  font-family: "Sharp Sans Bold";
+  font-size: 1.8rem;
+}
+
+body.single-product #primary .product .summary .variant-price {
+  color: #fff;
+  font-family: "Sharp Sans Extrabold";
+  font-size: 1.8rem;
+  margin-bottom: 2.5rem;
+}
+
 body.single-product #primary .product .summary .price {
   color: #081D1A;
   font-family: "Sharp Sans Medium";
@@ -20516,6 +20528,16 @@ body.single-product #primary .product .summary form.cart .wcsatt-options-wrapper
   body.single-product #primary .product .summary form.cart .single_variation_wrap .woocommerce-variation {
     max-width: 45rem;
   }
+}
+
+body.single-product #primary .product .summary form.cart .single_variation_wrap .woocommerce-variation-description {
+  display: none;
+}
+
+body.single-product #primary .product .summary form.cart .single_variation_wrap .woocommerce-variation-availability .stock {
+  color: #88E2C1;
+  font-size: 1.4rem;
+  text-transform: uppercase;
 }
 
 body.single-product #primary .product .summary form.cart .single_variation_wrap label {
@@ -20784,7 +20806,7 @@ table.variations .reset_variations {
   .benefits-module body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 address.header, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 .benefits-module address.header,
   .benefits-module body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 address.header, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 .benefits-module address.header,
   .benefits-module body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 address.header, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 .benefits-module address.header {
-    font-size: 2.083vw;
+    font-size: 2.77vw;
   }
 }
 
@@ -20793,7 +20815,7 @@ table.variations .reset_variations {
   .benefits-module body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 address.header, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 .benefits-module address.header,
   .benefits-module body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 address.header, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 .benefits-module address.header,
   .benefits-module body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 address.header, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 .benefits-module address.header {
-    font-size: 3.9rem;
+    font-size: 5.3rem;
   }
 }
 
@@ -20941,6 +20963,11 @@ table.variations .reset_variations {
   color: #fff;
   padding: 0;
   margin: 0;
+  transition: color ease 300ms;
+}
+
+.ingredients-list h2.accordion-header:hover button {
+  color: #88E2C1;
 }
 
 .ingredients-list .accordion-body {
@@ -20969,13 +20996,19 @@ table.variations .reset_variations {
 
 .quote-module {
   padding: 0 3.6rem;
-  margin: 7rem 0;
+  margin: 7rem auto;
+}
+
+@media (min-width: 992px) {
+  .quote-module {
+    max-width: 80%;
+  }
 }
 
 @media (min-width: 1200px) {
   .quote-module {
-    padding: 0 16.666vw;
-    margin: 10vw 0;
+    padding: 0;
+    margin: 10vw auto;
   }
 }
 
@@ -21100,7 +21133,7 @@ table.variations .reset_variations {
 .copy-image svg {
   display: block;
   fill: #477563;
-  width: 20rem;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -21123,7 +21156,7 @@ table.variations .reset_variations {
 }
 
 .woocommerce div.product .woocommerce-product-rating .star-rating {
-  color: #F9F1E7;
+  color: #FBA422;
   font-size: 2rem;
   letter-spacing: .4rem;
   width: 6em;
@@ -21153,6 +21186,10 @@ table.variations .reset_variations {
   transform: translateX(-50%);
 }
 
+.product-reviews-wrapper #reviews h2 {
+  text-align: center;
+}
+
 .product-reviews-wrapper #reviews #comments ol.commentlist {
   display: block;
   margin: 0;
@@ -21176,6 +21213,7 @@ table.variations .reset_variations {
   letter-spacing: .3rem;
   font-size: 1.6rem;
   width: 6em;
+  color: #FBA422;
 }
 
 .product-reviews-wrapper #reviews #comments ol.commentlist li .comment-text .description p, .product-reviews-wrapper #reviews #comments ol.commentlist li .comment-text .description body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 address, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 .product-reviews-wrapper #reviews #comments ol.commentlist li .comment-text .description address,

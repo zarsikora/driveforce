@@ -51,7 +51,7 @@ if ( post_password_required() ) {
                 <?php
 
                 add_action('woocommerce_single_product_summary', function() { ?>
-                    <div class="price">
+                    <div class="variant-price">
                         $29.95
                     </div>
                 <?php });
@@ -111,7 +111,7 @@ if ( post_password_required() ) {
                 <use href="#poles"></use>
             </svg>
         </div>
-        <div class="col-lg-4 col-xl-3 offset-xl-2">
+        <div class="col-lg-4 col-xl-4">
             <div class="copy-box green">
                 <p class="subheader">Benefits on the course:</p>
                 <ul>
@@ -122,7 +122,7 @@ if ( post_password_required() ) {
                 </ul>
             </div>
         </div>
-        <div class="col-lg-4 col-xl-3">
+        <div class="col-lg-4 col-xl-4">
             <div class="copy-box">
                 <p class="subheader">Benefits off the course:</p>
                 <ul>
@@ -182,14 +182,14 @@ if ( post_password_required() ) {
                     type="button"
                     data-toggle="collapse"
                     data-target="#accordionCollapseOne"
-                    aria-expanded="true"
+                    aria-expanded="false"
                     aria-controls="accordionCollapseOne">
                     See Full Ingredients List:
                 </button>
             </h2>
             <div
                 id="accordionCollapseOne"
-                class="accordion-collapse collapse show"
+                class="accordion-collapse collapse"
                 aria-labelledby="accordionHeadingOne"
                 data-parent="#ingredientsAccordion">
                 <div class="accordion-body">
@@ -226,12 +226,12 @@ if ( post_password_required() ) {
 
 <div class="quote-module">
     <div class="row align-items-center">
-        <div class="col-lg-6 copy">
-            <p class="header">Back nine blowups happen all the time, we’ve all been there. Our ‘faults’ add up but truth be told, it’s not always the players fault. I’ve been looking for years for something to solve for this. I’ve finally found it.”</p>
+        <div class="col-lg-5 offset-lg-1 copy">
+            <p class="header">“Back nine blowups happen all the time, we’ve all been there. Our ‘faults’ add up but truth be told, it’s not always the players fault. I’ve been looking for years for something to solve for this. I’ve finally found it.”</p>
             <p>— Adam Kolloff, New England PGA Teacher of the Year</p>
         </div>
-        <div class="col-lg-5 offset-lg-1">
-            <?php echo imageTag('http://localhost:10008/wp-content/uploads/2021/05/Mask-Group-47@2x.png', '', '','', ''); ?>
+        <div class="col-lg-4 offset-lg-1">
+            <?php echo imageTag(get_bloginfo('url') . '/wp-content/uploads/2021/06/adam-kolloff@2x.jpg', '', '','', ''); ?>
         </div>
     </div>
 </div>
@@ -239,7 +239,7 @@ if ( post_password_required() ) {
 <div class="full-image-with-copy-box">
     <div class="row">
         <div class="col-lg-12 image">
-            <?php echo imageTag('http://localhost:10008/wp-content/uploads/2021/05/72373c506c372e7cb87e1867354f6144@2x.png', '', '', '', ''); ?>
+            <?php echo imageTag(get_bloginfo('url') . '/wp-content/uploads/2021/06/golf-course@2x@2x.jpg', '', '', '', ''); ?>
         </div>
         <div class="col-lg-4 copy">
             <div class="copy-box green">
@@ -256,7 +256,7 @@ if ( post_password_required() ) {
             <p class="header">Maximize your investment on the course.</p>
             <p>We invest countless hours training, working on our swing, honing our skills, and countless dollars on equipment each year to play our absolute best. These are all crucial, but it’s all for not if you’re not giving your body what it needs to stay focused, hydrated, and energized.</p>
         </div>
-        <div class="col-lg-3 offset-lg-2">
+        <div class="col-lg-4 offset-lg-2">
             <svg viewBox="0 0 282.773 278.057">
                 <use href="#golf-bag-icon"></use>
             </svg>
@@ -282,7 +282,7 @@ if ( post_password_required() ) {
 
                 $reviews = array(
                     /* translators: %s: reviews count */
-                    'title'    => sprintf( __( 'Reviews (%d)', 'woocommerce' ), $product->get_review_count() ),
+                    'title'    => 'Review',
                     'priority' => 30,
                     'callback' => 'comments_template',
                 );

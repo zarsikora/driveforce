@@ -78,6 +78,18 @@ body.single-product {
                 float: none;
                 width: 100%;
 
+                .product-variant-name {
+                    font-family: $sharpSansBold;
+                    font-size: 1.8rem;
+                }
+
+                .variant-price {
+                    color: #fff;
+                    font-family: $sharpSansExtraBold;
+                    font-size: 1.8rem;
+                    margin-bottom: 2.5rem;
+                }
+
                 .price {
                     color: $darkBg;
                     font-family: $sharpSansMedium;
@@ -139,6 +151,19 @@ body.single-product {
                         .woocommerce-variation {
                             @include media-breakpoint-up(lg) {
                                 max-width: 45rem;
+                            }
+                        }
+
+                        .woocommerce-variation-description {
+                            display: none;
+                        }
+
+                        .woocommerce-variation-availability {
+
+                            .stock {
+                                color: $mint;
+                                font-size: 1.4rem;
+                                text-transform: uppercase;
                             }
                         }
 
@@ -382,10 +407,10 @@ table.variations {
         font-size: 2.4rem;
         @include media-breakpoint-up(xl) {
             //font-size: 4rem;
-            font-size: 2.083vw;
+            font-size: 2.77vw;
         }
         @media(min-width: 1920px) {
-            font-size: 3.9rem;
+            font-size: 5.3rem;
         }
     }
 
@@ -491,6 +516,11 @@ table.variations {
             color: #fff;
             padding: 0;
             margin: 0;
+            transition: color ease 300ms;
+        }
+
+        &:hover button {
+            color: $mint;
         }
     }
 
@@ -514,10 +544,13 @@ table.variations {
 
 .quote-module {
     padding: 0 3.6rem;
-    margin: 7rem 0;
+    margin: 7rem auto;
+    @include media-breakpoint-up(lg) {
+        max-width: 80%;
+    }
     @include media-breakpoint-up(xl) {
-        padding: 0 16.666vw;
-        margin: 10vw 0;
+        padding: 0;
+        margin: 10vw auto;
     }
 
     .copy {
@@ -602,7 +635,7 @@ table.variations {
     svg {
         display: block;
         fill: #477563;
-        width: 20rem;
+        width: 100%;
         margin: 0 auto;
     }
 }
