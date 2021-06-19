@@ -68,7 +68,7 @@ do_action( 'woocommerce_before_customer_login_form' ); ?>
 
         <?php if ( 'yes' === get_option( 'woocommerce_enable_myaccount_registration' ) ) : ?>
             <div class="col-lg-6 register-col">
-                <h2><?php esc_html_e( 'Register', 'woocommerce' ); ?></h2>
+                <h2><?php esc_html_e( 'Create Account', 'woocommerce' ); ?></h2>
                 <p>New to DriveForce? Welcome! Create an account below.</p>
                 <form method="post" class="woocommerce-form woocommerce-form-register register" <?php do_action( 'woocommerce_register_form_tag' ); ?> >
 
@@ -105,7 +105,7 @@ do_action( 'woocommerce_before_customer_login_form' ); ?>
 
                     <p class="woocommerce-form-row form-row">
                         <?php wp_nonce_field( 'woocommerce-register', 'woocommerce-register-nonce' ); ?>
-                        <button type="submit" class="woocommerce-Button woocommerce-button button woocommerce-form-register__submit" name="register" value="<?php esc_attr_e( 'Register', 'woocommerce' ); ?>"><?php esc_html_e( 'Register', 'woocommerce' ); ?></button>
+                        <button type="submit" class="woocommerce-Button woocommerce-button button woocommerce-form-register__submit" name="register" value="<?php esc_attr_e( 'Create Account', 'woocommerce' ); ?>"><?php esc_html_e( 'Create Account', 'woocommerce' ); ?></button>
                     </p>
 
                     <?php do_action( 'woocommerce_register_form_end' ); ?>
