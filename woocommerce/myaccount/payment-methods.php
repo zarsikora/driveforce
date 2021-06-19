@@ -85,5 +85,5 @@ do_action( 'woocommerce_before_account_payment_methods', $has_methods ); ?>
 <?php do_action( 'woocommerce_after_account_payment_methods', $has_methods ); ?>
 
 <?php if ( WC()->payment_gateways->get_available_payment_gateways() ) : ?>
-    <?php echo button( esc_url(wc_get_endpoint_url('add-payment-method')), 'Add payment method', '', '', '' ); ?>
+    <?php echo button( esc_url(wc_get_endpoint_url('add-payment-method')), 'Add payment method', 'btn thin-btn', '', '' ); ?>
 <?php endif; ?>
