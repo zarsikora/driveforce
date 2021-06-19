@@ -1,4 +1,4 @@
-<div data-animation-effect="moduleFadeIn" data-animation-trigger="breakpoint" id="form-wrapper">
+<div id="form-wrapper">
     <form autocomplete="off" action="" method="post" id="sharpspring-waitlist" class="sharpspring-waitlist" novalidate>
         <div class="field-group">
             <label class="sr-only">First Name</label>
