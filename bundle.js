@@ -40366,10 +40366,14 @@ const fastCheckoutMobileButtons = $('.fast-checkout-variant-select .mobile .btn'
 
 let selectDropdownOpen = false;
 
+console.log(fastCheckoutSelect);
+
 if(fastCheckoutSelect)
 {
     let option1 = $('.fast-checkout-purchase-option.option1');
     let option2 = $('.fast-checkout-purchase-option.option2');
+
+    console.log(option2);
 
     function updateSelectedOption(variantID)
     {
@@ -40389,9 +40393,9 @@ if(fastCheckoutSelect)
         const price = data.variation.display_price;
         const subscriptionPrice = price - ((discount / 100) * price);
 
-        $('.subscribe-price', option1).text('$'+subscriptionPrice);
-        $('.regular-price', option1).text('$'+price);
-        $('.regular-price', option2).text('$'+price);
+        //$('.subscribe-price', option1).text('$'+subscriptionPrice);
+        //$('.regular-price', option1).text('$'+price);
+        $('.fast-checkout-purchase-option.option2 .regular-price').text('$'+price);
     }
 
     function getProductObject(variantID)
