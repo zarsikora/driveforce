@@ -4,6 +4,8 @@
     $introIcon = get_sub_field('intro_icon');
     $blockHeader = get_sub_field('block_header');
     $blockImage = get_sub_field('block_image');
+    $button = get_sub_field('button');
+    $ingredientsModal = get_sub_field('ingredients_modal');
 ?>
 
 <div class="module-wrapper ingredients-module">
@@ -37,7 +39,12 @@
                             <li><span class="check">✓</span> No Caffeine</li>
                         </ul>
 
-                        <?php echo button('#', 'Read All Ingredients', 'thin-btn') ?>
+                        <?php
+                        if($ingredientsModal) { ?>
+                            <button class="btn thin-btn" data-micromodal-trigger="modal-ingredients">Read All Ingredients</button>
+                        <?php } elseif($button) {
+                            echo button($button['url'], $button['text'], 'thin-btn', '', '');
+                        } ?>
                     </div>
                 </div>
                 <div class="col-lg-4">

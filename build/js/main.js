@@ -69,6 +69,9 @@ let scroll = window.requestAnimationFrame ||
 // window.addEventListener('resize', calcWinsize);
 
 
+// Enable MicroModal library for ingredients modal
+MicroModal.init();
+
 /**
  * Variant Name on PDP
  */

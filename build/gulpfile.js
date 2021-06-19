@@ -47,6 +47,7 @@ function scripts() {
             "./node_modules/gsap/dist/gsap.js",
             "./node_modules/splitting/dist/splitting.js",
             "./node_modules/@splidejs/splide/dist/js/splide.js",
+            "./node_modules/micromodal/dist/micromodal.js",
             "./js/fast-checkout.js",
             "./js/sharpspring.js",
             "./js/cart-drawer.js",

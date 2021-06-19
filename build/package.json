@@ -27,6 +27,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@splidejs/splide": "^2.4.21"
+    "@splidejs/splide": "^2.4.21",
+    "micromodal": "^0.4.6"
   }
 }
