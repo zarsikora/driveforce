@@ -96,6 +96,11 @@
                             <a class="nav-link" href="<?php echo get_site_url(); ?>/learn">Learn</a>
                             <a class="nav-link" href="<?php echo get_site_url(); ?>/my-account/orders">Account</a>
                             <a class="open-cart-drawer nav-link" href="<?php echo get_site_url(); ?>/cart">
+                                <?php if(WC()->cart->get_cart_contents_count()) { ?>
+                                <span class="cart-total">
+                                    <span class="total"><?php echo WC()->cart->get_cart_contents_count(); ?></span>
+                                </span>
+                                <?php } ?>
                                 <svg class="cart" viewBox="0 0 27.644 22.64">
                                     <use xlink:href="#cart"></use>
                                 </svg>
@@ -126,6 +131,11 @@
                         </div>
 
                         <a class="open-cart-drawer nav-link" href="<?php echo get_site_url(); ?>/cart">
+                            <?php if(WC()->cart->get_cart_contents_count()) { ?>
+                            <span class="cart-total">
+                                <span class="total"><?php echo WC()->cart->get_cart_contents_count(); ?></span>
+                            </span>
+                            <?php } ?>
                             <svg class="cart" viewBox="0 0 27.644 22.64">
                                 <use xlink:href="#cart"></use>
                             </svg>

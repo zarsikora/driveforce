@@ -99,8 +99,37 @@
         }
     }
 
-    svg.cart {
-        width: 2.8rem;
+    .open-cart-drawer {
+        position: relative;
+
+        .cart-total {
+            display: block;
+            width: 1.5rem;
+            height: 1.5rem;
+            border-radius: 1.5rem;
+            background: $red;
+            position: absolute;
+            right: 0;
+            top: 0;
+            transform: translate(110%, -50%);
+
+            .total {
+                font-size: 1rem;
+                font-family: $sharpSansMedium;
+                letter-spacing: 0;
+                line-height: 1;
+                display: block;
+                color: #fff;
+                position: absolute;
+                left: 50%;
+                top: calc(50% + .1rem);
+                transform: translate(-50%,-50%);
+            }
+        }
+
+        svg.cart {
+            width: 2.8rem;
+        }
     }
 
     .mobile-controls {
@@ -290,6 +319,18 @@
         }
 
         .open-cart-drawer {
+            position: relative;
+
+            .cart-total {
+                width: 1.2rem;
+                height: 1.2rem;
+                line-height: 1.2rem;
+
+                .total {
+                    font-size: .8rem;
+                    top: 50%;
+                }
+            }
 
             svg.logo {
                 width: 3rem;
