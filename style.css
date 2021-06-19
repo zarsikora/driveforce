@@ -13029,12 +13029,14 @@ body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .
   top: 20rem;
   right: 0;
   opacity: 0;
+  width: 100%;
 }
 
 @media (min-width: 768px) {
   .hero .primary-hero-curve {
     bottom: 0;
     top: unset;
+    width: 60vw;
   }
 }
 

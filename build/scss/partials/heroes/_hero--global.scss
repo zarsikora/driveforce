@@ -335,9 +335,11 @@
         top: 20rem;
         right: 0;
         opacity: 0;
+        width: 100%;
         @include media-breakpoint-up(md){
             bottom: 0;
             top: unset;
+            width: 60vw;
         }
         @include media-breakpoint-up(lg){
             width: 71.250vw;
