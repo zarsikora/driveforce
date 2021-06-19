@@ -251,9 +251,9 @@ span {
     background: $highlight;
     box-shadow: 0px 10px 24px #00000029;
     color: #fff !important;
-    padding: 2.7rem 3.3rem;
+    padding: 2.7rem 7.5rem;
     border-radius: 4rem;
-    width: 100%;
+    width: auto;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -261,15 +261,7 @@ span {
     white-space: nowrap;
     position: relative;
     text-decoration: none !important;
-    @include media-breakpoint-up(md){
-        width: 32rem;
-    }
-    @include media-breakpoint-up(lg){
-        width: 22.292vw;
-    }
-    @media(min-width: 1920px){
-        width: 42.8rem;
-    }
+    font-size: 1.6rem;
 
     &:hover {
         @include media-breakpoint-up(lg){
@@ -304,9 +296,10 @@ span {
     }
 
     &.thin-btn {
-        padding: 1.8rem;
+        padding: 1.8rem 6rem;
         border-radius: .4rem;
         width: 100%;
+        font-size: 1.4rem;
 
         .btn-hover-mask {
             display: none;
@@ -317,6 +310,11 @@ span {
                 background-color: $hoverTint;
             }
         }
+    }
+
+    &.small {
+        padding: 1.5rem 3rem;
+        font-size: 1.2rem;
     }
 }
 

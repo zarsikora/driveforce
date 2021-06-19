@@ -11065,9 +11065,9 @@ span.sage {
   background: #DB4343;
   box-shadow: 0px 10px 24px #00000029;
   color: #fff !important;
-  padding: 2.7rem 3.3rem;
+  padding: 2.7rem 7.5rem;
   border-radius: 4rem;
-  width: 100%;
+  width: auto;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -11075,24 +11075,7 @@ span.sage {
   white-space: nowrap;
   position: relative;
   text-decoration: none !important;
-}
-
-@media (min-width: 768px) {
-  .btn, #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form button, body.woocommerce-cart #content .return-to-shop .button {
-    width: 32rem;
-  }
-}
-
-@media (min-width: 992px) {
-  .btn, #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form button, body.woocommerce-cart #content .return-to-shop .button {
-    width: 22.292vw;
-  }
-}
-
-@media (min-width: 1920px) {
-  .btn, #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form button, body.woocommerce-cart #content .return-to-shop .button {
-    width: 42.8rem;
-  }
+  font-size: 1.6rem;
 }
 
 @media (min-width: 992px) {
@@ -11138,9 +11121,10 @@ span.sage {
 }
 
 .btn.thin-btn, #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form button.thin-btn, body.woocommerce-cart #content .return-to-shop .thin-btn.button {
-  padding: 1.8rem;
+  padding: 1.8rem 6rem;
   border-radius: .4rem;
   width: 100%;
+  font-size: 1.4rem;
 }
 
 .btn.thin-btn .btn-hover-mask, #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form button.thin-btn .btn-hover-mask, body.woocommerce-cart #content .return-to-shop .thin-btn.button .btn-hover-mask {
@@ -11151,6 +11135,11 @@ span.sage {
   .btn.thin-btn:hover, #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form button.thin-btn:hover, body.woocommerce-cart #content .return-to-shop .thin-btn.button:hover {
     background-color: #9A1D1D;
   }
+}
+
+.btn.small, #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form button.small, body.woocommerce-cart #content .return-to-shop .small.button {
+  padding: 1.5rem 3rem;
+  font-size: 1.2rem;
 }
 
 button:focus {
