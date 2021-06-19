@@ -306,7 +306,7 @@ span {
 
         &:hover {
             @include media-breakpoint-up(lg){
-                background-color: $hoverTint;
+                background-color: $hoverTint !important;
             }
         }
     }
@@ -314,6 +314,7 @@ span {
     &.small {
         padding: 1.5rem 3rem;
         font-size: 1.2rem;
+        border-radius: .4rem;
     }
 }
 
@@ -496,6 +497,10 @@ button {
     top: 0;
     left: 0;
 
+    .thin-btn &,
+    .small & {
+        border-radius: .4rem;
+    }
     //do not use clip path on ie 11
     @media all and (-ms-high-contrast:none)
     {

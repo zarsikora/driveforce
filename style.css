@@ -11132,13 +11132,14 @@ span.sage {
 
 @media (min-width: 992px) {
   .btn.thin-btn:hover, #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form button.thin-btn:hover, body.woocommerce-cart #content .return-to-shop .thin-btn.button:hover {
-    background-color: #9A1D1D;
+    background-color: #9A1D1D !important;
   }
 }
 
 .btn.small, #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form button.small, body.woocommerce-cart #content .return-to-shop .small.button {
   padding: 1.5rem 3rem;
   font-size: 1.2rem;
+  border-radius: .4rem;
 }
 
 button:focus {
@@ -11304,6 +11305,11 @@ button:focus {
   pointer-events: none;
   top: 0;
   left: 0;
+}
+
+.thin-btn .btn-hover-mask,
+.small .btn-hover-mask {
+  border-radius: .4rem;
 }
 
 @media all and (-ms-high-contrast: none) {
@@ -19212,8 +19218,9 @@ body.woocommerce-account .woocommerce-MyAccount-content form .password-input {
 
 body.woocommerce-account .woocommerce-MyAccount-content form button[type=submit] {
   background: #dc3545;
-  padding: 2.7rem 3.3rem;
-  border-radius: 4rem;
+  padding: 1.8rem 6rem;
+  border-radius: .4rem;
+  font-size: 1.4rem;
 }
 
 body.woocommerce-account .select2-container--default .select2-search--dropdown .select2-search__field {
