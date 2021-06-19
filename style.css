@@ -11382,6 +11382,10 @@ button:focus {
   }
 }
 
+body.mobile-nav-active #header.background-color-green .close {
+  stroke: #fff;
+}
+
 #header.background-color-cream,
 #header.background-color-cream .navscroll-container {
   background-color: #F9F1E7;
@@ -11452,6 +11456,15 @@ button:focus {
 #header.background-color-transparent .navscroll-container.scrollVisible svg.logo,
 #header.background-color-transparent .navscroll-container.scrollVisible svg.cart {
   fill: #081D1A;
+}
+
+#header.background-color-white .hamburgder-control svg.close,
+#header.background-color-white .navscroll-container .hamburgder-control svg.close,
+#header.background-color-green .navscroll-container.scrollVisible .hamburgder-control svg.close,
+#header.background-color-white .navscroll-container.scrollVisible .hamburgder-control svg.close,
+#header.background-color-cream .navscroll-container.scrollVisible .hamburgder-control svg.close,
+#header.background-color-transparent .navscroll-container.scrollVisible .hamburgder-control svg.close {
+  stroke: #fff;
 }
 
 #header.background-color-white .nav-link,

@@ -10,6 +10,12 @@
         height: 9.4rem;
     }
 
+    body.mobile-nav-active &.background-color-green {
+        .close {
+            stroke: #fff;
+        }
+    }
+
     &.background-color-cream,
     &.background-color-cream .navscroll-container {
         background-color: $lightBg;
@@ -63,6 +69,10 @@
         svg.logo,
         svg.cart {
             fill: $darkBg;
+        }
+
+        .hamburgder-control svg.close {
+            stroke: #fff;
         }
 
         .nav-link {
