@@ -22,4 +22,4 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 ?>
 
-<?php echo button(esc_url( wc_get_checkout_url()), 'Proceed to checkout', 'btn'); ?>
+<?php echo button(esc_url( wc_get_checkout_url() ), 'Proceed to checkout', 'btn'); ?>
