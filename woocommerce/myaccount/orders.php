@@ -86,18 +86,18 @@ do_action( 'woocommerce_before_account_orders', $has_orders ); ?>
 	<?php if ( 1 < $customer_orders->max_num_pages ) : ?>
 		<div class="woocommerce-pagination woocommerce-pagination--without-numbers woocommerce-Pagination">
 			<?php if ( 1 !== $current_page ) : ?>
-                <?php echo button( esc_url(wc_get_endpoint_url('orders', $current_page - 1)), 'Previous', 'woocommerce-button woocommerce-button--previous woocommerce-Button woocommerce-Button--previous btn btn-thin', '', ''); ?>
+                <?php echo button( esc_url(wc_get_endpoint_url('orders', $current_page - 1)), 'Previous', 'woocommerce-button woocommerce-button--previous woocommerce-Button woocommerce-Button--previous btn thin-btn', '', ''); ?>
 			<?php endif; ?>
 
 			<?php if ( intval( $customer_orders->max_num_pages ) !== $current_page ) : ?>
-                <?php echo button(esc_url( wc_get_endpoint_url( 'orders', $current_page + 1 ) ), 'Next', 'woocommerce-button woocommerce-button--next woocommerce-Button woocommerce-Button--next btn btn-thin'); ?>
+                <?php echo button(esc_url( wc_get_endpoint_url( 'orders', $current_page + 1 ) ), 'Next', 'woocommerce-button woocommerce-button--next woocommerce-Button woocommerce-Button--next btn thin-btn'); ?>
 			<?php endif; ?>
 		</div>
 	<?php endif; ?>
 
 <?php else : ?>
 	<div class="woocommerce-message woocommerce-message--info woocommerce-Message woocommerce-Message--info woocommerce-info">
-        <?php echo button(get_bloginfo('url').'/product/df-18', 'Shop DF-18', 'woocommerce-Button btn btn-thin'); ?>
+        <?php echo button(get_bloginfo('url').'/product/df-18', 'Shop DF-18', 'woocommerce-Button btn thin-btn'); ?>
 		<?php esc_html_e( 'No order has been made yet.', 'woocommerce' ); ?>
 	</div>
 <?php endif; ?>
