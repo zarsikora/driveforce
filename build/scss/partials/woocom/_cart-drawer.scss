@@ -10,7 +10,7 @@ body.cart-drawer-open {
     z-index: 999;
     right: 0;
     top: 0;
-    width: 40vw;
+    width: 100vw;
     max-width: 47rem;
     height: 100%;
     background: #354c45;
@@ -19,6 +19,12 @@ body.cart-drawer-open {
     flex-wrap: wrap;
     align-items: flex-start;
     color: #fff;
+    @include media-breakpoint-up(md) {
+        width: 70vw;
+    }
+    @include media-breakpoint-up(lg) {
+        width: 40vw;
+    }
 
     body.cart-drawer-open & {
         transform: translateX(0);
@@ -57,7 +63,13 @@ body.cart-drawer-open {
     }
 
     .close-cart-drawer {
-        color: #fff;
+        svg {
+            stroke: #fff;
+
+            &:hover {
+                stroke: $mint;
+            }
+        }
     }
 }
 

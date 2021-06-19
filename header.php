@@ -66,10 +66,9 @@
 
         <div id="wrapper">
 
-            <!-- Waitlist Modal -->
-            <?php include('components/modal--waitlist.php'); ?>
+            <?php
+            include('components/modal--waitlist.php'); ?>
 
-            <!-- TODO: Configure Nav Pane -->
             <?php include('components/nav/nav-pane.php'); ?>
 
             <?php include('components/banner.php'); ?>
@@ -81,9 +80,7 @@
                     <div class="nav" id="flyout-menu">
                         <div class="link-wrapper">
                             <a class="nav-link" href="<?php echo get_site_url(); ?>/product/df-18">Shop</a>
-
                             <a class="nav-link" href="<?php echo get_site_url(); ?>/ingredients">Ingredients</a>
-
                             <a class="nav-link" href="<?php echo get_site_url(); ?>/our-story">Our Story</a>
                         </div>
 
@@ -97,9 +94,7 @@
 
                         <div class="link-wrapper">
                             <a class="nav-link" href="<?php echo get_site_url(); ?>/learn">Learn</a>
-
                             <a class="nav-link" href="<?php echo get_site_url(); ?>/my-account/orders">Account</a>
-
                             <a class="open-cart-drawer nav-link" href="<?php echo get_site_url(); ?>/cart">
                                 <svg class="cart" viewBox="0 0 27.644 22.64">
                                     <use xlink:href="#cart"></use>
@@ -130,14 +125,13 @@
                             </a>
                         </div>
 
-                        <svg class="cart" viewBox="0 0 27.644 22.64">
-                            <use xlink:href="#cart"></use>
-                        </svg>
+                        <a class="open-cart-drawer nav-link" href="<?php echo get_site_url(); ?>/cart">
+                            <svg class="cart" viewBox="0 0 27.644 22.64">
+                                <use xlink:href="#cart"></use>
+                            </svg>
+                        </a>
                     </div>
                 </div>
             </header>
 
-        <div id="container" data-barba="container" data-barba-namespace="<?php echo $post->post_name; ?>">
-        <!-- TODO: If scroll indicator, enable here -->
-        <?php //include('components/scroll-indicator.php'); ?>
-
+        <div id="container">

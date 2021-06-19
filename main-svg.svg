@@ -92,6 +92,15 @@
         </g>
     </symbol>
 
+    <!-- CART DRAWER CLOSE -->
+    <symbol id="cart-close" viewBox="0 0 16.256 16.256">
+        <defs><style>.cart-close-a{fill:none;stroke-linecap:round;stroke-linejoin:bevel;stroke-width:2.5px;}</style></defs>
+        <g transform="translate(-3.872 -3.872)">
+            <line class="cart-close-a" x1="12.72" y1="12.72" transform="translate(5.64 5.64)"/>
+            <line class="cart-close-a" x1="12.72" y2="12.72" transform="translate(5.64 5.64)"/>
+        </g>
+    </symbol>
+
     <!-- TRASH ICON -->
     <symbol id="trash-icon" viewBox="0 0 16 16">
         <defs>

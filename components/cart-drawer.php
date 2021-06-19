@@ -32,7 +32,11 @@
                 <use href="#cart"></use>
             </svg>
             <p>Cart</p>
-            <a class="close-cart-drawer" href="#">X</a>
+            <a class="close-cart-drawer" href="#">
+                <svg width="17" viewBox="0 0 16.256 16.256">
+                    <use href="#cart-close"></use>
+                </svg>
+            </a>
         </div>
         <div class="cart-drawer-scroll">
             <div class="cart-drawer-products">

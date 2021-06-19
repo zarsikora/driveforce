@@ -17915,7 +17915,7 @@ body.cart-drawer-open {
   z-index: 999;
   right: 0;
   top: 0;
-  width: 40vw;
+  width: 100vw;
   max-width: 47rem;
   height: 100%;
   background: #354c45;
@@ -17924,6 +17924,18 @@ body.cart-drawer-open {
   flex-wrap: wrap;
   align-items: flex-start;
   color: #fff;
+}
+
+@media (min-width: 768px) {
+  .cart-drawer {
+    width: 70vw;
+  }
+}
+
+@media (min-width: 992px) {
+  .cart-drawer {
+    width: 40vw;
+  }
 }
 
 body.cart-drawer-open .cart-drawer {
@@ -17965,8 +17977,12 @@ body.cart-drawer-open .cart-drawer {
   margin: 0;
 }
 
-.cart-drawer-header .close-cart-drawer {
-  color: #fff;
+.cart-drawer-header .close-cart-drawer svg {
+  stroke: #fff;
+}
+
+.cart-drawer-header .close-cart-drawer svg:hover {
+  stroke: #88E2C1;
 }
 
 .cart-drawer-scroll {
