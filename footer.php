@@ -16,7 +16,7 @@
                         <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
                     </header>
                     <main class="modal__content" id="modal-ingredients-content">
-                        <img src="http://localhost:10008/wp-content/uploads/2021/06/df18-stickpack.png" />
+                        <img src="<?php echo get_bloginfo('url') ?>/wp-content/uploads/2021/06/df18-stickpack.png" />
                     </main>
                 </div>
             </div>
