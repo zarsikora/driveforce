@@ -31,10 +31,11 @@ body.single-product {
             .woocommerce-product-gallery {
                 float: none;
                 width: 100%;
-                margin: 0;
+                margin: 0 0 3rem 0;
                 @include media-breakpoint-up(lg) {
                     display: flex;
                     flex-wrap: nowrap;
+                    margin: 0;
                 }
 
                 .flex-viewport {
@@ -44,7 +45,9 @@ body.single-product {
                 }
 
                 .flex-control-thumbs {
+                    display: none;
                     @include media-breakpoint-up(lg) {
+                        display: block;
                         flex: 0 0 7rem;
                         margin-right: 1rem;
                         align-self: flex-end;

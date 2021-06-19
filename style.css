@@ -20142,13 +20142,14 @@ body.single-product #primary .product .onsale {
 body.single-product #primary .product .woocommerce-product-gallery {
   float: none;
   width: 100%;
-  margin: 0;
+  margin: 0 0 3rem 0;
 }
 
 @media (min-width: 992px) {
   body.single-product #primary .product .woocommerce-product-gallery {
     display: flex;
     flex-wrap: nowrap;
+    margin: 0;
   }
 }
 
@@ -20158,8 +20159,13 @@ body.single-product #primary .product .woocommerce-product-gallery {
   }
 }
 
+body.single-product #primary .product .woocommerce-product-gallery .flex-control-thumbs {
+  display: none;
+}
+
 @media (min-width: 992px) {
   body.single-product #primary .product .woocommerce-product-gallery .flex-control-thumbs {
+    display: block;
     flex: 0 0 7rem;
     margin-right: 1rem;
     align-self: flex-end;
