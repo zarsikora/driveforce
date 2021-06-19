@@ -19216,13 +19216,6 @@ body.woocommerce-account .woocommerce-MyAccount-content form .password-input {
   flex: 0 0 100%;
 }
 
-body.woocommerce-account .woocommerce-MyAccount-content form button[type=submit] {
-  background: #dc3545;
-  padding: 1.8rem 6rem;
-  border-radius: .4rem;
-  font-size: 1.4rem;
-}
-
 body.woocommerce-account .select2-container--default .select2-search--dropdown .select2-search__field {
   padding: 1.5rem 2rem;
 }
