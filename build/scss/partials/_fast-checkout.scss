@@ -63,6 +63,14 @@ body.fast-checkout-active {
             transform: translateY(0);
         }
 
+        body.fast-checkout-mobile-open & {
+            .arrow {
+                svg.caret {
+                    transform: translate(-50%, -50%) rotate(0);
+                }
+            }
+        }
+
         .arrow {
             width: 20%;
             align-self: stretch;

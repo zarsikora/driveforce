@@ -19653,6 +19653,10 @@ body.fast-checkout-active .fast-checkout .fast-checkout-mobile-bar {
   transform: translateY(0);
 }
 
+body.fast-checkout-mobile-open .fast-checkout .fast-checkout-mobile-bar .arrow svg.caret {
+  transform: translate(-50%, -50%) rotate(0);
+}
+
 .fast-checkout .fast-checkout-mobile-bar .arrow {
   width: 20%;
   align-self: stretch;
