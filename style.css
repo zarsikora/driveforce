@@ -19388,22 +19388,6 @@ body.woocommerce-account .select2-results__option {
   padding: 0 2rem;
 }
 
-.woocommerce-login-register .row div[class*=col] form button[type=submit].woocommerce-form-login__submit,
-.woocommerce-login-register .row div[class*=col] form button[type=submit].woocommerce-form-register__submit {
-  background: #dc3545;
-  color: #fff;
-  border-radius: 4rem;
-  padding: 1.5rem 4rem;
-  width: 100%;
-}
-
-@media (min-width: 1200px) {
-  .woocommerce-login-register .row div[class*=col] form button[type=submit].woocommerce-form-login__submit,
-  .woocommerce-login-register .row div[class*=col] form button[type=submit].woocommerce-form-register__submit {
-    padding: 2.7rem 3.3rem;
-  }
-}
-
 .woocommerce-login-register .row div[class*=col] form span {
   width: 100%;
 }
