@@ -100,7 +100,7 @@ body.cart-drawer-open {
 
 .cart-drawer-product {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: space-between;
     padding: 2rem 0;
 
