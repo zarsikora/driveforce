@@ -18754,6 +18754,26 @@ body.woocommerce-cart #content .woocommerce-cart-form .wcsatt-options label {
   letter-spacing: 0;
 }
 
+body.woocommerce-cart #content .woocommerce-cart-form .quantity {
+  /* Chrome, Safari, Edge, Opera */
+  /* Firefox */
+}
+
+body.woocommerce-cart #content .woocommerce-cart-form .quantity input {
+  color: #081D1A;
+  border-radius: .4rem;
+  border: 0.1rem solid #081D1A;
+}
+
+body.woocommerce-cart #content .woocommerce-cart-form .quantity input::-webkit-outer-spin-button,
+body.woocommerce-cart #content .woocommerce-cart-form .quantity input::-webkit-inner-spin-button {
+  -webkit-appearance: inherit;
+}
+
+body.woocommerce-cart #content .woocommerce-cart-form .quantity input[type=number] {
+  -moz-appearance: inherit;
+}
+
 body.woocommerce-cart #content .cart-collaterals {
   flex: 0 0 100%;
   margin-top: 3rem;
@@ -18797,8 +18817,14 @@ body.woocommerce-cart #content .cart-collaterals .cart_totals table td body.wooc
 }
 
 body.woocommerce-cart #content .cart-collaterals .cart_totals .wc-proceed-to-checkout {
-  width: 60%;
   margin: 0 auto;
+  text-align: center;
+}
+
+body.woocommerce-cart #content table.cart td.actions .input-text {
+  width: 15rem;
+  padding: 1.4rem;
+  margin-right: 1rem;
 }
 
 body.woocommerce-cart #content .button {
