@@ -11937,6 +11937,7 @@ body.mobile-nav-active #header.background-color-green .close {
   position: relative;
   z-index: 3;
   background-color: #081D1A;
+  border-top: 0.1rem solid #447563;
 }
 
 #footer .top {
