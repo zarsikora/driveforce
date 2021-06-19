@@ -26,7 +26,7 @@
         );
     }
     ?>
-    <div>
+    <div class="cart-drawer-inner <?php if($cartItems){ echo 'has-items'; }?>">
         <div class="cart-drawer-header">
             <svg width="28" viewBox="0 0 27.644 22.64">
                 <use href="#cart"></use>
@@ -39,6 +39,12 @@
             </a>
         </div>
         <div class="cart-drawer-scroll">
+
+            <div class="cart-drawer-empty">
+                <p>Your cart is currently empty.</p>
+                <?php echo button(get_bloginfo('url').'/product/df-18', 'Shop DF-18', 'btn thin-btn', '', ''); ?>
+            </div>
+
             <div class="cart-drawer-products">
 
                 <?php foreach($cartItems as $item) { ?>
@@ -79,6 +85,7 @@
 
                 <?php } ?>
             </div>
+
             <div class="cart-drawer-totals">
                 <dl>
                     <dt>Subtotal</dt>
@@ -90,6 +97,7 @@
             </div>
         </div>
     </div>
+
     <div class="cart-drawer-checkout">
         <?php echo button(get_bloginfo('url') . '/checkout', 'Secure Checkout', '', null, ''); ?>
     </div>

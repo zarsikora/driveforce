@@ -17990,9 +17990,23 @@ body.cart-drawer-open .cart-drawer {
   overflow: scroll;
 }
 
+.cart-drawer-empty {
+  padding: 2rem;
+  display: block;
+}
+
+.has-items .cart-drawer-empty {
+  display: none;
+}
+
 .cart-drawer-products {
   padding: 0 2rem;
   background: #14302B;
+  display: none;
+}
+
+.has-items .cart-drawer-products {
+  display: block;
 }
 
 .cart-drawer-product {
@@ -18129,6 +18143,11 @@ body.cart-drawer-open .cart-drawer {
 
 .cart-drawer-totals {
   padding: 4rem 2rem;
+  display: none;
+}
+
+.has-items .cart-drawer-totals {
+  display: block;
 }
 
 .cart-drawer-totals dl {
@@ -18154,8 +18173,12 @@ body.cart-drawer-open .cart-drawer {
   padding: 0 2rem;
   align-self: flex-end;
   background: #14302B;
-  display: flex;
+  display: none;
   align-items: center;
+}
+
+.has-items + .cart-drawer-checkout {
+  display: flex;
 }
 
 .cart-drawer-checkout .btn, .cart-drawer-checkout #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form button, #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form .cart-drawer-checkout button, .cart-drawer-checkout body.woocommerce-cart #content .return-to-shop .button, body.woocommerce-cart #content .return-to-shop .cart-drawer-checkout .button {

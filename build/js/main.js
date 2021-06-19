@@ -202,6 +202,11 @@ function removeFromCart(product, cartItemKey)
             product.remove();
 
             updateCartDrawerTotal(data.data.cartTotals);
+
+            if(data.data.cartTotal == 0)
+            {
+                $('.cart-drawer-inner').removeClass('has-items');
+            }
         },
         error: function(error)
         {
@@ -233,26 +238,6 @@ function updateQuantity(cartItemKey, quantity)
         }
     })
 }
-
-/**
- * Cart Drawer
- */
-
-const cartDrawerButton = $('.open-cart-drawer');
-cartDrawerButton.on('click', function(e)
-{
-    e.preventDefault();
-
-    $('body').addClass('cart-drawer-open');
-});
-
-const closeCartDrawer = $('.close-cart-drawer');
-closeCartDrawer.on('click', function(e)
-{
-    e.preventDefault();
-
-    $('body').removeClass('cart-drawer-open');
-});
 
 
 /**

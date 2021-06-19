@@ -79,9 +79,23 @@ body.cart-drawer-open {
     overflow: scroll;
 }
 
+.cart-drawer-empty {
+    padding: 2rem;
+    display: block;
+
+    .has-items & {
+        display: none;
+    }
+}
+
 .cart-drawer-products {
     padding: 0 2rem;
     background: $mediumGreen;
+    display: none;
+
+    .has-items & {
+        display: block;
+    }
 }
 
 .cart-drawer-product {
@@ -218,6 +232,11 @@ body.cart-drawer-open {
 
 .cart-drawer-totals {
     padding: 4rem 2rem;
+    display: none;
+
+    .has-items & {
+        display: block;
+    }
 
     dl {
         width: 100%;
@@ -243,8 +262,12 @@ body.cart-drawer-open {
     padding: 0 2rem;
     align-self: flex-end;
     background: $mediumGreen;
-    display: flex;
+    display: none;
     align-items: center;
+
+    .has-items + & {
+        display: flex;
+    }
 
     .btn {
         display: block;

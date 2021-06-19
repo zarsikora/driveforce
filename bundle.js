@@ -40759,6 +40759,24 @@ function sharpspringTransaction()
 //add_action( 'woocommerce_thankyou', 'sharpspringTransaction' );
 window.$ = window.jQuery = jQuery;
 
+const cartDrawerButton = $('.open-cart-drawer');
+
+cartDrawerButton.on('click', function(e)
+{
+    e.preventDefault();
+
+    $('body').addClass('cart-drawer-open');
+});
+
+const closeCartDrawer = $('.close-cart-drawer');
+
+closeCartDrawer.on('click', function(e)
+{
+    e.preventDefault();
+
+    $('body').removeClass('cart-drawer-open');
+});
+
 const removeProductButtons = $('.cart-drawer-remove-product');
 
 if(removeProductButtons.length)
@@ -40786,6 +40804,10 @@ if(removeProductButtons.length)
                 updateCartDrawerTotal(cartTotals);
 
                 // If no products, display empty cart message
+                if(cartTotals.total == 0)
+                {
+                    $('.cart-drawer-inner').removeClass('has-items');
+                }
             },
             error: function(error)
             {
@@ -41048,6 +41070,11 @@ function removeFromCart(product, cartItemKey)
             product.remove();
 
             updateCartDrawerTotal(data.data.cartTotals);
+
+            if(data.data.cartTotal == 0)
+            {
+                $('.cart-drawer-inner').removeClass('has-items');
+            }
         },
         error: function(error)
         {
@@ -41079,26 +41106,6 @@ function updateQuantity(cartItemKey, quantity)
         }
     })
 }
-
-/**
- * Cart Drawer
- */
-
-const cartDrawerButton = $('.open-cart-drawer');
-cartDrawerButton.on('click', function(e)
-{
-    e.preventDefault();
-
-    $('body').addClass('cart-drawer-open');
-});
-
-const closeCartDrawer = $('.close-cart-drawer');
-closeCartDrawer.on('click', function(e)
-{
-    e.preventDefault();
-
-    $('body').removeClass('cart-drawer-open');
-});
 
 
 /**
