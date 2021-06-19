@@ -17852,11 +17852,10 @@ body.woocommerce-page .woocommerce-customer-details {
 }
 
 body.woocommerce-page .woocommerce-customer-details address {
-  background: #fff;
   font-size: 1.4rem;
-  padding: 1.5rem 2rem;
+  padding: 0;
   box-shadow: none;
-  border-width: .1rem;
+  border: none;
 }
 
 body.woocommerce-page .woocommerce-customer-details address .woocommerce-customer-details--phone,
@@ -18554,48 +18553,71 @@ body.cart-drawer-open .cart-drawer-overlay {
   color: #dc3545;
 }
 
-.woocommerce .shop_table {
+.woocommerce table.shop_table,
+.woocommerce table.my_account_orders {
   background-color: #fff;
   margin: 0;
   border-radius: .5rem .5rem 0 0;
 }
 
-.woocommerce .shop_table th {
+.woocommerce table.shop_table th, .woocommerce table.shop_table td,
+.woocommerce table.my_account_orders th,
+.woocommerce table.my_account_orders td {
+  color: #081D1A;
+}
+
+@media (min-width: 992px) {
+  .woocommerce table.shop_table th, .woocommerce table.shop_table td,
+  .woocommerce table.my_account_orders th,
+  .woocommerce table.my_account_orders td {
+    padding: 2rem;
+  }
+}
+
+.woocommerce table.shop_table th,
+.woocommerce table.my_account_orders th {
   font-family: "Sharp Sans Extrabold";
   font-size: 1.6rem;
 }
 
-.woocommerce .shop_table td {
+.woocommerce table.shop_table td,
+.woocommerce table.my_account_orders td {
   font-family: "Sharp Sans Medium";
   font-size: 1.4rem;
 }
 
-.woocommerce .shop_table td a {
+.woocommerce table.shop_table td a,
+.woocommerce table.my_account_orders td a {
   color: #081D1A;
   text-decoration: underline;
 }
 
-.woocommerce .shop_table .coupon input#coupon_code {
+.woocommerce table.shop_table .coupon input#coupon_code,
+.woocommerce table.my_account_orders .coupon input#coupon_code {
   width: 100%;
   margin-bottom: 1rem;
 }
 
 @media (min-width: 768px) {
-  .woocommerce .shop_table .coupon input#coupon_code {
+  .woocommerce table.shop_table .coupon input#coupon_code,
+  .woocommerce table.my_account_orders .coupon input#coupon_code {
     width: auto;
     margin-bottom: 0;
   }
 }
 
 @media (max-width: 767.98px) {
-  .woocommerce .shop_table .coupon .button {
+  .woocommerce table.shop_table .coupon .button,
+  .woocommerce table.my_account_orders .coupon .button {
     width: 100% !important;
     float: none !important;
   }
 }
 
-.woocommerce .shop_table .woocommerce-button,
-.woocommerce .shop_table .button {
+.woocommerce table.shop_table .woocommerce-button,
+.woocommerce table.shop_table .button,
+.woocommerce table.my_account_orders .woocommerce-button,
+.woocommerce table.my_account_orders .button {
   height: auto;
   width: auto;
   padding: 1rem 2rem;
@@ -18798,6 +18820,10 @@ body.woocommerce-cart #content .button:hover {
   background-color: #9A1D1D;
 }
 
+body.woocommerce-account {
+  color: #fff;
+}
+
 body.woocommerce-account #content > .woocommerce {
   margin: 9rem auto 0 auto;
   padding: 0 3.6rem;
@@ -18817,13 +18843,19 @@ body.woocommerce-account #content > .woocommerce {
   }
 }
 
+@media (min-width: 1200px) {
+  body.woocommerce-account #content > .woocommerce {
+    margin: 18rem auto 0 auto;
+  }
+}
+
 body.woocommerce-account nav.woocommerce-MyAccount-navigation {
   flex: 0 0 100%;
   float: none;
   width: 100%;
   max-width: none;
   text-align: center;
-  border-bottom: .1rem solid #ccc;
+  border-bottom: 0.1rem solid #447563;
   margin-bottom: 4rem;
 }
 
@@ -18842,14 +18874,14 @@ body.woocommerce-account nav.woocommerce-MyAccount-navigation ul li:last-child {
 }
 
 body.woocommerce-account nav.woocommerce-MyAccount-navigation ul li a {
-  color: #081D1A;
+  color: #fff;
   transition: all ease 300ms;
   font-family: "Sharp Sans Extrabold";
   font-size: 1.8rem;
 }
 
 body.woocommerce-account nav.woocommerce-MyAccount-navigation ul li a:hover {
-  color: #DB4343;
+  color: #dc3545;
   text-decoration: underline;
 }
 
@@ -18862,6 +18894,7 @@ body.woocommerce-account .woocommerce-MyAccount-content {
   flex: 0 0 100%;
   width: 100%;
   margin-bottom: 4rem;
+  color: #fff;
 }
 
 @media (min-width: 992px) {
@@ -18909,6 +18942,7 @@ body.woocommerce-account .woocommerce-MyAccount-content .subscription_details .b
 body.woocommerce-account .woocommerce-MyAccount-content .addresses,
 body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses {
   margin-top: 3rem;
+  color: #fff;
 }
 
 body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1,
@@ -18917,7 +18951,7 @@ body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .
 body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 {
   font-family: "Sharp Sans Medium";
   font-size: 1.6rem;
-  color: #081D1A;
+  color: #fff;
   padding: 0;
   flex: 0 0 100%;
   width: 100%;
@@ -18955,11 +18989,12 @@ body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 header
 body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 header a.edit,
 body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 header a.edit,
 body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 header a.edit {
-  color: #081D1A;
+  color: #fff;
   font-family: "Sharp Sans Extrabold";
   font-size: 1.4rem;
   transition: all ease 300ms;
   float: none;
+  text-decoration: underline;
 }
 
 @media (max-width: 991.98px) {
@@ -18977,7 +19012,7 @@ body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 header
 body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 header a.edit:hover,
 body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 header a.edit:hover,
 body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 header a.edit:hover {
-  color: #DB4343;
+  color: #447563;
 }
 
 body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 address,
@@ -19010,6 +19045,13 @@ body.woocommerce-account .woocommerce-MyAccount-content form label {
   letter-spacing: 0;
 }
 
+body.woocommerce-account .woocommerce-MyAccount-content form p:last-child, body.woocommerce-account .woocommerce-MyAccount-content form .addresses .col-1 address:last-child, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 form address:last-child,
+body.woocommerce-account .woocommerce-MyAccount-content form .addresses .col-2 address:last-child, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 form address:last-child,
+body.woocommerce-account .woocommerce-MyAccount-content form .woocommerce-Addresses .col-1 address:last-child, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 form address:last-child,
+body.woocommerce-account .woocommerce-MyAccount-content form .woocommerce-Addresses .col-2 address:last-child, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 form address:last-child {
+  margin-bottom: 0;
+}
+
 body.woocommerce-account .woocommerce-MyAccount-content form p.form-row, body.woocommerce-account .woocommerce-MyAccount-content form .addresses .col-1 address.form-row, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 form address.form-row,
 body.woocommerce-account .woocommerce-MyAccount-content form .addresses .col-2 address.form-row, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 form address.form-row,
 body.woocommerce-account .woocommerce-MyAccount-content form .woocommerce-Addresses .col-1 address.form-row, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 form address.form-row,
@@ -19025,8 +19067,9 @@ body.woocommerce-account .woocommerce-MyAccount-content form .woocommerce-Addres
 body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 form address.form-row-last {
   width: 100%;
   float: none;
-  margin: 0 0 1rem 0;
+  margin: 0;
   padding: 0;
+  position: relative;
 }
 
 body.woocommerce-account .woocommerce-MyAccount-content form p.form-row:before, body.woocommerce-account .woocommerce-MyAccount-content form .addresses .col-1 address.form-row:before, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 form address.form-row:before,
@@ -19057,6 +19100,71 @@ body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .
   display: none;
 }
 
+body.woocommerce-account .woocommerce-MyAccount-content form p.form-row:before, body.woocommerce-account .woocommerce-MyAccount-content form .addresses .col-1 address.form-row:before, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 form address.form-row:before,
+body.woocommerce-account .woocommerce-MyAccount-content form .addresses .col-2 address.form-row:before, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 form address.form-row:before,
+body.woocommerce-account .woocommerce-MyAccount-content form .woocommerce-Addresses .col-1 address.form-row:before, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 form address.form-row:before,
+body.woocommerce-account .woocommerce-MyAccount-content form .woocommerce-Addresses .col-2 address.form-row:before, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 form address.form-row:before,
+body.woocommerce-account .woocommerce-MyAccount-content form p.form-row-last:before,
+body.woocommerce-account .woocommerce-MyAccount-content form .addresses .col-1 address.form-row-last:before,
+body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 form address.form-row-last:before,
+body.woocommerce-account .woocommerce-MyAccount-content form .addresses .col-2 address.form-row-last:before,
+body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 form address.form-row-last:before,
+body.woocommerce-account .woocommerce-MyAccount-content form .woocommerce-Addresses .col-1 address.form-row-last:before,
+body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 form address.form-row-last:before,
+body.woocommerce-account .woocommerce-MyAccount-content form .woocommerce-Addresses .col-2 address.form-row-last:before,
+body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 form address.form-row-last:before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: calc(100% - 6rem);
+  height: .1rem;
+  background: #ccc;
+  left: 3rem;
+  bottom: 0;
+}
+
+body.woocommerce-account .woocommerce-MyAccount-content form p.form-row:first-child input, body.woocommerce-account .woocommerce-MyAccount-content form .addresses .col-1 address.form-row:first-child input, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 form address.form-row:first-child input, body.woocommerce-account .woocommerce-MyAccount-content form .addresses .col-2 address.form-row:first-child input, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 form address.form-row:first-child input, body.woocommerce-account .woocommerce-MyAccount-content form .woocommerce-Addresses .col-1 address.form-row:first-child input, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 form address.form-row:first-child input, body.woocommerce-account .woocommerce-MyAccount-content form .woocommerce-Addresses .col-2 address.form-row:first-child input, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 form address.form-row:first-child input,
+body.woocommerce-account .woocommerce-MyAccount-content form p.form-row-last:first-child input,
+body.woocommerce-account .woocommerce-MyAccount-content form .addresses .col-1 address.form-row-last:first-child input,
+body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 form address.form-row-last:first-child input,
+body.woocommerce-account .woocommerce-MyAccount-content form .addresses .col-2 address.form-row-last:first-child input,
+body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 form address.form-row-last:first-child input,
+body.woocommerce-account .woocommerce-MyAccount-content form .woocommerce-Addresses .col-1 address.form-row-last:first-child input,
+body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 form address.form-row-last:first-child input,
+body.woocommerce-account .woocommerce-MyAccount-content form .woocommerce-Addresses .col-2 address.form-row-last:first-child input,
+body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 form address.form-row-last:first-child input {
+  border-radius: 1.4rem 1.4rem 0 0;
+}
+
+body.woocommerce-account .woocommerce-MyAccount-content form p.form-row:last-child, body.woocommerce-account .woocommerce-MyAccount-content form .addresses .col-1 address.form-row:last-child, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 form address.form-row:last-child,
+body.woocommerce-account .woocommerce-MyAccount-content form .addresses .col-2 address.form-row:last-child, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 form address.form-row:last-child,
+body.woocommerce-account .woocommerce-MyAccount-content form .woocommerce-Addresses .col-1 address.form-row:last-child, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 form address.form-row:last-child,
+body.woocommerce-account .woocommerce-MyAccount-content form .woocommerce-Addresses .col-2 address.form-row:last-child, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 form address.form-row:last-child,
+body.woocommerce-account .woocommerce-MyAccount-content form p.form-row-last:last-child,
+body.woocommerce-account .woocommerce-MyAccount-content form .addresses .col-1 address.form-row-last:last-child,
+body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 form address.form-row-last:last-child,
+body.woocommerce-account .woocommerce-MyAccount-content form .addresses .col-2 address.form-row-last:last-child,
+body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 form address.form-row-last:last-child,
+body.woocommerce-account .woocommerce-MyAccount-content form .woocommerce-Addresses .col-1 address.form-row-last:last-child,
+body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 form address.form-row-last:last-child,
+body.woocommerce-account .woocommerce-MyAccount-content form .woocommerce-Addresses .col-2 address.form-row-last:last-child,
+body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 form address.form-row-last:last-child {
+  margin-bottom: 3rem;
+}
+
+body.woocommerce-account .woocommerce-MyAccount-content form p.form-row:last-child input, body.woocommerce-account .woocommerce-MyAccount-content form .addresses .col-1 address.form-row:last-child input, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 form address.form-row:last-child input, body.woocommerce-account .woocommerce-MyAccount-content form .addresses .col-2 address.form-row:last-child input, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 form address.form-row:last-child input, body.woocommerce-account .woocommerce-MyAccount-content form .woocommerce-Addresses .col-1 address.form-row:last-child input, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 form address.form-row:last-child input, body.woocommerce-account .woocommerce-MyAccount-content form .woocommerce-Addresses .col-2 address.form-row:last-child input, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 form address.form-row:last-child input,
+body.woocommerce-account .woocommerce-MyAccount-content form p.form-row-last:last-child input,
+body.woocommerce-account .woocommerce-MyAccount-content form .addresses .col-1 address.form-row-last:last-child input,
+body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 form address.form-row-last:last-child input,
+body.woocommerce-account .woocommerce-MyAccount-content form .addresses .col-2 address.form-row-last:last-child input,
+body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 form address.form-row-last:last-child input,
+body.woocommerce-account .woocommerce-MyAccount-content form .woocommerce-Addresses .col-1 address.form-row-last:last-child input,
+body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 form address.form-row-last:last-child input,
+body.woocommerce-account .woocommerce-MyAccount-content form .woocommerce-Addresses .col-2 address.form-row-last:last-child input,
+body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 form address.form-row-last:last-child input {
+  border-radius: 0 0 1.4rem 1.4rem;
+}
+
 body.woocommerce-account .woocommerce-MyAccount-content form .woocommerce-input-wrapper {
   width: 100%;
 }
@@ -19073,6 +19181,12 @@ body.woocommerce-account .woocommerce-MyAccount-content form input {
   padding: 1.5rem 2rem;
 }
 
+@media (min-width: 992px) {
+  body.woocommerce-account .woocommerce-MyAccount-content form input {
+    padding: 2rem 3rem;
+  }
+}
+
 body.woocommerce-account .woocommerce-MyAccount-content form input[type=checkbox] {
   width: auto;
 }
@@ -19084,7 +19198,7 @@ body.woocommerce-account .woocommerce-MyAccount-content form legend {
 body.woocommerce-account .woocommerce-MyAccount-content form .input-note {
   font-size: 1.2rem;
   font-family: "Sharp Sans Medium";
-  color: #081D1A;
+  color: #fff;
 }
 
 body.woocommerce-account .woocommerce-MyAccount-content form .select2-container--default .select2-selection--single {

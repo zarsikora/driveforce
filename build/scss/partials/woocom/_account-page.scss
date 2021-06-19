@@ -1,4 +1,5 @@
 body.woocommerce-account {
+    color: #fff;
 
     #content {
 
@@ -13,6 +14,9 @@ body.woocommerce-account {
             @include media-breakpoint-up(lg) {
                 padding: 0 10vw;
             }
+            @include media-breakpoint-up(xl) {
+                margin: 18rem auto 0 auto;
+            }
         }
     }
 
@@ -22,7 +26,7 @@ body.woocommerce-account {
         width: 100%;
         max-width: none;
         text-align: center;
-        border-bottom: .1rem solid #ccc;
+        border-bottom: .1rem solid $sage;
         margin-bottom: 4rem;
 
         ul {
@@ -38,13 +42,13 @@ body.woocommerce-account {
                 }
 
                 a {
-                    color: $darkBg;
+                    color: #fff;
                     transition: all ease 300ms;
                     font-family: $sharpSansExtraBold;
                     font-size: 1.8rem;
 
                     &:hover {
-                        color: $highlight;
+                        color: $red;
                         text-decoration: underline;
                     }
                 }
@@ -63,6 +67,7 @@ body.woocommerce-account {
         flex: 0 0 100%;
         width: 100%;
         margin-bottom: 4rem;
+        color: #fff;
         @include media-breakpoint-up(lg) {
             margin-bottom: 8rem;
         }
@@ -101,12 +106,13 @@ body.woocommerce-account {
         .addresses,
         .woocommerce-Addresses {
             margin-top: 3rem;
+            color: #fff;
 
             .col-1,
             .col-2 {
                 font-family: $sharpSansMedium;
                 font-size: 1.6rem;
-                color: $darkBg;
+                color: #fff;
                 padding: 0;
                 flex: 0 0 100%;
                 width: 100%;
@@ -127,11 +133,12 @@ body.woocommerce-account {
                     }
 
                     a.edit {
-                        color: $darkBg;
+                        color: #fff;
                         font-family: $sharpSansExtraBold;
                         font-size: 1.4rem;
                         transition: all ease 300ms;
                         float: none;
+                        text-decoration: underline;
                         @include media-breakpoint-down(md){
                             position: absolute;
                             right: 0;
@@ -139,7 +146,7 @@ body.woocommerce-account {
                         }
 
                         &:hover {
-                            color: $highlight;
+                            color: $sage;
                         }
                     }
 
@@ -169,16 +176,46 @@ body.woocommerce-account {
                 letter-spacing: 0;
             }
 
+            p:last-child {
+                margin-bottom: 0;
+            }
+
             p.form-row,
             p.form-row-last {
                 width: 100%;
                 float: none;
-                margin: 0 0 1rem 0;
+                margin: 0;
                 padding: 0;
+                position: relative;
 
                 &:before,
                 &:after {
                     display: none;
+                }
+
+                &:before {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    width: calc(100% - 6rem);
+                    height: .1rem;
+                    background: #ccc;
+                    left: 3rem;
+                    bottom: 0;
+                }
+
+                &:first-child {
+                    input {
+                        border-radius: 1.4rem 1.4rem 0 0;
+                    }
+                }
+
+                &:last-child {
+                    margin-bottom: 3rem;
+
+                    input {
+                        border-radius: 0 0 1.4rem 1.4rem;
+                    }
                 }
             }
 
@@ -196,6 +233,9 @@ body.woocommerce-account {
 
             input {
                 padding: 1.5rem 2rem;
+                @include media-breakpoint-up(lg) {
+                    padding: 2rem 3rem;
+                }
             }
 
             input[type=checkbox] {
@@ -209,7 +249,7 @@ body.woocommerce-account {
             .input-note {
                 font-size: 1.2rem;
                 font-family: $sharpSansMedium;
-                color: $darkBg;
+                color: #fff;
             }
 
             .select2-container--default .select2-selection--single {

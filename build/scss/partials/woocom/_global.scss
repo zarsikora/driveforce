@@ -148,11 +148,10 @@ body.woocommerce-page {
         font-family: $sharpSansMedium;
 
         address {
-            background: #fff;
             font-size: 1.4rem;
-            padding: 1.5rem 2rem;
+            padding: 0;
             box-shadow: none;
-            border-width: .1rem;
+            border: none;
 
             .woocommerce-customer-details--phone,
             .woocommerce-customer-details--email {
