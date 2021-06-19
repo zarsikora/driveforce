@@ -11115,7 +11115,6 @@ span.sage {
   display: inline-block;
   vertical-align: middle;
   position: relative;
-  left: -1rem;
   transition: all ease 200ms;
   pointer-events: none;
 }
@@ -11719,14 +11718,12 @@ body.mobile-nav-active #header.background-color-green .close {
 
 #nav-pane {
   width: 100vw;
-  height: calc(100vh - 7.7rem);
+  height: 100vh;
   background: #081D1A;
   opacity: 1;
   position: absolute;
-  justify-content: flex-start;
   align-items: center;
   z-index: 10;
-  display: flex;
 }
 
 #nav-pane[data-animate="clip-path"] {
@@ -11762,8 +11759,57 @@ body.mobile-nav-active #header.background-color-green .close {
   transform: translateX(100%);
 }
 
+#nav-pane.active {
+  width: 100%;
+  opacity: 1;
+}
+
+#nav-pane.active[data-animate="clip-path"] {
+  -webkit-clip-path: circle(120vh at calc(90% - 20px) calc(5.5vh + 20px));
+          clip-path: circle(120vh at calc(90% - 20px) calc(5.5vh + 20px));
+}
+
+@media (min-width: 768px) {
+  #nav-pane.active[data-animate="clip-path"] {
+    -webkit-clip-path: circle(130vh at calc(90% - 20px) calc(5.5vh + 20px));
+            clip-path: circle(130vh at calc(90% - 20px) calc(5.5vh + 20px));
+  }
+}
+
+@media (min-width: 992px) {
+  #nav-pane.active[data-animate="clip-path"] {
+    -webkit-clip-path: circle(120vw at calc(90% - 20px) calc(5.5vh + 20px));
+            clip-path: circle(120vw at calc(90% - 20px) calc(5.5vh + 20px));
+  }
+}
+
+@media all and (-ms-high-contrast: none) {
+  #nav-pane.active[data-animate="clip-path"] {
+    transform: translateX(0);
+  }
+}
+
+#nav-pane.active[data-animate="slide-in"] {
+  transform: translateX(0);
+}
+
 #nav-pane .inner {
-  margin: 0 auto;
+  margin: 7.7rem auto 0 auto;
+  height: calc(100vh - 7.7rem);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+#nav-pane .inner > div {
+  flex: 0 0 100%;
+  text-align: center;
+  padding: 0 3.6rem;
+}
+
+#nav-pane .inner .btn, #nav-pane .inner #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form button, #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form #nav-pane .inner button, #nav-pane .inner body.woocommerce-cart #content .return-to-shop .button, body.woocommerce-cart #content .return-to-shop #nav-pane .inner .button {
+  width: auto;
 }
 
 #nav-pane .inner .menu {
@@ -11791,29 +11837,11 @@ body.mobile-nav-active #header.background-color-green .close {
   font-size: 2.4rem;
 }
 
-@media (min-width: 1200px) {
-  #nav-pane .inner .menu#nav-pane-mobile-menu {
-    display: none;
-  }
-}
-
 #nav-pane .inner .menu#nav-pane-menu {
-  margin-top: 15rem;
   position: relative;
   z-index: 3;
   text-align: center;
-}
-
-@media (min-width: 992px) {
-  #nav-pane .inner .menu#nav-pane-menu {
-    margin-top: 4rem;
-  }
-}
-
-@media (min-width: 1200px) {
-  #nav-pane .inner .menu#nav-pane-menu {
-    margin-top: 0;
-  }
+  margin: 4rem 0;
 }
 
 #nav-pane .inner .menu#nav-pane-menu li {
@@ -11854,53 +11882,11 @@ body.mobile-nav-active #header.background-color-green .close {
   }
 }
 
-#nav-pane .inner .btn, #nav-pane .inner #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form button, #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form #nav-pane .inner button, #nav-pane .inner body.woocommerce-cart #content .return-to-shop .button, body.woocommerce-cart #content .return-to-shop #nav-pane .inner .button {
-  width: 32rem;
-  margin-top: 20rem;
-}
-
-#nav-pane.active {
-  display: flex;
-  width: 100%;
-  opacity: 1;
-}
-
-#nav-pane.active[data-animate="clip-path"] {
-  -webkit-clip-path: circle(120vh at calc(90% - 20px) calc(5.5vh + 20px));
-          clip-path: circle(120vh at calc(90% - 20px) calc(5.5vh + 20px));
-}
-
-@media (min-width: 768px) {
-  #nav-pane.active[data-animate="clip-path"] {
-    -webkit-clip-path: circle(130vh at calc(90% - 20px) calc(5.5vh + 20px));
-            clip-path: circle(130vh at calc(90% - 20px) calc(5.5vh + 20px));
-  }
-}
-
-@media (min-width: 992px) {
-  #nav-pane.active[data-animate="clip-path"] {
-    -webkit-clip-path: circle(120vw at calc(90% - 20px) calc(5.5vh + 20px));
-            clip-path: circle(120vw at calc(90% - 20px) calc(5.5vh + 20px));
-  }
-}
-
-@media all and (-ms-high-contrast: none) {
-  #nav-pane.active[data-animate="clip-path"] {
-    transform: translateX(0);
-  }
-}
-
-#nav-pane.active[data-animate="slide-in"] {
-  transform: translateX(0);
-}
-
-#nav-pane .copyright {
-  position: absolute;
-  color: #fff;
+#nav-pane .inner .copyright {
   font-size: 1rem;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  color: #fff;
+  text-align: center;
+  margin: 0;
 }
 
 #footer {

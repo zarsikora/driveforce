@@ -119,8 +119,6 @@ body {
     }
 }
 
-//TEXT RULES
-
 // 70/80
 h1.title {
     font-family: $sharpSansExtraBold;
@@ -292,7 +290,6 @@ span {
         display: inline-block;
         vertical-align: middle;
         position: relative;
-        left: -1rem;
         transition: all ease 200ms;
         pointer-events: none;
         @include media-breakpoint-up(md) {

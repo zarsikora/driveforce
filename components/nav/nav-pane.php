@@ -1,27 +1,32 @@
-<div id="nav-pane" data-animate="slide-in"> <!-- data-animate options: slide-in, clip-path -->
+<div id="nav-pane" data-animate="slide-in">
     <div class="inner">
-        <?php
-        $navMenu = wp_get_menu_array('nav-pane-menu');
 
-        if ($navMenu) {
-            echo '<ul id="nav-pane-menu" class="menu">';
-            $menuCounter = 1;
-            foreach ($navMenu as $k => $v) {
-                $classes .= ' menu-item menu-item-' . $v['ID'];
+        <div>
+            <?php echo button(get_bloginfo('url').'/product/df-18', 'Shop DF-18', 'btn thin-btn', '', ''); ?>
 
-                echo '<li id="menu-item=' . $v['ID'] . '" class="' . $classes . '">';
-                echo '<a href="' . $v['url'] . '">';
-                echo $v['title'];
-                echo '</a>';
-                echo '</li>';
+            <?php
+            $navMenu = wp_get_menu_array('nav-pane-menu');
 
-                $menuCounter++;
+            if ($navMenu) {
+                echo '<ul id="nav-pane-menu" class="menu">';
+                $menuCounter = 1;
+                foreach ($navMenu as $k => $v) {
+                    $classes .= ' menu-item menu-item-' . $v['ID'];
+
+                    echo '<li id="menu-item=' . $v['ID'] . '" class="' . $classes . '">';
+                    echo '<a href="' . $v['url'] . '">';
+                    echo $v['title'];
+                    echo '</a>';
+                    echo '</li>';
+
+                    $menuCounter++;
+                }
+                echo '</ul>';
             }
-            echo '</ul>';
-        }
-        ?>
+            ?>
 
-        <?php echo button('#', 'Join the Waitlist', 'pane-waitlist-btn', '#waitList'); ?>
+            <p class="copyright">&copy; DriveForce  <?php echo date('Y'); ?></p>
+        </div>
+
     </div>
-    <p class="copyright">&copy; DriveForce  <?php echo date('Y'); ?></p>
 </div>
