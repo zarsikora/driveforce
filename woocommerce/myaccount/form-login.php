@@ -101,11 +101,17 @@ do_action( 'woocommerce_before_customer_login_form' ); ?>
 
                     <?php endif; ?>
 
-                    <?php do_action( 'woocommerce_register_form' ); ?>
+                    <?php
+                    remove_action( 'woocommerce_register_form', 'wc_registration_privacy_policy_text', 20 );
+                    do_action( 'woocommerce_register_form' ); ?>
 
                     <p class="woocommerce-form-row form-row">
                         <?php wp_nonce_field( 'woocommerce-register', 'woocommerce-register-nonce' ); ?>
                         <button type="submit" class="woocommerce-Button woocommerce-button button woocommerce-form-register__submit" name="register" value="<?php esc_attr_e( 'Create Account', 'woocommerce' ); ?>"><?php esc_html_e( 'Create Account', 'woocommerce' ); ?></button>
+                    </p>
+
+                    <p class="woocommerce-PrivacyPolicy privacy_policy">
+                        <a href="<?php echo get_bloginfo('url') ?>/privacy-policy"><?php esc_html_e( 'Privacy Policy', 'woocommerce' ); ?></a>
                     </p>
 
                     <?php do_action( 'woocommerce_register_form_end' ); ?>

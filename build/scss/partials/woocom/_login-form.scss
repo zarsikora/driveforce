@@ -42,6 +42,7 @@
                     margin: 0;
                     padding: 0;
 
+                    &.woocommerce-PrivacyPolicy,
                     &.woocommerce-LostPassword {
                         margin-top: 2rem;
                         font-size: 1.4rem;
@@ -56,6 +57,17 @@
                             }
                         }
                     }
+
+                    &.woocommerce-PrivacyPolicy {
+                        a {
+                            color: #fff;
+
+                            &:hover {
+                                color: $mint;
+                            }
+                        }
+                    }
+
 
                     &.form-note {
                         font-size: 1.2rem;
