@@ -134,6 +134,10 @@
                     .btn {
                         width: auto;
                         margin-top: 2rem;
+                        @include media-breakpoint-down(md) {
+                            display: block;
+                            text-align: center;
+                        }
                     }
                 }
             }

@@ -16442,6 +16442,13 @@ body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .
   margin-top: 2rem;
 }
 
+@media (max-width: 991.98px) {
+  .endorsement-slider #slider .containers .details-container .details-block .btn, .endorsement-slider #slider .containers .details-container .details-block #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form button, #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form .endorsement-slider #slider .containers .details-container .details-block button, .endorsement-slider #slider .containers .details-container .details-block body.woocommerce-cart #content .return-to-shop .button, body.woocommerce-cart #content .return-to-shop .endorsement-slider #slider .containers .details-container .details-block .button {
+    display: block;
+    text-align: center;
+  }
+}
+
 .endorsement-slider #slider .slider-nav {
   text-align: center;
   position: absolute;
