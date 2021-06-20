@@ -17831,6 +17831,10 @@ body.woocommerce-page .woocommerce form label {
   }
 }
 
+body.woocommerce-page .woocommerce form .show-password-input {
+  display: none;
+}
+
 body.woocommerce-page .woocommerce mark, body.woocommerce-page .woocommerce .mark {
   background: none;
   color: #dc3545;
@@ -17857,6 +17861,15 @@ body.woocommerce-page .woocommerce-customer-details address .woocommerce-custome
   margin: 0;
   font-size: 1.4rem;
   font-family: "Sharp Sans Medium";
+}
+
+body.woocommerce-page .woocommerce-password-strength {
+  display: none !important;
+}
+
+body.woocommerce-page .woocommerce-password-strength.strong {
+  background: none;
+  color: #88E2C1;
 }
 
 .quantity {
@@ -18844,6 +18857,20 @@ body.woocommerce-account {
   color: #fff;
 }
 
+body.woocommerce-account.my-account-login #content .woocommerce {
+  margin-top: 7.7rem;
+}
+
+@media (min-width: 768px) {
+  body.woocommerce-account.my-account-login #content .woocommerce {
+    margin-top: 9.4rem;
+  }
+}
+
+body.woocommerce-account.my-account-login #content .woocommerce .woocommerce-notices-wrapper {
+  display: none;
+}
+
 body.woocommerce-account #content > .woocommerce {
   margin: 9rem auto 0 auto;
   padding: 0 3.6rem;
@@ -19290,6 +19317,10 @@ body.woocommerce-account .select2-results__option {
   }
 }
 
+.woocommerce-login-register .row div[class*=col].login-col {
+  color: #081D1A;
+}
+
 .woocommerce-login-register .row div[class*=col].register-col {
   background: #14302B;
   color: #fff;
@@ -19370,10 +19401,6 @@ body.woocommerce-account .select2-results__option {
   color: #dc3545;
 }
 
-.woocommerce-login-register .row div[class*=col] form label.woocommerce-form__label-for-checkbox {
-  margin: 2rem 0;
-}
-
 .woocommerce-login-register .row div[class*=col] form label.woocommerce-form__label-for-checkbox input {
   margin-right: 1rem;
 }
@@ -19388,8 +19415,21 @@ body.woocommerce-account .select2-results__option {
   padding: 0 2rem;
 }
 
+.woocommerce-login-register .row div[class*=col] form p.form-row:first-child input, .woocommerce-login-register .row div[class*=col] form body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 address.form-row:first-child input, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 .woocommerce-login-register .row div[class*=col] form address.form-row:first-child input, .woocommerce-login-register .row div[class*=col] form body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 address.form-row:first-child input, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 .woocommerce-login-register .row div[class*=col] form address.form-row:first-child input, .woocommerce-login-register .row div[class*=col] form body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 address.form-row:first-child input, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 .woocommerce-login-register .row div[class*=col] form address.form-row:first-child input, .woocommerce-login-register .row div[class*=col] form body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 address.form-row:first-child input, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 .woocommerce-login-register .row div[class*=col] form address.form-row:first-child input {
+  border-radius: 1.4rem 1.4rem 0 0;
+}
+
+.woocommerce-login-register .row div[class*=col] form p.form-row.bottom-radius input, .woocommerce-login-register .row div[class*=col] form body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 address.form-row.bottom-radius input, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 .woocommerce-login-register .row div[class*=col] form address.form-row.bottom-radius input, .woocommerce-login-register .row div[class*=col] form body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 address.form-row.bottom-radius input, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 .woocommerce-login-register .row div[class*=col] form address.form-row.bottom-radius input, .woocommerce-login-register .row div[class*=col] form body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 address.form-row.bottom-radius input, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 .woocommerce-login-register .row div[class*=col] form address.form-row.bottom-radius input, .woocommerce-login-register .row div[class*=col] form body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 address.form-row.bottom-radius input, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 .woocommerce-login-register .row div[class*=col] form address.form-row.bottom-radius input {
+  border-radius: 0 0 1.4rem 1.4rem;
+}
+
 .woocommerce-login-register .row div[class*=col] form span {
   width: 100%;
+}
+
+.woocommerce-login-register .row div[class*=col] form button[type=submit] {
+  display: block;
+  flex: 0 0 100%;
 }
 
 .woocommerce-checkout #container {

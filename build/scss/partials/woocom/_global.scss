@@ -1,7 +1,5 @@
 body.woocommerce-page {
 
-    // MESSAGES
-
     .woocommerce-notices-wrapper {
         padding: 0 3.6rem;
         margin-bottom: 3rem;
@@ -126,10 +124,17 @@ body.woocommerce-page {
             }
         }
 
-        form label {
-            font-size: 1.4rem;
-            @include media-breakpoint-up(md){
-                font-size: 1.6rem;
+        form {
+            label {
+                font-size: 1.4rem;
+                @include media-breakpoint-up(md){
+                    font-size: 1.6rem;
+                }
+            }
+
+            // TODO: Get this password toggle working at some point
+            .show-password-input {
+                display: none;
             }
         }
 
@@ -161,14 +166,13 @@ body.woocommerce-page {
             }
         }
     }
-}
 
-//.woocommerce #respond input#submit,
-//.woocommerce a.button, .woocommerce button.button,
-//.woocommerce input.button {
-//    @extend .btn;
-//
-//    &:hover {
-//        background: $hoverTint;
-//    }
-//}
+    .woocommerce-password-strength {
+        display: none !important;
+
+        &.strong {
+            background: none;
+            color: $mint;
+        }
+    }
+}

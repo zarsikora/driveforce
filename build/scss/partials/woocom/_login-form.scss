@@ -17,7 +17,7 @@
             }
 
             &.login-col {
-
+                color: $darkBg;
             }
 
             &.register-col {
@@ -89,8 +89,6 @@
                 }
 
                 label.woocommerce-form__label-for-checkbox {
-                    margin: 2rem 0;
-
                     input {
                         margin-right: 1rem;
                     }
@@ -106,8 +104,25 @@
                     padding: 0 2rem;
                 }
 
+                p.form-row:first-child {
+                    input {
+                        border-radius: 1.4rem 1.4rem 0 0;
+                    }
+                }
+
+                p.form-row.bottom-radius {
+                    input {
+                        border-radius: 0 0 1.4rem 1.4rem;
+                    }
+                }
+
                 span {
                     width: 100%;
+                }
+
+                button[type=submit] {
+                    display: block;
+                    flex: 0 0 100%;
                 }
             }
         }

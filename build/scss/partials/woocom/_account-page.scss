@@ -1,6 +1,20 @@
 body.woocommerce-account {
     color: #fff;
 
+    // Login Page
+    &.my-account-login {
+        #content .woocommerce {
+            margin-top: 7.7rem;
+            @include media-breakpoint-up(md) {
+                margin-top: 9.4rem;
+            }
+
+            .woocommerce-notices-wrapper {
+                display: none;
+            }
+        }
+    }
+
     #content {
 
         & > .woocommerce {

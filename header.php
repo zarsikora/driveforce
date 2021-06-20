@@ -48,9 +48,16 @@
     <?php
     $backgroundColor = get_field('page_background_color');
     $headerColor = get_field('header_background_color');
+    $loginPageClass = '';
+
+    // override background color for login page
+    if(is_page('my-account') && !is_user_logged_in()) {
+        $backgroundColor = 'cream';
+        $loginPageClass = 'my-account-login';
+    }
     ?>
 
-    <body <?php body_class(array('background-'.$backgroundColor)); ?> data-barba="wrapper" data-loadhome="<?php echo is_front_page(); ?>">
+    <body <?php body_class(array('background-'.$backgroundColor, $loginPageClass)); ?> data-barba="wrapper" data-loadhome="<?php echo is_front_page(); ?>">
 
         <?php if($gtmId && $initGtm): ?>
             <!-- Google Tag Manager (noscript) -->
