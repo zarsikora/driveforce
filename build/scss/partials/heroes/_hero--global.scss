@@ -44,6 +44,7 @@
                         h1 {
                             flex: 0 0 100%;
                             order: 1;
+                            margin-bottom: .5em;
                         }
 
                         .image-container {
@@ -59,11 +60,16 @@
                             h4 {
                                 font-size: 2.4rem;
                                 font-family: $sharpSansSemiBold;
+                                margin-bottom: .5em;
                             }
     
                             p {
                                 margin: 0;
                             }
+                        }
+
+                        .logos {
+                            margin: 3rem 0 0 0;
                         }
 
                         .btns-wrapper {
