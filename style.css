@@ -19411,8 +19411,36 @@ body.woocommerce-account .select2-results__option {
   background: #fff;
   border: none;
   width: 100%;
-  height: 6rem;
-  padding: 0 2rem;
+  padding: 1.5rem 2rem;
+}
+
+@media (min-width: 992px) {
+  .woocommerce-login-register .row div[class*=col] form input[type=text],
+  .woocommerce-login-register .row div[class*=col] form input[type=email],
+  .woocommerce-login-register .row div[class*=col] form input[type=password] {
+    padding: 2rem 3rem;
+  }
+}
+
+.woocommerce-login-register .row div[class*=col] form p.form-row.has-bottom-border, .woocommerce-login-register .row div[class*=col] form body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 address.form-row.has-bottom-border, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 .woocommerce-login-register .row div[class*=col] form address.form-row.has-bottom-border,
+.woocommerce-login-register .row div[class*=col] form body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 address.form-row.has-bottom-border, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 .woocommerce-login-register .row div[class*=col] form address.form-row.has-bottom-border,
+.woocommerce-login-register .row div[class*=col] form body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 address.form-row.has-bottom-border, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 .woocommerce-login-register .row div[class*=col] form address.form-row.has-bottom-border,
+.woocommerce-login-register .row div[class*=col] form body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 address.form-row.has-bottom-border, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 .woocommerce-login-register .row div[class*=col] form address.form-row.has-bottom-border {
+  position: relative;
+}
+
+.woocommerce-login-register .row div[class*=col] form p.form-row.has-bottom-border:before, .woocommerce-login-register .row div[class*=col] form body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 address.form-row.has-bottom-border:before, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 .woocommerce-login-register .row div[class*=col] form address.form-row.has-bottom-border:before,
+.woocommerce-login-register .row div[class*=col] form body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 address.form-row.has-bottom-border:before, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 .woocommerce-login-register .row div[class*=col] form address.form-row.has-bottom-border:before,
+.woocommerce-login-register .row div[class*=col] form body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 address.form-row.has-bottom-border:before, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 .woocommerce-login-register .row div[class*=col] form address.form-row.has-bottom-border:before,
+.woocommerce-login-register .row div[class*=col] form body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 address.form-row.has-bottom-border:before, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 .woocommerce-login-register .row div[class*=col] form address.form-row.has-bottom-border:before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: calc(100% - 6rem);
+  height: .1rem;
+  background: #ccc;
+  left: 3rem;
+  bottom: 0;
 }
 
 .woocommerce-login-register .row div[class*=col] form p.form-row:first-child input, .woocommerce-login-register .row div[class*=col] form body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 address.form-row:first-child input, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 .woocommerce-login-register .row div[class*=col] form address.form-row:first-child input, .woocommerce-login-register .row div[class*=col] form body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 address.form-row:first-child input, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 .woocommerce-login-register .row div[class*=col] form address.form-row:first-child input, .woocommerce-login-register .row div[class*=col] form body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 address.form-row:first-child input, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 .woocommerce-login-register .row div[class*=col] form address.form-row:first-child input, .woocommerce-login-register .row div[class*=col] form body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 address.form-row:first-child input, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 .woocommerce-login-register .row div[class*=col] form address.form-row:first-child input {

@@ -32,7 +32,7 @@ do_action( 'woocommerce_before_customer_login_form' ); ?>
 
                 <?php do_action( 'woocommerce_login_form_start' ); ?>
 
-                <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
+                <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide has-bottom-border">
                     <label for="username" class="sr-only"><?php esc_html_e( 'Username or email address', 'woocommerce' ); ?>&nbsp;<span class="required">*</span></label>
                     <input type="text" class="woocommerce-Input woocommerce-Input--text input-text" name="username" id="username" autocomplete="username" value="<?php echo ( ! empty( $_POST['username'] ) ) ? esc_attr( wp_unslash( $_POST['username'] ) ) : ''; ?>" placeholder="Username" /><?php // @codingStandardsIgnoreLine ?>
                 </p>
@@ -68,8 +68,11 @@ do_action( 'woocommerce_before_customer_login_form' ); ?>
 
         <?php if ( 'yes' === get_option( 'woocommerce_enable_myaccount_registration' ) ) : ?>
             <div class="col-lg-6 register-col">
+
                 <h2><?php esc_html_e( 'Create Account', 'woocommerce' ); ?></h2>
+
                 <p>New to DriveForce? Welcome! Create an account below.</p>
+
                 <form method="post" class="woocommerce-form woocommerce-form-register register" <?php do_action( 'woocommerce_register_form_tag' ); ?> >
 
                     <?php do_action( 'woocommerce_register_form_start' ); ?>
@@ -83,7 +86,7 @@ do_action( 'woocommerce_before_customer_login_form' ); ?>
 
                     <?php endif; ?>
 
-                    <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
+                    <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide has-bottom-border">
                         <label class="sr-only" for="reg_email"><?php esc_html_e( 'Email address', 'woocommerce' ); ?>&nbsp;<span class="required">*</span></label>
                         <input type="email" class="woocommerce-Input woocommerce-Input--text input-text" name="email" id="reg_email" autocomplete="email" value="<?php echo ( ! empty( $_POST['email'] ) ) ? esc_attr( wp_unslash( $_POST['email'] ) ) : ''; ?>" placeholder="Email" /><?php // @codingStandardsIgnoreLine ?>
                     </p>
