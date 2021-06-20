@@ -429,62 +429,6 @@ table.variations {
     }
 }
 
-.ingredients-list-accordion {
-    color: #fff;
-    padding: 0 3.6rem;
-    margin: 7rem 0;
-    @include media-breakpoint-up(xl) {
-        padding: 0 16.666vw;
-        margin: 10vw 0;
-    }
-
-    .accordion-item {
-        border-bottom: .1rem solid #447563;
-        padding: 3rem 0;
-        @include media-breakpoint-up(xl) {
-            padding: 4rem 0;
-        }
-
-        &:first-child {
-            border-top: .1rem solid #447563;
-        }
-    }
-
-    h2.accordion-header {
-        margin-bottom: 0;
-
-        button {
-            background: none;
-            border: none;
-            color: #fff;
-            padding: 0;
-            margin: 0;
-            transition: color ease 300ms;
-        }
-
-        &:hover button {
-            color: $mint;
-        }
-    }
-
-    .accordion-body {
-        padding-top: 3rem;
-        @include media-breakpoint-up(lg) {
-            width: 75%;
-        }
-
-        p {
-            &:first-child {
-                margin-top: 0;
-
-            }
-            &:last-child {
-                margin-bottom: 0;
-            }
-        }
-    }
-}
-
 .quote-module {
     padding: 0 3.6rem;
     margin: 7rem auto;
