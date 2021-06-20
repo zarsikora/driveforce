@@ -11936,7 +11936,7 @@ body.mobile-nav-active #header.background-color-green .close {
 
 #footer .top {
   background-color: #14302B;
-  color: #F9F1E7;
+  color: #fff;
 }
 
 #footer .top ul.submenu {
@@ -11977,7 +11977,7 @@ body.mobile-nav-active #header.background-color-green .close {
 }
 
 #footer .top ul.submenu li a {
-  color: #F9F1E7;
+  color: #fff;
 }
 
 #footer .top .inner {
@@ -12198,7 +12198,7 @@ body.mobile-nav-active #header.background-color-green .close {
 
 #footer .top .inner .lower-nav .copyright {
   font-family: "Sharp Sans Medium";
-  color: #F9F1E7;
+  color: #fff;
   font-size: 1.2rem;
   margin: 3rem auto 0 auto;
   text-align: center;
@@ -12212,7 +12212,7 @@ body.mobile-nav-active #header.background-color-green .close {
 }
 
 #footer .top .inner .lower-nav .copyright a {
-  color: #F9F1E7;
+  color: #fff;
   text-decoration: underline;
 }
 

@@ -6,7 +6,7 @@
 
         .top {
             background-color: #14302B;
-            color: $lightText;
+            color: #fff;
 
             ul.submenu {
                 list-style: none;
@@ -38,7 +38,7 @@
                     }
 
                     a {
-                        color: $lightText;
+                        color: #fff;
                     }
                 }
             }
@@ -215,7 +215,7 @@
 
                     .copyright {
                         font-family: $sharpSansMedium;
-                        color: $lightText;
+                        color: #fff;
                         font-size: 1.2rem;
                         margin: 3rem auto 0 auto;
                         text-align: center;
@@ -225,7 +225,7 @@
                         }
 
                         a {
-                            color: $lightText;
+                            color: #fff;
                             text-decoration: underline;
 
                             &:hover {
