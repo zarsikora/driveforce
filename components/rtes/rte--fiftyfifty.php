@@ -49,7 +49,7 @@
                                 <?php echo imageTag($image, '', '41.6%, (min-width: 992px) 33.3%', '', false); ?>
                             </div>
 
-                            <div class="text-container col-md-6 col-lg-6">
+                            <div class="text-container col-md-6 col-lg-5 offset-lg-1">
                                 <div class="text-inner" data-animation-effect="moduleFadeIn" data-animation-trigger="breakpoint">
                                     <?php if($header): ?>
                                         <h3><?php echo $header ?></h3>
