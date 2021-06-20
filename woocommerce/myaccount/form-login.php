@@ -25,8 +25,10 @@ do_action( 'woocommerce_before_customer_login_form' ); ?>
     <div class="row">
 
         <div class="col-lg-6 login-col <?php if('yes' !== get_option('woocommerce_enable_myaccount_registration')){ echo 'offset-lg-3'; }?>">
+
             <h2><?php esc_html_e( 'Login', 'woocommerce' ); ?></h2>
-            <p>If you’re a returning customer, login with your account details below.</p>
+
+            <p>For existing customers</p>
 
             <form class="woocommerce-form woocommerce-form-login login" method="post">
 
@@ -71,7 +73,7 @@ do_action( 'woocommerce_before_customer_login_form' ); ?>
 
                 <h2><?php esc_html_e( 'Create Account', 'woocommerce' ); ?></h2>
 
-                <p>New to DriveForce? Welcome! Create an account below.</p>
+                <p>For new users & account activation</p>
 
                 <form method="post" class="woocommerce-form woocommerce-form-register register" <?php do_action( 'woocommerce_register_form_tag' ); ?> >
 

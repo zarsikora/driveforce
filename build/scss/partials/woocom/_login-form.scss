@@ -1,7 +1,9 @@
 .woocommerce-login-register {
     margin: 0 -3.6rem;
+    width: calc(100% + 7.2rem);
     @include media-breakpoint-up(lg) {
         margin: 0 -10vw;
+        width: calc(100% + 20vw);
     }
 
     .row {
