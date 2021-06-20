@@ -9,7 +9,7 @@
     p {
         margin: 0;
         text-align: center;
-        color: $lightText;
+        color: #fff;
         font-size: 1.4rem;
         letter-spacing: .21rem;
 
@@ -20,7 +20,7 @@
 
     a {
         text-decoration: underline;
-        color: $lightText;
+        color: #fff;
         transition: all ease 300ms;
         &:hover {
             color: $highlight;

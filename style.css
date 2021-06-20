@@ -11335,7 +11335,7 @@ button:focus {
 #promo-banner body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 address, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 #promo-banner address {
   margin: 0;
   text-align: center;
-  color: #F9F1E7;
+  color: #fff;
   font-size: 1.4rem;
   letter-spacing: .21rem;
 }
@@ -11351,7 +11351,7 @@ button:focus {
 
 #promo-banner a {
   text-decoration: underline;
-  color: #F9F1E7;
+  color: #fff;
   transition: all ease 300ms;
 }
 
@@ -13914,14 +13914,14 @@ a.browse-all {
 }
 
 .rte .text-container.dark-bg h2 {
-  color: #F9F1E7;
+  color: #fff;
 }
 
 .rte .text-container.dark-bg p, .rte .text-container.dark-bg body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 address, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 .rte .text-container.dark-bg address,
 .rte .text-container.dark-bg body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 address, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 .rte .text-container.dark-bg address,
 .rte .text-container.dark-bg body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 address, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 .rte .text-container.dark-bg address,
 .rte .text-container.dark-bg body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 address, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 .rte .text-container.dark-bg address {
-  color: #F9F1E7;
+  color: #fff;
 }
 
 .rte .text-container h2 {
@@ -16243,7 +16243,7 @@ body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .
 }
 
 #form-success-pane .inner {
-  color: #F9F1E7;
+  color: #fff;
   text-align: center;
   max-width: 80.417vw;
   z-index: 2;
@@ -16274,7 +16274,7 @@ body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .
 }
 
 .endorsement-slider h2 {
-  color: #F9F1E7;
+  color: #fff;
   text-align: center;
 }
 
@@ -16654,7 +16654,7 @@ body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .
 }
 
 .cta-module.module-wrapper .module-padded h2 {
-  color: #F9F1E7;
+  color: #fff;
   margin: 8.6rem 0 4rem;
   text-align: center;
   font-size: 4rem;

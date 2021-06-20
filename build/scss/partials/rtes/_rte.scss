@@ -10,11 +10,11 @@
 
         &.dark-bg {
             h2 {
-                color: $lightText;
+                color: #fff;
             }
 
             p {
-                color: $lightText;
+                color: #fff;
             }
         }
 
@@ -172,7 +172,6 @@
             }
         }
     }
-
 
     &.fiftyfifty {
         @include media-breakpoint-up(md) {
