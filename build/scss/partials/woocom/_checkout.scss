@@ -211,11 +211,6 @@
                     }
                 }
 
-                #order_review_heading {
-                    display: none;
-                    margin-top: 5rem;
-                }
-
                 #order_review {
                     flex: 0 0 100%;
                     @include media-breakpoint-up(lg) {
@@ -239,6 +234,11 @@
                         }
                     }
                 }
+            }
+
+            .order-review-header {
+                font-size: 2.4rem;
+                letter-spacing: 0;
             }
 
             #payment {

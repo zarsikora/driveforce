@@ -19794,11 +19794,6 @@ body.woocommerce-account .select2-results__option {
   width: 100%;
 }
 
-.woocommerce-checkout #container .woocommerce form.checkout #order_review_heading {
-  display: none;
-  margin-top: 5rem;
-}
-
 .woocommerce-checkout #container .woocommerce form.checkout #order_review {
   flex: 0 0 100%;
 }
@@ -19827,6 +19822,11 @@ body.woocommerce-account .select2-results__option {
 .woocommerce-checkout #container .woocommerce form.checkout #order_review table td {
   font-family: "Sharp Sans Medium";
   font-size: 1.4rem;
+}
+
+.woocommerce-checkout #container .woocommerce .order-review-header {
+  font-size: 2.4rem;
+  letter-spacing: 0;
 }
 
 .woocommerce-checkout #container .woocommerce #payment {
