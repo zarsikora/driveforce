@@ -19989,11 +19989,19 @@ body.fast-checkout-mobile-open .fast-checkout .fast-checkout-mobile-bar .arrow s
 }
 
 .fast-checkout .fast-checkout-mobile-bar .arrow {
-  width: 20%;
+  width: 15%;
+  flex: 0 0 15%;
   align-self: stretch;
   border-right: .1rem solid #447563;
   position: relative;
   cursor: pointer;
+}
+
+@media (min-width: 992px) {
+  .fast-checkout .fast-checkout-mobile-bar .arrow {
+    width: 20%;
+    flex: 0 0 20%;
+  }
 }
 
 .fast-checkout .fast-checkout-mobile-bar .arrow svg.caret {
@@ -20005,7 +20013,7 @@ body.fast-checkout-mobile-open .fast-checkout .fast-checkout-mobile-bar .arrow s
 }
 
 .fast-checkout .fast-checkout-mobile-bar .purchase {
-  flex: 1 0 auto;
+  flex: auto;
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
@@ -20014,9 +20022,16 @@ body.fast-checkout-mobile-open .fast-checkout .fast-checkout-mobile-bar .arrow s
 }
 
 .fast-checkout .fast-checkout-mobile-bar .purchase .product {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   font-family: "Sharp Sans Bold";
   color: #88E2C1;
+  padding-right: 1rem;
+}
+
+@media (min-width: 992px) {
+  .fast-checkout .fast-checkout-mobile-bar .purchase .product {
+    font-size: 1.4rem;
+  }
 }
 
 .fast-checkout .fast-checkout-mobile-bar .purchase .btn, .fast-checkout .fast-checkout-mobile-bar .purchase #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form button, #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form .fast-checkout .fast-checkout-mobile-bar .purchase button, .fast-checkout .fast-checkout-mobile-bar .purchase body.woocommerce-cart #content .return-to-shop .button, body.woocommerce-cart #content .return-to-shop .fast-checkout .fast-checkout-mobile-bar .purchase .button {
@@ -20166,6 +20181,10 @@ body.fast-checkout-mobile-open .fast-checkout .fast-checkout-build-order {
   }
 }
 
+.fast-checkout div.fast-checkout-variant-select .mobile {
+  width: 100%;
+}
+
 @media (min-width: 1200px) {
   .fast-checkout div.fast-checkout-variant-select .mobile {
     display: none;
@@ -20177,6 +20196,7 @@ body.fast-checkout-mobile-open .fast-checkout .fast-checkout-build-order {
   border-radius: .4rem;
   margin: 0 auto 2rem auto;
   width: auto;
+  padding: 2.7rem;
   display: block;
   text-align: center;
 }

@@ -37,9 +37,9 @@ $variantIDs = array(640, 641, 642); ?>
                 <p class="build-order-header">Build Your Order</p>
 
                 <div class="mobile">
-                    <?php echo button('', 'DF-18: PRO 30 PACK', 'selected', null, 'data-variant-id="'. $variantIDs[0] .'"'); ?>
-                    <?php echo button('', 'DF-18: amateur 20 pack', '', null, 'data-variant-id="'. $variantIDs[1] .'"'); ?>
-                    <?php echo button('', 'DF-18: WEEKEND WARRIOR 10 PACK', '', null, 'data-variant-id="'. $variantIDs[2] .'"'); ?>
+                    <?php echo button('', 'DF-18 PRO 30 PACK', 'selected', null, 'data-variant-id="'. $variantIDs[0] .'"'); ?>
+                    <?php echo button('', 'DF-18 AMATEUR 20 PACK', '', null, 'data-variant-id="'. $variantIDs[1] .'"'); ?>
+                    <?php echo button('', 'DF-18 WEEKEND WARRIOR 10 PACK', '', null, 'data-variant-id="'. $variantIDs[2] .'"'); ?>
                 </div>
 
                 <div class="desktop">

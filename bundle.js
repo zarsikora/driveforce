@@ -40351,11 +40351,8 @@ window.Splide = complete_Splide;
 window.$ = window.jQuery = jQuery;
 
 const environment = localized_vars['environment'];
-
 const variantIDs = [640, 641, 642];
-
 const fastCheckout = $('.fast-checkout');
-// const fastCheckoutSelect = $('select[name="fast-checkout-variant"]');
 const fastCheckoutSelect = $('.fast-checkout-variant-select .selected-option');
 const fastCheckoutSelectOptions = $('.fast-checkout-variant-select .dropdown a');
 const fastCheckoutSubmit = $('.fast-checkout-submit');
@@ -40366,14 +40363,10 @@ const fastCheckoutMobileButtons = $('.fast-checkout-variant-select .mobile .btn'
 
 let selectDropdownOpen = false;
 
-console.log(fastCheckoutSelect);
-
 if(fastCheckoutSelect)
 {
     let option1 = $('.fast-checkout-purchase-option.option1');
     let option2 = $('.fast-checkout-purchase-option.option2');
-
-    console.log(option2);
 
     function updateSelectedOption(variantID)
     {
@@ -40387,8 +40380,6 @@ if(fastCheckoutSelect)
 
     function updatePurchaseTypes(data)
     {
-        console.log(data);
-
         const discount = data.scheme[0].subscription_discount;
         const price = data.variation.display_price;
         const subscriptionPrice = price - ((discount / 100) * price);
@@ -40402,28 +40393,34 @@ if(fastCheckoutSelect)
     {
         const prodID = 581; // Should this be hardcoded? For now with one product it should be fine
 
-        // Get product object
-        $.ajax({
-            url: localized_vars.ajaxurl,
-            method: 'post',
-            dataType: 'json',
-            data: {
-                action: 'df_get_product_object',
-                prodID: prodID,
-                variationID: variantID
-            },
-            success: function(data)
-            {
-                console.log(data);
-
-                updatePurchaseTypes(data);
-                updateSelectedOption(data.variation.variation_id);
-            },
-            error: function(error)
-            {
-                console.log(error);
-            }
-        });
+        try {
+            // Get product object
+            return $.ajax({
+                url: localized_vars.ajaxurl,
+                method: 'post',
+                dataType: 'json',
+                async: false,
+                data: {
+                    action: 'df_get_product_object',
+                    prodID: prodID,
+                    variationID: variantID
+                },
+                success: function(data)
+                {
+                    // if(!fireUpdates) return;
+                    //
+                    // updatePurchaseTypes(data);
+                    // updateSelectedOption(data.variation.variation_id);
+                },
+                error: function(err)
+                {
+                    console.log(err);
+                }
+            });
+        }
+        catch(err) {
+            console.log(err);
+        }
     }
 
     $('body').on('mousemove', function(e)
@@ -40471,7 +40468,15 @@ if(fastCheckoutSelect)
         fastCheckoutSelect.attr('data-variant-id', $(this).attr('data-variant-id'));
 
         // Get variant object
-        getProductObject($(this).attr('data-variant-id'));
+        let prodData = getProductObject($(this).attr('data-variant-id'));
+
+        prodData.always(function(data) {
+            let price = data.variation.display_price;
+            $('.fast-checkout-purchase-option.option2 .regular-price').text('$'+price);
+
+            updatePurchaseTypes(data);
+            updateSelectedOption(data.variation.variation_id);
+        });
     });
 
     fastCheckoutMobileButtons.on('click', function(e)
@@ -40479,12 +40484,24 @@ if(fastCheckoutSelect)
         e.preventDefault();
 
         fastCheckoutMobileButtons.removeClass('selected');
+
         $(this).addClass('selected');
 
         // Update selected variant id
         fastCheckoutSelect.attr('data-variant-id', $(this).attr('data-variant-id'));
 
-        getProductObject($(this).attr('data-variant-id'));
+        // Updated selected name
+        let name = $(this).text();
+        $('.fast-checkout-mobile-bar .purchase .product').text(name);
+
+        // Update subtotal
+        let prodData = getProductObject($(this).attr('data-variant-id'));
+
+        prodData.always(function(data)
+        {
+            let price = data.variation.display_price;
+            $('.fast-checkout-purchase-option.option2 .regular-price').text('$'+price);
+        });
     });
 
     // Purchase type change handler
