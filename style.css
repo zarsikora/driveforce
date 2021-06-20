@@ -16902,6 +16902,7 @@ body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .
 .ingredients-grid-module svg {
   fill: #477563;
   margin-bottom: 2rem;
+  height: 5rem;
 }
 
 .ingredients-grid-module p.subheader, .ingredients-grid-module body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 address.subheader, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 .ingredients-grid-module address.subheader,
