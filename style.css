@@ -19582,6 +19582,7 @@ body.woocommerce-account .select2-results__option {
 .woocommerce-checkout #container .woocommerce form.checkout {
   display: flex;
   flex-wrap: wrap;
+  align-items: flex-start;
 }
 
 @media (min-width: 992px) {
