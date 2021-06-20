@@ -53,7 +53,7 @@ if ( post_password_required() ) {
 
                 add_action('woocommerce_single_product_summary', function() { ?>
                     <div class="variant-price">
-                        $29.95
+                        $109.99
                     </div>
                 <?php });
 
