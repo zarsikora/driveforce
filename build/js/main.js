@@ -5,10 +5,10 @@ window.$ = window.jQuery = jQuery;
 let splitting = new Splitting();
 
 //Init Simplebar
-if($('#contact.form-module').length)
-{
-    new SimpleBar(document.getElementById('contact'), { autoHide: false });
-}
+// if($('#contact.form-module').length)
+// {
+//     new SimpleBar(document.getElementById('contact'), { autoHide: false });
+// }
 
 //Run mobile check and if on mobile, add mobile class to HTML tag.
 let mounted = false;

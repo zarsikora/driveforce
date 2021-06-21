@@ -39,19 +39,20 @@
     }
 }
 
-//CONTACT MODULE 
+
 #contact {
-    margin-top: 7rem;
+    margin-top: 7.7rem;
     overflow-x: hidden;
     @include media-breakpoint-up(lg) {
-        height: calc(100vh - 9.4rem - 4.8rem);
+        height: calc(100vh - 9.4rem);
+        margin-top: 9.4rem;
     }
 
     .image {
         display: none;
         position: relative;
         overflow: hidden;
-
+        pointer-events: none;
         @include media-breakpoint-up(lg){
             display: block;
             margin-top: -9.4rem;
@@ -67,9 +68,14 @@
         }
     }
 
-    .col-lg-6.copy {
-        @include media-breakpoint-up(lg){
-            padding-top: 9rem;
+    .copy {
+        a {
+            color: $darkBg;
+            text-decoration: underline;
+
+            &:hover {
+                color: $red;
+            }
         }
     }
 }
