@@ -14,7 +14,7 @@
         </div>
         <button disabled class="btn thin-btn" type="submit">
             <div class="btn-hover-maks"></div>
-            <span>Add Me to the Waitlist</span>
+            <span>Sign Up</span>
         </button>
         <img class="form-loading" src="http://staging.driveforce.golf/wp-content/uploads/2021/01/loading-gif.gif" alt="loading" />
         <div class="form-message"></div>
