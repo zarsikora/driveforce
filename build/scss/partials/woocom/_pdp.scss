@@ -38,6 +38,11 @@ body.single-product {
                     margin: 0;
                 }
 
+                .woocommerce-product-gallery__image {
+                    img {
+                    }
+                }
+
                 .flex-viewport {
                     @include media-breakpoint-up(lg) {
                         order: 2;
