@@ -86,16 +86,16 @@ if(variantSelect.length)
         // TODO: Update this to dynamically pull name and price
 
         switch($(e.target).val()) {
-            case 'PRO 30 Pack':
-                variantName = 'PRO 30 Pack';
+            case 'Pro Pack (30 Stick Packs)':
+                variantName = 'Pro Pack (30 Stick Packs)';
                 variantPrice = '$109.99';
                 break;
-            case 'AM 20 Pack':
-                variantName = 'Amateur 20 Pack';
+            case 'Scratch Pack (20 Stick Packs)':
+                variantName = 'Scratch Pack (20 Stick Packs)';
                 variantPrice = '$74.99';
                 break;
-            case 'WW 10 Pack':
-                variantName = 'Weekend Warrior 10 Pack';
+            case 'Weekend Pack (10 Stick Packs)':
+                variantName = 'Weekend Pack (10 Stick Packs)';
                 variantPrice = '$39.99';
                 break;
             default:
