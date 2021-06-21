@@ -13080,26 +13080,25 @@ body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .
   display: flex;
   align-items: center;
   margin-bottom: 0;
-  padding: 6rem 3rem 3rem;
+  padding: 5rem 3.6rem;
   text-align: left;
 }
 
-@media (min-width: 500px) {
-  .hero.secondary .inner .row .text-container {
-    padding: 10rem 3rem 5rem;
-  }
-}
-
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .hero.secondary .inner .row .text-container {
     padding: 6rem;
   }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   .hero.secondary .inner .row .text-container {
-    padding: 6rem 1.5rem;
-    padding-left: calc(10% + 15px);
+    padding: 6rem 5vw;
+  }
+}
+
+@media (min-width: 1920px) {
+  .hero.secondary .inner .row .text-container {
+    padding: 6rem 9.6rem;
   }
 }
 
@@ -14012,10 +14011,6 @@ body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .
   letter-spacing: 1.6px;
 }
 
-.rte .text-container .copy .btn:parent, .article-single .post-content .inner .copy ul .rte .text-container li .btn:parent, .article-single .post-content .inner .copy ol .rte .text-container li .btn:parent, .rte .text-container .copy #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form button:parent, #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form .rte .text-container .copy button:parent, .article-single .post-content .inner .copy ul .rte .text-container li #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form button:parent, #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form .article-single .post-content .inner .copy ul .rte .text-container li button:parent, .article-single .post-content .inner .copy ol .rte .text-container li #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form button:parent, #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form .article-single .post-content .inner .copy ol .rte .text-container li button:parent, .rte .text-container .copy body.woocommerce-cart #content .return-to-shop .button:parent, body.woocommerce-cart #content .return-to-shop .rte .text-container .copy .button:parent, .article-single .post-content .inner .copy ul .rte .text-container li body.woocommerce-cart #content .return-to-shop .button:parent, body.woocommerce-cart #content .return-to-shop .article-single .post-content .inner .copy ul .rte .text-container li .button:parent, .article-single .post-content .inner .copy ol .rte .text-container li body.woocommerce-cart #content .return-to-shop .button:parent, body.woocommerce-cart #content .return-to-shop .article-single .post-content .inner .copy ol .rte .text-container li .button:parent {
-  opacity: 1;
-}
-
 .rte svg.rte-arrow {
   width: 2.2rem;
   display: block;
@@ -14365,6 +14360,75 @@ body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .
   .rte.fiftyfifty.img-right .row .text-container {
     order: 1;
   }
+}
+
+.rte.full-width.fiftyfifty.type-multi {
+  margin: 0;
+}
+
+.rte.full-width.fiftyfifty.type-multi .module-padded {
+  max-width: none;
+  padding: 0;
+}
+
+.rte.full-width.fiftyfifty.type-multi .inner > .row {
+  margin: 0 !important;
+}
+
+.rte.full-width.fiftyfifty.type-multi .text-container {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 6rem 3.6rem;
+  background: #fff;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .rte.full-width.fiftyfifty.type-multi .text-container {
+    width: 50%;
+    flex: 0 0 50%;
+  }
+}
+
+@media (min-width: 992px) {
+  .rte.full-width.fiftyfifty.type-multi .text-container {
+    padding: 0 8vw;
+    height: 80vh;
+  }
+}
+
+@media (min-width: 1920px) {
+  .rte.full-width.fiftyfifty.type-multi .text-container {
+    padding: 0 15.3rem;
+  }
+}
+
+.rte.full-width.fiftyfifty.type-multi div.image-container {
+  padding: 0;
+  align-self: stretch;
+  position: relative;
+  height: 50vh;
+  max-height: 50rem;
+}
+
+@media (min-width: 768px) {
+  .rte.full-width.fiftyfifty.type-multi div.image-container {
+    height: auto;
+    max-height: none;
+  }
+}
+
+.rte.full-width.fiftyfifty.type-multi div.image-container img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .full-width-image {

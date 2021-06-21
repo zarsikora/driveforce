@@ -1,5 +1,6 @@
 <?php
     $type = get_sub_field('type');
+    $fullWidth = get_sub_field('full_width');
     $mainHeader = get_sub_field('main_header');
 
     if($type === 'single' || $type === 'inlaid'){
@@ -21,6 +22,7 @@
 <?php endif; ?>
 
     <div class="rte fiftyfifty module-wrapper
+        <?php if($fullWidth){ echo 'full-width'; }?>
         <?php if($type === 'multi' || $type === 'multi-inlaid') echo 'type-multi '?>
         <?php if($type === 'inlaid' || $type === 'multi-inlaid') echo 'type-inlaid '?>
         <?php if($type === 'multi' || $type === 'multi-inlaid') echo ($imageRight) ? 'first-img-right' : 'first-img-left'?>
@@ -28,7 +30,7 @@
 
         <div class="module-padded">
 
-            <?php if($type === 'multi' || $type === 'multi-inlaid' && $mainHeader): ?>
+            <?php if(($type === 'multi' || $type === 'multi-inlaid') && $mainHeader && !$fullWidth): ?>
                 <h2 data-animation-effect="moduleFadeIn" data-animation-trigger="scroll" class="main-header"><?php echo $mainHeader; ?></h2>
             <?php endif; ?>
 
@@ -61,11 +63,11 @@
                                 </div>
                             </div>
                         </div>
-                        <?php $counter++ ?>
-                    <?php endwhile; ?>
-                </div>
 
-                <?php endif; ?>
+                        <?php $counter++ ?>
+                        <?php endwhile; ?>
+                    <?php endif; ?>
+                </div>
 
             <?php elseif($type === 'single') : ?>
 
