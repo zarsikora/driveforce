@@ -23,6 +23,6 @@ $heading = apply_filters( 'woocommerce_product_description_heading', __( 'Descri
 
 ?>
 
-<p class="product-variant-name">PRO 30 Pack</p>
+<p class="product-variant-name">Pro Pack (30 Stick Packs)</p>
 
 <?php the_content(); ?>
