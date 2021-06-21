@@ -27,7 +27,7 @@ $variantIDs = array(640, 641, 642); ?>
         <div class="row">
 
             <div class="col col-lg-12 header">
-                <svg class="logo" width="100" viewbox='0 0 201.662 35.534'>
+                <svg class="logo" width="100" viewBox="0 0 498.2 84.73">
                     <use href="#header-logo"></use>
                 </svg>
                 <a class="close" href="">Close</a>

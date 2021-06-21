@@ -93,7 +93,7 @@
 
                         <div class="header-logo">
                             <a class="header-link" href="<?php echo home_url(); ?>" aria-label="Return to Home Page">
-                                <svg class="logo" viewbox='0 0 201.662 35.534'>
+                                <svg class="logo" viewBox="0 0 498.2 84.73">
                                     <use href="#header-logo"></use>
                                 </svg>
                             </a>
@@ -131,7 +131,7 @@
 
                         <div class="header-logo">
                             <a class="header-link" href="<?php echo home_url(); ?>" aria-label="Return to Home Page">
-                                <svg class="logo" viewbox='0 0 201.662 35.534'>
+                                <svg class="logo" viewBox="0 0 498.2 84.73">
                                     <use href="#header-logo"></use>
                                 </svg>
                             </a>
