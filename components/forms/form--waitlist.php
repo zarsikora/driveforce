@@ -12,8 +12,8 @@
             <label class="sr-only">Email</label>
             <input class="form-control" type="text" name="email" value="" placeholder="Email" />
         </div>
-        <button disabled class="btn thin-btn" type="submit">
-            <div class="btn-hover-maks"></div>
+        <button disabled class="btn small" type="submit">
+            <div class="btn-hover-mask"></div>
             <span>Sign Up</span>
         </button>
         <img class="form-loading" src="http://staging.driveforce.golf/wp-content/uploads/2021/01/loading-gif.gif" alt="loading" />

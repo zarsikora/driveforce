@@ -12090,6 +12090,10 @@ body.mobile-nav-active #header.background-color-green .close {
   display: inline-block;
 }
 
+#footer .top .inner .newsletter #form-wrapper button span {
+  font-size: 1.4rem;
+}
+
 #footer .top .inner .disclaimer {
   padding: 4rem 0;
   position: relative;
