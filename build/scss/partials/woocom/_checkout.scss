@@ -314,6 +314,21 @@
                         }
                     }
                 }
+
+                .woocommerce-privacy-policy-text {
+                    p {
+                        font-size: 1.4rem;
+
+                        a {
+                            text-decoration: underline;
+                            color: $darkBg;
+
+                            &:hover {
+                                color: $red;
+                            }
+                        }
+                    }
+                }
             }
         }
     }
