@@ -110,7 +110,7 @@ $variantIDs = array(640, 641, 642); ?>
                         </div>
                         <div>
                             <p class="price">
-                                <span class="regular-price">$120</span>
+                                <span class="regular-price">$109.99</span>
                             </p>
                         </div>
                     </div>
