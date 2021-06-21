@@ -22,8 +22,11 @@
     h2.accordion-header {
         margin-bottom: 0;
         text-align: left;
+        position: relative;
 
         button {
+            display: block;
+            width: 100%;
             background: none;
             border: none;
             color: #fff;
@@ -31,10 +34,29 @@
             margin: 0;
             transition: color ease 300ms;
             text-align: left;
+            position: relative;
+
+            &:after {
+                content: '+';
+                position: absolute;
+                right: 0;
+                top: 0;
+                font-size: 4rem;
+                font-family: $sharpSansExtraBold;
+                color: #fff;
+            }
+
+            &[aria-expanded="true"]:after {
+                content: '-';
+            }
         }
 
         &:hover button {
             color: $mint;
+
+            &:after {
+                color: $mint;
+            }
         }
     }
 

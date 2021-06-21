@@ -16866,9 +16866,12 @@ body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .
 .ingredients-list-accordion h2.accordion-header {
   margin-bottom: 0;
   text-align: left;
+  position: relative;
 }
 
 .ingredients-list-accordion h2.accordion-header button {
+  display: block;
+  width: 100%;
   background: none;
   border: none;
   color: #fff;
@@ -16876,9 +16879,28 @@ body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .
   margin: 0;
   transition: color ease 300ms;
   text-align: left;
+  position: relative;
+}
+
+.ingredients-list-accordion h2.accordion-header button:after {
+  content: '+';
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 4rem;
+  font-family: "Sharp Sans Extrabold";
+  color: #fff;
+}
+
+.ingredients-list-accordion h2.accordion-header button[aria-expanded="true"]:after {
+  content: '-';
 }
 
 .ingredients-list-accordion h2.accordion-header:hover button {
+  color: #88E2C1;
+}
+
+.ingredients-list-accordion h2.accordion-header:hover button:after {
   color: #88E2C1;
 }
 
