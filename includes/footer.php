@@ -95,7 +95,7 @@
 
                         <div class="newsletter col-lg-4">
                             <h4>DriveForce Newsletter Signup</h4>
-                            <p>DF-18 is the first nutrition solution created for the players physical and mental needs <span class="sage">on and off the course.</span></p>
+                            <p>DF-18 is the first nutrition solution created for the players physical and mental needs on and off the course.</p>
 
                             <div id="form-wrapper">
                                 <?php include (realpath(dirname(__FILE__)."/../components/forms/form--waitlist.php")); ?>
