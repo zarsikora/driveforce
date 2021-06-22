@@ -1,0 +1,90 @@
+//body.woocommerce-order-received {
+//    background: $mediumGreen;
+//    color: #fff;
+//}
+
+.woocommerce {
+
+    .woocommerce-order {
+
+        p.woocommerce-notice {
+            font-family: $sharpSansBold;
+            @include media-breakpoint-up(lg) {
+                text-align: center;
+                margin-bottom: 5rem;
+            }
+        }
+
+        ul.order_details {
+            margin: 0 0 3rem 0;
+            padding: 0;
+            @include media-breakpoint-up(lg) {
+                text-align: center;
+                margin-bottom: 8rem;
+            }
+
+            li {
+                float: none;
+                display: block;
+                border: none;
+                margin: 0 0 2rem 0;
+                font-size: 1.2rem;
+                @include media-breakpoint-up(md) {
+                    display: inline-block;
+                    margin-bottom: 0;
+
+                    &:not(:last-child) {
+                        padding-right: 2rem;
+                        margin-right: 2rem;
+                        border-right: .1rem solid #ccc;
+                    }
+                }
+                @include media-breakpoint-up(lg) {
+                    font-size: 1.4rem;
+                }
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+
+                strong {
+                    font-size: 1.2rem;
+                    @include media-breakpoint-up(lg) {
+                        font-size: 1.4rem;
+                    }
+                }
+            }
+        }
+
+        .woocommerce-customer-details {
+
+            .woocommerce-columns {
+                @include media-breakpoint-up(lg) {
+                    display: flex;
+                    margin: 0 -2rem;
+                }
+            }
+
+            .col-1, .col-2 {
+                display: block;
+                width: 100%;
+                flex: 0 0 100%;
+                max-width: none;
+                float: none;
+                @include media-breakpoint-up(lg) {
+                    width: 50%;
+                    flex: 0 0 50%;
+                    padding: 0 2rem;
+                }
+
+                h2 {
+                    margin-bottom: .5em;
+                }
+            }
+
+            .col-1 {
+                margin-bottom: 4rem;
+            }
+        }
+    }
+}

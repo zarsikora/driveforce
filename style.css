@@ -21254,3 +21254,103 @@ table.variations .reset_variations {
 .woocommerce #reviews #comments ol.commentlist li .comment-text {
   margin: 0;
 }
+
+.woocommerce .woocommerce-order p.woocommerce-notice, .woocommerce .woocommerce-order body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 address.woocommerce-notice, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 .woocommerce .woocommerce-order address.woocommerce-notice,
+.woocommerce .woocommerce-order body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 address.woocommerce-notice, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 .woocommerce .woocommerce-order address.woocommerce-notice,
+.woocommerce .woocommerce-order body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 address.woocommerce-notice, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 .woocommerce .woocommerce-order address.woocommerce-notice,
+.woocommerce .woocommerce-order body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 address.woocommerce-notice, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 .woocommerce .woocommerce-order address.woocommerce-notice {
+  font-family: "Sharp Sans Bold";
+}
+
+@media (min-width: 992px) {
+  .woocommerce .woocommerce-order p.woocommerce-notice, .woocommerce .woocommerce-order body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 address.woocommerce-notice, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 .woocommerce .woocommerce-order address.woocommerce-notice,
+  .woocommerce .woocommerce-order body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 address.woocommerce-notice, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 .woocommerce .woocommerce-order address.woocommerce-notice,
+  .woocommerce .woocommerce-order body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 address.woocommerce-notice, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 .woocommerce .woocommerce-order address.woocommerce-notice,
+  .woocommerce .woocommerce-order body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 address.woocommerce-notice, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 .woocommerce .woocommerce-order address.woocommerce-notice {
+    text-align: center;
+    margin-bottom: 5rem;
+  }
+}
+
+.woocommerce .woocommerce-order ul.order_details {
+  margin: 0 0 3rem 0;
+  padding: 0;
+}
+
+@media (min-width: 992px) {
+  .woocommerce .woocommerce-order ul.order_details {
+    text-align: center;
+    margin-bottom: 8rem;
+  }
+}
+
+.woocommerce .woocommerce-order ul.order_details li {
+  float: none;
+  display: block;
+  border: none;
+  margin: 0 0 2rem 0;
+  font-size: 1.2rem;
+}
+
+@media (min-width: 768px) {
+  .woocommerce .woocommerce-order ul.order_details li {
+    display: inline-block;
+    margin-bottom: 0;
+  }
+  .woocommerce .woocommerce-order ul.order_details li:not(:last-child) {
+    padding-right: 2rem;
+    margin-right: 2rem;
+    border-right: .1rem solid #ccc;
+  }
+}
+
+@media (min-width: 992px) {
+  .woocommerce .woocommerce-order ul.order_details li {
+    font-size: 1.4rem;
+  }
+}
+
+.woocommerce .woocommerce-order ul.order_details li:last-child {
+  margin-bottom: 0;
+}
+
+.woocommerce .woocommerce-order ul.order_details li strong {
+  font-size: 1.2rem;
+}
+
+@media (min-width: 992px) {
+  .woocommerce .woocommerce-order ul.order_details li strong {
+    font-size: 1.4rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .woocommerce .woocommerce-order .woocommerce-customer-details .woocommerce-columns {
+    display: flex;
+    margin: 0 -2rem;
+  }
+}
+
+.woocommerce .woocommerce-order .woocommerce-customer-details .col-1, .woocommerce .woocommerce-order .woocommerce-customer-details .col-2 {
+  display: block;
+  width: 100%;
+  flex: 0 0 100%;
+  max-width: none;
+  float: none;
+}
+
+@media (min-width: 992px) {
+  .woocommerce .woocommerce-order .woocommerce-customer-details .col-1, .woocommerce .woocommerce-order .woocommerce-customer-details .col-2 {
+    width: 50%;
+    flex: 0 0 50%;
+    padding: 0 2rem;
+  }
+}
+
+.woocommerce .woocommerce-order .woocommerce-customer-details .col-1 h2, .woocommerce .woocommerce-order .woocommerce-customer-details .col-2 h2 {
+  margin-bottom: .5em;
+}
+
+.woocommerce .woocommerce-order .woocommerce-customer-details .col-1 {
+  margin-bottom: 4rem;
+}
