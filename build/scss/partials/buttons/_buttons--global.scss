@@ -3,15 +3,6 @@
     outline: none;
     color: #fff;
 
-    // span {
-    //     font-family: 'Work Sans Bold';
-    // }
-
-    &:disabled,
-    &[disabled] {
-        opacity: .5;
-    }
-
     &.solid-btn {
         font-size: 1.6rem;
         border-radius: .4rem;

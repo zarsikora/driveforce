@@ -11067,6 +11067,8 @@ span.sage {
   color: #fff !important;
   padding: 2.7rem 7.5rem;
   border-radius: 4rem;
+  border: none;
+  box-shadow: none;
   width: auto;
   display: inline-flex;
   align-items: center;
@@ -12325,40 +12327,6 @@ body.mobile-nav-active #header.background-color-green .close {
 
 #footer #menu-footer-menu li a:hover:after {
   width: 100%;
-}
-
-.btn, #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form button, body.woocommerce-cart #content .return-to-shop .button {
-  border: none;
-  outline: none;
-  color: #fff;
-}
-
-.btn:disabled, #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form button:disabled, body.woocommerce-cart #content .return-to-shop .button:disabled, .btn[disabled], #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form button[disabled], body.woocommerce-cart #content .return-to-shop .button[disabled] {
-  opacity: .5;
-}
-
-.btn.solid-btn, #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form button.solid-btn, body.woocommerce-cart #content .return-to-shop .solid-btn.button {
-  font-size: 1.6rem;
-  border-radius: .4rem;
-  padding: 1rem 1.5rem;
-  width: 15rem;
-  text-align: center;
-}
-
-.btn.solid-btn .arrow, #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form button.solid-btn .arrow, body.woocommerce-cart #content .return-to-shop .solid-btn.button .arrow {
-  width: 5rem;
-  height: 5rem;
-  fill: #fff;
-  display: none;
-  transition: width ease 300ms;
-}
-
-.btn.solid-btn:hover .arrow, #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form button.solid-btn:hover .arrow, body.woocommerce-cart #content .return-to-shop .solid-btn.button:hover .arrow {
-  display: inline-block;
-}
-
-a.btn:hover, body.woocommerce-cart #content .return-to-shop a.button:hover {
-  color: #fff;
 }
 
 .hero {
@@ -15390,10 +15358,6 @@ form.sharpspring-waitlist .form-control:active::placeholder, form.sharpspring-wa
 
 form.sharpspring-waitlist button {
   margin-top: 2rem;
-}
-
-form.sharpspring-waitlist button[disabled] {
-  opacity: .5;
 }
 
 form.sharpspring-waitlist .form-loading {
