@@ -41945,9 +41945,7 @@ if(ingredientsDisplay){
         }
     });
 }
-
 // INGREDIENTS LIST DISPLAY CLICK HANDLER - DESKTOP
-
 if(ingredientsDisplay){
     let ingredientListItems = $(".ingredient-list-item");
     let ingredientDescriptions = $(".ingredient-description-item");
