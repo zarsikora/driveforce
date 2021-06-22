@@ -137,7 +137,7 @@ async function sharpspringAJAXRequest(method, fields = null, form)
                 return;
             }
 
-            formMessage.html('<p>You\'ve been added to the waitlist!</p>');
+            formMessage.html('<p>You\'ve been added to our newsletter!</p>');
         },
         error: function(error)
         {
