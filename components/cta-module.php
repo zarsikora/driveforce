@@ -8,7 +8,7 @@
 <div class="module-wrapper dark-bg cta-module">
     <div class="module-padded">
         <svg class="logo" viewBox="0 0 82 82">
-            <use xlink:href="#inlaid-logo"></use>
+            <use xlink:href="#square-logo"></use>
         </svg>
 
         <?php if($header): ?>

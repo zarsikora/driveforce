@@ -11507,7 +11507,7 @@ body.mobile-nav-active #header.background-color-green .close {
   width: 1.5rem;
   height: 1.5rem;
   border-radius: 1.5rem;
-  background: #dc3545;
+  background: #DB4343;
   position: absolute;
   right: 0;
   top: 0;
@@ -12223,7 +12223,7 @@ body.mobile-nav-active #header.background-color-green .close {
 }
 
 #footer .top .inner .lower-nav .copyright a:hover {
-  color: #dc3545;
+  color: #DB4343;
 }
 
 #footer .top .inner .lower-nav .copyright .sm {
@@ -15368,7 +15368,7 @@ form.sharpspring-waitlist .form-loading {
 }
 
 form.sharpspring-waitlist .form-message {
-  color: #dc3545;
+  color: #DB4343;
 }
 
 form.sharpspring-waitlist .form-message p, form.sharpspring-waitlist .form-message body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 address, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 form.sharpspring-waitlist .form-message address,
@@ -16155,7 +16155,7 @@ body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .
 }
 
 #contact .copy a:hover, .article-single .post-content .inner .copy ul #contact li a:hover, .article-single .post-content .inner .copy ol #contact li a:hover {
-  color: #dc3545;
+  color: #DB4343;
 }
 
 #waitList {
@@ -17896,7 +17896,7 @@ body.woocommerce-page .woocommerce-message {
 }
 
 body.woocommerce-page .woocommerce-error {
-  background: #dc3545;
+  background: #DB4343;
   color: #fff;
 }
 
@@ -17924,7 +17924,7 @@ body.woocommerce-page .woocommerce table.shop_table a.edit:hover,
 body.woocommerce-page .woocommerce table.shop_table a.delete:hover,
 body.woocommerce-page .woocommerce table.shop_table a.default:hover,
 body.woocommerce-page .woocommerce table.shop_table a.view:hover {
-  color: #dc3545;
+  color: #DB4343;
 }
 
 body.woocommerce-page .woocommerce .woocommerce .col2-set,
@@ -17975,7 +17975,7 @@ body.woocommerce-page .woocommerce form .show-password-input {
 
 body.woocommerce-page .woocommerce mark, body.woocommerce-page .woocommerce .mark {
   background: none;
-  color: #dc3545;
+  color: #DB4343;
   padding: 0;
 }
 
@@ -18259,7 +18259,7 @@ body.cart-drawer-open .cart-drawer {
 }
 
 .cart-drawer-product .product-total .cart-drawer-remove-product svg:hover {
-  stroke: #dc3545;
+  stroke: #DB4343;
 }
 
 .cart-drawer-product .product-total .product-price {
@@ -18695,7 +18695,7 @@ body.cart-drawer-open .cart-drawer-overlay {
 .woocommerce .woocommerce-orders-table .woocommerce-orders-table__cell-order-number .button:hover,
 .woocommerce .woocommerce-orders-table .woocommerce-orders-table__cell-order-actions a:hover,
 .woocommerce .woocommerce-orders-table .woocommerce-orders-table__cell-order-actions .button:hover {
-  color: #dc3545;
+  color: #DB4343;
 }
 
 .woocommerce table.shop_table,
@@ -18766,7 +18766,7 @@ body.cart-drawer-open .cart-drawer-overlay {
   height: auto;
   width: auto;
   padding: 1rem 2rem;
-  background: #dc3545;
+  background: #DB4343;
   border-radius: 2rem;
   color: #fff;
 }
@@ -19066,12 +19066,12 @@ body.woocommerce-account nav.woocommerce-MyAccount-navigation ul li a {
 }
 
 body.woocommerce-account nav.woocommerce-MyAccount-navigation ul li a:hover {
-  color: #dc3545;
+  color: #DB4343;
   text-decoration: underline;
 }
 
 body.woocommerce-account nav.woocommerce-MyAccount-navigation ul li.is-active a {
-  color: #dc3545;
+  color: #DB4343;
 }
 
 body.woocommerce-account .woocommerce-MyAccount-content {
@@ -19121,7 +19121,7 @@ body.woocommerce-account .woocommerce-MyAccount-content .subscription_details .b
 }
 
 body.woocommerce-account .woocommerce-MyAccount-content .subscription_details .button:hover {
-  color: #dc3545;
+  color: #DB4343;
 }
 
 body.woocommerce-account .woocommerce-MyAccount-content .addresses,
@@ -19509,7 +19509,7 @@ body.woocommerce-account .select2-results__option {
 }
 
 .woocommerce-login-register .row div[class*=col] form p.woocommerce-PrivacyPolicy a:hover, .woocommerce-login-register .row div[class*=col] form body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 address.woocommerce-PrivacyPolicy a:hover, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 .woocommerce-login-register .row div[class*=col] form address.woocommerce-PrivacyPolicy a:hover, .woocommerce-login-register .row div[class*=col] form body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 address.woocommerce-PrivacyPolicy a:hover, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 .woocommerce-login-register .row div[class*=col] form address.woocommerce-PrivacyPolicy a:hover, .woocommerce-login-register .row div[class*=col] form body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 address.woocommerce-PrivacyPolicy a:hover, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 .woocommerce-login-register .row div[class*=col] form address.woocommerce-PrivacyPolicy a:hover, .woocommerce-login-register .row div[class*=col] form body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 address.woocommerce-PrivacyPolicy a:hover, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 .woocommerce-login-register .row div[class*=col] form address.woocommerce-PrivacyPolicy a:hover, .woocommerce-login-register .row div[class*=col] form p.woocommerce-LostPassword a:hover, .woocommerce-login-register .row div[class*=col] form body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 address.woocommerce-LostPassword a:hover, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 .woocommerce-login-register .row div[class*=col] form address.woocommerce-LostPassword a:hover, .woocommerce-login-register .row div[class*=col] form body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 address.woocommerce-LostPassword a:hover, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 .woocommerce-login-register .row div[class*=col] form address.woocommerce-LostPassword a:hover, .woocommerce-login-register .row div[class*=col] form body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 address.woocommerce-LostPassword a:hover, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 .woocommerce-login-register .row div[class*=col] form address.woocommerce-LostPassword a:hover, .woocommerce-login-register .row div[class*=col] form body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 address.woocommerce-LostPassword a:hover, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 .woocommerce-login-register .row div[class*=col] form address.woocommerce-LostPassword a:hover {
-  color: #dc3545;
+  color: #DB4343;
 }
 
 .woocommerce-login-register .row div[class*=col] form p.woocommerce-PrivacyPolicy a, .woocommerce-login-register .row div[class*=col] form body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 address.woocommerce-PrivacyPolicy a, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 .woocommerce-login-register .row div[class*=col] form address.woocommerce-PrivacyPolicy a, .woocommerce-login-register .row div[class*=col] form body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 address.woocommerce-PrivacyPolicy a, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 .woocommerce-login-register .row div[class*=col] form address.woocommerce-PrivacyPolicy a, .woocommerce-login-register .row div[class*=col] form body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 address.woocommerce-PrivacyPolicy a, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 .woocommerce-login-register .row div[class*=col] form address.woocommerce-PrivacyPolicy a, .woocommerce-login-register .row div[class*=col] form body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 address.woocommerce-PrivacyPolicy a, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 .woocommerce-login-register .row div[class*=col] form address.woocommerce-PrivacyPolicy a {
@@ -19538,7 +19538,7 @@ body.woocommerce-account .select2-results__option {
 }
 
 .woocommerce-login-register .row div[class*=col] form .woocommerce-privacy-policy-text a:hover {
-  color: #dc3545;
+  color: #DB4343;
 }
 
 .woocommerce-login-register .row div[class*=col] form label.woocommerce-form__label-for-checkbox input {
@@ -19954,7 +19954,7 @@ body.woocommerce-account .select2-results__option {
 .woocommerce-checkout #container .woocommerce #payment ul.payment_methods .payment_box .sv-wc-payment-gateway-payment-form-manage-payment-methods {
   margin: 1rem 0 2rem 0;
   display: inline-block;
-  background: #dc3545;
+  background: #DB4343;
   color: #fff;
   border-radius: 4rem;
   padding: 1.5rem 2rem;
@@ -19983,7 +19983,7 @@ body.woocommerce-account .select2-results__option {
 }
 
 .woocommerce-checkout #container .woocommerce #payment .woocommerce-privacy-policy-text p a:hover, .woocommerce-checkout #container .woocommerce #payment .woocommerce-privacy-policy-text body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 address a:hover, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 .woocommerce-checkout #container .woocommerce #payment .woocommerce-privacy-policy-text address a:hover, .woocommerce-checkout #container .woocommerce #payment .woocommerce-privacy-policy-text body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 address a:hover, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 .woocommerce-checkout #container .woocommerce #payment .woocommerce-privacy-policy-text address a:hover, .woocommerce-checkout #container .woocommerce #payment .woocommerce-privacy-policy-text body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 address a:hover, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 .woocommerce-checkout #container .woocommerce #payment .woocommerce-privacy-policy-text address a:hover, .woocommerce-checkout #container .woocommerce #payment .woocommerce-privacy-policy-text body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 address a:hover, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 .woocommerce-checkout #container .woocommerce #payment .woocommerce-privacy-policy-text address a:hover {
-  color: #dc3545;
+  color: #DB4343;
 }
 
 body.fast-checkout-active {
@@ -20816,7 +20816,7 @@ body.single-product #primary .product .summary form.cart .single_variation_wrap 
   border-radius: .5rem;
   float: none;
   box-shadow: none;
-  background: #dc3545;
+  background: #DB4343;
   font-size: 1.4rem;
   font-family: "Sharp Sans Medium";
 }

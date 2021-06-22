@@ -39,19 +39,30 @@
     </symbol>
 
     <!-- SQUARE LOGO -->
-    <symbol id="square-logo" viewBox="0 0 52 52">
-        <defs>
-            <style>.square-logo-a{fill:#dc4444;}.square-logo-b{fill:#fff;}</style>
-        </defs>
-        <g transform="translate(1584 -11825)">
-            <rect class="square-logo-a" width="52" height="52" transform="translate(-1584 11825)"/>
-            <g transform="translate(-1570.507 11841.168)">
-                <g transform="translate(0 0)">
-                    <path class="square-logo-b" d="M3957.921,224.458a21.336,21.336,0,0,0-4.721-.269h-.531s-.011,2.419-.011,3.161h2.795a6.5,6.5,0,0,1,5.483,10.363,6.053,6.053,0,0,1-5.01,2.636l-.122.008v-8.943h-3.1V243.4l3.369,0c.046,0,.092,0,.136,0a9.574,9.574,0,0,0,8.961-7.919A9.683,9.683,0,0,0,3957.921,224.458Z" transform="translate(-3952.656 -224.181)"/>
-                    <path class="square-logo-b" d="M4173.917,224.208h-.019a8.57,8.57,0,0,0-8.542,8.561h3.187a5.38,5.38,0,0,1,5.355-5.373v0h2.114v-3.19Z" transform="translate(-4150.613 -224.206)"/>
-                    <path class="square-logo-b" d="M4165.935,343.043v1.482h3.188v-1.482a7.111,7.111,0,0,1,7.1-7.1h.358v-3.187h-.358A10.3,10.3,0,0,0,4165.935,343.043Z" transform="translate(-4151.152 -325.227)"/>
-                </g>
-            </g>
+<!--    <symbol id="square-logo" viewBox="0 0 52 52">-->
+<!--        <defs>-->
+<!--            <style>.square-logo-a{fill:#dc4444;}.square-logo-b{fill:#fff;}</style>-->
+<!--        </defs>-->
+<!--        <g transform="translate(1584 -11825)">-->
+<!--            <rect class="square-logo-a" width="52" height="52" transform="translate(-1584 11825)"/>-->
+<!--            <g transform="translate(-1570.507 11841.168)">-->
+<!--                <g transform="translate(0 0)">-->
+<!--                    <path class="square-logo-b" d="M3957.921,224.458a21.336,21.336,0,0,0-4.721-.269h-.531s-.011,2.419-.011,3.161h2.795a6.5,6.5,0,0,1,5.483,10.363,6.053,6.053,0,0,1-5.01,2.636l-.122.008v-8.943h-3.1V243.4l3.369,0c.046,0,.092,0,.136,0a9.574,9.574,0,0,0,8.961-7.919A9.683,9.683,0,0,0,3957.921,224.458Z" transform="translate(-3952.656 -224.181)"/>-->
+<!--                    <path class="square-logo-b" d="M4173.917,224.208h-.019a8.57,8.57,0,0,0-8.542,8.561h3.187a5.38,5.38,0,0,1,5.355-5.373v0h2.114v-3.19Z" transform="translate(-4150.613 -224.206)"/>-->
+<!--                    <path class="square-logo-b" d="M4165.935,343.043v1.482h3.188v-1.482a7.111,7.111,0,0,1,7.1-7.1h.358v-3.187h-.358A10.3,10.3,0,0,0,4165.935,343.043Z" transform="translate(-4151.152 -325.227)"/>-->
+<!--                </g>-->
+<!--            </g>-->
+<!--        </g>-->
+<!--    </symbol>-->
+
+    <symbol id="square-logo" viewBox="0 0 400 400">
+        <defs><style>.square-logo-a{fill:#DB4343;}.square-logo-b{font-size:56px;}.square-logo-b,.square-logo-c{fill:#fff;}</style></defs>
+        <g>
+            <rect class="square-logo-a" width="400" height="400"/>
+            <text class="square-logo-b" transform="translate(314.3 126.81)">™</text>
+            <path class="square-logo-c" d="M130.57,121.36c-13.63-3.23-29.88-2.49-43.65-2.49H82s-.11,22.37-.11,29.23h25.84c20.55,0,41.81,8,53.48,28.33,13.06,22.77,12,45.82-2.79,67.48-11.33,16.59-26.36,22.81-46.32,24.37l-1.14.08V185.68H82.28V296.51l31.15,0q.64,0,1.26,0c41.71-2.37,75.28-32,82.84-73.21C205.9,177.68,175.77,132.1,130.57,121.36Z"/>
+            <path class="square-logo-c" d="M297.36,118.82h-.17a79.24,79.24,0,0,0-79,79.15h29.47a49.74,49.74,0,0,1,49.52-49.68h19.54V118.82Z"/>
+            <path class="square-logo-c" d="M218.57,283.51v13.71H248V283.51a65.75,65.75,0,0,1,65.68-65.67H317V188.37h-3.31A95.26,95.26,0,0,0,218.57,283.51Z"/>
         </g>
     </symbol>
 
