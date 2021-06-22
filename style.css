@@ -20588,6 +20588,18 @@ body.single-product #primary .product .woocommerce-product-gallery {
   }
 }
 
+body.single-product #primary .product .woocommerce-product-gallery .woocommerce-product-gallery__image img {
+  max-height: 32rem;
+  width: auto;
+  margin: 0 auto;
+}
+
+@media (min-width: 992px) {
+  body.single-product #primary .product .woocommerce-product-gallery .woocommerce-product-gallery__image img {
+    max-height: 60rem;
+  }
+}
+
 @media (min-width: 992px) {
   body.single-product #primary .product .woocommerce-product-gallery .flex-viewport {
     order: 2;

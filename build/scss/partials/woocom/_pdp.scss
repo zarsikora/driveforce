@@ -40,6 +40,12 @@ body.single-product {
 
                 .woocommerce-product-gallery__image {
                     img {
+                        max-height: 32rem;
+                        width: auto;
+                        margin: 0 auto;
+                        @include media-breakpoint-up(lg) {
+                            max-height: 60rem;
+                        }
                     }
                 }
 
