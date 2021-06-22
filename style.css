@@ -11834,7 +11834,7 @@ body.mobile-nav-active #header.background-color-green .close {
 }
 
 #nav-pane .inner {
-  margin: 7.7rem auto 0 auto;
+  margin: 0 auto;
   height: calc(100vh - 7.7rem);
   display: flex;
   flex-wrap: wrap;
@@ -19824,6 +19824,17 @@ body.woocommerce-account .select2-results__option {
 .woocommerce-checkout #container .woocommerce form.checkout #customer_details .woocommerce-billing-fields .shipping_address,
 .woocommerce-checkout #container .woocommerce form.checkout #customer_details .woocommerce-shipping-fields .shipping_address {
   margin-bottom: 2rem;
+}
+
+.woocommerce-checkout #container .woocommerce form.checkout #customer_details .woocommerce-account-fields .create-account {
+  margin: 2rem 0;
+}
+
+.woocommerce-checkout #container .woocommerce form.checkout #customer_details .woocommerce-account-fields .create-account label input,
+.woocommerce-checkout #container .woocommerce form.checkout #customer_details .woocommerce-account-fields .create-account label span {
+  width: auto;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .woocommerce-checkout #container .woocommerce form.checkout #customer_details .woocommerce-additional-fields label {

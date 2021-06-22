@@ -184,6 +184,22 @@
                         }
                     }
 
+                    .woocommerce-account-fields {
+
+                        .create-account {
+                            margin: 2rem 0;
+
+                            label {
+                                input,
+                                span {
+                                    width: auto;
+                                    display: inline-block;
+                                    vertical-align: middle;
+                                }
+                            }
+                        }
+                    }
+
                     .woocommerce-additional-fields {
                         label {
                             width: 100%;
