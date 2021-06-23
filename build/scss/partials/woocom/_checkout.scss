@@ -28,12 +28,49 @@
                 display: none;
             }
 
+            form.woocommerce-form-coupon {
+                display: block !important;
+                border: none;
+                padding: 0;
+                @include media-breakpoint-up(xl) {
+                    padding: 0 3rem;
+                    margin-left: -3rem;
+                    margin-right: -3rem;
+                }
+
+                .inline-block {
+                    @include media-breakpoint-up(md) {
+                        display: inline-block;
+                        margin-right: 2rem;
+                    }
+                }
+
+                input.input-text {
+                    width: 30rem;
+                    height: 6.5rem;
+                    border-radius: .4rem;
+                    border: none;
+                    padding: 0 2rem;
+                }
+
+                p {
+                    font-size: 1.4rem;
+                    margin: 0 0 2rem 0;
+                    @include media-breakpoint-up(lg) {
+                        font-size: 1.6rem;
+                    }
+                }
+            }
+
             form.checkout {
                 display: flex;
                 flex-wrap: wrap;
                 align-items: flex-start;
                 @include media-breakpoint-up(lg) {
                     flex-wrap: nowrap;
+                }
+                @include media-breakpoint-up(xl) {
+                    margin: 0 -3rem;
                 }
 
                 #customer_details {
@@ -55,9 +92,7 @@
                         width: 100%;
                         max-width: 100%;
                         flex: 0 0 100%;
-                        @include media-breakpoint-down(sm){
-                            padding: 0;
-                        }
+                        padding: 0;
                         @include media-breakpoint-up(md){
                             width: 50%;
                             max-width: 50%;

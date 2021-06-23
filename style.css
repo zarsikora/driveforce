@@ -19633,6 +19633,52 @@ body.woocommerce-account .select2-results__option {
   display: none;
 }
 
+.woocommerce-checkout #container .woocommerce form.woocommerce-form-coupon {
+  display: block !important;
+  border: none;
+  padding: 0;
+}
+
+@media (min-width: 1200px) {
+  .woocommerce-checkout #container .woocommerce form.woocommerce-form-coupon {
+    padding: 0 3rem;
+    margin-left: -3rem;
+    margin-right: -3rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .woocommerce-checkout #container .woocommerce form.woocommerce-form-coupon .inline-block {
+    display: inline-block;
+    margin-right: 2rem;
+  }
+}
+
+.woocommerce-checkout #container .woocommerce form.woocommerce-form-coupon input.input-text {
+  width: 30rem;
+  height: 6.5rem;
+  border-radius: .4rem;
+  border: none;
+  padding: 0 2rem;
+}
+
+.woocommerce-checkout #container .woocommerce form.woocommerce-form-coupon p, .woocommerce-checkout #container .woocommerce form.woocommerce-form-coupon body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 address, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 .woocommerce-checkout #container .woocommerce form.woocommerce-form-coupon address,
+.woocommerce-checkout #container .woocommerce form.woocommerce-form-coupon body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 address, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 .woocommerce-checkout #container .woocommerce form.woocommerce-form-coupon address,
+.woocommerce-checkout #container .woocommerce form.woocommerce-form-coupon body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 address, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 .woocommerce-checkout #container .woocommerce form.woocommerce-form-coupon address,
+.woocommerce-checkout #container .woocommerce form.woocommerce-form-coupon body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 address, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 .woocommerce-checkout #container .woocommerce form.woocommerce-form-coupon address {
+  font-size: 1.4rem;
+  margin: 0 0 2rem 0;
+}
+
+@media (min-width: 992px) {
+  .woocommerce-checkout #container .woocommerce form.woocommerce-form-coupon p, .woocommerce-checkout #container .woocommerce form.woocommerce-form-coupon body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 address, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 .woocommerce-checkout #container .woocommerce form.woocommerce-form-coupon address,
+  .woocommerce-checkout #container .woocommerce form.woocommerce-form-coupon body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 address, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 .woocommerce-checkout #container .woocommerce form.woocommerce-form-coupon address,
+  .woocommerce-checkout #container .woocommerce form.woocommerce-form-coupon body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 address, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 .woocommerce-checkout #container .woocommerce form.woocommerce-form-coupon address,
+  .woocommerce-checkout #container .woocommerce form.woocommerce-form-coupon body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 address, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 .woocommerce-checkout #container .woocommerce form.woocommerce-form-coupon address {
+    font-size: 1.6rem;
+  }
+}
+
 .woocommerce-checkout #container .woocommerce form.checkout {
   display: flex;
   flex-wrap: wrap;
@@ -19642,6 +19688,12 @@ body.woocommerce-account .select2-results__option {
 @media (min-width: 992px) {
   .woocommerce-checkout #container .woocommerce form.checkout {
     flex-wrap: nowrap;
+  }
+}
+
+@media (min-width: 1200px) {
+  .woocommerce-checkout #container .woocommerce form.checkout {
+    margin: 0 -3rem;
   }
 }
 
@@ -19674,13 +19726,7 @@ body.woocommerce-account .select2-results__option {
   width: 100%;
   max-width: 100%;
   flex: 0 0 100%;
-}
-
-@media (max-width: 767.98px) {
-  .woocommerce-checkout #container .woocommerce form.checkout #customer_details .col-1,
-  .woocommerce-checkout #container .woocommerce form.checkout #customer_details .col-2 {
-    padding: 0;
-  }
+  padding: 0;
 }
 
 @media (min-width: 768px) {
