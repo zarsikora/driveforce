@@ -66,11 +66,24 @@
                 display: flex;
                 flex-wrap: wrap;
                 align-items: flex-start;
-                @include media-breakpoint-up(lg) {
-                    flex-wrap: nowrap;
-                }
                 @include media-breakpoint-up(xl) {
                     margin: 0 -3rem;
+                }
+
+                & > .woocommerce-error {
+                    margin-bottom: 3rem;
+                    flex-wrap: wrap;
+                    @include media-breakpoint-up(xl) {
+                        margin-left: 3rem;
+                        margin-right: 3rem;
+                    }
+
+                    li {
+                        flex: 0 0 100%;
+                        @include media-breakpoint-up(lg) {
+                            flex: auto;
+                        }
+                    }
                 }
 
                 #customer_details {

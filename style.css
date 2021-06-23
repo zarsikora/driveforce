@@ -19685,15 +19685,31 @@ body.woocommerce-account .select2-results__option {
   align-items: flex-start;
 }
 
-@media (min-width: 992px) {
-  .woocommerce-checkout #container .woocommerce form.checkout {
-    flex-wrap: nowrap;
-  }
-}
-
 @media (min-width: 1200px) {
   .woocommerce-checkout #container .woocommerce form.checkout {
     margin: 0 -3rem;
+  }
+}
+
+.woocommerce-checkout #container .woocommerce form.checkout > .woocommerce-error {
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+}
+
+@media (min-width: 1200px) {
+  .woocommerce-checkout #container .woocommerce form.checkout > .woocommerce-error {
+    margin-left: 3rem;
+    margin-right: 3rem;
+  }
+}
+
+.woocommerce-checkout #container .woocommerce form.checkout > .woocommerce-error li {
+  flex: 0 0 100%;
+}
+
+@media (min-width: 992px) {
+  .woocommerce-checkout #container .woocommerce form.checkout > .woocommerce-error li {
+    flex: auto;
   }
 }
 
