@@ -18972,6 +18972,15 @@ body.woocommerce-cart #content table.cart td.actions .input-text {
   margin-right: 1rem;
 }
 
+body.woocommerce-cart #content table.cart td.product-thumbnail {
+  padding: 0;
+  min-width: 8rem;
+}
+
+body.woocommerce-cart #content table.cart td.product-thumbnail img {
+  width: 100%;
+}
+
 body.woocommerce-cart #content .button {
   background-color: #DB4343;
   transition: all ease 300ms;
