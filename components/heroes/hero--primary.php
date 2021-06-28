@@ -69,6 +69,6 @@ if($link) {
         </div>
     </div>
     <?php if ($hasGraphic) : ?>
-        <img class="primary-hero-curve" aria-hidden="true" alt="decorative curve" src="http://staging.driveforce.golf/wp-content/uploads/2021/05/curve-new.svg" />
+        <img class="primary-hero-curve" aria-hidden="true" alt="decorative curve" src="<?php echo get_bloginfo('url') ?>/wp-content/uploads/2021/05/curve-new.svg" />
     <?php endif; ?>
 </div>
