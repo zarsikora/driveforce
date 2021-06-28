@@ -295,7 +295,7 @@ if(loadMoreReviewBtn.length)
         offset = parseInt(commentList.attr('data-current-page')) * reviewsPerPage;
 
         $.ajax({
-            url: ajaxurl,
+            url: localized_vars.ajaxurl,
             type: 'post',
             data: {
                 action: 'load_more_comments',
@@ -902,7 +902,7 @@ function blogLoadMore() {
         };
 
     $.ajax({
-        url : loadmore_params.ajaxurl, // AJAX handler
+        url : localized_vars.ajaxurl, // AJAX handler
         data : data,
         dataType: 'json',
         type : 'POST',
