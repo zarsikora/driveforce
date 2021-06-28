@@ -41186,7 +41186,7 @@ if(loadMoreReviewBtn.length)
                 action: 'load_more_comments',
                 offset: offset,
                 perPage: reviewsPerPage,
-                postID: postID
+                postID: localized_vars.postid
             },
             dataType: 'html',
             success: (data) =>
