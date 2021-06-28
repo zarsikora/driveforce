@@ -6,6 +6,15 @@
 ?>
 
 <div class="module-wrapper dark-bg cta-module">
+
+    <svg data-animation-effect data-animation-trigger="breakpoint" class="dots-left" width="320" height="124" viewBox="0 0 320 124">
+        <use href="#horizontal-dots"></use>
+    </svg>
+
+    <svg data-animation-effect data-animation-trigger="breakpoint" class="dots-right" width="320" height="124" viewBox="0 0 320 124">
+        <use href="#horizontal-dots"></use>
+    </svg>
+
     <div class="module-padded">
         <svg class="logo" viewBox="0 0 82 82">
             <use xlink:href="#square-logo"></use>
