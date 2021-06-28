@@ -13225,10 +13225,17 @@ body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .
 }
 
 .module-wrapper.product-intro-module .vertical-dots {
-  position: absolute;
-  right: 3rem;
-  top: 0;
-  transform: translateY(0);
+  display: none;
+}
+
+@media (min-width: 992px) {
+  .module-wrapper.product-intro-module .vertical-dots {
+    display: block;
+    position: absolute;
+    right: 3rem;
+    top: 0;
+    transform: translateY(0);
+  }
 }
 
 @media (min-width: 1200px) {

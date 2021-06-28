@@ -7,10 +7,14 @@
     }
 
     .vertical-dots {
-        position: absolute;
-        right: 3rem;
-        top: 0;
-        transform: translateY(0);
+        display: none;
+        @include media-breakpoint-up(lg) {
+            display: block;
+            position: absolute;
+            right: 3rem;
+            top: 0;
+            transform: translateY(0);
+        }
         @include media-breakpoint-up(xl) {
             margin-right: 5rem;
         }
