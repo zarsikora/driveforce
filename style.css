@@ -21271,6 +21271,16 @@ table.variations .reset_variations {
   transform: translateX(-50%);
 }
 
+.product-reviews-wrapper .load-more-reviews {
+  color: #fff;
+  font-size: 2rem;
+  text-decoration: underline;
+}
+
+.product-reviews-wrapper .load-more-reviews:hover {
+  color: #88E2C1;
+}
+
 .product-reviews-wrapper #reviews h2 {
   text-align: center;
 }

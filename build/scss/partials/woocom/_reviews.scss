@@ -39,7 +39,13 @@
     }
 
     .load-more-reviews {
-        //color: $blue;
+        color: #fff;
+        font-size: 2rem;
+        text-decoration: underline;
+
+        &:hover {
+            color: $mint;
+        }
     }
 
     #reviews {
