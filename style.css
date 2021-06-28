@@ -13228,7 +13228,7 @@ body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .
   position: absolute;
   right: 3rem;
   top: 0;
-  transform: translateY(100%);
+  transform: translateY(0);
 }
 
 @media (min-width: 1200px) {
