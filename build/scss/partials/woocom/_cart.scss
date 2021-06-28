@@ -113,17 +113,6 @@ body.woocommerce-cart {
                     border-radius: .4rem;
                     border: .1rem solid $darkBg;
                 }
-
-                /* Chrome, Safari, Edge, Opera */
-                input::-webkit-outer-spin-button,
-                input::-webkit-inner-spin-button {
-                    -webkit-appearance: inherit;
-                }
-
-                /* Firefox */
-                input[type=number] {
-                    -moz-appearance: inherit;
-                }
             }
         }
 

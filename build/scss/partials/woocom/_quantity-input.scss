@@ -52,6 +52,7 @@
     border-left: none;
     width: 2rem;
     text-align: center;
+    text-decoration: none !important;
     color: #fff;
     font-size: 1.3rem;
     padding: 0;
@@ -63,6 +64,10 @@
     -ms-user-select: none;
     -o-user-select: none;
     user-select: none;
+
+    &:hover {
+        color: $red;
+    }
 }
 
 .quantity-button:active {
