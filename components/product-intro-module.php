@@ -9,6 +9,11 @@ $bottomText = get_sub_field('bottom_text');
 
 <div class="module-wrapper color-bg product-intro-module">
 
+    <!-- Parallaxing Vertical Dots Image -->
+    <svg data-animation-effect="parallax" data-animation-trigger="scroll" class="vertical-dots" width="80" height="467" viewBox="0 0 80.466 467.005">
+        <use href="#vertical-dots"></use>
+    </svg>
+
     <div class="module-padded">
 
         <?php if($header): ?>

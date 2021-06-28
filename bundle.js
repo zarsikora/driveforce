@@ -41214,7 +41214,6 @@ if(loadMoreReviewBtn.length)
 // ANIMATION SCROLL HANDLER - request animation frame
 let windowHeight = $(window).height();
 let lastPosition = -1; // storing last scroll position which updates on throttled scroll listener - nothing takes place before it is changed
-// let slideUps; I dont think we need this
 let scrollArray = [];
 let interval = 100;
 let start = Date.now()/1000;
@@ -41376,7 +41375,9 @@ function animationWizard(timestamp)
                         }, 500);
                     }
                 }
-            } else if (animationType === 'scroll') {
+            }
+            else if (animationType === 'scroll')
+            {
                 if(positionData.inViewport)
                 {
                     let easedPercent = EasingFunctions.easeInOutQuad(vertPosPercent);
@@ -41395,7 +41396,7 @@ function animationWizard(timestamp)
                     if(ele.type == 'parallax')
                     {
                         $(ele.ele).css({
-                            transform: 'translateY(' + (50 - (50 * easedParallaxPercent)) + '%)'
+                            transform: 'translateY(' + (100 - (100 * easedParallaxPercent)) + '%)'
                         });
                     }
 
@@ -41774,31 +41775,6 @@ let isContact = document.getElementById('contact');
 
 if(!isContact){
     window.addEventListener('scroll', navScroll, false);
-}
-
-//Barba page transition functions. 
-verticalTransition = (data, dir) => {
-
-    if(dir === 'up'){
-        let tl = gsap.timeline({onComplete: () => {
-            $(data.current.container).css({'opacity' : '0'});
-        }});
-
-        $('#footer').css({'opacity' : '0'});
-        tl.to('#animation-pane-vertical', {duration: .8, scaleY: 1, transformOrigin: 'bottom', ease: Power2.easeInOut });
-        tl.to('#animation-pane-asset', {duration: .2, opacity: 1, delay: 0, ease: Power2.easeIn});
-
-    }
-
-    if(dir === 'down'){
-        let tl = gsap.timeline({onComplete: () => {
-            $('#footer').css({'opacity' : '1'});
-        }});
-
-        //move pane to top of viewport
-        tl.to('#animation-pane-asset', {duration: .2, opacity: 0, delay: 1, ease: Power2.easeIn});
-        tl.to('#animation-pane-vertical', {duration: .4, scaleY: 0, transformOrigin: 'top', delay: .2, ease: Power2.easeInOut});
-    }
 }
 
 //BLOG LOAD MORE

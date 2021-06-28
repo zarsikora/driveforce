@@ -13215,11 +13215,25 @@ body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .
 .module-wrapper.product-intro-module {
   background-color: #F9F1E7;
   color: #081D1A;
+  position: relative;
 }
 
 @media (max-width: 767px) {
   .module-wrapper.product-intro-module {
     padding-top: 0;
+  }
+}
+
+.module-wrapper.product-intro-module .vertical-dots {
+  position: absolute;
+  right: 3rem;
+  top: 0;
+  transform: translateY(100%);
+}
+
+@media (min-width: 1200px) {
+  .module-wrapper.product-intro-module .vertical-dots {
+    margin-right: 5rem;
   }
 }
 

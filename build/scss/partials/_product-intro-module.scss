@@ -1,8 +1,19 @@
 .module-wrapper.product-intro-module {
     background-color: $lightText;
     color: $darkText;
+    position: relative;
     @media(max-width: 767px){
         padding-top: 0;
+    }
+
+    .vertical-dots {
+        position: absolute;
+        right: 3rem;
+        top: 0;
+        transform: translateY(100%);
+        @include media-breakpoint-up(xl) {
+            margin-right: 5rem;
+        }
     }
 
     .module-padded {
