@@ -9,26 +9,34 @@
     }
 
     .dots-left {
-        position: absolute;
-        left: 0;
-        top: 50%;
-        transform: translate(-100%, -50%);
-        transition: all ease-in-out 750ms;
+        display: none;
+        @include media-breakpoint-up(lg) {
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translate(-100%, -50%);
+            transition: all ease-in-out 750ms;
 
-        &.active {
-            transform: translate(0, -50%);
+            &.active {
+                transform: translate(0, -50%);
+            }
         }
     }
 
     .dots-right {
-        position: absolute;
-        right: 0;
-        top: 50%;
-        transform: translate(100%, -50%) rotate(180deg);
-        transition: all ease-in-out 750ms;
+        display: none;
+        @include media-breakpoint-up(lg) {
+            display: block;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translate(100%, -50%) rotate(180deg);
+            transition: all ease-in-out 750ms;
 
-        &.active {
-            transform: translate(0, -50%) rotate(180deg);
+            &.active {
+                transform: translate(0, -50%) rotate(180deg);
+            }
         }
     }
 
