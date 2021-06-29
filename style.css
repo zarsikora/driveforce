@@ -12093,6 +12093,10 @@ body.mobile-nav-active #header.background-color-green .close {
   display: inline-block;
 }
 
+#footer .top .inner .newsletter #form-wrapper button:disabled {
+  opacity: 0.5;
+}
+
 #footer .top .inner .newsletter #form-wrapper button span {
   font-size: 1.4rem;
 }

@@ -130,6 +130,10 @@
                         button {
                             display: inline-block;
 
+                            &:disabled {
+                                opacity: 0.5;
+                            }
+
                             span {
                                 font-size: 1.4rem;
                             }
