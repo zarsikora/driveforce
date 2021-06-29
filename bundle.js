@@ -40445,7 +40445,7 @@ if(fastCheckoutSelect)
     {
         e.preventDefault();
 
-        $('body').addClass('fast-checkout-mobile-open');
+        $('body').toggleClass('fast-checkout-mobile-open')
     });
 
     fastCheckoutSelect.on('click', function(e)
