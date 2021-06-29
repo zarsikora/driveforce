@@ -81,6 +81,7 @@
             <?php include('components/banner.php'); ?>
 
             <header id="header" class="background-color-<?php echo $headerColor ?>" role="navigation">
+
                 <div id="navscroll-container" class="navscroll-container">
 
                     <!-- Desktop -->
@@ -148,6 +149,7 @@
                             </svg>
                         </a>
                     </div>
+
                 </div>
             </header>
 

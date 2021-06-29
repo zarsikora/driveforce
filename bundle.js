@@ -40883,6 +40883,64 @@ function updateCartDrawerTotal(totals = [])
     $('.cart-drawer-totals .cart-subtotal').text('$' + totals.subtotal);
     $('.cart-drawer-totals .cart-total').text('$' + totals.total);
 }
+/*
+** Sticky Nav
+ */
+
+let isContact = document.getElementById('contact'),
+    header = $('#header'),
+    lastScrollY = 0,
+    scrollDirection = 0,
+    navHasAnimated = false;
+
+navScroll = () =>
+{
+    let scrollY = (window.scrollY < 0) ? 0 : window.scrollY;
+    let diff = lastScrollY - scrollY;
+
+    scrollDirection = diff / Math.abs(diff);
+    lastScrollY = scrollY;
+
+    if(diff !== 0)
+    {
+        navAnimate(scrollY);
+    }
+
+    window.requestAnimationFrame(navScroll);
+}
+
+navAnimate = (scrollY) =>
+{
+    if($(document.body).hasClass('mobile-nav-active')) return;
+
+    // hit top of page
+    if(scrollY === 0)
+    {
+        $('body').removeClass('sticky-header');
+    }
+    else
+    {
+        // scrolling up
+        if(scrollDirection > 0)
+        {
+            $('body').removeClass('header-hidden');
+
+            if(scrollY > header.height()) $('body').addClass('sticky-header');
+        }
+        // scrolling down
+        else
+        {
+            $('body').removeClass('sticky-header');
+
+            if(scrollY > header.height()) $('body').addClass('header-hidden');
+        }
+    }
+}
+
+if(!isContact)
+{
+    window.requestAnimationFrame(navScroll)
+}
 //LET ME USE THE $ FOR JQUERY
 window.$ = window.jQuery = jQuery;
 
@@ -41689,93 +41747,21 @@ $('.mobile-controls').on('click', function(){
     navToggle();
 });
 
-//Nav appears on scroll up.
-let scrollThrottle = 250,
-throttled = false,
-lastScrollY = 0,
-scrollDirection = 0,
-ticking = false;
+//NAV PANE MODAL FUNCTION
+let paneBtn = $('#nav-pane .pane-waitlist-btn')
 
-navScroll = () =>
-{
-    let scrollY = (window.scrollY < 0) ? 0 : window.scrollY;
-    let diff = lastScrollY - scrollY;
+$(paneBtn).on('click', function(e){
+    let waitlist = document.getElementById('waitList');
+    e.preventDefault();
+    navClose();
 
-    scrollDirection = diff / Math.abs(diff);
-    lastScrollY = scrollY;
-
-    requestTick(scrollY);
-}
-
-requestTick = (scrollY) =>
-{
-    if(!ticking)
-    {
-        scroll(function(){navAnimate(scrollY)});
-
-        ticking = true;
+    //if there is a form on this page scroll to it
+    if(waitlist){
+        scrollToAnchor(e);
+    } else {
+        $("#waitlistModal").modal();
     }
-}
-
-//STICKY LOGO ON SCROLL WITH BANNER
-
-let navHasAnimated = false;
-
-navAnimate = (scrollY) =>
-{
-if(!$(document.body).hasClass('mobile-nav-active'))
-{
-    if(scrollY === 0)
-    {
-        if($('#navscroll-container').hasClass('scrollVisible'))
-        {
-            $('#navscroll-container').removeClass('scrollVisible readyOut');
-        }
-    }
-    else
-    {
-        if(scrollDirection > 0)
-        {
-            if(!$('#navscroll-container').hasClass('scrollVisible'))
-            {
-                $('#navscroll-container').removeClass('readyOut').addClass('readyIn');
-
-                setTimeout(function()
-                {
-                    $('#navscroll-container').addClass('scrollVisible');
-                    $('#navscroll-container').removeClass('readyIn');
-                }, 0);
-            }
-        }
-        else
-        {
-            if(scrollY > 142 && !navHasAnimated){
-                $('#navscroll-container').addClass('readyOut');
-                navHasAnimated = true;
-            }
-
-            if($('#navscroll-container').hasClass('scrollVisible'))
-            {
-                $('#navscroll-container').addClass('readyOut');
-
-                setTimeout(function()
-                {
-                    $('#navscroll-container').removeClass('scrollVisible'); 
-                }, 300);
-            }
-
-        }
-    }
-
-    ticking = false;
-}
-}
-
-let isContact = document.getElementById('contact');
-
-if(!isContact){
-    window.addEventListener('scroll', navScroll, false);
-}
+});
 
 //BLOG LOAD MORE
 function blogLoadMore() {
@@ -41840,22 +41826,6 @@ let headerBtn = $('#header .header-waitlist-btn');
 $(headerBtn).on('click', function(e){
     e.preventDefault();
     let waitlist = document.getElementById('waitList');
-
-    //if there is a form on this page scroll to it
-    if(waitlist){
-        scrollToAnchor(e);
-    } else {
-        $("#waitlistModal").modal();
-    }
-});
-
-//NAV PANE MODAL FUNCTION 
-let paneBtn = $('#nav-pane .pane-waitlist-btn')
-
-$(paneBtn).on('click', function(e){
-    let waitlist = document.getElementById('waitList');
-    e.preventDefault();
-    navClose();
 
     //if there is a form on this page scroll to it
     if(waitlist){

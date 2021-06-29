@@ -51,6 +51,7 @@ function scripts() {
             "./js/fast-checkout.js",
             "./js/sharpspring.js",
             "./js/cart-drawer.js",
+            "./js/sticky-nav.js",
             "./js/main.js"
             ])
             .pipe(concat('bundle.js'))

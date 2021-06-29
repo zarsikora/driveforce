@@ -5,9 +5,19 @@
     width: 100%;
     height: 7.7rem;
     margin: 0 auto;
-    z-index: 22;  
+    z-index: 22;
+    transform: translateY(0);
+    transition: transform ease 300ms;
     @include media-breakpoint-up(md) {
         height: 9.4rem;
+    }
+
+    body.header-hidden & {
+        transform: translateY(-100%);
+    }
+
+    body.sticky-header & {
+        position: fixed;
     }
 
     body.mobile-nav-active &.background-color-green {
@@ -16,8 +26,7 @@
         }
     }
 
-    &.background-color-cream,
-    &.background-color-cream .navscroll-container {
+    &.background-color-cream {
         background-color: $lightBg;
 
         .hamburger-control svg,
@@ -45,24 +54,18 @@
         }
 
         .nav {
-            .link-wrapper {
-                .nav-link {
-                    color: #fff;
+            .nav-link {
+                color: #fff;
 
-                    svg.logo {
-                        fill: #fff;
-                    }
+                svg.logo {
+                    fill: #fff;
                 }
             }
         }
     }
 
-    &.background-color-white,
-    &.background-color-white .navscroll-container,
-    &.background-color-green .navscroll-container.scrollVisible,
-    &.background-color-white .navscroll-container.scrollVisible,
-    &.background-color-cream .navscroll-container.scrollVisible,
-    &.background-color-transparent .navscroll-container.scrollVisible {
+    body.sticky-header &,
+    &.background-color-white {
         background-color: #fff;
 
         .hamburger-control svg,
@@ -75,11 +78,13 @@
             stroke: #fff;
         }
 
-        .nav-link {
-            color: $darkBg;
+        .nav {
+            .nav-link {
+                color: $darkBg;
 
-            svg.logo {
-                fill: $darkBg;
+                svg.logo {
+                    fill: $darkBg;
+                }
             }
         }
     }
@@ -210,31 +215,6 @@
         padding: 2rem;
         @include media-breakpoint-up(lg){
             padding: 0;
-
-            &.readyOut {
-                padding: 0;
-                transform: translateY(-100%)!important;
-
-                &:before {
-                    opacity: 1;
-                }
-            }
-
-            &.scrollVisible {
-                position: fixed;
-                z-index: 18;
-                padding: 3rem 0;
-                transform: translateY(0);
-                transition: transform 300ms ease;
-                top: 0;
-                @include media-breakpoint-up(lg) {
-                    padding: 0;
-                }
-                @media(min-width: 1440px){
-                    height: 9.4rem;
-                    box-sizing: content-box;
-                }
-            }
         }
 
         .nav {

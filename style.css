@@ -11369,6 +11369,8 @@ button:focus {
   height: 7.7rem;
   margin: 0 auto;
   z-index: 22;
+  transform: translateY(0);
+  transition: transform ease 300ms;
 }
 
 @media (min-width: 768px) {
@@ -11377,31 +11379,33 @@ button:focus {
   }
 }
 
+body.header-hidden #header {
+  transform: translateY(-100%);
+}
+
+body.sticky-header #header {
+  position: fixed;
+}
+
 body.mobile-nav-active #header.background-color-green .close {
   stroke: #fff;
 }
 
-#header.background-color-cream,
-#header.background-color-cream .navscroll-container {
+#header.background-color-cream {
   background-color: #F9F1E7;
 }
 
 #header.background-color-cream .hamburger-control svg,
 #header.background-color-cream svg.logo,
-#header.background-color-cream svg.cart,
-#header.background-color-cream .navscroll-container .hamburger-control svg,
-#header.background-color-cream .navscroll-container svg.logo,
-#header.background-color-cream .navscroll-container svg.cart {
+#header.background-color-cream svg.cart {
   fill: #081D1A;
 }
 
-#header.background-color-cream .nav-link,
-#header.background-color-cream .navscroll-container .nav-link {
+#header.background-color-cream .nav-link {
   color: #081D1A;
 }
 
-#header.background-color-cream .nav-link svg.logo,
-#header.background-color-cream .navscroll-container .nav-link svg.logo {
+#header.background-color-cream .nav-link svg.logo {
   fill: #081D1A;
 }
 
@@ -11415,68 +11419,35 @@ body.mobile-nav-active #header.background-color-green .close {
   fill: #fff;
 }
 
-#header.background-color-green .nav .link-wrapper .nav-link {
+#header.background-color-green .nav .nav-link {
   color: #fff;
 }
 
-#header.background-color-green .nav .link-wrapper .nav-link svg.logo {
+#header.background-color-green .nav .nav-link svg.logo {
   fill: #fff;
 }
 
-#header.background-color-white,
-#header.background-color-white .navscroll-container,
-#header.background-color-green .navscroll-container.scrollVisible,
-#header.background-color-white .navscroll-container.scrollVisible,
-#header.background-color-cream .navscroll-container.scrollVisible,
-#header.background-color-transparent .navscroll-container.scrollVisible {
+body.sticky-header #header, #header.background-color-white {
   background-color: #fff;
 }
 
-#header.background-color-white .hamburger-control svg,
+body.sticky-header #header .hamburger-control svg,
+body.sticky-header #header svg.logo,
+body.sticky-header #header svg.cart, #header.background-color-white .hamburger-control svg,
 #header.background-color-white svg.logo,
-#header.background-color-white svg.cart,
-#header.background-color-white .navscroll-container .hamburger-control svg,
-#header.background-color-white .navscroll-container svg.logo,
-#header.background-color-white .navscroll-container svg.cart,
-#header.background-color-green .navscroll-container.scrollVisible .hamburger-control svg,
-#header.background-color-green .navscroll-container.scrollVisible svg.logo,
-#header.background-color-green .navscroll-container.scrollVisible svg.cart,
-#header.background-color-white .navscroll-container.scrollVisible .hamburger-control svg,
-#header.background-color-white .navscroll-container.scrollVisible svg.logo,
-#header.background-color-white .navscroll-container.scrollVisible svg.cart,
-#header.background-color-cream .navscroll-container.scrollVisible .hamburger-control svg,
-#header.background-color-cream .navscroll-container.scrollVisible svg.logo,
-#header.background-color-cream .navscroll-container.scrollVisible svg.cart,
-#header.background-color-transparent .navscroll-container.scrollVisible .hamburger-control svg,
-#header.background-color-transparent .navscroll-container.scrollVisible svg.logo,
-#header.background-color-transparent .navscroll-container.scrollVisible svg.cart {
+#header.background-color-white svg.cart {
   fill: #081D1A;
 }
 
-#header.background-color-white .hamburgder-control svg.close,
-#header.background-color-white .navscroll-container .hamburgder-control svg.close,
-#header.background-color-green .navscroll-container.scrollVisible .hamburgder-control svg.close,
-#header.background-color-white .navscroll-container.scrollVisible .hamburgder-control svg.close,
-#header.background-color-cream .navscroll-container.scrollVisible .hamburgder-control svg.close,
-#header.background-color-transparent .navscroll-container.scrollVisible .hamburgder-control svg.close {
+body.sticky-header #header .hamburgder-control svg.close, #header.background-color-white .hamburgder-control svg.close {
   stroke: #fff;
 }
 
-#header.background-color-white .nav-link,
-#header.background-color-white .navscroll-container .nav-link,
-#header.background-color-green .navscroll-container.scrollVisible .nav-link,
-#header.background-color-white .navscroll-container.scrollVisible .nav-link,
-#header.background-color-cream .navscroll-container.scrollVisible .nav-link,
-#header.background-color-transparent .navscroll-container.scrollVisible .nav-link {
+body.sticky-header #header .nav .nav-link, #header.background-color-white .nav .nav-link {
   color: #081D1A;
 }
 
-#header.background-color-white .nav-link svg.logo,
-#header.background-color-white .navscroll-container .nav-link svg.logo,
-#header.background-color-green .navscroll-container.scrollVisible .nav-link svg.logo,
-#header.background-color-white .navscroll-container.scrollVisible .nav-link svg.logo,
-#header.background-color-cream .navscroll-container.scrollVisible .nav-link svg.logo,
-#header.background-color-transparent .navscroll-container.scrollVisible .nav-link svg.logo {
+body.sticky-header #header .nav .nav-link svg.logo, #header.background-color-white .nav .nav-link svg.logo {
   fill: #081D1A;
 }
 
@@ -11609,34 +11580,6 @@ body.mobile-nav-active #header.background-color-green .close {
 @media (min-width: 992px) {
   #header .navscroll-container {
     padding: 0;
-  }
-  #header .navscroll-container.readyOut {
-    padding: 0;
-    transform: translateY(-100%) !important;
-  }
-  #header .navscroll-container.readyOut:before {
-    opacity: 1;
-  }
-  #header .navscroll-container.scrollVisible {
-    position: fixed;
-    z-index: 18;
-    padding: 3rem 0;
-    transform: translateY(0);
-    transition: transform 300ms ease;
-    top: 0;
-  }
-}
-
-@media (min-width: 992px) and (min-width: 992px) {
-  #header .navscroll-container.scrollVisible {
-    padding: 0;
-  }
-}
-
-@media (min-width: 992px) and (min-width: 1440px) {
-  #header .navscroll-container.scrollVisible {
-    height: 9.4rem;
-    box-sizing: content-box;
   }
 }
 
