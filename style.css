@@ -20247,6 +20247,7 @@ body.fast-checkout-mobile-open .fast-checkout .fast-checkout-build-order {
   .fast-checkout div[class*=col] {
     padding: 0 3rem;
     border-right: 1px solid #88E2C1;
+    font-size: 1.6rem;
   }
 }
 
@@ -20262,6 +20263,7 @@ body.fast-checkout-mobile-open .fast-checkout .fast-checkout-build-order {
   background-color: #14302B;
   padding-top: 3rem;
   padding-bottom: 3rem;
+  height: 100%;
 }
 
 @media (min-width: 1200px) {
@@ -20287,7 +20289,6 @@ body.fast-checkout-mobile-open .fast-checkout .fast-checkout-build-order {
     flex: 0 0 auto;
     margin: 0 2rem 0 0;
     font-size: 2rem;
-    max-width: 10rem;
     text-align: left;
     line-height: 1.3;
   }
@@ -20387,7 +20388,7 @@ body.fast-checkout-mobile-open .fast-checkout .fast-checkout-build-order {
   position: absolute;
   left: 0;
   bottom: 100%;
-  width: 100%;
+  width: 26rem;
   background: #071C19;
 }
 
@@ -20437,7 +20438,6 @@ body.fast-checkout-mobile-open .fast-checkout .fast-checkout-build-order {
 
 @media (min-width: 1200px) {
   .fast-checkout .fast-checkout-purchase-option {
-    align-items: center;
     border: none;
   }
 }
@@ -20481,6 +20481,15 @@ body.fast-checkout-mobile-open .fast-checkout .fast-checkout-build-order {
   font-family: "Sharp Sans Bold";
 }
 
+@media (min-width: 1200px) {
+  .fast-checkout .fast-checkout-purchase-option p.price, .fast-checkout .fast-checkout-purchase-option body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 address.price, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 .fast-checkout .fast-checkout-purchase-option address.price,
+  .fast-checkout .fast-checkout-purchase-option body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 address.price, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 .fast-checkout .fast-checkout-purchase-option address.price,
+  .fast-checkout .fast-checkout-purchase-option body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 address.price, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 .fast-checkout .fast-checkout-purchase-option address.price,
+  .fast-checkout .fast-checkout-purchase-option body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 address.price, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 .fast-checkout .fast-checkout-purchase-option address.price {
+    font-size: 1.6rem;
+  }
+}
+
 .fast-checkout .fast-checkout-purchase-option p.price .subscribe-price, .fast-checkout .fast-checkout-purchase-option body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 address.price .subscribe-price, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 .fast-checkout .fast-checkout-purchase-option address.price .subscribe-price, .fast-checkout .fast-checkout-purchase-option body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 address.price .subscribe-price, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 .fast-checkout .fast-checkout-purchase-option address.price .subscribe-price, .fast-checkout .fast-checkout-purchase-option body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 address.price .subscribe-price, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 .fast-checkout .fast-checkout-purchase-option address.price .subscribe-price, .fast-checkout .fast-checkout-purchase-option body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 address.price .subscribe-price, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 .fast-checkout .fast-checkout-purchase-option address.price .subscribe-price {
   display: inline-block;
   color: #fff;
@@ -20519,6 +20528,12 @@ body.fast-checkout-mobile-open .fast-checkout .fast-checkout-build-order {
   font-size: 1.2rem;
 }
 
+@media (min-width: 1200px) {
+  .fast-checkout .fast-checkout-purchase-option .option-text {
+    font-size: 1.4rem;
+  }
+}
+
 .fast-checkout .fast-checkout-purchase-option .option-text p, .fast-checkout .fast-checkout-purchase-option .option-text body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 address, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 .fast-checkout .fast-checkout-purchase-option .option-text address,
 .fast-checkout .fast-checkout-purchase-option .option-text body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 address, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 .fast-checkout .fast-checkout-purchase-option .option-text address,
 .fast-checkout .fast-checkout-purchase-option .option-text body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 address, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 .fast-checkout .fast-checkout-purchase-option .option-text address,
@@ -20538,6 +20553,15 @@ body.fast-checkout-mobile-open .fast-checkout .fast-checkout-build-order {
   }
 }
 
+@media (min-width: 1200px) {
+  .fast-checkout .fast-checkout-purchase-option .option-text p, .fast-checkout .fast-checkout-purchase-option .option-text body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 address, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 .fast-checkout .fast-checkout-purchase-option .option-text address,
+  .fast-checkout .fast-checkout-purchase-option .option-text body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 address, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 .fast-checkout .fast-checkout-purchase-option .option-text address,
+  .fast-checkout .fast-checkout-purchase-option .option-text body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 address, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 .fast-checkout .fast-checkout-purchase-option .option-text address,
+  .fast-checkout .fast-checkout-purchase-option .option-text body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 address, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 .fast-checkout .fast-checkout-purchase-option .option-text address {
+    font-size: 1.6rem;
+  }
+}
+
 .fast-checkout .fast-checkout-purchase-option .option-text p.sm, .fast-checkout .fast-checkout-purchase-option .option-text body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 address.sm, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 .fast-checkout .fast-checkout-purchase-option .option-text address.sm,
 .fast-checkout .fast-checkout-purchase-option .option-text body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 address.sm, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 .fast-checkout .fast-checkout-purchase-option .option-text address.sm,
 .fast-checkout .fast-checkout-purchase-option .option-text body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 address.sm, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 .fast-checkout .fast-checkout-purchase-option .option-text address.sm,
@@ -20554,6 +20578,15 @@ body.fast-checkout-mobile-open .fast-checkout .fast-checkout-build-order {
   .fast-checkout .fast-checkout-purchase-option .option-text body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 address.sm, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 .fast-checkout .fast-checkout-purchase-option .option-text address.sm,
   .fast-checkout .fast-checkout-purchase-option .option-text body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 address.sm, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 .fast-checkout .fast-checkout-purchase-option .option-text address.sm {
     font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .fast-checkout .fast-checkout-purchase-option .option-text p.sm, .fast-checkout .fast-checkout-purchase-option .option-text body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 address.sm, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 .fast-checkout .fast-checkout-purchase-option .option-text address.sm,
+  .fast-checkout .fast-checkout-purchase-option .option-text body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 address.sm, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 .fast-checkout .fast-checkout-purchase-option .option-text address.sm,
+  .fast-checkout .fast-checkout-purchase-option .option-text body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 address.sm, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 .fast-checkout .fast-checkout-purchase-option .option-text address.sm,
+  .fast-checkout .fast-checkout-purchase-option .option-text body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 address.sm, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 .fast-checkout .fast-checkout-purchase-option .option-text address.sm {
+    font-size: 1.4rem;
   }
 }
 

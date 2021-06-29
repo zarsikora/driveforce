@@ -37,9 +37,9 @@ $variantIDs = array(640, 641, 642); ?>
                 <p class="build-order-header">Build Your Order</p>
 
                 <div class="mobile">
-                    <?php echo button('', 'DF-18 PRO 30 PACK', 'selected', null, 'data-variant-id="'. $variantIDs[0] .'"'); ?>
-                    <?php echo button('', 'DF-18 AMATEUR 20 PACK', '', null, 'data-variant-id="'. $variantIDs[1] .'"'); ?>
-                    <?php echo button('', 'DF-18 WEEKEND WARRIOR 10 PACK', '', null, 'data-variant-id="'. $variantIDs[2] .'"'); ?>
+                    <?php echo button('', 'Pro Pack (30 Stick Packs)', 'selected', null, 'data-variant-id="'. $variantIDs[0] .'"'); ?>
+                    <?php echo button('', 'Scratch Pack (20 Stick Packs)', '', null, 'data-variant-id="'. $variantIDs[1] .'"'); ?>
+                    <?php echo button('', 'Weekend Pack (10 Stick Packs)', '', null, 'data-variant-id="'. $variantIDs[2] .'"'); ?>
                 </div>
 
                 <div class="desktop">
@@ -47,7 +47,7 @@ $variantIDs = array(640, 641, 642); ?>
                     <div class="select">
                         <div class="selected-option" data-variant-id="<?php echo $variantIDs[0] ?>">
                             <div>
-                                <span class="selected-product">DF-18 Pro 30 Pack</span>
+                                <span class="selected-product">Pro Pack (30 Stick Packs)</span>
                                 <!-- <span class="selected-type">Monthly subscription</span>-->
                             </div>
                             <svg viewBox="0 0 16.279 10.853">
@@ -55,9 +55,9 @@ $variantIDs = array(640, 641, 642); ?>
                             </svg>
                         </div>
                         <div class="dropdown">
-                            <a href="#" data-variant-id="<?php echo $variantIDs[0] ?>">PRO30 PACK</a>
-                            <a href="#" data-variant-id="<?php echo $variantIDs[1] ?>">AM20 PACK</a>
-                            <a href="#" data-variant-id="<?php echo $variantIDs[2] ?>">WW10 PACK</a>
+                            <a href="#" data-variant-id="<?php echo $variantIDs[0] ?>">Pro Pack (30 Stick Packs)</a>
+                            <a href="#" data-variant-id="<?php echo $variantIDs[1] ?>">Scratch Pack (20 Stick Packs)</a>
+                            <a href="#" data-variant-id="<?php echo $variantIDs[2] ?>">Weekend Pack (10 Stick Packs)</a>
                         </div>
                     </div>
                 </div>
