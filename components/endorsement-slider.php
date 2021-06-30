@@ -28,7 +28,7 @@
                                 $image = get_sub_field('image');
                                 $index = get_row_index();
                                 ?>
-                                <img class="accent-image <?php if($index === 1) echo ' active' ?>" data-slide="<?php echo $index ?>" src="<?php echo $image['url'] ?>" alt="alt text" />
+                                <img class="accent-image <?php if($index === 1) echo ' active' ?>" data-slide="<?php echo $index - 1 ?>" src="<?php echo $image['url'] ?>" alt="alt text" />
                             <?php endwhile ?>
                         </div>
                     </div>
@@ -48,7 +48,7 @@
                                 $buttonText = $button['title'];
                             }
                             ?>
-                            <div class="details-block <?php if($index === 1) echo ' active' ?>" data-slide="<?php echo $index ?>">
+                            <div class="details-block <?php if($index === 1) echo ' active' ?>" data-slide="<?php echo $index - 1 ?>">
                                 <?php if($name): ?>
                                     <h3><?php echo $name ?></h3>
                                 <?php endif; ?>
@@ -74,8 +74,8 @@
                 </div>
 
                 <div class="slider-nav">
-                    <?php for($i = 1; $i <= $slideCount; $i++ ): ?>
-                        <button class="slider-nav-btn <?php if($i === 1) echo ' active'?>" data-slide="<?php echo $i ?>"></button>
+                    <?php for($i = 0; $i <= $slideCount - 1; $i++ ): ?>
+                        <button class="slider-nav-btn" data-slide="<?php echo $i ?>"></button>
                     <?php endfor; ?>
                 </div>
             </div>

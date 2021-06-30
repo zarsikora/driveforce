@@ -41862,28 +41862,75 @@ $(heroBtn).on('click', function(e){
 });
 
 // ENDORSEMENT SLIDER
-let sliderBtn = $('.slider-nav-btn');
-
-if(sliderBtn)
+function EndorsementSlider()
 {
-    let images = $('.accent-image');
-    let details = $('.details-block');
+    this.module = $('.endorsement-slider');
+    this.navBtns = $('.slider-nav-btn', this.module);
+    this.loop = null;
+    this.activeIndex = 0;
+    this.images = $('.accent-image');
+    this.details = $('.details-block');
 
-    $(sliderBtn).on('click', function(e)
+    // Create setInterval that changes the current slide every x seconds
+    this.startLoop = function()
     {
-        let slideIndex = $(e.target).data('slide');
+        if(!this.loop) $(this.navBtns[0]).addClass('active');
+
+        this.loop = setInterval(function()
+        {
+            let nextIndex = (this.activeIndex == this.navBtns.length - 1) ? 0 : this.activeIndex + 1;
+
+            this.changeSlide(nextIndex);
+
+        }.bind(this), 8000);
+    }
+
+    this.changeSlide = function(index)
+    {
+        // Reset all buttons cuz its just easier
+        this.navBtns.removeClass('filled active');
+
+        // Update active index
+        this.activeIndex = index;
+
+        // Loop through all indexes through activeIndex and set .filled or active
+        for(let i = 0; i < index + 1; i++)
+        {
+            if(index === this.activeIndex && this.loop) {
+                $(this.navBtns[i]).addClass('active');
+            } else {
+                $(this.navBtns[i]).addClass('filled');
+            }
+        }
 
         // Disable current active elements
-        $(sliderBtn).removeClass('active');
-        $(images).removeClass('active');
-        $(details).removeClass('active');
+        this.images.removeClass('active');
+        this.details.removeClass('active');
 
-        // Activate elements
-        $(e.target).addClass('active');
-        $('img.accent-image[data-slide="'+ slideIndex +'"]').addClass('active');
-        $('.details-block[data-slide="'+ slideIndex +'"]').addClass('active');
-    });
+        // Change image and content
+        $('img.accent-image[data-slide="'+ this.activeIndex +'"]').addClass('active');
+        $('.details-block[data-slide="'+ this.activeIndex +'"]').addClass('active');
+    }
+
+    this.navBtns.on('click', function(e)
+    {
+        const index = $(e.target).attr('data-slide');
+
+        if(index == this.activeIndex) return;
+
+        console.log('wtf');
+        console.log(index, this.activeIndex);
+
+        clearInterval(this.loop);
+        this.loop = null;
+
+        this.changeSlide(index);
+    }.bind(this));
+
+    this.startLoop();
 }
+
+let endorsementSliderInstance = new EndorsementSlider();
 
 let ingredientsDisplay = $(".ingredients-list-display");
 // INGREDIENTS LIST DISPLAY CLICK HANDLER - MOBILE

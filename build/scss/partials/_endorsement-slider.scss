@@ -162,19 +162,45 @@
             button {
                 width: 10rem;
                 height: 1rem;
-                transition: all ease 300ms;
                 border: none;
                 outline: none;
                 background-color: $sage;
                 margin-right: 2rem;
                 border-radius: .5rem;
+                position: relative;
+                overflow: hidden;
 
                 &:last-child {
                     margin-right: 0;
                 }
 
-                &.active {
-                    background-color: $highlight;
+                &:before {
+                    content: '';
+                    background: $red;
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    transform: translateX(-100%);
+                    transition: none;
+                }
+
+                &.active:before {
+                    animation: buttonFill linear 8000ms forwards;
+                }
+
+                &.filled:before {
+                    transform: translateX(0);
+                }
+
+                @keyframes buttonFill {
+                    from {
+                        transform: translateX(-100%);
+                    }
+                    to {
+                        transform: translateX(0);
+                    }
                 }
             }
         }

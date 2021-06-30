@@ -16454,20 +16454,56 @@ body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .
 .endorsement-slider #slider .slider-nav button {
   width: 10rem;
   height: 1rem;
-  transition: all ease 300ms;
   border: none;
   outline: none;
   background-color: #447563;
   margin-right: 2rem;
   border-radius: .5rem;
+  position: relative;
+  overflow: hidden;
 }
 
 .endorsement-slider #slider .slider-nav button:last-child {
   margin-right: 0;
 }
 
-.endorsement-slider #slider .slider-nav button.active {
-  background-color: #DB4343;
+.endorsement-slider #slider .slider-nav button:before {
+  content: '';
+  background: #DB4343;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translateX(-100%);
+  transition: none;
+}
+
+.endorsement-slider #slider .slider-nav button.active:before {
+  -webkit-animation: buttonFill linear 8000ms forwards;
+          animation: buttonFill linear 8000ms forwards;
+}
+
+.endorsement-slider #slider .slider-nav button.filled:before {
+  transform: translateX(0);
+}
+
+@-webkit-keyframes buttonFill {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes buttonFill {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
 }
 
 @media (max-width: 991.98px) {
