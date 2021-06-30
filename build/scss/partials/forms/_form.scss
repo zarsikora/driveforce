@@ -99,7 +99,6 @@ form.sharpspring-waitlist {
         box-shadow: none;
         @include media-breakpoint-up(xl){
             font-size: 1.111vw;
-            padding: 0 3rem;
         }
         @media(min-width: 1920px) {
             font-size: 2.1rem;
@@ -127,6 +126,11 @@ form.sharpspring-waitlist {
 
     button {
         margin-top: 2rem;
+    }
+
+    p.required {
+        margin: .5rem 0 0 0;
+        font-size: 1.2rem !important;
     }
 
     .form-loading {

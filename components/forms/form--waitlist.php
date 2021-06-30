@@ -12,6 +12,7 @@
             <label class="sr-only">Email</label>
             <input class="form-control" type="text" name="email" value="" placeholder="Email*" />
         </div>
+        <p class="required">* All fields are required</p>
         <button disabled class="btn small" type="submit">
             <div class="btn-hover-mask"></div>
             <span>Sign Up</span>

@@ -15249,7 +15249,6 @@ form.sharpspring-waitlist .form-control {
 @media (min-width: 1200px) {
   form.sharpspring-waitlist .form-control {
     font-size: 1.111vw;
-    padding: 0 3rem;
   }
 }
 
@@ -15293,6 +15292,14 @@ form.sharpspring-waitlist .form-control:active::placeholder, form.sharpspring-wa
 
 form.sharpspring-waitlist button {
   margin-top: 2rem;
+}
+
+form.sharpspring-waitlist p.required, form.sharpspring-waitlist body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 address.required, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 form.sharpspring-waitlist address.required,
+form.sharpspring-waitlist body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 address.required, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 form.sharpspring-waitlist address.required,
+form.sharpspring-waitlist body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 address.required, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 form.sharpspring-waitlist address.required,
+form.sharpspring-waitlist body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 address.required, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 form.sharpspring-waitlist address.required {
+  margin: .5rem 0 0 0;
+  font-size: 1.2rem !important;
 }
 
 form.sharpspring-waitlist .form-loading {
