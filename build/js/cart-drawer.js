@@ -2,11 +2,23 @@ window.$ = window.jQuery = jQuery;
 
 const cartDrawerButton = $('.open-cart-drawer');
 
+$('body').on('mouseenter', '.cart-drawer-overlay', function(e)
+{
+    if($('body').hasClass('cart-drawer-closeable')) {
+        $('body').removeClass('cart-drawer-open cart-drawer-closeable');
+    }
+});
+
 cartDrawerButton.on('click', function(e)
 {
     e.preventDefault();
 
     $('body').addClass('cart-drawer-open');
+
+    setTimeout(function()
+    {
+        $('body').addClass('cart-drawer-closeable');
+    }, 500);
 });
 
 const closeCartDrawer = $('.close-cart-drawer');
@@ -15,7 +27,7 @@ closeCartDrawer.on('click', function(e)
 {
     e.preventDefault();
 
-    $('body').removeClass('cart-drawer-open');
+    $('body').removeClass('cart-drawer-open cart-drawer-closeable');
 });
 
 const removeProductButtons = $('.cart-drawer-remove-product');
