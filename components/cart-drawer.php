@@ -3,10 +3,9 @@
     $cartCount = WC()->cart->get_cart_contents_count();
     $cartSubtotal = WC()->cart->get_cart_subtotal();
     $shippingTotal = WC()->cart->get_shipping_total();
+    $cartTax = WC()->cart->get_cart_contents_tax();
     $cartTotal = WC()->cart->get_total();
     $cartItems = array();
-
-    //echo WC()->cart->get_cart_subtotal();
 
     foreach(WC()->cart->get_cart() as $cart_item_key => $cart_item)
     {
@@ -91,8 +90,8 @@
                     <dt>Subtotal</dt>
                     <dd class="cart-subtotal"><?php echo $cartSubtotal ?></dd>
 
-                    <dt>Total</dt>
-                    <dd class="cart-total"><?php echo $cartTotal ?></dd>
+                    <dt>Shipping</dt>
+                    <dd class="cart-shipping">$<?php echo number_format((float)$shippingTotal, 2, '.', ''); ?></dd>
                 </dl>
             </div>
         </div>
@@ -100,6 +99,7 @@
 
     <div class="cart-drawer-checkout">
         <?php echo button(get_bloginfo('url') . '/checkout', 'Secure Checkout', '', null, ''); ?>
+        <span class="tax-note">Tax calculated at checkout</span>
     </div>
 </div>
 <div class="cart-drawer-overlay"></div>

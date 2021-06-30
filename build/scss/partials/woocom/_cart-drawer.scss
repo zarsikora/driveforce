@@ -257,9 +257,9 @@ body.cart-drawer-open {
 }
 
 .cart-drawer-checkout {
-    height: 10rem;
     flex: 0 0 100%;
-    padding: 0 2rem;
+    flex-wrap: wrap;
+    padding: 2rem;
     align-self: flex-end;
     background: $mediumGreen;
     display: none;
@@ -275,6 +275,13 @@ body.cart-drawer-open {
         max-width: none;
         text-align: center;
         padding: 2rem;
+    }
+
+    .tax-note {
+        flex: 0 0 100%;
+        font-size: 1.2rem;
+        text-align: center;
+        margin-top: 1em;
     }
 }
 
