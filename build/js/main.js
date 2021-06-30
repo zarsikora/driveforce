@@ -927,7 +927,7 @@ function EndorsementSlider()
 
             this.changeSlide(nextIndex);
 
-        }.bind(this), 8000);
+        }.bind(this), 5000);
     }
 
     this.changeSlide = function(index)
