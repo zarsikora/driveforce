@@ -103,7 +103,7 @@ $variantIDs = array(640, 641, 642); ?>
                     </div>
                     -->
 
-                    <div class="col-lg-12 col-xl-7 offset-xl-5 fast-checkout-purchase-option option2">
+                    <div class="col-lg-12 col-xl-10 offset-xl-2 fast-checkout-purchase-option option2">
                         <div class="option-text">
                             <p>Subtotal</p>
                             <p class="sm">Tax and shipping calculated at checkout</p>

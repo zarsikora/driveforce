@@ -364,6 +364,7 @@ body.fast-checkout-active {
         border-bottom: .1rem solid #447563;
         @include media-breakpoint-up(xl) {
             border: none;
+            justify-content: flex-end;
         }
 
         label {
@@ -435,6 +436,7 @@ body.fast-checkout-active {
             display: inline-block;
             vertical-align: top;
             font-size: 1.2rem;
+            margin-right: 2rem;
             @include media-breakpoint-up(xl) {
                 font-size: 1.4rem;
             }

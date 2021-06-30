@@ -20446,6 +20446,7 @@ body.fast-checkout-mobile-open .fast-checkout .fast-checkout-build-order {
 @media (min-width: 1200px) {
   .fast-checkout .fast-checkout-purchase-option {
     border: none;
+    justify-content: flex-end;
   }
 }
 
@@ -20533,6 +20534,7 @@ body.fast-checkout-mobile-open .fast-checkout .fast-checkout-build-order {
   display: inline-block;
   vertical-align: top;
   font-size: 1.2rem;
+  margin-right: 2rem;
 }
 
 @media (min-width: 1200px) {
