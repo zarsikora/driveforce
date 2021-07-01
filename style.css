@@ -11427,27 +11427,34 @@ body.mobile-nav-active #header.background-color-green .close {
   fill: #fff;
 }
 
-body.sticky-header #header, #header.background-color-white {
+body.sticky-header #header,
+body.woocommerce-account.my-account-login #header, #header.background-color-white {
   background-color: #fff;
 }
 
 body.sticky-header #header .hamburger-control svg,
 body.sticky-header #header svg.logo,
-body.sticky-header #header svg.cart, #header.background-color-white .hamburger-control svg,
+body.sticky-header #header svg.cart,
+body.woocommerce-account.my-account-login #header .hamburger-control svg,
+body.woocommerce-account.my-account-login #header svg.logo,
+body.woocommerce-account.my-account-login #header svg.cart, #header.background-color-white .hamburger-control svg,
 #header.background-color-white svg.logo,
 #header.background-color-white svg.cart {
   fill: #081D1A;
 }
 
-body.sticky-header #header .hamburgder-control svg.close, #header.background-color-white .hamburgder-control svg.close {
+body.sticky-header #header .hamburgder-control svg.close,
+body.woocommerce-account.my-account-login #header .hamburgder-control svg.close, #header.background-color-white .hamburgder-control svg.close {
   stroke: #fff;
 }
 
-body.sticky-header #header .nav .nav-link, #header.background-color-white .nav .nav-link {
+body.sticky-header #header .nav .nav-link,
+body.woocommerce-account.my-account-login #header .nav .nav-link, #header.background-color-white .nav .nav-link {
   color: #081D1A;
 }
 
-body.sticky-header #header .nav .nav-link svg.logo, #header.background-color-white .nav .nav-link svg.logo {
+body.sticky-header #header .nav .nav-link svg.logo,
+body.woocommerce-account.my-account-login #header .nav .nav-link svg.logo, #header.background-color-white .nav .nav-link svg.logo {
   fill: #081D1A;
 }
 
