@@ -40567,18 +40567,7 @@ if(fastCheckoutSelect)
 }
 window.$ = window.jQuery = jQuery;
 
-var _ss = _ss || [];
-_ss.push(['_setDomain', 'https://koi-3QNE6LJPAE.marketingautomation.services/net']);
-_ss.push(['_setAccount', 'KOI-4DT9NRPKF6']);
-_ss.push(['_trackPageView']);
-window._pa = window._pa || {};
-(function() {
-    var ss = document.createElement('script');
-    ss.type = 'text/javascript'; ss.async = true;
-    ss.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'koi-3QNE6LJPAE.marketingautomation.services/client/ss.js?ver=2.4.0';
-    var scr = document.getElementsByTagName('script')[0];
-    scr.parentNode.insertBefore(ss, scr);
-})();
+// Tracking cookie?
 
 function validateForm(fieldsArray)
 {
@@ -40616,8 +40605,6 @@ function getFormFieldsArray(form = null, fields = null)
         fieldsArr[fields[i].name] = fields[i].value;
     }
 
-    console.log(fieldsArr);
-
     return fieldsArr;
 }
 
@@ -40638,7 +40625,6 @@ document.addEventListener( 'wpcf7submit', function(event)
     const inputs = event.detail.inputs;
     let fieldsArr = getFormFieldsArray(null, inputs);
         fieldsArr['signup-type'] = 'Contact Form';
-    const method = 'createLeads';
     const errors = validateForm(fieldsArr);
 
     if(Object.keys(errors).length)
@@ -40647,7 +40633,7 @@ document.addEventListener( 'wpcf7submit', function(event)
         return;
     }
 
-    sharpspringAJAXRequest(method, fieldsArr, $(this));
+    mailchimpAJAXRequest(fieldsArr, $(this));
 });
 
 $('form').on('submit', function(e)
@@ -40661,8 +40647,6 @@ $('form').on('submit', function(e)
         $('.form-loading', $(this)).show();
 
         let fieldsArr = getFormFieldsArray($(this));
-            //fieldsArr['signup-type'] =  'Waitlist';
-        let method = 'createLeads';
         let errors = validateForm(fieldsArr);
 
         if(Object.keys(errors).length)
@@ -40671,38 +40655,33 @@ $('form').on('submit', function(e)
             return;
         }
 
-        sharpspringAJAXRequest(method, fieldsArr, $(this));
+        mailchimpAJAXRequest(fieldsArr, $(this));
     }
 });
 
-async function sharpspringAJAXRequest(method, fields = null, form)
+async function mailchimpAJAXRequest(fields = null, form)
 {
     const _form = form;
 
-    const ajaxResults = await $.ajax({
+    console.log(fields);
+
+    $.ajax({
         type: 'POST',
         url: localized_vars.ajaxurl,
         dataType: 'json',
         data: {
-            action: 'sharpspring_request',
-            method: method,
+            action: 'mailchimp_add_member_to_list',
             fields: fields
         },
         success: function(data)
         {
-            let json = JSON.parse(data);
+            console.log(data);
 
             if(typeof _form == undefined) return;
 
             let formMessage = $('.form-message', _form);
 
             $('.form-loading', _form).hide();
-
-            if(json.error.length)
-            {
-                formMessage.html('<p>' + json.error[0].message + '</p>');
-                return;
-            }
 
             formMessage.html('<p>You\'ve been added to our newsletter!</p>');
         },
@@ -40711,69 +40690,7 @@ async function sharpspringAJAXRequest(method, fields = null, form)
             console.log(error);
         }
     });
-
-    const ajaxResultsJSON = JSON.parse(ajaxResults);
-
-    console.log(ajaxResultsJSON);
-
-    if(method == 'createLeads' && !ajaxResultsJSON.error.length)
-    {
-        $.ajax({
-            type: 'POST',
-            url: localized_vars.ajaxurl,
-            dataType: 'json',
-            data: {
-                action: 'sharpspring_request',
-                method: 'updateLeads',
-                fields: {
-                    'id': ajaxResultsJSON['result']['creates'][0]['id'],
-                    'signup_method': 'Waitlist'
-                }
-            },
-            success: function(data)
-            {
-                console.log(data);
-            },
-            error: function(error)
-            {
-                console.log(error);
-            }
-        });
-    }
 }
-
-function sharpspringTransaction()
-{
-    // _ss.push(['_setTransaction', {
-    //     'transactionID': '<?php echo $order->get_order_number(); ?>',
-    //     'storeName': 'Store Name',
-    //     'total': '<?php echo $order->get_total(); ?>',
-    //     'tax': '<?php echo $order->get_total_tax(); ?>',
-    //     'shipping': '<?php echo $order->get_total_shipping(); ?>',
-    //     'city': '<?php echo $billing['city']; ?>',
-    //     'state': '<?php echo $billing['state']; ?>',
-    //     'zipcode': '<?php echo $billing['postcode']; ?>',
-    //     'country': '<?php echo $billing['country']; ?>',
-    //
-    //     'firstName': '<?php echo $billing['first_name']; ?>', // optional parameter
-    //     'lastName': '<?php echo $billing['last_name']; ?>', // optional parameter
-    //     'emailAddress': '<?php echo $billing['email']; ?>' // optional parameter
-    // }]);
-    //
-    // _ss.push(['_addTransactionItem', {
-    //     'transactionID': '<?php echo $order->get_order_number(); ?>',
-    //     'itemCode': '<?php echo $product_sku; ?>',
-    //     'productName': '<?php echo $product['name']; ?>',
-    //     'category': 'General',
-    //     'price': '<?php echo $product['line_total']; ?>',
-    //     'quantity': '<?php echo $product['qty']; ?>'
-    // }]);
-    //
-    // _ss.push(['_completeTransaction', {
-    //     'transactionID': '<?php echo $order->get_order_number(); ?>'
-    // }]);
-}
-//add_action( 'woocommerce_thankyou', 'sharpspringTransaction' );
 window.$ = window.jQuery = jQuery;
 
 const cartDrawerButton = $('.open-cart-drawer');

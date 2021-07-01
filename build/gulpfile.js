@@ -49,7 +49,8 @@ function scripts() {
             "./node_modules/@splidejs/splide/dist/js/splide.js",
             "./node_modules/micromodal/dist/micromodal.js",
             "./js/fast-checkout.js",
-            "./js/sharpspring.js",
+            // "./js/sharpspring.js",
+            "./js/mailchimp.js",
             "./js/cart-drawer.js",
             "./js/sticky-nav.js",
             "./js/main.js"

@@ -1,5 +1,6 @@
 <?php
-include('includes/sharpspring.php');
+include('includes/mailchimp.php');
+//include('includes/sharpspring.php');
 include('includes/fast-checkout.php');
 include('includes/cart-drawer.php');
 include('includes/button.php');
