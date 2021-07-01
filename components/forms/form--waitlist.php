@@ -17,7 +17,7 @@
             <div class="btn-hover-mask"></div>
             <span>Sign Up</span>
         </button>
-        <img class="form-loading" src="http://staging.driveforce.golf/wp-content/uploads/2021/01/loading-gif.gif" alt="loading" />
+        <img class="form-loading" src="<?php echo get_bloginfo('url') ?>/wp-content/uploads/2021/01/loading-gif.gif" alt="loading" />
         <div class="form-message"></div>
     </form>
 </div>
