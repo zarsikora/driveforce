@@ -41870,10 +41870,14 @@ function EndorsementSlider()
     this.activeIndex = 0;
     this.images = $('.accent-image');
     this.details = $('.details-block');
+    this.lastPageY = 0;
+
+    const reference = this;
 
     // Create setInterval that changes the current slide every x seconds
     this.startLoop = function()
     {
+        console.log('loop');
         if(!this.loop) $(this.navBtns[0]).addClass('active');
 
         this.loop = setInterval(function()
@@ -41896,7 +41900,7 @@ function EndorsementSlider()
         // Loop through all indexes through activeIndex and set .filled or active
         for(let i = 0; i < index + 1; i++)
         {
-            if(index === this.activeIndex && this.loop) {
+            if(i === this.activeIndex && this.loop) {
                 $(this.navBtns[i]).addClass('active');
             } else {
                 $(this.navBtns[i]).addClass('filled');
@@ -41918,16 +41922,31 @@ function EndorsementSlider()
 
         if(index == this.activeIndex) return;
 
-        console.log('wtf');
-        console.log(index, this.activeIndex);
-
         clearInterval(this.loop);
         this.loop = null;
 
         this.changeSlide(index);
     }.bind(this));
 
-    this.startLoop();
+    this.checkScrollPosition = function()
+    {
+        // If the page hasn't scrolled, run check again without doing anything
+        if(window.pageYOffset == this.lastPageY)
+        {
+            scroll(referencee.checkScrollPosition);
+            return;
+        }
+
+        if(window.innerHeight + window.pageYOffset > $(reference.navBtns).offset().top)
+        {
+            if(!reference.loop) reference.startLoop();
+            return;
+        }
+
+        scroll(reference.checkScrollPosition);
+    }
+
+    scroll(this.checkScrollPosition);
 }
 
 let endorsementSliderInstance = new EndorsementSlider();

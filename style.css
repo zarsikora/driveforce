@@ -16480,8 +16480,8 @@ body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .
 }
 
 .endorsement-slider #slider .slider-nav button.active:before {
-  -webkit-animation: buttonFill linear 8000ms forwards;
-          animation: buttonFill linear 8000ms forwards;
+  -webkit-animation: buttonFill linear 5000ms forwards;
+          animation: buttonFill linear 5000ms forwards;
 }
 
 .endorsement-slider #slider .slider-nav button.filled:before {
