@@ -13296,6 +13296,8 @@ body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .
 .module-wrapper.product-intro-module .module-padded .mobile-image {
   margin: 0 auto 4rem auto;
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 @media (min-width: 992px) {
