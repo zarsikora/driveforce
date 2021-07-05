@@ -40350,6 +40350,27 @@ window.Splide = complete_Splide;
 
 window.$ = window.jQuery = jQuery;
 
+function NotificationModal()
+{
+    this.modal = $('.notification-modal');
+    this.message = $('.notification-modal-message', this.modal);
+
+    this.showModal = function(message)
+    {
+        this.message.text(message);
+
+        this.modal.addClass('active');
+
+        setTimeout(function()
+        {
+            this.modal.removeClass('active');
+        }.bind(this), 3000);
+    }
+}
+
+const notificationModal = new NotificationModal();
+window.$ = window.jQuery = jQuery;
+
 const environment = localized_vars['environment'];
 const variantIDs = [640, 641, 642];
 const fastCheckout = $('.fast-checkout');
@@ -40858,11 +40879,16 @@ if(df18AddBundleToCartButton.length)
 {
     const df18BundleSelect = $('.bundle-select');
 
-    df18AddBundleToCartButton.on('click', function(e)
+    df18AddBundleToCartButton.on('click touch', function(e)
     {
         const selectedBundle = $('option:selected', df18BundleSelect);
         const bundleID = selectedBundle.data('id');
         const quantity = $('.quantity input.qty').val();
+
+        const _this = $(this);
+
+        // Disable button so it can't be mashed
+        _this.prop('disabled', true);
 
         $.ajax({
             url: localized_vars.ajaxurl,
@@ -40875,11 +40901,16 @@ if(df18AddBundleToCartButton.length)
             },
             success: function(data)
             {
+                _this.prop('disabled', false);
+
                 if(!data) console.log('there was a problem adding the item to your cart');
 
                 // Update cart drawer
 
                 // Update cart icon count
+
+                // Success modal message
+                notificationModal.showModal('DF-18 has been added to your cart!');
             },
             error: function(error)
             {

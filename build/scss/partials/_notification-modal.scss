@@ -1,0 +1,27 @@
+.notification-modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 50%;
+    bottom: 2rem;
+    transform: translateX(-50%);
+    max-width: 80%;
+    width: 100%;
+    background: rgba($red, 0.8);
+    text-align: center;
+    padding: 2rem 4rem;
+    border-radius: 1.4rem;
+    @include media-breakpoint-up(md) {
+        max-width: 40rem;
+    }
+
+    &.active {
+        display: block;
+    }
+}
+
+.notification-modal-message {
+    color: #fff;
+    font-family: $sharpSansMedium;
+    font-size: 1.4rem;
+}

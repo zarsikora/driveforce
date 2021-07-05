@@ -48,6 +48,7 @@ function scripts() {
             "./node_modules/splitting/dist/splitting.js",
             "./node_modules/@splidejs/splide/dist/js/splide.js",
             "./node_modules/micromodal/dist/micromodal.js",
+            "./js/notification-modal.js",
             "./js/fast-checkout.js",
             // "./js/sharpspring.js",
             "./js/mailchimp.js",

@@ -58,6 +58,8 @@ if ( $product->is_in_stock() ) : ?>
             <?php echo $bundleSelectHTML; ?>
         </select>
 
+        <div class="clear"></div>
+
     <?php }  ?>
 
     <?php do_action( 'woocommerce_before_add_to_cart_form' ); ?>

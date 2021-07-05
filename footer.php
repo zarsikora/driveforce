@@ -22,6 +22,9 @@
             </div>
         </div>
 
+        <!-- Notification Modal -->
+        <?php include('components/notification-modal.php'); ?>
+
         <?php wp_footer(); ?>
 
     </body>
