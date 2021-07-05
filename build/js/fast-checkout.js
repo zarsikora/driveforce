@@ -18,31 +18,16 @@ if(fastCheckoutSelect)
     let option1 = $('.fast-checkout-purchase-option.option1');
     let option2 = $('.fast-checkout-purchase-option.option2');
 
-    function updateSelectedOption(variantID)
+    // Update selected product name and type
+    function updateSelectedOption(bundle)
     {
-        const selectedType = $('input[name="fast-checkout-purchase-type"]:checked').val();
-        const type = (selectedType == '1_month') ? 'Monthly Subscription' : 'One Time Purchase';
-        const product = (variantID === variantIDs[0]) ? 'DF-18 Pro 30 Pack' : (variantID === variantIDs[1]) ? 'DF-18 Amateur 20 Pack' : 'DF-18 Weekend Warrior 10 Pack';
-
-        $('.fast-checkout-variant-select .selected-product').text(product);
-        $('.fast-checkout-variant-select .selected-type').text(type);
+        $('.fast-checkout-variant-select .selected-product').text(bundle.name);
+        $('.fast-checkout-purchase-option.option2 .regular-price').text('$' + bundle.price);
     }
 
-    function updatePurchaseTypes(data)
+    // Get product object
+    function getProductObject(bundleID)
     {
-        const discount = data.scheme[0].subscription_discount;
-        const price = data.variation.display_price;
-        const subscriptionPrice = price - ((discount / 100) * price);
-
-        //$('.subscribe-price', option1).text('$'+subscriptionPrice);
-        //$('.regular-price', option1).text('$'+price);
-        $('.fast-checkout-purchase-option.option2 .regular-price').text('$'+price);
-    }
-
-    function getProductObject(variantID)
-    {
-        const prodID = 581; // Should this be hardcoded? For now with one product it should be fine
-
         try {
             // Get product object
             return $.ajax({
@@ -52,15 +37,7 @@ if(fastCheckoutSelect)
                 async: false,
                 data: {
                     action: 'df_get_product_object',
-                    prodID: prodID,
-                    variationID: variantID
-                },
-                success: function(data)
-                {
-                    // if(!fireUpdates) return;
-                    //
-                    // updatePurchaseTypes(data);
-                    // updateSelectedOption(data.variation.variation_id);
+                    bundleID: bundleID
                 },
                 error: function(err)
                 {
@@ -73,6 +50,7 @@ if(fastCheckoutSelect)
         }
     }
 
+    // Close dropdown on mousemove
     $('body').on('mousemove', function(e)
     {
         if(!selectDropdownOpen) return;
@@ -84,6 +62,7 @@ if(fastCheckoutSelect)
         }
     });
 
+    // Mobile close button handler
     fastCheckoutMobileClose.on('click', function(e)
     {
         e.preventDefault();
@@ -91,6 +70,7 @@ if(fastCheckoutSelect)
         $('body').removeClass('fast-checkout-mobile-open');
     });
 
+    // Mobile open button handler
     fastCheckoutMobileOpen.on('click', function(e)
     {
         e.preventDefault();
@@ -98,6 +78,7 @@ if(fastCheckoutSelect)
         $('body').toggleClass('fast-checkout-mobile-open')
     });
 
+    // Select option click handler
     fastCheckoutSelect.on('click', function(e)
     {
         e.preventDefault();
@@ -106,6 +87,7 @@ if(fastCheckoutSelect)
         selectDropdownOpen = true;
     });
 
+    // Select option click handler
     fastCheckoutSelectOptions.on('click', function(e)
     {
         e.preventDefault();
@@ -115,20 +97,22 @@ if(fastCheckoutSelect)
         selectDropdownOpen = false;
 
         // Update selected variant id
-        fastCheckoutSelect.attr('data-variant-id', $(this).attr('data-variant-id'));
+        fastCheckoutSelect.attr('data-bundle-id', $(this).attr('data-bundle-id'));
 
         // Get variant object
-        let prodData = getProductObject($(this).attr('data-variant-id'));
+        let prodData = getProductObject($(this).attr('data-bundle-id'));
 
-        prodData.always(function(data) {
-            let price = data.variation.display_price;
-            $('.fast-checkout-purchase-option.option2 .regular-price').text('$'+price);
+        prodData.always(function(bundle)
+        {
+            const prod = bundle.product;
 
-            updatePurchaseTypes(data);
-            updateSelectedOption(data.variation.variation_id);
+            $('.fast-checkout-purchase-option.option2 .regular-price').text('$' + prod.price);
+
+            updateSelectedOption(prod);
         });
     });
 
+    // Mobile bundle selection click handler
     fastCheckoutMobileButtons.on('click', function(e)
     {
         e.preventDefault();
@@ -138,19 +122,20 @@ if(fastCheckoutSelect)
         $(this).addClass('selected');
 
         // Update selected variant id
-        fastCheckoutSelect.attr('data-variant-id', $(this).attr('data-variant-id'));
+        fastCheckoutSelect.attr('data-bundle-id', $(this).attr('data-bundle-id'));
 
         // Updated selected name
         let name = $(this).text();
         $('.fast-checkout-mobile-bar .purchase .product').text(name);
 
         // Update subtotal
-        let prodData = getProductObject($(this).attr('data-variant-id'));
+        let prodData = getProductObject($(this).attr('data-bundle-id'));
 
         prodData.always(function(data)
         {
-            let price = data.variation.display_price;
-            $('.fast-checkout-purchase-option.option2 .regular-price').text('$'+price);
+            const prod = data.product;
+
+            $('.fast-checkout-purchase-option.option2 .regular-price').text('$' + prod.price);
         });
     });
 
@@ -163,14 +148,12 @@ if(fastCheckoutSelect)
         $('.fast-checkout-variant-select .selected-type').text(purchaseType);
     });
 
-    // Proceed to checkout
+    // Proceed to checkout handler
     fastCheckoutSubmit.on('click', function(e)
     {
         e.preventDefault();
 
-        const variantID = fastCheckoutSelect.attr('data-variant-id');
-        const prodID = 581; // Should this be hardcoded? For now with one product it should be fine
-        const purchaseType = $('input[name="fast-checkout-purchase-type"]:checked').val();
+        const prodID = fastCheckoutSelect.data('bundle-id');
 
         $.ajax({
             url: localized_vars.ajaxurl,
@@ -178,14 +161,10 @@ if(fastCheckoutSelect)
             dataType: 'json',
             data: {
                 action: 'fast_checkout',
-                prodID: prodID,
-                variantID: variantID,
-                purchaseType: purchaseType
+                prodID: prodID
             },
             success: function(data)
             {
-                console.log(data);
-
                 window.location = '/checkout';
             },
             error: function(error)
@@ -195,6 +174,7 @@ if(fastCheckoutSelect)
         });
     });
 
+    // Open fast checkout on scroll
     if($('body').is('.home, .single-product'))
     {
         const triggerElement = $('body').hasClass('home') ? $('.product-intro-module .btn') : $('.benefits-module');

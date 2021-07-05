@@ -53,6 +53,7 @@ function scripts() {
             "./js/mailchimp.js",
             "./js/cart-drawer.js",
             "./js/sticky-nav.js",
+            "./js/pdp.js",
             "./js/main.js"
             ])
             .pipe(concat('bundle.js'))

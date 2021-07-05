@@ -20811,6 +20811,38 @@ body.single-product #primary .product .summary .price .wcsatt-sub-options {
   font-size: 1.6rem;
 }
 
+body.single-product #primary .product .summary .quantity {
+  position: relative;
+  float: none;
+  margin-right: 4rem;
+}
+
+body.single-product #primary .product .summary .quantity input.input-text {
+  height: 6.6rem;
+}
+
+body.single-product #primary .product .summary .quantity .quantity-nav {
+  height: 6.6rem;
+}
+
+body.single-product #primary .product .summary .quantity .quantity-nav .quantity-button {
+  height: 3.3rem;
+  line-height: 3.3rem;
+}
+
+body.single-product #primary .product .summary .bundle-select {
+  width: 100%;
+  max-width: 35rem;
+  height: 6rem;
+  line-height: 6rem;
+  background: #fff;
+  border-radius: .4rem;
+  border: none;
+  padding: 0 2rem;
+  margin: 0 0 2.5rem 0;
+  font-size: 1.6rem;
+}
+
 body.single-product #primary .product .summary h2 {
   font-size: 2.4rem;
   font-family: "Sharp Sans Extrabold";
@@ -20916,25 +20948,6 @@ body.single-product #primary .product .summary form.cart .single_variation_wrap 
 
 body.single-product #primary .product .summary form.cart .single_variation_wrap h2.qty {
   display: none;
-}
-
-body.single-product #primary .product .summary form.cart .single_variation_wrap .quantity {
-  position: relative;
-  float: none;
-  margin-right: 4rem;
-}
-
-body.single-product #primary .product .summary form.cart .single_variation_wrap .quantity input.input-text {
-  height: 6.6rem;
-}
-
-body.single-product #primary .product .summary form.cart .single_variation_wrap .quantity .quantity-nav {
-  height: 6.6rem;
-}
-
-body.single-product #primary .product .summary form.cart .single_variation_wrap .quantity .quantity-nav .quantity-button {
-  height: 3.3rem;
-  line-height: 3.3rem;
 }
 
 body.single-product #primary .product .summary form.cart .single_variation_wrap input[type=number]::-webkit-inner-spin-button,
