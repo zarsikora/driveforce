@@ -30,9 +30,12 @@ if(df18AddBundleToCartButton.length)
             {
                 _this.prop('disabled', false);
 
-                if(!data) console.log('there was a problem adding the item to your cart');
+                if(!data)
+                {
+                    console.log('there was a problem adding the item to your cart');
+                    return;
+                }
 
-                // Update cart drawer
                 const cartData = getCartData();
 
                 cartData.done(function(data)
