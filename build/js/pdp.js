@@ -33,11 +33,21 @@ if(df18AddBundleToCartButton.length)
                 if(!data) console.log('there was a problem adding the item to your cart');
 
                 // Update cart drawer
+                const cartData = getCartData();
 
-                // Update cart icon count
+                cartData.done(function(data)
+                {
+                    if(data)
+                    {
+                        const totalText = $('#header .open-cart-drawer .cart-total .total');
 
-                // Success modal message
-                notificationModal.showModal('DF-18 has been added to your cart!');
+                        if(totalText.length) totalText.text(data.cart_count);
+                        if(!totalText.length) $('<span class="cart-total"><span class="total">'+ data.cart_count +'</span></span>').appendTo($('#header .open-cart-drawer'));
+
+                        // Success modal message
+                        notificationModal.showModal('DF-18 has been added to your cart!');
+                    }
+                });
             },
             error: function(error)
             {

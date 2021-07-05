@@ -40348,6 +40348,53 @@ window.Splide = complete_Splide;
 
 })));
 
+// Get product object
+function getProductObject(bundleID)
+{
+    try {
+        // Get product object
+        return $.ajax({
+            url: localized_vars.ajaxurl,
+            method: 'post',
+            dataType: 'json',
+            async: false,
+            data: {
+                action: 'df_get_product_object',
+                bundleID: bundleID
+            },
+            error: function(err)
+            {
+                console.log(err);
+            }
+        });
+    }
+    catch(err) {
+        console.log(err);
+    }
+}
+
+// Get cart data
+function getCartData()
+{
+    try {
+        return $.ajax({
+            url: localized_vars.ajaxurl,
+            method: 'post',
+            dataType: 'json',
+            async: false,
+            data: {
+                action: 'df_get_cart_data'
+            },
+            error: function(err)
+            {
+                console.log(err);
+            }
+        })
+    }
+    catch(err) {
+        console.log(err);
+    }
+}
 window.$ = window.jQuery = jQuery;
 
 function NotificationModal()
@@ -40394,31 +40441,6 @@ if(fastCheckoutSelect)
     {
         $('.fast-checkout-variant-select .selected-product').text(bundle.name);
         $('.fast-checkout-purchase-option.option2 .regular-price').text('$' + bundle.price);
-    }
-
-    // Get product object
-    function getProductObject(bundleID)
-    {
-        try {
-            // Get product object
-            return $.ajax({
-                url: localized_vars.ajaxurl,
-                method: 'post',
-                dataType: 'json',
-                async: false,
-                data: {
-                    action: 'df_get_product_object',
-                    bundleID: bundleID
-                },
-                error: function(err)
-                {
-                    console.log(err);
-                }
-            });
-        }
-        catch(err) {
-            console.log(err);
-        }
     }
 
     // Close dropdown on mousemove
@@ -40906,11 +40928,21 @@ if(df18AddBundleToCartButton.length)
                 if(!data) console.log('there was a problem adding the item to your cart');
 
                 // Update cart drawer
+                const cartData = getCartData();
 
-                // Update cart icon count
+                cartData.done(function(data)
+                {
+                    if(data)
+                    {
+                        const totalText = $('#header .open-cart-drawer .cart-total .total');
 
-                // Success modal message
-                notificationModal.showModal('DF-18 has been added to your cart!');
+                        if(totalText.length) totalText.text(data.cart_count);
+                        if(!totalText.length) $('<span class="cart-total"><span class="total">'+ data.cart_count +'</span></span>').appendTo($('#header .open-cart-drawer'));
+
+                        // Success modal message
+                        notificationModal.showModal('DF-18 has been added to your cart!');
+                    }
+                });
             },
             error: function(error)
             {
