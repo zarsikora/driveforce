@@ -112,5 +112,4 @@ $('.cart-drawer').on('click', '.cart-drawer-product .subscribe-toggle', function
 function updateCartDrawerTotal(totals = [])
 {
     $('.cart-drawer-totals .cart-subtotal').text('$' + totals.subtotal);
-    $('.cart-drawer-totals .cart-total').text('$' + totals.total);
 }
