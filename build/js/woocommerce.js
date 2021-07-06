@@ -54,14 +54,23 @@ function updateCartDrawer(notificationMessage)
     {
         if(data)
         {
+            console.log(data);
+
+            // Hide empty contents
+            if(data.cart_count) $('.cart-drawer-inner').addClass('has-items');
+
             // Update cart icon counter
             const totalText = $('#header .open-cart-drawer .cart-total .total');
             if(totalText.length) totalText.text(data.cart_count);
             if(!totalText.length) $('<span class="cart-total"><span class="total">'+ data.cart_count +'</span></span>').appendTo($('#header .open-cart-drawer'));
 
             // Update products
+            $('.cart-drawer-products').html(data.cart_drawer_products_html);
 
-            // Update totals
+            // Cool, so the product are in, but now the quantity/remove buttons need to be re-inited
+
+            // Update subtotal
+            $('.cart-drawer-totals .cart-subtotal').text('$' + data.cart_totals.subtotal);
 
             // Success modal message
             if(notificationMessage)

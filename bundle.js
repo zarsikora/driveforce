@@ -40404,14 +40404,23 @@ function updateCartDrawer(notificationMessage)
     {
         if(data)
         {
+            console.log(data);
+
+            // Hide empty contents
+            if(data.cart_count) $('.cart-drawer-inner').addClass('has-items');
+
             // Update cart icon counter
             const totalText = $('#header .open-cart-drawer .cart-total .total');
             if(totalText.length) totalText.text(data.cart_count);
             if(!totalText.length) $('<span class="cart-total"><span class="total">'+ data.cart_count +'</span></span>').appendTo($('#header .open-cart-drawer'));
 
             // Update products
+            $('.cart-drawer-products').html(data.cart_drawer_products_html);
 
-            // Update totals
+            // Cool, so the product are in, but now the quantity/remove buttons need to be re-inited
+
+            // Update subtotal
+            $('.cart-drawer-totals .cart-subtotal').text('$' + data.cart_totals.subtotal);
 
             // Success modal message
             if(notificationMessage)
@@ -40775,87 +40784,82 @@ closeCartDrawer.on('click', function(e)
 
 const removeProductButtons = $('.cart-drawer-remove-product');
 
-if(removeProductButtons.length)
+$('.cart-drawer').on('click', '.cart-drawer-remove-product', function(e)
 {
-    removeProductButtons.on('click', function(e)
-    {
-        const _this = $(e.target);
-        const cartItemKey = _this.parents('.cart-drawer-product').attr('data-cart-item-key');
+    console.log('remove');
+    const _this = $(e.target);
+    const cartItemKey = _this.parents('.cart-drawer-product').attr('data-cart-item-key');
 
-        $.ajax({
-            url: localized_vars.ajaxurl,
-            method: 'post',
-            dataType: 'json',
-            data: {
-                action: 'df_remove_product_from_cart',
-                cartItemKey: cartItemKey
-            },
-            success: function(data)
+    $.ajax({
+        url: localized_vars.ajaxurl,
+        method: 'post',
+        dataType: 'json',
+        data: {
+            action: 'df_remove_product_from_cart',
+            cartItemKey: cartItemKey
+        },
+        success: function(data)
+        {
+            const cartTotals = data.data.cartTotals;
+
+            // Remove html
+            _this.parents('.cart-drawer-product').remove();
+
+            updateCartDrawerTotal(cartTotals);
+
+            // If no products, display empty cart message
+            if(cartTotals.total == 0)
             {
-                const cartTotals = data.data.cartTotals;
-
-                // Remove html
-                _this.parents('.cart-drawer-product').remove();
-
-                updateCartDrawerTotal(cartTotals);
-
-                // If no products, display empty cart message
-                if(cartTotals.total == 0)
-                {
-                    $('.cart-drawer-inner').removeClass('has-items');
-                }
-            },
-            error: function(error)
-            {
-                console.log(error);
+                $('.cart-drawer-inner').removeClass('has-items');
             }
-        });
-
-        e.preventDefault();
+        },
+        error: function(error)
+        {
+            console.log(error);
+        }
     });
-}
+
+    e.preventDefault();
+});
 
 const subscriptionToggles = $('.cart-drawer-product .subscribe-toggle');
 
-if(subscriptionToggles.length)
+$('.cart-drawer').on('click', '.cart-drawer-product .subscribe-toggle', function(e)
 {
-    subscriptionToggles.on('click', function(e)
-    {
-        const toggle = $(e.target).siblings('input');
-        const product = toggle.parents('.cart-drawer-product');
-        const cartItemKey = product.attr('data-cart-item-key');
-        const purchaseType = !toggle.is(':checked') ? '1_month' : '';
+    const toggle = $(e.target).siblings('input');
+    const product = toggle.parents('.cart-drawer-product');
+    const cartItemKey = product.attr('data-cart-item-key');
+    const purchaseType = !toggle.is(':checked') ? '1_month' : '';
 
-        $.ajax({
-            url: localized_vars.ajaxurl,
-            method: 'post',
-            dataType: 'json',
-            data: {
-                action: 'df_update_cart_item',
-                cart_item_key: cartItemKey,
-                purchase_type: purchaseType
-            },
-            success: function(data)
-            {
-                console.log(data);
-                const cartTotals = data.data.cartTotals;
+    $.ajax({
+        url: localized_vars.ajaxurl,
+        method: 'post',
+        dataType: 'json',
+        data: {
+            action: 'df_update_cart_item',
+            cart_item_key: cartItemKey,
+            purchase_type: purchaseType
+        },
+        success: function(data)
+        {
+            console.log(data);
+            const cartTotals = data.data.cartTotals;
 
-                // Update cart item data key
-                product.attr('data-cart-item-key', data.data.newKey);
+            // Update cart item data key
+            product.attr('data-cart-item-key', data.data.newKey);
 
-                // Update item price
-                $('.product-price', product).text(data.data.price);
+            // Update item price
+            $('.product-price', product).text(data.data.price);
 
-                // Update totals
-                updateCartDrawerTotal(cartTotals);
-            },
-            error: function(error)
-            {
-                console.log(error);
-            }
-        });
+            // Update totals
+            updateCartDrawerTotal(cartTotals);
+        },
+        error: function(error)
+        {
+            console.log(error);
+        }
     });
-}
+});
 
 function updateCartDrawerTotal(totals = [])
 {
