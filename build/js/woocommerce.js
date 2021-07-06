@@ -45,3 +45,29 @@ function getCartData()
         console.log(err);
     }
 }
+
+function updateCartDrawer(notificationMessage)
+{
+    $cart = getCartData();
+
+    $cart.done(function(data)
+    {
+        if(data)
+        {
+            // Update cart icon counter
+            const totalText = $('#header .open-cart-drawer .cart-total .total');
+            if(totalText.length) totalText.text(data.cart_count);
+            if(!totalText.length) $('<span class="cart-total"><span class="total">'+ data.cart_count +'</span></span>').appendTo($('#header .open-cart-drawer'));
+
+            // Update products
+
+            // Update totals
+
+            // Success modal message
+            if(notificationMessage)
+            {
+                notificationModal.showModal(notificationMessage);
+            }
+        }
+    })
+}

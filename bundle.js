@@ -40395,6 +40395,32 @@ function getCartData()
         console.log(err);
     }
 }
+
+function updateCartDrawer(notificationMessage)
+{
+    $cart = getCartData();
+
+    $cart.done(function(data)
+    {
+        if(data)
+        {
+            // Update cart icon counter
+            const totalText = $('#header .open-cart-drawer .cart-total .total');
+            if(totalText.length) totalText.text(data.cart_count);
+            if(!totalText.length) $('<span class="cart-total"><span class="total">'+ data.cart_count +'</span></span>').appendTo($('#header .open-cart-drawer'));
+
+            // Update products
+
+            // Update totals
+
+            // Success modal message
+            if(notificationMessage)
+            {
+                notificationModal.showModal(notificationMessage);
+            }
+        }
+    })
+}
 window.$ = window.jQuery = jQuery;
 
 function NotificationModal()
@@ -40900,6 +40926,15 @@ const df18AddBundleToCartButton = $('.df18_add_bundle_to_cart');
 if(df18AddBundleToCartButton.length)
 {
     const df18BundleSelect = $('.bundle-select');
+    const priceDiv = $('.summary .variant-price');
+
+    // Update bundle price on select
+    df18BundleSelect.on('change', function(e)
+    {
+        const price = $('option:selected', $(this)).data('price');
+
+        priceDiv.text(price);
+    });
 
     df18AddBundleToCartButton.on('click touch', function(e)
     {
@@ -40930,20 +40965,14 @@ if(df18AddBundleToCartButton.length)
                     console.log('there was a problem adding the item to your cart');
                     return;
                 }
-                
+
                 const cartData = getCartData();
 
                 cartData.done(function(data)
                 {
                     if(data)
                     {
-                        const totalText = $('#header .open-cart-drawer .cart-total .total');
-
-                        if(totalText.length) totalText.text(data.cart_count);
-                        if(!totalText.length) $('<span class="cart-total"><span class="total">'+ data.cart_count +'</span></span>').appendTo($('#header .open-cart-drawer'));
-
-                        // Success modal message
-                        notificationModal.showModal('DF-18 has been added to your cart!');
+                        updateCartDrawer('DF-18 has been added to your cart!');
                     }
                 });
             },
