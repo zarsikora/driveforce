@@ -1,5 +1,20 @@
 <?php
 
+function df_get_product_object()
+{
+    $bundleID = $_POST['bundleID'];
+    $product = wc_get_product($bundleID);
+
+    $returnObj = array(
+        'product' => json_decode($product)
+    );
+
+    echo json_encode($returnObj);
+    wp_die();
+}
+add_action('wp_ajax_df_get_product_object', 'df_get_product_object');
+add_action('wp_ajax_nopriv_df_get_product_object', 'df_get_product_object');
+
 function df_add_product_to_cart()
 {
     $productID = $_POST['productID'];

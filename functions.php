@@ -1,12 +1,12 @@
 <?php
+include('includes/woocommerce.php');
 include('includes/mailchimp.php');
 //include('includes/sharpspring.php');
-include('includes/fast-checkout.php');
+//include('includes/fast-checkout.php');
 include('includes/cart-drawer.php');
 include('includes/button.php');
 include('includes/image-tag.php');
 include('includes/comments-ajax.php');
-include('includes/woocommerce.php');
 
 add_filter('wc_authorize_net_cim_credit_card_payment_form_manage_payment_methods_button_html', 'alter_payment_button');
 function alter_payment_button($html)

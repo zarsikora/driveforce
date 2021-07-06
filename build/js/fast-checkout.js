@@ -128,15 +128,16 @@ if(fastCheckoutSelect)
     {
         e.preventDefault();
 
-        const prodID = fastCheckoutSelect.data('bundle-id');
+        const productID = fastCheckoutSelect.data('bundle-id');
 
         $.ajax({
             url: localized_vars.ajaxurl,
             method: 'post',
             dataType: 'json',
             data: {
-                action: 'fast_checkout',
-                prodID: prodID
+                action: 'df_add_product_to_cart',
+                productID: productID,
+                quantity: 1
             },
             success: function(data)
             {
