@@ -105,7 +105,6 @@ foreach ($orderItems as $d)
 }
 
 $orderProductsJSON = json_encode($orderProducts);
-$fbOrderProducts = json_encode($fbOrderProducts);
 ?>
 
 <script>
