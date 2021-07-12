@@ -103,11 +103,11 @@ if(variantSelect.length)
         }
 
         if(variantName !== '') {
-            $('.product-variant-name').text(variantName)
+            $('.product-bundle-name').text(variantName)
         }
 
         if(variantPrice) {
-            $('.variant-price').text(variantPrice);
+            $('.bundle-price').text(variantPrice);
         }
     })
 }

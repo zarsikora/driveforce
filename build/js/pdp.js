@@ -5,14 +5,17 @@ const df18AddBundleToCartButton = $('.df18_add_bundle_to_cart');
 if(df18AddBundleToCartButton.length)
 {
     const df18BundleSelect = $('.bundle-select');
-    const priceDiv = $('.summary .variant-price');
+    const priceDiv = $('.summary .bundle-price');
+    const bundleNameDiv  = $('.product-bundle-name');
 
     // Update bundle price on select
     df18BundleSelect.on('change', function(e)
     {
         const price = $('option:selected', $(this)).data('price');
+        const bundleName = $('option:selected', $(this)).data('bundle-name');
 
         priceDiv.text(price);
+        bundleNameDiv.text(bundleName);
     });
 
     df18AddBundleToCartButton.on('click touch', function(e)

@@ -51,7 +51,7 @@ if ( $product->is_in_stock() ) : ?>
         foreach($bundles->posts as $bundle)
         {
             $prod = wc_get_product($bundle->ID);
-            $bundleSelectHTML .= '<option name="" data-id="'. $bundle->ID.'" data-price="$'. $prod->get_price() .'">'. $bundle->post_title .'</option>';
+            $bundleSelectHTML .= '<option name="" data-id="'. $bundle->ID.'" data-price="$'. $prod->get_price() .'" data-bundle-name="'. $bundle->post_title .'">'. $bundle->post_title .'</option>';
         }
         ?>
 

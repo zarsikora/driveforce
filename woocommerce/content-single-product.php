@@ -50,9 +50,8 @@ if ( post_password_required() ) {
         <div class="col-lg-5 offset-lg-1">
             <div class="summary entry-summary">
                 <?php
-
                 add_action('woocommerce_single_product_summary', function() { ?>
-                    <div class="variant-price">
+                    <div class="bundle-price">
                         $109.99
                     </div>
                 <?php });

@@ -20820,12 +20820,12 @@ body.single-product #primary .product .summary {
   width: 100%;
 }
 
-body.single-product #primary .product .summary .product-variant-name {
+body.single-product #primary .product .summary .product-bundle-name {
   font-family: "Sharp Sans Bold";
   font-size: 1.8rem;
 }
 
-body.single-product #primary .product .summary .variant-price {
+body.single-product #primary .product .summary .bundle-price {
   color: #fff;
   font-family: "Sharp Sans Extrabold";
   font-size: 1.8rem;
