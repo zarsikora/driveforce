@@ -29,7 +29,15 @@ defined( 'ABSPATH' ) || exit;
 		<?php
 		do_action( 'woocommerce_review_order_before_cart_contents' );
 
-		foreach ( WC()->cart->get_cart() as $cart_item_key => $cart_item ) {
+        $df18ID = wp_get_environment_type() == 'local' ? 581 : 1434;
+
+		foreach ( WC()->cart->get_cart() as $cart_item_key => $cart_item )
+		{
+            $productID = $cart_item['product_id'];
+
+            // Manually hide checkout bundle item that represents the unit product
+            if($productID == $df18ID) continue;
+
 			$_product = apply_filters( 'woocommerce_cart_item_product', $cart_item['data'], $cart_item, $cart_item_key );
 
 			if ( $_product && $_product->exists() && $cart_item['quantity'] > 0 && apply_filters( 'woocommerce_checkout_cart_item_visible', true, $cart_item, $cart_item_key ) ) {
