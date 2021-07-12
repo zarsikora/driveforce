@@ -1,4 +1,6 @@
 <?php
+$df18ID = wp_get_environment_type() == 'local' ? 581 : 1434;
+
 $cartCount = WC()->cart->get_cart_contents_count();
 $cartSubtotal = WC()->cart->get_cart_subtotal();
 $shippingTotal = WC()->cart->get_shipping_total();
@@ -10,6 +12,10 @@ foreach(WC()->cart->get_cart() as $cart_item_key => $cart_item)
 {
     $data = $cart_item['data'];
     $item = WC()->cart->get_cart_item($cart_item_key);
+    $productID = $cart_item['product_id'];
+
+    // Manually hide cart bundle item that represents the unit product
+    if($productID == $df18ID) continue;
 
     $cartItems[] = array(
         'cartItemKey' => $cart_item_key,

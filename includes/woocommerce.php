@@ -44,6 +44,8 @@ add_action('wp_ajax_nopriv_df_add_product_to_cart', 'df_add_product_to_cart');
 
 function df_get_cart_data()
 {
+    $df18ID = wp_get_environment_type() == 'local' ? 581 : 1434;
+
     $cartItems = WC()->cart->get_cart();
     $cartTotals = WC()->cart->get_totals();
     $totalItems = WC()->cart->get_cart_contents_count();
@@ -54,6 +56,10 @@ function df_get_cart_data()
     {
         $data = $cart_item['data'];
         $item = WC()->cart->get_cart_item($cart_item_key);
+        $productID = $cart_item['product_id'];
+
+        // Manually hide cart bundle item that represents the unit product
+        if($productID == $df18ID) continue;
 
         $cartProducts[] = array(
             'cartItemKey' => $cart_item_key,

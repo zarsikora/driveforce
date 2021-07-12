@@ -112,6 +112,10 @@ body.single-product {
                     }
                 }
 
+                p.stock {
+                    display: none;
+                }
+
                 .quantity {
                     position: relative;
                     float: none;
