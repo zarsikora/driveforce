@@ -17,10 +17,24 @@ add_action('wp_ajax_nopriv_df_get_product_object', 'df_get_product_object');
 
 function df_add_product_to_cart()
 {
-    $productID = $_POST['productID'];
+    // TODO: Don't hardcode product id
+    $productID = 581;
+    $bundles = wc_pb_get_bundled_product_map($productID);
+    $bundleID = $_POST['productID'];
     $quantity = $_POST['quantity'];
+    $bundledItemID = array_search(strval($bundleID), $bundles);
+    $bundledItem = wc_pb_get_bundled_item($bundledItemID);
+    $bundledItemCount = $bundledItem->item_data['quantity_default'];
 
-    $product = WC()->cart->add_to_cart($productID, $quantity, '', '', '');
+//    echo json_encode($bundledItemCount);
+//    wp_die();
+
+    $product = WC_PB()->cart->add_bundle_to_cart($bundleID, $quantity, [
+        $bundledItemID => [
+            'product_id' => $productID,
+            'quantity' => $bundledItemCount
+        ]
+    ]);
 
     echo json_encode($product);
     wp_die();
