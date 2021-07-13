@@ -18,7 +18,7 @@ add_action('wp_ajax_nopriv_df_get_product_object', 'df_get_product_object');
 function df_add_product_to_cart()
 {
     // TODO: Don't hardcode product id
-    $productID = 581;
+    $productID = wp_get_environment_type() == 'local' ? 581 : 1434;
     $bundles = wc_pb_get_bundled_product_map($productID);
     $bundleID = $_POST['productID'];
     $quantity = $_POST['quantity'];
