@@ -67,7 +67,7 @@ if ( $product->is_in_stock() ) : ?>
 
     <!-- Add bundles from simple product -->
     <?php
-    $prodID = wp_get_environment_type() == 'local' ? 581 : 1434;
+    $prodID = wp_get_environment_type() == 'local' ? 581 : (wp_get_environment_type() == 'staging') ? 1434 : 1433;
 
     if( $product->get_ID() === $prodID) : ?>
 

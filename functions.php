@@ -1,14 +1,4 @@
 <?php
-function maintenance_mode() {
-
-    if ( !current_user_can( 'edit_themes' ) || !is_user_logged_in() ) {
-        wp_die('DriveForce is currently undergoing maintenance. Please check back soon!');
-    }
-
-}
-add_action('get_header', 'maintenance_mode');
-
-
 include('includes/woocommerce.php');
 include('includes/mailchimp.php');
 //include('includes/sharpspring.php');

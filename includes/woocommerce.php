@@ -18,7 +18,7 @@ add_action('wp_ajax_nopriv_df_get_product_object', 'df_get_product_object');
 function df_add_product_to_cart()
 {
     // TODO: Don't hardcode product id
-    $productID = wp_get_environment_type() == 'local' ? 581 : 1434;
+    $productID = wp_get_environment_type() == 'local' ? 581 : (wp_get_environment_type() == 'staging') ? 1434 : 1433;
     $bundles = wc_pb_get_bundled_product_map($productID);
     $bundleID = $_POST['productID'];
     $quantity = $_POST['quantity'];
@@ -44,7 +44,7 @@ add_action('wp_ajax_nopriv_df_add_product_to_cart', 'df_add_product_to_cart');
 
 function df_get_cart_data()
 {
-    $df18ID = wp_get_environment_type() == 'local' ? 581 : 1434;
+    $df18ID = wp_get_environment_type() == 'local' ? 581 : (wp_get_environment_type() == 'staging') ? 1434 : 1433;
 
     $cartItems = WC()->cart->get_cart();
     $cartTotals = WC()->cart->get_totals();

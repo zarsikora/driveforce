@@ -874,7 +874,11 @@ function EndorsementSlider()
     scroll(this.checkScrollPosition);
 }
 
-let endorsementSliderInstance = new EndorsementSlider();
+if($('.endorsement-slider').length)
+{
+    let endorsementSliderInstance = new EndorsementSlider();
+}
+
 
 let ingredientsDisplay = $(".ingredients-list-display");
 // INGREDIENTS LIST DISPLAY CLICK HANDLER - MOBILE

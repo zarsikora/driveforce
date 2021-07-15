@@ -57,7 +57,7 @@ if ( $show_downloads ) {
 			<?php
 			do_action( 'woocommerce_order_details_before_order_table_items', $order );
 
-            $df18ID = wp_get_environment_type() == 'local' ? 581 : 1434;
+            $df18ID = wp_get_environment_type() == 'local' ? 581 : (wp_get_environment_type() == 'staging') ? 1434 : 1433;
 
 			foreach ( $order_items as $item_id => $item ) {
 				$product = $item->get_product();

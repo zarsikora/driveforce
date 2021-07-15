@@ -1,5 +1,5 @@
 <?php
-$df18ID = wp_get_environment_type() == 'local' ? 581 : 1434;
+$df18ID = wp_get_environment_type() == 'local' ? 581 : (wp_get_environment_type() == 'staging') ? 1434 : 1433;
 
 $cartCount = WC()->cart->get_cart_contents_count();
 $cartSubtotal = WC()->cart->get_cart_subtotal();
