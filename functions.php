@@ -58,7 +58,7 @@ function bones_load_scripts()
 
     wp_deregister_script( 'wp-embed' );
 
-    wp_register_script( 'main-scripts', get_bloginfo('template_directory') . '/bundle.js');
+    wp_register_script( 'main-scripts', get_bloginfo('template_directory') . '/bundle.js', '', time(), '');
     wp_localize_script( 'main-scripts', 'localized_vars', array(
         'environment' => wp_get_environment_type(),
         'ajaxurl' => admin_url('admin-ajax.php'),
