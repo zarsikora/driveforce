@@ -19,7 +19,7 @@
             <?php endif; ?>
         </div>
 
-        <?php if(have_rows('grid_items')): ?>
+        <?php if(have_rows('grid_items') && $type === 'grid'): ?>
             <?php 
             $gridCount = 0;
             $items = get_sub_field('grid_items');
