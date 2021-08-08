@@ -21122,63 +21122,6 @@ table.variations .reset_variations {
   background: #88E2C1;
 }
 
-.benefits-module {
-  color: #081D1A;
-  padding: 0 3.6rem;
-  margin: 7rem 0;
-}
-
-@media (min-width: 1200px) {
-  .benefits-module {
-    padding: 0 10vw;
-    margin: 10vw 0;
-  }
-}
-
-.benefits-module p.header, .benefits-module body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 address.header, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 .benefits-module address.header,
-.benefits-module body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 address.header, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 .benefits-module address.header,
-.benefits-module body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 address.header, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 .benefits-module address.header,
-.benefits-module body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 address.header, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 .benefits-module address.header {
-  font-family: "Sharp Sans Bold";
-  line-height: 1.25em;
-  margin: 0 0 1em 0;
-  color: #fff;
-  font-size: 2.4rem;
-}
-
-@media (min-width: 1200px) {
-  .benefits-module p.header, .benefits-module body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 address.header, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 .benefits-module address.header,
-  .benefits-module body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 address.header, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 .benefits-module address.header,
-  .benefits-module body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 address.header, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 .benefits-module address.header,
-  .benefits-module body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 address.header, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 .benefits-module address.header {
-    font-size: 2.77vw;
-  }
-}
-
-@media (min-width: 1920px) {
-  .benefits-module p.header, .benefits-module body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 address.header, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 .benefits-module address.header,
-  .benefits-module body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 address.header, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 .benefits-module address.header,
-  .benefits-module body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 address.header, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 .benefits-module address.header,
-  .benefits-module body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 address.header, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 .benefits-module address.header {
-    font-size: 5.3rem;
-  }
-}
-
-.benefits-module svg {
-  fill: #447563;
-  width: 8rem;
-}
-
-@media (min-width: 1200px) {
-  .benefits-module svg {
-    width: 12.5rem;
-  }
-}
-
-.benefits-module div[class*=col] {
-  margin-bottom: 4rem;
-}
-
 .full-image-with-copy-box {
   position: relative;
   padding: 0 3.6rem;
@@ -21457,5 +21400,85 @@ table.variations .reset_variations {
 }
 
 .woocommerce .woocommerce-order .woocommerce-customer-details .col-1 {
+  margin-bottom: 4rem;
+}
+
+.benefits-module {
+  color: #081D1A;
+  padding: 0 3.6rem;
+  margin: 7rem 0;
+}
+
+@media (min-width: 1200px) {
+  .benefits-module {
+    padding: 0 10vw;
+    margin: 10vw 0;
+  }
+}
+
+.benefits-module p.header, .benefits-module body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 address.header, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 .benefits-module address.header,
+.benefits-module body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 address.header, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 .benefits-module address.header,
+.benefits-module body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 address.header, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 .benefits-module address.header,
+.benefits-module body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 address.header, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 .benefits-module address.header {
+  font-family: "Sharp Sans Bold";
+  line-height: 1.25em;
+  margin: 0 0 1em 0;
+  color: #fff;
+  font-size: 2.4rem;
+}
+
+@media (min-width: 1200px) {
+  .benefits-module p.header, .benefits-module body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 address.header, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 .benefits-module address.header,
+  .benefits-module body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 address.header, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 .benefits-module address.header,
+  .benefits-module body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 address.header, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 .benefits-module address.header,
+  .benefits-module body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 address.header, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 .benefits-module address.header {
+    font-size: 2.77vw;
+  }
+}
+
+@media (min-width: 1920px) {
+  .benefits-module p.header, .benefits-module body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 address.header, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 .benefits-module address.header,
+  .benefits-module body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 address.header, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 .benefits-module address.header,
+  .benefits-module body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 address.header, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 .benefits-module address.header,
+  .benefits-module body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 address.header, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 .benefits-module address.header {
+    font-size: 5.3rem;
+  }
+}
+
+body.background-cream .benefits-module p.header, body.background-cream .benefits-module body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 address.header, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 body.background-cream .benefits-module address.header,
+body.background-cream .benefits-module body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 address.header, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 body.background-cream .benefits-module address.header,
+body.background-cream .benefits-module body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 address.header, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 body.background-cream .benefits-module address.header,
+body.background-cream .benefits-module body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 address.header, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 body.background-cream .benefits-module address.header,
+body.background-white .benefits-module p.header,
+body.background-white .benefits-module body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 address.header,
+body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 body.background-white .benefits-module address.header,
+body.background-white .benefits-module body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 address.header,
+body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 body.background-white .benefits-module address.header,
+body.background-white .benefits-module body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 address.header,
+body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 body.background-white .benefits-module address.header,
+body.background-white .benefits-module body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 address.header,
+body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 body.background-white .benefits-module address.header {
+  color: #081D1A;
+}
+
+body.background-green .benefits-module p.header, body.background-green .benefits-module body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 address.header, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 body.background-green .benefits-module address.header,
+body.background-green .benefits-module body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 address.header, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 body.background-green .benefits-module address.header,
+body.background-green .benefits-module body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 address.header, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 body.background-green .benefits-module address.header,
+body.background-green .benefits-module body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 address.header, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 body.background-green .benefits-module address.header {
+  color: #fff;
+}
+
+.benefits-module svg {
+  fill: #447563;
+  width: 8rem;
+}
+
+@media (min-width: 1200px) {
+  .benefits-module svg {
+    width: 12.5rem;
+  }
+}
+
+.benefits-module div[class*=col] {
   margin-bottom: 4rem;
 }

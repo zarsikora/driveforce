@@ -1,0 +1,45 @@
+.benefits-module {
+    color: $darkBg;
+    padding: 0 3.6rem;
+    margin: 7rem 0;
+    @include media-breakpoint-up(xl) {
+        padding: 0 10vw;
+        margin: 10vw 0;
+    }
+
+    p.header {
+        font-family: $sharpSansBold;
+        line-height: 1.25em;
+        margin: 0 0 1em 0;
+        color: #fff;
+        font-size: 2.4rem;
+        @include media-breakpoint-up(xl) {
+            //font-size: 4rem;
+            font-size: 2.77vw;
+        }
+        @media(min-width: 1920px) {
+            font-size: 5.3rem;
+        }
+    }
+
+    body.background-cream & p.header,
+    body.background-white & p.header {
+        color: $darkText;
+    }
+
+    body.background-green & p.header {
+        color: #fff;
+    }
+
+    svg {
+        fill: #447563;
+        width: 8rem;
+        @include media-breakpoint-up(xl) {
+            width: 12.5rem;
+        }
+    }
+
+    div[class*=col] {
+        margin-bottom: 4rem;
+    }
+}
