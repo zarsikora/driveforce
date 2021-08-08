@@ -14381,6 +14381,43 @@ body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .
      object-fit: cover;
 }
 
+.full-image-with-copy-box {
+  position: relative;
+  padding: 0 3.6rem;
+  margin: 7rem 0;
+}
+
+@media (min-width: 1200px) {
+  .full-image-with-copy-box {
+    padding: 0 10vw;
+    margin: 10vw 0;
+  }
+}
+
+.full-image-with-copy-box .copy, .full-image-with-copy-box .article-single .post-content .inner .copy ul li, .article-single .post-content .inner .copy ul .full-image-with-copy-box li, .full-image-with-copy-box .article-single .post-content .inner .copy ol li, .article-single .post-content .inner .copy ol .full-image-with-copy-box li {
+  margin-top: -4rem;
+}
+
+@media (min-width: 992px) {
+  .full-image-with-copy-box .copy, .full-image-with-copy-box .article-single .post-content .inner .copy ul li, .article-single .post-content .inner .copy ul .full-image-with-copy-box li, .full-image-with-copy-box .article-single .post-content .inner .copy ol li, .article-single .post-content .inner .copy ol .full-image-with-copy-box li {
+    margin-top: -20vw;
+  }
+}
+
+.full-image-with-copy-box img {
+  position: relative;
+  width: 100vw;
+  height: auto;
+  max-width: none;
+  left: -3.6rem;
+}
+
+@media (min-width: 1200px) {
+  .full-image-with-copy-box img {
+    left: -10vw;
+  }
+}
+
 .module-wrapper.faq {
   margin: 2rem auto;
 }
@@ -21120,42 +21157,6 @@ table.variations .reset_variations {
 
 .copy-box.green {
   background: #88E2C1;
-}
-
-.full-image-with-copy-box {
-  position: relative;
-  padding: 0 3.6rem;
-  margin: 7rem 0;
-}
-
-@media (min-width: 1200px) {
-  .full-image-with-copy-box {
-    padding: 0 10vw;
-    margin: 10vw 0;
-  }
-}
-
-.full-image-with-copy-box .copy, .full-image-with-copy-box .article-single .post-content .inner .copy ul li, .article-single .post-content .inner .copy ul .full-image-with-copy-box li, .full-image-with-copy-box .article-single .post-content .inner .copy ol li, .article-single .post-content .inner .copy ol .full-image-with-copy-box li {
-  margin-top: -4rem;
-}
-
-@media (min-width: 992px) {
-  .full-image-with-copy-box .copy, .full-image-with-copy-box .article-single .post-content .inner .copy ul li, .article-single .post-content .inner .copy ul .full-image-with-copy-box li, .full-image-with-copy-box .article-single .post-content .inner .copy ol li, .article-single .post-content .inner .copy ol .full-image-with-copy-box li {
-    margin-top: -20vw;
-  }
-}
-
-.full-image-with-copy-box img {
-  position: relative;
-  width: 100vw;
-  max-width: none;
-  left: -3.6rem;
-}
-
-@media (min-width: 1200px) {
-  .full-image-with-copy-box img {
-    left: -10vw;
-  }
 }
 
 .reviews-module {
