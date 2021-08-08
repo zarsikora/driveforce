@@ -14127,7 +14127,7 @@ body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .
   display: none;
   position: absolute;
   right: -20%;
-  height: 100%;
+  width: 60%;
   z-index: 2;
 }
 

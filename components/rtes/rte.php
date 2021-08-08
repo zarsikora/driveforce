@@ -4,7 +4,7 @@
     $arrow = get_sub_field('arrow_graphic');
     $header = get_sub_field('header');
     $copy = get_sub_field('copy');
-    $hasGraphic = get_sub_field('has_graphwic');
+    $hasGraphic = get_sub_field('has_graphic');
 ?>
 
 <div class="module-wrapper rte <?php echo ' ' . $bgColor . '-bg'?>">
@@ -42,7 +42,7 @@
         <?php endif; ?>
 
         <?php if($type === 'grid' && $hasGraphic): ?>
-            <img aria-hidden="true" alt="decorative curve" data-animation-effect="moduleFadeIn" data-animation-trigger="scroll" class="rte-graphic" src="http://staging.driveforce.golf/wp-content/uploads/2021/01/rte-graphic.png"/>
+            <img aria-hidden="true" alt="decorative curve" data-animation-effect="moduleFadeIn" data-animation-trigger="scroll" class="rte-graphic" src="<?php echo get_bloginfo('url') ?>/wp-content/uploads/2021/01/rte-graphic.png"/>
         <?php endif; ?>
 
         <?php if($arrow): ?>
