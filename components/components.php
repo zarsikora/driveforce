@@ -15,11 +15,6 @@ if(have_rows('components')) :
                 include('dotted-divider.php');
             break;
 
-            // CAROUSEL
-            case 'carousel' : 
-                include('carousel.php');
-            break;
-
             //GRID
             case 'grid' :
                 include('grids/grid.php');
