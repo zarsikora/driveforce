@@ -47,7 +47,7 @@ if(have_rows('components')) :
 
             //FIFTY FIFTY
             case 'fiftyfifty' : 
-                include('rtes/rte--fiftyfifty.php');
+                include('fiftyfifty.php');
             break; 
 
             //RTE

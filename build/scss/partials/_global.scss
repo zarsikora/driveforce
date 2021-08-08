@@ -62,14 +62,33 @@ body {
             margin: 0 auto;
             padding: 17.3rem 0;
         }
+
+        &:first-child {
+            @include media-breakpoint-up(lg) {
+                padding-top: 13.8vw;
+            }
+            @media(min-width: 1440px) {
+                padding-top: 13.8vw;
+            }
+            @media(min-width: 1920px) {
+                padding-top: 26.6rem;
+            }
+        }
     }
 
     &.dark-bg {
         background-color: $darkBg;
+        color: #fff;
     }
 
     &.white-bg {
         background-color: #fff;
+        color: $darkText;
+    }
+
+    &.color-bg {
+        background-color: $lightBg;
+        color: $darkText;
     }
 
     &.rte {
