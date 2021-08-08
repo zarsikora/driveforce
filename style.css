@@ -17078,8 +17078,12 @@ body.background-green .ingredients-grid-module body.woocommerce-account .woocomm
   }
 }
 
-.module-wrapper.large-text-module {
-  background-color: #14302B;
+body.background-cream .module-wrapper.large-text-module,
+body.background-white .module-wrapper.large-text-module {
+  color: #081D1A;
+}
+
+body.background-green .module-wrapper.large-text-module {
   color: #fff;
 }
 

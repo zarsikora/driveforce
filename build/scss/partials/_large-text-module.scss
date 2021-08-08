@@ -1,6 +1,13 @@
 .module-wrapper.large-text-module {
-    background-color: #14302B;
-    color: #fff;
+
+    body.background-cream &,
+    body.background-white & {
+        color: $darkText;
+    }
+
+    body.background-green & {
+        color: #fff;
+    }
 
     .copy {
         p {
