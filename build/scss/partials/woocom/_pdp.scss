@@ -457,39 +457,6 @@ table.variations {
     }
 }
 
-.quote-module {
-    padding: 0 3.6rem;
-    margin: 7rem auto;
-    @include media-breakpoint-up(lg) {
-        max-width: 80%;
-    }
-    @include media-breakpoint-up(xl) {
-        padding: 0;
-        margin: 10vw auto;
-    }
-
-    .copy {
-        margin-bottom: 4rem;
-        @include media-breakpoint-up(lg) {
-            margin-bottom: 0;
-        }
-    }
-
-    p.header {
-        font-family: $sharpSansBold;
-        font-size: 2rem;
-        line-height: 1.5em;
-        margin-bottom: 1em;
-        @include media-breakpoint-up(xl) {
-            font-size: 4rem;
-        }
-    }
-
-    p {
-        margin: 0;
-    }
-}
-
 .full-image-with-copy-box {
     position: relative;
     padding: 0 3.6rem;

@@ -15161,6 +15161,65 @@ body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .
   }
 }
 
+.quote-module {
+  padding: 0 3.6rem;
+  margin: 7rem auto;
+}
+
+@media (min-width: 992px) {
+  .quote-module {
+    max-width: 80%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .quote-module {
+    padding: 0;
+    margin: 10vw auto;
+  }
+}
+
+.quote-module .copy, .quote-module .article-single .post-content .inner .copy ul li, .article-single .post-content .inner .copy ul .quote-module li, .quote-module .article-single .post-content .inner .copy ol li, .article-single .post-content .inner .copy ol .quote-module li {
+  margin-bottom: 4rem;
+}
+
+@media (min-width: 992px) {
+  .quote-module .copy, .quote-module .article-single .post-content .inner .copy ul li, .article-single .post-content .inner .copy ul .quote-module li, .quote-module .article-single .post-content .inner .copy ol li, .article-single .post-content .inner .copy ol .quote-module li {
+    margin-bottom: 0;
+  }
+}
+
+.quote-module p.header, .quote-module body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 address.header, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 .quote-module address.header,
+.quote-module body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 address.header, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 .quote-module address.header,
+.quote-module body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 address.header, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 .quote-module address.header,
+.quote-module body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 address.header, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 .quote-module address.header {
+  font-family: "Sharp Sans Bold";
+  font-size: 2rem;
+  line-height: 1.5em;
+  margin-bottom: 1em;
+}
+
+@media (min-width: 1200px) {
+  .quote-module p.header, .quote-module body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 address.header, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 .quote-module address.header,
+  .quote-module body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 address.header, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 .quote-module address.header,
+  .quote-module body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 address.header, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 .quote-module address.header,
+  .quote-module body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 address.header, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 .quote-module address.header {
+    font-size: 4rem;
+  }
+}
+
+.quote-module p, .quote-module body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 address, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 .quote-module address,
+.quote-module body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 address, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 .quote-module address,
+.quote-module body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 address, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 .quote-module address,
+.quote-module body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 address, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 .quote-module address {
+  margin: 0;
+}
+
+.quote-module img {
+  max-width: 100%;
+  height: auto;
+}
+
 form {
   padding: 0;
   border-radius: .4rem;
@@ -21207,60 +21266,6 @@ table.variations .reset_variations {
 
 .benefits-module div[class*=col] {
   margin-bottom: 4rem;
-}
-
-.quote-module {
-  padding: 0 3.6rem;
-  margin: 7rem auto;
-}
-
-@media (min-width: 992px) {
-  .quote-module {
-    max-width: 80%;
-  }
-}
-
-@media (min-width: 1200px) {
-  .quote-module {
-    padding: 0;
-    margin: 10vw auto;
-  }
-}
-
-.quote-module .copy, .quote-module .article-single .post-content .inner .copy ul li, .article-single .post-content .inner .copy ul .quote-module li, .quote-module .article-single .post-content .inner .copy ol li, .article-single .post-content .inner .copy ol .quote-module li {
-  margin-bottom: 4rem;
-}
-
-@media (min-width: 992px) {
-  .quote-module .copy, .quote-module .article-single .post-content .inner .copy ul li, .article-single .post-content .inner .copy ul .quote-module li, .quote-module .article-single .post-content .inner .copy ol li, .article-single .post-content .inner .copy ol .quote-module li {
-    margin-bottom: 0;
-  }
-}
-
-.quote-module p.header, .quote-module body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 address.header, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 .quote-module address.header,
-.quote-module body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 address.header, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 .quote-module address.header,
-.quote-module body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 address.header, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 .quote-module address.header,
-.quote-module body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 address.header, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 .quote-module address.header {
-  font-family: "Sharp Sans Bold";
-  font-size: 2rem;
-  line-height: 1.5em;
-  margin-bottom: 1em;
-}
-
-@media (min-width: 1200px) {
-  .quote-module p.header, .quote-module body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 address.header, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 .quote-module address.header,
-  .quote-module body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 address.header, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 .quote-module address.header,
-  .quote-module body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 address.header, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 .quote-module address.header,
-  .quote-module body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 address.header, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 .quote-module address.header {
-    font-size: 4rem;
-  }
-}
-
-.quote-module p, .quote-module body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 address, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 .quote-module address,
-.quote-module body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 address, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 .quote-module address,
-.quote-module body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 address, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 .quote-module address,
-.quote-module body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 address, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 .quote-module address {
-  margin: 0;
 }
 
 .full-image-with-copy-box {
