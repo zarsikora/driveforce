@@ -46,6 +46,8 @@
 
                 .btn {
                     width: 36rem;
+                    padding-left: 4rem;
+                    padding-right: 4rem;
                     justify-content: flex-start;
                     position: relative;
                     transition: all ease 300ms;
@@ -84,16 +86,8 @@
                         }
                     }
 
-                    span {
-                        left: 0;
-                    }
-
                     &.facebook {
                         background: #507BCA;
-
-                        span {
-                            left: .5rem;
-                        }
 
                         &:after {
                             background-color: #2F559D;
@@ -122,18 +116,23 @@
                         }
                     }
 
+                    &.facebook {
+                        padding-left: 4.5rem;
+
+                        svg {
+                            width: auto;
+                            height: 2.5rem;
+                            margin-right: 5.5rem;
+                        }
+                    }
+
                     svg {
-                        height: 2.5rem;
-                        width: auto;
+                        width: 2.5rem;
+                        height: auto;
                         margin-right: 5rem;
                         fill: #fff;
                         transition: all ease 300ms;
                         z-index: 2;
-
-                        &.email {
-                            width: 2.5rem;
-                            height: auto;
-                        }
                     }
 
                     &:hover {
@@ -148,6 +147,10 @@
 
                             svg {
                                 margin-right: 3.5rem;
+
+                                &.fb {
+                                    margin-right: 3rem;
+                                }
 
                                 &.twitter,
                                 &.email {

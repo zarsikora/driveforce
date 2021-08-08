@@ -17126,6 +17126,8 @@ body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .
 
 .share-module .text-wrapper .social-sharing li .btn, .share-module .text-wrapper .social-sharing li #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form button, #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form .share-module .text-wrapper .social-sharing li button, .share-module .text-wrapper .social-sharing li body.woocommerce-cart #content .return-to-shop .button, body.woocommerce-cart #content .return-to-shop .share-module .text-wrapper .social-sharing li .button {
   width: 36rem;
+  padding-left: 4rem;
+  padding-right: 4rem;
   justify-content: flex-start;
   position: relative;
   transition: all ease 300ms;
@@ -17170,16 +17172,8 @@ body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .
   }
 }
 
-.share-module .text-wrapper .social-sharing li .btn span, .share-module .text-wrapper .social-sharing li #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form button span, #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form .share-module .text-wrapper .social-sharing li button span, .share-module .text-wrapper .social-sharing li body.woocommerce-cart #content .return-to-shop .button span, body.woocommerce-cart #content .return-to-shop .share-module .text-wrapper .social-sharing li .button span {
-  left: 0;
-}
-
 .share-module .text-wrapper .social-sharing li .btn.facebook, .share-module .text-wrapper .social-sharing li #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form button.facebook, #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form .share-module .text-wrapper .social-sharing li button.facebook, .share-module .text-wrapper .social-sharing li body.woocommerce-cart #content .return-to-shop .facebook.button, body.woocommerce-cart #content .return-to-shop .share-module .text-wrapper .social-sharing li .facebook.button {
   background: #507BCA;
-}
-
-.share-module .text-wrapper .social-sharing li .btn.facebook span, .share-module .text-wrapper .social-sharing li #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form button.facebook span, #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form .share-module .text-wrapper .social-sharing li button.facebook span, .share-module .text-wrapper .social-sharing li body.woocommerce-cart #content .return-to-shop .facebook.button span, body.woocommerce-cart #content .return-to-shop .share-module .text-wrapper .social-sharing li .facebook.button span {
-  left: .5rem;
 }
 
 .share-module .text-wrapper .social-sharing li .btn.facebook:after, .share-module .text-wrapper .social-sharing li #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form button.facebook:after, #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form .share-module .text-wrapper .social-sharing li button.facebook:after, .share-module .text-wrapper .social-sharing li body.woocommerce-cart #content .return-to-shop .facebook.button:after, body.woocommerce-cart #content .return-to-shop .share-module .text-wrapper .social-sharing li .facebook.button:after {
@@ -17206,18 +17200,23 @@ body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .
   background-color: #9A1D1D;
 }
 
-.share-module .text-wrapper .social-sharing li .btn svg, .share-module .text-wrapper .social-sharing li #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form button svg, #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form .share-module .text-wrapper .social-sharing li button svg, .share-module .text-wrapper .social-sharing li body.woocommerce-cart #content .return-to-shop .button svg, body.woocommerce-cart #content .return-to-shop .share-module .text-wrapper .social-sharing li .button svg {
-  height: 2.5rem;
+.share-module .text-wrapper .social-sharing li .btn.facebook, .share-module .text-wrapper .social-sharing li #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form button.facebook, #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form .share-module .text-wrapper .social-sharing li button.facebook, .share-module .text-wrapper .social-sharing li body.woocommerce-cart #content .return-to-shop .facebook.button, body.woocommerce-cart #content .return-to-shop .share-module .text-wrapper .social-sharing li .facebook.button {
+  padding-left: 4.5rem;
+}
+
+.share-module .text-wrapper .social-sharing li .btn.facebook svg, .share-module .text-wrapper .social-sharing li #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form button.facebook svg, #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form .share-module .text-wrapper .social-sharing li button.facebook svg, .share-module .text-wrapper .social-sharing li body.woocommerce-cart #content .return-to-shop .facebook.button svg, body.woocommerce-cart #content .return-to-shop .share-module .text-wrapper .social-sharing li .facebook.button svg {
   width: auto;
+  height: 2.5rem;
+  margin-right: 5.5rem;
+}
+
+.share-module .text-wrapper .social-sharing li .btn svg, .share-module .text-wrapper .social-sharing li #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form button svg, #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form .share-module .text-wrapper .social-sharing li button svg, .share-module .text-wrapper .social-sharing li body.woocommerce-cart #content .return-to-shop .button svg, body.woocommerce-cart #content .return-to-shop .share-module .text-wrapper .social-sharing li .button svg {
+  width: 2.5rem;
+  height: auto;
   margin-right: 5rem;
   fill: #fff;
   transition: all ease 300ms;
   z-index: 2;
-}
-
-.share-module .text-wrapper .social-sharing li .btn svg.email, .share-module .text-wrapper .social-sharing li #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form button svg.email, #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form .share-module .text-wrapper .social-sharing li button svg.email, .share-module .text-wrapper .social-sharing li body.woocommerce-cart #content .return-to-shop .button svg.email, body.woocommerce-cart #content .return-to-shop .share-module .text-wrapper .social-sharing li .button svg.email {
-  width: 2.5rem;
-  height: auto;
 }
 
 @media (min-width: 992px) {
@@ -17230,6 +17229,9 @@ body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .
   }
   .share-module .text-wrapper .social-sharing li .btn:hover svg, .share-module .text-wrapper .social-sharing li #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form button:hover svg, #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form .share-module .text-wrapper .social-sharing li button:hover svg, .share-module .text-wrapper .social-sharing li body.woocommerce-cart #content .return-to-shop .button:hover svg, body.woocommerce-cart #content .return-to-shop .share-module .text-wrapper .social-sharing li .button:hover svg {
     margin-right: 3.5rem;
+  }
+  .share-module .text-wrapper .social-sharing li .btn:hover svg.fb, .share-module .text-wrapper .social-sharing li #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form button:hover svg.fb, #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form .share-module .text-wrapper .social-sharing li button:hover svg.fb, .share-module .text-wrapper .social-sharing li body.woocommerce-cart #content .return-to-shop .button:hover svg.fb, body.woocommerce-cart #content .return-to-shop .share-module .text-wrapper .social-sharing li .button:hover svg.fb {
+    margin-right: 3rem;
   }
   .share-module .text-wrapper .social-sharing li .btn:hover svg.twitter, .share-module .text-wrapper .social-sharing li #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form button:hover svg.twitter, #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form .share-module .text-wrapper .social-sharing li button:hover svg.twitter, .share-module .text-wrapper .social-sharing li body.woocommerce-cart #content .return-to-shop .button:hover svg.twitter, body.woocommerce-cart #content .return-to-shop .share-module .text-wrapper .social-sharing li .button:hover svg.twitter, .share-module .text-wrapper .social-sharing li .btn:hover svg.email, .share-module .text-wrapper .social-sharing li #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form button:hover svg.email, #waitlistModal .modal-dialog .modal-content .modal-body .form-module .module-padded .form .share-module .text-wrapper .social-sharing li button:hover svg.email, .share-module .text-wrapper .social-sharing li body.woocommerce-cart #content .return-to-shop .button:hover svg.email, body.woocommerce-cart #content .return-to-shop .share-module .text-wrapper .social-sharing li .button:hover svg.email {
     margin-right: 2.5rem;
