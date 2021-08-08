@@ -14091,35 +14091,19 @@ body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .
   }
 }
 
-.rte.grid .grid .row .card-container:first-child img {
+.rte.grid .grid .row .card-container img {
   height: 6rem;
 }
 
 @media (min-width: 1440px) {
-  .rte.grid .grid .row .card-container:first-child img {
+  .rte.grid .grid .row .card-container img {
     height: 4.167vw;
   }
 }
 
 @media (min-width: 1920px) {
-  .rte.grid .grid .row .card-container:first-child img {
+  .rte.grid .grid .row .card-container img {
     height: 8rem;
-  }
-}
-
-.rte.grid .grid .row .card-container:last-child img {
-  height: 4.2rem;
-}
-
-@media (min-width: 1440px) {
-  .rte.grid .grid .row .card-container:last-child img {
-    height: 2.917vw;
-  }
-}
-
-@media (min-width: 1920px) {
-  .rte.grid .grid .row .card-container:last-child img {
-    height: 5.6rem;
   }
 }
 

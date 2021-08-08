@@ -121,27 +121,13 @@
             }
 
             .row .card-container {
-                &:first-child {
-                    img {
-                        height: 6rem;
-                        @media(min-width: 1440px){
-                            height: 4.167vw;
-                        }
-                        @media(min-width: 1920px){
-                            height: 8rem;
-                        }
+                img {
+                    height: 6rem;
+                    @media(min-width: 1440px){
+                        height: 4.167vw;
                     }
-                }
-
-                &:last-child {
-                    img {
-                        height: 4.2rem;
-                        @media(min-width: 1440px){
-                            height: 2.917vw;
-                        }
-                        @media(min-width: 1920px){
-                            height: 5.6rem;
-                        }
+                    @media(min-width: 1920px){
+                        height: 8rem;
                     }
                 }
             }
