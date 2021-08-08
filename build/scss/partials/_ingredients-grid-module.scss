@@ -1,5 +1,18 @@
 .ingredients-grid-module {
 
+    body.background-cream &,
+    body.background-white & {
+        p.header {
+            color: $darkText;
+        }
+    }
+
+    body.background-green & {
+        p.header {
+            color: #fff;
+        }
+    }
+
     p.header {
         font-family: $sharpSansExtraBold;
         line-height: 1.25em;
@@ -7,7 +20,6 @@
         color: #fff;
         font-size: 2.4rem;
         @include media-breakpoint-up(xl) {
-            //font-size: 4rem;
             font-size: 2.77vw;
         }
         @media(min-width: 1920px) {
