@@ -16853,6 +16853,45 @@ body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .
   }
 }
 
+body.background-cream .ingredients-list-accordion h2.accordion-header button,
+body.background-cream .ingredients-list-accordion h2.accordion-header button:after,
+body.background-cream .ingredients-list-accordion p,
+body.background-cream .ingredients-list-accordion body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 address,
+body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 body.background-cream .ingredients-list-accordion address,
+body.background-cream .ingredients-list-accordion body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 address,
+body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 body.background-cream .ingredients-list-accordion address,
+body.background-cream .ingredients-list-accordion body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 address,
+body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 body.background-cream .ingredients-list-accordion address,
+body.background-cream .ingredients-list-accordion body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 address,
+body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 body.background-cream .ingredients-list-accordion address,
+body.background-white .ingredients-list-accordion h2.accordion-header button,
+body.background-white .ingredients-list-accordion h2.accordion-header button:after,
+body.background-white .ingredients-list-accordion p,
+body.background-white .ingredients-list-accordion body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 address,
+body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 body.background-white .ingredients-list-accordion address,
+body.background-white .ingredients-list-accordion body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 address,
+body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 body.background-white .ingredients-list-accordion address,
+body.background-white .ingredients-list-accordion body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 address,
+body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 body.background-white .ingredients-list-accordion address,
+body.background-white .ingredients-list-accordion body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 address,
+body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 body.background-white .ingredients-list-accordion address {
+  color: #081D1A;
+}
+
+body.background-green .ingredients-list-accordion h2.accordion-header button,
+body.background-green .ingredients-list-accordion h2.accordion-header button:after,
+body.background-green .ingredients-list-accordion p,
+body.background-green .ingredients-list-accordion body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 address,
+body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 body.background-green .ingredients-list-accordion address,
+body.background-green .ingredients-list-accordion body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 address,
+body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 body.background-green .ingredients-list-accordion address,
+body.background-green .ingredients-list-accordion body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 address,
+body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 body.background-green .ingredients-list-accordion address,
+body.background-green .ingredients-list-accordion body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 address,
+body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 body.background-green .ingredients-list-accordion address {
+  color: #fff;
+}
+
 .ingredients-list-accordion .accordion-item {
   border-bottom: .1rem solid #447563;
   padding: 3rem 0;
@@ -16880,7 +16919,7 @@ body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .
   background: none;
   border: none;
   color: #fff;
-  padding: 0;
+  padding: 0 3rem 0 0;
   margin: 0;
   transition: color ease 300ms;
   text-align: left;

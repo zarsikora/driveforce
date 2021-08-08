@@ -7,6 +7,23 @@
         margin: 10vw 0;
     }
 
+    body.background-cream &,
+    body.background-white & {
+        h2.accordion-header button,
+        h2.accordion-header button:after,
+        p {
+            color: $darkText;
+        }
+    }
+
+    body.background-green & {
+        h2.accordion-header button,
+        h2.accordion-header button:after,
+        p {
+            color: #fff;
+        }
+    }
+
     .accordion-item {
         border-bottom: .1rem solid #447563;
         padding: 3rem 0;
@@ -30,7 +47,7 @@
             background: none;
             border: none;
             color: #fff;
-            padding: 0;
+            padding: 0 3rem 0 0;
             margin: 0;
             transition: color ease 300ms;
             text-align: left;
