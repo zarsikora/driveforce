@@ -31,7 +31,7 @@
             display: block;
             margin: 0 auto;
             @include media-breakpoint-up(lg) {
-                max-width: 50%;
+                max-width: 75%;
             }
         }
     }
