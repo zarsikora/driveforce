@@ -16366,6 +16366,7 @@ body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .
   transition: all ease 500ms;
   pointer-events: none;
   padding: 0 3rem;
+  color: #081D1A;
 }
 
 @media (min-width: 768px) {

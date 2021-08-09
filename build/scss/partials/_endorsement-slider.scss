@@ -83,6 +83,7 @@
                     transition: all ease 500ms;
                     pointer-events: none;
                     padding: 0 3rem;
+                    color: $darkText;
                     @include media-breakpoint-up(md) {
                         transform: translate(-60%, -50%);
                         padding: 0;
