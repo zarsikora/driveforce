@@ -138,6 +138,28 @@
                             }
                         }
 
+                        &.mailchimp-newsletter {
+                            align-items: center;
+                            margin: 2rem 0;
+
+                            input {
+                                width: auto;
+                                display: inline-block;
+                            }
+
+                            label {
+                                width: auto;
+                                display: inline-block;
+                                font-family: $sharpSansMedium;
+                                line-height: 1em;
+                                margin: 0;
+                                font-size: 1.4rem;
+                                @include media-breakpoint-up(md) {
+                                    font-size: 1.6rem;
+                                }
+                            }
+                        }
+
                         label {
                             width: 100%;
                             font-family: $sharpSansExtraBold;

@@ -19889,6 +19889,31 @@ body.woocommerce-account .select2-results__option {
   font-family: "Sharp Sans Medium";
 }
 
+.woocommerce-checkout #container .woocommerce form.checkout #customer_details .form-row.mailchimp-newsletter {
+  align-items: center;
+  margin: 2rem 0;
+}
+
+.woocommerce-checkout #container .woocommerce form.checkout #customer_details .form-row.mailchimp-newsletter input {
+  width: auto;
+  display: inline-block;
+}
+
+.woocommerce-checkout #container .woocommerce form.checkout #customer_details .form-row.mailchimp-newsletter label {
+  width: auto;
+  display: inline-block;
+  font-family: "Sharp Sans Medium";
+  line-height: 1em;
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+@media (min-width: 768px) {
+  .woocommerce-checkout #container .woocommerce form.checkout #customer_details .form-row.mailchimp-newsletter label {
+    font-size: 1.6rem;
+  }
+}
+
 .woocommerce-checkout #container .woocommerce form.checkout #customer_details .form-row label {
   width: 100%;
   font-family: "Sharp Sans Extrabold";
