@@ -109,6 +109,7 @@ $orderProductsJSON = json_encode($orderProducts);
 
 <script>
     // GTM GA4 Purchase Event
+    dataLayer.push({ecommerce: null});
     dataLayer.push({
         'event': 'purchase',
         'ecommerce': {
