@@ -10,10 +10,6 @@ $hasOverflow = get_sub_field('has_overflow');
         <div class="row">
             <div class="img col-md-4 col-lg-6">
                 <?php echo imageTag($image); ?>
-
-                <div class="tag">
-                    <span>Hitting the course <span class="sage">Spring 2021</span></span>
-                </div>
             </div>
 
             <div class="form col-md-8 col-lg-6">
