@@ -17,6 +17,7 @@ function mailchimp_add_member_to_list()
     }
 
     $listID = 'b5d3ece7d8';
+    $tags = $fields['mailchimp_tag_name'] ? [['name' => $fields['mailchimp_tag_name']]] : [];
 
     try {
         $response = $mailchimp->lists->setListMember($listID, md5(strtolower($fields['email'])), [
@@ -25,7 +26,8 @@ function mailchimp_add_member_to_list()
             'merge_fields' => [
                 "FNAME" => $fields['first-name'],
                 "LNAME" => $fields['last-name']
-            ]
+            ],
+            'tags' => $tags
         ]);
 
         echo json_encode($response);

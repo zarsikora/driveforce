@@ -3,6 +3,7 @@ $introTitle = get_sub_field('title');
 $introCopy = get_sub_field('copy');
 $image = get_sub_field('image');
 $hasOverflow = get_sub_field('has_overflow');
+$mcTagName = get_sub_field('mailchimp_tag_name');
 ?>
 
 <div class="module-wrapper form-module <?php if($hasOverflow) echo ' has-overflow'?>" id="waitList">

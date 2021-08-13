@@ -1,5 +1,9 @@
 <div id="form-wrapper">
     <form autocomplete="off" action="" method="post" id="sharpspring-waitlist" class="sharpspring-waitlist" novalidate>
+        <?php if($mcTagName) : ?>
+            <input type="hidden" name="mailchimp_tag_name" value="<?php echo $mcTagName ?>" />
+        <?php endif; ?>
+
         <div class="field-group">
             <label class="sr-only">First Name</label>
             <input class="form-control" type="text" name="first-name" value="" placeholder="First Name*" />
