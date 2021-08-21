@@ -101,6 +101,7 @@
                         </div>
 
                         <div class="link-wrapper">
+<!--                            <a class="nav-link" href="--><?php //echo get_site_url(); ?><!--/blog">Blog</a>-->
                             <a class="nav-link" href="<?php echo get_site_url(); ?>/learn">Learn</a>
                             <a class="nav-link" href="<?php echo get_site_url(); ?>/my-account/orders">Account</a>
                             <a class="open-cart-drawer nav-link" href="<?php echo get_site_url(); ?>/cart">
