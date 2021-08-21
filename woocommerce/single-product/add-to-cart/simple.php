@@ -53,6 +53,9 @@ if ( $product->is_in_stock() ) : ?>
             $prod = wc_get_product($bundle->ID);
             $bundleSelectHTML .= '<option name="" data-id="'. $bundle->ID.'" data-price="$'. $prod->get_price() .'" data-bundle-name="'. $bundle->post_title .'">'. $bundle->post_title .'</option>';
         }
+
+        // Add sample product (non bundle) to the select
+
         ?>
 
         <select class="bundle-select">
@@ -67,7 +70,7 @@ if ( $product->is_in_stock() ) : ?>
 
     <!-- Add bundles from simple product -->
     <?php
-    $prodID = wp_get_environment_type() == 'local' ? 581 : (wp_get_environment_type() == 'staging') ? 1434 : 1433;
+    $prodID = wp_get_environment_type() == 'local' ? 581 : ((wp_get_environment_type() == 'staging') ? 1434 : 1433);
 
     if( $product->get_ID() === $prodID) : ?>
 
