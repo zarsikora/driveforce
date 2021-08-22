@@ -1,4 +1,5 @@
-<?php //TODO: Should redo this without creating a custom $item object and instead just using the wc product functions to access the right data. This will make it more reusable without needing to keep remaking this custom object ?>
+<?php //TODO: Should redo this without creating a custom $item object and instead just using the wc product functions to access the right data.
+      // This will make it more reusable without needing to keep remaking this custom object ?>
 <div class="cart-drawer-product" data-cart-item-key="<?php echo $item['cartItemKey']; ?>">
     <div class="product-info">
         <div class="image">

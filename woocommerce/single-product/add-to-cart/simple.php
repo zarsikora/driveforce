@@ -45,26 +45,26 @@ if ( $product->is_in_stock() ) : ?>
     ]);
 
     $bundleSelectHTML = '';
+    $firstBundle = null;
+    $bundleCounter = 0;
 
     if($bundles->post_count)
     {
         foreach($bundles->posts as $bundle)
         {
             $prod = wc_get_product($bundle->ID);
-            $bundleSelectHTML .= '<option name="" data-id="'. $bundle->ID.'" data-price="$'. $prod->get_price() .'" data-bundle-name="'. $bundle->post_title .'">'. $bundle->post_title .'</option>';
+            if(!$bundleCounter) $firstBundle = $prod;
+            $bundleSelectHTML .= '<option name="" data-id="'. $bundle->ID.'" data-price="$'. $prod->get_price() .'" data-bundle-name="'. $bundle->post_title .'" data-type="'. $prod->get_type() .'">'. $bundle->post_title .'</option>';
+            $bundleCounter++;
         }
 
         // Add sample product (non bundle) to the select
-
+        $sampleProdID = wp_get_environment_type() == 'local' ? 1385 : ((wp_get_environment_type() == 'staging') ? 1434 : 1433);
+        $prod = wc_get_product($sampleProdID);
+        $bundleSelectHTML .= '<option name="" data-id="'. $sampleProdID .'" data-price="$'. $prod->get_price() .'" data-bundle-name="Sample Pack (3 Stick Packs)" data-type="'. $prod->get_type() .'">'. $prod->get_name() .'</option>';
         ?>
 
-        <select class="bundle-select">
-            <?php echo $bundleSelectHTML; ?>
-        </select>
-
-        <div class="clear"></div>
-
-    <?php }  ?>
+    <?php } ?>
 
     <?php do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 
@@ -72,7 +72,17 @@ if ( $product->is_in_stock() ) : ?>
     <?php
     $prodID = wp_get_environment_type() == 'local' ? 581 : ((wp_get_environment_type() == 'staging') ? 1434 : 1433);
 
-    if( $product->get_ID() === $prodID) : ?>
+    if($product->get_id() === $prodID) : ?>
+
+        <div class="bundle-price">
+            $<?php echo $firstBundle->get_price(); ?>
+        </div>
+
+        <select class="bundle-select">
+            <?php echo $bundleSelectHTML; ?>
+        </select>
+
+        <div class="clear"></div>
 
         <?php
         do_action( 'woocommerce_before_add_to_cart_quantity' );
@@ -94,6 +104,10 @@ if ( $product->is_in_stock() ) : ?>
     <?php if( $product->get_ID() !== $prodID) : ?>
 
         <form class="cart" action="" method="post" enctype='multipart/form-data'>
+
+            <div class="bundle-price">
+                PRICE HERE
+            </div>
 
             <?php do_action( 'woocommerce_before_add_to_cart_button' ); ?>
 

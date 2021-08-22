@@ -17,24 +17,32 @@ add_action('wp_ajax_nopriv_df_get_product_object', 'df_get_product_object');
 
 function df_add_product_to_cart()
 {
-    // TODO: Don't hardcode product id
-    $productID = wp_get_environment_type() == 'local' ? 581 : (wp_get_environment_type() == 'staging') ? 1434 : 1433;
-    $bundles = wc_pb_get_bundled_product_map($productID);
-    $bundleID = $_POST['productID'];
+    $prodID = $_POST['prodID'];
     $quantity = $_POST['quantity'];
-    $bundledItemID = array_search(strval($bundleID), $bundles);
-    $bundledItem = wc_pb_get_bundled_item($bundledItemID);
-    $bundledItemCount = $bundledItem->item_data['quantity_default'];
+    $prodType = $_POST['prodType'];
+    $product = null;
 
-//    echo json_encode($bundledItemCount);
-//    wp_die();
+    if($prodType != 'bundle')
+    {
+        $product = WC()->cart->add_to_cart($prodID, $quantity);
+    }
 
-    $product = WC_PB()->cart->add_bundle_to_cart($bundleID, $quantity, [
-        $bundledItemID => [
-            'product_id' => $productID,
-            'quantity' => $bundledItemCount
-        ]
-    ]);
+    if($prodType == 'bundle')
+    {
+        $bundleParentID = wp_get_environment_type() == 'local' ? 581 : ((wp_get_environment_type() == 'staging') ? 1434 : 1433);
+        $bundles = wc_pb_get_bundled_product_map($bundleParentID);
+
+        $bundledItemID = array_search(strval($prodID), $bundles);
+        $bundledItem = wc_pb_get_bundled_item($bundledItemID);
+        $bundledItemCount = $bundledItem->item_data['quantity_default'];
+
+        $product = WC_PB()->cart->add_bundle_to_cart($prodID, $quantity, [
+            $bundledItemID => [
+                'product_id' => $bundleParentID,
+                'quantity' => $bundledItemCount
+            ]
+        ]);
+    }
 
     echo json_encode($product);
     wp_die();
@@ -57,6 +65,9 @@ function df_get_cart_data()
         $data = $cart_item['data'];
         $item = WC()->cart->get_cart_item($cart_item_key);
         $productID = $cart_item['product_id'];
+
+        // Don't display the $0.00 product associated with bundle items
+        if(!intval($data->get_price())) continue;
 
         // Manually hide cart bundle item that represents the unit product
         if($productID == $df18ID) continue;

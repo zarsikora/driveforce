@@ -14,6 +14,9 @@ foreach(WC()->cart->get_cart() as $cart_item_key => $cart_item)
     $item = WC()->cart->get_cart_item($cart_item_key);
     $productID = $cart_item['product_id'];
 
+    // Don't display the $0.00 product associated with bundle items
+    if(!intval($data->get_price())) continue;
+
     // Manually hide cart bundle item that represents the unit product
     if($productID == $df18ID) continue;
 

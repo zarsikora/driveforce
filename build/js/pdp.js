@@ -23,7 +23,7 @@ if(df18AddBundleToCartButton.length)
         const selectedBundle = $('option:selected', df18BundleSelect);
         const bundleID = selectedBundle.data('id');
         const quantity = $('.quantity input.qty').val();
-
+        const prodType = selectedBundle.data('type');
         const _this = $(this);
 
         // Disable button so it can't be mashed
@@ -35,8 +35,9 @@ if(df18AddBundleToCartButton.length)
             dataType: 'json',
             data: {
                 action: 'df_add_product_to_cart',
-                productID: bundleID,
-                quantity: quantity
+                prodID: bundleID,
+                quantity: quantity,
+                prodType: prodType
             },
             success: function(data)
             {
