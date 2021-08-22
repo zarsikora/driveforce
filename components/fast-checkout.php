@@ -1,5 +1,7 @@
 <?php
 $environment = wp_get_environment_type();
+$sampleProdID = $environment == 'local' ? 1385 : (($environment == 'staging') ? 1434 : 1433);
+$sampleProd = wc_get_product($sampleProdID);
 $bundlesQuery = new WP_Query([
     'order' => 'ASC',
     'orderby' => 'id',
@@ -51,14 +53,20 @@ $firstProduct = wc_get_product($bundles[0]->ID);
 
                 <div class="mobile">
                     <?php foreach($bundles as $k => $bundle) :
+                        $prod = wc_get_product($bundle->ID);
                         $sel = $k ? '' : 'selected'; ?>
-                        <?php echo button('', $bundle->post_title, $sel, null, 'data-bundle-id="'. $bundle->ID .'" data-bundle-name="'. $bundle->post_title .'"'); ?>
+                        <?php echo button('', $bundle->post_title, $sel, null, 'data-bundle-id="'. $bundle->ID .'" data-type="'. $prod->get_type() .'" data-bundle-name="'. $bundle->post_title .'"'); ?>
                     <?php endforeach; ?>
+
+                    <?php
+                    // Add sample pack to mobile buttons
+                    echo button('', $sampleProd->get_name(), '', null, 'data-bundle-id="'. $sampleProdID .'" data-type="'. $sampleProd->get_type() .'" data-bundle-name="'. $bundle->post_title .'"');
+                    ?>
                 </div>
 
                 <div class="desktop">
                     <div class="select">
-                        <div class="selected-option" data-bundle-id="<?php echo $bundles[0]->ID ?>">
+                        <div class="selected-option" data-bundle-id="<?php echo $bundles[0]->ID ?>" data-type="<?php echo wc_get_product($bundles[0]->ID)->get_type() ?>">
                             <div>
                                 <span class="selected-product"><?php echo $bundles[0]->post_title ?></span>
                             </div>
@@ -67,9 +75,13 @@ $firstProduct = wc_get_product($bundles[0]->ID);
                             </svg>
                         </div>
                         <div class="dropdown">
-                            <?php foreach($bundles as $bundle) : ?>
-                                <a href="#" data-bundle-id="<?php echo $bundle->ID ?>" data-bundle-name="<?php echo $bundle->post_title ?>"><?php echo $bundle->post_title ?></a>
+                            <?php foreach($bundles as $bundle) :
+                                $prod = wc_get_product($bundle->ID);?>
+                                <a href="#" data-bundle-id="<?php echo $bundle->ID ?>" data-type="<?php echo $prod->get_type() ?>" data-bundle-name="<?php echo $bundle->post_title ?>"><?php echo $bundle->post_title ?></a>
                             <?php endforeach; ?>
+
+                            <!-- Add sample pack to dropdown -->
+                            <a href="#" data-bundle-id="<?php echo $sampleProdID ?>" data-type="<?php echo $sampleProd->get_type() ?>" data-bundle-name="<?php echo $sampleProd->get_name() ?>"><?php echo $prod->get_name() ?></a>
                         </div>
                     </div>
                 </div>

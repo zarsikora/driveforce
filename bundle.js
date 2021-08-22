@@ -40606,43 +40606,12 @@ let selectDropdownOpen = false;
 
 if(fastCheckoutSelect)
 {
-    let option1 = $('.fast-checkout-purchase-option.option1');
-    let option2 = $('.fast-checkout-purchase-option.option2');
-
     // Update selected product name and type
     function updateSelectedOption(bundle)
     {
         $('.fast-checkout-variant-select .selected-product').text(bundle.name);
         $('.fast-checkout-purchase-option.option2 .regular-price').text('$' + bundle.price);
     }
-
-    // Close dropdown on mousemove
-    $('body').on('mousemove', function(e)
-    {
-        if(!selectDropdownOpen) return;
-
-        if(!$(e.target).parents('.fast-checkout-variant-select .select').length && !$(e.target).hasClass('select'))
-        {
-            $('.fast-checkout-variant-select .dropdown').removeClass('active');
-            selectDropdownOpen = false;
-        }
-    });
-
-    // Mobile close button handler
-    fastCheckoutMobileClose.on('click', function(e)
-    {
-        e.preventDefault();
-
-        $('body').removeClass('fast-checkout-mobile-open');
-    });
-
-    // Mobile open button handler
-    fastCheckoutMobileOpen.on('click', function(e)
-    {
-        e.preventDefault();
-
-        $('body').toggleClass('fast-checkout-mobile-open')
-    });
 
     // Select option click handler
     fastCheckoutSelect.on('click', function(e)
@@ -40664,6 +40633,9 @@ if(fastCheckoutSelect)
 
         // Update selected variant id
         fastCheckoutSelect.attr('data-bundle-id', $(this).attr('data-bundle-id'));
+
+        // Update type
+        fastCheckoutSelect.attr('data-type', $(this).attr('data-type'));
 
         // Get variant object
         let prodData = getProductObject($(this).attr('data-bundle-id'));
@@ -40719,7 +40691,8 @@ if(fastCheckoutSelect)
     {
         e.preventDefault();
 
-        const productID = fastCheckoutSelect.data('bundle-id');
+        const prodID = fastCheckoutSelect.attr('data-bundle-id');
+        const prodType = fastCheckoutSelect.attr('data-type');
 
         $.ajax({
             url: localized_vars.ajaxurl,
@@ -40727,12 +40700,15 @@ if(fastCheckoutSelect)
             dataType: 'json',
             data: {
                 action: 'df_add_product_to_cart',
-                productID: productID,
-                quantity: 1
+                prodID: prodID,
+                quantity: 1,
+                prodType: prodType
             },
             success: function(data)
             {
-                window.location = '/checkout';
+                console.log(data);
+
+                //window.location = '/checkout';
             },
             error: function(error)
             {
@@ -40761,6 +40737,34 @@ if(fastCheckoutSelect)
             });
         }
     }
+
+    // Close dropdown on mousemove
+    $('body').on('mousemove', function(e)
+    {
+        if(!selectDropdownOpen) return;
+
+        if(!$(e.target).parents('.fast-checkout-variant-select .select').length && !$(e.target).hasClass('select'))
+        {
+            $('.fast-checkout-variant-select .dropdown').removeClass('active');
+            selectDropdownOpen = false;
+        }
+    });
+
+    // Mobile close button handler
+    fastCheckoutMobileClose.on('click', function(e)
+    {
+        e.preventDefault();
+
+        $('body').removeClass('fast-checkout-mobile-open');
+    });
+
+    // Mobile open button handler
+    fastCheckoutMobileOpen.on('click', function(e)
+    {
+        e.preventDefault();
+
+        $('body').toggleClass('fast-checkout-mobile-open')
+    });
 }
 window.$ = window.jQuery = jQuery;
 
