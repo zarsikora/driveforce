@@ -1,6 +1,6 @@
 <?php
 $environment = wp_get_environment_type();
-$sampleProdID = $environment == 'local' ? 1385 : (($environment == 'staging') ? 1434 : 1433);
+$sampleProdID = $environment == 'local' ? 1385 : (($environment == 'staging') ? 1677 : 1433);
 $sampleProd = wc_get_product($sampleProdID);
 $bundlesQuery = new WP_Query([
     'order' => 'ASC',

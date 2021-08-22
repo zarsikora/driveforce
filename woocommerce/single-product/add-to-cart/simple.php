@@ -59,7 +59,7 @@ if ( $product->is_in_stock() ) : ?>
         }
 
         // Add sample product (non bundle) to the select
-        $sampleProdID = wp_get_environment_type() == 'local' ? 1385 : ((wp_get_environment_type() == 'staging') ? 1434 : 1433);
+        $sampleProdID = wp_get_environment_type() == 'local' ? 1385 : ((wp_get_environment_type() == 'staging') ? 1677 : 1433);
         $prod = wc_get_product($sampleProdID);
         $bundleSelectHTML .= '<option name="" data-id="'. $sampleProdID .'" data-price="$'. $prod->get_price() .'" data-bundle-name="Sample Pack (3 Stick Packs)" data-type="'. $prod->get_type() .'">'. $prod->get_name() .'</option>';
         ?>
