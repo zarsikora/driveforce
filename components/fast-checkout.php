@@ -81,7 +81,7 @@ $firstProduct = wc_get_product($bundles[0]->ID);
                             <?php endforeach; ?>
 
                             <!-- Add sample pack to dropdown -->
-                            <a href="#" data-bundle-id="<?php echo $sampleProdID ?>" data-type="<?php echo $sampleProd->get_type() ?>" data-bundle-name="<?php echo $sampleProd->get_name() ?>"><?php echo $prod->get_name() ?></a>
+                            <a href="#" data-bundle-id="<?php echo $sampleProdID ?>" data-type="<?php echo $sampleProd->get_type() ?>" data-bundle-name="<?php echo $sampleProd->get_name() ?>"><?php echo $sampleProd->get_name() ?></a>
                         </div>
                     </div>
                 </div>
