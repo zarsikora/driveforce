@@ -27,9 +27,11 @@ echo wc_get_stock_html( $product ); // WPCS: XSS ok.
 
 remove_action( 'woocommerce_before_add_to_cart_quantity', 'wp_echo_qty_front_add_cart' );
 
-if ( $product->is_in_stock() ) : ?>
+if ( $product->is_in_stock() ) :
 
-    <?php
+    $preselectedProdID = $_GET['prod-id'];
+    $preselectedProd = wc_get_product($preselectedProdID);
+
     $bundles = new WP_Query([
         'order' => 'ASC',
         'orderby' => 'id',
@@ -52,30 +54,30 @@ if ( $product->is_in_stock() ) : ?>
     {
         foreach($bundles->posts as $bundle)
         {
+            $isSelected = ($preselectedProdID == $bundle->ID) ? 'selected' : '';
             $prod = wc_get_product($bundle->ID);
             if(!$bundleCounter) $firstBundle = $prod;
-            $bundleSelectHTML .= '<option name="" data-id="'. $bundle->ID.'" data-price="$'. $prod->get_price() .'" data-bundle-name="'. $bundle->post_title .'" data-type="'. $prod->get_type() .'">'. $bundle->post_title .'</option>';
+            $bundleSelectHTML .= '<option '. $isSelected .' name="" data-id="'. $bundle->ID.'" data-price="$'. $prod->get_price() .'" data-bundle-name="'. $bundle->post_title .'" data-type="'. $prod->get_type() .'">'. $bundle->post_title .'</option>';
             $bundleCounter++;
         }
 
         // Add sample product (non bundle) to the select
         $sampleProdID = wp_get_environment_type() == 'local' ? 1385 : ((wp_get_environment_type() == 'staging') ? 1677 : 1433);
         $prod = wc_get_product($sampleProdID);
-        $bundleSelectHTML .= '<option name="" data-id="'. $sampleProdID .'" data-price="$'. $prod->get_price() .'" data-bundle-name="Sample Pack (3 Stick Packs)" data-type="'. $prod->get_type() .'">'. $prod->get_name() .'</option>';
-        ?>
+        $isSelected = ($preselectedProdID == $sampleProdID) ? 'selected' : '';
+        $bundleSelectHTML .= '<option '. $isSelected .' name="" data-id="'. $sampleProdID .'" data-price="$'. $prod->get_price() .'" data-bundle-name="Sample Pack (3 Stick Packs)" data-type="'. $prod->get_type() .'">'. $prod->get_name() .'</option>';
+    }
 
-    <?php } ?>
+    do_action( 'woocommerce_before_add_to_cart_form' );
 
-    <?php do_action( 'woocommerce_before_add_to_cart_form' ); ?>
+    //Add bundles from simple product
 
-    <!-- Add bundles from simple product -->
-    <?php
     $prodID = wp_get_environment_type() == 'local' ? 581 : ((wp_get_environment_type() == 'staging') ? 1434 : 1433);
 
     if($product->get_id() === $prodID) : ?>
 
         <div class="bundle-price">
-            $<?php echo $firstBundle->get_price(); ?>
+            $<?php echo (!empty($preselectedProd)) ? $preselectedProd->get_price() : $firstBundle->get_price(); ?>
         </div>
 
         <select class="bundle-select">

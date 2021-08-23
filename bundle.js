@@ -40708,7 +40708,7 @@ if(fastCheckoutSelect)
             {
                 console.log(data);
 
-                //window.location = '/checkout';
+                window.location = '/checkout';
             },
             error: function(error)
             {

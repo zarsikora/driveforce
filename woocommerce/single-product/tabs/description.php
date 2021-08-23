@@ -19,10 +19,14 @@ defined( 'ABSPATH' ) || exit;
 
 global $post;
 
-$heading = apply_filters( 'woocommerce_product_description_heading', __( 'Description', 'woocommerce' ) );
+$preselectedProdID = $_GET['prod-id'];
+$preselectedProd = wc_get_product($preselectedProdID);
 
+$heading = apply_filters( 'woocommerce_product_description_heading', __( 'Description', 'woocommerce' ) );
 ?>
 
-<p class="product-bundle-name">Pro Pack (30 Stick Packs)</p>
+<p class="product-bundle-name">
+    <?php echo ($preselectedProd) ? $preselectedProd->get_name() : 'Pro Pack (30 Stick Packs)'; ?>
+</p>
 
 <?php the_content(); ?>
