@@ -113,14 +113,18 @@ $orderProductsJSON = json_encode($orderProducts);
     dataLayer.push({
         'event': 'purchase',
         'ecommerce': {
-            'transaction_id': '<?php echo $orderData['transaction_id'] ?>',
-            'affiliation': 'Online Store',
-            'revenue': '<?php echo $orderData['total'] ?>',
-            'tax': '<?php echo $orderData['total_tax'] ?>',
-            'shipping': '<?php echo $orderData['shipping_total'] ?>',
-            'coupon': '<?php echo implode("|", $orderCoupons); ?>',
-            'currency': 'USD',
-            'items': <?php echo $orderProductsJSON ?>
+            'purchase': {
+                'actionField': {
+                    'transaction_id': '<?php echo $orderData['transaction_id'] ?>',
+                    'affiliation': 'Online Store',
+                    'revenue': '<?php echo $orderData['total'] ?>',
+                    'tax': '<?php echo $orderData['total_tax'] ?>',
+                    'shipping': '<?php echo $orderData['shipping_total'] ?>',
+                    'coupon': '<?php echo implode("|", $orderCoupons); ?>',
+                    'currency': 'USD'
+                },
+                'products': <?php echo $orderProductsJSON ?>
+            }
         }
     });
 </script>
