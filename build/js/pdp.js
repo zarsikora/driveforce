@@ -58,6 +58,33 @@ if(df18AddBundleToCartButton.length)
                     if(data)
                     {
                         updateCartDrawer('DF-18 has been added to your cart!');
+
+                        const productObject = getProductObject(bundleID);
+
+                        productObject.done(function(prod)
+                        {
+                            console.log(prod);
+
+                            if(!prod) return;
+
+                            dataLayer.push({ecommerce: null});
+                            dataLayer.push({
+                                'event': 'add_to_cart',
+                                'ecommerce': {
+                                    'value': parseFloat(prod['product']['price'] * quantity),
+                                    'currency': 'USD',
+                                    'items': [
+                                        {
+                                            item_id: prod['product']['id'],
+                                            item_name: prod['product']['name'],
+                                            currency: 'USD',
+                                            price: parseFloat(prod['product']['price']),
+                                            quantity: parseInt(quantity)
+                                        }
+                                    ]
+                                }
+                            });
+                        });
                     }
                 });
             },
