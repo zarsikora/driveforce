@@ -127,4 +127,54 @@ if ( post_password_required() ) {
     </div>
 </div>
 
+<?php
+$preselectedProdID = $_GET['prod-id'];
+$preselectedProduct = wc_get_product($preselectedProdID);
+$productValue = null;
+
+if($preselectedProduct)
+{
+    $productValue = $preselectedProduct->get_price();
+    $productData = array(
+        array(
+            'item_id' => $preselectedProduct->get_id(),
+            'item_name' => $preselectedProduct->get_name(),
+            'price' => floatval($preselectedProduct->get_price()),
+            'currency' => 'USD',
+            'quantity' => 1
+        )
+    );
+}
+
+// TODO: Probably shouldn't hard code this in case any of the data changes in the future
+// Hard code the default 30 stick pack data when preselected product is not used
+if(!$preselectedProduct)
+{
+    $environment = wp_get_environment_type();
+    $productValue = 109.99;
+    $productData = array(
+        array(
+            'item_id' => ($environment == 'local') ? '1335' : '1434',
+            'item_name' => 'Pro Pack (30 Stick Packs)',
+            'price' => floatval($productValue),
+            'currency' => 'USD',
+            'quantity' => 1
+        )
+    );
+}
+?>
+
+<script>
+    // GTM GA4 Purchase Event
+    dataLayer.push({ecommerce: null});
+    dataLayer.push({
+        'event': 'view_item',
+        'ecommerce': {
+            'value': <?php echo $productValue ?>,
+            'currency': 'USD',
+            'items': <?php echo json_encode($productData) ?>
+        }
+    });
+</script>
+
 <?php do_action( 'woocommerce_after_single_product' ); ?>
