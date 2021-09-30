@@ -48,12 +48,33 @@ $('.cart-drawer').on('click', '.cart-drawer-remove-product', function(e)
         },
         success: function(data)
         {
+            console.log(data);
+
             const cartTotals = data.data.cartTotals;
+            const removedProduct = data.data.removedProduct;
 
             // Remove html
             _this.parents('.cart-drawer-product').remove();
 
             updateCartDrawerTotal(cartTotals);
+
+            dataLayer.push({ecommerce: null});
+            dataLayer.push({
+                'event': 'remove_from_cart',
+                'ecommerce': {
+                    'value': parseFloat(removedProduct['price'] * removedProduct['quantity']),
+                    'currency': 'USD',
+                    'items': [
+                        {
+                            item_id: removedProduct['id'],
+                            item_name: removedProduct['name'],
+                            currency: 'USD',
+                            price: parseFloat(removedProduct['price']),
+                            quantity: parseInt(removedProduct['quantity'])
+                        }
+                    ]
+                }
+            });
 
             // If no products, display empty cart message
             if(cartTotals.total == 0)

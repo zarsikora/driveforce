@@ -26,18 +26,29 @@ function df_remove_product_from_cart()
 {
     $cartItemKey = $_POST['cartItemKey'];
 
-    if($cartItemKey)
+    foreach(WC()->cart->get_cart() as $k => $cartItem)
     {
-        $remove = WC()->cart->remove_cart_item($cartItemKey);
+        if($k == $cartItemKey)
+        {
+            $product = wc_get_product($cartItem['product_id']);
+            $quantity = $cartItem['quantity'];
+            $remove = WC()->cart->remove_cart_item($cartItemKey);
 
-        wp_send_json_success([
-            'cartItemKey' => $cartItemKey,
-            'removed' => $remove,
-            'cartTotal' => WC()->cart->get_cart_contents_total(),
-            'cartSubtotal' => WC()->cart->get_cart_subtotal(),
-            'cartTotals' => WC()->cart->get_totals()
-        ]);
-        wp_die();
+            wp_send_json_success(array(
+                'cartItem' => $cartItem,
+                'cartTotals' => WC()->cart->get_totals(),
+                'removed' => $remove,
+                'cartTotal' => WC()->cart->get_cart_contents_total(),
+                'cartSubtotal' => WC()->cart->get_cart_subtotal(),
+                'removedProduct' => array(
+                    'id' => $product->get_id(),
+                    'name' => $product->get_name(),
+                    'price' => floatval($product->get_price()),
+                    'quantity' => intval($quantity)
+                )
+            ));
+            wp_die();
+        }
     }
 
     wp_send_json_error('Invalid Cart Item Key');
