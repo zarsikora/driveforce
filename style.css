@@ -17962,7 +17962,8 @@ body.woocommerce-page .woocommerce-Messsage a,
 body.woocommerce-page .woocommerce-message a,
 body.woocommerce-page .woocommerce-info a,
 body.woocommerce-page .woocommerce-error a {
-  color: #fff;
+  color: #081D1A;
+  text-decoration: underline;
 }
 
 body.woocommerce-page .woocommerce-Messsage .button,

@@ -35,7 +35,8 @@ body.woocommerce-page {
         }
 
         a {
-            color: #fff;
+            color: $darkBg;
+            text-decoration: underline;
         }
 
         .button {
