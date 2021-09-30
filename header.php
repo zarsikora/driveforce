@@ -71,9 +71,13 @@
         $backgroundColor = 'cream';
         $loginPageClass = 'my-account-login';
     }
+
+    // Promo Banner
+    $displayPromoBanner = get_field('display_promo_banner', 'option');
+    $promoBannerClass = ($displayPromoBanner) ? 'promo-banner-active' : '';
     ?>
 
-    <body <?php body_class(array('background-'.$backgroundColor, $loginPageClass)); ?> data-barba="wrapper" data-loadhome="<?php echo is_front_page(); ?>">
+    <body <?php body_class(array('background-'.$backgroundColor, $loginPageClass, $promoBannerClass)); ?> data-barba="wrapper" data-loadhome="<?php echo is_front_page(); ?>">
 
         <?php if($gtmId && $initGtm): ?>
             <!-- Google Tag Manager (noscript) -->

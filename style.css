@@ -11347,32 +11347,45 @@ button:focus {
   }
 }
 
+body.promo-banner-active {
+  padding-top: 5rem;
+}
+
 #promo-banner {
   background-color: #081D1A;
   margin-bottom: 0;
   border: none;
   border-radius: 0;
-  padding: 1.1rem 1.25rem;
-  z-index: 10;
+  padding: 0 1.25rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 5rem;
+  line-height: 5rem;
+  z-index: 50;
+  text-align: center;
 }
 
 #promo-banner p, #promo-banner body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 address, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 #promo-banner address,
 #promo-banner body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 address, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 #promo-banner address,
 #promo-banner body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 address, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 #promo-banner address,
 #promo-banner body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 address, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 #promo-banner address {
+  display: inline-block;
+  vertical-align: middle;
   margin: 0;
   text-align: center;
   color: #fff;
-  font-size: 1.4rem;
+  font-size: 1rem;
   letter-spacing: .21rem;
 }
 
-@media (min-width: 1920px) {
+@media (min-width: 768px) {
   #promo-banner p, #promo-banner body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 address, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-1 #promo-banner address,
   #promo-banner body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 address, body.woocommerce-account .woocommerce-MyAccount-content .addresses .col-2 #promo-banner address,
   #promo-banner body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 address, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-1 #promo-banner address,
   #promo-banner body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 address, body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .col-2 #promo-banner address {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
   }
 }
 
@@ -11433,6 +11446,14 @@ button:focus {
   #header {
     height: 9.4rem;
   }
+}
+
+body.promo-banner-active #header {
+  top: 5rem;
+}
+
+body.promo-banner-active.sticky-header #header {
+  top: 0;
 }
 
 body.header-hidden #header {
@@ -11848,6 +11869,10 @@ body.woocommerce-account.my-account-login #header .nav .nav-link svg.logo, #head
   justify-content: center;
 }
 
+body.promo-banner-active #nav-pane .inner {
+  height: calc(100vh - 12.7rem);
+}
+
 #nav-pane .inner > div {
   flex: 0 0 100%;
   text-align: center;
@@ -11880,7 +11905,7 @@ body.woocommerce-account.my-account-login #header .nav .nav-link svg.logo, #head
 #nav-pane .inner .menu#nav-pane-mobile-menu li a {
   font-family: "Sharp Sans Extrabold";
   text-decoration: underline;
-  font-size: 2.4rem;
+  font-size: 2rem;
 }
 
 #nav-pane .inner .menu#nav-pane-menu {
@@ -11897,7 +11922,7 @@ body.woocommerce-account.my-account-login #header .nav .nav-link svg.logo, #head
 #nav-pane .inner .menu#nav-pane-menu li a {
   font-family: "Sharp Sans Extrabold";
   color: #fff;
-  font-size: 2.4rem;
+  font-size: 2rem;
   transition: all ease 300ms;
   letter-spacing: .1rem;
 }
