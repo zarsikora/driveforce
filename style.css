@@ -16617,7 +16617,9 @@ body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .
   }
 }
 
-.ingredients-module .ingredients .block ul li .check {
+.ingredients-module .ingredients .block ul li:before {
+  content: '✓';
+  display: inline-block;
   margin-right: 1rem;
 }
 

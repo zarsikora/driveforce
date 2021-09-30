@@ -4,6 +4,7 @@
     $introIcon = get_sub_field('intro_icon');
     $blockHeader = get_sub_field('block_header');
     $blockImage = get_sub_field('block_image');
+    $listItems = get_sub_field('list_items');
     $button = get_sub_field('button');
     $ingredientsModal = get_sub_field('ingredients_modal');
 ?>
@@ -32,18 +33,22 @@
                             <h3><?php echo $blockHeader ?></h3>
                         <?php endif; ?>
 
-                        <ul>
-                            <li><span class="check">✓</span> Real Ingredients</li>
-                            <li><span class="check">✓</span> Real Results</li>
-                            <li><span class="check">✓</span> No Sugar Added</li>
-                            <li><span class="check">✓</span> No Caffeine</li>
-                        </ul>
+                        <?php if(!$listItems) : ?>
+                            <ul>
+                                <li>Real Ingredients</li>
+                                <li>Real Results</li>
+                                <li>No Sugar Added</li>
+                                <li>No Caffeine</li>
+                            </ul>
+                        <?php else : ?>
+                            <?php echo $listItems; ?>
+                        <?php endif; ?>
 
                         <?php
                         if($ingredientsModal) { ?>
                             <button class="btn thin-btn" data-micromodal-trigger="modal-ingredients">Read All Ingredients</button>
                         <?php } elseif($button) {
-                            echo button($button['url'], $button['text'], 'thin-btn', '', '');
+                            echo button($button['url'], $button['title'], 'thin-btn', '', '');
                         } ?>
                     </div>
                 </div>

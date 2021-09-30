@@ -56,7 +56,9 @@
                         font-size: 2.1rem;
                     }
 
-                    .check {
+                    &:before {
+                        content: '✓';
+                        display: inline-block;
                         margin-right: 1rem;
                     }
                 }
