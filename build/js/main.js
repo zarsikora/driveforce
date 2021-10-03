@@ -647,47 +647,71 @@ if($('.challenges-page .hero').length){
 }
 
 //Navigational control.
-navToggle = () => {
-    $('#header').toggleClass('nav-active');
+navToggle = () =>
+{
+    $('.hamburger-control svg').removeClass('active');
+
+    if($('body').hasClass('mobile-nav-active'))
+    {
+        $('.hamburger-control svg.open').addClass('active');
+    }
+    else
+    {
+        $('body').removeClass('sticky-header');
+        $('.hamburger-control svg.close').addClass('active');
+    }
+
+    $('body').toggleClass('mobile-nav-active');
+
+    //$('#header').toggleClass('nav-active');
+    //$('.hamburger-control svg').toggleClass('active');
+    //$('#nav-pane').toggleClass('active');
+    //$('.nav').toggleClass('active');
+    //$('.hero-img').toggleClass('mobile-nav-active');
+    //$('.nav-drawer-asset').toggleClass('active');
+
+    // if($('.hamburger-control').attr('aria-expanded') == 'false'){
+    //     $(".hamburger-control").attr("aria-expanded","true");
+    // } else {
+    //     $(".hamburger-control").attr("aria-expanded","false");
+    // }
+
+    // if(!$('body').hasClass('mobile-nav-active')){
+    //     $('body').toggleClass('mobile-nav-active');
+    // } else {
+    //     setTimeout(function(){
+    //         $('body').toggleClass('mobile-nav-active');
+    //     }, 450);
+    // }
+}
+
+navClose = () =>
+{
+    $('body').removeClass('mobile-nav-active');
     $('.hamburger-control svg').toggleClass('active');
-    $('#nav-pane').toggleClass('active');
-    $('.nav').toggleClass('active');
-    $('.hero-img').toggleClass('mobile-nav-active');
-    $('.nav-drawer-asset').toggleClass('active');
 
-    if($('.hamburger-control').attr('aria-expanded') == 'false'){
-        $(".hamburger-control").attr("aria-expanded","true");
-    } else {
-        $(".hamburger-control").attr("aria-expanded","false");
-    }
+    // if($('#nav-pane').hasClass('active')){
+    //     $('#header').removeClass('nav-active');
+    //     $('.hamburger-control svg').toggleClass('active');
+    //     $('#nav-pane').removeClass('active');
+    //     $('.nav').removeClass('active');
+    //     $('.hero-img').removeClass('mobile-nav-active');
+    //     $(".hamburger-control").attr("aria-expanded","false");
+    // }
+}
 
-    if(!$('body').hasClass('mobile-nav-active')){
-        $('body').toggleClass('mobile-nav-active');
-    } else {
-        setTimeout(function(){
-            $('body').toggleClass('mobile-nav-active');
-        }, 450);
-    }
-}
-navClose = () => {
-    if($('#nav-pane').hasClass('active')){
-        $('#header').removeClass('nav-active');
-        $('.hamburger-control svg').toggleClass('active');
-        $('#nav-pane').removeClass('active');
-        $('.nav').removeClass('active');
-        $('body').removeClass('mobile-nav-active');
-        $('.hero-img').removeClass('mobile-nav-active');
-        $(".hamburger-control").attr("aria-expanded","false");
-    }
-}
-$('.mobile-controls').on('click', function(){
+$('.mobile-controls').on('click', function(e)
+{
+    e.preventDefault();
+
     navToggle();
 });
 
 //NAV PANE MODAL FUNCTION
 let paneBtn = $('#nav-pane .pane-waitlist-btn')
 
-$(paneBtn).on('click', function(e){
+$(paneBtn).on('click', function(e)
+{
     let waitlist = document.getElementById('waitList');
     e.preventDefault();
     navClose();

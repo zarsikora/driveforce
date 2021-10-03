@@ -148,7 +148,7 @@
             object-fit: cover;
         }
 
-        &.mobile-nav-active {
+        body.mobile-nav-active & {
             opacity: 0;
         }
     }

@@ -11520,8 +11520,8 @@ body.woocommerce-account.my-account-login #header svg.cart, #header.background-c
   fill: #081D1A;
 }
 
-body.sticky-header #header .hamburgder-control svg.close,
-body.woocommerce-account.my-account-login #header .hamburgder-control svg.close, #header.background-color-white .hamburgder-control svg.close {
+body.sticky-header #header .hamburger-control svg.close,
+body.woocommerce-account.my-account-login #header .hamburger-control svg.close, #header.background-color-white .hamburger-control svg.close {
   stroke: #fff;
 }
 
@@ -11785,10 +11785,10 @@ body.woocommerce-account.my-account-login #header .nav .nav-link svg.logo, #head
 
 #nav-pane {
   width: 100vw;
-  height: 100vh;
   background: #081D1A;
   opacity: 1;
-  position: absolute;
+  position: fixed;
+  top: 5rem;
   align-items: center;
   z-index: 10;
 }
@@ -11826,37 +11826,41 @@ body.woocommerce-account.my-account-login #header .nav .nav-link svg.logo, #head
   transform: translateX(100%);
 }
 
-#nav-pane.active {
+body.promo-banner-active #nav-pane {
+  top: 12.7rem;
+}
+
+body.mobile-nav-active #nav-pane {
   width: 100%;
   opacity: 1;
 }
 
-#nav-pane.active[data-animate="clip-path"] {
+body.mobile-nav-active #nav-pane[data-animate="clip-path"] {
   -webkit-clip-path: circle(120vh at calc(90% - 20px) calc(5.5vh + 20px));
           clip-path: circle(120vh at calc(90% - 20px) calc(5.5vh + 20px));
 }
 
 @media (min-width: 768px) {
-  #nav-pane.active[data-animate="clip-path"] {
+  body.mobile-nav-active #nav-pane[data-animate="clip-path"] {
     -webkit-clip-path: circle(130vh at calc(90% - 20px) calc(5.5vh + 20px));
             clip-path: circle(130vh at calc(90% - 20px) calc(5.5vh + 20px));
   }
 }
 
 @media (min-width: 992px) {
-  #nav-pane.active[data-animate="clip-path"] {
+  body.mobile-nav-active #nav-pane[data-animate="clip-path"] {
     -webkit-clip-path: circle(120vw at calc(90% - 20px) calc(5.5vh + 20px));
             clip-path: circle(120vw at calc(90% - 20px) calc(5.5vh + 20px));
   }
 }
 
 @media all and (-ms-high-contrast: none) {
-  #nav-pane.active[data-animate="clip-path"] {
+  body.mobile-nav-active #nav-pane[data-animate="clip-path"] {
     transform: translateX(0);
   }
 }
 
-#nav-pane.active[data-animate="slide-in"] {
+body.mobile-nav-active #nav-pane[data-animate="slide-in"] {
   transform: translateX(0);
 }
 
@@ -12551,7 +12555,7 @@ body.promo-banner-active #nav-pane .inner {
   }
 }
 
-.hero .hero-img.mobile-nav-active {
+body.mobile-nav-active .hero .hero-img {
   opacity: 0;
 }
 

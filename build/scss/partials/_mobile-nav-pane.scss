@@ -1,9 +1,9 @@
 #nav-pane {
     width: 100vw;
-    height: 100vh;
     background: $darkBg;
     opacity: 1;
-    position: absolute;
+    position: fixed;
+    top: 5rem;
     align-items: center;
     z-index: 10;
 
@@ -30,7 +30,11 @@
         transform: translateX(100%);
     }
 
-    &.active {
+    body.promo-banner-active & {
+        top: 12.7rem;
+    }
+
+    body.mobile-nav-active & {
         width: 100%;
         opacity: 1;
 
