@@ -114,6 +114,11 @@ if(have_rows('components')) :
             case 'large_text_module' :
                 include('large-text-module.php');
             break;
+
+            // REVIEWS
+            case 'reviews' :
+                include('reviews.php');
+            break;
         }
     endwhile;
 endif;

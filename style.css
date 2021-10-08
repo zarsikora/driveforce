@@ -14431,6 +14431,43 @@ body.woocommerce-account .woocommerce-MyAccount-content .woocommerce-Addresses .
   }
 }
 
+.reviews-component .reviews {
+  margin: 8rem 0;
+}
+
+.reviews-component .reviews div[class*=col] {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+@media (min-width: 992px) {
+  .reviews-component .reviews div[class*=col] {
+    margin-bottom: 0;
+  }
+}
+
+.reviews-component .quote {
+  width: 3rem;
+  height: auto;
+  margin: 0 auto;
+}
+
+body.background-green .reviews-component .quote,
+.reviews-component.dark-bg .quote {
+  fill: #fff;
+}
+
+.reviews-component .byline {
+  flex: 0 0 100%;
+  font-family: "Sharp Sans Bold";
+  font-size: 1.6rem;
+  align-self: flex-end;
+  margin: 0;
+  line-height: 1;
+}
+
 .module-wrapper.faq {
   margin: 2rem auto;
 }
