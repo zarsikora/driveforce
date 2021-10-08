@@ -38,7 +38,7 @@
             $bugherdScript = get_field('bugherd_script_tag', 'option'); 
             $initBugherd = get_field('init_bugherd', 'option');
 
-            if($bugherdScript && $initBugherd):
+            if($bugherdScript && $initBugherd && current_user_can('administrator')):
                 echo $bugherdScript;
             endif; 
         ?>
